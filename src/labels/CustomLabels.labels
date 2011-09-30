@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>DefaultHouseholdName</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DefaultHouseholdName</shortDescription>
+        <value>Household</value>
+    </labels>
+    <labels>
+        <fullName>DefaultHouseholdTransactionCurrency</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DefaultHouseholdTransactionCurrency</shortDescription>
+        <value>$</value>
+    </labels>
+    <labels>
+        <fullName>Household_Contact_Role_Processor_Off</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Household Contact Role Processor Off</shortDescription>
+        <value>No Opportunities</value>
+    </labels>
+    <labels>
+        <fullName>Household_Contact_Role_Processor_On</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Household Contact Role Processor On</shortDescription>
+        <value>All Opportunities</value>
+    </labels>
+    <labels>
+        <fullName>Household_Contact_Roles_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Household Contact Roles Help Text</shortDescription>
+        <value>Create automatic Contact Roles for Household members of the primary donor</value>
+    </labels>
+    <labels>
+        <fullName>Household_Member_Contact_Role</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Household Member Contact Role</shortDescription>
+        <value>Household Credit</value>
+    </labels>
+    <labels>
+        <fullName>Household_Rules_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Household Rules Help Text</shortDescription>
+        <value>Select which Contacts get Households: All, only those related to an Individual Account, or none.</value>
+    </labels>
+    <labels>
+        <fullName>Opportunity_Rollup_Future_Call_Limit</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Opportunity Rollup Future Call Limit</shortDescription>
+        <value>Did not roll up because there were too few future calls available.</value>
+    </labels>
+    <labels>
+        <fullName>Opportunity_Rollup_Scheduling_Error_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Opportunity Rollup Scheduling Error Text</shortDescription>
+        <value>You have reached your limit of Scheduled Apex jobs and the Opportunity Rollups won\&apos;t run nightly. If you want this job to run nightly, delete one of your scheduled jobs and reload this page.</value>
+    </labels>
+    <labels>
+        <fullName>Primary_Donor_Contact_Role</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Primary Donor Contact Role</shortDescription>
+        <value>Donor</value>
+    </labels>
+</CustomLabels>

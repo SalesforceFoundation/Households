@@ -1,0 +1,4 @@
+<apex:page standardController="Campaign" extensions="CTRL_CampaignDedupeBtn" action="{!runreport}" >
+    <apex:PageMessages />
+    <apex:outputLink target="_self" title="Return"  value="{!returnurl}" >Return</apex:outputLink>
+</apex:page>

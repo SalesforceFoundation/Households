@@ -1,0 +1,21 @@
+<apex:page standardController="Household__c"
+	extensions="HouseholdTransactionHistory_EXT">
+
+	<apex:pageBlock id="pb">
+		<apex:pageBlockSection id="pbs">
+			<apex:pageBlockSectionItem id="pbsi_date">
+				<apex:outputLabel for="lastTransactionDate"
+					value="Last Transaction Date" />
+				<apex:outputText id="lastTransactionDate"
+					value="{!LastTransactionDate}" />
+			</apex:pageBlockSectionItem>
+			<apex:pageBlockSectionItem id="pbsi_sum">
+				<apex:outputLabel for="lifetimeTransactionSum"
+					value="Lifetime Transaction Total" />
+				<apex:outputText id="lifetimeTransactionSum"
+					value="{!HouseholdTransactionTotal}" />
+			</apex:pageBlockSectionItem>
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+
+</apex:page>

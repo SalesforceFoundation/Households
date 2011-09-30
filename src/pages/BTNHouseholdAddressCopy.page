@@ -1,0 +1,4 @@
+<apex:page standardController="Household__c" extensions="CTRL_AddressCopyBtn" action="{!buttonClick}" >
+    <apex:PageMessages />
+    <apex:outputLink target="_self" title="Return"  value="{!returnurl}" >Return</apex:outputLink>
+</apex:page>

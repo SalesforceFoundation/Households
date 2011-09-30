@@ -1,0 +1,143 @@
+<apex:page id="NPSPhouseholdsSettings" controller="householdsSettings"
+	action="{!getSettingsFirstTime}">
+	<apex:form id="form">
+		<apex:sectionHeader title="Households Settings"
+			subtitle="Configure Settings">
+			<description>
+                Settings that control the behavior of the Households package. Changing these will change how your Nonprofit Starter Pack behaves.
+            </description>
+		</apex:sectionHeader>
+
+		<apex:pageMessages id="pageMessages" />
+		<apex:pageBlock id="householdssettings" title="Households Settings">
+			<apex:pageBlockSection id="householdsettingssection"
+				title="Household Rules" columns="1">
+				<apex:outputPanel >{!$Label.Household_Rules_Help_Text}</apex:outputPanel>
+				<apex:pageBlockSectionItem helpText="Select the Household Rule. Only change this setting if you understand the ramifications.">
+					<apex:outputLabel value="Households Rules" />
+					<apex:selectList value="{!settings.Household_Rules__c}"
+						multiselect="false" size="1">
+						<apex:selectOptions value="{!householdrules}" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection id="householdrolesection"
+				title="Household Contact Roles" columns="1">
+				<apex:outputPanel >{!$Label.Household_Contact_Roles_Help_Text}</apex:outputPanel>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection id="householdrolesection2" showHeader="false"
+				columns="2">
+				<apex:inputField value="{!settings.Household_Contact_Roles_On__c}" />
+
+				<apex:pageBlockSectionItem helpText="Select the role all Household Members should receive for Opportunities.">
+					<apex:outputLabel value="Households Member Contact Role" />
+					<apex:selectList value="{!settings.Household_Member_Contact_Role__c}"
+						multiselect="false" size="1">
+						<apex:selectOptions value="{!contactroles}" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection id="householdsettingssection3"
+				title="Opportunity Rollups">
+				<apex:inputfield value="{!settings.Enable_Opp_Rollup_Triggers__c}" />
+				<apex:inputfield value="{!settings.Always_Rollup_to_Primary_Contact__c}" />
+				<apex:inputfield value="{!settings.Rollup_N_Day_Value__c}" />
+				<apex:inputfield value="{!settings.Use_Fiscal_Year_for_Rollups__c}" />
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection id="householdsettingssection4"
+				title="Opportunity Rollups Record Types">
+
+				<apex:pageBlockSectionItem helpText="All Opportunity Record Types will be included in rollups to Accounts unless they are selected here for exclusion.">
+					<apex:outputLabel value="Opportunity Record Types to Exclude from Account Rollups" />
+					<apex:selectList value="{!acctrts}" multiselect="true">
+						<apex:selectOptions value="{!rtypes}" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem helpText="All Opportunity Types will be included in rollups to Accounts unless they are selected here for exclusion.">
+					<apex:outputLabel value="Opportunity Types to Exclude from Account Rollups" />
+					<apex:selectList value="{!accttypes}" multiselect="true">
+						<apex:selectOptions value="{!types}" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem helpText="All Opportunity Record Types will be included in rollups to Contacts unless they are selected here for exclusion.">
+					<apex:outputLabel value="Opportunity Record Types to Exclude from Contact Rollups" />
+					<apex:selectList value="{!contactrts}" multiselect="true">
+						<apex:selectOptions value="{!rtypes}" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem helpText="All Opportunity Types will be included in rollups to Accounts unless they are selected here for exclusion.">
+					<apex:outputLabel value="Opportunity Types to Exclude from Contact Rollups" />
+					<apex:selectList value="{!contacttypes}" multiselect="true">
+						<apex:selectOptions value="{!types}" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection id="householdsettingssection5"
+				title="Household Name Settings">
+				<apex:inputfield value="{!settings.Advanced_Household_Naming__c}"
+					rendered="{!settings.Advanced_Household_Naming__c&&!runningbatch}" />
+				<apex:outputtext value="Clicking this button will activate advanced household naming, and populate your existing formal greeting, informal greeting and household name fields with new names. THIS IS AN IRREVERSIBLE PROCESS. While you can deactive household naming, the newly populated names will remain.  Toggling on, off, then on again may have unpredictable results.  DISABLE ALL CUSTOM VALIDATION RULES ON HOUSEHOLDS BEFORE ACTIVATING. Once complete (100%), you may safely leave or refresh the page."
+					rendered="{!!settings.Advanced_Household_Naming__c}" />
+				<apex:commandbutton id="launchactivation"
+					value="Activate Advanced Household Naming"
+					action="{!activateHouseholdNaming}"
+					rerender="householdsettingssection5"
+					rendered="{!!settings.Advanced_Household_Naming__c}" />
+				<apex:outputPanel rendered="{!runningbatch}">
+					<c:batchjobs batchComponentLabel="Naming Activation Progress"
+						numberOfJobs="1" rerenderOnComplete="true" />
+				</apex:outputPanel>
+
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection id="householdsettingssection6"
+				title="Opportunity Membership Settings">
+				<apex:pageBlockSectionItem helpText="One Opportunity Record Type can be called out for Membership calculations.">
+					<apex:outputLabel value="Membership Record Type Names" />
+					<apex:selectList value="{!settings.Membership_Record_Types__c}"
+						multiselect="false" size="1">
+						<apex:selectOptions value="{!rtypes}" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+				<apex:inputfield value="{!settings.Membership_Grace_Period__c}" />
+			</apex:pageBlockSection>
+			
+			  <apex:pageBlockSection id="householdsettingssection7" title="Package Update Information & Configuration" columns="2">
+                <apex:outputPanel layout="inline">
+                <apex:outputLabel style="font-weight: bold;" value="Current Package Status: " for="statusvalue"/>
+                <apex:outputText id="statusvalue" value="{!pkgupdatestatus}" style="font-weight: bold; {!IF(pkgupdatestatus == 'New Update Available', 'color: red', IF(pkgupdatestatus == 'No New Updates Available', 'color: green', 'color: GoldenRod'))}" />                
+ 
+                
+                <br/><br/>
+                <apex:outputText value="My Households version: {0}">
+                    <apex:param value="{!myversion}"/>
+                </apex:outputText>
+                <br/><br/>
+                <apex:outputText value="The latest Households version: {0}">
+                    <apex:param value="{!maxversion}"/>
+                </apex:outputText>
+                <br/><br/>
+                <apex:outputText style="font-style: italic;" value="Last update check: {0}">
+                   <apex:param value="{!lastupdate}"/>
+                </apex:outputText>
+
+                </apex:outputPanel>   
+                
+                <apex:pageBlockSection columns="1">
+                <apex:inputfield value="{!settings.Enable_Update_Check__c}"/>
+                <apex:inputfield value="{!settings.Update_Check_Interval__c}"/>
+                <apex:commandButton value="Check for New Updates" title="Manually calls out to check for new updates for this package" action="{!checkForUpdates}"/>
+                </apex:pageBlockSection>
+            </apex:pageBlockSection>
+
+
+			<apex:pageBlockButtons id="householdssettingsbuttons">
+				<apex:commandButton id="updatesettingsbutton"
+					action="{!updateSettings}" value="Update the Households Settings" />
+			</apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Concatenated fields used during rollups to locate the most recent opportunity. --></help>
+        <label><!-- Combined Rollup Fieldset --></label>
+        <name>CombinedRollupFieldset__c</name>
+    </fields>
+    <fields>
+        <label>Générateur actuel</label>
+        <name>CurrentGenerators__c</name>
+    </fields>
+    <fields>
+        <label>Statut de l&apos;envoi/installation</label>
+        <name>DeliveryInstallationStatus__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In progress</masterLabel>
+            <translation><!-- In progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yet to begin</masterLabel>
+            <translation><!-- Yet to begin --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner Referral</masterLabel>
+            <translation><!-- Partner Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone Inquiry</masterLabel>
+            <translation><!-- Phone Inquiry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Relations</masterLabel>
+            <translation><!-- Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchased List</masterLabel>
+            <translation><!-- Purchased List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Concurrent(s) principal(ux)</label>
+        <name>MainCompetitors__c</name>
+    </fields>
+    <fields>
+        <label>Numéro de commande</label>
+        <name>OrderNumber__c</name>
+    </fields>
+    <fields>
+        <name>StageName</name>
+        <picklistValues>
+            <masterLabel>Closed Lost</masterLabel>
+            <translation><!-- Closed Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Won</masterLabel>
+            <translation><!-- Closed Won --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed/Won</masterLabel>
+            <translation><!-- Closed/Won --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Id. Decision Makers</masterLabel>
+            <translation><!-- Id. Decision Makers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs Analysis</masterLabel>
+            <translation><!-- Needs Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Negotiation/Review</masterLabel>
+            <translation><!-- Negotiation/Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perception Analysis</masterLabel>
+            <translation><!-- Perception Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal/Price Quote</masterLabel>
+            <translation><!-- Proposal/Price Quote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospecting</masterLabel>
+            <translation><!-- Prospecting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qualification</masterLabel>
+            <translation><!-- Qualification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value Proposition</masterLabel>
+            <translation><!-- Value Proposition --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Numéro de suivi</label>
+        <name>TrackingNumber__c</name>
+    </fields>
+    <fields>
+        <name>Type</name>
+        <picklistValues>
+            <masterLabel>Existing Customer - Downgrade</masterLabel>
+            <translation><!-- Existing Customer - Downgrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing Customer - Replacement</masterLabel>
+            <translation><!-- Existing Customer - Replacement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing Customer - Upgrade</masterLabel>
+            <translation><!-- Existing Customer - Upgrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Customer</masterLabel>
+            <translation><!-- New Customer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Hidden field for passing a Contact Id for Contact Role creation. --></help>
+        <label><!-- Contact Id for Role --></label>
+        <name>npe01__Contact_Id_for_Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Opp From Individual --></label>
+        <name>npe01__Is_Opp_From_Individual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Member Level --></label>
+        <name>npe01__Member_Level__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation><!-- Bronze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date membership period ends. --></help>
+        <label><!-- Membership End Date --></label>
+        <name>npe01__Membership_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is this a renewal, a new membership, or a membership with someone who lapsed and has returned. --></help>
+        <label><!-- Membership Origin --></label>
+        <name>npe01__Membership_Origin__c</name>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reacquire</masterLabel>
+            <translation><!-- Reacquire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date when membership period starts --></help>
+        <label><!-- Membership Start Date --></label>
+        <name>npe01__Membership_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Controls if Household contact roles are created for Opportunities --></help>
+        <label><!-- _SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR --></label>
+        <name>systemHouseholdContactRoleProcessor__c</name>
+        <picklistValues>
+            <masterLabel>All Opportunities</masterLabel>
+            <translation><!-- All Opportunities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Opportunities</masterLabel>
+            <translation><!-- No Opportunities --></translation>
+        </picklistValues>
+    </fields>
+    <recordTypes>
+        <label><!-- gift --></label>
+        <name>gift</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- membership --></label>
+        <name>membership</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- DeliveryStatus --></label>
+        <name>DeliveryStatus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Matching_Donation --></label>
+        <name>npe01__Add_Matching_Donation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Contact_Donation --></label>
+        <name>npe01__New_Contact_Donation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Organization_Donation --></label>
+        <name>npe01__New_Organization_Donation</name>
+    </webLinks>
+</CustomObjectTranslation>

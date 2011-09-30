@@ -1,0 +1,75 @@
+<apex:page id="UserRollupSettings" controller="userRollupSettings" action="{!checkSettings}" >
+
+    <apex:sectionHeader title="User Rollup Settings" subtitle="Configure User Defined Rollups (UDR) - BETA">
+        <description>
+            Settings that control user defined rollups from the Opportunity/Donation to a Contact, Account or Household. Changing these will change how your Nonprofit Starter Pack behaves.<br/>
+            WARNING: MISCONFIGURED SETTINGS CAN CAUSE ROLLUPS TO FAIL. PLEASE TEST THOROUGHLY BEFORE DEPLOYING TO PRODUCTION.<br/>
+        </description>  
+    </apex:sectionHeader>
+    <apex:pagemessages />   
+    
+    <apex:form id="UDRWizardForm" style="height:50px">
+        <apex:outputPanel id="wizardsteps">
+        <apex:pageBlock id="ButtonBlock" rendered="{!step==0}"  >
+            <apex:commandlink title="Start the New User Rollup Wizard" action="{!next}"  value="Begin New User Defined Rollup Wizard"/>                        
+        </apex:pageBlock>
+        
+        <apex:pageBlock id="step1" rendered="{!step==1}">
+            <apex:pageBlockSection title="Select the Opportunity Field to be Rolled-up" collapsible="false" columns="2" >
+                    <apex:selectList rendered="{!NOT(ISNULL(sourcefields))}" title="Available Opportunity Fields" value="{!opptyfield}" multiselect="false"  size="1">
+                        <apex:selectOptions value="{!sourcefields}"  />
+                    </apex:selectList>
+                    <apex:outputText rendered="{!ISNULL(sourcefields)}">No valid Opportunity fields found.</apex:outputText>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        <apex:outputPanel id="Step2" rendered="{!step==2}">
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Select the Rollup Operation" collapsible="false" columns="1" >
+                    <apex:selectList title="Supported Operations" value="{!operator}" multiselect="false"  size="1">
+                        <apex:selectOptions value="{!validoperators}" />
+                    </apex:selectList>
+            </apex:pageBlockSection>
+        </apex:pageBlock>   
+        </apex:outputPanel>
+
+        <apex:pageBlock id="Step3" rendered="{!step==3}">
+            <apex:pageBlockSection title="Select the Target Object" collapsible="false" columns="1" >
+                <apex:selectList title="Supported Operations" value="{!targetobject}" multiselect="false"  size="1">
+                    <apex:selectOptions value="{!targetobjects}" />
+                </apex:selectList>
+            </apex:pageBlockSection>
+        </apex:pageBlock>   
+
+        <apex:pageBlock id="Step4" rendered="{!step==4}">
+            <apex:pageBlockSection title="Select the Target Field" collapsible="false" columns="1" >
+                <apex:selectList title="Supported Operations" value="{!targetfield}" multiselect="false"  size="1">
+                    <apex:selectOptions value="{!targetfields}" />
+                </apex:selectList>
+            </apex:pageBlockSection>
+        </apex:pageBlock>   
+    
+        <apex:pageBlock id="Step5" rendered="{!step==5}">
+            <apex:pageBlockSection title="Confirm" collapsible="false" columns="1" >
+                <apex:outputText value="{!operationstring}" />
+                <apex:commandButton value="Confirm & Create Rollup" action="{!createRollup}" rendered="{!NOT(CONTAINS(targetfield,'NO VALID FIELD AVAILABLE'))}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>   
+        
+        <apex:commandlink title="Next" value="Next   |   " action="{!next}" rendered="{!step>0&&step<5}" />
+        <apex:commandlink value="Back   |   " action="{!back}" rendered="{!step>0&&step<6}" />
+        <apex:commandlink value="Cancel" action="{!cancel}" rendered="{!step>0&&step<6}"/>
+    </apex:outputPanel>
+    </apex:form>
+    
+    <apex:outputPanel rendered="{!step==0}" id="listviewpanel">
+        <apex:pageBlock id="RollupFieldListViewBlock" title="Current User Defined Rollups">
+            <apex:outputPanel layout="block" title="It is recommended you do not directly edit the existing rollups, and instead delete and recreate them using the included wizard above.">
+                <apex:listViews type="User_Rollup_Field_Settings__c" />
+            </apex:outputPanel> 
+        </apex:pageBlock>
+    </apex:outputPanel>
+   
+
+ 
+</apex:page>

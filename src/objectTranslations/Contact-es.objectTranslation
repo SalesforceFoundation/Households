@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Average Gift --></label>
+        <name>AverageAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Donor This Year? --></label>
+        <name>Donor_This_Year__c</name>
+    </fields>
+    <fields>
+        <help><!-- Displays as Yes or No depending on whether this individual has ever made a donation or sponsorship. --></help>
+        <label><!-- Donor? --></label>
+        <name>Donor__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Gift Date --></label>
+        <name>FirstCloseDate__c</name>
+    </fields>
+    <fields>
+        <label>Dirección del Hogar</label>
+        <name>Formula_HouseholdMailingAddress__c</name>
+    </fields>
+    <fields>
+        <label>Teléfono del Hogar</label>
+        <name>Formula_HouseholdPhone__c</name>
+    </fields>
+    <fields>
+        <label>Hogar</label>
+        <name>Household__c</name>
+        <relationshipLabel>Miembros del Hogar</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Idiomas</label>
+        <name>Languages__c</name>
+    </fields>
+    <fields>
+        <label><!-- Largest Gift --></label>
+        <name>LargestAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Household Gift Date --></label>
+        <name>LastCloseDateHH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Gift Date --></label>
+        <name>LastCloseDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Membership Amount --></label>
+        <name>LastMembershipAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Membership Date --></label>
+        <name>LastMembershipDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Membership Level --></label>
+        <name>LastMembershipLevel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Membership Origin --></label>
+        <name>LastMembershipOrigin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Gift Amount --></label>
+        <name>LastOppAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Transaction Date --></label>
+        <name>Last_Donation_Date__c</name>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Otros</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner Referral</masterLabel>
+            <translation>Referido</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone Inquiry</masterLabel>
+            <translation>Encuesta teléfonica</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Relations</masterLabel>
+            <translation><!-- Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchased List</masterLabel>
+            <translation>Lista adquirida</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation>Web</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Nivel</label>
+        <name>Level__c</name>
+        <picklistValues>
+            <masterLabel>Primary</masterLabel>
+            <translation>Primario</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary</masterLabel>
+            <translation>Secundario</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tertiary</masterLabel>
+            <translation>Superior</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Membership End Date --></label>
+        <name>MembershipEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Membership Join Date --></label>
+        <name>MembershipJoinDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Membership Span --></label>
+        <name>Membership_Span__c</name>
+    </fields>
+    <fields>
+        <help><!-- Current, expired, or grace period --></help>
+        <label><!-- Membership Status --></label>
+        <name>Membership_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Donor This Year? --></label>
+        <name>New_Donor_This_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Number of Gifts --></label>
+        <name>NumberOfClosedOpps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Memberships --></label>
+        <name>NumberOfMembershipOpps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Gifts Two Years Ago --></label>
+        <name>OppAmount2YearsAgo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Household Gifts Last 365 Days --></label>
+        <name>OppAmountLastNDaysHH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Gifts Last 365 Days --></label>
+        <name>OppAmountLastNDays__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Household Gifts Last Year --></label>
+        <name>OppAmountLastYearHH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Gifts Last Year --></label>
+        <name>OppAmountLastYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Household Gifts This Year --></label>
+        <name>OppAmountThisYearHH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Gifts This Year --></label>
+        <name>OppAmountThisYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Gifts Two Years Ago --></label>
+        <name>OppsClosed2YearsAgo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Gifts Last 365 Days --></label>
+        <name>OppsClosedLastNDays__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Gifts Last Year --></label>
+        <name>OppsClosedLastYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Gifts This Year --></label>
+        <name>OppsClosedThisYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smallest Gift --></label>
+        <name>SmallestAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- _SYSTEM: HOUSEHOLD PROCESSOR --></label>
+        <name>SystemHouseholdProcessor__c</name>
+        <picklistValues>
+            <masterLabel>All Individual Contacts</masterLabel>
+            <translation><!-- All Individual Contacts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All New or Edited Contacts</masterLabel>
+            <translation><!-- All New or Edited Contacts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Contacts</masterLabel>
+            <translation><!-- No Contacts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>test</masterLabel>
+            <translation><!-- test --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Membership Amount --></label>
+        <name>TotalMembershipOppAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Gifts --></label>
+        <name>TotalOppAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Household Gifts --></label>
+        <name>Total_Household_Gifts__c</name>
+    </fields>
+    <fields>
+        <label>Correo electrónico alternativo</label>
+        <name>npe01__AlternateEmail__c</name>
+    </fields>
+    <fields>
+        <label>Correo electrónico particular</label>
+        <name>npe01__HomeEmail__c</name>
+    </fields>
+    <fields>
+        <label>Dirección particular</label>
+        <name>npe01__Home_Address__c</name>
+    </fields>
+    <fields>
+        <label>Fecha de la última transacción</label>
+        <name>npe01__Last_Donation_Date__c</name>
+    </fields>
+    <fields>
+        <label>Monto total de transacciones</label>
+        <name>npe01__Lifetime_Giving_History_Amount__c</name>
+    </fields>
+    <fields>
+        <label>Tipo de organización</label>
+        <name>npe01__Organization_Type__c</name>
+    </fields>
+    <fields>
+        <label>Otra dirección</label>
+        <name>npe01__Other_Address__c</name>
+    </fields>
+    <fields>
+        <label>Teléfono elegido</label>
+        <name>npe01__PreferredPhone__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation>Particular</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Household</masterLabel>
+            <translation>Familiar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile</masterLabel>
+            <translation>Célular</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Otro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Laboral</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Correo electrónico elegido</label>
+        <name>npe01__Preferred_Email__c</name>
+        <picklistValues>
+            <masterLabel>Alternate</masterLabel>
+            <translation>Alternativo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation>Particular</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Household</masterLabel>
+            <translation>Familia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal</masterLabel>
+            <translation><!-- Personal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Laboral</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Tipo de dirección de correo</label>
+        <name>npe01__Primary_Address_Type__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation><!-- Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation><!-- Work --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Privado</label>
+        <name>npe01__Private__c</name>
+    </fields>
+    <fields>
+        <label>Tipo de otra dirección</label>
+        <name>npe01__Secondary_Address_Type__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation><!-- Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation><!-- Work --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- _SYSTEM: ACCOUNT PROCESSOR --></label>
+        <name>npe01__SystemAccountProcessor__c</name>
+        <picklistValues>
+            <masterLabel>Individual</masterLabel>
+            <translation><!-- Individual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>One-to-One</masterLabel>
+            <translation><!-- One-to-One --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- _SYSTEM: IsIndividual - DEPRECATED --></label>
+        <name>npe01__SystemIsIndividual__c</name>
+    </fields>
+    <fields>
+        <help><!-- Shows the type of Account this Contact is connected to. --></help>
+        <label><!-- Type of Account --></label>
+        <name>npe01__Type_of_Account__c</name>
+    </fields>
+    <fields>
+        <label>Correo electrónico laboral</label>
+        <name>npe01__WorkEmail__c</name>
+    </fields>
+    <fields>
+        <label>Teléfono laboral</label>
+        <name>npe01__WorkPhone__c</name>
+    </fields>
+    <fields>
+        <label>Dirección laboral</label>
+        <name>npe01__Work_Address__c</name>
+    </fields>
+</CustomObjectTranslation>
