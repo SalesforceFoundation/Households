@@ -1,5 +1,62 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>BATCH_HouseholdNaming</members>
+        <members>BATCH_OppRollup</members>
+        <members>CTRL_AddressCopyBtn</members>
+        <members>CTRL_BatchJobsProgress</members>
+        <members>CTRL_CampaignDedupeBtn</members>
+        <members>CTRL_OpportunityRollup</members>
+        <members>HouseholdNaming</members>
+        <members>HouseholdOpportunity</members>
+        <members>HouseholdProcessControl</members>
+        <members>HouseholdTransactionHistory_EXT</members>
+        <members>Households</members>
+        <members>NPSPPkgVersionCheck</members>
+        <members>OpportunityRollups</members>
+        <members>RecordTypes</members>
+        <members>SCHED_OppRollup</members>
+        <members>TEST_HouseholdOpportunity</members>
+        <members>TEST_HouseholdOpportunity_bulk</members>
+        <members>TEST_Households</members>
+        <members>UnitTestData</members>
+        <members>bulkTests</members>
+        <members>householdsSettings</members>
+        <members>userRollupSettings</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>CustomLabels</members>
+        <name>CustomLabels</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Household_Reports</members>
+        <members>Household_Reports/Households_and_Donations</members>
+        <name>Report</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ReportType</name>
+    </types>
     <version>20.0</version>
 </Package>
-

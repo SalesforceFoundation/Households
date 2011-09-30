@@ -94,7 +94,7 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <formula>MailingStreet__c &amp; BR() &amp;
-MailingCity__c &amp; &quot;, &quot; &amp; MailingState__c &amp; &quot;  &quot; &amp;  MailingPostalCode__c 
+MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot;) &amp; MailingState__c &amp; &quot;  &quot; &amp;  MailingPostalCode__c 
 &amp; if (LEN(MailingCountry__c)&gt;0,BR()&amp;MailingCountry__c,&quot;&quot;)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Mailing Address</label>
