@@ -312,7 +312,7 @@ MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot
         <description>Grace period defaults to 30 days. This can be adjusted in the Households Settings tab.</description>
         <externalId>false</externalId>
         <formula>if ( MembershipEndDate__c  &lt;today(), if (MembershipEndDate__c  &gt; ( TODAY() - 
-IF(NOT(ISNULL($Setup.npo02__Households_Settings__c.npo02__Membership_Grace_Period__c)), $Setup.npo02__Households_Settings__c.npo02__Membership_Grace_Period__c, 30)) , &quot;Grace Period&quot; , &quot;Expired&quot;) , if(isnull(MembershipEndDate__c ),&quot;&quot;,&quot;Current&quot;))</formula>
+IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup.Households_Settings__c.Membership_Grace_Period__c, 30)) , &quot;Grace Period&quot; , &quot;Expired&quot;) , if(isnull(MembershipEndDate__c ),&quot;&quot;,&quot;Current&quot;))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>Current, expired, or grace period</inlineHelpText>
         <label>Membership Status</label>
