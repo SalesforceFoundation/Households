@@ -46,7 +46,7 @@
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>CampaignContact</reportType>
+    <reportType>CampaignContact@Contact.Household__c</reportType>
     <scope>one</scope>
     <showDetails>true</showDetails>
 </Report>
