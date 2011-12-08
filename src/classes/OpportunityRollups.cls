@@ -1,4 +1,4 @@
-/*
+/* 
     Copyright (c) 2011, Salesforce.com Foundation
     All rights reserved.
     
@@ -635,21 +635,43 @@ global virtual class OpportunityRollups {
             soqlStatement += '(contact.npo02__household__c = null AND contactid IN :conids)) ';
             
             if (useFiscalYear)
-                soqlStatement += 'GROUP BY CUBE(contact.npo02__household__c, contactId, Fiscal_Year(opportunity.closeDate)) ';
+                soqlStatement += 'GROUP BY ROLLUP(contact.npo02__household__c, contactId, Fiscal_Year(opportunity.closeDate)) ';
             else
-                soqlStatement += 'GROUP BY CUBE(contact.npo02__household__c, contactId, Calendar_Year(opportunity.closeDate)) ';
+                soqlStatement += 'GROUP BY ROLLUP(contact.npo02__household__c, contactId, Calendar_Year(opportunity.closeDate)) ';
             soqlStatement += 'HAVING (contactId IN : conIds OR contactId = null)';
            
              
             objectList = database.query(soqlStatement);
             
+            //need a seperate processor for apexcubes
+            list<ResultObject> ROList = new list<ResultObject>();
+            ROList = doApexCube(objectlist);
+            
             // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
             opptyCurrencies = (isMultiCurrency() ? rcfFindCurrency(objectList) : null);
             
-            for (sobject r : objectList ) {
+            //send HH rows for processing to seperate func
+            for (ResultObject ro : ROList){
+                id hhid = (id)(ro.hhid);
+                    
+                // process the result row, copying it into the contact record(s)
+                // MS: we only want to fully calc the row if it is from the last few years - older years are only for calcing Best Year for contacts
+                integer yr = ro.CalendarYr;
+                if (hhid != null && (yr >= startYear || yr==null)){ 
+                    updateRollupFromApexResult((sobject)(householdsToUpdate.get(hhid)), ro, opptyCurrencies);
+                }
+                /* I don't think this does anything...
+                // after doing regular processing, calc Best Contact Year stuff
+                // the rows are in year order, so just look start w/ the first yr, and increase as needed as we go
+                decimal yrAmt = (decimal)r.get('TotalOppAmount');
+                npo02__household__c HH = householdsToUpdate.get(hhid);              
+                */
+            }
+            
+            // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
+            opptyCurrencies = (isMultiCurrency() ? rcfFindCurrency(objectList) : null);
                 
-                // system.debug(Logginglevel.WARN, 'ROLLUP ROW: ' + r);
-    
+            for (sobject r : objectList) {
                 // get the ids
                 id cid = (id)(r.get('contactId'));
                 id hhid = (id)(r.get('hhid'));
@@ -657,18 +679,18 @@ global virtual class OpportunityRollups {
                 // process the result row, copying it into the contact record(s)
                 // MS: we only want to fully calc the row if it is from the last few years - older years are only for calcing Best Year for contacts
                 integer yr = (integer)r.get('CalendarYr');
-                if (cid == null) { 
-                    /*if (hhid != null && (yr >= startYear || yr==null) ) updateRollupFromResult((sobject)(householdsToUpdate.get(hhid)), r);*/
+              //with apex cubes, we actually don't want to call the HH update at all
+              /*  if (cid == null) { 
                     if (hhid != null && (yr >= startYear || yr==null) ) updateRollupFromResult((sobject)(householdsToUpdate.get(hhid)), r, opptyCurrencies);
                     // after doing regular processing, calc Best Contact Year stuff
                     // the rows are in year order, so just look start w/ the first yr, and increase as needed as we go
                     decimal yrAmt = (decimal)r.get('TotalOppAmount');
                     npo02__household__c HH = householdsToUpdate.get(hhid);
     
-                } else {
+                } else { */
+                if (cid != null){
                     // contact row
                     if ( yr >= startYear || yr==null) {
-                        /*updateRollupFromResult((sobject)(contactsToUpdate.get(cid)), r);*/
                         updateRollupFromResult((sobject)(contactsToUpdate.get(cid)), r, opptyCurrencies);
                     }
                     // after doing regular processing, calc Best Contact Year stuff
@@ -796,21 +818,39 @@ global virtual class OpportunityRollups {
             soqlStatement += 'AND (contact.npo02__household__c IN : hhIds OR  ';
             soqlStatement += '(contact.npo02__household__c = null AND contactid IN :conids)) ';
             if (useFiscalYear)
-                soqlStatement += 'GROUP BY CUBE(contact.npo02__household__c, contactId, Fiscal_Year(opportunity.closeDate)) ';
+                soqlStatement += 'GROUP BY ROLLUP(contact.npo02__household__c, contactId, Fiscal_Year(opportunity.closeDate)) ';
             else
-                soqlStatement += 'GROUP BY CUBE(contact.npo02__household__c, contactId, Calendar_Year(opportunity.closeDate)) ';
+                soqlStatement += 'GROUP BY ROLLUP(contact.npo02__household__c, contactId, Calendar_Year(opportunity.closeDate)) ';
             soqlStatement += 'HAVING (contactId IN : conIds OR contactId = null) ';
                 
             objectList.clear();
             objectList = database.query(soqlStatement);
+               //need a seperate processor for apexcubes
+            list<ResultObject> ROList = new list<ResultObject>();
+            ROList = doApexCube(objectlist);
+            
+            //send HH rows for processing to seperate func
+            for (ResultObject ro : ROList){
+                id hhid = (id)(ro.hhid);
+                    
+                // process the result row, copying it into the contact record(s)
+                // MS: we only want to fully calc the row if it is from the last few years - older years are only for calcing Best Year for contacts
+                integer yr = ro.CalendarYr;
+                if (hhid != null && (yr >= startYear || yr==null)){ 
+                    updateRollupFromApexResult((sobject)(householdsToUpdate.get(hhid)), ro, opptyCurrencies);
+                }
+                /* I don't think this does anything...
+                // after doing regular processing, calc Best Contact Year stuff
+                // the rows are in year order, so just look start w/ the first yr, and increase as needed as we go
+                decimal yrAmt = (decimal)r.get('TotalOppAmount');
+                npo02__household__c HH = householdsToUpdate.get(hhid);            	
+            	*/
+            }
             
             // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
             opptyCurrencies = (isMultiCurrency() ? rcfFindCurrency(objectList) : null);
                 
             for (sobject r : objectList) {
-                
-                // system.debug(Logginglevel.WARN, 'ROLLUP ROW: ' + r);
-    
                 // get the ids
                 id cid = (id)(r.get('contactId'));
                 id hhid = (id)(r.get('hhid'));
@@ -818,18 +858,19 @@ global virtual class OpportunityRollups {
                 // process the result row, copying it into the contact record(s)
                 // MS: we only want to fully calc the row if it is from the last few years - older years are only for calcing Best Year for contacts
                 integer yr = (integer)r.get('CalendarYr');
-                if (cid == null) { 
-                    /*if (hhid != null && (yr >= startYear || yr==null) ) updateRollupFromResult((sobject)(householdsToUpdate.get(hhid)), r);*/
+              //with apex cubes, we actually don't want to call the HH update at all
+              /*  if (cid == null) { 
                     if (hhid != null && (yr >= startYear || yr==null) ) updateRollupFromResult((sobject)(householdsToUpdate.get(hhid)), r, opptyCurrencies);
                     // after doing regular processing, calc Best Contact Year stuff
                     // the rows are in year order, so just look start w/ the first yr, and increase as needed as we go
                     decimal yrAmt = (decimal)r.get('TotalOppAmount');
                     npo02__household__c HH = householdsToUpdate.get(hhid);
     
-                } else {
+                } else { */
+                
+                if (cid != null){
                     // contact row
                     if ( yr >= startYear || yr==null) {
-                        /*updateRollupFromResult((sobject)(contactsToUpdate.get(cid)), r);*/
                         updateRollupFromResult((sobject)(contactsToUpdate.get(cid)), r, opptyCurrencies);
                     }
                     // after doing regular processing, calc Best Contact Year stuff
@@ -1182,11 +1223,86 @@ global virtual class OpportunityRollups {
             (isTest ? ' WHERE name like \'%doppleganger%\' LIMIT 200' : '') );
         id batchProcessId = database.executeBatch(batch, batchSize);        
     }
+    
+    //to handle HH updates from apex cube
+    public static void updateRollupFromApexResult (sobject obj, ResultObject ro, map<id, Opportunity> opptyCurrencies){
+    	// get the fiscal year, total amount, and opp count for this result row     
+        integer fy = ro.CalendarYr;
+        decimal amt = ro.TotalOppAmount;
+        integer cnt = ro.NumberOfClosedOpps;                
+        
+        // split the special field to get the last opp id and amount
+        string[] rcf = ro.RollupFieldset.split(';\\|;',-4);
+        decimal lastAmt = (rcf.size() > 1 && rcf[1] != '') ? decimal.valueOf(rcf[1]) : null;
+        
+        // calculate amounts into correct currency if needed
+        if(isMultiCurrency()){
+            amt = ConvertFromCorporate((string)obj.get('CurrencyIsoCode'),amt);
+            if(lastAmt != null && rcf.size() > 4 && rcf[4] != '')
+                lastAmt = ConvertCurrency((string)opptyCurrencies.get((Id)rcf[4]).get('CurrencyISOCode'),(string)obj.get('CurrencyIsoCode'),lastAmt);           
+        }
+        
+        // check if this is an annual total or account total
+        if (fy != null) {
 
+            // put the fiscal year total in the right fields
+            integer thisYear = system.today().year();
+            if (fy == thisYear) {
+                obj.put('npo02__OppAmountThisYear__c', amt); 
+                obj.put('npo02__OppsClosedThisYear__c', cnt); 
+            } else if (fy == (thisYear - 1)) {
+                obj.put('npo02__OppAmountLastYear__c', amt); 
+                obj.put('npo02__OppsClosedLastYear__c', cnt); 
+            } else if (fy == (thisYear - 2) ) {
+                obj.put('npo02__OppAmount2YearsAgo__c', amt); 
+                obj.put('npo02__OppsClosed2YearsAgo__c', cnt); 
+            } 
+                
+        } else { 
+
+            // fill in summary totals
+            obj.put('npo02__TotalOppAmount__c', amt);
+            obj.put('npo02__NumberOfClosedOpps__c', cnt);               
+            obj.put('npo02__LastOppAmount__c', lastAmt);
+            obj.put('npo02__FirstCloseDate__c', ro.FirstCloseDate); //date
+            obj.put('npo02__LastCloseDate__c', ro.LastCloseDate); //date
+            
+            // calculate amounts into correct currency if needed
+            if(isMultiCurrency())
+            {
+               obj.put('npo02__AverageAmount__c', ConvertFromCorporate((string)obj.get('CurrencyIsoCode'),ro.AverageAmount)); 
+               obj.put('npo02__SmallestAmount__c', ConvertFromCorporate((string)obj.get('CurrencyIsoCode'),ro.SmallestAmount)); 
+               obj.put('npo02__LargestAmount__c', ConvertFromCorporate((string)obj.get('CurrencyIsoCode'),ro.LargestAmount)); 
+            }
+            else
+            {
+               obj.put('npo02__AverageAmount__c', ro.AverageAmount); 
+               obj.put('npo02__SmallestAmount__c', ro.SmallestAmount); 
+               obj.put('npo02__LargestAmount__c', ro.LargestAmount); 
+            }
+        }
+        /*
+        //deal with user rollups
+        if (userRollups.size() > 0){
+            for (string s : userRollups.keyset()){
+                if (obj.getSObjectType().getDescribe().getName() == userRollups.get(s).Object_Name__c){
+                    User_Rollup_Field_Settings__c urfs = userRollups.get(s);
+                    string x = urfs.Name;                   
+                    if (r.get(x) != null)
+                       obj.put(urfs.Target_Field__c, r.get(x));
+                }
+            }
+        } 
+    	*/
+    	
+    	
+    } 	
+    
+    
     public static void updateRollupFromResult(sobject obj, sobject r, map<id, Opportunity> opptyCurrencies) {
     // used for single and batch rollups, this maps query results to the right fields
-
-        // get the fiscal year, total amount, and opp count for this result row     
+        
+       // get the fiscal year, total amount, and opp count for this result row     
         integer fy = (integer)(r.get('CalendarYr'));
         decimal amt = (decimal)(r.get('TotalOppAmount'));
         integer cnt = (integer)(r.get('NumberOfClosedOpps'));               
@@ -1400,6 +1516,200 @@ global virtual class OpportunityRollups {
         else
             return null;
         
+    }
+    
+    //need to mimic the cubing behavior of oracle to work around an oracle bug
+    //this method cubes contact results into their parent households and 
+    //adds the household sobject to the results lists for writing 
+    private list<ResultObject> doApexCube(list<sobject> queryresults){
+        
+        list<ResultObject> newobjectlist = new list<ResultObject>();
+        map<id, list<sobject>> hhobjectmap = new map<id, list<sobject>>();
+        
+        //use this to track one sobject per contact for summary totals 
+        set<id> usedContactSet = new set<id>();
+        
+        //sort queryresults into a map with hhid as key
+        //we could do this one pass, but we'd need to loop through the result
+        //list each time looking for an existing hhid, i think this is more
+        //efficient, but may be an area for optimization in the future
+        for (sobject s : queryresults){
+            if (s.get('hhid') != null){                
+                //new key
+                if(!hhobjectmap.containsKey((id)s.get('hhid'))){
+                    hhobjectmap.put((id)s.get('hhid'), new list<sobject>{s});
+        	    }
+        	   //add to existing key
+                else{
+                    list<sobject> thelist = hhobjectmap.get((id)s.get('hhid'));        		
+                    thelist.add(s);        		
+                }
+            }
+        }            	    	
+    	
+    	integer currentyear = system.today().year();
+    	//for each HH with records, build the year over year object 
+    	//and the grand total object 
+    	for (id hhid : hhobjectmap.keySet()){
+            //fy results  
+            integer currentyearcount = 0;
+            decimal currentyeartotal = 0;
+            integer lastfycount = 0;
+            decimal lastfytotal = 0;
+            integer fy2count = 0;
+            decimal fy2total = 0;
+            //total results
+            decimal totaloppamount = 0;
+            integer numberofclosedopps = 0;
+            decimal lastoppamount = 0;
+            date firstclosedate;
+            date lastclosedate;
+            decimal averageoppamount = 0;
+            decimal largestoppamount = 0;
+            decimal smallestoppamount = 0;
+            
+            string currencyisocode = '';
+            string rollupfieldset = '';
+           
+            for (sobject s : hhobjectmap.get(hhid)){
+                                
+                integer fy = (integer)s.get('CalendarYr');
+                decimal rowamount = (decimal)s.get('TotalOppAmount');
+                integer rowcount = (integer)s.get('NumberOfClosedOpps');
+              
+                //these two values should be standard across the hh
+                if (isMultiCurrency() && currencyisocode == '') 
+                    currencyisocode = (string)s.get('CurrencyIsoCode');
+                if (rollupfieldset == '') 
+                    rollupfieldset = (string)s.get('RollupFieldSet');                    
+                
+                if (fy == currentyear){
+                    currentyearcount += rowcount;                                                                                
+                    currentyeartotal += rowamount;
+                }
+            
+                else if(fy == currentyear - 1){
+                    lastfycount += rowcount;
+                    lastfytotal += rowamount;
+                }
+                
+                else if (fy == currentyear - 2){
+                	fy2count += rowcount;
+                	fy2total += rowamount;
+                }
+            
+                id cid = (id)s.get('contactID');
+            
+                //only use the con summary row
+                if (fy == null && cid != null && !usedContactSet.contains(cid)){ 
+                    usedContactSet.add(cid);                	                     
+                    numberofclosedopps += rowcount;
+                    totaloppamount += rowamount;                        	
+                }
+            	
+            	if (smallestoppamount == 0 || smallestoppamount > (decimal)s.get('SmallestAmount')){
+            		smallestoppamount = (decimal)s.get('SmallestAmount');
+            	}            	
+            	if (largestoppamount == 0 || largestoppamount < (decimal)s.get('LargestAmount')){
+                    largestoppamount = (decimal)s.get('LargestAmount');
+                }                
+            	if (firstclosedate == null || firstclosedate > (date)s.get('FirstCloseDate')){
+                    firstclosedate = (date)s.get('FirstCloseDate');
+                }
+            	if (lastclosedate == null || lastclosedate < (date)s.get('LastCloseDate')){
+                    lastclosedate = (date)s.get('LastCloseDate');            		
+            	}
+            }
+                        
+        //current year row for HH
+            if (currentyearcount != 0 || currentyeartotal != 0){
+                
+                ResultObject ro = new ResultObject();
+                ro.TotalOppAmount = currentyeartotal;
+                ro.NumberOfClosedOpps = currentyearcount;
+                ro.CalendarYr = currentyear;
+                ro.hhid = hhid;
+                ro.RollupFieldSet = rollupfieldset;
+                if (isMultiCurrency()){
+                   ro.CurrencyIsoCode = currencyisocode;
+                }
+            	newobjectlist.add(ro);
+            }    
+        
+            //last year row for HH
+            if (lastfycount != 0 || lastfytotal != 0){
+                
+                ResultObject rolastfy = new ResultObject();                
+                rolastfy.TotalOppAmount = lastfytotal;
+                rolastfy.NumberOfClosedOpps = lastfycount;
+                rolastfy.CalendarYr = currentyear - 1;
+                rolastfy.hhid = hhid;
+                rolastfy.RollupFieldSet = rollupfieldset;
+                  if (isMultiCurrency()){
+                   rolastfy.CurrencyIsoCode = currencyisocode;
+                }                
+                newobjectlist.add(rolastfy);
+            }
+        
+            //fy-2 row for HH
+            else if (fy2count != 0 || fy2total != 0){
+                ResultObject ro2 = new ResultObject();
+                ro2.TotalOppAmount = currentyeartotal;
+                ro2.NumberOfClosedOpps = currentyearcount;
+                ro2.CalendarYr = currentyear;
+                ro2.hhid = hhid;
+                ro2.RollupFieldSet = rollupfieldset;
+                if (isMultiCurrency()){
+                   ro2.CurrencyIsoCode = currencyisocode;
+                }
+                newobjectlist.add(ro2);
+            }
+                    
+            //summary totals            
+            ResultObject sumRO = new ResultObject();
+            sumRO.RollupFieldSet = rollupfieldset;
+            sumRO.hhid = hhid;
+            sumRO.TotalOppAmount = totaloppamount;
+            sumRO.NumberOfClosedOpps = numberofclosedopps;
+            sumRO.SmallestAmount = smallestoppamount;
+            sumRO.LargestAmount = largestoppamount;
+            sumRO.FirstCloseDate = firstclosedate;
+            sumRO.LastCloseDate = lastclosedate;
+            sumRO.AverageAmount = totaloppamount/numberofclosedopps;                                        
+            if (isMultiCurrency()){
+                sumRO.CurrencyISOCode = currencyisocode;   
+            }
+            //add summary row
+            newobjectlist.add(sumRO);
+    	}
+    	return newobjectlist;
+    }
+
+    //wrapper for aggresult and/or apexcube
+    public class ResultObject{
+        
+        AggregateResult ar;
+        decimal TotalOppAmount;
+        integer NumberOfClosedOpps;
+        integer CalendarYr;
+        id hhid;
+        string RollupFieldSet;
+        string CurrencyIsoCode;
+        decimal SmallestAmount;
+        decimal LargestAmount;
+        date FirstCloseDate;
+        date LastCloseDate;
+        decimal AverageAmount;
+        
+        //we'll need to define properties ourselves
+        public ResultObject(){}
+        
+        //its an agg result object
+        public ResultObject(sobject s){
+            if (s instanceof AggregateResult){
+            	ar = (AggregateResult)s;
+            }
+        }   	
     }
 
     /************ TESTS ***************/
