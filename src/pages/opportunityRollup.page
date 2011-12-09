@@ -6,7 +6,7 @@
 ul.err li {
 	list-style-type: none;
 	color: #cc0000;
-	font-weight: bold;
+	font-weight: bold; 
 }
 </style>
 	<apex:sectionHeader title="Batch Opportunity Rollup" />
@@ -26,7 +26,7 @@ ul.err li {
 		</apex:pageBlock>
 		<apex:outputPanel rendered="{!batchRunning}">
 			<c:batchjobs batchComponentLabel="Batch Rollup Progress"
-				numberOfJobs="2" />
+				numberOfJobs="3" />
 		</apex:outputPanel>
 	</apex:form>
 </apex:page>
