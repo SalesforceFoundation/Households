@@ -53,7 +53,11 @@ global class BATCH_OppRollup implements Database.Batchable<SObject> {
 		
  		if (result[0].getSObjectType() == Account.sObjectType) { 
 			rg.RollupAccounts((list<account>)result);
- 		} else {
+ 		} 
+ 		else if (result[0].getSobjectType() == Contact.sObjectType) {
+			rg.rollupContacts((list<Contact>)result);
+ 		}
+ 		else{
 			rg.RollupHouseholds((list<household__c>)result);
  		}
  		

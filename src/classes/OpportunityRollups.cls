@@ -217,6 +217,16 @@ global virtual class OpportunityRollups {
             rg.rollupAccounts( amap );
         }
     }
+    
+    //used to call in from batch to pickup
+    //contacts without household that would otherwise not be
+    //selected
+    public void rollupContacts(list<contact> contactlist){
+    	if (contactlist != null && !contactlist.isEmpty()){
+    		rollupContacts(new map<id, Contact>(contactlist), new map<id, npo02__Household__c>());
+    	}
+    }
+    
 
     public void rollupAccounts( list<account> accts ) {
     // roll up opps for a set of accounts
@@ -1172,7 +1182,32 @@ global virtual class OpportunityRollups {
     public void rollupAll() {
         rollupAllAccounts();
         rollupAllContacts(); 
+        rollupNonHHContacts();
     }   
+
+    public void rollupNonHHContacts(){
+        // we can handle up to 10000 query rows total, which is about 3000 opps in a batch
+        // this calculation very conservatively reduces batch size to avoid hitting the limit
+        integer batchSize = 200;
+        list<Contact> topContact = [select npo02__NumberOfClosedOpps__c from Contact 
+            where npo02__NumberOfClosedOpps__c != null 
+            order by npo02__NumberOfClosedOpps__c desc limit 1];
+        if (!topContact.isEmpty()) {
+            decimal highestCount = topContact[0].npo02__NumberOfClosedOpps__c;
+            if (highestCount > 15) {
+                batchSize = (3000 / highestCount).intValue() + 1;
+            }
+        }
+
+        BATCH_OppRollup batch = new BATCH_OppRollup( 'SELECT id, npo02__TotalOppAmount__c, ' +
+            'npo02__OppAmountThisYear__c, npo02__TotalMembershipOppAmount__c, ' +
+            'npo02__OppAmountLastYear__c, npo02__OppAmount2YearsAgo__c, npo02__MembershipJoinDate__c, npo02__MembershipEndDate__c, ' +
+            'npo02__OppAmountLastNDays__c, npo02__LastCloseDate__c, npo02__NumberOfClosedOpps__c ' +
+            (isMultiCurrency() ? ', CurrencyIsoCode ' : '')+              
+            ' FROM Contact ' + 
+            (isTest ? ' WHERE name like \'%doppleganger%\' LIMIT 200' : '') );
+        id batchProcessId = database.executeBatch(batch, batchSize);
+    }
 
     public void rollupAllAccounts() {
 
