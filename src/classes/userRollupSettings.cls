@@ -61,6 +61,8 @@ public with sharing class userRollupSettings {
     //controls wizard steps
     public integer step{get; set;}
     
+    private boolean hasRollupInsert = false;
+    
     //constructor
     public userRollupSettings(){
        step = 0;
@@ -312,22 +314,25 @@ public with sharing class userRollupSettings {
     
     //save and commit rollup
     public PageReference createRollup(){
-    	try{
-    		map<string, User_Rollup_Field_Settings__c> userRollups = User_Rollup_Field_Settings__c.getAll();
-            integer nameNumber = userRollups.size();
+    	
+    	if (!hasRollupInsert){
+            try{
+        		map<string, User_Rollup_Field_Settings__c> userRollups = User_Rollup_Field_Settings__c.getAll();
+                integer nameNumber = userRollups.size();
     		 
-    		User_Rollup_Field_Settings__c newURFS = new User_Rollup_Field_Settings__c(Name = 'CustomRollup' + nameNumber, 
-    		Object_Name__c = targetobject, Target_Field__c = targetfield, Field_Action__c = operator,
-    		Source_Field__c = opptyfield
-    		);    		
-    		insert newURFS;    		
-    	}
+                User_Rollup_Field_Settings__c newURFS = new User_Rollup_Field_Settings__c(Name = 'CustomRollup' + nameNumber, 
+                Object_Name__c = targetobject, Target_Field__c = targetfield, Field_Action__c = operator,
+                Source_Field__c = opptyfield);    		
+                
+                insert newURFS;
+                hasRollupInsert = true;    		
+            }
     	
-    	catch(Exception e){
-    		 showMsg('An unhandled exception has occurred. Please try again.',ApexPages.Severity.FATAL);
-    		 showMsg('Exception type' + e, ApexPages.Severity.INFO);    		 
+            catch(Exception e){
+                showMsg('An unhandled exception has occurred. Please try again.',ApexPages.Severity.FATAL);
+                showMsg('Exception type' + e, ApexPages.Severity.INFO);    		 
+            }
     	}
-    	
     	return ApexPages.currentPage().setRedirect(true);
     }   
         
