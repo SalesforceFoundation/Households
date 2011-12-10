@@ -288,6 +288,10 @@ global virtual class OpportunityRollups {
         soqlStatement += 'FROM Opportunity ';
         soqlStatement += 'WHERE isWon=true '; 
         soqlStatement += 'AND (Amount != null) '; 
+        
+        //issue 289
+        soqlStatement += 'AND accountID != ' + npe01.Constants.GetIndividualAccountId () + ')';
+        
         if(areRecordTypesOnOpps()){
             soqlStatement += 'AND RecordTypeId NOT IN : recordTypesToExcludeAccts ';
         }
@@ -325,6 +329,10 @@ global virtual class OpportunityRollups {
         soqlStatement += 'FROM Opportunity  '; 
         soqlStatement += 'WHERE isWon=true  '; 
         soqlStatement += 'AND (Amount != null) '; 
+        
+        //issue 289
+        soqlStatement += 'AND accountID != ' + npe01.Constants.GetIndividualAccountId () + ')';
+        
         if(areRecordTypesOnOpps()){ 
             soqlStatement += 'AND RecordTypeId NOT IN : recordTypesToExcludeAccts '; 
         }
@@ -363,6 +371,10 @@ global virtual class OpportunityRollups {
             soqlStatement += 'FROM Opportunity ';
             soqlStatement += 'WHERE isWon=true  ';
             soqlStatement += 'AND (Amount != null)  ';
+            
+            //issue 289
+            soqlStatement += 'AND accountID != ' + npe01.Constants.GetIndividualAccountId () + ')';
+            
             if(areRecordTypesOnOpps()){
                 soqlStatement += 'AND RecordTypeId IN : mbrRecordTypes ';
             }
@@ -1204,8 +1216,8 @@ global virtual class OpportunityRollups {
             'npo02__OppAmountLastYear__c, npo02__OppAmount2YearsAgo__c, npo02__MembershipJoinDate__c, npo02__MembershipEndDate__c, ' +
             'npo02__OppAmountLastNDays__c, npo02__LastCloseDate__c, npo02__NumberOfClosedOpps__c ' +
             (isMultiCurrency() ? ', CurrencyIsoCode ' : '')+              
-            ' FROM Contact ' + 
-            (isTest ? ' WHERE name like \'%doppleganger%\' LIMIT 200' : '') );
+            ' FROM Contact WHERE npo02__Household__c = null' + 
+            (isTest ? ' and name like \'%doppleganger%\' LIMIT 200' : '') );
         id batchProcessId = database.executeBatch(batch, batchSize);
     }
 
