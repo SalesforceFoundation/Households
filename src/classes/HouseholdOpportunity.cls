@@ -40,8 +40,11 @@ public class HouseholdOpportunity {
         npe01__Contacts_and_Orgs_Settings__c ContactsSettings = npe01.Constants.getContactsSettings();
         Households_Settings__c currentHouseholdsSettings = Households.getHouseholdsSettings();
         if(currentHouseholdsSettings.Household_Contact_Roles_On__c){
+        
+        
         //get all Opps in the trigger set that are for individual accounts 
-        List<Opportunity> oppsForContactRoles = [select Id, AccountId, account.npe01__One2OneContact__c,account.npe01__SYSTEMIsIndividual__c from Opportunity where Id IN :opportunities AND account.npe01__SYSTEMIsIndividual__c = true];
+        //issue 318, also get Contact ID for Role if available
+        List<Opportunity> oppsForContactRoles = [select Id, npe01__Contact_Id_for_Role__c, AccountId, account.npe01__One2OneContact__c,account.npe01__SYSTEMIsIndividual__c from Opportunity where Id IN :opportunities AND account.npe01__SYSTEMIsIndividual__c = true];
         
         if(oppsForContactRoles.size()>0){
             
@@ -62,13 +65,26 @@ public class HouseholdOpportunity {
             
             //loop throught the Opportunities
             for(Opportunity thisOpp : oppsForContactRoles){ 
-                //grab all the contacts off the Accounts
-                contactIds.add(thisOpp.account.npe01__One2OneContact__c);
+                
+                
+                //grab all the contacts off the Accounts or via the role lookup
+                if (thisOpp.account.npe01__One2OneContact__c != null)
+                    contactIds.add(thisOpp.account.npe01__One2OneContact__c);
+                else if (thisOpp.npe01__Contact_Id_for_Role__c != null)
+                    contactIds.add(thisOpp.npe01__Contact_Id_for_Role__c);
+                    
                 //create the map of contacts to opps
-                if(contactIdToOpps.get(thisOpp.account.npe01__One2OneContact__c)==null){
-                    contactIdToOpps.put(thisOpp.account.npe01__One2OneContact__c,new List<Opportunity>());                  
+                if(contactIdToOpps.get(thisOpp.account.npe01__One2OneContact__c)==null && contactIdToOpps.get(thisOpp.npe01__Contact_Id_for_Role__c) == null){
+                    if (thisOpp.account.npe01__One2OneContact__c != null)
+                        contactIdToOpps.put(thisOpp.account.npe01__One2OneContact__c,new List<Opportunity>());
+                    else if (thisOpp.npe01__Contact_Id_for_Role__c != null)
+                        contactIdToOpps.put(thisOpp.npe01__Contact_Id_for_Role__c,new List<Opportunity>());                                          
                 }
-                contactIdToOpps.get(thisOpp.account.npe01__One2OneContact__c).add(thisOpp);
+                
+                if (thisOpp.account.npe01__One2OneContact__c != null)
+                    contactIdToOpps.get(thisOpp.account.npe01__One2OneContact__c).add(thisOpp);
+                else 
+                    contactIdToOpps.get(thisOpp.npe01__Contact_Id_For_Role__c).add(thisOpp);                                            
             }
             
             //map for contacts to their households because we can't get a query with Opp Id, Contact Id, and Household Id
