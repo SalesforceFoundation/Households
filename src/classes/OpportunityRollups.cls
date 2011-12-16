@@ -290,7 +290,9 @@ global virtual class OpportunityRollups {
         soqlStatement += 'AND (Amount != null) '; 
         
         //issue 289
-        soqlStatement += 'AND accountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
+        if (npe01.Constants.GetIndividualAccountId() != null){
+            soqlStatement += 'AND accountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
+        }
         
         if(areRecordTypesOnOpps()){
             soqlStatement += 'AND RecordTypeId NOT IN : recordTypesToExcludeAccts ';
@@ -331,7 +333,9 @@ global virtual class OpportunityRollups {
         soqlStatement += 'AND (Amount != null) '; 
         
         //issue 289
-        soqlStatement += 'AND accountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
+        if (npe01.Constants.GetIndividualAccountId() != null){
+            soqlStatement += 'AND accountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
+        }
         
         if(areRecordTypesOnOpps()){ 
             soqlStatement += 'AND RecordTypeId NOT IN : recordTypesToExcludeAccts '; 
@@ -373,7 +377,9 @@ global virtual class OpportunityRollups {
             soqlStatement += 'AND (Amount != null)  ';
             
             //issue 289
-            soqlStatement += 'AND accountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
+            if (npe01.Constants.GetIndividualAccountId() != null){
+                soqlStatement += 'AND accountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
+            }
             
             if(areRecordTypesOnOpps()){
                 soqlStatement += 'AND RecordTypeId IN : mbrRecordTypes ';
