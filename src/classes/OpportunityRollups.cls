@@ -1328,21 +1328,22 @@ global virtual class OpportunityRollups {
                obj.put('npo02__LargestAmount__c', ro.LargestAmount); 
             }
         }
-        /*
-        //deal with user rollups
-        if (userRollups.size() > 0){
-            for (string s : userRollups.keyset()){
-                if (obj.getSObjectType().getDescribe().getName() == userRollups.get(s).Object_Name__c){
-                    User_Rollup_Field_Settings__c urfs = userRollups.get(s);
-                    string x = urfs.Name;                   
-                    if (r.get(x) != null)
-                       obj.put(urfs.Target_Field__c, r.get(x));
-                }
-            }
-        } 
-    	*/
-    	
-    	
+        
+        //deal with user rollups, if any
+        if (ro.userRollup != null){
+        	for (string rollupName : ro.userRollup.keySet()){
+        		User_Rollup_Field_Settings__c urfs = userRollups.get(rollupName);
+        		object fieldvalue = ro.userRollup.get(rollupName);
+        		
+                if (fieldvalue instanceof date){
+        	   	    obj.put(urfs.Target_Field__c, (date)fieldvalue);
+                }	
+                else if (fieldvalue instanceof decimal || fieldvalue instanceof integer){
+                    obj.put(urfs.Target_Field__c, (decimal)fieldvalue);                                                        	
+                	
+                }   
+        	}
+        }
     } 	
     
     
@@ -1572,9 +1573,20 @@ global virtual class OpportunityRollups {
         
         list<ResultObject> newobjectlist = new list<ResultObject>();
         map<id, list<sobject>> hhobjectmap = new map<id, list<sobject>>();
+      
+        //hold the urfs to be calced via rollup
+        list<User_Rollup_Field_Settings__c> urfs = new list<User_Rollup_Field_Settings__c>();       
+        for (string s : userRollups.keyset()){
+            if (userRollups.get(s).Object_Name__c == 'Household__c' || userRollups.get(s).Object_Name__c == 'npo02__Household__c'){
+                urfs.add(userRollups.get(s));
+            }           
+        } 
         
         //use this to track one sobject per contact for summary totals 
         set<id> usedContactSet = new set<id>();
+        set<id> userRollupUsed = new set<id>();
+        
+        
         
         //sort queryresults into a map with hhid as key
         //we could do this one pass, but we'd need to loop through the result
@@ -1614,6 +1626,15 @@ global virtual class OpportunityRollups {
             decimal averageoppamount = 0;
             decimal largestoppamount = 0;
             decimal smallestoppamount = 0;
+            
+            //holds User rollup totals for this Household
+            map<string, object> hh_urfs = new map<string, object>();
+            
+            //for avg counts
+            set<id> avgIDs = new set<id>();
+            decimal avgSum = 0;
+            
+            
             
             string currencyisocode = '';
             string rollupfieldset = '';
@@ -1666,9 +1687,69 @@ global virtual class OpportunityRollups {
             	if (lastclosedate == null || lastclosedate < (date)s.get('LastCloseDate')){
                     lastclosedate = (date)s.get('LastCloseDate');            		
             	}
-            }
+            	
+            	//loop through the available field settings
+            	//and aggregate the totals for this HH
+                for (User_Rollup_Field_Settings__c u : urfs){
+                    
+                    //are we using this rollup?
+                    if (s.get(u.Name) != null){
+                    	
+                    	object rollupvalue = s.get(u.Name);
+                    	
+                        if (u.Field_Action__c == 'MIN'){	
+                    	    if (rollupvalue instanceof date){
+                                //if the current is smaller than the existing, or there is no existing replace it
+                                if(!hh_urfs.containsKey(u.Name) || (date)rollupvalue < (date)hh_urfs.get(u.Name)){
+                                    hh_urfs.put(u.Name, rollupvalue);
+                                }
+                    	    }
+                            else if (rollupvalue instanceof decimal || rollupvalue instanceof integer){
+                            	//if the current is smaller than the existing, or there is no existing replace it
+                                if(!hh_urfs.containsKey(u.Name) || (decimal)rollupvalue < (decimal)hh_urfs.get(u.Name)){
+                                    hh_urfs.put(u.Name, rollupvalue);
+                                }
+                            }                    
+                        }                    
+                        else if (u.Field_Action__c == 'MAX'){ 
+                            if (rollupvalue instanceof date){
+                                //if the current is smaller than the existing, or there is no existing replace it
+                                if(!hh_urfs.containsKey(u.Name) || (date)rollupvalue > (date)hh_urfs.get(u.Name)){
+                                    hh_urfs.put(u.Name, rollupvalue);
+                                }
+                            }
+                            else if (rollupvalue instanceof decimal || rollupvalue instanceof integer){
+                                //if the current is smaller than the existing, or there is no existing replace it
+                                if(!hh_urfs.containsKey(u.Name) || (decimal)rollupvalue > (decimal)hh_urfs.get(u.Name)){
+                                    hh_urfs.put(u.Name, rollupvalue);
+                                }
+                            }                    
+                        }                        
+                        else if (u.Field_Action__c == 'SUM'){
+                            if (hh_urfs.containsKey(u.Name) && !userRollupUsed.contains((id)s.get('contactId'))){
+                                //add the current to the existing
+                                decimal x = (decimal)hh_urfs.get(u.Name) + (decimal)s.get(u.Name);
+                                hh_urfs.put(u.Name, x);
+                                userRollupUsed.add((id)s.get('contactId'));
+                            }
+                            //otherwise it doesn't yet exist
+                            else{
+                                hh_urfs.put(u.Name, s.get(u.Name));
+                                userRollupUsed.add((id)s.get('contactId'));
+                            }
+                        }    
+                        else if (u.Field_Action__c == 'AVG'){
+                            if (!avgIDs.contains((id)s.get('contactId'))){
+                            	avgSum += (decimal)s.get(u.Name);
+                                avgIDs.add((id)s.get('contactId'));
+                                hh_urfs.put(u.Name, (avgSum/avgIds.size()));
+                            }
+                        }
+                    }	
+                }//close user rollups for loop
+            }//close contact row loop
                         
-        //current year row for HH
+            //current year row for HH
             if (currentyearcount != 0 || currentyeartotal != 0){
                 
                 ResultObject ro = new ResultObject();
@@ -1722,7 +1803,11 @@ global virtual class OpportunityRollups {
             sumRO.LargestAmount = largestoppamount;
             sumRO.FirstCloseDate = firstclosedate;
             sumRO.LastCloseDate = lastclosedate;
-            sumRO.AverageAmount = totaloppamount/numberofclosedopps;                                        
+            sumRO.AverageAmount = totaloppamount/numberofclosedopps;     
+            
+            if (!hh_urfs.isEmpty()){
+            	sumRO.userRollup = hh_urfs;
+            }                                   
             if (isMultiCurrency()){
                 sumRO.CurrencyISOCode = currencyisocode;   
             }
@@ -1747,6 +1832,7 @@ global virtual class OpportunityRollups {
         date FirstCloseDate;
         date LastCloseDate;
         decimal AverageAmount;
+        map<string, object> userRollup;
         
         //we'll need to define properties ourselves
         public ResultObject(){}
