@@ -83,7 +83,7 @@ public class HouseholdOpportunity {
                 
                 if (thisOpp.account.npe01__One2OneContact__c != null)
                     contactIdToOpps.get(thisOpp.account.npe01__One2OneContact__c).add(thisOpp);
-                else 
+                else if (contactIdToOpps.get(thisOpp.npe01__Contact_Id_For_Role__c) != null) 
                     contactIdToOpps.get(thisOpp.npe01__Contact_Id_For_Role__c).add(thisOpp);                                            
             }
             
@@ -94,7 +94,7 @@ public class HouseholdOpportunity {
             individualContacts = [select id,Household__c from Contact where Id IN :contactIds];
             
             //create a map of contacts and thier Household Ids
-            for(Contact myContact : individualContacts){
+            for(Contact myContact : individualContacts){  
                 if(myContact.Household__c!=null){
                     contactIdToHouseholdId.put(myContact.Id,myContact.Household__c);        
                 }       
