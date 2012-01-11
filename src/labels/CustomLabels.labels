@@ -134,4 +134,207 @@
         <shortDescription>Primary Donor Contact Role</shortDescription>
         <value>Donor</value>
     </labels>
+    <labels>
+        <fullName>Add</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add</shortDescription>
+        <value>Add</value>
+    </labels>
+    <labels>
+        <fullName>AddAndMerge</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add and merge Households</shortDescription>
+        <value>Add and merge Households</value>
+    </labels>
+    <labels>
+        <fullName>AddAndRemove</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add and remove from old Household</shortDescription>
+        <value>Add and remove from old Household</value>
+    </labels>
+    <labels>
+        <fullName>AddHouseholdMembers</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add Members</shortDescription>
+        <value>Add Members</value>
+    </labels>
+    <labels>
+        <fullName>AddressToAllMembers</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Set the home address on all household members to this address.</shortDescription>
+        <value>Set the home address on all household members to this address.</value>
+    </labels>
+    <labels>
+        <fullName>AlreadyInHousehold</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Already In Household</shortDescription>
+        <value>Already In Household</value>
+    </labels>
+    <labels>
+        <fullName>AutoFormalGreeting</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Auto Formal Greeting</shortDescription>
+        <value>Auto Formal Greeting</value>
+    </labels>
+    <labels>
+        <fullName>AutoInformalGreeting</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Auto Informal Greeting</shortDescription>
+        <value>Auto Informal Greeting</value>
+    </labels>
+    <labels>
+        <fullName>AutoName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Auto Name</shortDescription>
+        <value>Auto Name</value>
+    </labels>
+    <labels>
+        <fullName>Change</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Change</shortDescription>
+        <value>Change</value>
+    </labels>
+    <labels>
+        <fullName>ChangeAddress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Change Address</shortDescription>
+        <value>Change Address</value>
+    </labels>
+    <labels>
+        <fullName>ChangesNotSaved</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Changes have not been saved.</shortDescription>
+        <value>Changes have not been saved.</value>
+    </labels>
+    <labels>
+        <fullName>ContactAlreadyInHousehold</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Already in a household</shortDescription>
+        <value>is already in a household. Would you like to add this contact with or without their existing household members?</value>
+    </labels>
+    <labels>
+        <fullName>ContactLastNameRqd</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Last Name is required.</shortDescription>
+        <value>Last Name is required.</value>
+    </labels>
+    <labels>
+        <fullName>ContactNameRqd</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enter a First Name and Last Name.</shortDescription>
+        <value>Enter a First Name and Last Name.</value>
+    </labels>
+    <labels>
+        <fullName>CreatedOnSave</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact will be created when Household is saved.</shortDescription>
+        <value>Contact will be created when Household is saved.</value>
+    </labels>
+    <labels>
+        <fullName>Delete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>EnterNewAddress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enter a new address</shortDescription>
+        <value>Enter a new address</value>
+    </labels>
+    <labels>
+        <fullName>ExcludeText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Exclude Contact from automatic Household naming:</shortDescription>
+        <value>Exclude Contact from automatic Household naming:</value>
+    </labels>
+    <labels>
+        <fullName>ExistingHousehold</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Existing Household</shortDescription>
+        <value>Existing Household</value>
+    </labels>
+    <labels>
+        <fullName>FindContactByName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Find contact by name ...</shortDescription>
+        <value>Find contact by name ...</value>
+    </labels>
+    <labels>
+        <fullName>HouseholdAddress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Household Address</shortDescription>
+        <value>Household Address</value>
+    </labels>
+    <labels>
+        <fullName>HouseholdDetails</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Household Details</shortDescription>
+        <value>Household Details</value>
+    </labels>
+    <labels>
+        <fullName>HouseholdMembers</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Household Members</shortDescription>
+        <value>Household Members</value>
+    </labels>
+    <labels>
+        <fullName>ManageHousehold</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Manage Household</shortDescription>
+        <value>Manage Household</value>
+    </labels>
+    <labels>
+        <fullName>NewContact</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Contact</shortDescription>
+        <value>New Contact</value>
+    </labels>
+    <labels>
+        <fullName>NoContacts</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>There are currently no Contacts in this Household.</shortDescription>
+        <value>There are currently no Contacts in this Household.</value>
+    </labels>
+    <labels>
+        <fullName>SelectExistingAddress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select an existing address</shortDescription>
+        <value>Select an existing address</value>
+    </labels>
+    <labels>
+        <fullName>SetAddress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Set Address</shortDescription>
+        <value>Set Address</value>
+    </labels>
 </CustomLabels>
