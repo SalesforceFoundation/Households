@@ -184,9 +184,9 @@ global with sharing class ManageHousehold_EXT {
         getViableAddresses();
         
         //set the household default address to the first found address if it exists
-        if (activeAddressKey == null && !viableAddresses.isEmpty()) {
+        /*if (activeAddressKey == null && !viableAddresses.isEmpty()) {
             setActiveAddress(new list<String>(viableAddresses.keySet())[0]);
-        }
+        }*/
                 
         jsonState = JSON.serialize(this);
         
@@ -273,9 +273,9 @@ global with sharing class ManageHousehold_EXT {
         ManageHousehold.getViableAddresses();
         
         // If we don't have an address attempt to select one //ManageHousehold.useAddress == false && 
-        if (!ManageHousehold.viableAddresses.isEmpty() && ManageHousehold.isAddressNull()) {
+        /*if (!ManageHousehold.viableAddresses.isEmpty() && ManageHousehold.isAddressNull()) {
             ManageHousehold.setActiveAddress(new list<String>(ManageHousehold.viableAddresses.keySet())[0]);
-        }
+        }*/
         
         return packState(ManageHousehold);
     }
@@ -457,7 +457,7 @@ global with sharing class ManageHousehold_EXT {
         return true;
     }
     
-    public boolean isAddressNull() {
+    /*public boolean isAddressNull() {
         if ((activeStreet != null && activeStreet != '') ||
             (activeCity != null && activeCity != '') ||
             (activeState != null && activeState != '') ||
@@ -466,7 +466,7 @@ global with sharing class ManageHousehold_EXT {
             return false;
         }
         return true;
-    }
+    }*/
     
     /*******************************************************************************************************
     * @description iterate over the active contacts and find all good addresses
@@ -637,7 +637,14 @@ global with sharing class ManageHousehold_EXT {
     * @return void.
     ********************************************************************************************************/
     public void saveHH() {
-	    		
+		//save the household address if this is a new household, in an existing household this is handled by the vanilla save action
+	    if (hh.id == null) { 
+			hh.npo02__MailingStreet__c = activeStreet;
+			hh.npo02__MailingCity__c = activeCity;
+			hh.npo02__MailingState__c = activeState;
+			hh.npo02__MailingPostalCode__c = activePostalCode;
+			hh.npo02__MailingCountry__c = activeCountry;
+	    }
         // Insert Household
         upsert hh;
         
@@ -647,7 +654,7 @@ global with sharing class ManageHousehold_EXT {
             for (Contact con : insertContacts) {
                 con.npo02__Household__c = hh.id;
                 
-                // Set Addresses on Contacts
+                // Set Addresses on new Contacts
                 if (useAddress == true) {
                     con.MailingStreet = activeStreet;
                     con.MailingCity = activeCity;
@@ -664,7 +671,7 @@ global with sharing class ManageHousehold_EXT {
             
             for (Contact con : activeContacts.values()) {
                 
-                // Set Addresses on Contacts
+                // Set Addresses on active Contacts
                 if (useAddress == true) {
                     con.MailingStreet = activeStreet;
                     con.MailingCity = activeCity;
@@ -722,10 +729,7 @@ global with sharing class ManageHousehold_EXT {
     public static testMethod void testExistingHH() {
         
         npo02__Household__c hh = new npo02__Household__c(
-            Name = 'test_hh'//,
-            /*Auto_HHName__c = false,
-            Auto_HHGreeting__c = false*/
-            //npo02__SYSTEM_CUSTOM_NAMING__c = 'Name;Formal_Greeting__c'
+            Name = 'test_hh'
             );
         insert hh;
         
@@ -764,7 +768,7 @@ global with sharing class ManageHousehold_EXT {
         // Make sure we correctly got the right HH
         system.assertEquals(hh.Id, ext.hh.Id);
         
-        //system.assertEquals(false, ext.hhMembers.isEmpty());
+        system.assertEquals(false, ext.activeContacts.isEmpty());
         
         //test active address variables are set
         system.assertEquals(con.MailingStreet, ext.activeStreet);
@@ -779,6 +783,155 @@ global with sharing class ManageHousehold_EXT {
         //test greeting
         system.assertEquals('David TestContactASDF', ext.getHHFormalName());
         
+        //test greeting
+        system.assertEquals('David', ext.getHHInformalName());
+        
+        Test.stopTest();
+    }
+    
+    
+    public static testMethod void testHHAddrToContact() {
+        //tests writing the household address to the contact if the flag is ticked
+        npo02__Household__c hh = new npo02__Household__c(
+            Name = 'test_hh',
+            npo02__MailingStreet__c = '1234 Testing Drive Suite 1000',
+            npo02__MailingCity__c = 'Seattle',
+            npo02__MailingState__c = 'WA',
+            npo02__MailingPostalCode__c = '98101',
+            npo02__MailingCountry__c = 'USA'
+            );
+        insert hh;
+        
+        Contact con = new Contact(
+            FirstName = 'David',
+            LastName = 'TestContactASDF',
+            email = 'testemail@groundwiretest.org',
+            npo02__Household__c = hh.id
+            );
+        insert con;
+        Test.startTest();
+        
+        npo02__Household__c tempHH = new npo02__Household__c();
+        ApexPages.StandardController sc = new ApexPages.standardController(tempHH);
+        
+        // Test a good hhid
+        ApexPages.currentPage().getParameters().put('hhid', hh.Id);
+        ManageHousehold_EXT ext = new ManageHousehold_EXT(sc);
+        
+        // Make sure we correctly got the right HH
+        system.assertEquals(hh.Id, ext.hh.Id);
+        
+        system.assertEquals(false, ext.activeContacts.isEmpty());
+        
+        //set the flag that writes the address from household to contact
+        ext.useAddress = true;
+        
+        //test that it also works on new contacts
+        ext.insertContacts.add(new Contact(Firstname = 'John', LastName ='Jones', npo02__Naming_Exclusions__c = 'Household__c.Name;Household__c.Formal_Greeting__c;Household__c.Informal_Greeting__c;'));
+        
+        ext.saveHH();
+        
+        Contact con1 = [select MailingStreet,MailingState,MailingCity,MailingPostalCode,MailingCountry from contact where id = :con.id][0];
+        //test household address written to contact
+        system.assertEquals(con1.MailingStreet, ext.hh.npo02__MailingStreet__c);
+        system.assertEquals(con1.MailingState, ext.hh.npo02__MailingState__c);
+        system.assertEquals(con1.MailingCity, ext.hh.npo02__MailingCity__c);
+        system.assertEquals(con1.MailingPostalCode, ext.hh.npo02__MailingPostalCode__c);
+        system.assertEquals(con1.MailingCountry, ext.hh.npo02__MailingCountry__c);
+
+		Contact con2 = [select MailingStreet,MailingState,MailingCity,MailingPostalCode,MailingCountry from contact where name = 'John Jones'][0];
+        //test household address written to contact
+        system.assertEquals(con2.MailingStreet, ext.hh.npo02__MailingStreet__c);
+        system.assertEquals(con2.MailingState, ext.hh.npo02__MailingState__c);
+        system.assertEquals(con2.MailingCity, ext.hh.npo02__MailingCity__c);
+        system.assertEquals(con2.MailingPostalCode, ext.hh.npo02__MailingPostalCode__c);
+        system.assertEquals(con2.MailingCountry, ext.hh.npo02__MailingCountry__c);
+        //test name
+        system.assertEquals('TestContactASDF Household', ext.getHHName());
+        
+        //test greeting
+        system.assertEquals('David TestContactASDF', ext.getHHFormalName());
+        
+        //test greeting
+        system.assertEquals('David', ext.getHHInformalName());
+        
+        Test.stopTest();
+    }
+    
+    public static testMethod void testRemoveContactActiveAddress() {
+        //tests that removing the contact who is the only owner of the active address changes the active address to another appropriate one
+        
+        npo02__Household__c hh = new npo02__Household__c(
+            Name = 'test_hh'
+            );
+        insert hh;
+        
+        Contact con1 = new Contact(
+            FirstName = 'David',
+            LastName = 'TestContactASDF',
+            email = 'testemail@groundwiretest.org',
+            npo02__Household__c = hh.id,
+            MailingStreet = '1234 Testing Drive Suite 1000',
+            MailingCity = 'Seattle',
+            MailingState = 'WA',
+            MailingPostalCode = '98101',
+            MailingCountry = 'USA'
+            );
+        insert con1;
+        
+        Contact con2 = new Contact(
+            FirstName = 'David',
+            LastName = 'TestContactASDF',
+            email = 'testemail@groundwiretest.org',
+            npo02__Household__c = hh.id,
+            MailingStreet = '5678 Testing Drive Suite 1000',
+            MailingCity = 'Seattle',
+            MailingState = 'WA',
+            MailingPostalCode = '98101',
+            MailingCountry = 'USA'
+            );
+        insert con2;
+        
+        Test.startTest();
+        
+        npo02__Household__c tempHH = new npo02__Household__c();
+        ApexPages.StandardController sc = new ApexPages.standardController(tempHH);
+        
+        // Test a good hhid
+        ApexPages.currentPage().getParameters().put('hhid', hh.Id);
+        
+        ManageHousehold_EXT ext = new ManageHousehold_EXT(sc);
+                
+        // Make sure we correctly got the right HH
+        system.assertEquals(hh.Id, ext.hh.Id);
+        
+        system.assertEquals(false, ext.activeContacts.isEmpty());
+        
+        //check two distinct addresses
+        system.assertEquals(2, ext.viableAddresses.size());
+
+		string oldactiveaddr = ext.activeAddressKey;
+		
+		//remove the appropriate active address contact
+        if(ext.activeAddressKey.startsWith('1234'))
+        {
+        	String jsSt = JSON.serialize(ext);
+	        String nwSt = ManageHousehold_EXT.remoteRemoveMember(con1.id, jsSt);
+	        ext = ManageHousehold_EXT.unpackState(nwSt);
+        }
+        else if(ext.activeAddressKey.startsWith('5678'))
+        {
+        	String jsSt = JSON.serialize(ext);
+	        String nwSt = ManageHousehold_EXT.remoteRemoveMember(con2.id, jsSt);
+	        ext = ManageHousehold_EXT.unpackState(nwSt);
+        }
+        
+        //ensure that the active address has changed
+        system.assertNotEquals(oldactiveaddr, ext.activeAddressKey);
+        
+        //check single address left
+        system.assertEquals(1, ext.viableAddresses.size());
+                
         Test.stopTest();
     }
     
@@ -842,10 +995,14 @@ global with sharing class ManageHousehold_EXT {
         system.assertEquals(1, ext.activeContacts.size());
         
         // Get contacts in household
-        list<Contact> householdMembers = [SELECT Id, Name, MailingStreet, MailingCity, MailingState, MailingPostalCode, MailingCountry, npo02__Household__c FROM Contact WHERE npo02__Household__c = :ext.hh.id];
+        //list<Contact> householdMembers = [SELECT Id, Name, MailingStreet, MailingCity, MailingState, MailingPostalCode, MailingCountry, npo02__Household__c FROM Contact WHERE npo02__Household__c = :ext.hh.id];
         
-        
-        
+        //test household address is set
+        system.assertEquals(con.MailingStreet, ext.hh.npo02__MailingStreet__c);
+        system.assertEquals(con.MailingState, ext.hh.npo02__MailingState__c);
+        system.assertEquals(con.MailingCity, ext.hh.npo02__MailingCity__c);
+        system.assertEquals(con.MailingPostalCode, ext.hh.npo02__MailingPostalCode__c);
+        system.assertEquals(con.MailingCountry, ext.hh.npo02__MailingCountry__c);
         
         Test.stopTest();
     }
