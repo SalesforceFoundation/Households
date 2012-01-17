@@ -18,10 +18,12 @@
 * * use Mailing* instead of Other* fields for addresses
 * * Set Household address based on address selected in UI
 * * Use "useAddress" flag to set or not set address on contacts
+* * 15/01/2012 Fixed household addressing, added tests for household addressing code
+* * 16/01/2012 Fixed defect when contacts were removed and re-added
+* * 
  * 
 * * TODO
 * * Opty rollups - line 709 - npo02.OpportunityRollups needs global constructor - until then only works inside package
-* * Increase test coverage
 */
 
 global with sharing class ManageHousehold_EXT {
@@ -111,7 +113,7 @@ global with sharing class ManageHousehold_EXT {
     public Id conId;
     public Contact con;
     public map<Id, Contact> activeContacts;
-    public set<Contact> removeContacts;
+    public map<Id, Contact> removeContacts;
     public list<Contact> insertContacts;
     
     public String jsonState {get;set;}
@@ -145,7 +147,7 @@ global with sharing class ManageHousehold_EXT {
     public ManageHousehold_EXT(ApexPages.StandardController controller) {
         
         activeContacts = new map<Id, Contact>();
-        removeContacts = new set<Contact>();
+        removeContacts = new map<Id, Contact>();
         viableAddresses = new map<String, viableAddress>();
         insertContacts = new list<Contact>();
         
@@ -366,7 +368,7 @@ global with sharing class ManageHousehold_EXT {
         list<Contact> con = Database.query(q);
         if (!con.isEmpty()) {
             activeContacts.put(con[0].id, con[0]);
-            
+            removeContacts.remove(con[0].id);
             return true;
         }
         return false;
@@ -386,7 +388,7 @@ global with sharing class ManageHousehold_EXT {
         // If this is an existing HH and the contact was a member, add the contact to list of removes
         if (hh.Id != null && con.npo02__Household__c == hh.Id) {
             con.npo02__Household__c = null;
-            removeContacts.add(con);
+            removeContacts.put(con.id,con);
         }
         
         // remove the contact from the active set
@@ -419,7 +421,7 @@ global with sharing class ManageHousehold_EXT {
         list<Contact> con = Database.query(q);
         if (!con.isEmpty()) {
             activeContacts.put(con[0].id, con[0]);
-            
+            removeContacts.remove(con[0].id);
             // check for household then find and add contacts
             if (con[0].npo02__Household__c != null) {
                 whereClause = 'WHERE npo02__Household__c = \''+con[0].npo02__Household__c+'\'';
@@ -429,6 +431,7 @@ global with sharing class ManageHousehold_EXT {
                     for (Contact hhcon : hhcons) {
                         
                         activeContacts.put(hhcon.id, hhcon);
+                        removeContacts.remove(hhcon.id);
                     }
                 }
             }
@@ -690,7 +693,7 @@ global with sharing class ManageHousehold_EXT {
         // Remove contacts from household
         if (!removeContacts.isEmpty()) {
             list<Contact> contactsToRemove = new list<Contact>();
-            for (Contact con : removeContacts) {
+            for (Contact con : removeContacts.values()) {
                 con.npo02__Household__c = null;
                 contactsToRemove.add(con);
             }
@@ -1225,5 +1228,68 @@ global with sharing class ManageHousehold_EXT {
         
     }
     
-    
+    public static testMethod void testRemoveReAdd() {
+        
+        npo02__Household__c hh = new npo02__Household__c (
+            Name = 'Household'
+            );
+        insert hh;
+        
+        Contact con1 = new Contact(
+            FirstName = 'Joe',
+            LastName = 'Test',
+            npo02__Household__c = hh.id
+            );
+        insert con1;
+        
+        Contact con2 = new Contact(
+            FirstName = 'Jim',
+            LastName = 'Test',
+            npo02__Household__c = hh.id
+            );
+        insert con2;
+              
+        Test.startTest();
+        ApexPages.StandardController sc = new ApexPages.standardController(hh);
+                
+        ManageHousehold_EXT ext = new ManageHousehold_EXT(sc);
+        
+        String jsSt;
+        String nwSt;
+        
+        
+        system.assertEquals(2, ext.activeContacts.size());
+        system.assertEquals(0,ext.removeContacts.size());
+        
+        // Now let us remove a contact
+        jsSt = JSON.serialize(ext);
+        nwSt = ManageHousehold_EXT.remoteRemoveMember(con2.id, jsSt);
+        ext = ManageHousehold_EXT.unpackState(nwSt);
+        
+        
+        system.assertEquals(1, ext.activeContacts.size());
+        system.assertEquals(1,ext.removeContacts.size());
+        
+        
+        // re add it
+        jsSt = JSON.serialize(ext);
+        nwSt = ManageHousehold_EXT.remoteAddMember(con2.id, false, jsSt);
+        ext = ManageHousehold_EXT.unpackState(nwSt);
+        
+        
+        system.assertEquals(2, ext.activeContacts.size());
+        system.assertEquals(0,ext.removeContacts.size());
+        
+        // Save
+        jsSt = JSON.serialize(ext);
+        nwSt = ManageHousehold_EXT.remoteSave(jsSt);
+        ext = ManageHousehold_EXT.unpackState(nwSt);
+
+		ext.save();
+
+        system.assertEquals(2,[SELECT Id, npo02__Household__c FROM Contact WHERE npo02__Household__c = :hh.id].size());       
+
+        Test.stopTest();
+        
+    }
 }
