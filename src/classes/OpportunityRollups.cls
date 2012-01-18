@@ -1286,7 +1286,8 @@ global virtual class OpportunityRollups {
         
         // split the special field to get the last opp id and amount
         string[] rcf = ro.RollupFieldset.split(';\\|;',-4);
-        decimal lastAmt = (rcf.size() > 1 && rcf[1] != '') ? decimal.valueOf(rcf[1]) : null;
+        decimal lastAmt = ro.LastAmount;
+        //decimal lastAmt = (rcf.size() > 1 && rcf[1] != '') ? decimal.valueOf(rcf[1]) : null;
         
         // calculate amounts into correct currency if needed
         if(isMultiCurrency()){
@@ -1632,6 +1633,7 @@ global virtual class OpportunityRollups {
             decimal averageoppamount = 0;
             decimal largestoppamount = 0;
             decimal smallestoppamount = 0;
+            decimal lastamt = 0;
             
             //holds User rollup totals for this Household
             map<string, object> hh_urfs = new map<string, object>();
@@ -1644,6 +1646,8 @@ global virtual class OpportunityRollups {
             
             string currencyisocode = '';
             string rollupfieldset = '';
+            
+            date lastdate;
            
             for (sobject s : hhobjectmap.get(hhid)){
                                 
@@ -1652,10 +1656,21 @@ global virtual class OpportunityRollups {
                 integer rowcount = (integer)s.get('NumberOfClosedOpps');
               
                 //these two values should be standard across the hh
-                if (isMultiCurrency() && currencyisocode == '') 
-                    currencyisocode = (string)s.get('CurrencyIsoCode');
+/*                if (isMultiCurrency() && currencyisocode == '') 
+                    currencyisocode = (string)s.get('CurrencyIsoCode');*/ 
+
                 if (rollupfieldset == '') 
                     rollupfieldset = (string)s.get('RollupFieldSet');                    
+                   
+                string[] rcf = ((string)s.get('RollupFieldset')).split(';\\|;',-4);
+                if (lastdate == null){
+                    lastdate = (rcf.size() > 1 && rcf[0] != '') ? date.valueOf(rcf[0]) : null;
+                    lastamt = (rcf.size() > 1 && rcf[1] != '') ? decimal.valueOf(rcf[1]) : null;
+                }
+                else if (lastdate < ((rcf.size() > 1 && rcf[0] != '') ? date.valueOf(rcf[0]) : null)){
+                	lastamt = (rcf.size() > 1 && rcf[1] != '') ? decimal.valueOf(rcf[1]) : null;
+                }                                    
+                    
                 
                 if (fy == currentyear){
                     currentyearcount += rowcount;                                                                                
@@ -1810,7 +1825,7 @@ global virtual class OpportunityRollups {
             sumRO.FirstCloseDate = firstclosedate;
             sumRO.LastCloseDate = lastclosedate;
             sumRO.AverageAmount = totaloppamount/numberofclosedopps;     
-            
+            sumRO.LastAmount = lastAmt;
             if (!hh_urfs.isEmpty()){
             	sumRO.userRollup = hh_urfs;
             }                                   
@@ -1838,6 +1853,7 @@ global virtual class OpportunityRollups {
         date FirstCloseDate;
         date LastCloseDate;
         decimal AverageAmount;
+        decimal LastAmount;
         map<string, object> userRollup;
         
         //we'll need to define properties ourselves
