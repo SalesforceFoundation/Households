@@ -695,9 +695,6 @@ global virtual class OpportunityRollups {
                 npo02__household__c HH = householdsToUpdate.get(hhid);              
                 */
             }
-            
-            // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
-            opptyCurrencies = (isMultiCurrency() ? rcfFindCurrency(objectList) : null);
                 
             for (sobject r : objectList) {
                 // get the ids
@@ -799,7 +796,7 @@ global virtual class OpportunityRollups {
                 
                 // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
                 opptyCurrencies = (isMultiCurrency() ? rcfFindCurrency(objectList) : null);
-              
+                
                 for (sobject r : objectList) {
                             
                     // get the ids
@@ -857,6 +854,9 @@ global virtual class OpportunityRollups {
             list<ResultObject> ROList = new list<ResultObject>();
             ROList = doApexCube(objectlist);
             
+            // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
+            opptyCurrencies = (isMultiCurrency() ? rcfFindCurrency(objectList) : null);
+            
             //send HH rows for processing to seperate func
             for (ResultObject ro : ROList){
                 id hhid = (id)(ro.hhid);
@@ -874,10 +874,7 @@ global virtual class OpportunityRollups {
                 npo02__household__c HH = householdsToUpdate.get(hhid);            	
             	*/
             }
-            
-            // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
-            opptyCurrencies = (isMultiCurrency() ? rcfFindCurrency(objectList) : null);
-                
+                            
             for (sobject r : objectList) {
                 // get the ids
                 id cid = (id)(r.get('contactId'));
@@ -1282,8 +1279,8 @@ global virtual class OpportunityRollups {
     	// get the fiscal year, total amount, and opp count for this result row     
         integer fy = ro.CalendarYr;
         decimal amt = ro.TotalOppAmount;
-        integer cnt = ro.NumberOfClosedOpps;                
-        
+        integer cnt = ro.NumberOfClosedOpps;        
+         
         // split the special field to get the last opp id and amount
         string[] rcf = ro.RollupFieldset.split(';\\|;',-4);
         decimal lastAmt = ro.LastAmount;
@@ -1593,8 +1590,6 @@ global virtual class OpportunityRollups {
         set<id> usedContactSet = new set<id>();
         set<id> userRollupUsed = new set<id>();
         
-        
-        
         //sort queryresults into a map with hhid as key
         //we could do this one pass, but we'd need to loop through the result
         //list each time looking for an existing hhid, i think this is more
@@ -1641,10 +1636,7 @@ global virtual class OpportunityRollups {
             //for avg counts
             set<id> avgIDs = new set<id>();
             decimal avgSum = 0;
-            
-            
-            
-            string currencyisocode = '';
+           
             string rollupfieldset = '';
             
             date lastdate;
@@ -1655,10 +1647,6 @@ global virtual class OpportunityRollups {
                 decimal rowamount = (decimal)s.get('TotalOppAmount');
                 integer rowcount = (integer)s.get('NumberOfClosedOpps');
               
-                //these two values should be standard across the hh
-/*                if (isMultiCurrency() && currencyisocode == '') 
-                    currencyisocode = (string)s.get('CurrencyIsoCode');*/ 
-
                 if (rollupfieldset == '') 
                     rollupfieldset = (string)s.get('RollupFieldSet');                    
                    
@@ -1670,7 +1658,6 @@ global virtual class OpportunityRollups {
                 else if (lastdate < ((rcf.size() > 1 && rcf[0] != '') ? date.valueOf(rcf[0]) : null)){
                 	lastamt = (rcf.size() > 1 && rcf[1] != '') ? decimal.valueOf(rcf[1]) : null;
                 }                                    
-                    
                 
                 if (fy == currentyear){
                     currentyearcount += rowcount;                                                                                
@@ -1779,10 +1766,7 @@ global virtual class OpportunityRollups {
                 ro.CalendarYr = currentyear;
                 ro.hhid = hhid;
                 ro.RollupFieldSet = rollupfieldset;
-                if (isMultiCurrency()){
-                   ro.CurrencyIsoCode = currencyisocode;
-                }
-            	newobjectlist.add(ro);
+                newobjectlist.add(ro);
             }    
         
             //last year row for HH
@@ -1794,23 +1778,17 @@ global virtual class OpportunityRollups {
                 rolastfy.CalendarYr = currentyear - 1;
                 rolastfy.hhid = hhid;
                 rolastfy.RollupFieldSet = rollupfieldset;
-                  if (isMultiCurrency()){
-                   rolastfy.CurrencyIsoCode = currencyisocode;
-                }                
                 newobjectlist.add(rolastfy);
             }
         
             //fy-2 row for HH
-            else if (fy2count != 0 || fy2total != 0){
-                ResultObject ro2 = new ResultObject();
-                ro2.TotalOppAmount = currentyeartotal;
-                ro2.NumberOfClosedOpps = currentyearcount;
-                ro2.CalendarYr = currentyear;
+            if (fy2count != 0 || fy2total != 0){
+            	ResultObject ro2 = new ResultObject();
+                ro2.TotalOppAmount = fy2total;
+                ro2.NumberOfClosedOpps = fy2count;
+                ro2.CalendarYr = currentyear - 2;
                 ro2.hhid = hhid;
                 ro2.RollupFieldSet = rollupfieldset;
-                if (isMultiCurrency()){
-                   ro2.CurrencyIsoCode = currencyisocode;
-                }
                 newobjectlist.add(ro2);
             }
                     
@@ -1828,10 +1806,8 @@ global virtual class OpportunityRollups {
             sumRO.LastAmount = lastAmt;
             if (!hh_urfs.isEmpty()){
             	sumRO.userRollup = hh_urfs;
-            }                                   
-            if (isMultiCurrency()){
-                sumRO.CurrencyISOCode = currencyisocode;   
-            }
+            }                                  
+            
             //add summary row
             newobjectlist.add(sumRO);
     	}
