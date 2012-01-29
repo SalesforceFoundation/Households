@@ -52,7 +52,8 @@ global virtual without sharing class HouseholdNaming {
         HouseholdProcessControl.inFutureContext = true;    
         
         //get all of the contacts and their associated households
-        list<Contact> contactlist = [select id, Firstname, Salutation, LastName, Household__r.id, Naming_Exclusions__c from Contact where Household__c IN :hhids and Household__c != null];
+        //return them in the order of household and then household naming order
+        list<Contact> contactlist = [select id, Firstname, Salutation, LastName, Household__r.id, Naming_Exclusions__c from Contact where Household__c IN :hhids and Household__c != null ORDER BY Household__c,Household_Naming_Order__c ASC NULLS LAST ];
         list<Household__c> hhupdatelist = [select Name, SYSTEM_CUSTOM_NAMING__c from Household__c where id IN : hhids];
         
         map<id, list<Contact>> hhIDContactMap = new map<id, list<Contact>>();
@@ -97,13 +98,18 @@ global virtual without sharing class HouseholdNaming {
             //most of our records will be either one or two people per household, so we'll handle
             //those cases seperately, process medium size households, then
             //go on to larger
-            
-            set<string> contactlastnames = new set<string>(); 
+            //we need to keep the names in order so store them in a list, but also maintain a set to prevent duplicates
+            set<string> contactlastnamesSet = new set<string>();
+            list<string> contactlastnames = new list<string>(); 
              
             for (Contact c : ContactList){
-                //add valid values to the contactnames and lastnames lists for processing
-                if(c.Naming_Exclusions__c == null || !c.Naming_Exclusions__c.contains('Household__c.Name'))
+                //add valid values to the contactnames and lastnames lists for processing if not already in the set
+                if((c.Naming_Exclusions__c == null || !c.Naming_Exclusions__c.contains('Household__c.Name')) 
+                	&& !contactlastnamesSet.contains(c.LastName))
+                {
                     contactlastnames.add(c.LastName);
+                    contactlastnamesSet.add(c.LastName);
+                }
             }
             
             //we lost our only contact - he/she's anonymous
@@ -215,13 +221,15 @@ global virtual without sharing class HouseholdNaming {
             
             integer counter = 1;
             for(Contact c : contactnames){    
-                    
+                
                 if (c.Salutation != null)
-                    formalname += c.Salutation + ' ';
+                    formalname += c.Salutation;
+                if (c.Salutation != null && c.FirstName != null) //correct spacing between names
+                	formalname += ' ';
                 if (c.FirstName != null)
-                    formalname += c.FirstName + ' ';                    
+                    formalname += c.FirstName;
                 if (lastnamelist.size() != 1 && counter != contactnames.size())
-                    formalname += c.LastName;
+                    formalname += ' ' + c.LastName;
                     
                 //any first name before the last and next to last gets the
                 //same treatment, a comma.
@@ -231,7 +239,7 @@ global virtual without sharing class HouseholdNaming {
                     formalname += ' ' + system.label.HouseholdNameConnector + ' ';                          
                 //add the family name     
                 else
-                    formalname += c.LastName;
+                    formalname += ' ' + c.LastName;
         
                 counter++;
             }            
@@ -441,5 +449,114 @@ global virtual without sharing class HouseholdNaming {
         }       
         */
     test.stopTest();        
+    }
+    
+    public static testMethod void testNamingOrder() {
+        //settings
+      Households_Settings__c householdSettingsForTests = Households.getHouseholdsSettingsForTests(
+                new Households_Settings__c (
+                    Household_Rules__c = Households.ALL_PROCESSOR,
+                    Always_Rollup_to_Primary_Contact__c = false,
+                    Enable_Opp_Rollup_Triggers__c = true,
+                    Excluded_Account_Opp_Rectypes__c = null,
+                    Excluded_Account_Opp_Types__c = null,
+                    Excluded_Contact_Opp_Rectypes__c = null,
+                    Excluded_Contact_Opp_Types__c = null,     
+                    Advanced_Household_Naming__c = true               
+                ));
+                
+            npe01__Contacts_and_Orgs_Settings__c contactSettingsForTests = npe01.Constants.getContactsSettingsForTests(new npe01__Contacts_and_Orgs_Settings__c (
+                npe01__Account_Processor__c = npe01.Constants.ONE_TO_ONE_PROCESSOR,
+                npe01__Enable_Opportunity_Contact_Role_Trigger__c = true,
+                npe01__Opportunity_Contact_Role_Default_role__c = 'Donor'
+            ));
+            
+        Household__c hh = new Household__c (
+            Name = 'Household'
+            );
+        insert hh;
+        
+        Contact con0 = new Contact(
+            FirstName = 'John',
+            LastName = 'Jones'
+            );
+        insert con0;
+        
+        Contact con1 = new Contact(
+            FirstName = 'Joe',
+            LastName = 'Test',
+            Household__c = hh.id
+            );
+        insert con1;
+        
+        Contact con2 = new Contact(
+            FirstName = 'Jim',
+            LastName = 'Test',
+            Household__c = hh.id
+            );
+        insert con2;
+
+		
+		//test various re-orderings of names
+        Test.startTest();
+        
+		HouseholdNaming hn = new HouseholdNaming();
+		
+		hn.UpdateNames(new list<Id>{hh.id});
+		
+		hh = [select Id, Name, Formal_greeting__c, Informal_greeting__c from Household__c where id = :hh.id LIMIT 1][0];
+        
+        system.assertequals('Test ' + system.label.DefaultHouseholdName, hh.Name);
+        system.assert(hh.Formal_greeting__c.contains('Joe'));
+        system.assert(hh.Formal_greeting__c.contains('Jim'));
+        system.assert(hh.Formal_greeting__c.endswith('Test'));
+        system.assert(hh.Informal_greeting__c.contains('Joe'));
+        system.assert(hh.Informal_greeting__c.contains('Jim'));
+
+		con1.Household_Naming_Order__c = 0;
+		con2.Household_Naming_Order__c = 1;
+		
+		update con1;
+		update con2;
+		
+		hn.UpdateNames(new list<Id>{hh.id});
+		
+		hh = [select Id, Name, Formal_greeting__c, Informal_greeting__c from Household__c where id = :hh.id LIMIT 1][0];
+		
+        system.assertequals('Test ' + system.label.DefaultHouseholdName, hh.Name);
+		system.assertequals('Joe ' + system.label.HouseholdNameConnector + ' Jim Test', hh.Formal_greeting__c);
+		system.assertequals('Joe ' + system.label.HouseholdNameConnector + ' Jim', hh.Informal_greeting__c);
+        
+        con0.Household__c = hh.id;
+        con0.Household_Naming_Order__c = 0;
+        con1.Household_Naming_Order__c = null;
+        
+        update con0;
+		update con1;
+		
+		hn.UpdateNames(new list<Id>{hh.id});
+		
+		hh = [select Id, Name, Formal_greeting__c, Informal_greeting__c from Household__c where id = :hh.id LIMIT 1][0];
+		
+        system.assertequals('Jones ' + system.label.HouseholdNameConnector + ' Test ' + system.label.DefaultHouseholdName, hh.Name);
+		system.assertequals('John Jones, Jim Test ' + system.label.HouseholdNameConnector + ' Joe Test', hh.Formal_greeting__c);
+		system.assertequals('John, Jim ' + system.label.HouseholdNameConnector + ' Joe', hh.Informal_greeting__c);
+		
+        con0.Household_Naming_Order__c = null;
+        con1.Household_Naming_Order__c = 2;
+        
+        update con0;
+		update con1;
+		
+		hn.UpdateNames(new list<Id>{hh.id});
+		
+		hh = [select Id, Name, Formal_greeting__c, Informal_greeting__c from Household__c where id = :hh.id LIMIT 1][0];
+		
+        system.assertequals('Test ' + system.label.HouseholdNameConnector + ' Jones ' + system.label.DefaultHouseholdName, hh.Name);
+		system.assertequals('Jim Test, Joe Test ' + system.label.HouseholdNameConnector + ' John Jones', hh.Formal_greeting__c);
+		system.assertequals('Jim, Joe ' + system.label.HouseholdNameConnector + ' John', hh.Informal_greeting__c);
+		
+        Test.stopTest();
+        
     }  
 }
