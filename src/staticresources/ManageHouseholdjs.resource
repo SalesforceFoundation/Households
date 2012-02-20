@@ -2,13 +2,13 @@ var j$ = jQuery.noConflict();
 var pgController;
 var fldPfx;
 
-// Set the controller for APEX Remoting methods
+// Set the controller for APEX Remoting methods to handle managed/unmanaged
 try {
 	pgController = npo02.ManageHousehold_EXT;
 	fldPfx = 'npo02__';
 } catch (err) {
 	pgController = ManageHousehold_EXT;
-	fldPfx = 'npo02__'; //set to blank for NPSP
+	fldPfx = ''; //set to blank for unmanaged package
 }
 function fldNm (str) {
 	return fldPfx+str;
