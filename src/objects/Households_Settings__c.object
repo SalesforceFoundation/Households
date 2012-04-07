@@ -3,7 +3,6 @@
     <customSettingsType>Hierarchy</customSettingsType>
     <customSettingsVisibility>Public</customSettingsVisibility>
     <description>Setting object for the Nonprofit Starter Pack Households Package</description>
-    <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <fields>
         <fullName>Advanced_Household_Naming__c</fullName>
