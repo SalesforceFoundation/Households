@@ -26,6 +26,7 @@
     </labels>
     <labels>
         <fullName>DefaultHouseholdName</fullName>
+        <categories>Households, Household Naming</categories>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>DefaultHouseholdName</shortDescription>

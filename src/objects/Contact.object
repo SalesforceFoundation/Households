@@ -14,6 +14,29 @@
         <type>Currency</type>
     </fields>
     <fields>
+        <fullName>Donor_This_Year__c</fullName>
+        <description>yes/no formula</description>
+        <externalId>false</externalId>
+        <formula>IF (   OppAmountThisYear__c  &gt; 0 , &quot;Yes&quot; , &quot;No&quot; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Donor This Year?</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Donor__c</fullName>
+        <description>yes/no formula for display to profiles without permissions to view Opps</description>
+        <externalId>false</externalId>
+        <formula>IF (   TotalOppAmount__c  &gt; 0 , &quot;Yes&quot;, &quot;No&quot; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Displays as Yes or No depending on whether this individual has ever made a donation or sponsorship.</inlineHelpText>
+        <label>Donor?</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>FirstCloseDate__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -154,6 +177,18 @@
         <type>Currency</type>
     </fields>
     <fields>
+        <fullName>Last_Donation_Date__c</fullName>
+        <description>This field is only used with the one-to-one Organization to Contact model.</description>
+        <externalId>false</externalId>
+        <formula>if( Account.npe01__One2OneContact__c = Id , 
+Account.npe01__LastDonationDate__c ,
+null
+)</formula>
+        <label>Last Transaction Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>LeadSource</fullName>
         <picklist>
             <picklistValues>
@@ -222,6 +257,30 @@
         <type>Date</type>
     </fields>
     <fields>
+        <fullName>Membership_Span__c</fullName>
+        <externalId>false</externalId>
+        <formula>year(MembershipEndDate__c ) - year(MembershipJoinDate__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Membership Span</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Membership_Status__c</fullName>
+        <description>note: grace period term is hard coded as 1 month, may need to be changed for some clients</description>
+        <externalId>false</externalId>
+        <formula>if (  MembershipEndDate__c  &lt;today(), if ( MembershipEndDate__c  &gt; ( TODAY() - 31 ) , &quot;Grace Period&quot; , &quot;Expired&quot;) , if(isnull(MembershipEndDate__c ),&quot;&quot;,&quot;Current&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Current, expired, or grace period</inlineHelpText>
+        <label>Membership Status</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Naming_Exclusions__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -245,6 +304,17 @@
         <trackFeedHistory>false</trackFeedHistory>
         <type>MultiselectPicklist</type>
         <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>New_Donor_This_Year__c</fullName>
+        <description>yes/no formula</description>
+        <externalId>false</externalId>
+        <formula>IF (  AND (  OppAmountThisYear__c  =  TotalOppAmount__c   , OppAmountThisYear__c &gt; 0 ) , &quot;Yes&quot; , &quot;No &quot; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>New Donor This Year?</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>NumberOfClosedOpps__c</fullName>
@@ -282,6 +352,17 @@
         <required>false</required>
         <scale>2</scale>
         <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>OppAmountLastNDaysHH__c</fullName>
+        <externalId>false</externalId>
+        <formula>Household__r.OppAmountLastNDays__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Household Gifts Last 365 Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
         <type>Currency</type>
     </fields>
     <fields>
@@ -431,6 +512,18 @@
         </picklist>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TestContactField__c</fullName>
+        <description>NOT FOR RELEASE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NOT FOR RELEASE</inlineHelpText>
+        <label>TestContactField</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
     </fields>
     <fields>
         <fullName>TotalMembershipOppAmount__c</fullName>
@@ -604,6 +697,10 @@ if(ISPICKVAL(npe01__Secondary_Address_Type__c,&quot;Other&quot;),
                 <fullName>Other</fullName>
                 <default>false</default>
             </picklistValues>
+            <picklistValues>
+                <fullName>Household</fullName>
+                <default>false</default>
+            </picklistValues>
             <sorted>false</sorted>
         </picklist>
         <trackFeedHistory>false</trackFeedHistory>
@@ -625,6 +722,14 @@ if(ISPICKVAL(npe01__Secondary_Address_Type__c,&quot;Other&quot;),
             </picklistValues>
             <picklistValues>
                 <fullName>Alternate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Household</fullName>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
