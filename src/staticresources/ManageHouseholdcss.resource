@@ -1,3 +1,8 @@
+/*
+Written by Ryan Foster, copyright (c) 2011 Groundwire
+This program is released under the GNU Affero General Public License, Version 3. http://www.gnu.org/licenses/
+*/
+
 .ui-autocomplete {
 	max-height: 300px;
 	width: 290px;
