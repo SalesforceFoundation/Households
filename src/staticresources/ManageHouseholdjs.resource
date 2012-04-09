@@ -20,7 +20,29 @@ function fldNm (str) {
 }
 
 j$(function () {
-    
+ 	//make the contact cards sortable
+	j$( 'div.hhMembers' ).sortable({ axis: 'x' , 
+	//define a function that fires each time they are re-ordered
+	update:function(event,ui){
+	
+	//write the order of the cards to their data attributes
+	j$('div.hhCard').each(function(i) {
+		var card = j$(this);
+	    if (!card.hasClass('hhCard-new'))
+		   	gwManageHH.state.activeContacts[card.attr('id')][fldNm('Household_Naming_Order__c')] = i; 
+    	else
+    		card.data('contact')[fldNm('Household_Naming_Order__c')] = i;
+   		});
+   	//end each
+   	
+   	//and regenerate the household names as appropriate
+   	gwManageHH.jsonState = JSON.stringify(gwManageHH.state);
+    gwManageHH.setInsertContacts();
+	gwManageHH.setNaming();
+   }
+});
+
+	
     /* Autocomplete contact search box for adding existing contacts to HH */
     
     j$('#hhSearch-input').autocomplete({
@@ -226,6 +248,9 @@ gwManageHH.renderCard = function(contact) {
 		card.find('.hh-informal-exclude').find('input').removeAttr('checked');
 	}
 
+	//each time we render a card order it
+	contact[fldNm('Household_Naming_Order__c')] = j$('div.hhCard').size();
+	
 	// Add delete
 	var del = j$('<button class="gwPreventUI hhCard-delete" />');
 	del.button({
@@ -319,6 +344,8 @@ gwManageHH.addNewContact = function () {
 	
 	var cntct = {"FirstName": "", "LastName": ""};
 	cntct[fldNm('Naming_Exclusions__c')] = '';
+	//last contact in naming order by default
+	cntct[fldNm('Household_Naming_Order__c')] = j$('div.hhCard').size();
 	card.data('contact',cntct);
 	
 	//hide the "no household members" message
@@ -638,7 +665,10 @@ gwManageHH.renderMembers = function() {
 	
 	var members = gwManageHH.getHHMembers();
 	var cids = new Array();
-	
+
+	//sort members by household naming order
+	members.sort(function(a,b){return a.Household_Naming_Order__c === null ? 1 : b.Household_Naming_Order__c === null ? -1 : (a.Household_Naming_Order__c > b.Household_Naming_Order__c) ? 1 : ((b.Household_Naming_Order__c > a.Household_Naming_Order__c) ? -1 : 0);} );
+
 	// Add or update cards
 	j$(members).each( function (i) {
 		
