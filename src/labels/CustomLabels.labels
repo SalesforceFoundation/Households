@@ -1,141 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
-        <fullName>AddressCopyFailure</fullName>
-        <categories>Households</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>AddressCopyFailure</shortDescription>
-        <value>An error occurred during the copying of the address.</value>
-    </labels>
-    <labels>
-        <fullName>AddressCopySuccess</fullName>
-        <categories>Households</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>AddressCopySuccess</shortDescription>
-        <value>Address copied successfully.</value>
-    </labels>
-    <labels>
-        <fullName>AddressCopyUnknownObject</fullName>
-        <categories>Households</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>AddressCopyUnknownObject</shortDescription>
-        <value>Address Copy is not supported for this object type.</value>
-    </labels>
-    <labels>
-        <fullName>DefaultHouseholdName</fullName>
-        <categories>Households, Household Naming</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>DefaultHouseholdName</shortDescription>
-        <value>Household</value>
-    </labels>
-    <labels>
-        <fullName>DefaultHouseholdTransactionCurrency</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>DefaultHouseholdTransactionCurrency</shortDescription>
-        <value>$</value>
-    </labels>
-    <labels>
-        <fullName>HouseholdAnonymousGreeting</fullName>
-        <categories>Households, Household Naming</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>HouseholdAnonymousGreeting</shortDescription>
-        <value>Sir or Madam</value>
-    </labels>
-    <labels>
-        <fullName>HouseholdAnonymousName</fullName>
-        <categories>Households, Household Naming</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>HouseholdAnonymousName</shortDescription>
-        <value>Anonymous</value>
-    </labels>
-    <labels>
-        <fullName>HouseholdNameConnector</fullName>
-        <categories>Households, Household Naming</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>HouseholdNameConnector</shortDescription>
-        <value>and</value>
-    </labels>
-    <labels>
-        <fullName>HouseholdNameOverrun</fullName>
-        <categories>Households, Household Naming</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>HouseholdNameOverrun</shortDescription>
-        <value>Friends</value>
-    </labels>
-    <labels>
-        <fullName>Household_Contact_Role_Processor_Off</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Household Contact Role Processor Off</shortDescription>
-        <value>No Opportunities</value>
-    </labels>
-    <labels>
-        <fullName>Household_Contact_Role_Processor_On</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Household Contact Role Processor On</shortDescription>
-        <value>All Opportunities</value>
-    </labels>
-    <labels>
-        <fullName>Household_Contact_Roles_Help_Text</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Household Contact Roles Help Text</shortDescription>
-        <value>Create automatic Contact Roles for Household members of the primary donor</value>
-    </labels>
-    <labels>
-        <fullName>Household_Member_Contact_Role</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Household Member Contact Role</shortDescription>
-        <value>Household Credit</value>
-    </labels>
-    <labels>
-        <fullName>Household_Rules_Help_Text</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Household Rules Help Text</shortDescription>
-        <value>Select which Contacts get Households: All, only those related to an Individual Account, or none.</value>
-    </labels>
-    <labels>
-        <fullName>NameReplacementText</fullName>
-        <categories>Households, Household Naming</categories>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Text used to cause a household name or greeting replacement</shortDescription>
-        <value>REPLACE</value>
-    </labels>
-    <labels>
-        <fullName>Opportunity_Rollup_Future_Call_Limit</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Opportunity Rollup Future Call Limit</shortDescription>
-        <value>Did not roll up because there were too few future calls available.</value>
-    </labels>
-    <labels>
-        <fullName>Opportunity_Rollup_Scheduling_Error_Text</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Opportunity Rollup Scheduling Error Text</shortDescription>
-        <value>You have reached your limit of Scheduled Apex jobs and the Opportunity Rollups won\&apos;t run nightly. If you want this job to run nightly, delete one of your scheduled jobs and reload this page.</value>
-    </labels>
-    <labels>
-        <fullName>Primary_Donor_Contact_Role</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Primary Donor Contact Role</shortDescription>
-        <value>Donor</value>
-    </labels>
-    <labels>
         <fullName>Add</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -162,6 +27,30 @@
         <protected>false</protected>
         <shortDescription>Add Members</shortDescription>
         <value>Add Members</value>
+    </labels>
+    <labels>
+        <fullName>AddressCopyFailure</fullName>
+        <categories>Households</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AddressCopyFailure</shortDescription>
+        <value>An error occurred during the copying of the address.</value>
+    </labels>
+    <labels>
+        <fullName>AddressCopySuccess</fullName>
+        <categories>Households</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AddressCopySuccess</shortDescription>
+        <value>Address copied successfully.</value>
+    </labels>
+    <labels>
+        <fullName>AddressCopyUnknownObject</fullName>
+        <categories>Households</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AddressCopyUnknownObject</shortDescription>
+        <value>Address Copy is not supported for this object type.</value>
     </labels>
     <labels>
         <fullName>AddressToAllMembers</fullName>
@@ -248,6 +137,21 @@
         <value>Contact will be created when Household is saved.</value>
     </labels>
     <labels>
+        <fullName>DefaultHouseholdName</fullName>
+        <categories>Households, Household Naming</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DefaultHouseholdName</shortDescription>
+        <value>Household</value>
+    </labels>
+    <labels>
+        <fullName>DefaultHouseholdTransactionCurrency</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DefaultHouseholdTransactionCurrency</shortDescription>
+        <value>$</value>
+    </labels>
+    <labels>
         <fullName>Delete</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -290,6 +194,22 @@
         <value>Household Address</value>
     </labels>
     <labels>
+        <fullName>HouseholdAnonymousGreeting</fullName>
+        <categories>Households, Household Naming</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HouseholdAnonymousGreeting</shortDescription>
+        <value>Sir or Madam</value>
+    </labels>
+    <labels>
+        <fullName>HouseholdAnonymousName</fullName>
+        <categories>Households, Household Naming</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HouseholdAnonymousName</shortDescription>
+        <value>Anonymous</value>
+    </labels>
+    <labels>
         <fullName>HouseholdDetails</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -304,11 +224,70 @@
         <value>Household Members</value>
     </labels>
     <labels>
+        <fullName>HouseholdNameConnector</fullName>
+        <categories>Households, Household Naming</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HouseholdNameConnector</shortDescription>
+        <value>and</value>
+    </labels>
+    <labels>
+        <fullName>HouseholdNameOverrun</fullName>
+        <categories>Households, Household Naming</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HouseholdNameOverrun</shortDescription>
+        <value>Friends</value>
+    </labels>
+    <labels>
+        <fullName>Household_Contact_Role_Processor_Off</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Household Contact Role Processor Off</shortDescription>
+        <value>No Opportunities</value>
+    </labels>
+    <labels>
+        <fullName>Household_Contact_Role_Processor_On</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Household Contact Role Processor On</shortDescription>
+        <value>All Opportunities</value>
+    </labels>
+    <labels>
+        <fullName>Household_Contact_Roles_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Household Contact Roles Help Text</shortDescription>
+        <value>Create automatic Contact Roles for Household members of the primary donor</value>
+    </labels>
+    <labels>
+        <fullName>Household_Member_Contact_Role</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Household Member Contact Role</shortDescription>
+        <value>Household Credit</value>
+    </labels>
+    <labels>
+        <fullName>Household_Rules_Help_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Household Rules Help Text</shortDescription>
+        <value>Select which Contacts get Households: All, only those related to an Individual Account, or none.</value>
+    </labels>
+    <labels>
         <fullName>ManageHousehold</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Manage Household</shortDescription>
         <value>Manage Household</value>
+    </labels>
+    <labels>
+        <fullName>NameReplacementText</fullName>
+        <categories>Households, Household Naming</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Text used to cause a household name or greeting replacement</shortDescription>
+        <value>REPLACE</value>
     </labels>
     <labels>
         <fullName>NewContact</fullName>
@@ -323,6 +302,27 @@
         <protected>false</protected>
         <shortDescription>There are currently no Contacts in this Household.</shortDescription>
         <value>There are currently no Contacts in this Household.</value>
+    </labels>
+    <labels>
+        <fullName>Opportunity_Rollup_Future_Call_Limit</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Opportunity Rollup Future Call Limit</shortDescription>
+        <value>Did not roll up because there were too few future calls available.</value>
+    </labels>
+    <labels>
+        <fullName>Opportunity_Rollup_Scheduling_Error_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Opportunity Rollup Scheduling Error Text</shortDescription>
+        <value>You have reached your limit of Scheduled Apex jobs and the Opportunity Rollups won\&apos;t run nightly. If you want this job to run nightly, delete one of your scheduled jobs and reload this page.</value>
+    </labels>
+    <labels>
+        <fullName>Primary_Donor_Contact_Role</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Primary Donor Contact Role</shortDescription>
+        <value>Donor</value>
     </labels>
     <labels>
         <fullName>SelectExistingAddress</fullName>
