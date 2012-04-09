@@ -39,6 +39,23 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
+    <fieldSets>
+        <fullName>Manage_Household_Custom</fullName>
+        <description>Fields displayed on manage household page</description>
+        <displayedFields>
+            <field>HouseholdPhone__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>AverageAmount__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastCloseDate__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Manage_Household_Custom</label>
+    </fieldSets>
     <fields>
         <fullName>Addressee__c</fullName>
         <deprecated>false</deprecated>
