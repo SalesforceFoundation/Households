@@ -1,8 +1,13 @@
+// Written by Ryan Foster, copyright (c) 2011 Groundwire
+// This program is released under the GNU Affero General Public License, Version 3. http://www.gnu.org/licenses/
+// 04/01/2012 James Melville Changes made throughout to support NPSP HH
+
 var j$ = jQuery.noConflict();
 var pgController;
 var fldPfx;
 
 // Set the controller for APEX Remoting methods to handle managed/unmanaged
+// todo: replace this and pgController throughout with Wes Nolte's cleaner code: http://th3silverlining.com/2012/02/26/salesforce-javascript-remoting-and-managed-packages/
 try {
 	pgController = npo02.ManageHousehold_EXT;
 	fldPfx = 'npo02__';
