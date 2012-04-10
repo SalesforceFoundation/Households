@@ -33,8 +33,6 @@ public without sharing class OpportunityRollup_Utilities {
     /*** Settings Methods ***/ 
     //configures and sets up static vars for OppRollups
     public static void setupRollupVars(Households_Settings__c household_settings){
-        if (household_settings == null)
-            household_settings = Households.getHouseholdsSettings();
         
         if (household_settings.Excluded_Contact_Opp_Rectypes__c != null) {
             set<string> rtNamesToExclude = new set<string>(household_settings.Excluded_Contact_Opp_Rectypes__c.split(';'));
