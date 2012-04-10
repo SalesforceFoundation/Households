@@ -155,6 +155,15 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Force_Fiscal_Year__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The NPSP automatically checks for the presence of custom fiscal years, and disabled FY settings if they&apos;re found to avoid errors.  This setting overrides that safety-check for users who have accidentally enabled custom fiscal years.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The NPSP automatically checks for the presence of custom fiscal years, and disabled FY settings if they&apos;re found to avoid errors.  This setting overrides that safety-check for users who have accidentally enabled custom fiscal years.</inlineHelpText>
+        <label>Force Fiscal Year</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Has_Package_Update__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
