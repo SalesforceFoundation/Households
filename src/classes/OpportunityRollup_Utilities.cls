@@ -180,5 +180,63 @@ public without sharing class OpportunityRollup_Utilities {
             return null;
     }
     /****************************************/
+    
+    /*** Opportunity Evaluation Methods ***/
+    //evaluates a single Opportunity to see if it needs to be rolled up    
+    public static boolean oppForRollup(Opportunity o){
+    	boolean needsRollup = false;
+    	if (o.isWon && o.Amount != null)
+    	   needsRollup = true;
+    	return needsRollup;
+    }
+    //evaluates if an Opp will need a contact-based rollup
+    public static boolean needsContactRollup(Opportunity o){
+    	boolean needsRollup = false;
+    	//if its from an individual account or has a null account ID OR alwaysRollupToPrimary is set AND
+    	//its the membership rectype or the rectype isn't exclused AND
+    	//the opp type isn't excluded    	 
+        if (((o.npe01__Is_Opp_From_Individual__c == 'true' || o.accountid == null) || hh_settings.Always_Rollup_to_Primary_Contact__c) &&
+                (mbrRecordTypes.contains((id)o.get('recordTypeId')) || !recordTypesToExcludeCons.contains((id)o.get('recordTypeId'))) &&
+                (!oppTypesToExcludeCons.contains(o.type))){
+            needsRollup = true;
+        }
+    	return needsRollup;
+    }
+    //evaluates if an Opp belongs to a valid Account needing a rollup
+    public static boolean needsAccountRollup(Opportunity o){
+        boolean needsRollup = false;    
+    	//if the account id is not null and its not the individual/bucket account AND
+    	//its the membership rectype or the rectype isn't exclused AND
+        //the opp type isn't excluded
+    	if (o.AccountId != null && o.AccountId != npe01.Constants.GetIndividualAccountId() && 
+    	(mbrRecordTypes.contains((id)o.get('recordTypeId')) || !recordTypesToExcludeAccts.contains((id)o.get('recordTypeId'))) && 
+    	!oppTypesToExcludeAccts.contains(o.type)){
+            needsRollup = true;    	           
+    	}                                    
+    	return needsRollup;
+    }
+    //evaluates two opps for changes that would require a rollup
+    public static boolean oppForRollup (Opportunity newOpp, Opportunity oldOpp){
+        boolean needsRollup = false;    	  
+        //if the iswon stage has changed, or its iswon and the amount has changed
+        //or the recordtype has changed, or the type has changed, or the account id has changed
+        //or its won and any of the membership fields have changed
+        if (newOpp.isWon != oldOpp.isWon ||
+            (newOpp.isWon && (newOpp.Amount != oldOpp.Amount)) ||
+            (id)newOpp.get('recordTypeId') != (id)oldOpp.get('recordTypeId') ||                                            
+            newOpp.type != oldOpp.type ||
+            newOpp.closeDate != oldOpp.closeDate ||
+            newOpp.accountId != oldOpp.accountId ||
+            (newOpp.isWon && (newOpp.npe01__Membership_Start_Date__c != oldOpp.npe01__Membership_Start_Date__c || 
+                              newOpp.npe01__Membership_End_Date__c != oldOpp.npe01__Membership_End_Date__c ||                                            
+                              newOpp.npe01__Member_Level__c != oldOpp.npe01__Member_Level__c))){
+            needsRollup = true;                              	     
+        }        
+        return needsRollup;
+    }    
+    
+    /****************************************/
+    
+    
 
 }
