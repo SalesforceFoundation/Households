@@ -299,8 +299,7 @@ public without sharing class OpportunityRollup_Utilities {
     		AccountQuery += ' from Account ';
     	}
     	return AccountQuery;
-    } 
-    
+    }
     public static string buildOpportunityContactRoleQuery(){
         if (OpportunityContactRoleQuery == null){
             OpportunityContactRoleQuery = 'select id';
@@ -312,19 +311,110 @@ public without sharing class OpportunityRollup_Utilities {
         }
         return OpportunityContactRoleQuery;    	
     }
+    public static string buildContactQuery(){        
+        if (ContactQuery == null){
+            ContactQuery = 'select id';
+            for (string s : ContactFields){
+            	ContactQuery += ', ' + s;            	
+            }	
+        	ContactQuery += (isMultiCurrency() ? ', CurrencyIsoCode ' : '');  
+            ContactQuery += ' from Contact ';        	
+        }    
+        return ContactQuery;
+    }
+    public static string buildHouseholdQuery(){
+    	if (HouseholdQuery == null){
+            HouseholdQuery = 'select id';
+            for (string s : HouseholdFields){
+                HouseholdQuery += ', ' + s;               
+            }   
+            HouseholdQuery += (isMultiCurrency() ? ', CurrencyIsoCode ' : '');  
+            HouseholdQuery += ' from Household__c ';           
+        }
+    	return HouseholdQuery;    
+    }
     
+    public static string buildAccountRollupQuery(){
+    	if (AccountRollupQuery == null){
+    		if (useFiscalYear)
+                AccountRollupQuery = 'SELECT AccountId, Fiscal_Year(CloseDate) CalendarYr, ';
+            else
+                AccountRollupQuery = 'SELECT AccountID, Calendar_Year(CloseDate) CalendarYr, ';        
+            AccountRollupQuery += 'SUM(Amount) TotalOppAmount, AVG(Amount) AverageAmount, MIN(Amount) SmallestAmount, ';
+            AccountRollupQuery += 'MAX(Amount) LargestAmount, MIN(CloseDate) FirstCloseDate, MAX(CloseDate) LastCloseDate, ';
+            if (objectRollupFieldMap.containsKey('Account'))
+                AccountRollupQuery += objectRollupFieldMap.get('Account');        
+            AccountRollupQuery += ' COUNT_DISTINCT(Id) NumberOfClosedOpps, MAX(npo02__CombinedRollupFieldset__c) RollupFieldset ';
+            AccountRollupQuery += 'FROM Opportunity ';
+            AccountRollupQuery += 'WHERE isWon=true '; 
+            AccountRollupQuery += 'AND (Amount != null) '; 
+            if (npe01.Constants.GetIndividualAccountId() != null){
+                AccountRollupQuery += 'AND AccountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
+            }        
+            if(areRecordTypesOnOpps()){
+                AccountRollupQuery += 'AND RecordTypeId NOT IN :OpportunityRollup_Utilities.recordTypesToExcludeAccts ';
+            }
+            AccountRollupQuery += 'AND Type NOT IN :OpportunityRollup_Utilities.oppTypesToExcludeAccts ';
+            AccountRollupQuery += 'AND AccountId IN :amap.keySet() ';
+            if (useFiscalYear){
+                AccountRollupQuery += 'GROUP BY ROLLUP (AccountId, Fiscal_Year(CloseDate)) ';                
+            }
+            else{
+                AccountRollupQuery += 'GROUP BY ROLLUP (AccountId, Calendar_Year(CloseDate)) ';                
+            }
+            AccountRollupQuery += ' HAVING AccountId != null';
+    	}
+    	return AccountRollupQuery;
+    }
     
+    public static string buildAccountNDayQuery(){
+    	if (AccountNDayQuery == null){
+            AccountNDayQuery = 'SELECT AccountId, ';
+            AccountNDayQuery += 'SUM(Amount) TotalOppAmount, COUNT_DISTINCT(Id) NumberOfClosedOpps '; 
+            AccountNDayQuery += 'FROM Opportunity  '; 
+            AccountNDayQuery += 'WHERE isWon=true  '; 
+            AccountNDayQuery += 'AND (Amount != null) '; 
+            if (npe01.Constants.GetIndividualAccountId() != null){
+                AccountNDayQuery += 'AND AccountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
+            }
+            if(areRecordTypesOnOpps()){ 
+                AccountNDayQuery += 'AND RecordTypeId NOT IN :OpportunityRollup_Utilities.recordTypesToExcludeAccts '; 
+            }
+            AccountNDayQuery += 'AND Type NOT IN :OpportunityRollup_Utilities.oppTypesToExcludeAccts '; 
+            AccountNDayQuery += 'AND AccountId IN :amap.keySet() '; 
+            AccountNDayQuery += 'AND closeDate >= LAST_N_DAYS:' + hh_settings.Rollup_N_Day_Value__c + ' '; 
+            AccountNDayQuery += 'GROUP BY AccountId '; 
+            AccountNDayQuery += 'HAVING AccountId != null';
+    	}    	
+        return AccountNDayQuery;
+    }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    public static string buildAccountMembershipQuery(){
+    	if (AccountMembershipQuery == null){
+    		AccountMembershipQuery = 'SELECT AccountId, ';
+            AccountMembershipQuery += 'SUM(Amount) TotalOppAmount, '; 
+            AccountMembershipQuery += 'MAX(CloseDate) LastCloseDate, ';
+            AccountMembershipQuery += 'MIN(npe01__membership_start_date__c) FirstStartDate, MAX(npe01__membership_end_date__c) LastEndDate,  ';
+            AccountMembershipQuery += 'COUNT_DISTINCT(Id) NumberOfClosedOpps, MAX(npo02__CombinedRollupFieldset__c) RollupFieldset  ';
+            AccountMembershipQuery += 'FROM Opportunity ';
+            AccountMembershipQuery += 'WHERE isWon=true  ';
+            AccountMembershipQuery += 'AND (Amount != null)  ';         
+            if (npe01.Constants.GetIndividualAccountId() != null){
+                AccountMembershipQuery += 'AND accountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
+            }            
+            if(areRecordTypesOnOpps()){
+                AccountMembershipQuery += 'AND RecordTypeId IN :OpportunityRollup_Utilities.mbrRecordTypes ';
+            }
+            AccountMembershipQuery += 'AND Type NOT IN :OpportunityRollup_Utilities.oppTypesToExcludeAccts ';
+            AccountMembershipQuery += 'AND AccountId IN :amap.keySet() ';            
+            if (useFiscalYear)
+                AccountMembershipQuery += 'GROUP BY ROLLUP (AccountId, Fiscal_Year(closeDate)) ';
+            else
+                AccountMembershipQuery += 'GROUP BY ROLLUP (AccountId, Calendar_Year(closeDate)) ';
+            AccountMembershipQuery += 'HAVING AccountId != null';
+    	}
+    	return AccountMembershipQuery;
+    }
     
     
     
