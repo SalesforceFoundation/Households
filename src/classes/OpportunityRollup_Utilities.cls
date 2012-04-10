@@ -26,9 +26,58 @@ public without sharing class OpportunityRollup_Utilities {
     public static map<string, string> objectRollUpFieldMap = new map<string, string>();
     public static map<string, User_Rollup_Field_Settings__c> urfsMap = new map<string, User_Rollup_Field_Settings__c>();
     
-    /*** Query Building ***/
+    /*** Query Strings ***/
+    private static string AccountQuery;
+    private static string ContactQuery;
+    private static string HouseholdQuery;
+    private static string OpportunityContactRoleQuery;
+    private static string HouseholdRollupQuery;
+    private static string ContactRollupQuery;
+    private static string AccountRollupQuery;    
+    private static string HouseholdNDayQuery;
+    private static string ContactNDayQuery;
+    private static string AccountNDayQuery;    
+    private static string HouseholdMembershipQuery;
+    private static string ContactMembershipQuery;
+    private static string AccountMembershipQuery;    
     
     
+    /*** Field Lists ***/
+    private final static set<string> AccountFields = new set<string>{'TotalOppAmount__c', 'OppAmountThisYear__c',
+    	                                                               'OppAmountLastYear__c', 'OppAmountLastNDays__c',
+    	                                                               'OppAmount2YearsAgo__c', 'OppsClosedThisYear__c',
+    	                                                               'LastCloseDate__c', 'NumberOfClosedOpps__c', 
+    	                                                               'TotalMembershipOppAmount__c', 'OppsClosedLastYear__c',
+    	                                                               'OppsClosedLastNDays__c', 'OppClosed2YearsAgo__c'};
+    
+    private final static set<string> OpportunityContactRoleFields = new set<string>{'Contactid', 'Contact.npo02__household__c',
+                                                        'Contact.npo02__TotalOppAmount__c', 'Contact.npo02__OppAmountThisYear__c',
+                                                        'Contact.npo02__OppAmountLastNDays__c', 'Contact.npo02__LastCloseDate__c', 
+                                                        'Contact.npo02__NumberOfClosedOpps__c', 'Contact.npo02__TotalMembershipOppAmount__c',
+                                                        'Contact.npo02__OppAmountLastYear__c', 'Contact.npo02__OppAmount2YearsAgo__c', 
+                                                        'Contact.npo02__LastOppAmount__c', 'Contact.npo02__household__r.npo02__TotalOppAmount__c',  
+                                                        'Contact.npo02__household__r.npo02__OppAmountThisYear__c', 'Contact.npo02__household__r.npo02__OppAmountLastNDays__c', 
+                                                        'Contact.npo02__household__r.npo02__TotalMembershipOppAmount__c', 'Contact.npo02__household__r.npo02__LastCloseDate__c',   
+                                                        'Contact.npo02__household__r.npo02__NumberOfClosedOpps__c', 'Contact.npo02__household__r.npo02__OppsClosedThisYear__c', 
+                                                        'Contact.npo02__household__r.npo02__OppsClosedLastYear__c', 'Contact.npo02__household__r.npo02__OppsClosedLastNDays__c', 
+                                                        'Contact.npo02__household__r.npo02__OppsClosed2YearsAgo__c','Contact.npo02__household__r.npo02__OppAmountLastYear__c', 
+                                                        'Contact.npo02__household__r.npo02__OppAmount2YearsAgo__c', 'Contact.npo02__MembershipEndDate__c', 
+                                                        'Contact.npo02__household__r.npo02__MembershipEndDate__c', 'Contact.npo02__MembershipJoinDate__c', 
+                                                        'Contact.npo02__household__r.npo02__MembershipJoinDate__c'}; 
+    	
+    private final static set<string> ContactFields = new set<string>{'npo02__TotalOppAmount__c', 'npo02__OppAmountThisYear__c',
+                                                                'npo02__OppAmountLastNDays__c', 'npo02__TotalMembershipOppAmount__c', 
+                                                                'npo02__LastCloseDate__c', 'npo02__NumberOfClosedOpps__c', 
+                                                                'npo02__MembershipEndDate__c', 'npo02__OppAmountLastYear__c', 
+                                                                'npo02__OppAmount2YearsAgo__c', 'npo02__MembershipJoinDate__c'};
+    
+    private final static set<string> HouseholdFields = new set<string>{'npo02__TotalOppAmount__c', 'npo02__OppAmountThisYear__c', 
+                                                                'npo02__OppAmountLastNDays__c', 'npo02__LastCloseDate__c', 
+                                                                'npo02__NumberOfClosedOpps__c', 'npo02__TotalMembershipOppAmount__c',
+                                                                'npo02__OppsClosedThisYear__c', 'npo02__OppsClosedLastYear__c', 
+                                                                'npo02__OppsClosedLastNDays__c', 'npo02__OppsClosed2YearsAgo__c',
+                                                                'npo02__OppAmountLastYear__c', 'npo02__OppAmount2YearsAgo__c',
+                                                                'npo02__MembershipEndDate__c', 'npo02__MembershipJoinDate__c'};
 
     /*** Settings Methods ***/ 
     //configures and sets up static vars for OppRollups
@@ -237,6 +286,48 @@ public without sharing class OpportunityRollup_Utilities {
     
     /****************************************/
     
+    /*** Query Building Methods ***/    
     
+    public static string buildAccountQuery(){
+    	if (AccountQuery == null){
+            AccountQuery = 'select id';
+            for (string s : AccountFields){
+            	AccountQuery += ', ' + s;
+            }    		
+            //multicurrency?
+    		AccountQuery += (isMultiCurrency() ? ', CurrencyIsoCode ' : '');  
+    		AccountQuery += ' from Account ';
+    	}
+    	return AccountQuery;
+    } 
+    
+    public static string buildOpportunityContactRoleQuery(){
+        if (OpportunityContactRoleQuery == null){
+            OpportunityContactRoleQuery = 'select id';
+            for (string s : OpportunityContactRoleFields){
+                OpportunityContactRoleQuery += ', ' + s;
+            }        	
+            OpportunityContactRoleQuery += (isMultiCurrency() ? ', Contact.CurrencyIsoCode, Contact.npo02__Household__r.CurrencyIsoCode ' : ''); 
+        	OpportunityContactRoleQuery += ' from OpportunityContactRole ';
+        }
+        return OpportunityContactRoleQuery;    	
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /****************************************/
 
 }
