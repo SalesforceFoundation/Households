@@ -14,7 +14,7 @@ public without sharing class OpportunityRollup_Utilities {
     public static integer BATCH_SIZE = 200;
     
     /*** FY ***/
-    public static integer fiscal_year;
+    private static integer fiscal_year;
     
     /*** Multicurrency ***/
     //set when multicurrency check is called, holds the field string/sobject mapping
@@ -590,21 +590,21 @@ public without sharing class OpportunityRollup_Utilities {
                                     FROM Organization
                                     WHERE id=:Userinfo.getOrganizationId()];
             Date today = system.today();
-            Integer currentFY;
+            
             if (today.month() >= orgInfo.FiscalYearStartMonth){
                 if (orgInfo.UsesStartDateAsFiscalYearName){
-                    currentFY = today.year();
+                    fiscal_year = today.year();
                 } 
                 else{
-                    currentFY = today.year() + 1;
+                    fiscal_year = today.year() + 1;
                 }
             }
             else{
                 if (orgInfo.UsesStartDateAsFiscalYearName){
-                    currentFY = today.year() - 1;
+                    fiscal_year = today.year() - 1;
                 }
                 else{
-                    currentFY = today.year();
+                    fiscal_year = today.year();
                 }
             }
         }               
