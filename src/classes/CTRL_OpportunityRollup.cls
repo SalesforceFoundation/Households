@@ -62,17 +62,21 @@ public class CTRL_OpportunityRollup {
     
     public PageReference startAction() {
         PageReference ref;
-        if (oid != null) {
-            
+        if (oid != null){            
             // run the rollup for the specified object
             OpportunityRollups rg = new OpportunityRollups();
-            if (objectId.startsWith('001'))
-                rg.RollupAccount(oid);
-            else if (objectId.startsWith('003'))
-                rg.RollupContact(oid);
-            else 
-                rg.RollupHousehold(oid);
-                 
+            if (objectId.startsWith('001')){
+                Account a = [select id from Account where id = :oid];
+                rg.RollupAccounts(new map<id, Account>(new list<Account>{a}));
+            }                
+            else if (objectId.startsWith('003')){
+                Contact c = [select id from Contact where id = :oid];
+                rg.RollupContacts(new map<id, Contact>(new list<Contact>{c}));                
+            }                
+            else{ 
+                npo02__Household__c h = [select id from npo02__Household__c where id = :oid];
+                rg.RollupHouseholds(new map<id, npo02__Household__c>(new list<npo02__Household__c>{h}));                
+            }    
             ref = new PageReference('/' + oid);
             ref.setRedirect(true);
         }
