@@ -150,7 +150,7 @@ global with sharing class ManageHousehold_EXT {
         if (thh.Id == null) {
             try {
             	String paramHhId = String.escapeSingleQuotes(ApexPages.currentPage().getParameters().get('hhid'));
-                tempHHid = paramHhId;
+                tempHHid = paramHhId; 
             } catch (Exception e) {
                 tempHHid = null;
             }
@@ -699,7 +699,7 @@ global with sharing class ManageHousehold_EXT {
         
         //Rollup household - uncomment this in NPSP - the constructor is not global so cannot be called outside the managed package
         npo02.OpportunityRollups rg = new npo02.OpportunityRollups();
-        rg.rollupHousehold(hh.id);
+        rg.rollupHouseholds(new map<id, npo02__Household__c>(new list<npo02__Household__c>{hh}));
                 
         return sv;
     }
