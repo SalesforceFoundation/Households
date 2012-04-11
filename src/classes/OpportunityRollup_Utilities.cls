@@ -83,7 +83,8 @@ public without sharing class OpportunityRollup_Utilities {
     	                                                               'OppAmount2YearsAgo__c', 'OppsClosedThisYear__c',
     	                                                               'LastCloseDate__c', 'NumberOfClosedOpps__c', 
     	                                                               'TotalMembershipOppAmount__c', 'OppsClosedLastYear__c',
-    	                                                               'OppsClosedLastNDays__c', 'OppsClosed2YearsAgo__c'};
+    	                                                               'OppsClosedLastNDays__c', 'OppsClosed2YearsAgo__c',
+    	                                                               'LastMembershipLevel__c'};
     
     private final static set<string> OpportunityContactRoleFields = new set<string>{'Contactid', 'Contact.npo02__household__c',
                                                         'Contact.npo02__TotalOppAmount__c', 'Contact.npo02__OppAmountThisYear__c',
@@ -98,13 +99,14 @@ public without sharing class OpportunityRollup_Utilities {
                                                         'Contact.npo02__household__r.npo02__OppsClosed2YearsAgo__c','Contact.npo02__household__r.npo02__OppAmountLastYear__c', 
                                                         'Contact.npo02__household__r.npo02__OppAmount2YearsAgo__c', 'Contact.npo02__MembershipEndDate__c', 
                                                         'Contact.npo02__household__r.npo02__MembershipEndDate__c', 'Contact.npo02__MembershipJoinDate__c', 
-                                                        'Contact.npo02__household__r.npo02__MembershipJoinDate__c'}; 
+                                                        'Contact.npo02__household__r.npo02__MembershipJoinDate__c', 'Contact.npo02__Household__r.npo02__LastMembershipLevel__c'}; 
     	
     private final static set<string> ContactFields = new set<string>{'npo02__TotalOppAmount__c', 'npo02__OppAmountThisYear__c',
                                                                 'npo02__OppAmountLastNDays__c', 'npo02__TotalMembershipOppAmount__c', 
                                                                 'npo02__LastCloseDate__c', 'npo02__NumberOfClosedOpps__c', 
                                                                 'npo02__MembershipEndDate__c', 'npo02__OppAmountLastYear__c', 
-                                                                'npo02__OppAmount2YearsAgo__c', 'npo02__MembershipJoinDate__c'};
+                                                                'npo02__OppAmount2YearsAgo__c', 'npo02__MembershipJoinDate__c',
+                                                                'npo02__LastMembershipLevel__c'};
     
     private final static set<string> HouseholdFields = new set<string>{'npo02__TotalOppAmount__c', 'npo02__OppAmountThisYear__c', 
                                                                 'npo02__OppAmountLastNDays__c', 'npo02__LastCloseDate__c', 
@@ -112,7 +114,8 @@ public without sharing class OpportunityRollup_Utilities {
                                                                 'npo02__OppsClosedThisYear__c', 'npo02__OppsClosedLastYear__c', 
                                                                 'npo02__OppsClosedLastNDays__c', 'npo02__OppsClosed2YearsAgo__c',
                                                                 'npo02__OppAmountLastYear__c', 'npo02__OppAmount2YearsAgo__c',
-                                                                'npo02__MembershipEndDate__c', 'npo02__MembershipJoinDate__c'};
+                                                                'npo02__MembershipEndDate__c', 'npo02__MembershipJoinDate__c',
+                                                                'npo02__LastMembershipLevel__c'};
 
     /*** Settings Methods ***/ 
     //configures and sets up static vars for OppRollups
@@ -378,7 +381,7 @@ public without sharing class OpportunityRollup_Utilities {
     		if (useFiscalYear)
                 AccountRollupQuery = 'SELECT AccountId, Fiscal_Year(CloseDate) CalendarYr, ';
             else
-                AccountRollupQuery = 'SELECT AccountID, Calendar_Year(CloseDate) CalendarYr, ';        
+                AccountRollupQuery = 'SELECT AccountId, Calendar_Year(CloseDate) CalendarYr, ';        
             AccountRollupQuery += 'SUM(Amount) TotalOppAmount, AVG(Amount) AverageAmount, MIN(Amount) SmallestAmount, ';
             AccountRollupQuery += 'MAX(Amount) LargestAmount, MIN(CloseDate) FirstCloseDate, MAX(CloseDate) LastCloseDate, ';
             if (objectRollupFieldMap.containsKey('Account'))
@@ -386,15 +389,15 @@ public without sharing class OpportunityRollup_Utilities {
             AccountRollupQuery += ' COUNT_DISTINCT(Id) NumberOfClosedOpps, MAX(npo02__CombinedRollupFieldset__c) RollupFieldset ';
             AccountRollupQuery += 'FROM Opportunity ';
             AccountRollupQuery += 'WHERE isWon=true '; 
-            AccountRollupQuery += 'AND (Amount != null) '; 
+            AccountRollupQuery += 'AND Amount != null '; 
             if (npe01.Constants.GetIndividualAccountId() != null){
                 AccountRollupQuery += 'AND AccountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
             }        
             if(areRecordTypesOnOpps()){
-                AccountRollupQuery += 'AND RecordTypeId NOT IN :OpportunityRollup_Utilities.recordTypesToExcludeAccts ';
+                AccountRollupQuery += 'AND RecordTypeId NOT IN :rectypeset ';
             }
-            AccountRollupQuery += 'AND Type NOT IN :OpportunityRollup_Utilities.oppTypesToExcludeAccts ';
-            AccountRollupQuery += 'AND AccountId IN :amap.keySet() ';
+            AccountRollupQuery += 'AND Type NOT IN :typeset ';
+            AccountRollupQuery += 'AND AccountId IN :aset ';
             if (useFiscalYear){
                 AccountRollupQuery += 'GROUP BY ROLLUP (AccountId, Fiscal_Year(CloseDate)) ';                
             }
@@ -403,6 +406,7 @@ public without sharing class OpportunityRollup_Utilities {
             }
             AccountRollupQuery += ' HAVING AccountId != null';
     	}
+    	system.debug('ACCOUNT QUERY: ' + AccountRollupQuery); 
     	return AccountRollupQuery;
     }
     
@@ -417,11 +421,11 @@ public without sharing class OpportunityRollup_Utilities {
                 AccountNDayQuery += 'AND AccountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
             }
             if(areRecordTypesOnOpps()){ 
-                AccountNDayQuery += 'AND RecordTypeId NOT IN :OpportunityRollup_Utilities.recordTypesToExcludeAccts '; 
+                AccountNDayQuery += 'AND RecordTypeId NOT IN :rectypeset '; 
             }
-            AccountNDayQuery += 'AND Type NOT IN :OpportunityRollup_Utilities.oppTypesToExcludeAccts '; 
-            AccountNDayQuery += 'AND AccountId IN :amap.keySet() '; 
-            AccountNDayQuery += 'AND closeDate >= LAST_N_DAYS:' + hh_settings.Rollup_N_Day_Value__c + ' '; 
+            AccountNDayQuery += 'AND Type NOT IN :typeset '; 
+            AccountNDayQuery += 'AND AccountId IN :aset '; 
+            AccountNDayQuery += 'AND closeDate >= LAST_N_DAYS:' + hh_settings.Rollup_N_Day_Value__c.intValue() + ' '; 
             AccountNDayQuery += 'GROUP BY AccountId '; 
             AccountNDayQuery += 'HAVING AccountId != null';
     	}    	
@@ -444,8 +448,8 @@ public without sharing class OpportunityRollup_Utilities {
             if(areRecordTypesOnOpps()){
                 AccountMembershipQuery += 'AND RecordTypeId IN :OpportunityRollup_Utilities.mbrRecordTypes ';
             }
-            AccountMembershipQuery += 'AND Type NOT IN :OpportunityRollup_Utilities.oppTypesToExcludeAccts ';
-            AccountMembershipQuery += 'AND AccountId IN :amap.keySet() ';            
+            AccountMembershipQuery += 'AND Type NOT IN :typeset ';
+            AccountMembershipQuery += 'AND AccountId IN :aset ';            
             if (useFiscalYear)
                 AccountMembershipQuery += 'GROUP BY ROLLUP (AccountId, Fiscal_Year(closeDate)) ';
             else
@@ -458,9 +462,9 @@ public without sharing class OpportunityRollup_Utilities {
     public static string buildContactRollupQuery(){
         if (ContactRollupQuery == null){
             if (useFiscalYear)
-                ContactRollupQuery += 'SELECT ContactId, Fiscal_Year(Opportunity.CloseDate) CalendarYr, ';
+                ContactRollupQuery = 'SELECT ContactId, Fiscal_Year(Opportunity.CloseDate) CalendarYr, ';
             else
-                ContactRollupQuery += 'SELECT ContactId, Calendar_Year(Opportunity.CloseDate) CalendarYr, ';            
+                ContactRollupQuery = 'SELECT ContactId, Calendar_Year(Opportunity.CloseDate) CalendarYr, ';            
             ContactRollupQuery += 'SUM(Opportunity.Amount) TotalOppAmount, ';
             ContactRollupQuery += 'AVG(Opportunity.Amount) AverageAmount, MIN(Opportunity.Amount) SmallestAmount, ';
             ContactRollupQuery += 'MAX(Opportunity.Amount) LargestAmount, MIN(Opportunity.CloseDate) FirstCloseDate, '; 
@@ -472,13 +476,13 @@ public without sharing class OpportunityRollup_Utilities {
             ContactRollupQuery += 'WHERE isPrimary=true AND Opportunity.isWon=true '; 
             ContactRollupQuery += 'AND (Opportunity.Amount != null) '; 
             if(areRecordTypesOnOpps()){
-                ContactRollupQuery += 'AND Opportunity.RecordTypeId NOT IN :OpportunityRollup_Utilities.recordTypesToExcludeCons ';
+                ContactRollupQuery += 'AND Opportunity.RecordTypeId NOT IN :rectypeset ';
             }
-            ContactRollupQuery += 'AND Opportunity.Type NOT IN :OpportunityRollup_Utilities.oppTypesToExcludeCons '; 
+            ContactRollupQuery += 'AND Opportunity.Type NOT IN :typeset '; 
             if (!hh_settings.Always_Rollup_to_Primary_Contact__c){
                  ContactRollupQuery += 'AND (Opportunity.AccountId = null OR Opportunity.Account.npe01__SYSTEMIsIndividual__c = true) ';
             }                    
-            ContactRollupQuery += 'AND ContactId IN :cmap.keySet() ';            
+            ContactRollupQuery += 'AND ContactId IN :cset ';            
             if (useFiscalYear)
                 ContactRollupQuery += 'GROUP BY ROLLUP(ContactId, Fiscal_Year(Opportunity.CloseDate)) ';
             else
@@ -495,14 +499,14 @@ public without sharing class OpportunityRollup_Utilities {
             ContactNDayQuery += 'WHERE isPrimary=true AND opportunity.isWon=true  ';
             ContactNDayQuery += 'AND (Opportunity.Amount != null) '; 
             if(areRecordTypesOnOpps()){
-                ContactNDayQuery += 'AND Opportunity.RecordTypeId NOT IN :OpportunityRollup_Utilities.recordTypesToExcludeCons ';
+                ContactNDayQuery += 'AND Opportunity.RecordTypeId NOT IN :rectypeset ';
             }
-            ContactNDayQuery += 'AND Opportunity.Type NOT IN :OpportunityRollup_Utilities.oppTypesToExcludeCons ';
+            ContactNDayQuery += 'AND Opportunity.Type NOT IN :typeset ';
             if (!hh_settings.Always_Rollup_to_Primary_Contact__c){
                 ContactRollupQuery += 'AND (Opportunity.AccountId = null OR Opportunity.Account.npe01__SYSTEMIsIndividual__c = true) ';
             }  
-            ContactNDayQuery += 'AND ContactId IN :cmap.keySet() ';
-            ContactNDayQuery += 'AND Opportunity.CloseDate >= LAST_N_DAYS:' + hh_settings.Rollup_N_Day_Value__c + ' ';
+            ContactNDayQuery += 'AND ContactId IN :cset ';
+            ContactNDayQuery += 'AND Opportunity.CloseDate >= LAST_N_DAYS:' + hh_settings.Rollup_N_Day_Value__c.intValue() + ' ';
             ContactNDayQuery += 'GROUP BY ROLLUP(ContactId) ';
         }    	
     	return ContactNDayQuery;
@@ -523,11 +527,11 @@ public without sharing class OpportunityRollup_Utilities {
             if(areRecordTypesOnOpps()){
                 ContactMembershipQuery += 'AND Opportunity.RecordTypeId IN :OpportunityRollup_Utilities.mbrRecordTypes ';
             }
-            ContactMembershipQuery += 'AND Opportunity.Type NOT IN :OpportunityRollup_Utilities.oppTypesToExcludeCons ';
+            ContactMembershipQuery += 'AND Opportunity.Type NOT IN :typeset ';
             if (!hh_settings.Always_Rollup_to_Primary_Contact__c){
                 ContactMembershipQuery += 'AND (Opportunity.AccountId = null OR Opportunity.Account.npe01__SYSTEMIsIndividual__c = true) ';
             }
-            ContactMembershipQuery += 'AND Contactid IN :cmap.keySet() ';
+            ContactMembershipQuery += 'AND Contactid IN :cset ';
             ContactMembershipQuery += 'GROUP BY ROLLUP(ContactId) ';
         }   
         return ContactMembershipQuery;    	
@@ -537,9 +541,9 @@ public without sharing class OpportunityRollup_Utilities {
     public static string buildHouseholdRollupQuery(){
     	if (HouseholdRollupQuery == null){
     		if (useFiscalYear)
-                HouseholdRollupQuery += 'SELECT Contact.npo02__Household__c hhid, Fiscal_Year(Opportunity.CloseDate) CalendarYr, ';
+                HouseholdRollupQuery = 'SELECT Contact.npo02__Household__c hhid, Fiscal_Year(Opportunity.CloseDate) CalendarYr, ';
             else
-                HouseholdRollupQuery += 'SELECT Contact.npo02__Household__c hhid, Calendar_Year(Opportunity.CloseDate) CalendarYr, ';            
+                HouseholdRollupQuery = 'SELECT Contact.npo02__Household__c hhid, Calendar_Year(Opportunity.CloseDate) CalendarYr, ';            
             HouseholdRollupQuery += 'SUM(Opportunity.Amount) TotalOppAmount, ';
             HouseholdRollupQuery += 'AVG(Opportunity.Amount) AverageAmount, MIN(Opportunity.Amount) SmallestAmount, ';
             HouseholdRollupQuery += 'MAX(Opportunity.Amount) LargestAmount, MIN(Opportunity.CloseDate) FirstCloseDate, '; 
@@ -551,13 +555,13 @@ public without sharing class OpportunityRollup_Utilities {
             HouseholdRollupQuery += 'WHERE isPrimary=true AND Opportunity.isWon=true '; 
             HouseholdRollupQuery += 'AND (Opportunity.Amount != null) '; 
             if(areRecordTypesOnOpps()){
-                HouseholdRollupQuery += 'AND Opportunity.RecordTypeId NOT IN :OpportunityRollup_Utilities.recordTypesToExcludeCons ';
+                HouseholdRollupQuery += 'AND Opportunity.RecordTypeId NOT IN :rectypeset ';
             }
-            HouseholdRollupQuery += 'AND Opportunity.Type NOT IN :OpportunityRollup_Utilities.oppTypesToExcludeCons '; 
+            HouseholdRollupQuery += 'AND Opportunity.Type NOT IN :typeset '; 
             if (!hh_settings.Always_Rollup_to_Primary_Contact__c){
                  HouseholdRollupQuery += 'AND (Opportunity.AccountId = null OR Opportunity.Account.npe01__SYSTEMIsIndividual__c = true) ';
             }                    
-            HouseholdRollupQuery += 'AND Contact.npo02__Household__c IN :hhmap.keySet() ';
+            HouseholdRollupQuery += 'AND Contact.npo02__Household__c IN :hhset ';
             if (useFiscalYear)
                 HouseholdRollupQuery += 'GROUP BY ROLLUP(Contact.npo02__Household__c, Fiscal_Year(Opportunity.CloseDate)) ';
             else
@@ -574,14 +578,14 @@ public without sharing class OpportunityRollup_Utilities {
             HouseholdNDayQuery += 'WHERE isPrimary=true AND opportunity.isWon=true  ';
             HouseholdNDayQuery += 'AND (Opportunity.Amount != null) '; 
             if(areRecordTypesOnOpps()){
-                HouseholdNDayQuery += 'AND Opportunity.RecordTypeId NOT IN :OpportunityRollup_Utilities.recordTypesToExcludeCons ';
+                HouseholdNDayQuery += 'AND Opportunity.RecordTypeId NOT IN :rectypeset ';
             }
-            HouseholdNDayQuery += 'AND Opportunity.Type NOT IN :OpportunityRollup_Utilities.oppTypesToExcludeCons ';
+            HouseholdNDayQuery += 'AND Opportunity.Type NOT IN :typeset ';
             if (!hh_settings.Always_Rollup_to_Primary_Contact__c){
                 HouseholdNDayQuery += 'AND (Opportunity.AccountId = null OR Opportunity.Account.npe01__SYSTEMIsIndividual__c = true) ';
             }  
-            HouseholdNDayQuery += 'AND Contact.npo02__Household__c IN :hhmap.keySet() ';
-            HouseholdNDayQuery += 'AND Opportunity.CloseDate >= LAST_N_DAYS:' + hh_settings.Rollup_N_Day_Value__c + ' ';
+            HouseholdNDayQuery += 'AND Contact.npo02__Household__c IN :hhset ';
+            HouseholdNDayQuery += 'AND Opportunity.CloseDate >= LAST_N_DAYS:' + hh_settings.Rollup_N_Day_Value__c.intValue() + ' ';
             HouseholdNDayQuery += 'GROUP BY ROLLUP(Contact.npo02__Household__c) ';    		
     	}
     	return HouseholdNDayQuery;    	
@@ -602,11 +606,11 @@ public without sharing class OpportunityRollup_Utilities {
             if(areRecordTypesOnOpps()){
                 HouseholdMembershipQuery += 'AND Opportunity.RecordTypeId IN :OpportunityRollup_Utilities.mbrRecordTypes ';
             }
-            HouseholdMembershipQuery += 'AND Opportunity.Type NOT IN :OpportunityRollup_Utilities.oppTypesToExcludeCons ';
+            HouseholdMembershipQuery += 'AND Opportunity.Type NOT IN :typeset ';
             if (!hh_settings.Always_Rollup_to_Primary_Contact__c){
                 HouseholdMembershipQuery += 'AND (Opportunity.AccountId = null OR Opportunity.Account.npe01__SYSTEMIsIndividual__c = true) ';
             }
-            HouseholdMembershipQuery += 'AND Contact.npo02__Household__c IN :hhmap.keySet() ';
+            HouseholdMembershipQuery += 'AND Contact.npo02__Household__c IN :hhset ';
             ContactMembershipQuery += 'GROUP BY ROLLUP(Contact.npo02__Household__c) ';
     	}
     	return HouseholdMembershipQuery;
