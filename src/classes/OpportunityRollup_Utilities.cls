@@ -139,7 +139,9 @@ public without sharing class OpportunityRollup_Utilities {
             set<string> mbrRecordTypeNames = new set<string>(household_settings.Membership_Record_Types__c.split(';'));
             mbrRecordTypes = RecordTypes.GetRecordTypeIdSet('Opportunity', mbrRecordTypeNames);
         }  
-        
+        if (household_settings.Rollup_N_Day_Value__c == null){
+        	household_settings.Rollup_N_Day_Value__c = 365;
+        }
         //check the settings, if they have the fiscal year set
         //we still need to query to make sure its not a custom fiscal year
         //or else we'll throw errors when calling Fiscal_Year in queries
