@@ -76,15 +76,14 @@ public without sharing class OpportunityRollup_Utilities {
     private static string HouseholdMembershipQuery;
     private static string ContactMembershipQuery;
     private static string AccountMembershipQuery;    
-    
-    
+         
     /*** Field Lists ***/
     private final static set<string> AccountFields = new set<string>{'TotalOppAmount__c', 'OppAmountThisYear__c',
     	                                                               'OppAmountLastYear__c', 'OppAmountLastNDays__c',
     	                                                               'OppAmount2YearsAgo__c', 'OppsClosedThisYear__c',
     	                                                               'LastCloseDate__c', 'NumberOfClosedOpps__c', 
     	                                                               'TotalMembershipOppAmount__c', 'OppsClosedLastYear__c',
-    	                                                               'OppsClosedLastNDays__c', 'OppClosed2YearsAgo__c'};
+    	                                                               'OppsClosedLastNDays__c', 'OppsClosed2YearsAgo__c'};
     
     private final static set<string> OpportunityContactRoleFields = new set<string>{'Contactid', 'Contact.npo02__household__c',
                                                         'Contact.npo02__TotalOppAmount__c', 'Contact.npo02__OppAmountThisYear__c',
