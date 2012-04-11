@@ -25,7 +25,7 @@
     CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT 
     LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN 
     ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
-    POSSIBILITY OF SUCH DAMAGE.
+    POSSIBILITY OF SUCH DAMAGE.  
 */
 /**
 * @author Salesforce.com Foundation
@@ -51,16 +51,16 @@ global class BATCH_OppRollup implements Database.Batchable<SObject> {
 		// run rollups for this batch		
 		OpportunityRollups rg = new OpportunityRollups();
 		
- 		if (result[0].getSObjectType() == Account.sObjectType) { 
-			rg.RollupAccounts((list<account>)result);
+ 		if (result[0].getSObjectType() == Account.sObjectType){
+ 			 
+			rg.RollupAccounts(new map<id, Account>((list<Account>)result));
  		} 
- 		else if (result[0].getSobjectType() == Contact.sObjectType) {
-			rg.rollupContacts((list<Contact>)result);
+ 		else if (result[0].getSobjectType() == Contact.sObjectType){
+			rg.rollupContacts(new map<id, Contact>((list<Contact>)result));
  		}
  		else{
-			rg.RollupHouseholds((list<household__c>)result);
- 		}
- 		
+			rg.RollupHouseholds(new map<id, npo02__Household__c>((list<npo02__Household__c>)result));
+ 		} 		
 	}
 
 	global void finish(Database.BatchableContext bc) {
