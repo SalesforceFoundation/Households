@@ -186,7 +186,7 @@ global virtual without sharing class OpportunityRollups{
             if(OpportunityRollup_Utilities.isMultiCurrency())
                 accountsToUpdate.get(aid).put(OpportunityRollup_Utilities.mcFieldValues.get('Account'),amap.get(aid).get(OpportunityRollup_Utilities.mcFieldValues.get('Account')));
         }
-        
+        set<id> aset = amap.keySet();
         list<sobject> objectList = Database.query(OpportunityRollup_Utilities.buildAccountRollupQuery());
 
         // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
@@ -276,7 +276,7 @@ global virtual without sharing class OpportunityRollups{
         }
     
         list<sobject> objectList = new list<sobject>();   
-
+        set<id> cset = cmap.keySet();
         objectList = database.query(OpportunityRollup_Utilities.buildContactRollupQuery());
             
         // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
@@ -364,7 +364,7 @@ global virtual without sharing class OpportunityRollups{
         }
     
         list<sobject> objectList = new list<sobject>();   
-
+        set<id> hhset = hhmap.keySet();
         objectList = database.query(OpportunityRollup_Utilities.buildHouseholdRollupQuery());
             
         // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
