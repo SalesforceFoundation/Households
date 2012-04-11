@@ -32,6 +32,16 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Batch_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Batch Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>DISABLE_HouseholdAfter_trigger__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
