@@ -11,6 +11,10 @@ public without sharing class OpportunityRollup_Utilities {
     public static set<string> oppTypesToExcludeCons = new set<string>();  
     public static Households_Settings__c hh_settings;
     public static boolean recordTypesOnOpps = false;
+    public static integer BATCH_SIZE = 200;
+    
+    /*** FY ***/
+    public static integer fiscal_year;
     
     /*** Multicurrency ***/
     //set when multicurrency check is called, holds the field string/sobject mapping
@@ -114,6 +118,10 @@ public without sharing class OpportunityRollup_Utilities {
             else
                 useFiscalYear = true;
         }        
+        
+        if (household_settings.Batch_Size__c != null)
+            BATCH_SIZE = household_settings.Batch_Size__c.intValue();
+        
         //set the static var
         hh_settings = household_settings;
     }        
@@ -573,5 +581,34 @@ public without sharing class OpportunityRollup_Utilities {
     	return HouseholdMembershipQuery;
     }
     /****************************************/
-
+    
+    /*** Utility Methods ***/    
+    
+    public static integer getCurrentFY() {        
+        if (fiscal_year == null){
+            Organization orgInfo = [SELECT FiscalYearStartMonth, UsesStartDateAsFiscalYearName
+                                    FROM Organization
+                                    WHERE id=:Userinfo.getOrganizationId()];
+            Date today = system.today();
+            Integer currentFY;
+            if (today.month() >= orgInfo.FiscalYearStartMonth){
+                if (orgInfo.UsesStartDateAsFiscalYearName){
+                    currentFY = today.year();
+                } 
+                else{
+                    currentFY = today.year() + 1;
+                }
+            }
+            else{
+                if (orgInfo.UsesStartDateAsFiscalYearName){
+                    currentFY = today.year() - 1;
+                }
+                else{
+                    currentFY = today.year();
+                }
+            }
+        }               
+    return fiscal_year;
+    }
+    /****************************************/
 }
