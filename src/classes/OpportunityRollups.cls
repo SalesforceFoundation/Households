@@ -186,7 +186,12 @@ global virtual without sharing class OpportunityRollups{
             if(OpportunityRollup_Utilities.isMultiCurrency())
                 accountsToUpdate.get(aid).put(OpportunityRollup_Utilities.mcFieldValues.get('Account'),amap.get(aid).get(OpportunityRollup_Utilities.mcFieldValues.get('Account')));
         }
+        
+        //need local vars b/c dynamic soql is stupid
         set<id> aset = amap.keySet();
+        set<string> typeset = OpportunityRollup_Utilities.oppTypesToExcludeAccts;
+        set<id> rectypeset = OpportunityRollup_Utilities.recordTypesToExcludeAccts;
+
         list<sobject> objectList = Database.query(OpportunityRollup_Utilities.buildAccountRollupQuery());
 
         // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
@@ -194,7 +199,8 @@ global virtual without sharing class OpportunityRollups{
         
         for (sobject r : objectList){            
             id aid = (id)(r.get('AccountId'));
-            updateRollupFromResult((sobject)(accountsToUpdate.get(aid)), r, opptyCurrencies);
+            if (aid != null)
+                updateRollupFromResult((sobject)(accountsToUpdate.get(aid)), r, opptyCurrencies);
         }       
         
         objectList.clear();
@@ -202,7 +208,8 @@ global virtual without sharing class OpportunityRollups{
         
         for (sobject r : objectList){
             id aid = (id)(r.get('AccountId'));
-            updateRollupFromResultLastNDays((sobject)(accountsToUpdate.get(aid)), r);
+            if (aid != null)
+                updateRollupFromResultLastNDays((sobject)(accountsToUpdate.get(aid)), r);
         }
 
         if (!OpportunityRollup_Utilities.mbrRecordTypes.isEmpty()) {
@@ -213,7 +220,8 @@ global virtual without sharing class OpportunityRollups{
    
             for (sobject r : objectList){                
                 id aid = (id)(r.get('AccountId'));
-                updateRollupFromResultMembership((sobject)(accountsToUpdate.get(aid)), r, opptyCurrencies);
+                if (aid != null)
+                    updateRollupFromResultMembership((sobject)(accountsToUpdate.get(aid)), r, opptyCurrencies);
             }
         }
 
@@ -277,6 +285,9 @@ global virtual without sharing class OpportunityRollups{
     
         list<sobject> objectList = new list<sobject>();   
         set<id> cset = cmap.keySet();
+        set<string> typeset = OpportunityRollup_Utilities.oppTypesToExcludeCons;
+        set<id> rectypeset = OpportunityRollup_Utilities.recordTypesToExcludeCons;
+        
         objectList = database.query(OpportunityRollup_Utilities.buildContactRollupQuery());
             
         // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
@@ -284,7 +295,8 @@ global virtual without sharing class OpportunityRollups{
             
         for (sobject r : objectList) {
             id cid = (id)(r.get('ContactId'));
-            updateRollupFromResult((sobject)(contactsToUpdate.get(cid)), r, opptyCurrencies);
+            if (cid != null)
+                updateRollupFromResult((sobject)(contactsToUpdate.get(cid)), r, opptyCurrencies);
         }        
         
         objectList.clear();
@@ -292,7 +304,8 @@ global virtual without sharing class OpportunityRollups{
         
         for (sobject r : objectList){
             id cid = (id)(r.get('ContactId'));
-            updateRollupFromResultLastNDays((sobject)(contactsToUpdate.get(cid)), r);
+            if (cid != null)
+                updateRollupFromResultLastNDays((sobject)(contactsToUpdate.get(cid)), r);
         }
 
         if (!OpportunityRollup_Utilities.mbrRecordTypes.isEmpty()) {
@@ -303,7 +316,8 @@ global virtual without sharing class OpportunityRollups{
    
             for (sobject r : objectList){                
                 id cid = (id)(r.get('ContactId'));
-                updateRollupFromResultMembership((sobject)(contactsToUpdate.get(cid)), r, opptyCurrencies);
+                if (cid != null)
+                    updateRollupFromResultMembership((sobject)(contactsToUpdate.get(cid)), r, opptyCurrencies);
             }
         }        
         
@@ -365,6 +379,9 @@ global virtual without sharing class OpportunityRollups{
     
         list<sobject> objectList = new list<sobject>();   
         set<id> hhset = hhmap.keySet();
+        set<string> typeset = OpportunityRollup_Utilities.oppTypesToExcludeCons;
+        set<id> rectypeset = OpportunityRollup_Utilities.recordTypesToExcludeCons;
+        
         objectList = database.query(OpportunityRollup_Utilities.buildHouseholdRollupQuery());
             
         // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
@@ -372,7 +389,8 @@ global virtual without sharing class OpportunityRollups{
             
         for (sobject r : objectList) {
             id hhid = (id)(r.get('hhid'));
-            updateRollupFromResult((sobject)(householdsToUpdate.get(hhid)), r, opptyCurrencies);
+            if (hhid != null)
+                updateRollupFromResult((sobject)(householdsToUpdate.get(hhid)), r, opptyCurrencies);
         }        
         
         objectList.clear();
@@ -380,7 +398,8 @@ global virtual without sharing class OpportunityRollups{
         
         for (sobject r : objectList){
             id hhid = (id)(r.get('hhid'));
-            updateRollupFromResultLastNDays((sobject)(householdsToUpdate.get(hhid)), r);
+            if (hhid != null)
+                updateRollupFromResultLastNDays((sobject)(householdsToUpdate.get(hhid)), r);
         }
 
         if (!OpportunityRollup_Utilities.mbrRecordTypes.isEmpty()) {
@@ -391,7 +410,8 @@ global virtual without sharing class OpportunityRollups{
    
             for (sobject r : objectList){                
                 id hhid = (id)(r.get('hhid'));
-                updateRollupFromResultMembership((sobject)(householdsToUpdate.get(hhid)), r, opptyCurrencies);
+                if (hhid != null)
+                    updateRollupFromResultMembership((sobject)(householdsToUpdate.get(hhid)), r, opptyCurrencies);
             }
         }        
         
