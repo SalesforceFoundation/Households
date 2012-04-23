@@ -58,7 +58,8 @@ public with sharing class TEST_OpportunityRollup {
                   
         //now test that a contact has received the proper member stats from the trigger
         Contact UpdatedCon = [SELECT id, npo02__OppAmountLastNDays__c, npo02__OppAmountThisYear__c, npo02__TotalMembershipOppAmount__c,
-                                    npo02__OppAmount2YearsAgo__c, npo02__OppAmountLastYear__c, npo02__household__c, 
+                                    npo02__OppAmount2YearsAgo__c, npo02__OppAmountLastYear__c, npo02__household__c,
+                                    Best_Gift_Year__c, Best_Gift_Year_Total__c, Household__r.Best_Gift_Year__c, Household__r.Best_Gift_Year_Total__c,  
                                     npo02__household__r.npo02__TotalOppAmount__c, npo02__TotalOppAmount__c, LastCloseDate__c 
                                     FROM Contact WHERE Id = :c.id];
     
@@ -66,6 +67,10 @@ public with sharing class TEST_OpportunityRollup {
         system.AssertEquals(100, UpdatedCon.npo02__Household__r.npo02__TotalOppAmount__c);      
         system.AssertEquals(100, UpdatedCon.npo02__OppAmountThisYear__c);
         system.AssertEquals(0, UpdatedCon.npo02__OppAmountLastYear__c);
+        system.AssertEquals(100, UpdatedCon.Best_Gift_Year_Total__c);
+        system.AssertEquals(string.valueof(datClose.year()), UpdatedCon.Best_Gift_Year__c);
+        system.AssertEquals(100, UpdatedCon.Household__r.Best_Gift_Year_Total__c);
+        system.AssertEquals(string.valueof(datClose.year()), UpdatedCon.Household__r.Best_Gift_Year__c);        
     }
     
     static testMethod void testGivingRollupIndividual () {
@@ -904,13 +909,18 @@ public with sharing class TEST_OpportunityRollup {
             insert testOpps;
             Test.StopTest();
             
-            Contact c = [SELECT Id,Total_Household_Gifts__c,OppAmountThisYearHH__c,OppAmountLastYearHH__c,LastCloseDateHH__c
+            Contact c = [SELECT Id,Total_Household_Gifts__c,OppAmountThisYearHH__c,OppAmountLastYearHH__c,
+                            LastCloseDateHH__c, Best_Gift_Year__c, Best_Gift_Year_Total__c, Household__r.Best_Gift_Year__c, Household__r.Best_Gift_Year_Total__c
                 FROM Contact WHERE LastName=:npe01.Constants.CONTACT_LASTNAME_FOR_TESTS AND FirstName=:npe01.Constants.CONTACT_FIRSTNAME_FOR_TESTS+'second' LIMIT 1];
             System.assertEquals (375,c.Total_Household_Gifts__c);
             System.assertEquals (100,c.OppAmountThisYearHH__c);
             System.assertEquals (0,c.OppAmountLastYearHH__c);
             System.assertEquals (datClose,c.LastCloseDateHH__c );
-            System.assertEquals (375,c.Total_Household_Gifts__c);                
+            System.assertEquals (375,c.Total_Household_Gifts__c);       
+            System.assertEquals (null, c.Best_Gift_Year_Total__c); 
+            System.assertEquals (null, c.Best_Gift_Year__c);
+            System.assertEquals (string.valueof(datClose.addYears(-2).year()), c.Household__r.Best_Gift_Year__c);
+            System.assertEquals (200, c.Household__r.Best_Gift_Year_Total__c);                    
     }    
         
     static testMethod void testUserDefinedRollup() {
