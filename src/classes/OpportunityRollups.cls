@@ -96,39 +96,40 @@ global virtual without sharing class OpportunityRollups{
             }                       
         }
         
+        //contacts needs to be done async to make sure the OCR is in place
         if (!contactRequerySet.isEmpty()){
-            
-            map<id, Contact> cmap = new map<id, Contact>();
-            map<id, npo02__Household__c> hhmap = new map<id, npo02__Household__c>();
-        
-            // use the contact roles to find the contacts and households
-            for (OpportunityContactRole r : Database.query(OpportunityRollup_Utilities.buildOpportunityContactRoleQuery() +
-                                            ' where Opportunity.Id IN :contactRequerySet and isPrimary = true ALL ROWS ')){   
-                    
-                cmap.put(r.ContactId, r.Contact);
-                
-                if (r.Contact.npo02__Household__c != null){
-                        hhmap.put(r.Contact.npo02__Household__c, r.Contact.npo02__Household__r);
-                }
-            }
-            
-            if (cmap.size() == 1){
-                rollupContacts(cmap);   
-            }
-            else if (Limits.getFutureCalls() < Limits.getLimitFutureCalls()){
-                rollupContactsFuture(cmap.keySet());
-            }   
-            
-            if (hhmap.size() == 1){
-                rollupHouseholds(hhmap);    
-            }
-            else if (Limits.getFutureCalls() < Limits.getLimitFutureCalls()){
-                rollupHouseholdsFuture(hhmap.keySet());                                               
-            }                        
+            OpportunityRollups.rollupContactsandHouseholdsForTrigger(contactRequerySet);                        
         }            
     }       
     
-    /*** Future Wrapper Methods for Handling Bulk Processing ***/
+    /*** Future Wrapper Methods for Handling Bulk Processing & Trigger Opps ***/
+    @future 
+    public static void rollupContactsandHouseholdsForTrigger(set<id> OppIds){
+        //we need this to make sure there's a proper OCR when Contact Opps are inserted
+        
+        map<id, Contact> cmap = new map<id, Contact>();
+        map<id, npo02__Household__c> hhmap = new map<id, npo02__Household__c>();
+        
+        // use the contact roles to find the contacts and households
+        for (OpportunityContactRole r : Database.query(OpportunityRollup_Utilities.buildOpportunityContactRoleQuery() +
+                                            ' where Opportunity.Id IN :OppIds and isPrimary = true ALL ROWS ')){   
+                    
+            cmap.put(r.ContactId, r.Contact);
+                
+            if (r.Contact.npo02__Household__c != null){
+                hhmap.put(r.Contact.npo02__Household__c, r.Contact.npo02__Household__r);
+            }
+        }       
+            
+        if (cmap.size() > 0){              
+            OpportunityRollups oppR = new OpportunityRollups();
+            oppR.rollupContacts(cmap);   
+            if (hhmap.size() > 0){
+                oppR.rollupHouseholds(hhmap);    
+            }        
+        }           
+    }
+    
     @future 
     public static void rollupAccountsFuture( set<id> acctIds ) {
         if (acctIds != null && !acctIds.isEmpty()) { 
@@ -213,6 +214,7 @@ global virtual without sharing class OpportunityRollups{
         }
 
         if (!OpportunityRollup_Utilities.mbrRecordTypes.isEmpty()) {
+            set<id> memberset = OpportunityRollup_Utilities.mbrRecordTypes; 
             objectList.clear();
             objectList = database.query(OpportunityRollup_Utilities.buildAccountMembershipQuery());        
             
@@ -308,7 +310,8 @@ global virtual without sharing class OpportunityRollups{
                 updateRollupFromResultLastNDays((sobject)(contactsToUpdate.get(cid)), r);
         }
 
-        if (!OpportunityRollup_Utilities.mbrRecordTypes.isEmpty()) {
+        if (!OpportunityRollup_Utilities.mbrRecordTypes.isEmpty()){
+        	set<id> memberset = OpportunityRollup_Utilities.mbrRecordTypes;
             objectList.clear();
             objectList = database.query(OpportunityRollup_Utilities.buildContactMembershipQuery());        
             
@@ -402,7 +405,8 @@ global virtual without sharing class OpportunityRollups{
                 updateRollupFromResultLastNDays((sobject)(householdsToUpdate.get(hhid)), r);
         }
 
-        if (!OpportunityRollup_Utilities.mbrRecordTypes.isEmpty()) {
+        if (!OpportunityRollup_Utilities.mbrRecordTypes.isEmpty()){
+        	set<id> memberset = OpportunityRollup_Utilities.mbrRecordTypes;
             objectList.clear();
             objectList = database.query(OpportunityRollup_Utilities.buildHouseholdMembershipQuery());        
             
