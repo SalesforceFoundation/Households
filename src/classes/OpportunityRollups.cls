@@ -297,8 +297,18 @@ global virtual without sharing class OpportunityRollups{
             
         for (sobject r : objectList) {
             id cid = (id)(r.get('ContactId'));
-            if (cid != null)
+            if (cid != null){
                 updateRollupFromResult((sobject)(contactsToUpdate.get(cid)), r, opptyCurrencies);
+                
+                //calculate best gift year
+                decimal yrAmt = (decimal)r.get('TotalOppAmount');
+                integer yr = (integer)r.get('CalendarYr');
+                Contact c = contactsToUpdate.get(cid);
+                if ((yrAmt > c.Best_Gift_Year_Total__c || c.Best_Gift_Year_Total__c==null ) && yr !=null){
+                    c.Best_Gift_Year_Total__c = yrAmt;
+                    c.Best_Gift_Year__c = string.valueOf(yr);
+                }          
+            }                
         }        
         
         objectList.clear();
@@ -392,8 +402,18 @@ global virtual without sharing class OpportunityRollups{
             
         for (sobject r : objectList) {
             id hhid = (id)(r.get('hhid'));
-            if (hhid != null)
+            if (hhid != null){
                 updateRollupFromResult((sobject)(householdsToUpdate.get(hhid)), r, opptyCurrencies);
+            
+                //calculate best gift year
+                decimal yrAmt = (decimal)r.get('TotalOppAmount');
+                integer yr = (integer)r.get('CalendarYr');
+                Household__c hh = householdsToUpdate.get(hhid);
+                if ((yrAmt > hh.Best_Gift_Year_Total__c || hh.Best_Gift_Year_Total__c==null ) && yr !=null){
+                    hh.Best_Gift_Year_Total__c = yrAmt;
+                    hh.Best_Gift_Year__c = string.valueOf(yr);
+                }                
+            }                
         }        
         
         objectList.clear();
