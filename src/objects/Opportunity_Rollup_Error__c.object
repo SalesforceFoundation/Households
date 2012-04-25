@@ -13,6 +13,16 @@
         <type>DateTime</type>
     </fields>
     <fields>
+        <fullName>Error_Object_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The object type to which this error refers</inlineHelpText>
+        <label>Error Object Type</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Error_Record_Link__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Link to the record on which the error occurred</inlineHelpText>
