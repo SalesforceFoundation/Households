@@ -653,4 +653,29 @@ public without sharing class OpportunityRollup_Utilities {
     return fiscal_year;
     }
     /****************************************/
+    
+    /*** Error Generation ***/
+    public static Opportunity_Rollup_Error__c createError(Database.SaveResult s, string objecttype){
+    	Opportunity_Rollup_Error__c ore = new Opportunity_Rollup_Error__c();
+        ore.Name = s.getId() + ' ' + system.now();
+        ore.Error_Datetime__c = system.now();
+        ore.Error_Object_Type__c = objecttype;
+        ore.Error_Record_Link__c =  URL.getSalesforceBaseUrl().toExternalForm() + '/' + s.getId();
+        if (s.getErrors()[0].getStatusCode() == system.Statuscode.REQUIRED_FIELD_MISSING){
+            ore.Error_Type__c = 'Required Field Missing';   
+        }
+        else if (s.getErrors()[0].getStatusCode() == system.Statuscode.FIELD_CUSTOM_VALIDATION_EXCEPTION){
+            ore.Error_Type__c = 'Custom Validation Rule Failed';
+        }
+        else{
+            ore.Error_Type__c = 'Other';
+        }
+                 
+        //trim error message
+        if (s.getErrors()[0].getMessage().length() > 255)
+            ore.Error_Message__c = s.getErrors()[0].getMessage().substring(0, 254);
+        else
+            ore.Error_Message__c = s.getErrors()[0].getMessage();                              
+    	return ore;
+    }
 }
