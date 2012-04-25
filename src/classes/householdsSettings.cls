@@ -36,6 +36,9 @@ public with sharing class householdsSettings {
     
     public Households_Settings__c pageSettings = new Households_Settings__c();
     public boolean runningBatch {get; set;}
+    public string activeTab {get; set;}
+    public boolean editRollupSettingsTab{get; set;}
+    public boolean editHouseholdSettingsTab{get; set;}
     
      /********Vars for PKG Update Info *************/
     public string getMyVersion(){return string.valueof(Package.Version.Request);}
@@ -69,6 +72,9 @@ public with sharing class householdsSettings {
         contactTypes = new List<string>();
         if (runningbatch == null)
             runningbatch = false;
+        activeTab = 'HouseholdSettingsTab'; 
+        editHouseholdSettingsTab = false;
+        editRollupSettingsTab = false;           
     }
     
     public Households_Settings__c getSettings() {
@@ -296,20 +302,26 @@ public with sharing class householdsSettings {
     	//call advanced rolup batch process
     	HouseholdNaming hn = new Householdnaming();
     	hn.ActivateAdvancedGreetings(false);
-    	
-    	/*
-    	//refresh page
-    	PageReference pr;// = new PageReference();
-        pr.setRedirect(true);
-        return pr;
-    	*/
-    	
     }
     
     public void checkForUpdates(){
         NPSPPkgVersionCheck npvc = new NPSPPkgVersionCheck('npo02');        
         npvc.NPSPCheckVersion(true);
     }
+    public pageReference cancel(){
+        
+        return null;
+    }
+    public pageReference editHouseholdSettings(){
+        editHouseholdSettingsTab = true;
+        editRollupSettingsTab = false;
+        return null;    
+    }   
+    public pageReference editRollupSettings(){
+        editHouseholdSettingsTab = false;
+        editRollupSettingsTab = true;
+        return null;
+    }    
     
      public static testMethod void TEST_householdsSettings() {
         
@@ -342,37 +354,6 @@ public with sharing class householdsSettings {
         controller.acctTypes.add('In-Kind');
         controller.contactTypes.add('In-Kind');
         controller.pageSettings.Enable_Opp_Rollup_Triggers__c = true;
-        controller.updateSettings();
-                
-    }
-    /*
-	static testMethod void testFirstRun()
-    {
-    	//get rid of settings
-    	delete [select id from Households_Settings__c limit 100];
-    	//get the default value
-		String defaultValue;
-        boolean aDefaultIsSelected = false;
-        Schema.DescribeFieldResult F = Schema.sObjectType.Contact.fields.SystemHouseholdProcessor__c; 
-        List<Schema.PicklistEntry> P = F.getPicklistValues();
-        for(Schema.PicklistEntry pe : P){
-            if (pe.isDefaultValue()){
-                    defaultValue = pe.getValue();
-                    break;
-            }
-        }
-         Test.setCurrentPageReference(new PageReference('Page.contactSettings'));
-        
-        //pass the controller into the extension
-        householdsSettings controller = new householdsSettings(); 
-        controller.getSettingsFirstTime();
-		if(defaultValue!=null){
-			system.assertEquals(controller.pageSettings.Household_Rules__c,defaultValue);
-		} else {
-			system.assertEquals(controller.pageSettings.Household_Rules__c,Households.NO_HOUSEHOLDS_PROCESSOR);
-		}
-
-    }
-    */
-    
+        controller.updateSettings();                
+    }    
 }
