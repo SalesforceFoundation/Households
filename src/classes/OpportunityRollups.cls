@@ -249,16 +249,16 @@ global virtual without sharing class OpportunityRollups{
         }
         
         Database.SaveResult[] SR = database.update(accountsToUpdate.values(), false);
+        List<Opportunity_Rollup_Error__c> elist = new List<Opportunity_Rollup_Error__c>();
         for(Database.SaveResult s: SR){
             if (!s.isSuccess()){
-                //DO SOME ERROR PROCESSING
-                
-                    
-                
+                elist.add(OpportunityRollup_Utilities.createError(s, 'Account'));                              
             }
-        }   
-    }
-    
+        }        
+        if(!elist.isEmpty()){
+            insert elist;
+        }           
+    }    
     
     //rollup Opps for a map of Contacts
     public void rollupContacts(map<id, Contact> cmap){
@@ -353,13 +353,14 @@ global virtual without sharing class OpportunityRollups{
         }
         
         Database.SaveResult[] SR = database.update(contactsToUpdate.values(), false);
+        List<Opportunity_Rollup_Error__c> elist = new List<Opportunity_Rollup_Error__c>();
         for(Database.SaveResult s: SR){
             if (!s.isSuccess()){
-                //DO SOME ERROR PROCESSING
-                
-                    
-                
+                elist.add(OpportunityRollup_Utilities.createError(s, 'Contact'));                              
             }
+        }        
+        if(!elist.isEmpty()){
+            insert elist;
         }
     }    
     
@@ -458,15 +459,17 @@ global virtual without sharing class OpportunityRollups{
         }
         
         Database.SaveResult[] SR = database.update(householdsToUpdate.values(), false);
+        List<Opportunity_Rollup_Error__c> elist = new List<Opportunity_Rollup_Error__c>();
         for(Database.SaveResult s: SR){
             if (!s.isSuccess()){
-                //DO SOME ERROR PROCESSING
-                
-                    
-                
+                elist.add(OpportunityRollup_Utilities.createError(s, 'Household'));                              
             }
+        }        
+        if(!elist.isEmpty()){
+            insert elist;
         }
-    }       
+    }    
+       
     /*************************************************************/
     
     /*** Wrappers for Managing the batch process ***/
