@@ -309,7 +309,8 @@ public with sharing class householdsSettings {
         npvc.NPSPCheckVersion(true);
     }
     public pageReference cancel(){
-        
+        editHouseholdSettingsTab = false;
+        editRollupSettingsTab = false;
         return null;
     }
     public pageReference editHouseholdSettings(){

@@ -77,10 +77,18 @@
                             </apex:outputText>
                         </apex:outputPanel>                   
                         <apex:pageBlockSection columns="1">
-                            <apex:pageblocksectionitem >                    
-                                <apex:inputfield value="{!settings.Enable_Update_Check__c}"/>
+                            <apex:pageblocksectionitem helpText="Enables automatic checking for Households Package updates">                    
+                                <apex:outputlabel value="Enable Update Check"/>
+                                <apex:inputcheckbox value="{!settings.Enable_Update_Check__c}" disabled="{!NOT(editHouseholdSettingsTab)}"/>
+                            </apex:pageblocksectionitem>                           
+                            
+                            <apex:pageblocksectionitem helpText="Length, in days, between automatic checking for new updates, if enabled." rendered="{!NOT(editHouseholdSettingsTab)}">
+                                <apex:outputlabel value="Update Check Interval" />
+                                <apex:outputfield value="{!settings.Update_Check_Interval__c}"/>
                             </apex:pageblocksectionitem>
-                            <apex:pageblocksectionitem >
+                            
+                            <apex:pageblocksectionitem helpText="Length, in days, between automatic checking for new updates, if enabled." rendered="{!editHouseholdSettingsTab}">
+                                <apex:outputlabel value="Update Check Interval" />
                                 <apex:inputfield value="{!settings.Update_Check_Interval__c}"/>
                             </apex:pageblocksectionitem>
                         
@@ -89,60 +97,118 @@
                     </apex:pageBlockSection>	    
                     
                     <apex:outputPanel style="text-align: center; display: block; margin-left:auto; margin-right:auto;">
-                        <apex:commandButton value="Save" action="{!updateSettings}"/>
-                        <apex:commandButton value="Edit" action="{!cancel}"/>  
-                        <apex:commandButton value="Cancel" action="{!cancel}"/>                            
+                        <apex:commandButton value="Save" action="{!updateSettings}" rendered="{!editHouseholdSettingsTab}"/>
+                        <apex:commandButton value="Edit" action="{!editHouseholdSettings}" rendered="{!NOT(editHouseholdSettingsTab)}"/>  
+                        <apex:commandButton value="Cancel" action="{!cancel}" rendered="{!editHouseholdSettingsTab}"/>                            
                     </apex:outputPanel>
                             
 	            </apex:Tab>
 	            
 	            <apex:Tab label="Rollup Settings" name="RollupSettingsTab">
 	                <apex:pageBlockSection id="householdsettingssection3" title="Opportunity Rollups" collapsible="false">
-	                    <apex:inputfield value="{!settings.Enable_Opp_Rollup_Triggers__c}" />
-	                    <apex:inputfield value="{!settings.Always_Rollup_to_Primary_Contact__c}" />
-	                    <apex:inputfield value="{!settings.Rollup_N_Day_Value__c}" />
-	                    <apex:inputfield value="{!settings.Use_Fiscal_Year_for_Rollups__c}" />
+	                    <apex:pageblocksectionitem helptext="Enabled Opportunity Rollups when an Opportunity is updated, inserted or deleted.">
+	                       <apex:outputlabel value="Enable Opp Rollups in Triggers"/>
+	                       <apex:inputcheckbox value="{!settings.Enable_Opp_Rollup_Triggers__c}" disabled="{!NOT(editRollupSettingsTab)}" />
+	                    </apex:pageblocksectionitem>	                    
+	                    <apex:pageblocksectionitem helptext="Forces rollups to go to the Primary Opportunity Contact Role, regardless of the Account on the Opportunity">
+	                       <apex:outputlabel value="Always Rollup to Primary Contact"/>
+	                       <apex:inputcheckbox value="{!settings.Always_Rollup_to_Primary_Contact__c}" disabled="{!NOT(editRollupSettingsTab)}" />
+	                    </apex:pageblocksectionitem>
+                        
+                        <apex:pageblocksectionitem helptext="Provide a value for 'N day' rollups, where 'N' is the number of days from today into the past. This value defaults to rollup over the past 365 days." rendered="{!editRollupSettingsTab}">	                       
+	                       <apex:outputlabel value="Rollup N Day Value"/>
+	                       <apex:inputfield value="{!settings.Rollup_N_Day_Value__c}" />
+	                    </apex:pageblocksectionitem>
+	                    <apex:pageblocksectionitem helptext="Provide a value for 'N day' rollups, where 'N' is the number of days from today into the past. This value defaults to rollup over the past 365 days." rendered="{!NOT(editRollupSettingsTab)}">                           
+                           <apex:outputlabel value="Rollup N Day Value"/>
+                           <apex:outputfield value="{!settings.Rollup_N_Day_Value__c}" />
+                        </apex:pageblocksectionitem>
+	                    
+	                    <apex:pageblocksectionitem helptext="Checking this box will cause opportunity rollup totals to respect fiscal year, instead of calendar years settings. To set Fiscal Year information, go to Setup->Company Profile->Fiscal Year. NOTE: Custom Fiscal Year Settings are NOT supported.">
+	                       <apex:outputlabel value="Fiscal Year Rollups"/>
+	                       <apex:inputcheckbox value="{!settings.Use_Fiscal_Year_for_Rollups__c}" disabled="{!NOT(editRollupSettingsTab)}" />
+                        </apex:pageblocksectionitem>	                
 	                </apex:pageBlockSection>
 	
 	                <apex:pageBlockSection id="householdsettingssection4" title="Opportunity Rollups Record Types" collapsible="false">
-	                    <apex:pageBlockSectionItem helpText="All Opportunity Record Types will be included in rollups to Accounts unless they are selected here for exclusion.">
+	                    
+	                    <apex:pageBlockSectionItem rendered="{!editRollupSettingsTab}" helpText="All Opportunity Record Types will be included in rollups to Accounts unless they are selected here for exclusion.">
 	                        <apex:outputLabel value="Opportunity Record Types to Exclude from Account Rollups" />
 	                        <apex:selectList value="{!acctrts}" multiselect="true">
 	                            <apex:selectOptions value="{!rtypes}" />
 	                        </apex:selectList>
-	                    </apex:pageBlockSectionItem>
-	                    <apex:pageBlockSectionItem helpText="All Opportunity Types will be included in rollups to Accounts unless they are selected here for exclusion.">
+	                    </apex:pageBlockSectionItem>	                    
+	                    <apex:pageBlockSectionItem rendered="{!NOT(editRollupSettingsTab)}" helpText="All Opportunity Record Types will be included in rollups to Accounts unless they are selected here for exclusion.">
+                            <apex:outputLabel value="Opportunity Record Types to Exclude from Account Rollups" />
+                            <apex:outputtext value="{!IF(settings.Excluded_Account_Opp_Rectypes__c != null, settings.Excluded_Account_Opp_Rectypes__c, 'No Recordtypes Selected')}" />                            
+                        </apex:pageBlockSectionItem>
+	                    
+	                    <apex:pageBlockSectionItem rendered="{!editRollupSettingsTab}" helpText="All Opportunity Types will be included in rollups to Accounts unless they are selected here for exclusion.">
 	                        <apex:outputLabel value="Opportunity Types to Exclude from Account Rollups" />
 	                        <apex:selectList value="{!accttypes}" multiselect="true">
 	                            <apex:selectOptions value="{!types}" />
 	                        </apex:selectList>
 	                    </apex:pageBlockSectionItem>
-	                    <apex:pageBlockSectionItem helpText="All Opportunity Record Types will be included in rollups to Contacts unless they are selected here for exclusion.">
+	                    <apex:pageBlockSectionItem rendered="{!NOT(editRollupSettingsTab)}" helpText="All Opportunity Types will be included in rollups to Accounts unless they are selected here for exclusion.">
+                            <apex:outputLabel value="Opportunity Types to Exclude from Account Rollups" />
+                            <apex:outputtext value="{!IF(settings.Excluded_Account_Opp_Types__c != null, settings.Excluded_Account_Opp_Types__c, 'No Types Selected')}"/>
+                        </apex:pageBlockSectionItem>
+	                    
+	                    <apex:pageBlockSectionItem rendered="{!editRollupSettingsTab}" helpText="All Opportunity Record Types will be included in rollups to Contacts unless they are selected here for exclusion.">
 	                        <apex:outputLabel value="Opportunity Record Types to Exclude from Contact Rollups" />
 	                        <apex:selectList value="{!contactrts}" multiselect="true">
 	                            <apex:selectOptions value="{!rtypes}" />
 	                        </apex:selectList>
-	                    </apex:pageBlockSectionItem>
-	                    <apex:pageBlockSectionItem helpText="All Opportunity Types will be included in rollups to Accounts unless they are selected here for exclusion.">
+	                    </apex:pageBlockSectionItem>	                    
+                          <apex:pageBlockSectionItem rendered="{!NOT(editRollupSettingsTab)}" helpText="All Opportunity Record Types will be included in rollups to Contacts unless they are selected here for exclusion.">
+                            <apex:outputLabel value="Opportunity Record Types to Exclude from Contact Rollups" />
+                            <apex:outputtext value="{!IF(settings.Excluded_Contact_Opp_Rectypes__c != null, settings.Excluded_Contact_Opp_Rectypes__c, 'No Recordtypes Selected')}" />
+                        </apex:pageBlockSectionItem>
+
+	                    
+	                    
+	                    <apex:pageBlockSectionItem rendered="{!editRollupSettingsTab}" helpText="All Opportunity Types will be included in rollups to Accounts unless they are selected here for exclusion.">
 	                        <apex:outputLabel value="Opportunity Types to Exclude from Contact Rollups" />
 	                        <apex:selectList value="{!contacttypes}" multiselect="true">
 	                            <apex:selectOptions value="{!types}" />
 	                        </apex:selectList>
 	                    </apex:pageBlockSectionItem>
-	                </apex:pageBlockSection>
+                        <apex:pageBlockSectionItem rendered="{!NOT(editRollupSettingsTab)}" helpText="All Opportunity Types will be included in rollups to Accounts unless they are selected here for exclusion.">
+                            <apex:outputLabel value="Opportunity Types to Exclude from Contact Rollups" />
+                            <apex:outputtext value="{!IF(settings.Excluded_Contact_Opp_Types__c != null, settings.Excluded_Contact_Opp_Types__c, 'No Types Selected')}"/>
+                        </apex:pageBlockSectionItem>
+	                </apex:pageBlockSection>	                
+	                
 	                <apex:pageBlockSection id="householdsettingssection6" title="Opportunity Membership Settings" collapsible="false">
-	                    <apex:pageBlockSectionItem helpText="One Opportunity Record Type can be called out for Membership calculations.">
+	                    <apex:pageBlockSectionItem rendered="{!editRollupSettingsTab}" helpText="One Opportunity Record Type can be called out for Membership calculations.">
 	                        <apex:outputLabel value="Membership Record Type Names" />
 	                        <apex:selectList value="{!settings.Membership_Record_Types__c}" multiselect="false" size="1">
 	                            <apex:selectOptions value="{!rtypes}" />
 	                        </apex:selectList>
 	                    </apex:pageBlockSectionItem>
-	                    <apex:inputfield value="{!settings.Membership_Grace_Period__c}" />
+	                    
+	                    
+	                    <apex:pageBlockSectionItem rendered="{!NOT(editRollupSettingsTab)}" helpText="One Opportunity Record Type can be called out for Membership calculations.">
+                            <apex:outputLabel value="Membership Record Type Names" />
+                            <apex:outputtext value="{!IF(settings.Membership_Record_Types__c != null, settings.Membership_Record_Types__c, 'No Recordtype Selected')}"/>                           
+                        </apex:pageBlockSectionItem>  
+	                    
+	                    <apex:pageblocksectionitem rendered="{!NOT(editRollupSettingsTab)}" helptext="The length of the grace period (in days) after a membership expires (last end date) before the status moves from 'Grace Period' to 'Expired'. Defaults to 30 days.">
+	                       <apex:outputlabel value="Membership Grace Period"/>
+	                       <apex:outputtext value="{!settings.Membership_Grace_Period__c}" />	                       
+                        </apex:pageblocksectionitem>
+                        <apex:pageblocksectionitem rendered="{!editRollupSettingsTab}" helptext="The length of the grace period (in days) after a membership expires (last end date) before the status moves from 'Grace Period' to 'Expired'. Defaults to 30 days.">
+                            <apex:outputlabel value="Membership Grace Period"/>
+                            <apex:inputfield value="{!settings.Membership_Grace_Period__c}"/>
+                       </apex:pageblocksectionitem>
+	                   
 	                </apex:pageBlockSection>
+	                
+	                
 	                <apex:outputPanel style="text-align: center; display: block; margin-left:auto; margin-right:auto;">
-                        <apex:commandButton value="Save" action="{!updateSettings}"/>
-                        <apex:commandButton value="Edit" action="{!cancel}"/>  
-                        <apex:commandButton value="Cancel" action="{!cancel}"/>                            
+                        <apex:commandButton value="Save" action="{!updateSettings}" rendered="{!editRollupSettingsTab}"/>
+                        <apex:commandButton value="Edit" action="{!editRollupSettings}" rendered="{!NOT(editRollupSettingsTab)}"/>  
+                        <apex:commandButton value="Cancel" action="{!cancel}" rendered="{!editRollupSettingsTab}"/>                            
                     </apex:outputPanel>
 	            </apex:Tab>
 	            <apex:Tab label="Rollup Errors" name="RollupErrorsTab">
