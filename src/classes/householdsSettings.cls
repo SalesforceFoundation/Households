@@ -39,6 +39,8 @@ public with sharing class householdsSettings {
     public string activeTab {get; set;}
     public boolean editRollupSettingsTab{get; set;}
     public boolean editHouseholdSettingsTab{get; set;}
+    public boolean hasErrors{get; set;}
+    public List<Opportunity_Rollup_Error__c> errorList{get; set;}
     
      /********Vars for PKG Update Info *************/
     public string getMyVersion(){return string.valueof(Package.Version.Request);}
@@ -74,7 +76,16 @@ public with sharing class householdsSettings {
             runningbatch = false;
         activeTab = 'HouseholdSettingsTab'; 
         editHouseholdSettingsTab = false;
-        editRollupSettingsTab = false;           
+        editRollupSettingsTab = false;   
+        
+        //retrieve errors, if any
+        errorList = Opportunity_Rollup_Error__c.getAll().values();
+        if (!errorList.isEmpty()){
+        	hasErrors = true;
+        }   
+        else{
+        	hasErrors = false;
+        }             
     }
     
     public Households_Settings__c getSettings() {
@@ -323,6 +334,11 @@ public with sharing class householdsSettings {
         editRollupSettingsTab = true;
         return null;
     }    
+    public pageReference deleteErrors(){
+    	delete [select id from Opportunity_Rollup_Error__c];
+    	return null;
+    }
+    
     
      public static testMethod void TEST_householdsSettings() {
         

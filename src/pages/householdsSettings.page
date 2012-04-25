@@ -212,7 +212,18 @@
                     </apex:outputPanel>
 	            </apex:Tab>
 	            <apex:Tab label="Rollup Errors" name="RollupErrorsTab">
-	            
+	                   <apex:outputtext value="{!$Label.Opportunity_Error_Help_Text}" style="font-style: italic;"/>
+	               <apex:pageblocksection title="Opportunity Rollup Errors" collapsible="false">
+	                   <apex:pageblocksectionitem rendered="{!NOT(hasErrors)}">
+	                       <apex:outputtext value="No Errors Found"/>
+	                   </apex:pageblocksectionitem>
+	                   <apex:pageblocktable value="{!errorList}" var="e" rendered="{!hasErrors}">
+	                   </apex:pageblocktable>
+	                   
+	                   <apex:outputPanel style="text-align: center; display: block; margin-left:auto; margin-right:auto;">
+	                       <apex:commandButton value="Delete Errors" action="{!deleteErrors}" rendered="{!hasErrors}"/>
+	                   </apex:outputPanel>
+	               </apex:pageblocksection>
 	            
 	            </apex:Tab>
 	            
