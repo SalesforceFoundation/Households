@@ -42,7 +42,7 @@ global class BATCH_OppRollup implements Database.Batchable<SObject> {
 		query = q; 
 	}
 	
-	global database.Querylocator start(Database.BatchableContext bc) {
+	global database.Querylocator start(Database.BatchableContext bc){		
 		return Database.getQueryLocator(query);		 
 	}
 	

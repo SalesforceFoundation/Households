@@ -480,7 +480,10 @@ global virtual without sharing class OpportunityRollups{
     /*************************************************************/
     
     /*** Wrappers for Managing the batch process ***/
-    public void rollupAll() {
+    public void rollupAll(){
+    	//clear the error queue from any previous runs
+        delete [select id from Opportunity_Rollup_Error__c];
+        
         rollupAllAccounts();
         rollupAllContacts(); 
         rollupAllHouseholds();
