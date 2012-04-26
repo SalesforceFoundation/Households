@@ -37,8 +37,10 @@
         <externalId>false</externalId>
         <inlineHelpText>Link to the record on which the error occurred</inlineHelpText>
         <label>Error Record Link</label>
+        <length>255</length>
         <required>false</required>
-        <type>Url</type>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Error_Type__c</fullName>
