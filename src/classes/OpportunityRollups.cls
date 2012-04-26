@@ -246,9 +246,9 @@ global virtual without sharing class OpportunityRollups{
                     a1.npo02__LastMembershipLevel__c == a2.npo02__LastMembershipLevel__c
                     )
             accountsToUpdate.remove(aid);
-        }
+        }         
         
-        Database.SaveResult[] SR = database.update(accountsToUpdate.values(), false);
+        Database.SaveResult[] SR = database.update(accountsToUpdate.values(), false);                
         List<Opportunity_Rollup_Error__c> elist = new List<Opportunity_Rollup_Error__c>();
         integer i = 0;
         for(Database.SaveResult s: SR){

@@ -657,11 +657,11 @@ public without sharing class OpportunityRollup_Utilities {
     
     /*** Error Generation ***/    
     public static Opportunity_Rollup_Error__c createError(Database.SaveResult s, string objecttype, id objid){
-    	date thisDay = system.today();
+    	datetime thisDay = system.now();
     	Opportunity_Rollup_Error__c ore = new Opportunity_Rollup_Error__c();
         
-        ore.Name = objid + '-' +  thisDay.month() + '-' + thisDay.day();
-        ore.Error_Datetime__c = system.now();
+        ore.Name = objid + '-' +  thisDay.month() + thisDay.day() + thisDay.hour() + thisDay.minute() + thisDay.second();
+        ore.Error_Datetime__c = thisDay;
         ore.Error_Object_Type__c = objecttype;
       
         string recordURL = URL.getSalesforceBaseUrl().toExternalForm() + '/' + objid;
