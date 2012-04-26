@@ -218,8 +218,13 @@
 	                       <apex:outputtext value="No Errors Found"/>
 	                   </apex:pageblocksectionitem>
 	                   <apex:pageblocktable value="{!errorList}" var="e" rendered="{!hasErrors}">
+	                        <apex:column value="{!e.Error_Object_Type__c}"/>
+	                        <apex:column value="{!e.Error_Datetime__c}"/>
+	                        <apex:column value="{!e.Error_Type__c}"/>
+                            <apex:column value="{!e.Error_Record_Link__c}"/>
+                            <apex:column value="{!e.Error_Message__c}"/>
 	                   </apex:pageblocktable>
-	                   
+	          
 	                   <apex:outputPanel style="text-align: center; display: block; margin-left:auto; margin-right:auto;">
 	                       <apex:commandButton value="Delete Errors" action="{!deleteErrors}" rendered="{!hasErrors}"/>
 	                   </apex:outputPanel>
