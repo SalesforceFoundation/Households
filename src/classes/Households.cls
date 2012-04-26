@@ -510,6 +510,7 @@ global without sharing class Households {
                 householdsSettings.Advanced_Household_Naming__c = false;
                 householdsSettings.Async_Household_Naming__c = false;
                 householdsSettings.Setupownerid = UserInfo.getOrganizationId();
+                householdsSettings.Schedule_Job_Limit__c = 25;
                 insert householdsSettings;
             }
         }

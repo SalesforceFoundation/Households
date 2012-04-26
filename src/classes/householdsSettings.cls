@@ -32,16 +32,16 @@
 * @date 2011 (2.0)
 * @description The controller for the Household Settings VF page 
 */
-public with sharing class householdsSettings {
+public with sharing class householdsSettings {  
     
-    public Households_Settings__c pageSettings = new Households_Settings__c();
+    public Households_Settings__c pageSettings = getSettings();
     public boolean runningBatch {get; set;}
     public string activeTab {get; set;}
     public boolean editRollupSettingsTab{get; set;}
     public boolean editHouseholdSettingsTab{get; set;}
     public boolean hasErrors{get; set;}
     public List<Opportunity_Rollup_Error__c> errorList{get; set;}
-    
+     
      /********Vars for PKG Update Info *************/
     public string getMyVersion(){return string.valueof(Package.Version.Request);}
     public string getMaxVersion(){return pageSettings.Max_Package_Version__c;}
