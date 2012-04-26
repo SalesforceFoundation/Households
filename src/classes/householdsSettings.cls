@@ -336,6 +336,7 @@ public with sharing class householdsSettings {
     }    
     public pageReference deleteErrors(){
     	delete [select id from Opportunity_Rollup_Error__c];
+    	hasErrors = false;
     	return null;
     }
     

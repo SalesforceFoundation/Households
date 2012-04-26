@@ -213,28 +213,31 @@
 	            </apex:Tab>
 	            <apex:Tab label="Rollup Errors" name="RollupErrorsTab">
 	                   <apex:outputtext value="{!$Label.Opportunity_Error_Help_Text}" style="font-style: italic;"/>
-	               <apex:pageblocksection title="Opportunity Rollup Errors" collapsible="false">
-	                   <apex:pageblocksectionitem rendered="{!NOT(hasErrors)}">
+	               <apex:pageblocksection title="Opportunity Rollup Errors" collapsible="false" id="errorsection" columns="1">
+	                    <apex:pageblocksectionitem rendered="{!NOT(hasErrors)}">
 	                       <apex:outputtext value="No Errors Found"/>
-	                   </apex:pageblocksectionitem>
-	                   <apex:pageblocktable value="{!errorList}" var="e" rendered="{!hasErrors}">
+	                    </apex:pageblocksectionitem>
+	                    <apex:pageblocktable value="{!errorList}" var="e" rendered="{!hasErrors}">
 	                        <apex:column value="{!e.Error_Object_Type__c}"/>
 	                        <apex:column value="{!e.Error_Datetime__c}"/>
 	                        <apex:column value="{!e.Error_Type__c}"/>
-                            <apex:column value="{!e.Error_Record_Link__c}"/>
+                            <apex:column headervalue="Record Link">
+                                <apex:outputlink target="_blank" title="Link to the affected record" value="{!e.Error_Record_Link__c}">
+                                    {!e.Error_Record_Link__c}
+                                </apex:outputlink>                                    
+                            </apex:column>
                             <apex:column value="{!e.Error_Message__c}"/>
-	                   </apex:pageblocktable>
-	          
-	                   <apex:outputPanel style="text-align: center; display: block; margin-left:auto; margin-right:auto;">
-	                       <apex:commandButton value="Delete Errors" action="{!deleteErrors}" rendered="{!hasErrors}"/>
-	                   </apex:outputPanel>
+	                    </apex:pageblocktable>
+	                    
+                        <apex:outputPanel style="text-align: center; display: block; margin-left:auto; margin-right:auto;" >
+                            <apex:commandButton value="Clear Error Queue" action="{!deleteErrors}" rendered="{!hasErrors}"/>
+                        </apex:outputPanel>
+                        
 	               </apex:pageblocksection>
-	            
+	           
+	               
 	            </apex:Tab>
-	            
-	                        		
-			</apex:TabPanel>
-			
+	    	</apex:TabPanel>			
 		</apex:pageBlock>
 	</apex:form>
 </apex:page>
