@@ -663,8 +663,13 @@ public without sharing class OpportunityRollup_Utilities {
         ore.Name = objid + '-' +  thisDay.month() + '-' + thisDay.day();
         ore.Error_Datetime__c = system.now();
         ore.Error_Object_Type__c = objecttype;
-        
-        ore.Error_Record_Link__c = 'https://' + URL.getSalesforceBaseUrl().toExternalForm() + '/' + objid;
+      
+        string recordURL = URL.getSalesforceBaseUrl().toExternalForm() + '/' + objid;
+        if (recordURL.startsWith('http:')){
+            recordURL = recordURL.replaceFirst('http:', 'https:');
+        }            
+        ore.Error_Record_Link__c = recordURL; 
+         
         if (s.getErrors()[0].getStatusCode() == system.Statuscode.REQUIRED_FIELD_MISSING){
             ore.Error_Type__c = 'Required Field Missing';   
         }
