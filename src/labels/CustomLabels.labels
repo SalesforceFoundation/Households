@@ -333,6 +333,14 @@
         <value>Donor</value>
     </labels>
     <labels>
+        <fullName>RollupErrorMessage</fullName>
+        <categories>Households</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RollupErrorMessage</shortDescription>
+        <value>Error(s) occurred the last time your Opportunities were rolled up. Please see the &apos;Rollup Errors&apos; tab for more information.</value>
+    </labels>
+    <labels>
         <fullName>SelectExistingAddress</fullName>
         <language>en_US</language>
         <protected>false</protected>
