@@ -81,7 +81,9 @@ public with sharing class householdsSettings {
         //retrieve errors, if any
         errorList = Opportunity_Rollup_Error__c.getAll().values();
         if (!errorList.isEmpty()){
-        	hasErrors = true;
+        	hasErrors = true;        	 
+        	ApexPages.Message myMsg = new ApexPages.Message(ApexPages.Severity.WARNING, system.label.RollupErrorMessage);
+        	ApexPages.addMessage(myMsg);        	
         }   
         else{
         	hasErrors = false;
