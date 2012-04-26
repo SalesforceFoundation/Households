@@ -651,16 +651,20 @@ public without sharing class OpportunityRollup_Utilities {
             }
         }               
     return fiscal_year;
-    }
+    }  
+    
     /****************************************/
     
-    /*** Error Generation ***/
-    public static Opportunity_Rollup_Error__c createError(Database.SaveResult s, string objecttype){
+    /*** Error Generation ***/    
+    public static Opportunity_Rollup_Error__c createError(Database.SaveResult s, string objecttype, id objid){
+    	date thisDay = system.today();
     	Opportunity_Rollup_Error__c ore = new Opportunity_Rollup_Error__c();
-        ore.Name = s.getId() + ' ' + system.now();
+        
+        ore.Name = objid + '-' +  thisDay.month() + '-' + thisDay.day();
         ore.Error_Datetime__c = system.now();
         ore.Error_Object_Type__c = objecttype;
-        ore.Error_Record_Link__c =  URL.getSalesforceBaseUrl().toExternalForm() + '/' + s.getId();
+        
+        ore.Error_Record_Link__c = 'https://' + URL.getSalesforceBaseUrl().toExternalForm() + '/' + objid;
         if (s.getErrors()[0].getStatusCode() == system.Statuscode.REQUIRED_FIELD_MISSING){
             ore.Error_Type__c = 'Required Field Missing';   
         }

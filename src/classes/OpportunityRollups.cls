@@ -250,10 +250,12 @@ global virtual without sharing class OpportunityRollups{
         
         Database.SaveResult[] SR = database.update(accountsToUpdate.values(), false);
         List<Opportunity_Rollup_Error__c> elist = new List<Opportunity_Rollup_Error__c>();
+        integer i = 0;
         for(Database.SaveResult s: SR){
             if (!s.isSuccess()){
-                elist.add(OpportunityRollup_Utilities.createError(s, 'Account'));                              
+                elist.add(OpportunityRollup_Utilities.createError(s, 'Account', accountsToUpdate.values()[i].id));                              
             }
+            i++;
         }        
         if(!elist.isEmpty()){
             insert elist;
@@ -354,10 +356,13 @@ global virtual without sharing class OpportunityRollups{
         
         Database.SaveResult[] SR = database.update(contactsToUpdate.values(), false);
         List<Opportunity_Rollup_Error__c> elist = new List<Opportunity_Rollup_Error__c>();
-        for(Database.SaveResult s: SR){
+        //needed to match errors to update list index
+        integer i = 0;
+        for(Database.SaveResult s: SR){        	
             if (!s.isSuccess()){
-                elist.add(OpportunityRollup_Utilities.createError(s, 'Contact'));                              
+                elist.add(OpportunityRollup_Utilities.createError(s, 'Contact', contactsToUpdate.values()[i].id));                              
             }
+            i++;
         }        
         if(!elist.isEmpty()){
             insert elist;
@@ -460,10 +465,12 @@ global virtual without sharing class OpportunityRollups{
         
         Database.SaveResult[] SR = database.update(householdsToUpdate.values(), false);
         List<Opportunity_Rollup_Error__c> elist = new List<Opportunity_Rollup_Error__c>();
+        integer i = 0;
         for(Database.SaveResult s: SR){
             if (!s.isSuccess()){
-                elist.add(OpportunityRollup_Utilities.createError(s, 'Household'));                              
+                elist.add(OpportunityRollup_Utilities.createError(s, 'Household', householdsToUpdate.values()[i].id));                              
             }
+            i++;
         }        
         if(!elist.isEmpty()){
             insert elist;
