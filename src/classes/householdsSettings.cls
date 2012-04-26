@@ -338,8 +338,7 @@ public with sharing class householdsSettings {
     	delete [select id from Opportunity_Rollup_Error__c];
     	hasErrors = false;
     	return null;
-    }
-    
+    }    
     
      public static testMethod void TEST_householdsSettings() {
         
@@ -372,6 +371,10 @@ public with sharing class householdsSettings {
         controller.acctTypes.add('In-Kind');
         controller.contactTypes.add('In-Kind');
         controller.pageSettings.Enable_Opp_Rollup_Triggers__c = true;
+        controller.editHouseholdSettings();
+        controller.editRollupSettings();
+        controller.cancel();
+        controller.deleteErrors();        
         controller.updateSettings();                
     }    
 }
