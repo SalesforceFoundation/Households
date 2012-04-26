@@ -301,6 +301,18 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Schedule_Job_Limit__c</fullName>
+        <defaultValue>25</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>The scheduled job limit used when auto-scheduling nightly rollups.</inlineHelpText>
+        <label>Schedule Job Limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Update_Check_Interval__c</fullName>
         <deprecated>false</deprecated>
         <description>The number of days between NPSP callouts to check for new versions of this package. The default value is 90 days.</description>
