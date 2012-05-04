@@ -635,11 +635,7 @@ public without sharing class OpportunityRollup_Utilities {
                 SoftCreditQuery = 'SELECT ContactId, Fiscal_Year(Opportunity.CloseDate) CalendarYr, ';
             else
                 SoftCreditQuery = 'SELECT ContactId, Calendar_Year(Opportunity.CloseDate) CalendarYr, ';            
-            SoftCreditQuery += 'SUM(Opportunity.Amount) TotalOppAmount, ';                        
-            SoftCreditQuery += 'AVG(Opportunity.Amount) AverageAmount, MIN(Opportunity.Amount) SmallestAmount, ';
-            SoftCreditQuery += 'MAX(Opportunity.Amount) LargestAmount, MIN(Opportunity.CloseDate) FirstCloseDate, '; 
-            SoftCreditQuery += 'MAX(Opportunity.CloseDate) LastCloseDate, COUNT_DISTINCT(Opportunity.Id) NumberOfClosedOpps, ';
-            SoftCreditQuery += 'MAX(Opportunity.npo02__CombinedRollupFieldset__c) RollupFieldset ';
+            SoftCreditQuery += 'SUM(Opportunity.Amount) TotalOppAmount, ';
             SoftCreditQuery += 'FROM OpportunityContactRole ';
             SoftCreditQuery += 'WHERE Opportunity.isWon=true '; 
             SoftCreditQuery += 'AND Opportunity.Amount != null ';   
