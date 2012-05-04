@@ -266,7 +266,7 @@ global virtual without sharing class OpportunityRollups{
     public void rollupContacts(map<id, Contact> cmap){
         //arg used by multi currency for rollup field currencies
         map<Id,Opportunity> opptyCurrencies;
-        // copy the contacts and households to a map of zerod out versions
+        // copy the contacts to a map of zeroed out versions
         map<id, Contact> contactsToUpdate = new map<id, Contact>();
         
         for (id cid : cmap.keySet()) {
@@ -475,7 +475,64 @@ global virtual without sharing class OpportunityRollups{
         if(!elist.isEmpty()){
             insert elist;
         }
-    }    
+    }  
+    
+    public void rollupSoftCredits(map<id, Contact> cmap){      
+        //arg used by multi currency for rollup field currencies
+        map<Id,Opportunity> opptyCurrencies;
+        // copy the contacts to a zeroed out version
+        map<id, Contact> contactsToUpdate = new map<id, Contact>();        
+        
+        for (id cid : cmap.keySet()) {
+            contactsToUpdate.put(cid, new Contact(id = cid,                 
+                npo02__Soft_Credit_This_Year__c = null, npo02__Soft_Credit_Last_Year__c = null,                
+                npo02__Soft_Credit_Two_Years_Ago__c = null, npo02__Soft_Credit_Total__c = null
+            ));
+            // map currency across if multicurrency
+            if(OpportunityRollup_Utilities.isMultiCurrency())
+                contactsToUpdate.get(cid).put(OpportunityRollup_Utilities.mcFieldValues.get('Contact'),cmap.get(cid).get(OpportunityRollup_Utilities.mcFieldValues.get('Contact')));            
+        }
+    
+        list<sobject> objectList = new list<sobject>();   
+        set<id> cset = cmap.keySet();        
+        set<string> softCreditRoles = OpportunityRollup_Utilities.softCreditRoles;
+        
+        objectList = database.query(OpportunityRollup_Utilities.buildSoftCreditQuery());
+            
+        // invokes code to get the currency of npo02__CombinedRollupFieldset__c oppty
+        opptyCurrencies = (OpportunityRollup_Utilities.isMultiCurrency() ? OpportunityRollup_Utilities.rcfFindCurrency(objectList) : null);
+            
+        for (sobject r : objectList) {
+            id cid = (id)(r.get('ContactId'));
+            if (cid != null){
+                updateSoftCreditFromResult((sobject)(contactsToUpdate.get(cid)), r, opptyCurrencies);
+            }                
+        }                
+        for (id cid : cmap.keySet()) {
+            contact c1 = cmap.get(cid);
+            contact c2 = contactsToUpdate.get(cid);
+            
+            if (c1.npo02__Soft_Credit_This_Year__c == c2.npo02__Soft_Credit_This_Year__c &&
+                c1.npo02__Soft_Credit_Last_Year__c == c2.npo02__Soft_Credit_Last_Year__c &&
+                c1.npo02__Soft_Credit_Two_Years_Ago__c == c2.npo02__Soft_Credit_Two_Years_Ago__c && 
+                c1.npo02__Soft_Credit_Total__c == c2.npo02__Soft_Credit_Total__c)
+                contactsToUpdate.remove(cid);
+        }
+        
+        Database.SaveResult[] SR = database.update(contactsToUpdate.values(), false);
+        List<Opportunity_Rollup_Error__c> elist = new List<Opportunity_Rollup_Error__c>();
+        //needed to match errors to update list index
+        integer i = 0;
+        for(Database.SaveResult s: SR){         
+            if (!s.isSuccess()){
+                elist.add(OpportunityRollup_Utilities.createError(s, 'Contact', contactsToUpdate.values()[i].id));                              
+            }
+            i++;
+        }        
+        if(!elist.isEmpty()){
+            insert elist;
+        }    	
+    }
        
     /*************************************************************/
     
@@ -487,21 +544,25 @@ global virtual without sharing class OpportunityRollups{
         rollupAllAccounts();
         rollupAllContacts(); 
         rollupAllHouseholds();
-    }   
-
+        if (OpportunityRollup_Utilities.hh_settings.Enable_Soft_Credit_Rollups__c){
+            rollupAllSoftCredits();
+        }            
+    }
     public void rollupAllHouseholds(){
-        BATCH_OppRollup batch = new BATCH_OppRollup(OpportunityRollup_Utilities.buildHouseholdQuery());
+        BATCH_OppRollup batch = new BATCH_OppRollup(OpportunityRollup_Utilities.buildHouseholdQuery(), BATCH_OppRollup.BATCH_TYPE.HouseholdType);
         id batchProcessId = database.executeBatch(batch, OpportunityRollup_Utilities.BATCH_SIZE);
     }
-
     public void rollupAllAccounts() {
-        BATCH_OppRollup batch = new BATCH_OppRollup(OpportunityRollup_Utilities.buildAccountQuery());
+        BATCH_OppRollup batch = new BATCH_OppRollup(OpportunityRollup_Utilities.buildAccountQuery(), BATCH_OppRollup.BATCH_TYPE.AccountType);
         id batchProcessId = database.executeBatch(batch, OpportunityRollup_Utilities.BATCH_SIZE);        
-    }   
-        
-    public void rollupAllContacts() {
-        BATCH_OppRollup batch = new BATCH_OppRollup(OpportunityRollup_Utilities.buildContactQuery());
+    }           
+    public void rollupAllContacts() { 
+        BATCH_OppRollup batch = new BATCH_OppRollup(OpportunityRollup_Utilities.buildContactQuery(), BATCH_OppRollup.BATCH_TYPE.ContactType);
         id batchProcessId = database.executeBatch(batch, OpportunityRollup_Utilities.BATCH_SIZE);        
+    }
+    public void rollupAllSoftCredits(){
+    	BATCH_OppRollup batch = new BATCH_OppRollup(OpportunityRollup_Utilities.buildContactQuery(), BATCH_OppRollup.BATCH_TYPE.SoftCreditType);
+        id batchProcessId = database.executeBatch(batch, OpportunityRollup_Utilities.BATCH_SIZE);
     } 
     /*************************************************************/
     
@@ -624,5 +685,11 @@ global virtual without sharing class OpportunityRollups{
         obj.put('npo02__MembershipJoinDate__c', (date)(r.get('FirstStartDate'))); 
         obj.put('npo02__MembershipEndDate__c', (date)(r.get('LastEndDate')));
     }   
+    
+    public static void updateSoftCreditFromResult(sobject obj, sobject r, map<id, Opportunity> opptyCurrencies){
+    	
+    	
+    }
+    
     /*************************************************************/ 
 }
