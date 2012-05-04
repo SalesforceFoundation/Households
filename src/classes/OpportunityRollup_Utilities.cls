@@ -41,6 +41,7 @@ public without sharing class OpportunityRollup_Utilities {
     public static set<id> mbrRecordTypes = new set<id>(); 
     public static set<string> oppTypesToExcludeAccts = new set<string>();
     public static set<string> oppTypesToExcludeCons = new set<string>();  
+    public static set<string> softCreditRoles = new set<string>();
     public static Households_Settings__c hh_settings;
     public static integer BATCH_SIZE = 200;
     private static boolean recordTypesOnOpps;
@@ -76,6 +77,7 @@ public without sharing class OpportunityRollup_Utilities {
     private static string HouseholdMembershipQuery;
     private static string ContactMembershipQuery;
     private static string AccountMembershipQuery;    
+    private static string SoftCreditQuery;
          
     /*** Field Lists ***/
     private final static set<string> AccountFields = new set<string>{'TotalOppAmount__c', 'OppAmountThisYear__c',
@@ -140,6 +142,10 @@ public without sharing class OpportunityRollup_Utilities {
             set<string> mbrRecordTypeNames = new set<string>(household_settings.Membership_Record_Types__c.split(';'));
             mbrRecordTypes = RecordTypes.GetRecordTypeIdSet('Opportunity', mbrRecordTypeNames);
         }  
+        if (household_settings.Soft_Credit_Roles__c != null){
+        	softCreditRoles = new set<string>(household_Settings.Soft_Credit_Roles__c.split(';'));
+        }
+        
         if (household_settings.Rollup_N_Day_Value__c == null){
         	household_settings.Rollup_N_Day_Value__c = 365;
         }
@@ -276,7 +282,7 @@ public without sharing class OpportunityRollup_Utilities {
             return opptyCurrencies;
         }
         else
-            return null;
+            return null; 
     }
     /****************************************/
     
@@ -472,7 +478,7 @@ public without sharing class OpportunityRollup_Utilities {
                 ContactRollupQuery = 'SELECT ContactId, Fiscal_Year(Opportunity.CloseDate) CalendarYr, ';
             else
                 ContactRollupQuery = 'SELECT ContactId, Calendar_Year(Opportunity.CloseDate) CalendarYr, ';            
-            ContactRollupQuery += 'SUM(Opportunity.Amount) TotalOppAmount, ';
+            ContactRollupQuery += 'SUM(Opportunity.Amount) TotalOppAmount, ';                        
             ContactRollupQuery += 'AVG(Opportunity.Amount) AverageAmount, MIN(Opportunity.Amount) SmallestAmount, ';
             ContactRollupQuery += 'MAX(Opportunity.Amount) LargestAmount, MIN(Opportunity.CloseDate) FirstCloseDate, '; 
             ContactRollupQuery += 'MAX(Opportunity.CloseDate) LastCloseDate, COUNT_DISTINCT(Opportunity.Id) NumberOfClosedOpps, ';
@@ -519,7 +525,7 @@ public without sharing class OpportunityRollup_Utilities {
     	return ContactNDayQuery;
     }
     
-    public static string buildContactMembershipQuery(){
+    public static string buildContactMembershipQuery(){ 
         if (ContactMembershipQuery == null){
             ContactMembershipQuery = 'SELECT ContactId, ';
             ContactMembershipQuery += 'SUM(Opportunity.Amount) TotalOppAmount,  ';
@@ -622,6 +628,31 @@ public without sharing class OpportunityRollup_Utilities {
     	}
     	return HouseholdMembershipQuery;
     }
+    
+    public static string buildSoftCreditQuery(){
+        if (SoftCreditQuery == null){        	
+        	if (useFiscalYear)
+                SoftCreditQuery = 'SELECT ContactId, Fiscal_Year(Opportunity.CloseDate) CalendarYr, ';
+            else
+                SoftCreditQuery = 'SELECT ContactId, Calendar_Year(Opportunity.CloseDate) CalendarYr, ';            
+            SoftCreditQuery += 'SUM(Opportunity.Amount) TotalOppAmount, ';                        
+            SoftCreditQuery += 'AVG(Opportunity.Amount) AverageAmount, MIN(Opportunity.Amount) SmallestAmount, ';
+            SoftCreditQuery += 'MAX(Opportunity.Amount) LargestAmount, MIN(Opportunity.CloseDate) FirstCloseDate, '; 
+            SoftCreditQuery += 'MAX(Opportunity.CloseDate) LastCloseDate, COUNT_DISTINCT(Opportunity.Id) NumberOfClosedOpps, ';
+            SoftCreditQuery += 'MAX(Opportunity.npo02__CombinedRollupFieldset__c) RollupFieldset ';
+            SoftCreditQuery += 'FROM OpportunityContactRole ';
+            SoftCreditQuery += 'WHERE Opportunity.isWon=true '; 
+            SoftCreditQuery += 'AND Opportunity.Amount != null ';   
+            SoftCreditQuery += 'AND Role IN :softCreditRoles ';                                         
+            SoftCreditQuery += 'AND ContactId IN :cset ';            
+            if (useFiscalYear)
+                SoftCreditQuery += 'GROUP BY ROLLUP(ContactId, Fiscal_Year(Opportunity.CloseDate)) ';
+            else
+                SoftCreditQuery += 'GROUP BY ROLLUP(ContactId, Calendar_Year(Opportunity.CloseDate)) ';
+        }           
+        return SoftCreditQuery; 
+    }
+    
     /****************************************/
     
     /*** Utility Methods ***/    
