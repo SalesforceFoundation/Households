@@ -440,6 +440,50 @@
         <type>Currency</type>
     </fields>
     <fields>
+        <fullName>Soft_Credit_Last_Year__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Total soft credit amount last year.</inlineHelpText>
+        <label>Soft Credit Last Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Soft_Credit_This_Year__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Total soft credit amount this year</inlineHelpText>
+        <label>Soft Credit This Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Soft_Credit_Total__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Total amount in soft credits for this Contact&apos;s lifetime. Defined in the Household Settings tab.</inlineHelpText>
+        <label>Soft Credit Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Soft_Credit_Two_Years_Ago__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Total soft credit amount two years ago.</inlineHelpText>
+        <label>Soft Credit Two Years Ago</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>SystemHouseholdProcessor__c</fullName>
         <deprecated>false</deprecated>
         <description>Used to set if Households should get created for all Contacts, or just those which are connected to an individual account</description>
@@ -857,6 +901,12 @@ if(ISPICKVAL(npe01__Secondary_Address_Type__c,&quot;Work&quot;),
         </filters>
         <label>New This Week</label>
     </listViews>
+    <validationRules>
+        <fullName>BADRULE</fullName>
+        <active>false</active>
+        <errorConditionFormula>NOT(ISNULL(AssistantPhone ))</errorConditionFormula>
+        <errorMessage>OOPS!</errorMessage>
+    </validationRules>
     <webLinks>
         <fullName>Copy_Address_to_Household</fullName>
         <availability>online</availability>
