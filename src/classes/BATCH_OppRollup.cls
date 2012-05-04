@@ -36,11 +36,17 @@ global class BATCH_OppRollup implements Database.Batchable<SObject> {
 // batch apex class to rollup opportunities
 	
 	public String query { get; set; }
+	public enum BATCH_TYPE{ContactType, AccountType, HouseholdType, SoftCreditType}	
+	public BATCH_TYPE btype;
 	
 	// constructors
-	public BATCH_OppRollup(string q) {  
+	public BATCH_OppRollup(string q, BATCH_TYPE bt){  
+		btype = bt;
 		query = q; 
 	}
+	public BATCH_OppRollup(string q){  
+        this(q, BATCH_TYPE.ContactType);        
+    }
 	
 	global database.Querylocator start(Database.BatchableContext bc){		
 		return Database.getQueryLocator(query);		 
@@ -51,16 +57,22 @@ global class BATCH_OppRollup implements Database.Batchable<SObject> {
 		// run rollups for this batch		
 		OpportunityRollups rg = new OpportunityRollups();
 		
- 		if (result[0].getSObjectType() == Account.sObjectType){
- 			 
-			rg.RollupAccounts(new map<id, Account>((list<Account>)result));
- 		} 
- 		else if (result[0].getSobjectType() == Contact.sObjectType){
-			rg.rollupContacts(new map<id, Contact>((list<Contact>)result));
- 		}
- 		else{
-			rg.RollupHouseholds(new map<id, npo02__Household__c>((list<npo02__Household__c>)result));
- 		} 		
+		if (btype == BATCH_TYPE.ContactType){
+			rg.rollupContacts(new map<id, Contact>((list<Contact>)result)); 			
+		}
+		else if (btype == BATCH_TYPE.AccountType){
+			rg.RollupAccounts(new map<id, Account>((list<Account>)result));			
+		}
+		else if (btype == BATCH_TYPE.HouseholdType){
+			rg.RollupHouseholds(new map<id, npo02__Household__c>((list<npo02__Household__c>)result));			
+		}
+		else if (btype == BATCH_TYPE.SoftCreditType){
+            rg.RollupSoftCredits(new map<id, Contact>((list<Contact>)result));			
+		}
+		else{			
+			//throw error
+	//		throw new Exception();
+		}		
 	}
 
 	global void finish(Database.BatchableContext bc) {
