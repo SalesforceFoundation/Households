@@ -687,8 +687,37 @@ global virtual without sharing class OpportunityRollups{
     }   
     
     public static void updateSoftCreditFromResult(sobject obj, sobject r, map<id, Opportunity> opptyCurrencies){
-    	
-    	
+    	 // get the fiscal year, total amount, and opp count for this result row     
+        integer fy = (integer)(r.get('CalendarYr'));
+        decimal amt = (decimal)(r.get('TotalOppAmount'));                       
+        
+        // calculate amounts into correct currency if needed
+        if(OpportunityRollup_Utilities.isMultiCurrency())
+            amt = OpportunityRollup_Utilities.ConvertFromCorporate((string)obj.get('CurrencyIsoCode'),amt);
+        
+        // check if this is an annual total or account total
+        if (fy != null){
+
+            // put the fiscal year total in the right fields
+            integer thisYear;
+            if (OpportunityRollup_Utilities.useFiscalYear)
+                thisYear = OpportunityRollup_Utilities.getCurrentFY();
+            else
+                thisYear = system.today().year();
+            
+            if (fy == thisYear)
+                obj.put('npo02__Soft_Credit_This_Year__c', amt); 
+                 
+            else if (fy == (thisYear - 1))
+                obj.put('npo02__Soft_Credit_Last_Year__c', amt); 
+                 
+            else if (fy == (thisYear - 2))
+                obj.put('npo02__Soft_Credit_Two_Years_Ago__c', amt);    
+        }
+        else { 
+            // fill in summary totals
+            obj.put('npo02__Soft_Credit_Total__c', amt);        
+        }
     }
     
     /*************************************************************/ 
