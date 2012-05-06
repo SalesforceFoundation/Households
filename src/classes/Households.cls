@@ -537,7 +537,9 @@ global without sharing class Households {
             Membership_Grace_Period__c = mySettings.Membership_Grace_Period__c,
             Rollup_N_Day_Value__c = mySettings.Rollup_N_Day_Value__c, 
             Membership_Record_Types__c = mySettings.Membership_Record_Types__c,
-            Advanced_Household_Naming__c = true
+            Advanced_Household_Naming__c = mySettings.Advanced_Household_Naming__c,
+            Enable_Soft_Credit_Rollups__c = mySettings.Enable_Soft_Credit_Rollups__c,
+            Soft_Credit_Roles__c = mySettings.Soft_Credit_Roles__c            
             );
         insert householdsSettings;
             
