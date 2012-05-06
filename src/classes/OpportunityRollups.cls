@@ -154,7 +154,7 @@ global virtual without sharing class OpportunityRollups{
         if (hhIds != null && !hhIds.isEmpty()){
             OpportunityRollups rg = new OpportunityRollups();
             map<id, npo02__Household__c> hhmap = new map<id, Household__c>((list<npo02__Household__c>)Database.query(OpportunityRollup_Utilities.buildHouseholdQuery() +
-                                                                            ' where id IN hhIDs'));
+                                                                            ' where id IN :hhIDs'));
             rg.rollupHouseholds(hhmap);                                                                         
         }        
     } 
@@ -543,9 +543,11 @@ global virtual without sharing class OpportunityRollups{
         
         rollupAllAccounts();
         rollupAllContacts(); 
-        rollupAllHouseholds();
+        rollupAllHouseholds();        
+        
+        system.debug(OpportunityRollup_Utilities.hh_settings.Enable_Soft_Credit_Rollups__c);
         if (OpportunityRollup_Utilities.useSoftCredits()){ 
-            rollupAllSoftCredits();
+        	rollupAllSoftCredits();
         }            
     }
     public void rollupAllHouseholds(){
