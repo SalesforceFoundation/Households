@@ -26,7 +26,7 @@ ul.err li {
 		</apex:pageBlock>
 		<apex:outputPanel rendered="{!batchRunning}">
 			<c:batchjobs batchComponentLabel="Batch Rollup Progress"
-				numberOfJobs="3" />
+				numberOfJobs="4" />
 		</apex:outputPanel>
 	</apex:form>
 </apex:page>
