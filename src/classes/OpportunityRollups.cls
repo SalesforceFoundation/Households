@@ -544,7 +544,7 @@ global virtual without sharing class OpportunityRollups{
         rollupAllAccounts();
         rollupAllContacts(); 
         rollupAllHouseholds();
-        if (OpportunityRollup_Utilities.hh_settings.Enable_Soft_Credit_Rollups__c){
+        if (OpportunityRollup_Utilities.useSoftCredits()){ 
             rollupAllSoftCredits();
         }            
     }

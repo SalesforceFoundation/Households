@@ -45,6 +45,7 @@ public without sharing class OpportunityRollup_Utilities {
     public static Households_Settings__c hh_settings;
     public static integer BATCH_SIZE = 200;
     private static boolean recordTypesOnOpps;
+    private static boolean useSoftCredits;
     
     /*** FY ***/
     private static integer fiscal_year;
@@ -204,6 +205,16 @@ public without sharing class OpportunityRollup_Utilities {
         }
         return recordTypesOnOpps;
     }
+    
+    public static boolean useSoftCredits(){
+        if (useSoftCredits == null){
+            if(!softCreditRoles.isEmpty() && hh_settings.Enable_Soft_Credit_Rollups__c)
+                useSoftCredits = true;
+            else
+                useSoftCredits = false;
+        }    	
+    	return useSoftCredits;
+    }  
     /****************************************/ 
 	
 	
