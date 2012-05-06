@@ -1102,4 +1102,129 @@ public with sharing class TEST_OpportunityRollup {
     
             system.assertEquals(100, [select OppAmountLastNDays__c from Contact where id = :TestCons[0].id].OppAmountLastNDays__c);
     }
+    
+   static testMethod void testSoftCredits() {
+
+        String giftRecordTypeNameForTests = RecordTypes.getRecordTypeNameForGiftsTests('Opportunity');
+
+            Households_Settings__c householdSettingsForTests = Households.getHouseholdsSettingsForTests(
+                new Households_Settings__c (
+                    Household_Rules__c = Households.NO_HOUSEHOLDS_PROCESSOR,
+                    Always_Rollup_to_Primary_Contact__c = false,
+                    Enable_Opp_Rollup_Triggers__c = false,
+                    Excluded_Account_Opp_Rectypes__c = null,
+                    Excluded_Account_Opp_Types__c = null,
+                    Excluded_Contact_Opp_Rectypes__c = null,
+                    Excluded_Contact_Opp_Types__c = null,
+                    Membership_Record_Types__c = null,
+                    Enable_Soft_Credit_Rollups__c = true,
+                    Soft_Credit_Roles__c = 'TestOCR',     
+                    Advanced_Household_Naming__c = false               
+                ));
+                
+            npe01__Contacts_and_Orgs_Settings__c contactSettingsForTests = npe01.Constants.getContactsSettingsForTests(new npe01__Contacts_and_Orgs_Settings__c (
+                npe01__Account_Processor__c = npe01.Constants.ONE_TO_ONE_PROCESSOR,
+                npe01__Enable_Opportunity_Contact_Role_Trigger__c = true,
+                npe01__Opportunity_Contact_Role_Default_role__c = 'Donor'
+            ));
+                
+            Date datClose = System.Today();
+                
+            // create & insert contact(s)
+            Contact[] TestCons = UnitTestData.CreateMultipleTestContacts(10) ;
+            insert TestCons;
+    
+            // create new opps
+            Opportunity[] newOpps = UnitTestData.OppsForContactList ( TestCons, null, UnitTestData.getClosedWonStage(), datClose, 1000 , giftRecordTypeNameForTests ,null);
+            insert newOpps;
+            
+            account testacct = new account(name='testacct');
+            insert testacct;
+            
+            Opportunity[] lastYearOpps = UnitTestData.OppsForContactList(new list<Contact>{TestCons[5]}, null, UnitTestData.getClosedWonStage(), datClose.addyears(-1), 150 , giftRecordTypeNameForTests ,null);
+            insert lastYearOpps;
+            
+            Opportunity[] last2YearOpps = UnitTestData.OppsForContactList(new list<Contact>{TestCons[8]}, null, UnitTestData.getClosedWonStage(), datClose.addyears(-2), 100 , giftRecordTypeNameForTests ,null);
+            insert last2YearOpps;
+            
+            //grab two random contacts and two random Opps and create an OCR for them
+            id TCid1 = TestCons[5].id;
+            id TCid2 = TestCons[8].id;            
+            
+            list<OpportunityContactRole> ocrlist = new list<OpportunityContactRole>();
+            
+            ocrlist.add(new OpportunityContactRole(ContactId = TCid1, OpportunityId = newOpps[1].id, Role = 'TestOCR'));
+            ocrlist.add(new OpportunityContactRole(ContactId = TCid2, OpportunityId = newOpps[2].id, Role = 'TestOCR'));
+            ocrlist.add(new OpportunityContactRole(ContactId = TCid1, OpportunityId = lastYearOpps[0].id, Role = 'TestOCR'));
+            ocrlist.add(new OpportunityContactRole(ContactId = TCid2, OpportunityId = last2YearOpps[0].id, Role = 'TestOCR'));
+            insert ocrlist;
+            
+            
+            // test the batch rollup method
+            Test.StartTest();
+            OpportunityRollups rg = new OpportunityRollups();
+            rg.rollupAll();
+            Test.StopTest();    
+            
+            Contact c1 = [select Soft_Credit_Two_Years_Ago__c, Soft_Credit_Total__c, 
+                                Soft_Credit_This_Year__c, Soft_Credit_Last_Year__c From Contact where id = :TCid1];
+            
+            Contact c2 = [select Soft_Credit_Two_Years_Ago__c, Soft_Credit_Total__c, 
+                                Soft_Credit_This_Year__c, Soft_Credit_Last_Year__c From Contact where id = :TCid2];                
+    
+            system.assertEquals(1150, c1.Soft_Credit_Total__c);
+            system.assertEquals(1000, c1.Soft_Credit_This_Year__c);
+            system.assertEquals(150, c1.Soft_Credit_Last_Year__c);
+            system.assertEquals(1100, c2.Soft_Credit_Total__c);
+            system.assertEquals(100, c2.Soft_Credit_Two_Years_Ago__c);
+    }  
+    
+    static testMethod void testFutureMethods(){
+    	 String giftRecordTypeNameForTests = RecordTypes.getRecordTypeNameForGiftsTests('Opportunity');
+
+            Households_Settings__c householdSettingsForTests = Households.getHouseholdsSettingsForTests(
+                new Households_Settings__c (
+                    Household_Rules__c = Households.ALL_PROCESSOR,
+                    Always_Rollup_to_Primary_Contact__c = false,
+                    Enable_Opp_Rollup_Triggers__c = false,
+                    Excluded_Account_Opp_Rectypes__c = null,
+                    Excluded_Account_Opp_Types__c = null,
+                    Excluded_Contact_Opp_Rectypes__c = null,
+                    Excluded_Contact_Opp_Types__c = null,
+                    Membership_Record_Types__c = null,
+                    Enable_Soft_Credit_Rollups__c = true,
+                    Soft_Credit_Roles__c = 'TestOCR',     
+                    Advanced_Household_Naming__c = false               
+                ));
+                
+            npe01__Contacts_and_Orgs_Settings__c contactSettingsForTests = npe01.Constants.getContactsSettingsForTests(new npe01__Contacts_and_Orgs_Settings__c (
+                npe01__Account_Processor__c = npe01.Constants.ONE_TO_ONE_PROCESSOR,
+                npe01__Enable_Opportunity_Contact_Role_Trigger__c = true,
+                npe01__Opportunity_Contact_Role_Default_role__c = 'Donor'
+            ));
+                
+            Date datClose = System.Today();
+                
+            // create & insert contact(s)
+        Contact[] TestCons = UnitTestData.CreateMultipleTestContacts(10) ;
+        insert TestCons;
+    
+        // create new opps
+        Opportunity[] newOpps = UnitTestData.OppsForContactList ( TestCons, null, UnitTestData.getClosedWonStage(), datClose, 1000 , giftRecordTypeNameForTests ,null);
+        insert newOpps;
+            
+        TestCons = [select id, Household__c from Contact where ID IN :TestCons];
+        set<id> HHid = new set<id>();
+        set<id> CID = new set<id>();
+        
+        for (Contact c : TestCons){
+        	HHid.add(c.Household__c);
+        	CID.add(c.id);
+        }    	   
+        
+        Test.startTest();
+        OpportunityRollups.rollupContactsFuture(CID);
+        OpportunityRollups.rollupHouseholdsFuture(HHid);        
+    	Test.stopTest();
+    }    
 }
