@@ -66,17 +66,19 @@ global class BATCH_OppRollup implements Database.Batchable<SObject> {
 		else if (btype == BATCH_TYPE.HouseholdType){
 			rg.RollupHouseholds(new map<id, npo02__Household__c>((list<npo02__Household__c>)result));			
 		}
-		else if (btype == BATCH_TYPE.SoftCreditType){
+		else if (btype == BATCH_TYPE.SoftCreditType && OpportunityRollup_Utilities.useSoftCredits()){
             rg.RollupSoftCredits(new map<id, Contact>((list<Contact>)result));			
 		}
 		else{			
 			//throw error
-	//		throw new Exception();
+			throw new NPSPBatchException('Invalid BATCH_TYPE: ' + btype);
 		}		
 	}
 
 	global void finish(Database.BatchableContext bc) {
-	}
+	}	
+	
+    public class NPSPBatchException extends Exception{}	
 
 	public static testMethod void testBatch() {
 		String giftRecordTypeNameForTests = RecordTypes.getRecordTypeNameForGiftsTests('Opportunity');
