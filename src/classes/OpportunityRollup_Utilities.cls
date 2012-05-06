@@ -46,6 +46,9 @@ public without sharing class OpportunityRollup_Utilities {
     public static integer BATCH_SIZE = 200;
     private static boolean recordTypesOnOpps;
     private static boolean useSoftCredits;
+    private static id IndividualAccountId;
+    private static boolean accountIDCheck = false;
+    
     
     /*** FY ***/
     private static integer fiscal_year;
@@ -110,7 +113,9 @@ public without sharing class OpportunityRollup_Utilities {
                                                                 'npo02__LastCloseDate__c', 'npo02__NumberOfClosedOpps__c', 
                                                                 'npo02__MembershipEndDate__c', 'npo02__OppAmountLastYear__c', 
                                                                 'npo02__OppAmount2YearsAgo__c', 'npo02__MembershipJoinDate__c',
-                                                                'npo02__LastMembershipLevel__c'};
+                                                                'npo02__LastMembershipLevel__c', 'npo02__Soft_Credit_This_Year__c',
+                                                                'npo02__Soft_Credit_Two_Years_Ago__c', 'npo02__Soft_Credit_Total__c',
+                                                                'npo02__Soft_Credit_Last_Year__c'};
     
     private final static set<string> HouseholdFields = new set<string>{'npo02__TotalOppAmount__c', 'npo02__OppAmountThisYear__c', 
                                                                 'npo02__OppAmountLastNDays__c', 'npo02__LastCloseDate__c', 
@@ -215,8 +220,16 @@ public without sharing class OpportunityRollup_Utilities {
         }    	
     	return useSoftCredits;
     }  
-    /****************************************/ 
-	
+    
+    public static id getIndividualAccountId(){
+    	if (!accountIdCheck){
+    		IndividualAccountId = npe01.Constants.getIndividualAccountId();
+            accountIdCheck = true;    	           	
+    	}
+    	return IndividualAccountId;    	
+    }    
+    
+    /****************************************/
 	
     /*** Multicurrency Support Methods ***/
     
@@ -324,7 +337,7 @@ public without sharing class OpportunityRollup_Utilities {
     	//if the account id is not null and its not the individual/bucket account AND
     	//its the membership rectype or the rectype isn't exclused AND
         //the opp type isn't excluded
-    	if (o.AccountId != null && o.AccountId != npe01.Constants.GetIndividualAccountId() && 
+    	if (o.AccountId != null && o.AccountId != getIndividualAccountId() && 
     	(mbrRecordTypes.contains((id)o.get('recordTypeId')) || !recordTypesToExcludeAccts.contains((id)o.get('recordTypeId'))) && 
     	!oppTypesToExcludeAccts.contains(o.type)){
             needsRollup = true;    	           
@@ -415,8 +428,8 @@ public without sharing class OpportunityRollup_Utilities {
             AccountRollupQuery += 'FROM Opportunity ';
             AccountRollupQuery += 'WHERE isWon=true '; 
             AccountRollupQuery += 'AND Amount != null '; 
-            if (npe01.Constants.GetIndividualAccountId() != null){
-                AccountRollupQuery += 'AND AccountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
+            if (getIndividualAccountId() != '' && getIndividualAccountId() != null){
+                AccountRollupQuery += 'AND AccountID != \'' + getIndividualAccountId() + '\' ';
             }        
             if(areRecordTypesOnOpps()){
                 AccountRollupQuery += 'AND RecordTypeId NOT IN :rectypeset ';
@@ -441,8 +454,8 @@ public without sharing class OpportunityRollup_Utilities {
             AccountNDayQuery += 'FROM Opportunity  '; 
             AccountNDayQuery += 'WHERE isWon=true  '; 
             AccountNDayQuery += 'AND Amount != null '; 
-            if (npe01.Constants.GetIndividualAccountId() != null){
-                AccountNDayQuery += 'AND AccountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
+            if (getIndividualAccountId() != '' && getIndividualAccountId() != null){
+                AccountNDayQuery += 'AND AccountID != \'' + getIndividualAccountId() + '\' ';
             }
             if(areRecordTypesOnOpps()){ 
                 AccountNDayQuery += 'AND RecordTypeId NOT IN :rectypeset '; 
@@ -466,8 +479,8 @@ public without sharing class OpportunityRollup_Utilities {
             AccountMembershipQuery += 'FROM Opportunity ';
             AccountMembershipQuery += 'WHERE isWon=true  ';
             AccountMembershipQuery += 'AND Amount != null  ';         
-            if (npe01.Constants.GetIndividualAccountId() != null){
-                AccountMembershipQuery += 'AND accountID != \'' + npe01.Constants.GetIndividualAccountId() + '\' ';
+            if (getIndividualAccountId() != '' && getIndividualAccountId() != null){
+                AccountMembershipQuery += 'AND accountID != \'' + getIndividualAccountId() + '\' ';
             }            
             if(areRecordTypesOnOpps()){
                 AccountMembershipQuery += 'AND RecordTypeId IN :memberset ';
@@ -646,7 +659,7 @@ public without sharing class OpportunityRollup_Utilities {
                 SoftCreditQuery = 'SELECT ContactId, Fiscal_Year(Opportunity.CloseDate) CalendarYr, ';
             else
                 SoftCreditQuery = 'SELECT ContactId, Calendar_Year(Opportunity.CloseDate) CalendarYr, ';            
-            SoftCreditQuery += 'SUM(Opportunity.Amount) TotalOppAmount, ';
+            SoftCreditQuery += 'SUM(Opportunity.Amount) TotalOppAmount ';
             SoftCreditQuery += 'FROM OpportunityContactRole ';
             SoftCreditQuery += 'WHERE Opportunity.isWon=true '; 
             SoftCreditQuery += 'AND Opportunity.Amount != null ';   
@@ -657,11 +670,11 @@ public without sharing class OpportunityRollup_Utilities {
             else
                 SoftCreditQuery += 'GROUP BY ROLLUP(ContactId, Calendar_Year(Opportunity.CloseDate)) ';
         }           
-        return SoftCreditQuery; 
+        return SoftCreditQuery;  
     }
     
     /****************************************/
-    
+     
     /*** Utility Methods ***/    
     
     public static integer getCurrentFY() {        
