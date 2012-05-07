@@ -66,12 +66,12 @@ public with sharing class householdsSettings {
     }
     /*********************************************/
     
-    
     public householdsSettings(){
         acctRTs = new List<string>();
         acctTypes = new List<string>();
         contactRTs = new List<string>();
         contactTypes = new List<string>();
+        scContactRoles = new List<string>();
         if (runningbatch == null)
             runningbatch = false;
         activeTab = 'HouseholdSettingsTab'; 
@@ -140,6 +140,9 @@ public with sharing class householdsSettings {
         	contactRTs = pageSettings.npo02__Excluded_Contact_Opp_Rectypes__c.split(';',0);
         }
         
+        if (pageSettings.npo02__Soft_Credit_Roles__c != null){
+        	scContactRoles = pageSettings.npo02__Soft_Credit_Roles__c.split(';',0);
+        }        
         
         if (pr != null){
         	pr.setRedirect(true);
@@ -153,6 +156,7 @@ public with sharing class householdsSettings {
     public List<String> acctTypes {get;set;}
     public List<String> contactRTs {get;set;}
     public List<String> contactTypes {get;set;}
+    public List<String> scContactRoles {get;set;}
     
     public List<SelectOption> getcontactRoles() {
     
@@ -286,6 +290,13 @@ public with sharing class householdsSettings {
         }
         if (s != '') pageSettings.Excluded_Contact_Opp_Rectypes__c = s.substring(1);
         
+        s='';
+        for (String scocr : scContactRoles){
+        	if (scocr != null && scocr != ''){
+        		s+= ';' + scocr;
+        	}        	
+        }
+        if (s!='')pageSettings.Soft_Credit_Roles__c = s.substring(1);
         
         s = '';
         for (String tp : acctTypes) {
@@ -302,6 +313,8 @@ public with sharing class householdsSettings {
         if (s != '') pageSettings.Excluded_Contact_Opp_Types__c = s.substring(1);
         update pageSettings;
         showMsg('Households Settings updated',ApexPages.Severity.INFO);
+        editHouseholdSettingsTab = false;
+        editRollupSettingsTab = false;
         //schedule the rollup if need be
         scheduleRollups();
     }
