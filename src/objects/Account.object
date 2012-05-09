@@ -396,7 +396,7 @@
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Total Gifts Last 365 Days</label>
+        <label>Total Gifts Last N Days</label>
         <precision>16</precision>
         <required>false</required>
         <scale>2</scale>
