@@ -539,7 +539,8 @@ global without sharing class Households {
             Membership_Record_Types__c = mySettings.Membership_Record_Types__c,
             Advanced_Household_Naming__c = mySettings.Advanced_Household_Naming__c,
             Enable_Soft_Credit_Rollups__c = mySettings.Enable_Soft_Credit_Rollups__c,
-            Soft_Credit_Roles__c = mySettings.Soft_Credit_Roles__c            
+            Soft_Credit_Roles__c = mySettings.Soft_Credit_Roles__c,        
+            Schedule_Job_Limit__c = 25
             );
         insert householdsSettings;
             
