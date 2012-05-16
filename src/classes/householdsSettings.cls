@@ -182,8 +182,8 @@ public with sharing class householdsSettings {
         if(pageSettings.Enable_Opp_Rollup_Triggers__c){
             Integer scheduledJobLimit = (integer)pageSettings.Schedule_Job_Limit__c;
             boolean alreadyScheduled = false;            
-            
-            List<cronTrigger> scheduledRollups = [SELECT Id FROM cronTrigger limit :scheduledJobLimit];
+            List<cronTrigger> scheduledRollups = new List<cronTrigger>();
+            scheduledRollups = [SELECT Id FROM cronTrigger limit :scheduledJobLimit];
             
             if(pageSettings.Opp_Rollup_Scheduled_Job_Id__c != null){
                 for(cronTrigger thisScheduledJob : scheduledRollups){ 
@@ -388,8 +388,18 @@ public with sharing class householdsSettings {
         controller.pageSettings.Enable_Opp_Rollup_Triggers__c = true;
         controller.editHouseholdSettings();
         controller.editRollupSettings();
+        controller.updateSettings();  
         controller.cancel();
-        controller.deleteErrors();        
-        controller.updateSettings();                
+        controller.deleteErrors();
+        controller.activateHouseholdNaming();
+        system.assertEquals(true, controller.runningBatch);        
+        
+        //test package update calls
+        String myver = controller.getMyVersion();
+        system.assertEquals(String.valueOf(Package.Version.Request), myver);
+        String maxver = controller.getMaxVersion();
+        String uUrl = controller.getUpdateURL();
+        String lastUpdate = controller.getLastUpdate();
+        String pkupdates = controller.getpkgupdatestatus();              
     }    
 }
