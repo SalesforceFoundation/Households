@@ -428,9 +428,9 @@ public without sharing class OpportunityRollup_Utilities {
             AccountRollupQuery += 'FROM Opportunity ';
             AccountRollupQuery += 'WHERE isWon=true '; 
             AccountRollupQuery += 'AND Amount != null '; 
-            if (getIndividualAccountId() != '' && getIndividualAccountId() != null){
+            if (getIndividualAccountId() != null){
                 AccountRollupQuery += 'AND AccountID != \'' + getIndividualAccountId() + '\' ';
-            }        
+            }         
             if(areRecordTypesOnOpps()){
                 AccountRollupQuery += 'AND RecordTypeId NOT IN :rectypeset ';
             }
@@ -454,7 +454,7 @@ public without sharing class OpportunityRollup_Utilities {
             AccountNDayQuery += 'FROM Opportunity  '; 
             AccountNDayQuery += 'WHERE isWon=true  '; 
             AccountNDayQuery += 'AND Amount != null '; 
-            if (getIndividualAccountId() != '' && getIndividualAccountId() != null){
+            if (getIndividualAccountId() != null){
                 AccountNDayQuery += 'AND AccountID != \'' + getIndividualAccountId() + '\' ';
             }
             if(areRecordTypesOnOpps()){ 
@@ -479,7 +479,7 @@ public without sharing class OpportunityRollup_Utilities {
             AccountMembershipQuery += 'FROM Opportunity ';
             AccountMembershipQuery += 'WHERE isWon=true  ';
             AccountMembershipQuery += 'AND Amount != null  ';         
-            if (getIndividualAccountId() != '' && getIndividualAccountId() != null){
+            if (getIndividualAccountId() != null){
                 AccountMembershipQuery += 'AND accountID != \'' + getIndividualAccountId() + '\' ';
             }            
             if(areRecordTypesOnOpps()){
