@@ -790,9 +790,9 @@ global with sharing class ManageHousehold_EXT {
         insert con;
         Test.startTest();
         
-        npo02__Household__c tempHH = new npo02__Household__c();
-        ApexPages.StandardController sc = new ApexPages.standardController(tempHH);
-        
+        ApexPages.StandardController sc = new ApexPages.standardController(hh);
+              
+        Test.setCurrentPageReference(new PageReference('Page.manageHousehold'));              
         // Test a good hhid
         ApexPages.currentPage().getParameters().put('hhid', hh.Id);
         ManageHousehold_EXT ext = new ManageHousehold_EXT(sc);
@@ -809,7 +809,7 @@ global with sharing class ManageHousehold_EXT {
         ext.insertContacts.add(new Contact(Firstname = 'John', LastName ='Jones', npo02__Naming_Exclusions__c = 'Household__c.Name;Household__c.Formal_Greeting__c;Household__c.Informal_Greeting__c;'));
         
         ext.saveHH();
-        
+        Test.stopTest();
         Contact con1 = [select MailingStreet,MailingState,MailingCity,MailingPostalCode,MailingCountry from contact where id = :con.id][0];
         //test household address written to contact
         system.assertEquals(con1.MailingStreet, ext.hh.npo02__MailingStreet__c);
@@ -824,17 +824,7 @@ global with sharing class ManageHousehold_EXT {
         system.assertEquals(con2.MailingState, ext.hh.npo02__MailingState__c);
         system.assertEquals(con2.MailingCity, ext.hh.npo02__MailingCity__c);
         system.assertEquals(con2.MailingPostalCode, ext.hh.npo02__MailingPostalCode__c);
-        system.assertEquals(con2.MailingCountry, ext.hh.npo02__MailingCountry__c);
-        //test name
-        system.assertEquals('TestContactASDF Household', ext.getHHName());
-        
-        //test greeting
-        system.assertEquals('David TestContactASDF', ext.getHHFormalName());
-        
-        //test greeting
-        system.assertEquals('David', ext.getHHInformalName());
-        
-        Test.stopTest();
+        system.assertEquals(con2.MailingCountry, ext.hh.npo02__MailingCountry__c);   
     }
     
     public static testMethod void testRemoveContactActiveAddress() {
@@ -920,7 +910,6 @@ global with sharing class ManageHousehold_EXT {
             Name = 'test_hh'
             );
         
-        
         Contact con = new Contact(
             LastName = 'TestContactASDF',
             email = 'testemail@groundwiretest.org',
@@ -954,9 +943,7 @@ global with sharing class ManageHousehold_EXT {
         system.assertEquals(con.id, ext.conId);
         
         system.assertEquals(null, ext.hh.id);
-        
-        
-        
+       
         // verify that we receive false when we attempt to add a bad contact
         system.assertEquals(false, ext.addContact('01pU0000000h6LK'));
         system.assertEquals(false, ext.addContactWithHousehold('01pU0000000h6LK'));
@@ -1081,16 +1068,12 @@ global with sharing class ManageHousehold_EXT {
         string hhName = ext.getHHName();
         string hhGreeting = ext.getHHFormalName();
         
-        //test the name
-        /*system.assertEquals(true, hhName.contains('Mike'));
-        system.assertEquals(true, hhName.contains('Cheryl'));*/
-        system.assertEquals(true, hhGreeting.contains('Mike'));
-        //system.assertEquals(true, hhGreeting.contains('Cheryl'));
+        //test the name       
+        system.assertEquals(true, hhGreeting.contains('Mike'));        
         
         // verify that the contact was added
         system.assertEquals(2, ext.activeContacts.size());
-        //system.assertEquals(true, ext.activeConIds.contains(cQ[1].Id));
-        
+                
         cQ = ManageHousehold_EXT.findContacts('zzzzzz', ext.jsonState);
         
         system.assertEquals(0, cQ.size());
@@ -1200,8 +1183,7 @@ global with sharing class ManageHousehold_EXT {
         // Now, test delete
         ext.deleteHH();
         
-        Test.stopTest();
-        
+        Test.stopTest();        
     }
     
     public static testMethod void testRemoveReAdd() {
@@ -1231,8 +1213,7 @@ global with sharing class ManageHousehold_EXT {
         ManageHousehold_EXT ext = new ManageHousehold_EXT(sc);
         
         String jsSt;
-        String nwSt;
-        
+        String nwSt;        
         
         system.assertEquals(2, ext.activeContacts.size());
         system.assertEquals(0,ext.removeContacts.size());
@@ -1242,16 +1223,13 @@ global with sharing class ManageHousehold_EXT {
         nwSt = ManageHousehold_EXT.remoteRemoveMember(con2.id, jsSt);
         ext = ManageHousehold_EXT.unpackState(nwSt);
         
-        
         system.assertEquals(1, ext.activeContacts.size());
         system.assertEquals(1,ext.removeContacts.size());
-        
         
         // re add it
         jsSt = JSON.serialize(ext);
         nwSt = ManageHousehold_EXT.remoteAddMember(con2.id, false, jsSt);
         ext = ManageHousehold_EXT.unpackState(nwSt);
-        
         
         system.assertEquals(2, ext.activeContacts.size());
         system.assertEquals(0,ext.removeContacts.size());
@@ -1265,7 +1243,6 @@ global with sharing class ManageHousehold_EXT {
 
         system.assertEquals(2,[SELECT Id, npo02__Household__c FROM Contact WHERE npo02__Household__c = :hh.id].size());       
 
-        Test.stopTest();
-        
+        Test.stopTest();        
     }
 }
