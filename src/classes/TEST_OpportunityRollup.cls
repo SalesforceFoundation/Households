@@ -1227,4 +1227,51 @@ public with sharing class TEST_OpportunityRollup {
         OpportunityRollups.rollupHouseholdsFuture(HHid);        
     	Test.stopTest();
     }    
+    
+    static testMethod void testOpportunityUtilityErrorHandling(){
+    	String giftRecordTypeNameForTests = RecordTypes.getRecordTypeNameForGiftsTests('Opportunity');
+
+        Households_Settings__c householdSettingsForTests = Households.getHouseholdsSettingsForTests(
+            new Households_Settings__c (
+            Household_Rules__c = Households.ALL_PROCESSOR,
+            Always_Rollup_to_Primary_Contact__c = false,
+            Enable_Opp_Rollup_Triggers__c = false,
+            Excluded_Account_Opp_Rectypes__c = null,
+            Excluded_Account_Opp_Types__c = null,
+            Excluded_Contact_Opp_Rectypes__c = null,
+            Excluded_Contact_Opp_Types__c = null,
+            Membership_Record_Types__c = null,
+            Enable_Soft_Credit_Rollups__c = true,
+            Soft_Credit_Roles__c = 'TestOCR',     
+            Advanced_Household_Naming__c = false               
+        ));
+                
+        npe01__Contacts_and_Orgs_Settings__c contactSettingsForTests = npe01.Constants.getContactsSettingsForTests(
+            new npe01__Contacts_and_Orgs_Settings__c (
+            npe01__Account_Processor__c = npe01.Constants.ONE_TO_ONE_PROCESSOR,
+            npe01__Enable_Opportunity_Contact_Role_Trigger__c = true,
+            npe01__Opportunity_Contact_Role_Default_role__c = 'Donor'
+        ));
+                
+        // create & insert contact(s)
+        Contact[] TestCons = UnitTestData.CreateMultipleTestContacts(10) ;
+        insert TestCons;
+    
+        //create new opp with a missing required field
+        Opportunity[] newOpps = UnitTestData.OppsForContactList ( TestCons, null, UnitTestData.getClosedWonStage(), null, 1000 , giftRecordTypeNameForTests ,null);
+            	
+    	Database.Saveresult[] sr = Database.insert(newOpps, false);
+    	system.assert(sr != null);
+    	system.assert(TestCons[0].id != null);
+    	Opportunity_Rollup_Error__c ore = OpportunityRollup_Utilities.createError(sr[0], 'Opportunity', TestCons[0].id);
+    	system.assert(ore != null);
+    	system.assertEquals('Required Field Missing',ore.Error_Type__c);
+    	system.assert(ore.Name.startsWith(TestCons[0].id));
+    	system.assertEquals('Opportunity',ore.Error_Object_Type__c);
+    }
+    
+    static testMethod void testFYUtility(){    	
+    	integer fy = OpportunityRollup_Utilities.getCurrentFY();
+        system.assert(fy != null);    	
+    }
 }
