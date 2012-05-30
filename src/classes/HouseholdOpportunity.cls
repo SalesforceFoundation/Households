@@ -41,8 +41,10 @@ public class HouseholdOpportunity {
         Households_Settings__c currentHouseholdsSettings = Households.getHouseholdsSettings();
         
         set<string> HouseholdOCRRecordTypeExclusions = new set<string>();
+        set<id> conRecordTypesToExclude = new set<id>();
         if (currentHouseholdsSettings.Household_OCR_Excluded_Recordtypes__c != null) {
-            HouseholdOCRRecordTypeExclusions = new set<string>(currentHouseholdsSettings.Household_OCR_Excluded_Recordtypes__c.split(';'));            
+            HouseholdOCRRecordTypeExclusions = new set<string>(currentHouseholdsSettings.Household_OCR_Excluded_Recordtypes__c.split(';'));
+            conRecordTypesToExclude = RecordTypes.GetRecordTypeIdSet('Contact', HouseholdOCRRecordTypeExclusions);            
         }
         
         boolean recordTypesOnCons = false;
@@ -168,7 +170,7 @@ public class HouseholdOpportunity {
                                 }
                             } else {
                             	//exclude any Contacts with an excluded record type
-                            	if (recordTypesOnCons && HouseholdOCRRecordTypeExclusions.contains((string)householdMember.get('RecordTypeId'))){
+                            	if (recordTypesOnCons && conRecordTypesToExclude.contains((id)householdMember.get('RecordTypeId'))){
                             	   //backwards, but prevents having to query for a RecordTypeId that may or may not be there...
                             	}                            		                                
                                 else{
