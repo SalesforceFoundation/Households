@@ -201,6 +201,16 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Household_Creation_Excluded_Recordtypes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact recordtypes excluded from Household creation</inlineHelpText>
+        <label>Household Creation Excluded Recordtypes</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Household_Mailing_List_ID__c</fullName>
         <deprecated>false</deprecated>
         <description>The report ID of the Household Mailing List Report used for Household-deduplicated Campaign mailing lists.  Report should be of Campaigns with Contacts, where Member Status does not contain &apos;Duplicate&apos;</description>
@@ -218,6 +228,16 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
         <externalId>false</externalId>
         <inlineHelpText>Select the Contact Role for Household Members</inlineHelpText>
         <label>Household Member Contact Role</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Household_OCR_Excluded_Recordtypes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact recordtypes excluded from Household Opportunity Contact Role creation</inlineHelpText>
+        <label>Household OCR Excluded Recordtypes</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
