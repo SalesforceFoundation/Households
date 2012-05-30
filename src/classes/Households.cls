@@ -186,7 +186,7 @@ global without sharing class Households {
             if (currentHouseholdsSettings.Async_Household_Naming__c == true)
                 HouseholdNaming.FutureUpdateNames(householdnameupdates);
             else{
-                HouseholdNaming hn = new HouseholdNaming();
+                HouseholdNaming hn = new HouseholdNaming(); 
                 hn.UpdateNames(householdnameupdates);
             }                   
         }
@@ -200,10 +200,12 @@ global without sharing class Households {
         List<Household__c> householdInserts = new List<Household__c>();
         //reload to evaluate insert criteria
         Households_Settings__c currentHouseholdsSettings = getHouseholdsSettings();
-        
+                
         set<string> HouseholdRecordTypeExclusions = new set<string>();
+        set<id> conRecordTypesToExclude = new set<id>();
         if (currentHouseholdsSettings.Household_Creation_Excluded_Recordtypes__c != null) {
-            HouseholdRecordTypeExclusions = new set<string>(currentHouseholdsSettings.Household_Creation_Excluded_Recordtypes__c.split(';'));            
+            HouseholdRecordTypeExclusions = new set<string>(currentHouseholdsSettings.Household_Creation_Excluded_Recordtypes__c.split(';'));
+            conRecordTypesToExclude = RecordTypes.GetRecordTypeIdSet('Contact', HouseholdRecordTypeExclusions);            
         }
         
         boolean recordTypesOnCons = false;
@@ -212,7 +214,7 @@ global without sharing class Households {
         
         for(Contact c : contacts)
         {
-        	if (!recordTypesOnCons || !HouseholdRecordTypeExclusions.contains((string)c.get('RecordTypeId'))){        	
+        	if (!recordTypesOnCons || !conRecordTypesToExclude.contains((id)c.get('RecordTypeId'))){        	
                 Household__c h = new Household__c(); 
                 String hName = c.LastName;
                 hName += ' ' + system.label.DefaultHouseholdName;
