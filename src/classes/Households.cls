@@ -200,22 +200,33 @@ global without sharing class Households {
         List<Household__c> householdInserts = new List<Household__c>();
         //reload to evaluate insert criteria
         Households_Settings__c currentHouseholdsSettings = getHouseholdsSettings();
-
+        
+        set<string> HouseholdRecordTypeExclusions = new set<string>();
+        if (currentHouseholdsSettings.Household_Creation_Excluded_Recordtypes__c != null) {
+            HouseholdRecordTypeExclusions = new set<string>(currentHouseholdsSettings.Household_Creation_Excluded_Recordtypes__c.split(';'));            
+        }
+        
+        boolean recordTypesOnCons = false;
+        if(Schema.sObjectType.Contact.fields.getMap().get('RecordTypeId') != null)
+            recordTypesOnCons = true;
+        
         for(Contact c : contacts)
         {
-            Household__c h = new Household__c();
-            String hName = c.LastName;
-            hName += ' ' + system.label.DefaultHouseholdName;
-            h.Name = hName;
-            //sync the primary address block
-            h.MailingStreet__c = c.MailingStreet;
-            h.MailingCity__c = c.MailingCity;
-            h.MailingState__c = c.MailingState;
-            h.MailingPostalCode__c  = c.MailingPostalCode;
-            h.MailingCountry__c = c.MailingCountry;
-            h.HouseholdPhone__c = c.HomePhone;
-            h.HouseholdEmail__c = c.Email;
-            householdInserts.add(h);
+        	if (!recordTypesOnCons || !HouseholdRecordTypeExclusions.contains((string)c.get('RecordTypeId'))){        	
+                Household__c h = new Household__c(); 
+                String hName = c.LastName;
+                hName += ' ' + system.label.DefaultHouseholdName;
+                h.Name = hName;
+                //sync the primary address block
+                h.MailingStreet__c = c.MailingStreet;
+                h.MailingCity__c = c.MailingCity;
+                h.MailingState__c = c.MailingState;
+                h.MailingPostalCode__c  = c.MailingPostalCode;
+                h.MailingCountry__c = c.MailingCountry;
+                h.HouseholdPhone__c = c.HomePhone;
+                h.HouseholdEmail__c = c.Email;
+                householdInserts.add(h);
+        	}                
         }
         List<Contact> contactUpdates = new List<Contact>();
         
