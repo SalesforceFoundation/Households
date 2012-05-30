@@ -24,6 +24,20 @@
                                 <apex:outputLabel value="Households Rules" />
                                 <apex:outputfield value="{!settings.Household_Rules__c}"/>                                
                             </apex:pageBlockSectionItem>
+	                
+	                    <apex:pageBlockSectionItem helpText="Select any Contact record types that should be excluded from receiving a Household automatically." rendered="{!editHouseholdSettingsTab}">
+                            <apex:outputLabel value="Households Contact Recordtype Exclusions" /> 
+                            <apex:selectList value="{!hhContactRTExclusions}" multiselect="true">
+                                <apex:selectOptions value="{!conRTypes}" />
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>                            
+                        <apex:pageBlockSectionItem helpText="Select any Contact record types that should be excluded from receiving a Household automatically." rendered="{!NOT(editHouseholdSettingsTab)}">                             
+                            <apex:outputLabel value="Households Contact Recordtype Exclusions" />
+                            <apex:outputtext value="{!IF(AND(settings.Household_Creation_Excluded_Recordtypes__c != null, settings.Household_Creation_Excluded_Recordtypes__c != ' '), settings.Household_Creation_Excluded_Recordtypes__c, 'No Recordtypes Selected')}"/>
+                        </apex:pageBlockSectionItem>
+	                
+	                
+	                
 	                </apex:pageBlockSection>
 	
 	                <apex:pageBlockSection id="householdrolesection" title="Household Contact Roles" columns="1" collapsible="false">
@@ -34,6 +48,7 @@
                            <apex:outputLabel value="Enable Household Contact Roles"/>
 	                       <apex:inputcheckbox value="{!settings.Household_Contact_Roles_On__c}" disabled="{!NOT(editHouseholdSettingsTab)}"/>
                         </apex:pageBlockSectionItem>
+	              
 	                    <apex:pageBlockSectionItem helpText="Select the role all Household Members should receive for Opportunities." rendered="{!editHouseholdSettingsTab}">
 	                        <apex:outputLabel value="Households Member Contact Role" /> 
 	                        <apex:selectList value="{!settings.Household_Member_Contact_Role__c}" multiselect="false" size="1">
@@ -42,8 +57,20 @@
                         </apex:pageBlockSectionItem>	                        
                         <apex:pageBlockSectionItem helpText="Select the role all Household Members should receive for Opportunities." rendered="{!NOT(editHouseholdSettingsTab)}">	                           
                             <apex:outputLabel value="Households Member Contact Role" />
-                            <apex:outputtext value="{!IF(AND(settings.Household_Member_Contact_Role__c == null, settings.Household_Member_Contact_Role__c == ''), 'No Role Selected', settings.Household_Member_Contact_Role__c)}"/>
+                            <apex:outputtext value="{!IF(AND(settings.Household_Member_Contact_Role__c != null, settings.Household_Member_Contact_Role__c != ' '), settings.Household_Member_Contact_Role__c, 'No Role Selected')}"/>
                         </apex:pageBlockSectionItem>
+	                
+	                   <apex:pageBlockSectionItem helpText="Select any Contact record types that should be excluded from receiving a Household Opportunity Contact Role." rendered="{!editHouseholdSettingsTab}">
+                            <apex:outputLabel value="Households Contact Role Exclusions" /> 
+                            <apex:selectList value="{!OCRContactRTExclusions}" multiselect="true">
+                                <apex:selectOptions value="{!conRTypes}" />
+                            </apex:selectList>
+                        </apex:pageBlockSectionItem>                            
+                        <apex:pageBlockSectionItem helpText="Select any Contact record types that should be excluded from receiving a Household Opportunity Contact Role." rendered="{!NOT(editHouseholdSettingsTab)}">                             
+                            <apex:outputLabel value="Households Contact Role Exclusions" />
+                            <apex:outputtext value="{!IF(AND(settings.Household_OCR_Excluded_Recordtypes__c != null, settings.Household_OCR_Excluded_Recordtypes__c != ' '), settings.Household_OCR_Excluded_Recordtypes__c, 'No Recordtypes Selected')}"/>
+                        </apex:pageBlockSectionItem>
+	                
 	                </apex:pageBlockSection>
 	             
 	                <apex:pageBlockSection id="householdsettingssection5" title="Household Name Settings" collapsible="false">
@@ -131,7 +158,7 @@
 	                    </apex:pageBlockSectionItem>	                    
 	                    <apex:pageBlockSectionItem rendered="{!NOT(editRollupSettingsTab)}" helpText="All Opportunity Record Types will be included in rollups to Accounts unless they are selected here for exclusion.">
                             <apex:outputLabel value="Opportunity Record Types to Exclude from Account Rollups" />
-                            <apex:outputtext value="{!IF(AND(settings.Excluded_Account_Opp_Rectypes__c != '', settings.Excluded_Account_Opp_Rectypes__c != null), settings.Excluded_Account_Opp_Rectypes__c, 'No Recordtypes Selected')}" />                            
+                            <apex:outputtext value="{!IF(AND(settings.Excluded_Account_Opp_Rectypes__c != ' ', settings.Excluded_Account_Opp_Rectypes__c != null), settings.Excluded_Account_Opp_Rectypes__c, 'No Recordtypes Selected')}" />                            
                         </apex:pageBlockSectionItem>
 	                    <apex:pageBlockSectionItem rendered="{!editRollupSettingsTab}" helpText="All Opportunity Types will be included in rollups to Accounts unless they are selected here for exclusion.">
 	                        <apex:outputLabel value="Opportunity Types to Exclude from Account Rollups" />
@@ -141,7 +168,7 @@
 	                    </apex:pageBlockSectionItem>
 	                    <apex:pageBlockSectionItem rendered="{!NOT(editRollupSettingsTab)}" helpText="All Opportunity Types will be included in rollups to Accounts unless they are selected here for exclusion.">
                             <apex:outputLabel value="Opportunity Types to Exclude from Account Rollups" />
-                            <apex:outputtext value="{!IF(AND(settings.Excluded_Account_Opp_Types__c != null, settings.Excluded_Account_Opp_Types__c != ''), settings.Excluded_Account_Opp_Types__c, 'No Types Selected')}"/>
+                            <apex:outputtext value="{!IF(AND(settings.Excluded_Account_Opp_Types__c != null, settings.Excluded_Account_Opp_Types__c != ' '), settings.Excluded_Account_Opp_Types__c, 'No Types Selected')}"/>
                         </apex:pageBlockSectionItem>
 	                    <apex:pageBlockSectionItem rendered="{!editRollupSettingsTab}" helpText="All Opportunity Record Types will be included in rollups to Contacts unless they are selected here for exclusion.">
 	                        <apex:outputLabel value="Opportunity Record Types to Exclude from Contact Rollups" />
@@ -151,7 +178,7 @@
 	                    </apex:pageBlockSectionItem>	                    
                           <apex:pageBlockSectionItem rendered="{!NOT(editRollupSettingsTab)}" helpText="All Opportunity Record Types will be included in rollups to Contacts unless they are selected here for exclusion.">
                             <apex:outputLabel value="Opportunity Record Types to Exclude from Contact Rollups" />
-                            <apex:outputtext value="{!IF(AND(settings.Excluded_Contact_Opp_Rectypes__c != null, settings.Excluded_Contact_Opp_Rectypes__c != ''), settings.Excluded_Contact_Opp_Rectypes__c, 'No Recordtypes Selected')}" />
+                            <apex:outputtext value="{!IF(AND(settings.Excluded_Contact_Opp_Rectypes__c != null, settings.Excluded_Contact_Opp_Rectypes__c != ' '), settings.Excluded_Contact_Opp_Rectypes__c, 'No Recordtypes Selected')}" />
                         </apex:pageBlockSectionItem>
 	                    <apex:pageBlockSectionItem rendered="{!editRollupSettingsTab}" helpText="All Opportunity Types will be included in rollups to Accounts unless they are selected here for exclusion.">
 	                        <apex:outputLabel value="Opportunity Types to Exclude from Contact Rollups" />
@@ -161,7 +188,7 @@
 	                    </apex:pageBlockSectionItem>
                         <apex:pageBlockSectionItem rendered="{!NOT(editRollupSettingsTab)}" helpText="All Opportunity Types will be included in rollups to Accounts unless they are selected here for exclusion.">
                             <apex:outputLabel value="Opportunity Types to Exclude from Contact Rollups" />
-                            <apex:outputtext value="{!IF(AND(settings.Excluded_Contact_Opp_Types__c != null, settings.Excluded_Contact_Opp_Types__c != ''), settings.Excluded_Contact_Opp_Types__c, 'No Types Selected')}"/>
+                            <apex:outputtext value="{!IF(AND(settings.Excluded_Contact_Opp_Types__c != null, settings.Excluded_Contact_Opp_Types__c != ' '), settings.Excluded_Contact_Opp_Types__c, 'No Types Selected')}"/>
                         </apex:pageBlockSectionItem>
 	                </apex:pageBlockSection>	                
 	                
@@ -174,7 +201,7 @@
 	                    </apex:pageBlockSectionItem>
 	                    <apex:pageBlockSectionItem rendered="{!NOT(editRollupSettingsTab)}" helpText="One Opportunity Record Type can be called out for Membership calculations.">
                             <apex:outputLabel value="Membership Record Type Names" />
-                            <apex:outputtext value="{!IF(AND(settings.Membership_Record_Types__c != null, settings.Membership_Record_Types__c != ''), settings.Membership_Record_Types__c, 'No Recordtype Selected')}"/>                           
+                            <apex:outputtext value="{!IF(AND(settings.Membership_Record_Types__c != null, settings.Membership_Record_Types__c != ' '), settings.Membership_Record_Types__c, 'No Recordtype Selected')}"/>                           
                         </apex:pageBlockSectionItem>  
 	                    <apex:pageblocksectionitem rendered="{!NOT(editRollupSettingsTab)}" helptext="The length of the grace period (in days) after a membership expires (last end date) before the status moves from 'Grace Period' to 'Expired'. Defaults to 30 days.">
 	                       <apex:outputlabel value="Membership Grace Period"/>
@@ -199,7 +226,7 @@
                         </apex:pageBlockSectionItem>
                         <apex:pageBlockSectionItem rendered="{!NOT(editRollupSettingsTab)}" helpText="The Opportunity Contact Role 'Roles' to be included in soft credit rollups.">
                             <apex:outputLabel value="Opportunity Contact Roles for Soft Credits" />
-                            <apex:outputtext value="{!IF(AND(settings.Soft_Credit_Roles__c != null, settings.Soft_Credit_Roles__c != ''), settings.Soft_Credit_Roles__c, 'No Roles Selected')}"/>
+                            <apex:outputtext value="{!IF(AND(settings.Soft_Credit_Roles__c != null, settings.Soft_Credit_Roles__c != ' '), settings.Soft_Credit_Roles__c, 'No Roles Selected')}"/>
                         </apex:pageBlockSectionItem>
 	                </apex:pageblocksection>
 	                <apex:outputPanel style="text-align: center; display: block; margin-left:auto; margin-right:auto;">

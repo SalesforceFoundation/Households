@@ -72,6 +72,9 @@ public with sharing class householdsSettings {
         contactRTs = new List<string>();
         contactTypes = new List<string>();
         scContactRoles = new List<string>();
+        hhContactRTExclusions = new List<string>();
+        OCRContactRTExclusions = new List<string>();        
+        
         if (runningbatch == null)
             runningbatch = false;
         activeTab = 'HouseholdSettingsTab'; 
@@ -144,6 +147,15 @@ public with sharing class householdsSettings {
         	scContactRoles = pageSettings.npo02__Soft_Credit_Roles__c.split(';',0);
         }        
         
+        if (pageSettings.Household_OCR_Excluded_Recordtypes__c != null){
+            OCRContactRTExclusions = pageSettings.Household_OCR_Excluded_Recordtypes__c.split(';',0);	
+        }        
+          
+        if (pageSettings.Household_Creation_Excluded_Recordtypes__c != null){
+            hhContactRTExclusions = pageSettings.Household_Creation_Excluded_Recordtypes__c.split(';',0);        	
+        }
+        
+        
         if (pr != null){
         	pr.setRedirect(true);
         }
@@ -157,6 +169,8 @@ public with sharing class householdsSettings {
     public List<String> contactRTs {get;set;}
     public List<String> contactTypes {get;set;}
     public List<String> scContactRoles {get;set;}
+    public List<String> OCRContactRTExclusions {get; set;}
+    public List<String> hhContactRTExclusions {get; set;}
     
     public List<SelectOption> getcontactRoles() {
     
@@ -174,6 +188,7 @@ public with sharing class householdsSettings {
     List<SelectOption> householdrules;
     List<SelectOption> RTypes;
     List<SelectOption> Types;
+    List<SelectOption> conRTypes;
     List<SelectOption> oppStages = new List<SelectOption>();
    
     public PageReference scheduleRollups(){
@@ -245,7 +260,16 @@ public with sharing class householdsSettings {
         return oppStages;
     }
     
-     public List<SelectOption> getRTypes() {
+    public List<SelectOption> getConRTypes(){
+    	if (ConRTypes == null){
+    		RTypes = new List<SelectOption>();
+    		RTypes.add(new SelectOption(' ', '- none -'));
+    		RTypes.addAll(RecordTypes.getStringRecordTypesForSelectList('Contact'));    		
+    	}    	
+    	return RTypes;
+    }    
+        
+    public List<SelectOption> getRTypes() {
         if(RTypes == null){
             RTypes = new List<SelectOption>();
             RTypes.add(new SelectOption(' ','- none -'));
@@ -304,13 +328,30 @@ public with sharing class householdsSettings {
             s += ';' + tp;
         }
         if (s != '') pageSettings.Excluded_Account_Opp_Types__c = s.substring(1);
-        
         s = '';
+
         for (String tp : contactTypes) {
             if (tp!=null&&tp!='')
             s += ';' + tp;
         }
         if (s != '') pageSettings.Excluded_Contact_Opp_Types__c = s.substring(1);
+        s = '';
+
+        for (String tp : OCRContactRTExclusions){
+        	if (tp!=null&&tp!='')
+        	s+= ';' + tp;
+        	
+        }
+        if (s!='')pageSettings.Household_OCR_Excluded_Recordtypes__c = s.substring(1);
+        s = '';
+
+        for (String tp : hhContactRTExclusions){
+            if (tp!=null&&tp!='')
+            s+= ';' + tp;            
+        }
+        if (s!='')pageSettings.Household_Creation_Excluded_Recordtypes__c = s.substring(1);        
+
+        
         update pageSettings;
         showMsg('Households Settings updated',ApexPages.Severity.INFO);
         editHouseholdSettingsTab = false;
@@ -334,10 +375,11 @@ public with sharing class householdsSettings {
         NPSPPkgVersionCheck npvc = new NPSPPkgVersionCheck('npo02');        
         npvc.NPSPCheckVersion(true);
     }
-    public pageReference cancel(){
+    public pageReference cancel(){    	
         editHouseholdSettingsTab = false;
         editRollupSettingsTab = false;
-        return null;
+        pageReference pr = ApexPages.currentPage().setRedirect(true);        
+        return pr;
     }
     public pageReference editHouseholdSettings(){
         editHouseholdSettingsTab = true;
