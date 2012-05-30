@@ -511,6 +511,8 @@ global without sharing class Households {
                 householdsSettings.Async_Household_Naming__c = false;
                 householdsSettings.Setupownerid = UserInfo.getOrganizationId();
                 householdsSettings.Schedule_Job_Limit__c = 25;
+                householdsSettings.Household_OCR_Excluded_Recordtypes__c = null;
+                householdsSettings.Household_Creation_Excluded_Recordtypes__c = null;
                 insert householdsSettings;
             }
         }
@@ -540,6 +542,8 @@ global without sharing class Households {
             Advanced_Household_Naming__c = mySettings.Advanced_Household_Naming__c,
             Enable_Soft_Credit_Rollups__c = mySettings.Enable_Soft_Credit_Rollups__c,
             Soft_Credit_Roles__c = mySettings.Soft_Credit_Roles__c,        
+            Household_OCR_Excluded_Recordtypes__c = mySettings.Household_OCR_Excluded_Recordtypes__c, 
+            Household_Creation_Excluded_Recordtypes__c = mySettings.Household_Creation_Excluded_Recordtypes__c,
             Schedule_Job_Limit__c = 25
             );
         insert householdsSettings;
