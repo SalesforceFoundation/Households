@@ -165,7 +165,9 @@ public with sharing class userRollupSettings{
                 'oppamount2yearsago__c', 'total_household_gifts__c', 'oppamountlastndayshh__c',
                 'oppamountlastyearhh__c', 'oppamountthisyearhh__c', 'totalmembershipoppamount__c',
                 'numberofclosedopps__c', 'systemhouseholdprocessor__c', 'naming_exclusions__c',
-                'best_gift_year__c', 'best_gift_year_total__c', 'household_naming_order__c'
+                'best_gift_year__c', 'best_gift_year_total__c', 'household_naming_order__c',
+                'soft_credit_last_year__c', 'soft_credit_this_year__c', 'soft_credit_total__c',
+                'soft_credit_two_years_ago__c'
                 };
         }
         else if(activeUDR.TargetObject == 'Account'){
