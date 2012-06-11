@@ -20,6 +20,10 @@ Installation
 * The dev branch contains the development source for the next major Households release
 
 
+Release Notes
+---
+Available [here](https://github.com/SalesforceFoundation/Households/wiki/Release-Notes)
+
 
 Meta
 ----
