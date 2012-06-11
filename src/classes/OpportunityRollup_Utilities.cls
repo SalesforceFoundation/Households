@@ -46,9 +46,7 @@ public without sharing class OpportunityRollup_Utilities {
     public static integer BATCH_SIZE = 200;
     private static boolean recordTypesOnOpps;
     private static boolean useSoftCredits;
-    private static id IndividualAccountId;
-    private static boolean accountIDCheck = false;
-    
+    private static set<id> IndividualAccountIds;
     
     /*** FY ***/
     private static integer fiscal_year;
@@ -221,12 +219,11 @@ public without sharing class OpportunityRollup_Utilities {
     	return useSoftCredits;
     }  
     
-    public static id getIndividualAccountId(){
-    	if (!accountIdCheck){
-    		IndividualAccountId = npe01.Constants.getIndividualAccountId();
-            accountIdCheck = true;    	           	
-    	}
-    	return IndividualAccountId;    	
+    public static set<id> getIndividualAccountIds(){
+    	if (IndividualAccountIds == null)    	   
+    		IndividualAccountIds = new set<id>{npe01.Constants.getIndividualAccountId()};                      	
+    	
+    	return IndividualAccountIds;    	
     }    
     
     /****************************************/
@@ -337,7 +334,7 @@ public without sharing class OpportunityRollup_Utilities {
     	//if the account id is not null and its not the individual/bucket account AND
     	//its the membership rectype or the rectype isn't exclused AND
         //the opp type isn't excluded
-    	if (o.AccountId != null && o.AccountId != getIndividualAccountId() && 
+    	if (o.AccountId != null && !getIndividualAccountIds().contains(o.AccountId) && 
     	(mbrRecordTypes.contains((id)o.get('recordTypeId')) || !recordTypesToExcludeAccts.contains((id)o.get('recordTypeId'))) && 
     	!oppTypesToExcludeAccts.contains(o.type)){
             needsRollup = true;    	           
@@ -428,8 +425,8 @@ public without sharing class OpportunityRollup_Utilities {
             AccountRollupQuery += 'FROM Opportunity ';
             AccountRollupQuery += 'WHERE isWon=true '; 
             AccountRollupQuery += 'AND Amount != null '; 
-            if (getIndividualAccountId() != null){
-                AccountRollupQuery += 'AND AccountID != \'' + getIndividualAccountId() + '\' ';
+            if (!getIndividualAccountIds().isEmpty()){
+                AccountRollupQuery += 'AND AccountID NOT IN ' + getIndividualAccountIds() + ' ' ;
             }         
             if(areRecordTypesOnOpps()){
                 AccountRollupQuery += 'AND RecordTypeId NOT IN :rectypeset ';
@@ -454,8 +451,8 @@ public without sharing class OpportunityRollup_Utilities {
             AccountNDayQuery += 'FROM Opportunity  '; 
             AccountNDayQuery += 'WHERE isWon=true  '; 
             AccountNDayQuery += 'AND Amount != null '; 
-            if (getIndividualAccountId() != null){
-                AccountNDayQuery += 'AND AccountID != \'' + getIndividualAccountId() + '\' ';
+            if (!getIndividualAccountIds().isEmpty()){
+                AccountNDayQuery += 'AND AccountID NOT IN ' + getIndividualAccountIds() + ' ';
             }
             if(areRecordTypesOnOpps()){ 
                 AccountNDayQuery += 'AND RecordTypeId NOT IN :rectypeset '; 
@@ -479,8 +476,8 @@ public without sharing class OpportunityRollup_Utilities {
             AccountMembershipQuery += 'FROM Opportunity ';
             AccountMembershipQuery += 'WHERE isWon=true  ';
             AccountMembershipQuery += 'AND Amount != null  ';         
-            if (getIndividualAccountId() != null){
-                AccountMembershipQuery += 'AND accountID != \'' + getIndividualAccountId() + '\' ';
+            if (!getIndividualAccountIds().isEmpty()){
+                AccountMembershipQuery += 'AND AccountID NOT IN ' + getIndividualAccountIds() + ' ';
             }            
             if(areRecordTypesOnOpps()){
                 AccountMembershipQuery += 'AND RecordTypeId IN :memberset ';
