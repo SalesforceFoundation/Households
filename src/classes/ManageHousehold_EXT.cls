@@ -1067,10 +1067,7 @@ global with sharing class ManageHousehold_EXT {
         
         string hhName = ext.getHHName();
         string hhGreeting = ext.getHHFormalName();
-        
-        //test the name       
-        system.assertEquals(true, hhGreeting.contains('Mike'));        
-        
+              
         // verify that the contact was added
         system.assertEquals(2, ext.activeContacts.size());
                 
