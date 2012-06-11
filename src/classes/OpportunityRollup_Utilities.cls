@@ -220,9 +220,11 @@ public without sharing class OpportunityRollup_Utilities {
     }  
     
     public static set<id> getIndividualAccountIds(){
-    	if (IndividualAccountIds == null)    	   
-    		IndividualAccountIds = new set<id>{npe01.Constants.getIndividualAccountId()};                      	
-    	
+    	if (IndividualAccountIds == null){    	   
+    		IndividualAccountIds = new set<id>();                      	
+            if (npe01.Constants.getIndividualAccountId() != null)
+                IndividualAccountIds.add(npe01.Constants.getIndividualAccountId());    	   
+    	}
     	return IndividualAccountIds;    	
     }    
     
@@ -426,7 +428,13 @@ public without sharing class OpportunityRollup_Utilities {
             AccountRollupQuery += 'WHERE isWon=true '; 
             AccountRollupQuery += 'AND Amount != null '; 
             if (!getIndividualAccountIds().isEmpty()){
-                AccountRollupQuery += 'AND AccountID NOT IN ' + getIndividualAccountIds() + ' ' ;
+                AccountRollupQuery += 'AND AccountID NOT IN (';
+                for (id i : getIndividualAccountIds()){                	
+                	AccountRollupQuery += '\'' + i + '\',';
+                }
+                //drop the trailing comma
+                AccountRollupQuery = AccountRollupQuery.substring(0, AccountRollupQuery.length() - 1);
+                AccountRollupQuery += ')';
             }         
             if(areRecordTypesOnOpps()){
                 AccountRollupQuery += 'AND RecordTypeId NOT IN :rectypeset ';
@@ -440,7 +448,7 @@ public without sharing class OpportunityRollup_Utilities {
                 AccountRollupQuery += 'GROUP BY ROLLUP (AccountId, Calendar_Year(CloseDate)) ';                
             }
             AccountRollupQuery += ' HAVING AccountId != null';
-    	}    	
+    	}
     	return AccountRollupQuery;
     }
     
@@ -452,8 +460,14 @@ public without sharing class OpportunityRollup_Utilities {
             AccountNDayQuery += 'WHERE isWon=true  '; 
             AccountNDayQuery += 'AND Amount != null '; 
             if (!getIndividualAccountIds().isEmpty()){
-                AccountNDayQuery += 'AND AccountID NOT IN ' + getIndividualAccountIds() + ' ';
-            }
+                AccountRollupQuery += 'AND AccountID NOT IN (';
+                for (id i : getIndividualAccountIds()){                 
+                    AccountRollupQuery += '\'' + i + '\',';
+                }
+                //drop the trailing comma
+                AccountRollupQuery = AccountRollupQuery.substring(0, AccountRollupQuery.length() - 1);
+                AccountRollupQuery += ')';
+            }   
             if(areRecordTypesOnOpps()){ 
                 AccountNDayQuery += 'AND RecordTypeId NOT IN :rectypeset '; 
             }
@@ -477,8 +491,14 @@ public without sharing class OpportunityRollup_Utilities {
             AccountMembershipQuery += 'WHERE isWon=true  ';
             AccountMembershipQuery += 'AND Amount != null  ';         
             if (!getIndividualAccountIds().isEmpty()){
-                AccountMembershipQuery += 'AND AccountID NOT IN ' + getIndividualAccountIds() + ' ';
-            }            
+                AccountRollupQuery += 'AND AccountID NOT IN (';
+                for (id i : getIndividualAccountIds()){                 
+                    AccountRollupQuery += '\'' + i + '\',';
+                }
+                //drop the trailing comma
+                AccountRollupQuery = AccountRollupQuery.substring(0, AccountRollupQuery.length()-1);
+                AccountRollupQuery += ')';
+            }             
             if(areRecordTypesOnOpps()){
                 AccountMembershipQuery += 'AND RecordTypeId IN :memberset ';
             }
