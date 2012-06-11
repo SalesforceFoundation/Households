@@ -311,7 +311,7 @@ global with sharing class ManageHousehold_EXT {
     ********************************************************************************************************/
     @RemoteAction
     global static string remoteSave(String state) {
-        ManageHousehold_EXT ManageHousehold = unpackState(state);
+        ManageHousehold_EXT ManageHousehold = unpackState(state);        
         ManageHousehold.saveHH();
         return packState(ManageHousehold);
     }
@@ -615,7 +615,8 @@ global with sharing class ManageHousehold_EXT {
     * state of the custom interface.
     * @return void.
     ********************************************************************************************************/
-    public void saveHH() {
+    public void saveHH() {    	
+		
 		//save the household address if this is a new household, in an existing household this is handled by the vanilla save action
 	    if (hh.id == null) { 
 			hh.npo02__MailingStreet__c = activeStreet;
@@ -693,7 +694,7 @@ global with sharing class ManageHousehold_EXT {
     * @return PageReference.
     ********************************************************************************************************/
     public PageReference save() {
-
+        HouseholdProcessControl.inFutureContext = true;
         ApexPages.StandardController sc = new ApexPages.standardController(hh);
         PageReference sv = sc.save();
         
