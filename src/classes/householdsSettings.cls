@@ -34,7 +34,8 @@
 */
 public with sharing class householdsSettings {  
     
-    public Households_Settings__c pageSettings = getSettings();
+    public Households_Settings__c pageSettings;
+    public Households_Settings__c getSettings(){return pageSettings;}
     public boolean runningBatch {get; set;}
     public string activeTab {get; set;}
     public boolean editRollupSettingsTab{get; set;}
@@ -91,12 +92,8 @@ public with sharing class householdsSettings {
         else{
         	hasErrors = false;
         }             
-    }
-    
-    public Households_Settings__c getSettings() {
-        pageSettings = Households.getHouseholdsSettings();
-        return pageSettings;
-    }
+    }    
+       
     //we can't do a DML in a getter, so I call it from the action of the page
     public PageReference getSettingsFirstTime() {
     	   
@@ -406,7 +403,7 @@ public with sharing class householdsSettings {
         //pass the controller into the extension
         householdsSettings controller = new householdsSettings(); 
         controller.getSettingsFirstTime();
-        system.assertNotEquals(null,controller.getSettings());
+        system.assertNotEquals(null,controller.pageSettings);
         
         List<SelectOption> householdrules =  controller.gethouseholdrules(); 
         system.assertEquals(3,householdrules.size());
