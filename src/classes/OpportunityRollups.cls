@@ -200,8 +200,18 @@ global virtual without sharing class OpportunityRollups{
         
         for (sobject r : objectList){            
             id aid = (id)(r.get('AccountId'));
-            if (aid != null)
+            if (aid != null){
                 updateRollupFromResult((sobject)(accountsToUpdate.get(aid)), r, opptyCurrencies);
+                
+                //calculate best gift year
+                decimal yrAmt = (decimal)r.get('TotalOppAmount');
+                integer yr = (integer)r.get('CalendarYr');
+                Account a = accountsToUpdate.get(aid);
+                if ((yrAmt > a.Best_Gift_Year_Total__c || a.Best_Gift_Year_Total__c==null ) && yr !=null){
+                    a.Best_Gift_Year_Total__c = yrAmt;
+                    a.Best_Gift_Year__c = string.valueOf(yr);
+                }          
+            }   
         }       
         
         objectList.clear();
