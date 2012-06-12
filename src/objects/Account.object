@@ -59,26 +59,24 @@
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>CustomerPriority__c</fullName>
+        <fullName>Best_Gift_Year_Total__c</fullName>
         <externalId>false</externalId>
-        <label>Customer Priority</label>
-        <picklist>
-            <picklistValues>
-                <fullName>High</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Low</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Medium</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <label>Best Gift Year Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
         <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Best_Gift_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Best Gift Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>FirstCloseDate__c</fullName>
@@ -369,17 +367,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>NumberofLocations__c</fullName>
-        <externalId>false</externalId>
-        <label>Number of Locations</label>
-        <precision>3</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>OppAmount2YearsAgo__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
@@ -522,24 +509,6 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>SLAExpirationDate__c</fullName>
-        <externalId>false</externalId>
-        <label>SLA Expiration Date</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>SLASerialNumber__c</fullName>
-        <externalId>false</externalId>
-        <label>SLA Serial Number</label>
-        <length>10</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>SLA__c</fullName>
         <externalId>false</externalId>
         <label>SLA</label>
@@ -667,7 +636,7 @@
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
             <operation>equals</operation>
-            <value>TRUE</value>
+            <value>True</value>
         </summaryFilterItems>
         <summaryFilterItems>
             <field>Opportunity.Amount</field>
@@ -687,7 +656,7 @@
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
             <operation>equals</operation>
-            <value>TRUE</value>
+            <value>True</value>
         </summaryFilterItems>
         <summaryFilterItems>
             <field>Opportunity.Amount</field>
@@ -707,7 +676,7 @@
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
             <operation>equals</operation>
-            <value>TRUE</value>
+            <value>True</value>
         </summaryFilterItems>
         <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
         <summaryOperation>sum</summaryOperation>
@@ -721,7 +690,7 @@
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
             <operation>equals</operation>
-            <value>TRUE</value>
+            <value>True</value>
         </summaryFilterItems>
         <summaryFilterItems>
             <field>Opportunity.Amount</field>
