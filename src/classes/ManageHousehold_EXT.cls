@@ -129,7 +129,7 @@ global with sharing class ManageHousehold_EXT {
     public string activeState;
     public string activeCountry;
      
-    public static string conSelect = 'SELECT Id, FirstName, LastName, Salutation, Name,npo02__Naming_Exclusions__c, npo02__Household__c, MailingStreet, MailingCity, MailingState, MailingPostalCode, MailingCountry FROM Contact ';
+    public static string conSelect = 'SELECT Id, npo02__Household_Naming_Order__c, FirstName, LastName, Salutation, Name,npo02__Naming_Exclusions__c, npo02__Household__c, MailingStreet, MailingCity, MailingState, MailingPostalCode, MailingCountry FROM Contact ';
     
 	//object to hold viable addresses - this is the DISTINCT (SQL style) list which includes household address and all contact addresses
 	// see function getViableAddresses for how the map is populated
@@ -559,10 +559,8 @@ global with sharing class ManageHousehold_EXT {
     public string getHHName() {
         npo02.HouseholdNaming hh = new npo02.HouseholdNaming();
         String name;
-        if (!activeContacts.isEmpty()) {
-            list<Contact> sorted = sortingList();
-            sorted.addAll(insertContacts);
-            name = hh.getHHName(sorted);
+        if (!activeContacts.isEmpty()||!insertContacts.isEmpty()) {
+            name = hh.getHHName(sortingList());
         }
         return name;
     }
@@ -575,10 +573,8 @@ global with sharing class ManageHousehold_EXT {
     public string getHHFormalName() {
         npo02.HouseholdNaming hh = new npo02.HouseholdNaming();
         String name;
-        if (!activeContacts.isEmpty()) {
-            list<Contact> sorted = sortingList();
-            sorted.addAll(insertContacts);
-            name = hh.getFormalName(sorted);
+        if (!activeContacts.isEmpty()||!insertContacts.isEmpty()) {
+            name = hh.getFormalName(sortingList());
         }
         return name;
     }
@@ -591,27 +587,36 @@ global with sharing class ManageHousehold_EXT {
     public string getHHInformalName() {
         npo02.HouseholdNaming hh = new npo02.HouseholdNaming();
         String name;
-        if (!activeContacts.isEmpty()) {
-            list<Contact> sorted = sortingList();
-            sorted.addAll(insertContacts);
-            name = hh.getInformalName(sorted);
+        if (!activeContacts.isEmpty()||!insertContacts.isEmpty()) {
+            name = hh.getInformalName(sortingList());
         }
         return name;
     }
     
     /*******************************************************************************************************
-    * @description Simply queries the list of activeContact ids so that the default sorting is used. This
-    * is to make it consistant with the sorting of the names that the trigger uses.
+    * @description Sorts the active contacts and contacts to insert by their order in the UI
+    * for passing to the Household Naming logic
     * @return list<Contact> A sort list of contacts.
     ********************************************************************************************************/
     private list<Contact> sortingList() {
         list<Contact> cons = new list<contact>();
-        list<Id> sortOrder = new list<Id>();
+        list<Integer> sortOrder = new list<Integer>();
+        map<Integer,Contact> consToSort = new map<Integer,Contact>();
+        
         if (!activeContacts.isEmpty()) {
-            sortOrder.addAll(activeContacts.keySet());
+        	for(Contact con : activeContacts.values())
+        		consToSort.put(Integer.valueOf(con.npo02__Household_Naming_Order__c),con);
+        }
+        
+        if (!insertContacts.isEmpty()) {
+        	for(Contact con : insertContacts)
+        		consToSort.put(Integer.valueOf(con.npo02__Household_Naming_Order__c),con);
+        }
+        if(!consToSort.isEmpty()) {
+            sortOrder.addAll(consToSort.keySet());
             sortOrder.sort();
-            for (Id cid : sortOrder) {
-                cons.add(activeContacts.get(cid));
+            for (Integer nb : sortOrder) {
+                cons.add(consToSort.get(nb));
             }
         }
         return cons;

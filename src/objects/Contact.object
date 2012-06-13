@@ -45,6 +45,17 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Household_Naming_Order__c</fullName>
+        <externalId>false</externalId>
+        <label>Household Naming Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Household__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
