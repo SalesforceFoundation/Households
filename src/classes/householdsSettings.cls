@@ -192,7 +192,13 @@ public with sharing class householdsSettings {
     	PageReference pr = null;
     	
         if(pageSettings.Enable_Opp_Rollup_Triggers__c){
-            Integer scheduledJobLimit = (integer)pageSettings.Schedule_Job_Limit__c;
+        	
+        	Integer scheduledJobLimit;
+        	if (pageSettings.Schedule_Job_Limit__c != null)
+                scheduledJobLimit = (integer)pageSettings.Schedule_Job_Limit__c;
+            else
+                scheduledJobLimit = 25;
+            
             boolean alreadyScheduled = false;            
             List<cronTrigger> scheduledRollups = new List<cronTrigger>();
             scheduledRollups = [SELECT Id FROM cronTrigger limit :scheduledJobLimit];
