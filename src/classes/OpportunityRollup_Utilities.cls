@@ -88,7 +88,8 @@ public without sharing class OpportunityRollup_Utilities {
     	                                                               'LastCloseDate__c', 'NumberOfClosedOpps__c', 
     	                                                               'TotalMembershipOppAmount__c', 'OppsClosedLastYear__c',
     	                                                               'OppsClosedLastNDays__c', 'OppsClosed2YearsAgo__c',
-    	                                                               'LastMembershipLevel__c'};
+    	                                                               'LastMembershipLevel__c', 'Best_Gift_Year__c',
+    	                                                               'Best_Gift_Year_Total__c'};
     
     private final static set<string> OpportunityContactRoleFields = new set<string>{'ContactId', 'Contact.npo02__household__c',
                                                         'Contact.npo02__TotalOppAmount__c', 'Contact.npo02__OppAmountThisYear__c',
@@ -96,7 +97,7 @@ public without sharing class OpportunityRollup_Utilities {
                                                         'Contact.npo02__NumberOfClosedOpps__c', 'Contact.npo02__TotalMembershipOppAmount__c',
                                                         'Contact.npo02__OppAmountLastYear__c', 'Contact.npo02__OppAmount2YearsAgo__c', 
                                                         'Contact.npo02__LastOppAmount__c', 'Contact.npo02__household__r.npo02__TotalOppAmount__c',
-                                                        'Contact.npo02__LastMembershipLevel__c',   
+                                                        'Contact.npo02__LastMembershipLevel__c', 'Contact.npo02__Best_Gift_Year__c', 'Contact.npo02__Best_Gift_Year_Total__c',    
                                                         'Contact.npo02__household__r.npo02__OppAmountThisYear__c', 'Contact.npo02__household__r.npo02__OppAmountLastNDays__c', 
                                                         'Contact.npo02__household__r.npo02__TotalMembershipOppAmount__c', 'Contact.npo02__household__r.npo02__LastCloseDate__c',   
                                                         'Contact.npo02__household__r.npo02__NumberOfClosedOpps__c', 'Contact.npo02__household__r.npo02__OppsClosedThisYear__c', 
@@ -104,7 +105,9 @@ public without sharing class OpportunityRollup_Utilities {
                                                         'Contact.npo02__household__r.npo02__OppsClosed2YearsAgo__c','Contact.npo02__household__r.npo02__OppAmountLastYear__c', 
                                                         'Contact.npo02__household__r.npo02__OppAmount2YearsAgo__c', 'Contact.npo02__MembershipEndDate__c', 
                                                         'Contact.npo02__household__r.npo02__MembershipEndDate__c', 'Contact.npo02__MembershipJoinDate__c', 
-                                                        'Contact.npo02__household__r.npo02__MembershipJoinDate__c', 'Contact.npo02__Household__r.npo02__LastMembershipLevel__c'}; 
+                                                        'Contact.npo02__household__r.npo02__MembershipJoinDate__c', 'Contact.npo02__Household__r.npo02__LastMembershipLevel__c',
+                                                        'Contact.npo02__household__r.npo02__Best_Gift_Year__c', 'Contact.npo02__household__r.npo02__Best_Gift_Year_Total__c'
+                                                        }; 
     	
     private final static set<string> ContactFields = new set<string>{'npo02__TotalOppAmount__c', 'npo02__OppAmountThisYear__c',
                                                                 'npo02__OppAmountLastNDays__c', 'npo02__TotalMembershipOppAmount__c', 
@@ -113,7 +116,7 @@ public without sharing class OpportunityRollup_Utilities {
                                                                 'npo02__OppAmount2YearsAgo__c', 'npo02__MembershipJoinDate__c',
                                                                 'npo02__LastMembershipLevel__c', 'npo02__Soft_Credit_This_Year__c',
                                                                 'npo02__Soft_Credit_Two_Years_Ago__c', 'npo02__Soft_Credit_Total__c',
-                                                                'npo02__Soft_Credit_Last_Year__c'};
+                                                                'npo02__Soft_Credit_Last_Year__c', 'npo02__Best_Gift_Year__c', 'npo02__Best_Gift_Year_Total__c'};
     
     private final static set<string> HouseholdFields = new set<string>{'npo02__TotalOppAmount__c', 'npo02__OppAmountThisYear__c', 
                                                                 'npo02__OppAmountLastNDays__c', 'npo02__LastCloseDate__c', 
@@ -122,7 +125,8 @@ public without sharing class OpportunityRollup_Utilities {
                                                                 'npo02__OppsClosedLastNDays__c', 'npo02__OppsClosed2YearsAgo__c',
                                                                 'npo02__OppAmountLastYear__c', 'npo02__OppAmount2YearsAgo__c',
                                                                 'npo02__MembershipEndDate__c', 'npo02__MembershipJoinDate__c',
-                                                                'npo02__LastMembershipLevel__c'};
+                                                                'npo02__LastMembershipLevel__c', 'npo02__Best_Gift_Year__c',
+                                                                'npo02__Best_Gift_Year_Total__c'};
 
     /*** Settings Methods ***/ 
     //configures and sets up static vars for OppRollups
