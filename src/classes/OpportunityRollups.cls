@@ -181,7 +181,8 @@ global virtual without sharing class OpportunityRollups{
                 npo02__LastMembershipDate__c = null, npo02__LastMembershipAmount__c = 0,                
                 npo02__LastMembershipLevel__c = null, npo02__LastMembershipOrigin__c = null,                
                 npo02__MembershipJoinDate__c = null, npo02__MembershipEndDate__c = null,
-                npo02__LastOppAmount__c = null                  
+                npo02__LastOppAmount__c = null,
+                npo02__Best_Gift_Year__c = null, npo02__Best_Gift_Year_Total__c = 0                  
             ));            
             // map currency across if multicurrency
             if(OpportunityRollup_Utilities.isMultiCurrency())
@@ -253,7 +254,9 @@ global virtual without sharing class OpportunityRollups{
                     a1.npo02__OppAmountLastNDays__c == a2.npo02__OppAmountLastNDays__c &&
                     a1.npo02__TotalMembershipOppAmount__c == a2.npo02__TotalMembershipOppAmount__c &&
                     a1.npo02__LastCloseDate__c == a2.npo02__LastCloseDate__c && 
-                    a1.npo02__LastMembershipLevel__c == a2.npo02__LastMembershipLevel__c
+                    a1.npo02__LastMembershipLevel__c == a2.npo02__LastMembershipLevel__c &&
+                    a1.npo02__Best_Gift_Year__c == a2.npo02__Best_Gift_Year__c &&
+                    a1.npo02__Best_Gift_Year_Total__c == a2.npo02__Best_Gift_Year_Total__c
                     )
             accountsToUpdate.remove(aid);
         }         
@@ -290,7 +293,8 @@ global virtual without sharing class OpportunityRollups{
                 npo02__LastMembershipDate__c = null, npo02__LastMembershipAmount__c = 0,                
                 npo02__LastMembershipLevel__c = null, npo02__LastMembershipOrigin__c = null,                
                 npo02__MembershipJoinDate__c = null, npo02__MembershipEndDate__c = null,                
-                npo02__LastOppAmount__c = null
+                npo02__LastOppAmount__c = null, 
+                npo02__Best_Gift_Year__c = null, npo02__Best_Gift_Year_Total__c = 0
             ));
             // map currency across if multicurrency
             if(OpportunityRollup_Utilities.isMultiCurrency())
@@ -359,7 +363,9 @@ global virtual without sharing class OpportunityRollups{
                     c1.npo02__LastCloseDate__c == c2.npo02__LastCloseDate__c &&
                     c1.npo02__MembershipEndDate__c == c2.npo02__MembershipEndDate__c &&
                     c1.npo02__MembershipJoinDate__c == c2.npo02__MembershipJoinDate__c &&
-                    c1.npo02__LastMembershipLevel__c == c2.npo02__LastMembershipLevel__c
+                    c1.npo02__LastMembershipLevel__c == c2.npo02__LastMembershipLevel__c &&
+                    c1.npo02__Best_Gift_Year__c == c2.npo02__Best_Gift_Year__c &&
+                    c1.npo02__Best_Gift_Year_Total__c == c2.npo02__Best_Gift_Year_Total__c
                     )
                 contactsToUpdate.remove(cid);
         }
@@ -397,7 +403,8 @@ global virtual without sharing class OpportunityRollups{
                 npo02__LastMembershipDate__c = null, npo02__LastMembershipAmount__c = 0,                
                 npo02__LastMembershipLevel__c = null, npo02__LastMembershipOrigin__c = null,                
                 npo02__MembershipJoinDate__c = null, npo02__MembershipEndDate__c = null,                
-                npo02__LastOppAmount__c = null
+                npo02__LastOppAmount__c = null,
+                npo02__Best_Gift_Year__c = null, npo02__Best_Gift_Year_Total__c = 0
             ));
             
             // map currency across if multicurrency
@@ -468,7 +475,9 @@ global virtual without sharing class OpportunityRollups{
                     h1.npo02__LastCloseDate__c == h2.npo02__LastCloseDate__c &&
                     h1.npo02__MembershipEndDate__c == h2.npo02__MembershipEndDate__c &&
                     h1.npo02__MembershipJoinDate__c == h2.npo02__MembershipJoinDate__c &&
-                    h1.npo02__LastMembershipLevel__c == h2.npo02__LastMembershipLevel__c
+                    h1.npo02__LastMembershipLevel__c == h2.npo02__LastMembershipLevel__c &&
+                    h1.npo02__Best_Gift_Year__c == h2.npo02__Best_Gift_Year__c &&
+                    h1.npo02__Best_Gift_Year_Total__c == h2.npo02__Best_Gift_Year_Total__c
                     )
                 householdsToUpdate.remove(hhid);
         }
