@@ -3,6 +3,7 @@
     <customSettingsType>Hierarchy</customSettingsType>
     <customSettingsVisibility>Public</customSettingsVisibility>
     <description>Setting object for the Nonprofit Starter Pack Households Package</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <fields>
         <fullName>Advanced_Household_Naming__c</fullName>
@@ -33,6 +34,7 @@
     </fields>
     <fields>
         <fullName>Batch_Size__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Batch Size</label>
         <precision>18</precision>
@@ -113,6 +115,7 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Enable_Soft_Credit_Rollups__c</fullName>
         <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Allows you to rollup closed Opportunity totals based on Opportunity Contact Role Roles.  Soft credit rollups happen only in the nightly batch job, and not on triggers.  They can be manually run using the Opportunity Rollups tab.</inlineHelpText>
         <label>Enable Soft Credit Rollups</label>
@@ -175,6 +178,7 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Force_Fiscal_Year__c</fullName>
         <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
         <description>The NPSP automatically checks for the presence of custom fiscal years, and disabled FY settings if they&apos;re found to avoid errors.  This setting overrides that safety-check for users who have accidentally enabled custom fiscal years.</description>
         <externalId>false</externalId>
         <inlineHelpText>The NPSP automatically checks for the presence of custom fiscal years, and disabled FY settings if they&apos;re found to avoid errors.  This setting overrides that safety-check for users who have accidentally enabled custom fiscal years.</inlineHelpText>
@@ -202,6 +206,7 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     </fields>
     <fields>
         <fullName>Household_Creation_Excluded_Recordtypes__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Contact recordtypes excluded from Household creation</inlineHelpText>
         <label>Household Creation Excluded Recordtypes</label>
@@ -235,6 +240,7 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     </fields>
     <fields>
         <fullName>Household_OCR_Excluded_Recordtypes__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Contact recordtypes excluded from Household Opportunity Contact Role creation</inlineHelpText>
         <label>Household OCR Excluded Recordtypes</label>
@@ -331,6 +337,7 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Schedule_Job_Limit__c</fullName>
         <defaultValue>25</defaultValue>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The scheduled job limit used when auto-scheduling nightly rollups.</inlineHelpText>
         <label>Schedule Job Limit</label>
@@ -342,6 +349,7 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     </fields>
     <fields>
         <fullName>Soft_Credit_Roles__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>List of roles to include in soft credit rollups.</inlineHelpText>
         <label>Soft Credit Roles</label>

@@ -27,6 +27,10 @@
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Households and Donations</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
     <reportType>Households_and_Donations__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>

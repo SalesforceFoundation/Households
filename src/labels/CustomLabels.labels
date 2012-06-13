@@ -265,7 +265,7 @@
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>Household Member Contact Role</shortDescription>
-        <value>Household Credit</value>
+        <value>Household Member</value>
     </labels>
     <labels>
         <fullName>Household_Rules_Help_Text</fullName>
