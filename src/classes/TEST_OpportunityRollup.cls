@@ -132,7 +132,8 @@ public with sharing class TEST_OpportunityRollup {
             id hhid = UpdatedCon.npo02__household__r.id;
             npo02__Household__c[] hhs = database.query('SELECT id, npo02__TotalOppAmount__c, npo02__LastCloseDate__c, '+
             'npo02__TotalMembershipOppAmount__c, npo02__OppAmountLastNDays__c, npo02__OppAmountThisYear__c, npo02__LastMembershipLevel__c, ' +
-            'npo02__OppAmountLastYear__c, npo02__OppAmount2YearsAgo__c, npo02__MembershipJoinDate__c, npo02__MembershipEndDate__c '+
+            'npo02__OppAmountLastYear__c, npo02__OppAmount2YearsAgo__c, npo02__MembershipJoinDate__c, npo02__MembershipEndDate__c, '+
+            'npo02__Best_Gift_Year__c, npo02__Best_Gift_Year_Total__c ' +
             (OpportunityRollup_Utilities.isMultiCurrency() ? ', CurrencyIsoCode ' : '')+      
             'FROM npo02__household__c WHERE id = :hhid LIMIT 1');
         
@@ -211,7 +212,8 @@ public with sharing class TEST_OpportunityRollup {
             npo02__Household__c[] hhs = database.query('SELECT id, npo02__TotalOppAmount__c, npo02__LastCloseDate__c, '+
             'npo02__TotalMembershipOppAmount__c, npo02__OppAmountLastNDays__c, npo02__OppAmountThisYear__c, '+
             'npo02__OppAmountLastYear__c, npo02__OppAmount2YearsAgo__c, npo02__MembershipJoinDate__c, npo02__MembershipEndDate__c, '+
-            'npo02__LastMembershipLevel__c ' +
+            'npo02__LastMembershipLevel__c, ' +
+            'npo02__Best_Gift_Year__c, npo02__Best_Gift_Year_Total__c ' +
             (OpportunityRollup_Utilities.isMultiCurrency() ? ', CurrencyIsoCode ' : '')+      
             'FROM npo02__household__c WHERE id = :hhid LIMIT 1');
             
@@ -291,7 +293,8 @@ public with sharing class TEST_OpportunityRollup {
             id hhid = UpdatedCon.npo02__household__r.id;
             npo02__household__c[] hhs = database.query('SELECT id, npo02__TotalOppAmount__c, npo02__LastCloseDate__c, '+
             'npo02__TotalMembershipOppAmount__c, npo02__OppAmountLastNDays__c, npo02__OppAmountThisYear__c, '+
-            'npo02__OppAmountLastYear__c, npo02__OppAmount2YearsAgo__c, npo02__MembershipEndDate__c, npo02__MembershipJoinDate__c, npo02__LastMembershipLevel__c '+
+            'npo02__OppAmountLastYear__c, npo02__OppAmount2YearsAgo__c, npo02__MembershipEndDate__c, npo02__MembershipJoinDate__c, npo02__LastMembershipLevel__c, '+
+            'npo02__Best_Gift_Year__c, npo02__Best_Gift_Year_Total__c ' + 
             (OpportunityRollup_Utilities.isMultiCurrency() ? ', CurrencyIsoCode ' : '')+      
             'FROM npo02__household__c WHERE id = :hhid LIMIT 1');
             
@@ -424,7 +427,7 @@ public with sharing class TEST_OpportunityRollup {
                                     LastCloseDate__c, NumberOfClosedOpps__c, 
                                     TotalMembershipOppAmount__c, OppsClosedLastYear__c,
                                     OppsClosedLastNDays__c, OppsClosed2YearsAgo__c,
-                                    LastMembershipLevel__c
+                                    LastMembershipLevel__c, Best_Gift_Year__c, Best_Gift_Year_Total__c
                                     from Account where id =: testacct.id];
                                     
             System.AssertEquals ( 33333 , updatedAcct.npo02__TotalOppAmount__c );       
@@ -483,7 +486,8 @@ public with sharing class TEST_OpportunityRollup {
                                     TotalMembershipOppAmount__c, OppsClosedLastYear__c,
                                     OppsClosedLastNDays__c, OppsClosed2YearsAgo__c,
                                     LastMembershipLevel__c, LastMembershipDate__c,
-                                    LastMembershipAmount__c, LastMembershipOrigin__c
+                                    LastMembershipAmount__c, LastMembershipOrigin__c,
+                                    Best_Gift_Year__c, Best_Gift_Year_Total__c
                                     from Account where id =: testacct.id];
                                 
                       
