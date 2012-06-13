@@ -39,5 +39,10 @@
         <members>*</members>
         <name>ReportType</name>
     </types>
+    <types>
+        <members>ManageHouseholdcss</members>
+        <members>ManageHouseholdjs</members>
+        <name>StaticResource</name>
+    </types>
     <version>23.0</version>
 </Package>

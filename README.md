@@ -17,8 +17,12 @@ Installation
 
 * This code can be deployed into a Salesforce organization using Eclipse or Ant
 * The master branch contain the most current release available via managed package
-* The dev branch contains the development source for the next major Households release
+* The dev branch contains the development source for the next major Households release 
 
+
+Release Notes
+---
+Available [here](https://github.com/SalesforceFoundation/Households/wiki/Release-Notes)
 
 
 Meta

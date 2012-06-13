@@ -32,7 +32,9 @@
 * @date 2011 (2.3)
 * @description Controller class for the User Rollup Settings wizard  
 */
-public with sharing class userRollupSettings {
+public with sharing class userRollupSettings{ 
+    
+    /*** Properties and Fields ***/
     
     //controls which types to display
     map<string, Schema.Displaytype> mapFieldTypes = new map<string, Schema.Displaytype>();
@@ -41,33 +43,44 @@ public with sharing class userRollupSettings {
     //pickers for setting values   
     public list<SelectOption> sourcefields = new list<SelectOption>();
     public list<SelectOption> validoperators = new list<SelectOption>();
-    public list<SelectOption> targetfields = new list<SelectOption>();
-    public list<object> mylist = new list<object>();
+    public list<SelectOption> targetfields = new list<SelectOption>();    
     public list<SelectOption> targetobjects = new list<SelectOption>{
-    new SelectOption('Account', 'Account'),
-    new SelectOption('Contact', 'Contact'),
-    new SelectOption('npo02__Household__c', 'npo02__Household__c')    
+        new SelectOption('Account', 'Account'),
+        new SelectOption('Contact', 'Contact'),
+        new SelectOption('npo02__Household__c', 'npo02__Household__c')    
     }; 
     
-    //defines values for the final list setting
-    public string operator{get; set;}    
-    public string opptyfield{get; set;}
-    public string targetfield{get; set;}
-    public string targetobject{get; set;}
-       
-    //the test string of the rollup
-    public string operationstring;
+    public list<UDR> udrList;
+    public list<UDR> getudrList(){
+        list<User_Rollup_Field_Settings__c> thisList = User_Rollup_Field_Settings__c.getAll().values(); 
+        udrlist = new list<UDR>();
+        for (User_Rollup_Field_Settings__c udr : thisList){
+        	udrList.add(new UDR(udr, this));
+        }
+        udrlistsize = udrList.size();
+    	return udrList;
+    }
     
-    //controls wizard steps
-    public integer step{get; set;}
-    
+    public integer udrlistsize{get;set;}
+    public UDR activeUDR{get; set;}
+    public boolean isBuildingRollup{get; set;}    
+    public boolean isValidRollup{get; set;}
     private boolean hasRollupInsert = false;
     
-    //constructor
-    public userRollupSettings(){
-       step = 0;
+    /*** Constructor ***/
+    
+    public userRollupSettings(){    	
+    	isValidRollup = false;
+        isBuildingRollup = false;        
     }    
     
+    /*** Page Operations ***/
+    
+    public void startBuild(){    
+        activeUDR = new UDR(this);
+    	isBuildingRollup = true;
+    }
+        
     //called on load of the page
     public PageReference checkSettings(){
         //if there are invalid rollups defined, display an error 
@@ -77,45 +90,32 @@ public with sharing class userRollupSettings {
         }       
         return null;
     }
-
-    public void next(){
-    	this.step++;
-    }
-    public void back(){
-        this.step--;
-    }
     
     //reset all instance variable and return to initial screen
     public void cancel(){    	
         this.sourcefields.clear();
         this.mapFieldTypes.clear();
         this.validoperators.clear();
-        this.targetfields.clear();
-        this.opptyfield = null;
-        this.operator = null;
-        this.targetfield = null;
-        this.operationstring = null;
-        this.step = 0;      
-    }
+        this.targetfields.clear();     
+        this.isBuildingRollup = false;    
+        this.activeUDR = null;
+    }    
     
-    //retrieve syntax for fields
-    public string getOperationString(){
-        operationstring = 'Rollup the ' + this.operator + ' of the ' + this.opptyfield + ' field on opportunity and place the result in the ' + this.targetfield + ' field on ' + this.targetobject + '?';
-        return operationstring;
-    }
+    /*** Getters for Field Selectors ***/
     
     //retrieve target objects
     public list<SelectOption> getTargetObjects(){
         return this.targetobjects;
     }
+    
     //retrieve valid operators
     public list<SelectOption> getValidOperators(){
-        validoperators.clear();
-        if (mapFieldTypes.containsKey(opptyfield)){
+        validoperators.clear();        
+        if (mapFieldTypes.containsKey(activeUDR.SourceField)){
            validoperators.add(new SelectOption('MIN', 'MIN'));
-           validoperators.add(new SelectOption('MIN', 'MAX'));  
+           validoperators.add(new SelectOption('MAX', 'MAX'));  
            
-            if ((mapFieldTypes.get(opptyField) != Schema.Displaytype.Date) && (mapFieldTypes.get(opptyField) != Schema.Displaytype.Datetime)){  
+            if ((mapFieldTypes.get(activeUDR.SourceField) != Schema.Displaytype.Date) && (mapFieldTypes.get(activeUDR.SourceField) != Schema.Displaytype.Datetime)){  
                 validoperators.add(new SelectOption('AVG', 'AVG'));
                 validoperators.add(new SelectOption('SUM', 'SUM'));                
             }
@@ -128,14 +128,13 @@ public with sharing class userRollupSettings {
         
         targetfields.clear();
         set<string> knownfields;    
-        map<string, Schema.Sobjectfield> targetTokenMap = new map<string, Schema.Sobjectfield>();
-        
+        map<string, Schema.Sobjectfield> targetTokenMap = new map<string, Schema.Sobjectfield>();        
         //need to load current settings to not allow the user to point to the same target field
         //twice
         map<string, User_Rollup_Field_Settings__c> currentURFSMap = User_Rollup_Field_Settings__c.getAll();
         set<string> currentTargetFieldSet = new set<string>();
         for (string s : currentURFSMap.keySet()){
-        	if (currentURFSMap.get(s).Object_Name__c == targetObject){
+        	if (currentURFSMap.get(s).Object_Name__c == activeUDR.TargetObject && currentURFSMap.get(s).Target_Field__c != activeUDR.TargetField){
         	   string fieldname = (currentURFSMap.get(s).Target_Field__c).toLowerCase();
         	   //we need to strip out the namespace
         	   if (fieldname.contains('npo02')){
@@ -149,7 +148,7 @@ public with sharing class userRollupSettings {
         	}
         }  
          
-        if (targetobject == 'Contact'){
+        if (activeUDR.TargetObject == 'Contact'){
             targetTokenMap = Schema.SObjectType.Contact.fields.getMap().clone();
             knownfields = new set<string>{
                 'averageamount__c', 'donor__c', 'donor_this_year__c',                
@@ -165,9 +164,13 @@ public with sharing class userRollupSettings {
                 'oppamountlastndays__c', 'oppamountlastyear__c', 'oppamountthisyear__c',
                 'oppamount2yearsago__c', 'total_household_gifts__c', 'oppamountlastndayshh__c',
                 'oppamountlastyearhh__c', 'oppamountthisyearhh__c', 'totalmembershipoppamount__c',
-                'numberofclosedopps__c', 'systemhouseholdprocessor__c', 'naming_exclusions__c'};
+                'numberofclosedopps__c', 'systemhouseholdprocessor__c', 'naming_exclusions__c',
+                'best_gift_year__c', 'best_gift_year_total__c', 'household_naming_order__c',
+                'soft_credit_last_year__c', 'soft_credit_this_year__c', 'soft_credit_total__c',
+                'soft_credit_two_years_ago__c'
+                };
         }
-        else if(targetobject == 'Account'){
+        else if(activeUDR.TargetObject == 'Account'){
             targetTokenMap = Schema.SobjectType.Account.fields.getMap().clone();
             knownfields = new set<string>{
                 'active__c', 'averageamount__c', 'customer_priority__c', 'customerpriority__c',
@@ -179,10 +182,11 @@ public with sharing class userRollupSettings {
                 'oppsclosed2yearsago__c', 'numberoflocations__c', 'numberofmembershipopps__c',
                 'sla__c', 'slaexpirationdate__c', 'slaserialnumber__c', 'smallestamount__c',
                 'totaloppamount__c', 'oppamountlastndays__c', 'oppamountlastyear__c', 'oppamountthisyear__c',
-                'oppamount2yearsago__c', 'totalmembershipoppamount__c', 'numberofclosedopps__c'
+                'oppamount2yearsago__c', 'totalmembershipoppamount__c', 'numberofclosedopps__c',
+                'best_gift_year__c', 'best_gift_year_total__c'
            };
         }
-        else if(targetobject == 'Household__c' || targetobject == 'npo02__Household__c'){
+        else if(activeUDR.TargetObject == 'Household__c' || activeUDR.TargetObject == 'npo02__Household__c'){
             targetTokenMap = Schema.SobjectType.Household__c.fields.getMap().clone();
             knownfields = new set<string>{
                 'addressee__c', 'always_anonymous__c', 'averagemount__c', 'firstclosedate__c',   
@@ -196,9 +200,14 @@ public with sharing class userRollupSettings {
                 'smallestamount__c','totaloppamount__c','oppamountlastndays__c','oppamountlastyear__c',    
                 'oppamountthisyear__c','oppamount2yearsago__c','totalmembershipoppamount__c',    
                 'numberofclosedopps__c', 'formal_greeting__c', 'informal_greeting__c', 'averageamount__c',
-                'system_custom_naming__c'
+                'system_custom_naming__c', 'best_gift_year__c', 'best_gift_year_total__c'
            };     
         }
+        //set knownfield to an empty set
+        else{
+        	knownfields = new set<string>();        	
+        }
+        
         
         if(!currentTargetFieldSet.isEmpty())
             knownfields.addAll(currentTargetFieldSet);
@@ -209,8 +218,7 @@ public with sharing class userRollupSettings {
         	targetTokenMap.remove(s);
         }
         
-        if ((targettokenMap.size() < 75) && (targettokenMap.size() > 0)){
-        
+        if (targettokenMap.size() > 0){        
             for (string s : targetTokenMap.keyset()){            
                 if (s.contains('__c') && (!s.startswith('npe01__'))){
                     Schema.DescribeFieldResult F = targetTokenMap.get(s).getDescribe();                  
@@ -220,10 +228,10 @@ public with sharing class userRollupSettings {
         }
         
         if (targetfields.size() < 1){            
-            targetfields.add(new SelectOption('NO VALID FIELD AVAILABLE', 'NO VALID FIELD AVAILABLE'));
-            showMsg('No valid target field was found for the type of rollup defined. Please add a custom field, or select a different object and try again.', ApexPages.Severity.INFO);                
+        	targetfields.clear();
+            targetfields.add(new SelectOption('', 'No Valid ' + activeUDR.TargetObject + ' Field Available'));                            
         }
-        return targetfields;    
+        return sortOptionList(targetfields);    
     }
     
     //retrieve valid source fields from opportunity object
@@ -232,8 +240,7 @@ public with sharing class userRollupSettings {
         set<string> knownOpptyFields = new set<string>{'Amount', 'CloseDate', 'ExpectedRevenue', 
         	'Probability', 'TotalOpportunityQuantity', 'npe01__membership_start_date__c', 'npe01__membership_end_date__c'};
         
-        if (sourcefields.isEmpty()){
-                       
+        if (sourcefields.isEmpty()){                       
             map<String, Schema.SObjectField> oppFieldTokenList = Schema.SObjectType.Opportunity.fields.getMap(); 
            
             //loop through the map, only get the describe information for fields we don't
@@ -254,7 +261,8 @@ public with sharing class userRollupSettings {
                         mapFieldTypes.put(f.getName(), dt);                    
                     }
                 }
-           }
+           }           
+           
            //now add our known field types
            for(string knownField : knownopptyFields){
                 sourcefields.add(new SelectOption(knownField, knownField));
@@ -265,11 +273,30 @@ public with sharing class userRollupSettings {
                     mapFieldTypes.put(knownfield, Schema.Displaytype.Date);
                 else
                     mapFieldTypes.put(knownfield, Schema.Displaytype.Double);   
-           }
+            }
+            sourceFields = sortOptionList(sourceFields);               
         }
-       
+         
         return sourceFields;
     }
+    
+    /*** Handle Clearing Potentially Invalid Data OnChange ***/
+    
+    public void clearForSourceField(){
+        activeUDR.Operation = null;    	
+    	activeUDR.TargetObject = null;
+        activeUDR.TargetField = null;    	
+    }    
+    public void clearForOperation(){
+    	activeUDR.TargetObject = null;
+    	activeUDR.TargetField = null;
+    	
+    }
+    public void clearForTargetObject(){
+    	activeUDR.TargetField = null;    	
+    }    
+    
+    /*** Private Methods **/
 
     //utility to check that existing user defined rollups are valid - called onpageload
     //NOTE: Only checks that target/source fields exist, not operation validity
@@ -312,29 +339,109 @@ public with sharing class userRollupSettings {
         ApexPages.addMessage(myMsg);
     }    
     
-    //save and commit rollup
-    public PageReference createRollup(){
+     //http://improveit360.blogspot.com/2010/09/implementing-quicksort-to-sort-list-of.html
+    private list<SelectOption> sortOptionList(list<SelectOption> ListToSort){
+        if(ListToSort == null || ListToSort.size() <= 1)
+            return ListToSort;
+            
+        List<SelectOption> Less = new List<SelectOption>();
+        List<SelectOption> Greater = new List<SelectOption>();
+        integer pivot = ListToSort.size() / 2;
+          
+        // save the pivot and remove it from the list
+        SelectOption pivotValue = ListToSort[pivot];
+        ListToSort.remove(pivot);
+        
+        for(SelectOption x : ListToSort)
+        {
+            if(x.getLabel() <= pivotValue.getLabel())
+                Less.add(x);
+            else if(x.getLabel() > pivotValue.getLabel()) Greater.add(x);   
+        }
+        List<SelectOption> returnList = new List<SelectOption>();
+        returnList.addAll(SortOptionList(Less));
+        returnList.add(pivotValue);
+        returnList.addAll(SortOptionList(Greater));
+        return returnList; 
+    }
+    
+    /*** Class **/
+    
+    public class UDR{
     	
-    	if (!hasRollupInsert){
-            try{
-        		map<string, User_Rollup_Field_Settings__c> userRollups = User_Rollup_Field_Settings__c.getAll();
-                integer nameNumber = userRollups.size();
-    		 
-                User_Rollup_Field_Settings__c newURFS = new User_Rollup_Field_Settings__c(Name = 'CustomRollup' + nameNumber, 
-                Object_Name__c = targetobject, Target_Field__c = targetfield, Field_Action__c = operator,
-                Source_Field__c = opptyfield);    		
-                
-                insert newURFS;
-                hasRollupInsert = true;    		
-            }
+    	public User_Rollup_Field_Settings__c myUDR{get;set;}
+    	public String SourceField{get;set;}
+    	public String TargetField{get;set;}
+    	public String TargetObject{get;set;}
+    	public String Operation{get;set;}
+    	public Boolean isValid{set;}
+    	userRollupSettings mydad;
     	
-            catch(Exception e){
-                showMsg('An unhandled exception has occurred. Please try again.',ApexPages.Severity.FATAL);
-                showMsg('Exception type' + e, ApexPages.Severity.INFO);    		 
-            }
+    	public UDR(userRollupSettings parentclass){
+    		mydad = parentclass;  
+    		myUDR = new User_Rollup_Field_Settings__c();  		
     	}
-    	return ApexPages.currentPage().setRedirect(true);
-    }   
+    	public UDR(User_Rollup_Field_Settings__c thisUDR, userRollupSettings parentclass){
+            this.SourceField = thisUDR.Source_Field__c;
+            this.TargetField = thisUDR.Target_Field__c;
+            this.TargetOBject = thisUDR.Object_Name__c;
+            this.Operation = thisUDR.Field_Action__c;
+            myUDR = thisUDR;    	
+            mydad = parentclass;	
+    	}    	
+    	public UDR(String SourceField, String TargetField, String TargetObject, String Operation, userRollupSettings parentclass){
+    		this.SourceField = SourceField;
+    		this.TargetField = TargetField;
+    		this.TargetObject = TargetObject;
+    		this.Operation = Operation;
+    		myUDR = new User_Rollup_Field_Settings__c();
+    		mydad = parentclass;
+    	}
+    	
+    	public void save(){
+    		
+    		if (myUDR.id == null){
+    			map<string, User_Rollup_Field_Settings__c> userRollups = User_Rollup_Field_Settings__c.getAll();
+                integer nameNumber = userRollups.size();             
+                myUDR.Name = 'CustomRollup' + nameNumber; 
+                myUDR.Object_Name__c = TargetObject;
+                myUDR.Target_Field__c = TargetField;
+                myUDR.Field_Action__c = Operation;
+                myUDR.Source_Field__c = SourceField;    			
+    		}
+    		
+    		try{
+                upsert myUDR;                        
+                mydad.udrList.add(this);                
+                mydad.activeUDR = null;
+                mydad.isBuildingRollup = false;
+            }
+        
+            catch(Exception e){
+                mydad.showMsg('An unhandled exception has occurred. Please try again.',ApexPages.Severity.FATAL);
+                mydad.showMsg('Exception type' + e, ApexPages.Severity.INFO);          
+            }   		
+    	}    	
+    	public void loadMe(){
+    		mydad.activeUDR = this;
+    		mydad.isBuildingRollup = true;
+    	}
+    	public void deleteMe(){    		
+    		if (myUDR.id != null)
+    		  delete myUDR;
+    		mydad.activeUDR = null;
+    		mydad.isBuildingRollup = false;
+    	}    	
+    	
+    	public boolean getisValid(){
+            if (SourceField != null && TargetField != null && TargetObject != null && Operation != null && TargetField != '')
+                return true;
+            else
+                return false;    		
+    	}    	
+    }
+    
+    /*** Test Methods ***/
         
     public static testMethod void TEST_userRollupSettings() {
         
@@ -342,51 +449,74 @@ public with sharing class userRollupSettings {
         
         //pass the controller into the extension
         userRollupSettings controller = new userRollupSettings();
-        
-        //exercise basic operations
-        controller.next();
-        system.assertEquals(controller.step, 1);
-        controller.next();
-        system.assertEquals(controller.step, 2);
-        controller.back();
-        system.assertEquals(controller.step, 1);
-        controller.cancel();
-        system.assertEquals(controller.step, 0);
-        
+  
         //check settings returns a null pagereference
         PageReference samePage = controller.checkSettings();
         system.assertEquals(samePage, null);
         
+        //kickoff a new rollup
+        controller.startBuild();
+        
         //call the major getter methods
         list<SelectOption> oppyList = controller.getSourceFields();
-        controller.opptyfield = 'Amount';
+        controller.activeUDR.SourceField = 'Amount';
+        
         list<SelectOption> operatorList = controller.getValidOperators();
+        system.assert(operatorList.size() == 4);
         
-        controller.opptyfield = 'CloseDate';
+        controller.activeUDR.SourceField = 'CloseDate';
         operatorList = controller.getValidOperators();
-        controller.operator = 'MAX';
+        system.assert(operatorList.size() == 2);
         
+        controller.activeUDR.Operation = 'MAX';
+                
         list<SelectOption> targetObjectList = controller.getTargetObjects();
-        controller.targetobject = 'Account';
+        system.assertEquals(targetObjectList.size(), 3);
+        
+        controller.activeUDR.TargetObject = 'Account';
+        
         list<SelectOption> targetFieldList = controller.getTargetFields();
                
         //change target object to test other options        
-        controller.targetobject = 'npo02__Household__c';
+        controller.activeUDR.TargetObject = 'npo02__Household__c';
         targetFieldList = controller.getTargetFields();
         
-        controller.targetobject = 'Contact';
+        controller.activeUDR.TargetObject = 'Contact';
         targetFieldList = controller.getTargetFields();
-        system.assertEquals(targetObjectList.size(), 3);
+        controller.activeUDR.TargetField = 'Birthdate';
+        controller.activeUDR.save();
+        //load a UDR
+        controller.activeUDR.loadMe();        
         
-        controller.targetfield = 'Birthdate';
-        
-        string operationdescription = controller.getOperationString();
-        controller.createRollup();
+        //run through the loop with a newly inserted UDR
+        targetFieldList = controller.getTargetFields();
         
         //existing invalid rollups will cause test failure
         boolean isValid = controller.userRollupsValid();
         system.assertEquals(isValid, true);
+        system.assertEquals(controller.activeUDR.getisValid(), true);
+        list<userRollupSettings.UDR> udrlist = controller.getudrList();
+        system.assert(udrList.size() > 0);        
         
+        //test clearing the three different lists
+        controller.clearForTargetObject();
+        system.assert(controller.activeUDR.TargetField == null);
+        controller.clearForOperation();
+        system.assert(controller.activeUDR.TargetObject == null);
+        controller.clearForSourceField();
+        system.assert(controller.activeUDR.Operation == null);
+        
+        controller.cancel();
+        system.assertEquals(null, controller.activeUDR);
+        
+        //generate a new one so we can call its delete sequence
+        controller.startBuild();
+        //delete it
+        controller.activeUDR.deleteMe();
+        
+        //call the other UDR contructor
+        userRollupSettings.UDR u = new userRollupSettings.UDR('', '', '', '', controller);
+                
         //insert invalid rollup to test error handling methods
         User_Rollup_Field_Settings__c badurfs = new User_Rollup_Field_Settings__c(
         Name = 'Invalid Test Rollup',
@@ -415,11 +545,7 @@ public with sharing class userRollupSettings {
                 
         isValid = controller.userRollupsValid();
         system.assertEquals(false, isValid);
-        
-        //insert a bogus rollup using the createRollup() method
-        controller.operator = null;
-        pr = controller.createRollup();
-        
+            
         User_Rollup_Field_Settings__c badobject = new User_Rollup_Field_Settings__c(
         Name = 'Invalid Object Rollup',
         npo02__Target_Field__c = 'InvalidTargetField__test',

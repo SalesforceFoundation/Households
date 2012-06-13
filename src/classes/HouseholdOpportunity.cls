@@ -39,6 +39,19 @@ public class HouseholdOpportunity {
     {
         npe01__Contacts_and_Orgs_Settings__c ContactsSettings = npe01.Constants.getContactsSettings();
         Households_Settings__c currentHouseholdsSettings = Households.getHouseholdsSettings();
+        
+        set<string> HouseholdOCRRecordTypeExclusions = new set<string>();
+        set<id> conRecordTypesToExclude = new set<id>();
+        if (currentHouseholdsSettings.Household_OCR_Excluded_Recordtypes__c != null) {
+            HouseholdOCRRecordTypeExclusions = new set<string>(currentHouseholdsSettings.Household_OCR_Excluded_Recordtypes__c.split(';'));
+            conRecordTypesToExclude = RecordTypes.GetRecordTypeIdSet('Contact', HouseholdOCRRecordTypeExclusions);            
+        }
+        
+        boolean recordTypesOnCons = false;
+        if(Schema.sObjectType.Contact.fields.getMap().get('RecordTypeId') != null)
+            recordTypesOnCons = true;
+        
+        
         if(currentHouseholdsSettings.Household_Contact_Roles_On__c){
         
         
@@ -100,9 +113,13 @@ public class HouseholdOpportunity {
                 }       
             }
             
+            list<id> c2HId = contactIdToHouseholdId.values();
             //query all contacts in all the Households
-            householdContacts = [select id,Household__c from Contact where Household__c IN :contactIdToHouseholdId.values()];
-            
+            if (recordTypesOnCons)
+                householdContacts = database.query('select id,Household__c, RecordTypeId from Contact where Household__c IN :c2HId');
+            else
+                householdContacts = database.query('select id,Household__c from Contact where Household__c IN :c2HId');
+                                
             //create a map of Household Id to list of member contacts
             for(Contact myContact : householdContacts){
                 if(householdIdToContact.get(myContact.Household__c)==null){
@@ -152,11 +169,17 @@ public class HouseholdOpportunity {
                                     contactRolesForCreation.add(thisRole);
                                 }
                             } else {
-                                OpportunityContactRole thisRole = new OpportunityContactRole();
-                                thisRole.OpportunityId = thisOpp.Id;
-                                thisRole.ContactId = householdMember.Id;
-                                thisRole.Role = currentHouseholdsSettings.Household_Member_Contact_Role__c;
-                                contactRolesForCreation.add(thisRole);
+                            	//exclude any Contacts with an excluded record type
+                            	if (recordTypesOnCons && conRecordTypesToExclude.contains((id)householdMember.get('RecordTypeId'))){
+                            	   //backwards, but prevents having to query for a RecordTypeId that may or may not be there...
+                            	}                            		                                
+                                else{
+                                    OpportunityContactRole thisRole = new OpportunityContactRole();
+                                    thisRole.OpportunityId = thisOpp.Id;
+                                    thisRole.ContactId = householdMember.Id;
+                                    thisRole.Role = currentHouseholdsSettings.Household_Member_Contact_Role__c;
+                                    contactRolesForCreation.add(thisRole);
+                            	}
                             }
                             
                         }

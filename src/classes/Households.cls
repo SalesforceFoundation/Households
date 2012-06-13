@@ -186,7 +186,7 @@ global without sharing class Households {
             if (currentHouseholdsSettings.Async_Household_Naming__c == true)
                 HouseholdNaming.FutureUpdateNames(householdnameupdates);
             else{
-                HouseholdNaming hn = new HouseholdNaming();
+                HouseholdNaming hn = new HouseholdNaming(); 
                 hn.UpdateNames(householdnameupdates);
             }                   
         }
@@ -200,22 +200,35 @@ global without sharing class Households {
         List<Household__c> householdInserts = new List<Household__c>();
         //reload to evaluate insert criteria
         Households_Settings__c currentHouseholdsSettings = getHouseholdsSettings();
-
+                
+        set<string> HouseholdRecordTypeExclusions = new set<string>();
+        set<id> conRecordTypesToExclude = new set<id>();
+        if (currentHouseholdsSettings.Household_Creation_Excluded_Recordtypes__c != null) {
+            HouseholdRecordTypeExclusions = new set<string>(currentHouseholdsSettings.Household_Creation_Excluded_Recordtypes__c.split(';'));
+            conRecordTypesToExclude = RecordTypes.GetRecordTypeIdSet('Contact', HouseholdRecordTypeExclusions);            
+        }
+        
+        boolean recordTypesOnCons = false;
+        if(Schema.sObjectType.Contact.fields.getMap().get('RecordTypeId') != null)
+            recordTypesOnCons = true;
+        
         for(Contact c : contacts)
         {
-            Household__c h = new Household__c();
-            String hName = c.LastName;
-            hName += ' ' + system.label.DefaultHouseholdName;
-            h.Name = hName;
-            //sync the primary address block
-            h.MailingStreet__c = c.MailingStreet;
-            h.MailingCity__c = c.MailingCity;
-            h.MailingState__c = c.MailingState;
-            h.MailingPostalCode__c  = c.MailingPostalCode;
-            h.MailingCountry__c = c.MailingCountry;
-            h.HouseholdPhone__c = c.HomePhone;
-            h.HouseholdEmail__c = c.Email;
-            householdInserts.add(h);
+        	if (!recordTypesOnCons || !conRecordTypesToExclude.contains((id)c.get('RecordTypeId'))){        	
+                Household__c h = new Household__c(); 
+                String hName = c.LastName;
+                hName += ' ' + system.label.DefaultHouseholdName;
+                h.Name = hName;
+                //sync the primary address block
+                h.MailingStreet__c = c.MailingStreet;
+                h.MailingCity__c = c.MailingCity;
+                h.MailingState__c = c.MailingState;
+                h.MailingPostalCode__c  = c.MailingPostalCode;
+                h.MailingCountry__c = c.MailingCountry;
+                h.HouseholdPhone__c = c.HomePhone;
+                h.HouseholdEmail__c = c.Email;
+                householdInserts.add(h);
+        	}                
         }
         List<Contact> contactUpdates = new List<Contact>();
         
@@ -510,6 +523,9 @@ global without sharing class Households {
                 householdsSettings.Advanced_Household_Naming__c = false;
                 householdsSettings.Async_Household_Naming__c = false;
                 householdsSettings.Setupownerid = UserInfo.getOrganizationId();
+                householdsSettings.Schedule_Job_Limit__c = 25;
+                householdsSettings.Household_OCR_Excluded_Recordtypes__c = null;
+                householdsSettings.Household_Creation_Excluded_Recordtypes__c = null;
                 insert householdsSettings;
             }
         }
@@ -536,7 +552,12 @@ global without sharing class Households {
             Membership_Grace_Period__c = mySettings.Membership_Grace_Period__c,
             Rollup_N_Day_Value__c = mySettings.Rollup_N_Day_Value__c, 
             Membership_Record_Types__c = mySettings.Membership_Record_Types__c,
-            Advanced_Household_Naming__c = true
+            Advanced_Household_Naming__c = mySettings.Advanced_Household_Naming__c,
+            Enable_Soft_Credit_Rollups__c = mySettings.Enable_Soft_Credit_Rollups__c,
+            Soft_Credit_Roles__c = mySettings.Soft_Credit_Roles__c,        
+            Household_OCR_Excluded_Recordtypes__c = mySettings.Household_OCR_Excluded_Recordtypes__c, 
+            Household_Creation_Excluded_Recordtypes__c = mySettings.Household_Creation_Excluded_Recordtypes__c,
+            Schedule_Job_Limit__c = 25
             );
         insert householdsSettings;
             

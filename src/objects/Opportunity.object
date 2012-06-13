@@ -223,6 +223,34 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>npe01__Amount_Outstanding__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Amount - NULLVALUE(npe01__Payments_Made__c, 0) - NULLVALUE(npe01__Amount_Written_Off__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Remaining Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>npe01__Amount_Written_Off__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of the payments marked as written-off or noncollectable.</inlineHelpText>
+        <label>Payment Writeoff Amount</label>
+        <summarizedField>npe01__OppPayment__c.npe01__Payment_Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>npe01__OppPayment__c.npe01__Written_Off__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>npe01__OppPayment__c.npe01__Opportunity__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
         <fullName>npe01__Contact_Id_for_Role__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -233,6 +261,16 @@
         <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>npe01__Do_Not_Automatically_Create_Payment__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If payments are active, and if checked, a new payment will not be automatically created for this Opportunity.</inlineHelpText>
+        <label>Do Not Automatically Create Payment</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>npe01__Is_Opp_From_Individual__c</fullName>
@@ -311,6 +349,33 @@
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>npe01__Number_of_Payments__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total number of payments for this Opportunity (Donation)</inlineHelpText>
+        <label>Number of Payments</label>
+        <summaryForeignKey>npe01__OppPayment__c.npe01__Opportunity__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>npe01__Payments_Made__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The sum of all payments marked as paid for this Opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The sum of all payments marked as paid for this Opportunity.</inlineHelpText>
+        <label>Payment Amount Received</label>
+        <summarizedField>npe01__OppPayment__c.npe01__Payment_Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>npe01__OppPayment__c.npe01__Paid__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>npe01__OppPayment__c.npe01__Opportunity__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
     </fields>
     <fields>
         <fullName>systemHouseholdContactRoleProcessor__c</fullName>
@@ -495,10 +560,21 @@
         <availability>online</availability>
         <displayType>button</displayType>
         <linkType>sControl</linkType>
-        <masterLabel>Add Matching Donation</masterLabel>
+        <masterLabel>Add Matching Donation_DEPRECATED</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
         <scontrol>npe01__OpportunityCreateMatching</scontrol>
+    </webLinks>
+    <webLinks>
+        <fullName>npe01__Matching_Donation</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Matching Donation</masterLabel>
+        <openType>sidebar</openType>
+        <page>npe01__BTN_MatchingDonation</page>
+        <protected>false</protected>
     </webLinks>
     <webLinks>
         <fullName>npe01__New_Contact_Donation</fullName>

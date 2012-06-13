@@ -1,37 +1,33 @@
-// Written by Ryan Foster, copyright (c) 2011 Groundwire
-// This program is released under the GNU Affero General Public License, Version 3. http://www.gnu.org/licenses/
+/*
+    Written by Ryan Foster, copyright (c) 2011 Groundwire
+    This program is released under the GNU Affero General Public License, Version 3. http://www.gnu.org/licenses/
 
-/*******************************************************************************************************
-* @author Ryan Foster
-* @date 11/10/2011
+    04/01/2012 James Melville
+    Changes made throughout to support NPSP HH
+    * String.escapeSingleQuotes() added (bug fix for names including ' etc.)
+    * class renamed ManageHousehold_EXT
+    * Fields / objects updated to NPSP values / names e.g. npo02__Household__c (namespace prefix required?)
+    * Naming methods updated to support NPSP's Name / Formal / Informal structure and npo02__SYSTEM_CUSTOM_NAMING__c setting field
+    * Address object updated with viableAddress class to store household or contact addresses
+    * use Mailing* instead of Other* fields for addresses
+    * Set Household address based on address selected in UI
+    * Use "useAddress" flag to set or not set address on contacts
+    * 15/01/2012 Fixed household addressing, added tests for household addressing code
+    * 16/01/2012 Fixed defect when contacts were removed and re-added
+*/
+/**
+* @author Ryan Foster, James Melville
+* @date 2012 (2.4)
 * @description This class is the VF page extension for the Manage Household interface. This allows users to
 * setup their household members, name, and greeting before creating the household. It will also allow the user
-* to set the address on the household.
-*
-* 04/01/2012 James Melville
-* Changes made throughout to support NPSP HH
-* * String.escapeSingleQuotes() added (bug fix for names including ' etc.)
-* * class renamed ManageHousehold_EXT
-* * Fields / objects updated to NPSP values / names e.g. npo02__Household__c (namespace prefix required?)
-* * Naming methods updated to support NPSP's Name / Formal / Informal structure and npo02__SYSTEM_CUSTOM_NAMING__c setting field
-* * Address object updated with viableAddress class to store household or contact addresses
-* * use Mailing* instead of Other* fields for addresses
-* * Set Household address based on address selected in UI
-* * Use "useAddress" flag to set or not set address on contacts
-* * 15/01/2012 Fixed household addressing, added tests for household addressing code
-* * 16/01/2012 Fixed defect when contacts were removed and re-added
-* * 
- * 
-* * TODO
-* * Opty rollups - line 709 - npo02.OpportunityRollups needs global constructor - until then only works inside package
+* to set the address on the household.  
 */
-
 global with sharing class ManageHousehold_EXT {
 
     public npo02__Household__c hh{get; set;}
     public String ctrlName {
         get {
-            return 'ManageHousehold_EXT'; //GW_Utilities.InManagedPackage == true ? 'GWBase__ManageHousehold_EXT' : 'ManageHousehold_EXT';
+            return 'ManageHousehold_EXT';
         }
     }
     
@@ -42,22 +38,20 @@ global with sharing class ManageHousehold_EXT {
                 return true;
             }
             
-            if (hh.npo02__SYSTEM_CUSTOM_NAMING__c != null)
-            {
+            if (hh.npo02__SYSTEM_CUSTOM_NAMING__c != null) {
                 if(hh.npo02__SYSTEM_CUSTOM_NAMING__c.contains('Name'))
                 	return false;
             }
-
            	return true;
         }
     }
+    
     public Boolean autoFormalGreeting {
         get {
             if (hh.Id == null && hh.npo02__Formal_Greeting__c == null) {
                 return true;
             }
-            if (hh.npo02__SYSTEM_CUSTOM_NAMING__c != null)
-            {
+            if (hh.npo02__SYSTEM_CUSTOM_NAMING__c != null){
                 if(hh.npo02__SYSTEM_CUSTOM_NAMING__c.contains('Formal_Greeting__c'))
                 	return false;
             }
@@ -65,6 +59,7 @@ global with sharing class ManageHousehold_EXT {
            	return true; 
         }
     }
+    
     public Boolean autoInformalGreeting {
         get {
             if (hh.Id == null && hh.npo02__Informal_Greeting__c == null) {
@@ -107,8 +102,7 @@ global with sharing class ManageHousehold_EXT {
             return hh.npo02__Informal_Greeting__c;
         }
         set;
-    }
-    
+    }    
     
     public Id conId;
     public Contact con;
@@ -156,7 +150,7 @@ global with sharing class ManageHousehold_EXT {
         if (thh.Id == null) {
             try {
             	String paramHhId = String.escapeSingleQuotes(ApexPages.currentPage().getParameters().get('hhid'));
-                tempHHid = paramHhId;
+                tempHHid = paramHhId; 
             } catch (Exception e) {
                 tempHHid = null;
             }
@@ -184,19 +178,12 @@ global with sharing class ManageHousehold_EXT {
         
         //lookup viable addresses
         getViableAddresses();
-        
-        //set the household default address to the first found address if it exists
-        /*if (activeAddressKey == null && !viableAddresses.isEmpty()) {
-            setActiveAddress(new list<String>(viableAddresses.keySet())[0]);
-        }*/
                 
         jsonState = JSON.serialize(this);
         
         // If we are in edit mode, add a copy of the state to compare against
         originalState = (hh.Id != null) ? jsonState : '';
     }
-    
-    
     
     
     /*******************************************************************************************************
@@ -273,12 +260,7 @@ global with sharing class ManageHousehold_EXT {
         
         // Update viable addresses
         ManageHousehold.getViableAddresses();
-        
-        // If we don't have an address attempt to select one //ManageHousehold.useAddress == false && 
-        /*if (!ManageHousehold.viableAddresses.isEmpty() && ManageHousehold.isAddressNull()) {
-            ManageHousehold.setActiveAddress(new list<String>(ManageHousehold.viableAddresses.keySet())[0]);
-        }*/
-        
+  
         return packState(ManageHousehold);
     }
     
@@ -329,7 +311,7 @@ global with sharing class ManageHousehold_EXT {
     ********************************************************************************************************/
     @RemoteAction
     global static string remoteSave(String state) {
-        ManageHousehold_EXT ManageHousehold = unpackState(state);
+        ManageHousehold_EXT ManageHousehold = unpackState(state);        
         ManageHousehold.saveHH();
         return packState(ManageHousehold);
     }
@@ -459,17 +441,6 @@ global with sharing class ManageHousehold_EXT {
         
         return true;
     }
-    
-    /*public boolean isAddressNull() {
-        if ((activeStreet != null && activeStreet != '') ||
-            (activeCity != null && activeCity != '') ||
-            (activeState != null && activeState != '') ||
-            (activePostalCode != null && activePostalCode != '') ||
-            (activeCountry != null && activeCountry != '')) {
-            return false;
-        }
-        return true;
-    }*/
     
     /*******************************************************************************************************
     * @description iterate over the active contacts and find all good addresses
@@ -644,7 +615,8 @@ global with sharing class ManageHousehold_EXT {
     * state of the custom interface.
     * @return void.
     ********************************************************************************************************/
-    public void saveHH() {
+    public void saveHH() {    	
+		
 		//save the household address if this is a new household, in an existing household this is handled by the vanilla save action
 	    if (hh.id == null) { 
 			hh.npo02__MailingStreet__c = activeStreet;
@@ -722,13 +694,13 @@ global with sharing class ManageHousehold_EXT {
     * @return PageReference.
     ********************************************************************************************************/
     public PageReference save() {
-
+        HouseholdProcessControl.inFutureContext = true;
         ApexPages.StandardController sc = new ApexPages.standardController(hh);
         PageReference sv = sc.save();
         
         //Rollup household - uncomment this in NPSP - the constructor is not global so cannot be called outside the managed package
-        /*npo02.OpportunityRollups rg = new npo02.OpportunityRollups();
-        rg.rollupHousehold(hh.id);*/
+        npo02.OpportunityRollups rg = new npo02.OpportunityRollups();
+        rg.rollupHouseholds(new map<id, npo02__Household__c>(new list<npo02__Household__c>{hh}));
                 
         return sv;
     }
@@ -819,9 +791,9 @@ global with sharing class ManageHousehold_EXT {
         insert con;
         Test.startTest();
         
-        npo02__Household__c tempHH = new npo02__Household__c();
-        ApexPages.StandardController sc = new ApexPages.standardController(tempHH);
-        
+        ApexPages.StandardController sc = new ApexPages.standardController(hh);
+              
+        Test.setCurrentPageReference(new PageReference('Page.manageHousehold'));              
         // Test a good hhid
         ApexPages.currentPage().getParameters().put('hhid', hh.Id);
         ManageHousehold_EXT ext = new ManageHousehold_EXT(sc);
@@ -838,7 +810,7 @@ global with sharing class ManageHousehold_EXT {
         ext.insertContacts.add(new Contact(Firstname = 'John', LastName ='Jones', npo02__Naming_Exclusions__c = 'Household__c.Name;Household__c.Formal_Greeting__c;Household__c.Informal_Greeting__c;'));
         
         ext.saveHH();
-        
+        Test.stopTest();
         Contact con1 = [select MailingStreet,MailingState,MailingCity,MailingPostalCode,MailingCountry from contact where id = :con.id][0];
         //test household address written to contact
         system.assertEquals(con1.MailingStreet, ext.hh.npo02__MailingStreet__c);
@@ -853,17 +825,7 @@ global with sharing class ManageHousehold_EXT {
         system.assertEquals(con2.MailingState, ext.hh.npo02__MailingState__c);
         system.assertEquals(con2.MailingCity, ext.hh.npo02__MailingCity__c);
         system.assertEquals(con2.MailingPostalCode, ext.hh.npo02__MailingPostalCode__c);
-        system.assertEquals(con2.MailingCountry, ext.hh.npo02__MailingCountry__c);
-        //test name
-        system.assertEquals('TestContactASDF Household', ext.getHHName());
-        
-        //test greeting
-        system.assertEquals('David TestContactASDF', ext.getHHFormalName());
-        
-        //test greeting
-        system.assertEquals('David', ext.getHHInformalName());
-        
-        Test.stopTest();
+        system.assertEquals(con2.MailingCountry, ext.hh.npo02__MailingCountry__c);   
     }
     
     public static testMethod void testRemoveContactActiveAddress() {
@@ -949,7 +911,6 @@ global with sharing class ManageHousehold_EXT {
             Name = 'test_hh'
             );
         
-        
         Contact con = new Contact(
             LastName = 'TestContactASDF',
             email = 'testemail@groundwiretest.org',
@@ -983,9 +944,7 @@ global with sharing class ManageHousehold_EXT {
         system.assertEquals(con.id, ext.conId);
         
         system.assertEquals(null, ext.hh.id);
-        
-        
-        
+       
         // verify that we receive false when we attempt to add a bad contact
         system.assertEquals(false, ext.addContact('01pU0000000h6LK'));
         system.assertEquals(false, ext.addContactWithHousehold('01pU0000000h6LK'));
@@ -1109,17 +1068,10 @@ global with sharing class ManageHousehold_EXT {
         
         string hhName = ext.getHHName();
         string hhGreeting = ext.getHHFormalName();
-        
-        //test the name
-        /*system.assertEquals(true, hhName.contains('Mike'));
-        system.assertEquals(true, hhName.contains('Cheryl'));*/
-        system.assertEquals(true, hhGreeting.contains('Mike'));
-        //system.assertEquals(true, hhGreeting.contains('Cheryl'));
-        
+              
         // verify that the contact was added
         system.assertEquals(2, ext.activeContacts.size());
-        //system.assertEquals(true, ext.activeConIds.contains(cQ[1].Id));
-        
+                
         cQ = ManageHousehold_EXT.findContacts('zzzzzz', ext.jsonState);
         
         system.assertEquals(0, cQ.size());
@@ -1229,8 +1181,7 @@ global with sharing class ManageHousehold_EXT {
         // Now, test delete
         ext.deleteHH();
         
-        Test.stopTest();
-        
+        Test.stopTest();        
     }
     
     public static testMethod void testRemoveReAdd() {
@@ -1260,8 +1211,7 @@ global with sharing class ManageHousehold_EXT {
         ManageHousehold_EXT ext = new ManageHousehold_EXT(sc);
         
         String jsSt;
-        String nwSt;
-        
+        String nwSt;        
         
         system.assertEquals(2, ext.activeContacts.size());
         system.assertEquals(0,ext.removeContacts.size());
@@ -1271,16 +1221,13 @@ global with sharing class ManageHousehold_EXT {
         nwSt = ManageHousehold_EXT.remoteRemoveMember(con2.id, jsSt);
         ext = ManageHousehold_EXT.unpackState(nwSt);
         
-        
         system.assertEquals(1, ext.activeContacts.size());
         system.assertEquals(1,ext.removeContacts.size());
-        
         
         // re add it
         jsSt = JSON.serialize(ext);
         nwSt = ManageHousehold_EXT.remoteAddMember(con2.id, false, jsSt);
         ext = ManageHousehold_EXT.unpackState(nwSt);
-        
         
         system.assertEquals(2, ext.activeContacts.size());
         system.assertEquals(0,ext.removeContacts.size());
@@ -1294,7 +1241,6 @@ global with sharing class ManageHousehold_EXT {
 
         system.assertEquals(2,[SELECT Id, npo02__Household__c FROM Contact WHERE npo02__Household__c = :hh.id].size());       
 
-        Test.stopTest();
-        
+        Test.stopTest();        
     }
 }

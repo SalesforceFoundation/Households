@@ -14,6 +14,28 @@
         <type>Currency</type>
     </fields>
     <fields>
+        <fullName>Best_Gift_Year_Total__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Best Gift Year Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Best_Gift_Year__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Best Gift Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>FirstCloseDate__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -46,6 +68,7 @@
     </fields>
     <fields>
         <fullName>Household_Naming_Order__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Household Naming Order</label>
         <precision>18</precision>
@@ -420,6 +443,54 @@
         <type>Currency</type>
     </fields>
     <fields>
+        <fullName>Soft_Credit_Last_Year__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total soft credit amount last year.</inlineHelpText>
+        <label>Soft Credit Last Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Soft_Credit_This_Year__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total soft credit amount this year</inlineHelpText>
+        <label>Soft Credit This Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Soft_Credit_Total__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total amount in soft credits for this Contact&apos;s lifetime. Defined in the Household Settings tab.</inlineHelpText>
+        <label>Soft Credit Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Soft_Credit_Two_Years_Ago__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total soft credit amount two years ago.</inlineHelpText>
+        <label>Soft Credit Two Years Ago</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>SystemHouseholdProcessor__c</fullName>
         <deprecated>false</deprecated>
         <description>Used to set if Households should get created for all Contacts, or just those which are connected to an individual account</description>
@@ -535,6 +606,7 @@ if(ISPICKVAL(npe01__Secondary_Address_Type__c,&quot;Home&quot;),
 Account.npe01__LastDonationDate__c,
 null
 )</formula>
+        <inlineHelpText>WARNING - This field may not accurately reflect the donation history. Please use the Last Gift Date field instead.</inlineHelpText>
         <label>Last Transaction Date</label>
         <required>false</required>
         <type>Date</type>
@@ -549,6 +621,7 @@ Account.npe01__LifetimeDonationHistory_Amount__c,
 null
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>WARNING- This field may not accurately reflect donation histories. Please use the Total Amount field on the Contact record instead.</inlineHelpText>
         <label>Lifetime Transaction Total</label>
         <precision>18</precision>
         <required>false</required>

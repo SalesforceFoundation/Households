@@ -14,7 +14,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>Edit</actionName>
-        <type>Default</type>
+        <content>manageHousehold</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>List</actionName>
@@ -22,7 +24,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
-        <type>Default</type>
+        <content>manageHousehold</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>Tab</actionName>
@@ -32,7 +36,7 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <deploymentStatus>InDevelopment</deploymentStatus>
+    <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>Physical mailing address for grouping contacts</description>
     <enableActivities>true</enableActivities>
@@ -43,15 +47,27 @@
         <fullName>Manage_Household_Custom</fullName>
         <description>Fields displayed on manage household page</description>
         <displayedFields>
+            <field>LargestAmount__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastMembershipAmount__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
             <field>HouseholdPhone__c</field>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>AverageAmount__c</field>
+            <field>MembershipEndDate__c</field>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>LastCloseDate__c</field>
+            <field>CreatedDate</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Addressee__c</field>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Manage_Household_Custom</label>
@@ -87,6 +103,28 @@
         <scale>2</scale>
         <trackHistory>false</trackHistory>
         <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Best_Gift_Year_Total__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Best Gift Year Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Best_Gift_Year__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Best Gift Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>FirstCloseDate__c</fullName>
@@ -548,6 +586,7 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <lookupDialogsAdditionalFields>Formula_MailingAddress__c</lookupDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>HouseholdPhone__c</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>Formula_MailingAddress__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
         <searchFilterFields>HouseholdPhone__c</searchFilterFields>
         <searchFilterFields>HouseholdEmail__c</searchFilterFields>
         <searchFilterFields>Formula_MailingAddress__c</searchFilterFields>
