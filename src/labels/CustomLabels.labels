@@ -217,6 +217,41 @@
         <value>Household Details</value>
     </labels>
     <labels>
+        <fullName>HouseholdDetails2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Household Details 2 - read-only section</shortDescription>
+        <value>Household Details 2</value>
+    </labels>
+    <labels>
+        <fullName>HouseholdDetails3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Household Details 3 - editable section</shortDescription>
+        <value>Household Details 3</value>
+    </labels>
+    <labels>
+        <fullName>HouseholdDetails4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Household Details 4 - read-only section</shortDescription>
+        <value>Household Details 4</value>
+    </labels>
+    <labels>
+        <fullName>HouseholdDetails5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Household Details 5 - editable section</shortDescription>
+        <value>Household Details 5</value>
+    </labels>
+    <labels>
+        <fullName>HouseholdDetails6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Household Details 6 - read-only section</shortDescription>
+        <value>Household Details 6</value>
+    </labels>
+    <labels>
         <fullName>HouseholdMembers</fullName>
         <language>en_US</language>
         <protected>false</protected>

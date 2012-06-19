@@ -29,9 +29,9 @@ gwManageHH.lblContactNameRqd = '{!$Label.ContactNameRqd}';
 gwManageHH.lblContactLastNameRqd = '{!$Label.ContactLastNameRqd}';
 gwManageHH.lblContactCreatedOnSave = '{!$Label.CreatedOnSave}';
 gwManageHH.lblExcludeText = '{!$Label.ExcludeText}';
-gwManageHH.lblExcludeName = '{!$ObjectType.npo02__Household__c.Fields.Name.Label}';
-gwManageHH.lblExcludeFormal = '{!$ObjectType.npo02__Household__c.Fields.npo02__Formal_Greeting__c.Label}';
-gwManageHH.lblExcludeInformal = '{!$ObjectType.npo02__Household__c.Fields.npo02__Informal_Greeting__c.Label}';
+gwManageHH.lblExcludeName = '{!$ObjectType.Household__c.Fields.Name.Label}';
+gwManageHH.lblExcludeFormal = '{!$ObjectType.Household__c.Fields.Formal_Greeting__c.Label}';
+gwManageHH.lblExcludeInformal = '{!$ObjectType.Household__c.Fields.Informal_Greeting__c.Label}';
 gwManageHH.lblAddAndRemove = '{!$Label.AddAndRemove}';
 gwManageHH.lblAddAndMerge = '{!$Label.AddAndMerge}';
 gwManageHH.lblSetAddress = '{!$Label.SetAddress}'; 
@@ -55,23 +55,23 @@ gwManageHH.originalState = JSON.stringify({!originalState});
 		<h3><a href="#">{!$Label.EnterNewAddress}</a></h3>
 		<div id="hhNewAddress">
 			<div class="gwField">
-				<label for="hhAddressStreet" class="gwField-label">{!$ObjectType.npo02__Household__c.Fields.npo02__MailingStreet__c.Label}</label>
+				<label for="hhAddressStreet" class="gwField-label">{!$ObjectType.Household__c.Fields.MailingStreet__c.Label}</label>
 				<textarea class="gwField-input" id="hhAddressStreet" name="hhAddressStreet" />
 			</div>
 			<div class="gwField">
-				<label for="hhAddressCity" class="gwField-label">{!$ObjectType.npo02__Household__c.Fields.npo02__MailingCity__c.Label}</label>
+				<label for="hhAddressCity" class="gwField-label">{!$ObjectType.Household__c.Fields.MailingCity__c.Label}</label>
 				<input type="text" class="gwField-input" id="hhAddressCity" name="hhAddressCity" />
 			</div>
 			<div class="gwField">
-				<label for="hhAddressState" class="gwField-label">{!$ObjectType.npo02__Household__c.Fields.npo02__MailingState__c.Label}</label>
+				<label for="hhAddressState" class="gwField-label">{!$ObjectType.Household__c.Fields.MailingState__c.Label}</label>
 				<input type="text" class="gwField-input" id="hhAddressState" name="hhAddressState" />
 			</div>
 			<div class="gwField">
-				<label for="hhAddressPostalCode" class="gwField-label">{!$ObjectType.npo02__Household__c.Fields.npo02__MailingPostalCode__c.Label}</label>
+				<label for="hhAddressPostalCode" class="gwField-label">{!$ObjectType.Household__c.Fields.MailingPostalCode__c.Label}</label>
 				<input type="text" class="gwField-input" id="hhAddressPostalCode" name="hhAddressPostalCode" />
 			</div>
 			<div class="gwField">
-				<label for="hhAddressCountry" class="gwField-label">{!$ObjectType.npo02__Household__c.Fields.npo02__MailingCountry__c.Label}</label>
+				<label for="hhAddressCountry" class="gwField-label">{!$ObjectType.Household__c.Fields.MailingCountry__c.Label}</label>
 				<input type="text" class="gwField-input" id="hhAddressCountry" name="hhAddressCountry" />
 			</div>
 		</div>
@@ -118,17 +118,17 @@ gwManageHH.originalState = JSON.stringify({!originalState});
 <div id="hhNaming" class="gwSection">
 	<div class="gwSection-content">
 		<div class="gwField">
-			<label for="hhName" class="gwField-label">{!$ObjectType.npo02__Household__c.Fields.Name.Label}</label>
+			<label for="hhName" class="gwField-label">{!$ObjectType.Household__c.Fields.Name.Label}</label>
 			<input type="text" class="gwField-input" id="hhName" name="hhName" />
 			<input type="checkbox" class="gwPreventUI" id="hhAutoName" name="hhAutoName" /><label for="hhAutoName">{!$Label.AutoName}</label>
 		</div>
 		<div class="gwField">
-			<label for="hhFormalGreeting" class="gwField-label">{!$ObjectType.npo02__Household__c.Fields.npo02__Formal_Greeting__c.Label}</label>
+			<label for="hhFormalGreeting" class="gwField-label">{!$ObjectType.Household__c.Fields.Formal_Greeting__c.Label}</label>
 			<input type="text" class="gwField-input" id="hhFormalGreeting" name="hhFormalGreeting" />
 			<input type="checkbox" class="gwPreventUI" id="hhAutoFormalGreeting" name="hhAutoFormalGreeting" /><label for="hhAutoFormalGreeting">{!$Label.AutoFormalGreeting}</label>
 		</div>
 		<div class="gwField">
-			<label for="hhInformalGreeting" class="gwField-label">{!$ObjectType.npo02__Household__c.Fields.npo02__Informal_Greeting__c.Label}</label>
+			<label for="hhInformalGreeting" class="gwField-label">{!$ObjectType.Household__c.Fields.Informal_Greeting__c.Label}</label>
 			<input type="text" class="gwField-input" id="hhInformalGreeting" name="hhInformalGreeting" />
 			<input type="checkbox" class="gwPreventUI" id="hhAutoInformalGreeting" name="hhAutoInformalGreeting" /><label for="hhAutoInformalGreeting">{!$Label.AutoInformalGreeting}</label>
 		</div>
@@ -148,23 +148,48 @@ gwManageHH.originalState = JSON.stringify({!originalState});
 <apex:inputField value="{!hh.MailingPostalCode__c}" styleClass="gwHidden sfField sfField-MailingPostalCode__c" />
 <apex:inputField value="{!hh.MailingCountry__c}" styleClass="gwHidden sfField sfField-MailingCountry__c" />
 
-<apex:pageBlock id="hhDetails" rendered="{!hh.id!=null}" title="{!$Label.HouseholdDetails}">
-
-<apex:pageBlockSection columns="2">
-
-		
+<apex:pageBlock id="hhDetails" rendered="{!$ObjectType.Household__c.FieldSets.Manage_Household_Custom.size > 0 && hh.id!=null}" title="{!$Label.HouseholdDetails}">
+	<apex:pageBlockSection columns="2">
 		<apex:repeat value="{!$ObjectType.Household__c.FieldSets.Manage_Household_Custom}" var="f">
-			<apex:inputField rendered="{!NOT(CONTAINS('npo02__Addressee__c,npo02__Always_Anonymous__c,npo02__AverageAmount__c,npo02__FirstCloseDate__c,npo02__Formal_Greeting__c,npo02__Formula_MailingAddress__c,npo02__Household_ID__c,Informal_Greeting__c,npo02__LargestAmount__c,npo02__LastCloseDate__c,npo02__LastMembershipAmount__c,npo02__LastMembershipDate__c,npo02__LastMembershipLevel__c,npo02__LastMembershipOrigin__c,npo02__LastOppAmount__c,npo02__MailingCity__c,npo02__MailingCountry__c,npo02__MailingPostalCode__c,npo02__MailingState__c,npo02__MailingStreet__c,npo02__MembershipEndDate__c,npo02__MembershipJoinDate__c,npo02__Membership_Span__c,npo02__Membership_Status__c,npo02__NumberOfClosedOpps__c,npo02__NumberOfMembershipOpps__c,npo02__OppAmount2YearsAgo__c,npo02__OppAmountLastNDays__c,npo02__OppAmountLastYear__c,npo02__OppAmountThisYear__c,npo02__OppsClosed2YearsAgo__c,npo02__OppsClosedLastNDays__c,npo02__OppsClosedLastYear__c,npo02__OppsClosedThisYear__c,npo02__SYSTEM_CUSTOM_NAMING__c,npo02__SmallestAmount__c,npo02__TotalMembershipOppAmount__c,npo02__TotalOppAmount__c', f.FieldPath))}"
-				value="{!hh[f]}" styleClass="sfField sfField-{!f.FieldPath}"/>
-
-			<apex:outputField rendered="{!CONTAINS('npo02__Addressee__c,npo02__Always_Anonymous__c,npo02__AverageAmount__c,npo02__FirstCloseDate__c,npo02__Formal_Greeting__c,npo02__Formula_MailingAddress__c,npo02__Household_ID__c,Informal_Greeting__c,npo02__LargestAmount__c,npo02__LastCloseDate__c,npo02__LastMembershipAmount__c,npo02__LastMembershipDate__c,npo02__LastMembershipLevel__c,npo02__LastMembershipOrigin__c,npo02__LastOppAmount__c,npo02__MailingCity__c,npo02__MailingCountry__c,npo02__MailingPostalCode__c,npo02__MailingState__c,npo02__MailingStreet__c,npo02__MembershipEndDate__c,npo02__MembershipJoinDate__c,npo02__Membership_Span__c,npo02__Membership_Status__c,npo02__NumberOfClosedOpps__c,npo02__NumberOfMembershipOpps__c,npo02__OppAmount2YearsAgo__c,npo02__OppAmountLastNDays__c,npo02__OppAmountLastYear__c,npo02__OppAmountThisYear__c,npo02__OppsClosed2YearsAgo__c,npo02__OppsClosedLastNDays__c,npo02__OppsClosedLastYear__c,npo02__OppsClosedThisYear__c,npo02__SYSTEM_CUSTOM_NAMING__c,npo02__SmallestAmount__c,npo02__TotalMembershipOppAmount__c,npo02__TotalOppAmount__c', f.FieldPath)}"
-				value="{!hh[f]}" styleClass="sfField sfField-{!f.FieldPath}"/>
+			<apex:inputField value="{!hh[f]}" styleClass="sfField sfField-{!f.FieldPath}"/>
 		</apex:repeat>
-
-</apex:pageBlockSection>
-
+	</apex:pageBlockSection>
 </apex:pageBlock>
-
+<apex:pageBlock id="hhDetails2" rendered="{!$ObjectType.Household__c.FieldSets.Manage_Household_Custom_2.size > 0 && hh.id!=null}" title="{!$Label.HouseholdDetails2}">
+	<apex:pageBlockSection columns="2">
+		<apex:repeat value="{!$ObjectType.Household__c.FieldSets.Manage_Household_Custom_2}" var="f">
+			<apex:outputField value="{!hh[f]}" styleClass="sfField sfField-{!f.FieldPath}"/>
+		</apex:repeat>
+	</apex:pageBlockSection>
+</apex:pageBlock>
+<apex:pageBlock id="hhDetails3" rendered="{!$ObjectType.Household__c.FieldSets.Manage_Household_Custom_3.size > 0 && hh.id!=null}" title="{!$Label.HouseholdDetails3}">
+	<apex:pageBlockSection columns="2">
+		<apex:repeat value="{!$ObjectType.Household__c.FieldSets.Manage_Household_Custom_3}" var="f">
+			<apex:inputField value="{!hh[f]}" styleClass="sfField sfField-{!f.FieldPath}"/>
+		</apex:repeat>
+	</apex:pageBlockSection>
+</apex:pageBlock>
+<apex:pageBlock id="hhDetails4" rendered="{!$ObjectType.Household__c.FieldSets.Manage_Household_Custom_4.size > 0 && hh.id!=null}" title="{!$Label.HouseholdDetails4}">
+	<apex:pageBlockSection columns="2">
+		<apex:repeat value="{!$ObjectType.Household__c.FieldSets.Manage_Household_Custom_4}" var="f">
+			<apex:outputField value="{!hh[f]}" styleClass="sfField sfField-{!f.FieldPath}"/>
+		</apex:repeat>
+	</apex:pageBlockSection>
+</apex:pageBlock>
+<apex:pageBlock id="hhDetails5" rendered="{!$ObjectType.Household__c.FieldSets.Manage_Household_Custom_5.size > 0 && hh.id!=null}" title="{!$Label.HouseholdDetails5}">
+	<apex:pageBlockSection columns="2">
+		<apex:repeat value="{!$ObjectType.Household__c.FieldSets.Manage_Household_Custom_5}" var="f">
+			<apex:inputField value="{!hh[f]}" styleClass="sfField sfField-{!f.FieldPath}"/>
+		</apex:repeat>
+	</apex:pageBlockSection>
+</apex:pageBlock>
+<apex:pageBlock id="hhDetails6" rendered="{!$ObjectType.Household__c.FieldSets.Manage_Household_Custom_6.size > 0 && hh.id!=null}" title="{!$Label.HouseholdDetails6}">
+	<apex:pageBlockSection columns="2">
+		<apex:repeat value="{!$ObjectType.Household__c.FieldSets.Manage_Household_Custom_6}" var="f">
+			<apex:outputField value="{!hh[f]}" styleClass="sfField sfField-{!f.FieldPath}"/>
+		</apex:repeat>
+	</apex:pageBlockSection>
+</apex:pageBlock>
 <div class="gwNotifications gwHidden"> </div>
 <div class="gwControls">
 <div class="gwSection-content">
