@@ -909,4 +909,15 @@ if(ISPICKVAL(npe01__Secondary_Address_Type__c,&quot;Work&quot;),
         <page>BTNContactAddressCopy</page>
         <protected>false</protected>
     </webLinks>
+    <webLinks>
+        <fullName>Household</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Household</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>{!IF(ISNULL(Contact.HouseholdId__c),URLFOR($Action.Household__c.New,null,[cid=Contact.Id,retURL=URLFOR($Action.Contact.View, Contact.Id)]),URLFOR($Action.Household__c.Edit,Contact.HouseholdId__c,[cid=Contact.Id,hhid=Contact.HouseholdId__c,retURL=URLFOR($Action.Contact.View, Contact.Id)]))}</url>
+    </webLinks>
 </CustomObject>

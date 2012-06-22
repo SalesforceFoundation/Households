@@ -2,7 +2,7 @@ Nonprofit Starter Pack - Households
 =================================================
 
 The Nonprofit Starter Pack (NPSP) is available as 5 managed packages.
-This is the Contacts and Organizations package.
+This is the Households package.
 
 **Households**
 

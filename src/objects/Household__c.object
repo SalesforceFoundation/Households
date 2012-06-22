@@ -34,7 +34,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <content>manageHousehold</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
@@ -45,21 +47,118 @@
     <enableReports>true</enableReports>
     <fieldSets>
         <fullName>Manage_Household_Custom</fullName>
-        <description>Fields displayed on manage household page</description>
-        <displayedFields>
-            <field>LargestAmount__c</field>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>LastMembershipAmount__c</field>
-            <isRequired>false</isRequired>
-        </displayedFields>
+        <description>Fields displayed on manage household page - editable</description>
         <displayedFields>
             <field>HouseholdPhone__c</field>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>MembershipEndDate__c</field>
+            <field>HouseholdEmail__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Addressee__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Always_Anonymous__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Manage_Household_Custom</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Manage_Household_Custom_2</fullName>
+        <description>Fields displayed on manage household page - read-only</description>
+        <displayedFields>
+            <field>FirstCloseDate__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LargestAmount__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastCloseDate__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>AverageAmount__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastOppAmount__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SmallestAmount__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Manage_Household_Custom_2</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Manage_Household_Custom_3</fullName>
+        <description>Fields displayed on manage household page - editable</description>
+        <label>Manage_Household_Custom_3</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Manage_Household_Custom_4</fullName>
+        <description>Fields displayed on manage household page - read-only</description>
+        <displayedFields>
+            <field>TotalOppAmount__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>NumberOfClosedOpps__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>OppAmountThisYear__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>OppsClosedThisYear__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>OppAmountLastYear__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>OppsClosedLastYear__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>OppAmountLastNDays__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>OppsClosedLastNDays__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>OppAmount2YearsAgo__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>OppsClosed2YearsAgo__c</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Manage_Household_Custom_4</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Manage_Household_Custom_5</fullName>
+        <description>Fields displayed on manage household page - editable</description>
+        <label>Manage_Household_Custom_5</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Manage_Household_Custom_6</fullName>
+        <description>Fields displayed on manage household page - read-only</description>
+        <displayedFields>
+            <field>CreatedById</field>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastModifiedById</field>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
@@ -67,10 +166,10 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>Addressee__c</field>
+            <field>LastModifiedDate</field>
             <isRequired>false</isRequired>
         </displayedFields>
-        <label>Manage_Household_Custom</label>
+        <label>Manage_Household_Custom_6</label>
     </fieldSets>
     <fields>
         <fullName>Addressee__c</fullName>
