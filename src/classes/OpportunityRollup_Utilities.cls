@@ -438,7 +438,7 @@ public without sharing class OpportunityRollup_Utilities {
                 }
                 //drop the trailing comma
                 AccountRollupQuery = AccountRollupQuery.substring(0, AccountRollupQuery.length() - 1);
-                AccountRollupQuery += ')';
+                AccountRollupQuery += ') ';
             }         
             if(areRecordTypesOnOpps()){
                 AccountRollupQuery += 'AND RecordTypeId NOT IN :rectypeset ';
