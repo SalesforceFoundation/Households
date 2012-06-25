@@ -667,8 +667,9 @@ gwManageHH.renderMembers = function() {
 	var cids = new Array();
 
 	//sort members by household naming order
-	members.sort(function(a,b){return a.Household_Naming_Order__c === null ? 1 : b.Household_Naming_Order__c === null ? -1 : (a.Household_Naming_Order__c > b.Household_Naming_Order__c) ? 1 : ((b.Household_Naming_Order__c > a.Household_Naming_Order__c) ? -1 : 0);} );
-
+	//members.sort(function(a,b){return a.Household_Naming_Order__c === null ? 1 : b.Household_Naming_Order__c === null ? -1 : (a.Household_Naming_Order__c > b.Household_Naming_Order__c) ? 1 : ((b.Household_Naming_Order__c > a.Household_Naming_Order__c) ? -1 : 0);} );
+    members.sort(function(a,b){return a[fldNm('Household_Naming_Order__c')] === null ? 1 : b[fldNm('Household_Naming_Order__c')] === null ? -1 : (a[fldNm('Household_Naming_Order__c')] > b[fldNm('Household_Naming_Order__c')]) ? 1 : ((b[fldNm('Household_Naming_Order__c')] > a[fldNm('Household_Naming_Order__c')]) ? -1 : 0);} );
+	
 	// Add or update cards
 	j$(members).each( function (i) {
 		
