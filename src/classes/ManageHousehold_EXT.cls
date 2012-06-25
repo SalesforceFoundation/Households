@@ -605,7 +605,7 @@ global with sharing class ManageHousehold_EXT {
         if (conId != null || hh.id != null) q += ' WHERE';
         if (conId != null) q += ' Id=\''+conId+'\'';
         if (conId != null && hh.id != null) q += ' or';
-        if (hh.id != null) q += ' npo02__Household__c = \''+hh.id+'\'';
+        if (hh.id != null) q += ' npo02__Household__c = \''+hh.id+'\' LIMIT 500';
         String qry = q;
         return Database.query(qry);
     }
