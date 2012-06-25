@@ -451,7 +451,7 @@ public without sharing class OpportunityRollup_Utilities {
             else{
                 AccountRollupQuery += 'GROUP BY ROLLUP (AccountId, Calendar_Year(CloseDate)) ';                
             }
-            AccountRollupQuery += ' HAVING AccountId != null';
+            AccountRollupQuery += ' HAVING AccountId != null ';
     	}
     	return AccountRollupQuery;
     }
@@ -470,7 +470,7 @@ public without sharing class OpportunityRollup_Utilities {
                 }
                 //drop the trailing comma
                 AccountRollupQuery = AccountRollupQuery.substring(0, AccountRollupQuery.length() - 1);
-                AccountRollupQuery += ')';
+                AccountRollupQuery += ') ';
             }   
             if(areRecordTypesOnOpps()){ 
                 AccountNDayQuery += 'AND RecordTypeId NOT IN :rectypeset '; 
@@ -479,7 +479,7 @@ public without sharing class OpportunityRollup_Utilities {
             AccountNDayQuery += 'AND AccountId IN :aset '; 
             AccountNDayQuery += 'AND closeDate >= LAST_N_DAYS:' + hh_settings.Rollup_N_Day_Value__c.intValue() + ' '; 
             AccountNDayQuery += 'GROUP BY AccountId '; 
-            AccountNDayQuery += 'HAVING AccountId != null';
+            AccountNDayQuery += 'HAVING AccountId != null ';
     	}    	
         return AccountNDayQuery;
     }
@@ -501,7 +501,7 @@ public without sharing class OpportunityRollup_Utilities {
                 }
                 //drop the trailing comma
                 AccountRollupQuery = AccountRollupQuery.substring(0, AccountRollupQuery.length()-1);
-                AccountRollupQuery += ')';
+                AccountRollupQuery += ') ';
             }             
             if(areRecordTypesOnOpps()){
                 AccountMembershipQuery += 'AND RecordTypeId IN :memberset ';
@@ -512,7 +512,7 @@ public without sharing class OpportunityRollup_Utilities {
                 AccountMembershipQuery += 'GROUP BY ROLLUP (AccountId, Fiscal_Year(closeDate)) ';
             else
                 AccountMembershipQuery += 'GROUP BY ROLLUP (AccountId, Calendar_Year(closeDate)) ';
-            AccountMembershipQuery += 'HAVING AccountId != null';
+            AccountMembershipQuery += 'HAVING AccountId != null ';
     	}
     	return AccountMembershipQuery;
     }
