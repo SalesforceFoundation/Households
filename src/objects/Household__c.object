@@ -46,7 +46,7 @@
     <fieldSets>
         <fullName>Manage_Household_Custom</fullName>
         <availableFields>
-            <field>Membership_Status__c</field>
+            <field>MembershipJoinDate__c</field>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
@@ -54,11 +54,11 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>LastModifiedDate</field>
+            <field>Name</field>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>LastModifiedById</field>
+            <field>LastModifiedDate</field>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
@@ -79,6 +79,14 @@
         </availableFields>
         <availableFields>
             <field>Formal_Greeting__c</field>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Formula_MailingAddress__c</field>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Informal_Greeting__c</field>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
@@ -110,11 +118,31 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
+            <field>MailingCity__c</field>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>MailingCountry__c</field>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>MailingPostalCode__c</field>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>MailingState__c</field>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>MailingStreet__c</field>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
             <field>MembershipEndDate__c</field>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>MembershipJoinDate__c</field>
+            <field>SystemModstamp</field>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
@@ -122,7 +150,7 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>SystemModstamp</field>
+            <field>Membership_Status__c</field>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
@@ -166,6 +194,10 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
+            <field>SYSTEM_CUSTOM_NAMING__c</field>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
             <field>SmallestAmount__c</field>
             <isRequired>false</isRequired>
         </availableFields>
@@ -187,6 +219,10 @@
         </availableFields>
         <availableFields>
             <field>LastActivityDate</field>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedById</field>
             <isRequired>false</isRequired>
         </availableFields>
         <description>Fields displayed on manage household page</description>
