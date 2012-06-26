@@ -164,21 +164,16 @@ global with sharing class ManageHousehold_EXT {
         	conId = (Id)String.escapeSingleQuotes(ApexPages.currentPage().getParameters().get('cid'));
         } catch (Exception e) {
             conId = null;
-        }
+        }        
         
-        list<Contact> hhMembers = getHHMembers();
-        
+        activeContacts = new map<id, Contact>();
         //if we are an existing household, get the members
         if (hh.Id != Null || conId != null) {
-            
-            if (!hhMembers.isEmpty()) {
-                activeContacts.putAll(hhMembers);
-            }
+            activeContacts.putAll(getHHMembers());            
+            //lookup viable addresses
+            getViableAddresses();
         }
-        
-        //lookup viable addresses
-        getViableAddresses();
-                
+                        
         jsonState = JSON.serialize(this);
         
         // If we are in edit mode, add a copy of the state to compare against
