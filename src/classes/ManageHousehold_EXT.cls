@@ -157,18 +157,17 @@ global with sharing class ManageHousehold_EXT {
         } else {
             tempHHid = thh.Id;
         }
-        hh = tempHHid != Null ? getHH(tempHHid) : thh;
+        hh = tempHHid != null ? getHH(tempHHid) : thh;
         
         //Get the contact id from the query if present - ensure it is sanitised
         try {
         	conId = (Id)String.escapeSingleQuotes(ApexPages.currentPage().getParameters().get('cid'));
         } catch (Exception e) {
             conId = null;
-        }        
+        }
         
-        activeContacts = new map<id, Contact>();
         //if we are an existing household, get the members
-        if (hh.Id != Null || conId != null) {
+        if (hh.Id != null || conId != null) {
             activeContacts.putAll(getHHMembers());            
             //lookup viable addresses
             getViableAddresses();
