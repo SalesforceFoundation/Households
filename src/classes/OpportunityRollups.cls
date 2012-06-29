@@ -504,8 +504,8 @@ global virtual without sharing class OpportunityRollups{
         
         for (id cid : cmap.keySet()) {
             contactsToUpdate.put(cid, new Contact(id = cid,                 
-                npo02__Soft_Credit_This_Year__c = null, npo02__Soft_Credit_Last_Year__c = null,                
-                npo02__Soft_Credit_Two_Years_Ago__c = null, npo02__Soft_Credit_Total__c = null
+                npo02__Soft_Credit_This_Year__c = 0, npo02__Soft_Credit_Last_Year__c = 0,                
+                npo02__Soft_Credit_Two_Years_Ago__c = 0, npo02__Soft_Credit_Total__c = 0
             ));
             // map currency across if multicurrency
             if(OpportunityRollup_Utilities.isMultiCurrency())
