@@ -680,7 +680,7 @@ public without sharing class OpportunityRollup_Utilities {
                 SoftCreditQuery = 'SELECT ContactId, Fiscal_Year(Opportunity.CloseDate) CalendarYr, ';
             else
                 SoftCreditQuery = 'SELECT ContactId, Calendar_Year(Opportunity.CloseDate) CalendarYr, ';            
-            SoftCreditQuery += 'SUM(Opportunity.Amount) TotalOppAmount ';
+            SoftCreditQuery += 'SUM(Opportunity.Amount) TotalOppAmount, ';
             SoftCreditQuery += 'MAX(Opportunity.npo02__CombinedRollupFieldset__c) RollupFieldset ';
             SoftCreditQuery += 'FROM OpportunityContactRole ';
             SoftCreditQuery += 'WHERE Opportunity.isWon=true '; 
