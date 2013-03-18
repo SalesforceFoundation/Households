@@ -6,6 +6,10 @@
     </types>
     <types>
         <members>*</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>ApexPage</name>
     </types>
     <types>
@@ -40,9 +44,8 @@
         <name>ReportType</name>
     </types>
     <types>
-        <members>ManageHouseholdcss</members>
-        <members>ManageHouseholdjs</members>
+        <members>*</members>
         <name>StaticResource</name>
     </types>
-    <version>23.0</version>
+    <version>26.0</version>
 </Package>

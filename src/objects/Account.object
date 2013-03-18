@@ -548,7 +548,7 @@
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
             <operation>equals</operation>
-            <value>True</value>
+            <value>true</value>
         </summaryFilterItems>
         <summaryFilterItems>
             <field>Opportunity.Amount</field>
@@ -568,7 +568,7 @@
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
             <operation>equals</operation>
-            <value>True</value>
+            <value>true</value>
         </summaryFilterItems>
         <summaryFilterItems>
             <field>Opportunity.Amount</field>
@@ -588,7 +588,7 @@
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
             <operation>equals</operation>
-            <value>True</value>
+            <value>true</value>
         </summaryFilterItems>
         <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
         <summaryOperation>sum</summaryOperation>
@@ -602,7 +602,7 @@
         <summaryFilterItems>
             <field>Opportunity.IsWon</field>
             <operation>equals</operation>
-            <value>True</value>
+            <value>true</value>
         </summaryFilterItems>
         <summaryFilterItems>
             <field>Opportunity.Amount</field>

@@ -244,7 +244,7 @@
         <summaryFilterItems>
             <field>npe01__OppPayment__c.npe01__Written_Off__c</field>
             <operation>equals</operation>
-            <value>True</value>
+            <value>true</value>
         </summaryFilterItems>
         <summaryForeignKey>npe01__OppPayment__c.npe01__Opportunity__c</summaryForeignKey>
         <summaryOperation>sum</summaryOperation>
@@ -371,7 +371,7 @@
         <summaryFilterItems>
             <field>npe01__OppPayment__c.npe01__Paid__c</field>
             <operation>equals</operation>
-            <value>True</value>
+            <value>true</value>
         </summaryFilterItems>
         <summaryForeignKey>npe01__OppPayment__c.npe01__Opportunity__c</summaryForeignKey>
         <summaryOperation>sum</summaryOperation>
