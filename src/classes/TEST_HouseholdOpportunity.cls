@@ -257,4 +257,39 @@ private class TEST_HouseholdOpportunity {
         system.AssertEquals(0,createdRoles.size());
     }
     
+    static testmethod void ghIssue25() {
+        insert new npe01__Contacts_and_Orgs_Settings__c (
+            npe01__Enable_Opportunity_Contact_Role_Trigger__c = true,
+            npe01__Opportunity_Contact_Role_Default_role__c = 'Donor',
+            npe01__Account_Processor__c = 'One-to-One'
+            );
+        insert new npo02__Households_Settings__c(
+            npo02__Household_Contact_Roles_On__c = true,
+            npo02__Household_Member_Contact_Role__c = 'Household Member'
+            );
+
+        npo02__Household__c hh = new npo02__Household__c(Name ='hh');
+        insert hh;
+        Contact con1= new Contact(LastName='test1',npo02__Household__c = hh.id);
+        Contact con2= new Contact(LastName='test2');
+        insert con1;
+        insert con2;
+
+        Opportunity o1 = new Opportunity(
+            Name = 'o1',
+            StageName = 'Closed Won',
+            CloseDate = System.Today(),
+            npe01__Contact_Id_for_Role__c = (string)con1.id);
+
+        Opportunity o2 = new Opportunity(
+            Name = 'o2',
+            StageName = 'Closed Won',
+            CloseDate = System.Today(),
+            npe01__Contact_Id_for_Role__c = (string)con2.id);
+
+        insert new list<Opportunity>{o1,o2};
+
+        system.assertequals(2,(integer)[select count(id) cnt from opportunity].get(0).get('cnt'));
+        system.assertequals(2,(integer)[select count(id) cnt from opportunitycontactrole].get(0).get('cnt'));
+    }     
 }
