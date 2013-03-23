@@ -29,7 +29,7 @@
 */
 /**
 * @author Salesforce.com Foundation 
-* @date 2011 (2.0) 
+* @date 2012 (2.0) 
 * @description Resposible for rollups of all opportunities to the requisite Account/Household/Contact 
 */
 global virtual without sharing class OpportunityRollups{
@@ -130,6 +130,7 @@ global virtual without sharing class OpportunityRollups{
         }           
     }
     
+    //this is a future wrapper for the rollupAccounts method. 
     @future 
     public static void rollupAccountsFuture( set<id> acctIds ) {
         if (acctIds != null && !acctIds.isEmpty()) { 
