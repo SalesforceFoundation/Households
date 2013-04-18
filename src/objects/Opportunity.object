@@ -4,15 +4,23 @@
         <fullName>dummyBP</fullName>
         <description>Dummy business process created for patch org.</description>
         <isActive>true</isActive>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
     </businessProcesses>
     <enableFeeds>true</enableFeeds>
     <fields>
         <fullName>CombinedRollupFieldset__c</fullName>
         <deprecated>false</deprecated>
-        <description>Concatenated fields used during rollups to locate the most recent opportunity.</description>
+        <description>Hidden system field, do not add to layouts.</description>
         <externalId>false</externalId>
         <formula>TEXT(CloseDate) + &apos;;|;&apos;+ TEXT(Amount) + &apos;;|;&apos;+ TEXT(npe01__Member_Level__c) + &apos;;|;&apos;+ TEXT(npe01__Membership_Origin__c) + &apos;;|;&apos; +  Id</formula>
-        <inlineHelpText>Concatenated fields used during rollups to locate the most recent opportunity.</inlineHelpText>
+        <inlineHelpText>Formula: Concatenated fields used during rollups to locate the most recent opportunity.</inlineHelpText>
         <label>Combined Rollup Fieldset</label>
         <required>false</required>
         <type>Text</type>
@@ -21,7 +29,9 @@
     <fields>
         <fullName>CurrentGenerators__c</fullName>
         <deprecated>false</deprecated>
+        <description>Deprecated field. Do not use.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Deprecated field. Do not use.</inlineHelpText>
         <label>Current Generator(s) - DEPRECATED</label>
         <length>100</length>
         <required>false</required>
@@ -32,7 +42,9 @@
     <fields>
         <fullName>DeliveryInstallationStatus__c</fullName>
         <deprecated>false</deprecated>
+        <description>Deprecated field. Do not use.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Deprecated field. Do not use.</inlineHelpText>
         <label>Delivery/Installation Status- DEPRECATED</label>
         <picklist>
             <picklistValues>
@@ -82,7 +94,9 @@
     <fields>
         <fullName>MainCompetitors__c</fullName>
         <deprecated>false</deprecated>
+        <description>Deprecated field. Do not use.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Deprecated field. Do not use.</inlineHelpText>
         <label>Main Competitor(s) - DEPRECATED</label>
         <length>100</length>
         <required>false</required>
@@ -93,7 +107,9 @@
     <fields>
         <fullName>OrderNumber__c</fullName>
         <deprecated>false</deprecated>
+        <description>Deprecated field. Do not use.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Deprecated field. Do not use.</inlineHelpText>
         <label>Order Number - DEPRECATED</label>
         <length>8</length>
         <required>false</required>
@@ -191,7 +207,9 @@
     <fields>
         <fullName>TrackingNumber__c</fullName>
         <deprecated>false</deprecated>
+        <description>Deprecated field. Do not use.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Deprecated field. Do not use.</inlineHelpText>
         <label>Tracking Number - DEPRECATED</label>
         <length>12</length>
         <required>false</required>
@@ -380,8 +398,9 @@
     <fields>
         <fullName>systemHouseholdContactRoleProcessor__c</fullName>
         <deprecated>false</deprecated>
+        <description>Hidden system field.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Controls if Household contact roles are created for Opportunities</inlineHelpText>
+        <inlineHelpText>Controls if Household contact roles are created for Opportunities.  System field, do not use.</inlineHelpText>
         <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
         <picklist>
             <picklistValues>
