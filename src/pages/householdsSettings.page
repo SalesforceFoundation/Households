@@ -34,21 +34,17 @@
                         <apex:pageBlockSectionItem helpText="Select any Contact record types that should be excluded from receiving a Household automatically." rendered="{!NOT(editHouseholdSettingsTab)}">                             
                             <apex:outputLabel value="Households Contact Recordtype Exclusions" />
                             <apex:outputtext value="{!IF(AND(settings.Household_Creation_Excluded_Recordtypes__c != null, settings.Household_Creation_Excluded_Recordtypes__c != ' '), settings.Household_Creation_Excluded_Recordtypes__c, 'No Recordtypes Selected')}"/>
-                        </apex:pageBlockSectionItem>
-	                
-	                
-	                
+                        </apex:pageBlockSectionItem>	                
 	                </apex:pageBlockSection>
 	
 	                <apex:pageBlockSection id="householdrolesection" title="Household Opportunity Contact Roles" columns="1" collapsible="false">
 	                    <apex:outputPanel >{!$Label.Household_Contact_Roles_Help_Text}</apex:outputPanel>
 	                </apex:pageBlockSection>
 	                <apex:pageBlockSection id="householdrolesection2" showHeader="false" columns="2" collapsible="false">
-	                    <apex:pageBlockSectionItem helpText="Create automatic Contact Roles for Household members of the primary donor">
+	                    <apex:pageBlockSectionItem helpText="Create Opportunity automatic Contact Roles for Household members of the primary donor">
                            <apex:outputLabel value="Enable Household Opportunity Contact Roles"/>
 	                       <apex:inputcheckbox value="{!settings.Household_Contact_Roles_On__c}" disabled="{!NOT(editHouseholdSettingsTab)}"/>
-                        </apex:pageBlockSectionItem>
-	              
+                        </apex:pageBlockSectionItem>	              
 	                    <apex:pageBlockSectionItem helpText="Select the role all Household Members should receive for Opportunities." rendered="{!editHouseholdSettingsTab}">
 	                        <apex:outputLabel value="Households Member Opportunity Contact Role" /> 
 	                        <apex:selectList value="{!settings.Household_Member_Contact_Role__c}" multiselect="false" size="1">
@@ -58,8 +54,7 @@
                         <apex:pageBlockSectionItem helpText="Select the role all Household Members should receive for Opportunities." rendered="{!NOT(editHouseholdSettingsTab)}">	                           
                             <apex:outputLabel value="Households Member Opportunity Contact Role" />
                             <apex:outputtext value="{!IF(AND(settings.Household_Member_Contact_Role__c != null, settings.Household_Member_Contact_Role__c != ' '), settings.Household_Member_Contact_Role__c, 'No Role Selected')}"/>
-                        </apex:pageBlockSectionItem>
-	                
+                        </apex:pageBlockSectionItem>	                
 	                   <apex:pageBlockSectionItem helpText="Select any Contact record types that should be excluded from receiving a Household Opportunity Contact Role." rendered="{!editHouseholdSettingsTab}">
                             <apex:outputLabel value="Households Opportunity Contact Role Exclusions" /> 
                             <apex:selectList value="{!OCRContactRTExclusions}" multiselect="true">
@@ -70,7 +65,6 @@
                             <apex:outputLabel value="Households Opportunity Contact Role Exclusions" />
                             <apex:outputtext value="{!IF(AND(settings.Household_OCR_Excluded_Recordtypes__c != null, settings.Household_OCR_Excluded_Recordtypes__c != ' '), settings.Household_OCR_Excluded_Recordtypes__c, 'No Recordtypes Selected')}"/>
                         </apex:pageBlockSectionItem>
-	                
 	                </apex:pageBlockSection>
 	             
 	                <apex:pageBlockSection id="householdsettingssection5" title="Household Name Settings" collapsible="false">
@@ -106,7 +100,7 @@
                             <apex:pageblocksectionitem helpText="Enables automatic checking for Households Package updates">                    
                                 <apex:outputlabel value="Enable Update Check"/>
                                 <apex:inputcheckbox value="{!settings.Enable_Update_Check__c}" disabled="{!NOT(editHouseholdSettingsTab)}"/>
-                            </apex:pageblocksectionitem>                           
+                            </apex:pageblocksectionitem>                            
                             <apex:pageblocksectionitem helpText="Length, in days, between automatic checking for new updates, if enabled." rendered="{!NOT(editHouseholdSettingsTab)}">
                                 <apex:outputlabel value="Update Check Interval" />
                                 <apex:outputfield value="{!settings.Update_Check_Interval__c}"/>
@@ -241,7 +235,7 @@
 	               <apex:pageblocksection title="Opportunity Rollup Errors" collapsible="false" id="errorsection" columns="1">
 	                    <apex:pageblocksectionitem rendered="{!NOT(hasErrors)}">
 	                       <apex:outputtext value="No Errors Found"/>
-	                    </apex:pageblocksectionitem>
+	                    </apex:pageblocksectionitem> 
 	                    <apex:pageblocktable value="{!errorList}" var="e" rendered="{!hasErrors}">
 	                        <apex:column value="{!e.Error_Object_Type__c}"/>
 	                        <apex:column value="{!e.Error_Datetime__c}"/>
