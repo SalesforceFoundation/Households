@@ -5,7 +5,9 @@
         <fullName>AverageAmount__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See excluded Opportunity Record types, excluded Opportunity types in Household setting for &apos;always roll up to primary&apos; (exclude non individual Accounts).  Do not update.  Updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The average amount of all won Opportunities related to this Contact by a primary Opportunity Contact Role.</inlineHelpText>
         <label>Average Gift</label>
         <precision>16</precision>
         <required>false</required>
@@ -16,7 +18,9 @@
     <fields>
         <fullName>Best_Gift_Year_Total__c</fullName>
         <deprecated>false</deprecated>
+        <description>See Household settings for FY/CY and excluded Opportunity Record Types.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The sum of won Opportunity amounts in the Best Gift Year.</inlineHelpText>
         <label>Best Gift Year Total</label>
         <precision>18</precision>
         <required>false</required>
@@ -27,7 +31,9 @@
     <fields>
         <fullName>Best_Gift_Year__c</fullName>
         <deprecated>false</deprecated>
+        <description>See Household settings for FY/CY and excluded Opportunity Record Types.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The year of the largest total amount of won Opportunities related to this Contact by primary Contact Role.  See also Best Gift Year Total.</inlineHelpText>
         <label>Best Gift Year</label>
         <length>4</length>
         <required>false</required>
@@ -38,7 +44,9 @@
     <fields>
         <fullName>FirstCloseDate__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The oldest Close Date of a won Opportunity with amount greater than zero related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>First Gift Date</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -47,9 +55,11 @@
     <fields>
         <fullName>Formula_HouseholdMailingAddress__c</fullName>
         <deprecated>false</deprecated>
+        <description>Formula: Clone of the Household Mailing address (also a Formula)</description>
         <externalId>false</externalId>
         <formula>Household__r.Formula_MailingAddress__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula: Clone of the Household Mailing address (also a Formula)</inlineHelpText>
         <label>Household Mailing Address</label>
         <required>false</required>
         <type>Text</type>
@@ -58,9 +68,11 @@
     <fields>
         <fullName>Formula_HouseholdPhone__c</fullName>
         <deprecated>false</deprecated>
+        <description>Formula: Simple formula of Household Phone field.</description>
         <externalId>false</externalId>
         <formula>Household__r.HouseholdPhone__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula: Simple formula of Household Phone field.</inlineHelpText>
         <label>Household Phone</label>
         <required>false</required>
         <type>Text</type>
@@ -69,7 +81,9 @@
     <fields>
         <fullName>Household_Naming_Order__c</fullName>
         <deprecated>false</deprecated>
+        <description>Determines the order in which Contact names are used to generate Household name.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Determines the order in which Contact names are used to generate Household name.</inlineHelpText>
         <label>Household Naming Order</label>
         <precision>18</precision>
         <required>false</required>
@@ -94,7 +108,9 @@
     <fields>
         <fullName>Languages__c</fullName>
         <deprecated>false</deprecated>
+        <description>Deprecated field.  Do not use.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Deprecated field.  Do not use.</inlineHelpText>
         <label>Languages - DEPRECATED</label>
         <length>100</length>
         <required>false</required>
@@ -106,7 +122,9 @@
         <fullName>LargestAmount__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The largest amount of a won Opportunity related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Largest Gift</label>
         <precision>16</precision>
         <required>false</required>
@@ -117,8 +135,10 @@
     <fields>
         <fullName>LastCloseDateHH__c</fullName>
         <deprecated>false</deprecated>
+        <description>Formula: Last Close Date field of the related Household.</description>
         <externalId>false</externalId>
         <formula>Household__r.LastCloseDate__c</formula>
+        <inlineHelpText>Formula: Last Close Date field of the related Household.</inlineHelpText>
         <label>Last Household Gift Date</label>
         <required>false</required>
         <type>Date</type>
@@ -126,7 +146,9 @@
     <fields>
         <fullName>LastCloseDate__c</fullName>
         <deprecated>false</deprecated>
+        <description>System field: do not change. Updated by automatic processes. Do not edit.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The close date of the most recent won Opportunity related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Last Gift Date</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -136,7 +158,9 @@
         <fullName>LastMembershipAmount__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The amount of the most recent (by Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Last Membership Amount</label>
         <precision>16</precision>
         <required>false</required>
@@ -147,7 +171,9 @@
     <fields>
         <fullName>LastMembershipDate__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The most recent Close Date of a won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Last Membership Date</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -156,7 +182,9 @@
     <fields>
         <fullName>LastMembershipLevel__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The level of the most recent (by Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Last Membership Level</label>
         <length>255</length>
         <required>false</required>
@@ -167,7 +195,9 @@
     <fields>
         <fullName>LastMembershipOrigin__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The origin (new, renewal, reacquire...) of the most recent (Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Last Membership Origin</label>
         <length>255</length>
         <required>false</required>
@@ -179,7 +209,9 @@
         <fullName>LastOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The amount of the most recent won Opportunity by Close Date related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Last Gift Amount</label>
         <precision>16</precision>
         <required>false</required>
@@ -217,7 +249,9 @@
     <fields>
         <fullName>Level__c</fullName>
         <deprecated>false</deprecated>
+        <description>Deprecated field.  Do not use.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Deprecated field.  Do not use.</inlineHelpText>
         <label>Level - DEPRECATED</label>
         <picklist>
             <picklistValues>
@@ -240,7 +274,9 @@
     <fields>
         <fullName>MembershipEndDate__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not change. Updated by automatic processes.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The Membership End Date of the most recent (Close Date) Membership Opportunity (Record Type) related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Membership End Date</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -249,7 +285,9 @@
     <fields>
         <fullName>MembershipJoinDate__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not change. Updated by automatic processes.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The Join Date of the oldest (Close Date) Membership Opportunity (Record Type) related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Membership Join Date</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -258,8 +296,9 @@
     <fields>
         <fullName>Naming_Exclusions__c</fullName>
         <deprecated>false</deprecated>
+        <description>Determines which household names this contact is NOT included as part of.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Determines which household names this contact is NOT included as part of.</inlineHelpText>
+        <inlineHelpText>Select to exclude this Contact&apos;s name from various generated Household names.</inlineHelpText>
         <label>Naming Exclusions</label>
         <picklist>
             <picklistValues>
@@ -284,7 +323,9 @@
         <fullName>NumberOfClosedOpps__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See Household Settings for excluded Record Types.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Total Number of Gifts</label>
         <precision>18</precision>
         <required>false</required>
@@ -297,7 +338,9 @@
         <fullName>NumberOfMembershipOpps__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See Household Settings for excluded Record Types.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The number of won Membership Opportunities (Record Type) related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Number of Memberships</label>
         <precision>18</precision>
         <required>false</required>
@@ -310,7 +353,9 @@
         <fullName>OppAmount2YearsAgo__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See Household Settings for excluded Record Types and FY/CY. Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed two years ago.</inlineHelpText>
         <label>Total Gifts Two Years Ago</label>
         <precision>16</precision>
         <required>false</required>
@@ -322,7 +367,9 @@
         <fullName>OppAmountLastNDays__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See Household Settings for excluded Record Types and FY/CY. Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed in the last number of days defined in Household Settings.</inlineHelpText>
         <label>Total Gifts Last N Days</label>
         <precision>16</precision>
         <required>false</required>
@@ -333,9 +380,11 @@
     <fields>
         <fullName>OppAmountLastYearHH__c</fullName>
         <deprecated>false</deprecated>
+        <description>Formula:  Total Gifts Last Year on related Household.</description>
         <externalId>false</externalId>
         <formula>Household__r.OppAmountLastYear__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula:  Total Gifts Last Year on related Household.</inlineHelpText>
         <label>Total Household Gifts Last Year</label>
         <precision>18</precision>
         <required>false</required>
@@ -346,7 +395,9 @@
         <fullName>OppAmountLastYear__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See Household Settings for excluded Record Types and FY/CY. Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed last year.</inlineHelpText>
         <label>Total Gifts Last Year</label>
         <precision>16</precision>
         <required>false</required>
@@ -357,9 +408,11 @@
     <fields>
         <fullName>OppAmountThisYearHH__c</fullName>
         <deprecated>false</deprecated>
+        <description>Formula:  Total Gifts This Year on related Household.</description>
         <externalId>false</externalId>
         <formula>Household__r.OppAmountThisYear__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula:  Total Gifts This Year on related Household.</inlineHelpText>
         <label>Total Household Gifts This Year</label>
         <precision>18</precision>
         <required>false</required>
@@ -370,7 +423,9 @@
         <fullName>OppAmountThisYear__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See Household Settings for excluded Record Types and FY/CY. Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed this year.</inlineHelpText>
         <label>Total Gifts This Year</label>
         <precision>16</precision>
         <required>false</required>
@@ -382,7 +437,9 @@
         <fullName>OppsClosed2YearsAgo__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See Household Settings for excluded Record Types and FY/CY. Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed two years ago.</inlineHelpText>
         <label>Number of Gifts Two Years Ago</label>
         <precision>18</precision>
         <required>false</required>
@@ -395,7 +452,9 @@
         <fullName>OppsClosedLastNDays__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See Household Settings for excluded Record Types. Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed in the last number of days defined in Household Settings.</inlineHelpText>
         <label>Number of Gifts Last N Days</label>
         <precision>18</precision>
         <required>false</required>
@@ -408,7 +467,9 @@
         <fullName>OppsClosedLastYear__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See Household Settings for excluded Record Types and FY/CY. Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed last year.</inlineHelpText>
         <label>Number of Gifts Last Year</label>
         <precision>18</precision>
         <required>false</required>
@@ -421,7 +482,9 @@
         <fullName>OppsClosedThisYear__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See Household Settings for excluded Record Types and FY/CY. Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed this year.</inlineHelpText>
         <label>Number of Gifts This Year</label>
         <precision>18</precision>
         <required>false</required>
@@ -434,7 +497,9 @@
         <fullName>SmallestAmount__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See Household Settings for excluded Record Types.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The smallest amount of a won Opportunity related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Smallest Gift</label>
         <precision>16</precision>
         <required>false</required>
@@ -445,8 +510,9 @@
     <fields>
         <fullName>Soft_Credit_Last_Year__c</fullName>
         <deprecated>false</deprecated>
+        <description>See Household Settings for Roles, excluded Record Types and FY/CY. Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Total soft credit amount last year.</inlineHelpText>
+        <inlineHelpText>The sum of soft credit Opportunity amounts last year determined by Opportunity Contact Role and filtered by Roles in Household Settings.</inlineHelpText>
         <label>Soft Credit Last Year</label>
         <precision>18</precision>
         <required>false</required>
@@ -481,8 +547,9 @@
     <fields>
         <fullName>Soft_Credit_Two_Years_Ago__c</fullName>
         <deprecated>false</deprecated>
+        <description>See Household Settings for Roles, FY/CY, and excluded Record Types.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Total soft credit amount two years ago.</inlineHelpText>
+        <inlineHelpText>The sum of soft credit Opportunity amounts two years ago determined by Opportunity Contact Role and filtered by Roles in Household Settings.</inlineHelpText>
         <label>Soft Credit Two Years Ago</label>
         <precision>18</precision>
         <required>false</required>
@@ -493,8 +560,9 @@
     <fields>
         <fullName>SystemHouseholdProcessor__c</fullName>
         <deprecated>false</deprecated>
-        <description>Used to set if Households should get created for all Contacts, or just those which are connected to an individual account</description>
+        <description>Hidden system field: do not change. Updated by automatic process. See Household Settings.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Indicates if Household should be created and updated for this Contact (all Contacts or just Individual Account Contacts)</inlineHelpText>
         <label>_SYSTEM: HOUSEHOLD PROCESSOR</label>
         <picklist>
             <picklistValues>
@@ -518,7 +586,9 @@
         <fullName>TotalMembershipOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See Household Settings for excluded Record Types.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The total amount of won Membership Opportunities (Record Type) related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Total Membership Amount</label>
         <precision>16</precision>
         <required>false</required>
@@ -530,7 +600,9 @@
         <fullName>TotalOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
+        <description>See Household Settings for excluded Record Types.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The sum of won Opportunity Amounts related to this Contact by primary Opportunity Contact Role.</inlineHelpText>
         <label>Total Gifts</label>
         <precision>16</precision>
         <required>false</required>
@@ -541,9 +613,11 @@
     <fields>
         <fullName>Total_Household_Gifts__c</fullName>
         <deprecated>false</deprecated>
+        <description>Formula:  Total Gifts on related Household.</description>
         <externalId>false</externalId>
         <formula>Household__r.TotalOppAmount__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula:  Total Gifts on related Household.</inlineHelpText>
         <label>Total Household Gifts</label>
         <precision>18</precision>
         <required>false</required>
