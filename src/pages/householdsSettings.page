@@ -40,34 +40,34 @@
 	                
 	                </apex:pageBlockSection>
 	
-	                <apex:pageBlockSection id="householdrolesection" title="Household Contact Roles" columns="1" collapsible="false">
+	                <apex:pageBlockSection id="householdrolesection" title="Household Opportunity Contact Roles" columns="1" collapsible="false">
 	                    <apex:outputPanel >{!$Label.Household_Contact_Roles_Help_Text}</apex:outputPanel>
 	                </apex:pageBlockSection>
 	                <apex:pageBlockSection id="householdrolesection2" showHeader="false" columns="2" collapsible="false">
 	                    <apex:pageBlockSectionItem helpText="Create automatic Contact Roles for Household members of the primary donor">
-                           <apex:outputLabel value="Enable Household Contact Roles"/>
+                           <apex:outputLabel value="Enable Household Opportunity Contact Roles"/>
 	                       <apex:inputcheckbox value="{!settings.Household_Contact_Roles_On__c}" disabled="{!NOT(editHouseholdSettingsTab)}"/>
                         </apex:pageBlockSectionItem>
 	              
 	                    <apex:pageBlockSectionItem helpText="Select the role all Household Members should receive for Opportunities." rendered="{!editHouseholdSettingsTab}">
-	                        <apex:outputLabel value="Households Member Contact Role" /> 
+	                        <apex:outputLabel value="Households Member Opportunity Contact Role" /> 
 	                        <apex:selectList value="{!settings.Household_Member_Contact_Role__c}" multiselect="false" size="1">
 	                            <apex:selectOptions value="{!contactroles}" />
 	                        </apex:selectList>
                         </apex:pageBlockSectionItem>	                        
                         <apex:pageBlockSectionItem helpText="Select the role all Household Members should receive for Opportunities." rendered="{!NOT(editHouseholdSettingsTab)}">	                           
-                            <apex:outputLabel value="Households Member Contact Role" />
+                            <apex:outputLabel value="Households Member Opportunity Contact Role" />
                             <apex:outputtext value="{!IF(AND(settings.Household_Member_Contact_Role__c != null, settings.Household_Member_Contact_Role__c != ' '), settings.Household_Member_Contact_Role__c, 'No Role Selected')}"/>
                         </apex:pageBlockSectionItem>
 	                
 	                   <apex:pageBlockSectionItem helpText="Select any Contact record types that should be excluded from receiving a Household Opportunity Contact Role." rendered="{!editHouseholdSettingsTab}">
-                            <apex:outputLabel value="Households Contact Role Exclusions" /> 
+                            <apex:outputLabel value="Households Opportunity Contact Role Exclusions" /> 
                             <apex:selectList value="{!OCRContactRTExclusions}" multiselect="true">
                                 <apex:selectOptions value="{!conRTypes}" />
                             </apex:selectList>
                         </apex:pageBlockSectionItem>                            
                         <apex:pageBlockSectionItem helpText="Select any Contact record types that should be excluded from receiving a Household Opportunity Contact Role." rendered="{!NOT(editHouseholdSettingsTab)}">                             
-                            <apex:outputLabel value="Households Contact Role Exclusions" />
+                            <apex:outputLabel value="Households Opportunity Contact Role Exclusions" />
                             <apex:outputtext value="{!IF(AND(settings.Household_OCR_Excluded_Recordtypes__c != null, settings.Household_OCR_Excluded_Recordtypes__c != ' '), settings.Household_OCR_Excluded_Recordtypes__c, 'No Recordtypes Selected')}"/>
                         </apex:pageBlockSectionItem>
 	                
