@@ -140,6 +140,8 @@ global with sharing class ManageHousehold_EXT {
     
     public ManageHousehold_EXT(ApexPages.StandardController controller) {
         
+	//resolve UI defects in IE10
+	Apexpages.currentPage().getHeaders().put('X-UA-Compatible', 'IE=10');
         activeContacts = new map<Id, Contact>();
         removeContacts = new map<Id, Contact>();
         viableAddresses = new map<String, viableAddress>();
