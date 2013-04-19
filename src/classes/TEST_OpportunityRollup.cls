@@ -1278,4 +1278,91 @@ public with sharing class TEST_OpportunityRollup {
     	integer fy = OpportunityRollup_Utilities.getCurrentFY();
         system.assert(fy != null);    	
     }
+    
+    //a change to a UDR value should trigger a rollup
+    static testMethod void testUDRChangeBehavior(){
+        Households_Settings__c householdSettingsForTests = Households.getHouseholdsSettingsForTests(
+                new Households_Settings__c (
+                    Household_Rules__c = Households.ALL_PROCESSOR,
+                    Always_Rollup_to_Primary_Contact__c = false,
+                    Enable_Opp_Rollup_Triggers__c = true,
+                    Excluded_Account_Opp_Rectypes__c = null,
+                    Excluded_Account_Opp_Types__c = null,
+                    Excluded_Contact_Opp_Rectypes__c = null,
+                    Excluded_Contact_Opp_Types__c = null,
+                    Membership_Record_Types__c = null
+         ));
+        npe01__Contacts_and_Orgs_Settings__c contactSettingsForTests = npe01.Constants.getContactsSettingsForTests(new npe01__Contacts_and_Orgs_Settings__c (
+                npe01__Account_Processor__c = npe01.Constants.ONE_TO_ONE_PROCESSOR,
+                npe01__Enable_Opportunity_Contact_Role_Trigger__c = true,
+                npe01__Opportunity_Contact_Role_Default_role__c = 'Donor'
+        ));
+    
+        //need to clear out any existing user fields
+        //otherwise we can't insert of stuff referenced by apex
+        delete [select id from User_Rollup_Field_Settings__c];
+        
+        list<User_Rollup_Field_Settings__c> testURFS = new list<User_Rollup_Field_Settings__c>();
+                
+        User_Rollup_Field_Settings__c testUserRollup1 = new User_Rollup_Field_Settings__c();
+        testUserRollup1.npo02__Target_Field__c = 'npo02__Household_ID__c'; 
+        testUserRollup1.npo02__Source_Field__c = 'TotalOpportunityQuantity';
+        testUserRollup1.npo02__Object_Name__c = 'npo02__Household__c'; 
+        testUserRollup1.npo02__Field_Action__c = 'MAX';
+        testUserRollup1.Name = 'TestRollup8675309';
+        testURFS.add(TestUserRollup1);
+        
+        insert testURFS; 
+        
+        Contact c = new Contact(LastName = 'TestCon');
+        insert c;        
+        
+        //get all of the fields
+        String q = OpportunityRollup_Utilities.buildContactQuery() + ' where id = \'' + c.id + '\'';
+        
+        c = database.query(q);
+        
+        id rtid = RecordTypes.GetRecordTypeId ('Opportunity',RecordTypes.getRecordTypeNameForGiftsTests('Opportunity'));
+        Opportunity newOpp = New Opportunity (
+                Name = 'Test Opp ',
+                Amount = 100,
+                CloseDate = system.today(),
+                StageName = UnitTestData.getClosedWonStage(),
+                npe01__Contact_Id_for_Role__c = c.id,                      
+                TotalOpportunityQuantity = 2                              
+            );  
+            if(rtid != null){
+                newOpp.put('RecordTypeId',rtid);
+            }
+            
+        map<string, User_Rollup_Field_Settings__c> urfsMap = User_Rollup_Field_Settings__c.getAll();
+        system.assertEquals(1, urfsMap.keySet().size());        
+                
+        insert newOpp;
+        OpportunityRollups og = new OpportunityRollups();
+        Map<Id,Contact> cmap = new Map<Id,Contact>();
+        Map<Id, npo02__Household__c> hmap = new Map<Id, npo02__Household__c>();
+        q = OpportunityRollup_Utilities.buildHouseholdQuery() + ' where id = \'' + c.npo02__Household__c + '\'';
+        
+        npo02__Household__c h =database.query(q); 
+        cmap.put(c.id, c);
+        hmap.put(h.id, h);
+        og.rollupContacts(cmap);
+        og.rollupHouseholds(hmap);        
+        
+        Contact ct = [select TotalOppAmount__c, npo02__Household__r.npo02__Household_ID__c from Contact where id = :c.id];
+        system.assertEquals (100,ct.TotalOppAmount__c);    
+        system.assertEquals(2, ct.npo02__Household__r.npo02__Household_ID__c);        
+        
+        newOpp.TotalOpportunityQuantity = 4;                             
+        
+        //issue an update
+        Test.startTest();
+        update newOpp;
+        Test.stopTest();     
+        
+        ct = [select TotalOppAmount__c, npo02__Household__r.npo02__Household_ID__c from Contact where id = :c.id];
+        system.assertEquals (100,ct.TotalOppAmount__c);    
+        system.assertEquals(4, ct.npo02__Household__r.npo02__Household_ID__c);    	
+    }
 }
