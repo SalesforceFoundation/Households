@@ -116,7 +116,8 @@ public without sharing class OpportunityRollup_Utilities {
                                                                 'npo02__OppAmount2YearsAgo__c', 'npo02__MembershipJoinDate__c',
                                                                 'npo02__LastMembershipLevel__c', 'npo02__Soft_Credit_This_Year__c',
                                                                 'npo02__Soft_Credit_Two_Years_Ago__c', 'npo02__Soft_Credit_Total__c',
-                                                                'npo02__Soft_Credit_Last_Year__c', 'npo02__Best_Gift_Year__c', 'npo02__Best_Gift_Year_Total__c'};
+                                                                'npo02__Soft_Credit_Last_Year__c', 'npo02__Best_Gift_Year__c', 'npo02__Best_Gift_Year_Total__c',
+                                                                'npo02__Household__c'};
     
     private final static set<string> HouseholdFields = new set<string>{'npo02__TotalOppAmount__c', 'npo02__OppAmountThisYear__c', 
                                                                 'npo02__OppAmountLastNDays__c', 'npo02__LastCloseDate__c', 
