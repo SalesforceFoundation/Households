@@ -53,7 +53,7 @@ global virtual without sharing class HouseholdNaming {
         
         //get all of the contacts and their associated households
         //return them in the order of household and then household naming order
-        list<Contact> contactlist = [select id, Firstname, Salutation, LastName, Household__r.id, Naming_Exclusions__c from Contact where Household__c IN :hhids and Household__c != null ORDER BY Household__c,Household_Naming_Order__c ASC NULLS LAST ];
+        list<Contact> contactlist = [select id, Firstname, toLabel(Salutation), LastName, Household__r.id, Naming_Exclusions__c from Contact where Household__c IN :hhids and Household__c != null ORDER BY Household__c,Household_Naming_Order__c ASC NULLS LAST ];
         list<Household__c> hhupdatelist = [select Name, SYSTEM_CUSTOM_NAMING__c from Household__c where id IN : hhids];
         
         map<id, list<Contact>> hhIDContactMap = new map<id, list<Contact>>();
