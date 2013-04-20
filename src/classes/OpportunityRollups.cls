@@ -276,7 +276,9 @@ global virtual without sharing class OpportunityRollups{
                     a1.npo02__LastCloseDate__c == a2.npo02__LastCloseDate__c && 
                     a1.npo02__LastMembershipLevel__c == a2.npo02__LastMembershipLevel__c &&
                     a1.npo02__Best_Gift_Year__c == a2.npo02__Best_Gift_Year__c &&
-                    a1.npo02__Best_Gift_Year_Total__c == a2.npo02__Best_Gift_Year_Total__c
+                    a1.npo02__Best_Gift_Year_Total__c == a2.npo02__Best_Gift_Year_Total__c &&
+                    a1.npo02__MembershipEndDate__c == a2.npo02__MembershipEndDate__c &&
+                    a1.npo02__MembershipJoinDate__c == a2.npo02__MembershipJoinDate__c
                     ){
             
                 if (OpportunityRollup_Utilities.urfsMap.size() > 0){
