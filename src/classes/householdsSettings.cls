@@ -82,8 +82,11 @@ public with sharing class householdsSettings {
         editHouseholdSettingsTab = false;
         editRollupSettingsTab = false;   
         
-        //retrieve errors, if any
-        errorList = Opportunity_Rollup_Error__c.getAll().values();
+        //retrieve errors, if any        
+        errorList = [select npo02__Error_Type__c, npo02__Error_Record_Link__c, 
+                            npo02__Error_Object_Type__c, npo02__Error_Message__c, 
+                            npo02__Error_Datetime__c, Name, Id from Opportunity_Rollup_Error__c limit 999];
+                
         if (!errorList.isEmpty()){
         	hasErrors = true;        	 
         	ApexPages.Message myMsg = new ApexPages.Message(ApexPages.Severity.WARNING, system.label.RollupErrorMessage);
