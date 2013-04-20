@@ -258,16 +258,9 @@ private class TEST_HouseholdOpportunity {
     }
     
     static testmethod void ghIssue25() {
-        insert new npe01__Contacts_and_Orgs_Settings__c (
-            npe01__Enable_Opportunity_Contact_Role_Trigger__c = true,
-            npe01__Opportunity_Contact_Role_Default_role__c = 'Donor',
-            npe01__Account_Processor__c = 'One-to-One'
-            );
-        insert new npo02__Households_Settings__c(
-            npo02__Household_Contact_Roles_On__c = true,
-            npo02__Household_Member_Contact_Role__c = 'Household Member'
-            );
-
+        npe01__Contacts_and_Orgs_Settings__c contactSettingsForTests = npe01.Constants.getContactsSettingsForTests(new npe01__Contacts_and_Orgs_Settings__c (npe01__Enable_Opportunity_Contact_Role_Trigger__c = true,npe01__Opportunity_Contact_Role_Default_role__c = 'Donor',npe01__Account_Processor__c = 'One-to-One'));
+        Households_Settings__c householdSettingsForTests = Households.getHouseholdsSettingsForTests(new Households_Settings__c ( npo02__Household_Contact_Roles_On__c = true,npo02__Household_Member_Contact_Role__c = 'Household Member'));
+       
         npo02__Household__c hh = new npo02__Household__c(Name ='hh');
         insert hh;
         Contact con1= new Contact(LastName='test1',npo02__Household__c = hh.id);
