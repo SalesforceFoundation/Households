@@ -171,7 +171,8 @@ global virtual without sharing class OpportunityRollups{
         // copy the accounts to a map of zerod out versions
         map<id, Account> accountsToUpdate = new map<id, Account>();                
         for (id aid : amap.keyset()){
-            accountsToUpdate.put(aid, new Account(id = aid, npo02__TotalOppAmount__c = 0, npo02__AverageAmount__c = 0, 
+        	
+        	Account a = new Account(id = aid, npo02__TotalOppAmount__c = 0, npo02__AverageAmount__c = 0, 
                 npo02__SmallestAmount__c = 0, npo02__LargestAmount__c = 0, npo02__FirstCloseDate__c = null,
                 npo02__LastCloseDate__c = null, npo02__NumberOfClosedOpps__c = 0, npo02__OppAmountThisYear__c = 0, 
                 npo02__OppsClosedThisYear__c = 0, npo02__OppAmountLastYear__c = 0, npo02__OppsClosedLastYear__c = 0,
@@ -182,8 +183,27 @@ global virtual without sharing class OpportunityRollups{
                 npo02__LastMembershipLevel__c = null, npo02__LastMembershipOrigin__c = null,                
                 npo02__MembershipJoinDate__c = null, npo02__MembershipEndDate__c = null,
                 npo02__LastOppAmount__c = null,
-                npo02__Best_Gift_Year__c = null, npo02__Best_Gift_Year_Total__c = 0                  
-            ));            
+                npo02__Best_Gift_Year__c = null, npo02__Best_Gift_Year_Total__c = 0 );
+        	
+            if (OpportunityRollup_Utilities.urfsMap.size() > 0){
+                Map<String, Schema.SObjectField> M = Schema.SObjectType.Account.fields.getMap();                    
+                for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){
+                    if (Account.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
+                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
+                        if (M.get(urfs.Target_Field__c) != null){
+                            if (M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Integer || M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Double){
+                                a.put(urfs.Target_Field__c, 0);
+                            }      
+                            else{
+                                a.put(urfs.Target_Field__c, null);                              
+                            }                                  
+                        }
+                    }
+                }
+            }
+            
+            accountsToUpdate.put(aid, a);
+            
             // map currency across if multicurrency
             if(OpportunityRollup_Utilities.isMultiCurrency())
                 accountsToUpdate.get(aid).put(OpportunityRollup_Utilities.mcFieldValues.get('Account'),amap.get(aid).get(OpportunityRollup_Utilities.mcFieldValues.get('Account')));
@@ -257,8 +277,26 @@ global virtual without sharing class OpportunityRollups{
                     a1.npo02__LastMembershipLevel__c == a2.npo02__LastMembershipLevel__c &&
                     a1.npo02__Best_Gift_Year__c == a2.npo02__Best_Gift_Year__c &&
                     a1.npo02__Best_Gift_Year_Total__c == a2.npo02__Best_Gift_Year_Total__c
-                    )
-            accountsToUpdate.remove(aid);
+                    ){
+            
+                if (OpportunityRollup_Utilities.urfsMap.size() > 0){
+                    boolean hasUDRUpdate = false;
+                    for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){                
+                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
+                        if (Account.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
+                            if (a1.get(urfs.Target_Field__c) != a2.get(urfs.Target_Field__c)){
+                                hasUDRUpdate = true;
+                            }
+                        }
+                    }                    
+                    if (!hasUDRUpdate){
+                        accountsToUpdate.remove(aid);
+                    }
+                }        
+                else{                    
+                    accountsToUpdate.remove(aid);
+                }
+            }
         }         
         
         Database.SaveResult[] SR = database.update(accountsToUpdate.values(), false);                
@@ -282,8 +320,8 @@ global virtual without sharing class OpportunityRollups{
         // copy the contacts to a map of zeroed out versions
         map<id, Contact> contactsToUpdate = new map<id, Contact>();
         
-        for (id cid : cmap.keySet()) {
-            contactsToUpdate.put(cid, new Contact(id = cid, npo02__TotalOppAmount__c = 0, npo02__AverageAmount__c = 0, 
+        for (id cid : cmap.keySet()){        	
+        	Contact c = new Contact(id = cid, npo02__TotalOppAmount__c = 0, npo02__AverageAmount__c = 0, 
                 npo02__SmallestAmount__c = 0, npo02__LargestAmount__c = 0, npo02__FirstCloseDate__c = null, 
                 npo02__LastCloseDate__c = null, npo02__NumberOfClosedOpps__c = 0, npo02__OppAmountThisYear__c = 0, 
                 npo02__OppsClosedThisYear__c = 0, npo02__OppAmountLastYear__c = 0, npo02__OppsClosedLastYear__c = 0,
@@ -294,8 +332,26 @@ global virtual without sharing class OpportunityRollups{
                 npo02__LastMembershipLevel__c = null, npo02__LastMembershipOrigin__c = null,                
                 npo02__MembershipJoinDate__c = null, npo02__MembershipEndDate__c = null,                
                 npo02__LastOppAmount__c = null, 
-                npo02__Best_Gift_Year__c = null, npo02__Best_Gift_Year_Total__c = 0
-            ));
+                npo02__Best_Gift_Year__c = null, npo02__Best_Gift_Year_Total__c = 0);
+        	
+        	if (OpportunityRollup_Utilities.urfsMap.size() > 0){
+                Map<String, Schema.SObjectField> M = Schema.SObjectType.Contact.fields.getMap();                    
+                for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){
+                    if (Contact.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
+                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
+                        if (M.get(urfs.Target_Field__c) != null){
+                            if (M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Integer || M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Double){
+                                c.put(urfs.Target_Field__c, 0);
+                            }      
+                            else{
+                                c.put(urfs.Target_Field__c, null);                              
+                            }                                  
+                        }
+                    }
+                }
+            } 
+        	
+            contactsToUpdate.put(cid, c);
             // map currency across if multicurrency
             if(OpportunityRollup_Utilities.isMultiCurrency())
                 contactsToUpdate.get(cid).put(OpportunityRollup_Utilities.mcFieldValues.get('Contact'),cmap.get(cid).get(OpportunityRollup_Utilities.mcFieldValues.get('Contact')));            
@@ -366,8 +422,26 @@ global virtual without sharing class OpportunityRollups{
                     c1.npo02__LastMembershipLevel__c == c2.npo02__LastMembershipLevel__c &&
                     c1.npo02__Best_Gift_Year__c == c2.npo02__Best_Gift_Year__c &&
                     c1.npo02__Best_Gift_Year_Total__c == c2.npo02__Best_Gift_Year_Total__c
-                    )
-                contactsToUpdate.remove(cid);
+                    ){
+                    
+                if (OpportunityRollup_Utilities.urfsMap.size() > 0){
+                    boolean hasUDRUpdate = false;
+                    for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){                
+                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
+                        if (Contact.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
+                            if (c1.get(urfs.Target_Field__c) != c2.get(urfs.Target_Field__c)){
+                                hasUDRUpdate = true;
+                            }
+                        }
+                    }                    
+                    if (!hasUDRUpdate){
+                        contactsToUpdate.remove(cid);
+                    }
+                }        
+                else{                    
+                    contactsToUpdate.remove(cid);
+                }
+            }                
         }
         
         Database.SaveResult[] SR = database.update(contactsToUpdate.values(), false);
@@ -385,15 +459,14 @@ global virtual without sharing class OpportunityRollups{
         }
     }    
     
-    public void rollupHouseholds(map<id, npo02__Household__c> hhmap){
-        
+    public void rollupHouseholds(map<id, npo02__Household__c> hhmap){        
         //arg used by multi currency for rollup field currencies
         map<Id,Opportunity> opptyCurrencies;
         // copy the contacts and households to a map of zerod out versions
         map<id, npo02__Household__c> householdsToUpdate = new map<id, npo02__Household__c>();
         
         for (id hhid : hhmap.keySet()) {
-            householdsToUpdate.put(hhid, new npo02__Household__c(id = hhid, npo02__TotalOppAmount__c = 0, npo02__AverageAmount__c = 0, 
+            npo02__Household__c h = new npo02__Household__c(id = hhid, npo02__TotalOppAmount__c = 0, npo02__AverageAmount__c = 0, 
                 npo02__SmallestAmount__c = 0, npo02__LargestAmount__c = 0, npo02__FirstCloseDate__c = null, 
                 npo02__LastCloseDate__c = null, npo02__NumberOfClosedOpps__c = 0, npo02__OppAmountThisYear__c = 0, 
                 npo02__OppsClosedThisYear__c = 0, npo02__OppAmountLastYear__c = 0, npo02__OppsClosedLastYear__c = 0,
@@ -404,13 +477,30 @@ global virtual without sharing class OpportunityRollups{
                 npo02__LastMembershipLevel__c = null, npo02__LastMembershipOrigin__c = null,                
                 npo02__MembershipJoinDate__c = null, npo02__MembershipEndDate__c = null,                
                 npo02__LastOppAmount__c = null,
-                npo02__Best_Gift_Year__c = null, npo02__Best_Gift_Year_Total__c = 0
-            ));
+                npo02__Best_Gift_Year__c = null, npo02__Best_Gift_Year_Total__c = 0);            
+            
+            if (OpportunityRollup_Utilities.urfsMap.size() > 0){
+                Map<String, Schema.SObjectField> M = Schema.SObjectType.npo02__Household__c.fields.getMap();                    
+                for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){
+                    if (npo02__Household__c.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
+                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
+                        if (M.get(urfs.Target_Field__c) != null){
+                            if (M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Integer || M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Double){
+                                h.put(urfs.Target_Field__c, 0);
+                            }      
+                            else{
+                                h.put(urfs.Target_Field__c, null);                            	
+                            }                                  
+                        }
+                    }
+                }
+            } 
+            
+            householdsToUpdate.put(hhid, h);            
             
             // map currency across if multicurrency
             if(OpportunityRollup_Utilities.isMultiCurrency())
                 householdsToUpdate.get(hhid).put(OpportunityRollup_Utilities.mcFieldValues.get('npo02__Household__c'),hhmap.get(hhid).get(OpportunityRollup_Utilities.mcFieldValues.get('npo02__Household__c')));
-                        
         }
     
         list<sobject> objectList = new list<sobject>();   
@@ -477,9 +567,27 @@ global virtual without sharing class OpportunityRollups{
                     h1.npo02__MembershipJoinDate__c == h2.npo02__MembershipJoinDate__c &&
                     h1.npo02__LastMembershipLevel__c == h2.npo02__LastMembershipLevel__c &&
                     h1.npo02__Best_Gift_Year__c == h2.npo02__Best_Gift_Year__c &&
-                    h1.npo02__Best_Gift_Year_Total__c == h2.npo02__Best_Gift_Year_Total__c
-                    )
-                householdsToUpdate.remove(hhid);
+                    h1.npo02__Best_Gift_Year_Total__c == h2.npo02__Best_Gift_Year_Total__c                    
+                    ){
+                                                
+                if (OpportunityRollup_Utilities.urfsMap.size() > 0){
+                    boolean hasUDRUpdate = false;
+                    for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){           	  
+                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
+                        if (npo02__Household__c.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
+                            if (h1.get(urfs.Target_Field__c) != h2.get(urfs.Target_Field__c)){
+                                hasUDRUpdate = true;
+                            }
+                        }
+                    }                    
+                    if (!hasUDRUpdate){
+                        householdsToUpdate.remove(hhid);
+                    }
+                }        
+                else{                    
+                    householdsToUpdate.remove(hhid);
+                }                    
+            }                
         }
         
         Database.SaveResult[] SR = database.update(householdsToUpdate.values(), false);
