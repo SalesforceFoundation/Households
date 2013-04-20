@@ -82,7 +82,7 @@ public without sharing class OpportunityRollup_Utilities {
     private static string SoftCreditQuery;
          
     /*** Field Lists ***/
-    private final static set<string> AccountFields = new set<string>{'TotalOppAmount__c', 'OppAmountThisYear__c',
+    private static set<string> AccountFields = new set<string>{'TotalOppAmount__c', 'OppAmountThisYear__c',
     	                                                               'OppAmountLastYear__c', 'OppAmountLastNDays__c',
     	                                                               'OppAmount2YearsAgo__c', 'OppsClosedThisYear__c',
     	                                                               'LastCloseDate__c', 'NumberOfClosedOpps__c', 
@@ -91,7 +91,7 @@ public without sharing class OpportunityRollup_Utilities {
     	                                                               'LastMembershipLevel__c', 'Best_Gift_Year__c',
     	                                                               'Best_Gift_Year_Total__c'};
     
-    private final static set<string> OpportunityContactRoleFields = new set<string>{'ContactId', 'Contact.npo02__household__c',
+    private static set<string> OpportunityContactRoleFields = new set<string>{'ContactId', 'Contact.npo02__household__c',
                                                         'Contact.npo02__TotalOppAmount__c', 'Contact.npo02__OppAmountThisYear__c',
                                                         'Contact.npo02__OppAmountLastNDays__c', 'Contact.npo02__LastCloseDate__c', 
                                                         'Contact.npo02__NumberOfClosedOpps__c', 'Contact.npo02__TotalMembershipOppAmount__c',
@@ -109,7 +109,7 @@ public without sharing class OpportunityRollup_Utilities {
                                                         'Contact.npo02__household__r.npo02__Best_Gift_Year__c', 'Contact.npo02__household__r.npo02__Best_Gift_Year_Total__c'
                                                         }; 
     	
-    private final static set<string> ContactFields = new set<string>{'npo02__TotalOppAmount__c', 'npo02__OppAmountThisYear__c',
+    private static set<string> ContactFields = new set<string>{'npo02__TotalOppAmount__c', 'npo02__OppAmountThisYear__c',
                                                                 'npo02__OppAmountLastNDays__c', 'npo02__TotalMembershipOppAmount__c', 
                                                                 'npo02__LastCloseDate__c', 'npo02__NumberOfClosedOpps__c', 
                                                                 'npo02__MembershipEndDate__c', 'npo02__OppAmountLastYear__c', 
@@ -119,7 +119,7 @@ public without sharing class OpportunityRollup_Utilities {
                                                                 'npo02__Soft_Credit_Last_Year__c', 'npo02__Best_Gift_Year__c', 'npo02__Best_Gift_Year_Total__c',
                                                                 'npo02__Household__c'};
     
-    private final static set<string> HouseholdFields = new set<string>{'npo02__TotalOppAmount__c', 'npo02__OppAmountThisYear__c', 
+    private static set<string> HouseholdFields = new set<string>{'npo02__TotalOppAmount__c', 'npo02__OppAmountThisYear__c', 
                                                                 'npo02__OppAmountLastNDays__c', 'npo02__LastCloseDate__c', 
                                                                 'npo02__NumberOfClosedOpps__c', 'npo02__TotalMembershipOppAmount__c',
                                                                 'npo02__OppsClosedThisYear__c', 'npo02__OppsClosedLastYear__c', 
@@ -176,8 +176,7 @@ public without sharing class OpportunityRollup_Utilities {
         
         //set the static var
         hh_settings = household_settings;
-    }        
-    
+    }
     
     public static void setupUserRollupVars(){
         if (objectRollupFieldMap == null){
@@ -196,6 +195,18 @@ public without sharing class OpportunityRollup_Utilities {
         	   else{
         		  objectRollupFieldMap.put(urfs.Object_Name__c, urfs.Field_Action__c + '(Opportunity.' + urfs.Source_Field__c + ') ' + urfs.Name + ', ');
         	   }
+        	   
+        	   if (urfs.Object_Name__c == npo02__Household__c.getSObjectType().getDescribe().getName()){
+        	       OpportunityRollup_Utilities.HouseholdFields.add(urfs.Target_Field__c);        	   
+        	       OpportunityRollup_Utilities.OpportunityContactRoleFields.add('Contact.npo02__household__r.' + urfs.Target_Field__c);   
+        	   }
+        	   else if (urfs.Object_Name__c == Contact.getSObjectType().getDescribe().getName()){
+        	   	   OpportunityRollup_Utilities.ContactFields.add(urfs.Target_Field__c);            
+                   OpportunityRollup_Utilities.OpportunityContactRoleFields.add('Contact.' + urfs.Target_Field__c);
+        	   }
+        	   else if (urfs.Object_Name__c == Account.getSObjectType().getDescribe().getName()){
+        	   	   OpportunityRollup_Utilities.AccountFields.add(urfs.Target_Field__c);        	   	
+        	   }       	       
             }
         }
     }
