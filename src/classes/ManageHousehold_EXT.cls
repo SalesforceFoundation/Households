@@ -28,50 +28,59 @@ global with sharing class ManageHousehold_EXT {
     public String ctrlName {
         get {
             return 'ManageHousehold_EXT';
-        }
-    }
-    
+        }  
+    }    
     // is automatic household naming used for this household?
     public Boolean autoName {
-        get {
-            if (hh.Id == null && hh.Name == null) {
-                return true;
+        get {            
+            if (hhsettings.npo02__Advanced_Household_Naming__c){ 
+	            if (hh.Id == null && hh.Name == null) {
+	                return true;
+	            }
+	            
+	            if (hh.npo02__SYSTEM_CUSTOM_NAMING__c != null) {
+	                if(hh.npo02__SYSTEM_CUSTOM_NAMING__c.contains('Name'))
+	                	return false;
+	            }
+	           	return true;
             }
-            
-            if (hh.npo02__SYSTEM_CUSTOM_NAMING__c != null) {
-                if(hh.npo02__SYSTEM_CUSTOM_NAMING__c.contains('Name'))
-                	return false;
-            }
-           	return true;
+            else
+                return false;	           	
         }
     }
-    
+    //add check
     public Boolean autoFormalGreeting {
         get {
-            if (hh.Id == null && hh.npo02__Formal_Greeting__c == null) {
-                return true;
+            if (hhsettings.npo02__Advanced_Household_Naming__c){
+	            if (hh.Id == null && hh.npo02__Formal_Greeting__c == null) {
+	                return true;
+	            }
+	            if (hh.npo02__SYSTEM_CUSTOM_NAMING__c != null){
+	                if(hh.npo02__SYSTEM_CUSTOM_NAMING__c.contains('Formal_Greeting__c'))
+	                	return false;
+	            }	
+	           	return true; 
             }
-            if (hh.npo02__SYSTEM_CUSTOM_NAMING__c != null){
-                if(hh.npo02__SYSTEM_CUSTOM_NAMING__c.contains('Formal_Greeting__c'))
-                	return false;
-            }
-
-           	return true; 
+            else
+                return false;	           	
         }
     }
     
     public Boolean autoInformalGreeting {
         get {
-            if (hh.Id == null && hh.npo02__Informal_Greeting__c == null) {
-                return true;
+            if (hhsettings.npo02__Advanced_Household_Naming__c){	            
+	            if (hh.Id == null && hh.npo02__Informal_Greeting__c == null) {
+	                return true;
+	            }
+	            if (hh.npo02__SYSTEM_CUSTOM_NAMING__c != null)
+	            {
+	                if(hh.npo02__SYSTEM_CUSTOM_NAMING__c.contains('Informal_Greeting__c'))
+	                	return false;
+	            }	
+	           	return true; 
             }
-            if (hh.npo02__SYSTEM_CUSTOM_NAMING__c != null)
-            {
-                if(hh.npo02__SYSTEM_CUSTOM_NAMING__c.contains('Informal_Greeting__c'))
-                	return false;
-            }
-
-           	return true; 
+            else
+                return false;	           	
         }
     }
     
@@ -128,6 +137,16 @@ global with sharing class ManageHousehold_EXT {
 	//object to hold viable addresses - this is the DISTINCT (SQL style) list which includes household address and all contact addresses
 	// see function getViableAddresses for how the map is populated
     public map<String, viableAddress> viableAddresses;
+    
+    public static Households_Settings__c hhsettings{
+        get{
+            if(hhsettings == null){
+            	hhsettings = Households_Settings__c.getInstance();
+            }	
+            return hhsettings;
+        }
+    } 
+    
     
     public class viableAddress {
     	String AddressKey;
