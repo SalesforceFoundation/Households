@@ -67,9 +67,12 @@ global without sharing class Households {
         List<Contact> householdInserts = new List<Contact>();
         List<Contact> contactEvaluations = new List<Contact>();
         List<Contact> householdDeletes = new List<Contact>();
-        list<id> householdnameupdates = new list<id>();
+        list<id> householdnameupdates = new list<id>();        
         list<id> oldHouseholds = new list<id>();
         map<id, integer> oldHouseholdSize = new map<id, integer>();
+        
+        Set<Id> mergedWinningContact = new Set<Id>();
+        
         
         //typically this is handled through the contact, but for old households
         //being updated, we need to get the list here
@@ -161,9 +164,16 @@ global without sharing class Households {
             if ( ta==triggerAction.afterDelete ){
                 if (c.Household__c != null )
                     householdDeletes.add(c);
+            
+                //check if this Contact is the loser in a merge
+                if (c.MasterRecordId != null)
+                    mergedWinningContact.add(c.MasterRecordId);
             }
             i += 1;
         }
+        
+        if (mergedWinningContact.size() > 0)
+        	contactMergeUpdate(mergedWinningContact);        
         
         if(!blankHHDeletes.isEmpty())
             Database.delete(blankHHDeletes);
@@ -190,6 +200,18 @@ global without sharing class Households {
                 hn.UpdateNames(householdnameupdates);
             }                   
         }
+    }
+    
+    public static void contactMergeUpdate(Set<Id> winningContacts){    	
+    	Set<Id> oppIDs = new Set<Id>();
+    	List<OpportunityContactRole> ocrlist = new List<OpportunityContactRole>();
+    	ocrlist = [select OpportunityId from OpportunityContactRole where ContactId IN :winningContacts and isPrimary = true];  	
+    	
+        for (OpportunityContactRole ocr : ocrlist)
+        	oppIds.add(ocr.OpportunityId);
+                
+        if(!oppIDs.isEmpty())
+            OpportunityRollups.rollupContactsandHouseholdsForTrigger(oppIds);
     }
     
     /// <name> insertHousehold </name>
