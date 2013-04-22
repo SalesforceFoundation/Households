@@ -427,7 +427,8 @@ public with sharing class TEST_OpportunityRollup {
                                     LastCloseDate__c, NumberOfClosedOpps__c, 
                                     TotalMembershipOppAmount__c, OppsClosedLastYear__c,
                                     OppsClosedLastNDays__c, OppsClosed2YearsAgo__c,
-                                    LastMembershipLevel__c, Best_Gift_Year__c, Best_Gift_Year_Total__c
+                                    LastMembershipLevel__c, Best_Gift_Year__c, Best_Gift_Year_Total__c, 
+                                    MembershipEndDate__c, MembershipJoinDate__c
                                     from Account where id =: testacct.id];
                                     
             System.AssertEquals ( 33333 , updatedAcct.npo02__TotalOppAmount__c );       
@@ -487,7 +488,8 @@ public with sharing class TEST_OpportunityRollup {
                                     OppsClosedLastNDays__c, OppsClosed2YearsAgo__c,
                                     LastMembershipLevel__c, LastMembershipDate__c,
                                     LastMembershipAmount__c, LastMembershipOrigin__c,
-                                    Best_Gift_Year__c, Best_Gift_Year_Total__c
+                                    Best_Gift_Year__c, Best_Gift_Year_Total__c, MembershipEndDate__c,
+                                    MembershipJoinDate__c
                                     from Account where id =: testacct.id];
                                 
                       
@@ -961,8 +963,8 @@ public with sharing class TEST_OpportunityRollup {
         testURFS.add(TestUserRollup1);
         
         User_Rollup_Field_Settings__c TestUserRollup2 = new User_Rollup_Field_Settings__c();
-        testUserRollup2.npo02__Target_Field__c = 'npo02__MembershipEndDate__c'; 
-        testUserRollup2.npo02__Source_Field__c = 'CloseDate';
+        testUserRollup2.npo02__Target_Field__c = 'NumberOfEmployees'; 
+        testUserRollup2.npo02__Source_Field__c = 'FiscalYear';
         testUserRollup2.npo02__Object_Name__c = 'Account'; 
         testUserRollup2.npo02__Field_Action__c = 'MAX';
         testUserRollup2.Name = 'TestRollup2';

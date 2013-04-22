@@ -89,6 +89,7 @@ public without sharing class OpportunityRollup_Utilities {
     	                                                               'TotalMembershipOppAmount__c', 'OppsClosedLastYear__c',
     	                                                               'OppsClosedLastNDays__c', 'OppsClosed2YearsAgo__c',
     	                                                               'LastMembershipLevel__c', 'Best_Gift_Year__c',
+    	                                                               'MembershipJoinDate__c', 'MembershipEndDate__c',
     	                                                               'Best_Gift_Year_Total__c'};
     
     private static set<string> OpportunityContactRoleFields = new set<string>{'ContactId', 'Contact.npo02__household__c',
