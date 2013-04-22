@@ -554,9 +554,43 @@ private class TEST_Households {
         system.assert(hh1.Name.contains('c2test')); 
     	
     	//the second household should be deleted
-    	system.assertEquals(0, [select count() from Household__c where id = :c2thhid]);
-    	
+    	system.assertEquals(0, [select count() from Household__c where id = :c2thhid]);    	
     }
     
-    
+    static testMethod void testMergeRollupSupport(){
+    	Households_Settings__c householdSettingsForTests = Households.getHouseholdsSettingsForTests(new Households_Settings__c (Household_Rules__c = Households.ALL_PROCESSOR, Advanced_Household_Naming__c = true, Enable_Opp_Rollup_Triggers__c = false));
+        npe01__Contacts_and_Orgs_Settings__c contactSettingsForTests = npe01.Constants.getContactsSettingsForTests(new npe01__Contacts_and_Orgs_Settings__c (npe01__Account_Processor__c = npe01.Constants.ONE_TO_ONE_PROCESSOR, npe01__Enable_Opportunity_Contact_Role_Trigger__c = true));
+         
+        Contact c1 = new Contact(
+            FirstName=npe01.Constants.CONTACT_FIRSTNAME_FOR_TESTS,
+            LastName=npe01.Constants.CONTACT_LASTNAME_FOR_TESTS,
+            npe01__WorkEmail__c = npe01.Constants.CONTACT_EMAIL_FOR_TESTS, 
+            npe01__Preferred_Email__c = npe01.Constants.CONTACT_PREFERRED_EMAIL_FOR_TESTS,
+            npe01__WorkPhone__c = npe01.Constants.CONTACT_PHONE_FOR_TESTS,
+            npe01__PreferredPhone__c = npe01.Constants.CONTACT_PREFERRED_PHONE_FOR_TESTS            
+        );            
+        insert c1;  
+        
+        id rtid = RecordTypes.GetRecordTypeId ('Opportunity',RecordTypes.getRecordTypeNameForGiftsTests('Opportunity'));
+        Opportunity newOpp = New Opportunity (
+                Name = 'Test Opp ',
+                Amount = 100,
+                CloseDate = system.today(),
+                StageName = UnitTestData.getClosedWonStage(),
+                npe01__Contact_Id_for_Role__c = c1.id
+            );  
+        if(rtid != null)
+            newOpp.put('RecordTypeId',rtid);
+        
+        insert newOpp;
+
+        system.assertEquals(1, [select count() from OpportunityContactRole where isPrimary = true and ContactId = :c1.id]);
+            	
+        Test.startTest();        
+        Households.contactMergeUpdate(new Set<Id>{c1.Id});	
+    	Test.stopTest();
+    	c1 = [select TotalOppAmount__c, npo02__Household__r.npo02__TotalOppAmount__c from Contact where Id = :c1.id];
+    	system.assertEquals(100, c1.TotalOppAmount__c);
+    	system.assertEquals(100, c1.npo02__Household__r.npo02__TotalOppAmount__c);
+    }
 }
