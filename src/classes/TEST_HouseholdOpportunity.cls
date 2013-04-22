@@ -270,19 +270,18 @@ private class TEST_HouseholdOpportunity {
 
         Opportunity o1 = new Opportunity(
             Name = 'o1',
-            StageName = 'Closed Won',
-            CloseDate = System.Today(),
+            StageName = UnitTestData.getClosedWonStage(),
+            CloseDate = System.today(),
             npe01__Contact_Id_for_Role__c = (string)con1.id);
-
+        insert o1;
         Opportunity o2 = new Opportunity(
             Name = 'o2',
-            StageName = 'Closed Won',
-            CloseDate = System.Today(),
+            StageName = UnitTestData.getClosedWonStage(),
+            CloseDate = System.today(),
             npe01__Contact_Id_for_Role__c = (string)con2.id);
+        insert o2;        
 
-        insert new list<Opportunity>{o1,o2};
-
-        system.assertequals(2,(integer)[select count(id) cnt from opportunity].get(0).get('cnt'));
-        system.assertequals(2,(integer)[select count(id) cnt from opportunitycontactrole].get(0).get('cnt'));
+        system.assertequals(2,(integer)[select count() from Opportunity]);
+        system.assertequals(2,(integer)[select count() from OpportunityContactRole]);
     }     
 }
