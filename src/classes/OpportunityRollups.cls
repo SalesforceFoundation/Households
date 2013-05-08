@@ -168,6 +168,26 @@ global virtual without sharing class OpportunityRollups{
         //arg used by multi currency for rollup field currencies
         map<id,Opportunity> opptyCurrencies;
         
+        //create mappings for UDRs if they exist
+        Map<String, Object> UDRFieldMap = new Map<String, Object>();
+        
+        if (OpportunityRollup_Utilities.urfsMap.size() > 0){
+            Map<String, Schema.SObjectField> M = Schema.SObjectType.Account.fields.getMap();                    
+                for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){
+                    if (Account.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
+                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
+                        if (M.get(urfs.Target_Field__c) != null){
+                            if (M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Integer || M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Double){
+                                UDRFieldMap.put(urfs.Target_Field__c, 0);
+                            }      
+                        else{
+                            UDRFieldMap.put(urfs.Target_Field__c, null);                              
+                        }                                  
+                    }
+                }
+            }
+        }        
+        
         // copy the accounts to a map of zerod out versions
         map<id, Account> accountsToUpdate = new map<id, Account>();                
         for (id aid : amap.keyset()){
@@ -185,22 +205,10 @@ global virtual without sharing class OpportunityRollups{
                 npo02__LastOppAmount__c = null,
                 npo02__Best_Gift_Year__c = null, npo02__Best_Gift_Year_Total__c = 0 );
         	
-            if (OpportunityRollup_Utilities.urfsMap.size() > 0){
-                Map<String, Schema.SObjectField> M = Schema.SObjectType.Account.fields.getMap();                    
-                for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){
-                    if (Account.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
-                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
-                        if (M.get(urfs.Target_Field__c) != null){
-                            if (M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Integer || M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Double){
-                                a.put(urfs.Target_Field__c, 0);
-                            }      
-                            else{
-                                a.put(urfs.Target_Field__c, null);                              
-                            }                                  
-                        }
-                    }
-                }
-            }
+                //add zeroed out UDRs
+                for (String s : UDRFieldMap.keySet()){
+                    a.put(s, UDRFieldMap.get(s));
+                }            
             
             accountsToUpdate.put(aid, a);
             
@@ -279,17 +287,14 @@ global virtual without sharing class OpportunityRollups{
                     a1.npo02__Best_Gift_Year_Total__c == a2.npo02__Best_Gift_Year_Total__c &&
                     a1.npo02__MembershipEndDate__c == a2.npo02__MembershipEndDate__c &&
                     a1.npo02__MembershipJoinDate__c == a2.npo02__MembershipJoinDate__c
-                    ){
-            
-                if (OpportunityRollup_Utilities.urfsMap.size() > 0){
+                    ){ 
+                         
+                if (UDRFieldMap.size() > 0){
                     boolean hasUDRUpdate = false;
-                    for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){                
-                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
-                        if (Account.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
-                            if (a1.get(urfs.Target_Field__c) != a2.get(urfs.Target_Field__c)){
-                                hasUDRUpdate = true;
-                            }
-                        }
+                    for (String s : UDRFieldMap.keySet()){
+                        if (a1.get(s) != a2.get(s)){
+                            hasUDRUpdate = true;
+                        }                                       
                     }                    
                     if (!hasUDRUpdate){
                         accountsToUpdate.remove(aid);
@@ -319,6 +324,27 @@ global virtual without sharing class OpportunityRollups{
     public void rollupContacts(map<id, Contact> cmap){
         //arg used by multi currency for rollup field currencies
         map<Id,Opportunity> opptyCurrencies;
+        
+        //create mappings for UDRs if they exist
+        Map<String, Object> UDRFieldMap = new Map<String, Object>();
+        
+        if (OpportunityRollup_Utilities.urfsMap.size() > 0){
+            Map<String, Schema.SObjectField> M = Schema.SObjectType.Contact.fields.getMap();                    
+                for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){
+                    if (Contact.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
+                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
+                        if (M.get(urfs.Target_Field__c) != null){
+                            if (M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Integer || M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Double){
+                                UDRFieldMap.put(urfs.Target_Field__c, 0);
+                            }      
+                        else{
+                            UDRFieldMap.put(urfs.Target_Field__c, null);                              
+                        }                                  
+                    }
+                }
+            }
+        }        
+        
         // copy the contacts to a map of zeroed out versions
         map<id, Contact> contactsToUpdate = new map<id, Contact>();
         
@@ -336,22 +362,10 @@ global virtual without sharing class OpportunityRollups{
                 npo02__LastOppAmount__c = null, 
                 npo02__Best_Gift_Year__c = null, npo02__Best_Gift_Year_Total__c = 0);
         	
-        	if (OpportunityRollup_Utilities.urfsMap.size() > 0){
-                Map<String, Schema.SObjectField> M = Schema.SObjectType.Contact.fields.getMap();                    
-                for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){
-                    if (Contact.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
-                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
-                        if (M.get(urfs.Target_Field__c) != null){
-                            if (M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Integer || M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Double){
-                                c.put(urfs.Target_Field__c, 0);
-                            }      
-                            else{
-                                c.put(urfs.Target_Field__c, null);                              
-                            }                                  
-                        }
-                    }
-                }
-            } 
+           //add zeroed out UDRs
+            for (String s : UDRFieldMap.keySet()){
+                c.put(s, UDRFieldMap.get(s));
+            }      
         	
             contactsToUpdate.put(cid, c);
             // map currency across if multicurrency
@@ -426,20 +440,17 @@ global virtual without sharing class OpportunityRollups{
                     c1.npo02__Best_Gift_Year_Total__c == c2.npo02__Best_Gift_Year_Total__c
                     ){
                     
-                if (OpportunityRollup_Utilities.urfsMap.size() > 0){
+                if (UDRFieldMap.size() > 0){
                     boolean hasUDRUpdate = false;
-                    for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){                
-                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
-                        if (Contact.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
-                            if (c1.get(urfs.Target_Field__c) != c2.get(urfs.Target_Field__c)){
-                                hasUDRUpdate = true;
-                            }
-                        }
+                    for (String s : UDRFieldMap.keySet()){
+                        if (c1.get(s) != c2.get(s)){
+                            hasUDRUpdate = true;
+                        }                                       
                     }                    
                     if (!hasUDRUpdate){
                         contactsToUpdate.remove(cid);
                     }
-                }        
+                }                    
                 else{                    
                     contactsToUpdate.remove(cid);
                 }
@@ -463,7 +474,28 @@ global virtual without sharing class OpportunityRollups{
     
     public void rollupHouseholds(map<id, npo02__Household__c> hhmap){        
         //arg used by multi currency for rollup field currencies
-        map<Id,Opportunity> opptyCurrencies;
+        map<Id,Opportunity> opptyCurrencies;        
+        
+        //create mappings for UDRs if they exist
+        Map<String, Object> UDRFieldMap = new Map<String, Object>();
+        
+        if (OpportunityRollup_Utilities.urfsMap.size() > 0){
+            Map<String, Schema.SObjectField> M = Schema.SObjectType.npo02__Household__c.fields.getMap();                    
+                for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){
+                    if (npo02__Household__c.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
+                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
+                        if (M.get(urfs.Target_Field__c) != null){
+                            if (M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Integer || M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Double){
+                                UDRFieldMap.put(urfs.Target_Field__c, 0);
+                            }      
+                        else{
+                            UDRFieldMap.put(urfs.Target_Field__c, null);                              
+                        }                                  
+                    }
+                }
+            }
+        }    
+        
         // copy the contacts and households to a map of zerod out versions
         map<id, npo02__Household__c> householdsToUpdate = new map<id, npo02__Household__c>();
         
@@ -481,22 +513,10 @@ global virtual without sharing class OpportunityRollups{
                 npo02__LastOppAmount__c = null,
                 npo02__Best_Gift_Year__c = null, npo02__Best_Gift_Year_Total__c = 0);            
             
-            if (OpportunityRollup_Utilities.urfsMap.size() > 0){
-                Map<String, Schema.SObjectField> M = Schema.SObjectType.npo02__Household__c.fields.getMap();                    
-                for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){
-                    if (npo02__Household__c.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
-                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
-                        if (M.get(urfs.Target_Field__c) != null){
-                            if (M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Integer || M.get(urfs.Target_Field__c).getDescribe().getSOAPType() == Schema.Soaptype.Double){
-                                h.put(urfs.Target_Field__c, 0);
-                            }      
-                            else{
-                                h.put(urfs.Target_Field__c, null);                            	
-                            }                                  
-                        }
-                    }
-                }
-            } 
+            //add zeroed out UDRs
+            for (String s : UDRFieldMap.keySet()){
+                h.put(s, UDRFieldMap.get(s));
+            }
             
             householdsToUpdate.put(hhid, h);            
             
@@ -572,23 +592,20 @@ global virtual without sharing class OpportunityRollups{
                     h1.npo02__Best_Gift_Year_Total__c == h2.npo02__Best_Gift_Year_Total__c                    
                     ){
                                                 
-                if (OpportunityRollup_Utilities.urfsMap.size() > 0){
+            if (UDRFieldMap.size() > 0){
                     boolean hasUDRUpdate = false;
-                    for (string s : OpportunityRollup_Utilities.urfsMap.keyset()){           	  
-                        User_Rollup_Field_Settings__c urfs = OpportunityRollup_Utilities.urfsMap.get(s);
-                        if (npo02__Household__c.getSObjectType().getDescribe().getName() == OpportunityRollup_Utilities.urfsMap.get(s).Object_Name__c){
-                            if (h1.get(urfs.Target_Field__c) != h2.get(urfs.Target_Field__c)){
-                                hasUDRUpdate = true;
-                            }
-                        }
+                    for (String s : UDRFieldMap.keySet()){
+                        if (h1.get(s) != h2.get(s)){
+                            hasUDRUpdate = true;
+                        }                                       
                     }                    
                     if (!hasUDRUpdate){
                         householdsToUpdate.remove(hhid);
                     }
-                }        
+                }                    
                 else{                    
                     householdsToUpdate.remove(hhid);
-                }                    
+                }
             }                
         }
         
