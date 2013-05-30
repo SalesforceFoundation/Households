@@ -204,7 +204,8 @@ public with sharing class householdsSettings {
             
             boolean alreadyScheduled = false;            
             List<cronTrigger> scheduledRollups = new List<cronTrigger>();
-            scheduledRollups = [SELECT Id FROM cronTrigger limit :scheduledJobLimit];
+            //added NextFireTime check to make sure the job is still actively scheduled before checking it against the limit
+            scheduledRollups = [SELECT Id FROM cronTrigger where NextFireTime != null limit :scheduledJobLimit];
             
             if(pageSettings.Opp_Rollup_Scheduled_Job_Id__c != null){
                 for(cronTrigger thisScheduledJob : scheduledRollups){ 
@@ -222,7 +223,9 @@ public with sharing class householdsSettings {
                     //need to check for already scheduled job
                     String sch='17 11 2 * * ?'; 
                     scheduledRollups.clear();
-					scheduledRollups = [SELECT Id FROM cronTrigger where cronExpression = :sch];
+                    //added nextfiretime check to make sure we're getting an actual active job 
+					scheduledRollups = [SELECT Id FROM cronTrigger where cronExpression = :sch and NextFireTime != null];
+										
 					if (scheduledRollups.size()==0){
                     	String jobId = system.schedule('Nightly Opportunity Roll Up', sch ,rollUp);
                     	pageSettings.Opp_Rollup_Scheduled_Job_Id__c = jobId;
