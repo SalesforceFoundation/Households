@@ -501,8 +501,9 @@ global without sharing class Households {
         if (householdsSettings == null) {
             //first see if we already have settings
             householdsSettings = Households_Settings__c.getOrgDefaults();
-            //system.debug(Households_Settings__c.getOrgDefaults());
-            if (householdsSettings == null) { 
+            
+            //modified to check again the Id instead of the object
+            if (householdsSettings.Id == null) { 
                 //get the model they used to be in 
                 Schema.DescribeFieldResult F = Schema.sObjectType.Contact.fields.SystemHouseholdProcessor__c; 
                 List<Schema.PicklistEntry> P = F.getPicklistValues();

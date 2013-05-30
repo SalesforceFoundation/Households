@@ -104,13 +104,15 @@ public with sharing class householdsSettings {
         PageReference pr = null;    	    	
     	
     	//if we don't have default settings
-    	if (Households_Settings__c.getOrgDefaults() == null){
+    	pageSettings= Households_Settings__c.getOrgDefaults(); 
+    	
+    	if (pageSettings == null){
     	   pageSettings = Households.getHouseholdsSettings();
     	   
     	   //no point in scheduling a rollup, since the default
     	   //has it disabled, just call a page refresh to get to the 
     	   //callout    	   
-    	   pr = ApexPages.currentPage();
+    	   pr = ApexPages.currentPage(); 
     	}
     	
     	//we can safely call out to 
