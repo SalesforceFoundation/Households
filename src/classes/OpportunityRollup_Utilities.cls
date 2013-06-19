@@ -163,7 +163,10 @@ public without sharing class OpportunityRollup_Utilities {
         //we still need to query to make sure its not a custom fiscal year
         //or else we'll throw errors when calling Fiscal_Year in queries
         if (household_settings.npo02__Use_Fiscal_Year_for_Rollups__c == true){
-            integer hasCustomFYRecord = [select count() from FiscalYearSettings];
+            String fyQuery = 'select id from FiscalYearSettings';            
+            List<SObject> fySettings = new List<SObject>();
+            fySettings = Database.query(fyQuery);
+            integer hasCustomFYRecord = fySettings.size();
                 
             //if org has customFY records, disable FY settings
             if (hasCustomFYRecord > 0 && !household_settings.Force_Fiscal_Year__c)
