@@ -5,44 +5,19 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>*</members>
+        <members>batchjobs</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>BTNCampaignHHDedupe</members>
+        <members>BTNContactAddressCopy</members>
+        <members>BTNHouseholdAddressCopy</members>
+        <members>HouseholdTransactionHistory</members>
+        <members>householdsSettings</members>
+        <members>manageHousehold</members>
+        <members>opportunityRollup</members>
+        <members>userRollupSettings</members>
         <name>ApexPage</name>
     </types>
-    <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomLabels</name>
-    </types>
-    <types>
-        <members>*</members>
-        <members>Account</members>
-        <members>Contact</members>
-        <members>Opportunity</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomTab</name>
-    </types>
-    <types>
-        <members>Household_Reports</members>
-        <members>Household_Reports/Households_and_Donations</members>
-        <members>npe01__Nonprofit_Edition_Reports</members>
-        <members>npe01__Nonprofit_Edition_Reports/NPSP_Campaign_Household_Mailing_List</members>
-        <members>unfiled$public</members>
-        <name>Report</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ReportType</name>
-    </types>
-    <types>
-        <members>ManageHouseholdcss</members>
-        <members>ManageHouseholdjs</members>
-        <name>StaticResource</name>
-    </types>
-    <version>23.0</version>
+    <version>28.0</version>
 </Package>
