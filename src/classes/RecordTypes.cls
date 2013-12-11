@@ -4,6 +4,7 @@
 * @description Provides recordtype wrapper for easy access in other codeblocks 
 */
 
+@deprecated
 global class RecordTypes {
     global static String giftRecordTypeNameForTests;
     global static String membershipRecordTypeNameForTests;            

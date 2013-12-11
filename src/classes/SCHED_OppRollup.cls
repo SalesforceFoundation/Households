@@ -32,6 +32,7 @@
 * @date 2011 (2.0)
 * @description Supports the automatic scheduling of opportunity rollups  
 */
+@deprecated
 global class SCHED_OppRollup implements Schedulable {
     global void execute(SchedulableContext SC) { }
     

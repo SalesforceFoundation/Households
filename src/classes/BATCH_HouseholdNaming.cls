@@ -32,6 +32,7 @@
 * @date 2011 (2.3)
 * @description Class provides a batchable wrapper for Household naming functionality. Generally called only on initial activation.
 */
+@deprecated
 global class BATCH_HouseholdNaming implements Database.Batchable<SObject> {
     global database.Querylocator start(Database.BatchableContext bc) {return null;}
     global public void execute(Database.BatchableContext bc, Sobject[] result) { }

@@ -32,5 +32,6 @@
 * @date 2011 (2.0) 
 * @description Resposible for rollups of all opportunities to the requisite Account/Household/Contact 
 */
+@deprecated
 global virtual without sharing class OpportunityRollups{
 }
