@@ -62,6 +62,14 @@
     </businessProcesses>
     <enableFeeds>true</enableFeeds>
     <fields>
+        <fullName>AccountId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CampaignId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>CombinedRollupFieldset__c</fullName>
         <deprecated>false</deprecated>
         <description>Concatenated fields used during rollups to locate the most recent opportunity.</description>
@@ -155,6 +163,10 @@
         <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>StageName</fullName>
@@ -292,6 +304,7 @@
     <fields>
         <fullName>npe01__Amount_Outstanding__c</fullName>
         <deprecated>false</deprecated>
+        <description>Formula: The Amount of this Opportunity minus the Payment Writeoff Amount and Payment Amount Received.</description>
         <externalId>false</externalId>
         <formula>Amount - NULLVALUE(npe01__Payments_Made__c, 0) - NULLVALUE(npe01__Amount_Written_Off__c, 0)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -304,6 +317,7 @@
     <fields>
         <fullName>npe01__Amount_Written_Off__c</fullName>
         <deprecated>false</deprecated>
+        <description>Total value of the Payments marked as written-off or noncollectable for this Opportunity.</description>
         <externalId>false</externalId>
         <inlineHelpText>Value of the payments marked as written-off or noncollectable.</inlineHelpText>
         <label>Payment Writeoff Amount</label>
@@ -320,6 +334,7 @@
     <fields>
         <fullName>npe01__Contact_Id_for_Role__c</fullName>
         <deprecated>false</deprecated>
+        <description>System field updated automatically.  Do not use.</description>
         <externalId>false</externalId>
         <inlineHelpText>Hidden field for passing a Contact Id for Contact Role creation.</inlineHelpText>
         <label>Contact Id for Role</label>
@@ -333,6 +348,7 @@
         <fullName>npe01__Do_Not_Automatically_Create_Payment__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
+        <description>If payments are active, and if this is checked, a new payment will not be automatically created for this Opportunity.</description>
         <externalId>false</externalId>
         <inlineHelpText>If payments are active, and if checked, a new payment will not be automatically created for this Opportunity.</inlineHelpText>
         <label>Do Not Automatically Create Payment</label>
@@ -342,6 +358,7 @@
     <fields>
         <fullName>npe01__Is_Opp_From_Individual__c</fullName>
         <deprecated>false</deprecated>
+        <description>Formula: Whether or not the related Account is defined as an individual (SYSTEMIsIndividual__c)</description>
         <externalId>false</externalId>
         <formula>IF( Account.npe01__SYSTEMIsIndividual__c, &apos;true&apos;, &apos;false&apos; )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -353,6 +370,7 @@
     <fields>
         <fullName>npe01__Member_Level__c</fullName>
         <deprecated>false</deprecated>
+        <description>Used for Membership Opportunities (Record Type)</description>
         <externalId>false</externalId>
         <label>Member Level</label>
         <picklist>
@@ -376,6 +394,7 @@
     <fields>
         <fullName>npe01__Membership_End_Date__c</fullName>
         <deprecated>false</deprecated>
+        <description>Used for Membership Opportunities (Record Type)</description>
         <externalId>false</externalId>
         <inlineHelpText>Date membership period ends.</inlineHelpText>
         <label>Membership End Date</label>
@@ -386,6 +405,7 @@
     <fields>
         <fullName>npe01__Membership_Origin__c</fullName>
         <deprecated>false</deprecated>
+        <description>Used for Membership Opportunities (Record Type)</description>
         <externalId>false</externalId>
         <inlineHelpText>Is this a renewal, a new membership, or a membership with someone who lapsed and has returned.</inlineHelpText>
         <label>Membership Origin</label>
@@ -410,6 +430,7 @@
     <fields>
         <fullName>npe01__Membership_Start_Date__c</fullName>
         <deprecated>false</deprecated>
+        <description>Used for Membership Opportunities (Record Type)</description>
         <externalId>false</externalId>
         <inlineHelpText>Date when membership period starts</inlineHelpText>
         <label>Membership Start Date</label>
@@ -420,6 +441,7 @@
     <fields>
         <fullName>npe01__Number_of_Payments__c</fullName>
         <deprecated>false</deprecated>
+        <description>Calculated based on the Payment object.</description>
         <externalId>false</externalId>
         <inlineHelpText>Total number of payments for this Opportunity (Donation)</inlineHelpText>
         <label>Number of Payments</label>
@@ -430,7 +452,7 @@
     <fields>
         <fullName>npe01__Payments_Made__c</fullName>
         <deprecated>false</deprecated>
-        <description>The sum of all payments marked as paid for this Opportunity.</description>
+        <description>The total value of Payments marked as paid for this Opportunity.</description>
         <externalId>false</externalId>
         <inlineHelpText>The sum of all payments marked as paid for this Opportunity.</inlineHelpText>
         <label>Payment Amount Received</label>
@@ -448,7 +470,7 @@
         <fullName>systemHouseholdContactRoleProcessor__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Controls if Household contact roles are created for Opportunities</inlineHelpText>
+        <inlineHelpText>Controls if Household contact roles are created for Opportunities.  DEPRECATED.  Replaced by custom settings.</inlineHelpText>
         <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
         <picklist>
             <picklistValues>
@@ -804,10 +826,28 @@
             </values>
         </picklistValues>
     </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.CLOSE_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.SITE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.SITE</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.SITE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.STAGE_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.CLOSE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
     <webLinks>
         <fullName>DeliveryStatus</fullName>
         <availability>online</availability>
         <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
         <hasMenubar>true</hasMenubar>
         <hasScrollbars>true</hasScrollbars>
         <hasToolbar>true</hasToolbar>
@@ -848,6 +888,7 @@
         <availability>online</availability>
         <description>Replaces the standard New Donation button on the Donations related list on the Contact Page Layout if you have Donation Record Types.</description>
         <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
         <linkType>url</linkType>
         <masterLabel>New Contact Donation</masterLabel>
         <openType>replace</openType>
@@ -863,6 +904,7 @@ save_new_url=%2F006%2Fe%3Flookupcmpgn%3D1%26retURL%3D%252F{!Contact.Id}%26accid%
         <availability>online</availability>
         <description>Replaces the standard New Donation button on the Donations related list on the Organization Page Layout if you have Donation Record Types.</description>
         <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
         <linkType>url</linkType>
         <masterLabel>New Account Donation</masterLabel>
         <openType>replace</openType>
