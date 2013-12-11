@@ -1,3 +1,1 @@
-<apex:page >
-    <p>replace with the appropriate page from Cumulus.</p>
-</apex:page>
+<apex:page action="{! urlFor('/apex/npsp__RLLP_OppRollup') }" />
