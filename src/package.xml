@@ -19,5 +19,12 @@
         <members>userRollupSettings</members>
         <name>ApexPage</name>
     </types>
+    <types>
+        <members>*</members>
+        <members>Account</members>
+        <members>Contact</members>
+        <members>Opportunity</members>
+        <name>CustomObject</name>
+    </types>
     <version>28.0</version>
 </Package>
