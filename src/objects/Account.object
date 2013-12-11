@@ -47,6 +47,14 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Always_Anonymous__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Always Anonymous</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>AverageAmount__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
@@ -60,6 +68,7 @@
     </fields>
     <fields>
         <fullName>Best_Gift_Year_Total__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Best Gift Year Total</label>
         <precision>18</precision>
@@ -70,6 +79,7 @@
     </fields>
     <fields>
         <fullName>Best_Gift_Year__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Best Gift Year</label>
         <length>4</length>
@@ -86,6 +96,34 @@
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Formal_Greeting__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically.</inlineHelpText>
+        <label>Formal Greeting</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>HouseholdEmail__c</fullName>
+        <externalId>false</externalId>
+        <label>Household Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HouseholdPhone__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Household Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Phone</type>
     </fields>
     <fields>
         <fullName>Industry</fullName>
@@ -223,6 +261,16 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Informal_Greeting__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically.</inlineHelpText>
+        <label>Informal Greeting</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>LargestAmount__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
@@ -321,6 +369,7 @@
         <externalId>false</externalId>
         <formula>year(MembershipEndDate__c ) - year(MembershipJoinDate__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>How many years this Account has been a member.</inlineHelpText>
         <label>Membership Span</label>
         <precision>18</precision>
         <required>false</required>
@@ -330,9 +379,10 @@
     </fields>
     <fields>
         <fullName>Membership_Status__c</fullName>
-        <description>note: grace period term is hard coded as 1 month, may need to be changed for some clients</description>
+        <description>Grace period defaults to 30 days. This can be adjusted in the Households Settings tab.</description>
         <externalId>false</externalId>
-        <formula>if (  MembershipEndDate__c  &lt;today(), if ( MembershipEndDate__c  &gt; ( TODAY() - 31 ) , &quot;Grace Period&quot; , &quot;Expired&quot;) , if(isnull(MembershipEndDate__c ),&quot;&quot;,&quot;Current&quot;))</formula>
+        <formula>if ( MembershipEndDate__c &lt;today(), if (MembershipEndDate__c &gt; ( TODAY() - 
+IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup.Households_Settings__c.Membership_Grace_Period__c, 30)) , &quot;Grace Period&quot; , &quot;Expired&quot;) , if(isnull(MembershipEndDate__c ),&quot;&quot;,&quot;Current&quot;))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>Current, expired, or grace period</inlineHelpText>
         <label>Membership Status</label>
@@ -467,6 +517,10 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Ownership</fullName>
         <picklist>
             <picklistValues>
@@ -488,6 +542,10 @@
             <sorted>false</sorted>
         </picklist>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ParentId</fullName>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Rating</fullName>
@@ -533,6 +591,31 @@
         </picklist>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SYSTEM_CUSTOM_NAMING__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>For Household Accounts, specifies which name related fields should not be automatically populated by the Householding code.</inlineHelpText>
+        <label>_SYSTEM: CUSTOM NAMING</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Name</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Formal_Greeting__c</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Informal_Greeting__c</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>SmallestAmount__c</fullName>
@@ -606,30 +689,9 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>UpsellOpportunity__c</fullName>
-        <externalId>false</externalId>
-        <label>Upsell Opportunity</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Maybe</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-    </fields>
-    <fields>
         <fullName>npe01__FirstDonationDate__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <label>First Donation Date</label>
         <summarizedField>Opportunity.CloseDate</summarizedField>
@@ -650,6 +712,7 @@
     <fields>
         <fullName>npe01__LastDonationDate__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <label>Last Donation Date</label>
         <summarizedField>Opportunity.CloseDate</summarizedField>
@@ -670,6 +733,7 @@
     <fields>
         <fullName>npe01__LifetimeDonationHistory_Amount__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not manually update. Updated by automatic processes.</description>
         <externalId>false</externalId>
         <label>Lifetime Donation History (Amount)</label>
         <summarizedField>Opportunity.Amount</summarizedField>
@@ -685,6 +749,7 @@
     <fields>
         <fullName>npe01__LifetimeDonationHistory_Number__c</fullName>
         <deprecated>false</deprecated>
+        <description>Do not manually update. Updated by automatic processes.</description>
         <externalId>false</externalId>
         <label>Lifetime Donation History (Number)</label>
         <summaryFilterItems>
@@ -706,6 +771,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>For 1:1 Accounts, the Contact this Account is for.  For Household Accounts, the Primary Contact  for the Household.</inlineHelpText>
         <label>_SYSTEM: One2OneContact</label>
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>Account</relationshipLabel>
@@ -718,7 +784,9 @@
         <fullName>npe01__SYSTEMIsIndividual__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
+        <description>Hidden system field: do not change.  Updated by automatic processes.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Specifies whether this is a normal organizational Account, or an Account for an individual (which could be either a Bucket Account, 1:1 Account, or Household Account).</inlineHelpText>
         <label>_SYSTEM: IsIndividual</label>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Checkbox</type>
@@ -726,6 +794,7 @@
     <fields>
         <fullName>npe01__SYSTEM_AccountType__c</fullName>
         <deprecated>false</deprecated>
+        <description>Hidden system field: do not change.  Updated by automatic processes.</description>
         <externalId>false</externalId>
         <inlineHelpText>System field: do not use or change.</inlineHelpText>
         <label>_SYSTEM: AccountType</label>
