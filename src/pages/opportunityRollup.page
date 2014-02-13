@@ -1,1 +1,1 @@
-<apex:page action="{! urlFor('/apex/npsp__RLLP_OppRollup') }" />
+<apex:page action="{! urlFor('/apex/npsp__STG_SettingsManager') }" />

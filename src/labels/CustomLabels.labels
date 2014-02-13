@@ -32,7 +32,7 @@
         <fullName>AddressCopyFailure</fullName>
         <categories>Households</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>AddressCopyFailure</shortDescription>
         <value>An error occurred during the copying of the address.</value>
     </labels>
@@ -40,7 +40,7 @@
         <fullName>AddressCopySuccess</fullName>
         <categories>Households</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>AddressCopySuccess</shortDescription>
         <value>Address copied successfully.</value>
     </labels>
@@ -48,7 +48,7 @@
         <fullName>AddressCopyUnknownObject</fullName>
         <categories>Households</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>AddressCopyUnknownObject</shortDescription>
         <value>Address Copy is not supported for this object type.</value>
     </labels>
@@ -140,14 +140,14 @@
         <fullName>DefaultHouseholdName</fullName>
         <categories>Households, Household Naming</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>DefaultHouseholdName</shortDescription>
         <value>Household</value>
     </labels>
     <labels>
         <fullName>DefaultHouseholdTransactionCurrency</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>DefaultHouseholdTransactionCurrency</shortDescription>
         <value>$</value>
     </labels>
@@ -197,7 +197,7 @@
         <fullName>HouseholdAnonymousGreeting</fullName>
         <categories>Households, Household Naming</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>HouseholdAnonymousGreeting</shortDescription>
         <value>Sir or Madam</value>
     </labels>
@@ -205,7 +205,7 @@
         <fullName>HouseholdAnonymousName</fullName>
         <categories>Households, Household Naming</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>HouseholdAnonymousName</shortDescription>
         <value>Anonymous</value>
     </labels>
@@ -227,7 +227,7 @@
         <fullName>HouseholdNameConnector</fullName>
         <categories>Households, Household Naming</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>HouseholdNameConnector</shortDescription>
         <value>and</value>
     </labels>
@@ -235,44 +235,44 @@
         <fullName>HouseholdNameOverrun</fullName>
         <categories>Households, Household Naming</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>HouseholdNameOverrun</shortDescription>
         <value>Friends</value>
     </labels>
     <labels>
         <fullName>Household_Contact_Role_Processor_Off</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Household Contact Role Processor Off</shortDescription>
         <value>No Opportunities</value>
     </labels>
     <labels>
         <fullName>Household_Contact_Role_Processor_On</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Household Contact Role Processor On</shortDescription>
         <value>All Opportunities</value>
     </labels>
     <labels>
         <fullName>Household_Contact_Roles_Help_Text</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Household Contact Roles Help Text</shortDescription>
-        <value>Create automatic Contact Roles for Household members of the primary donor</value>
+        <value>Create automatic Opportunity Contact Roles for Household members of the primary donor</value>
     </labels>
     <labels>
         <fullName>Household_Member_Contact_Role</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Household Member Contact Role</shortDescription>
-        <value>Household Credit</value>
+        <value>Household Member</value>
     </labels>
     <labels>
         <fullName>Household_Rules_Help_Text</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Household Rules Help Text</shortDescription>
-        <value>Select which Contacts get Households: All, only those related to an Individual Account, or none.</value>
+        <value>DEPRECATED.  Not Used.  Select which Contacts get Households: All, only those related to an Individual Account, or none.</value>
     </labels>
     <labels>
         <fullName>ManageHousehold</fullName>
@@ -285,7 +285,7 @@
         <fullName>NameReplacementText</fullName>
         <categories>Households, Household Naming</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Text used to cause a household name or greeting replacement</shortDescription>
         <value>REPLACE</value>
     </labels>
@@ -307,28 +307,28 @@
         <fullName>Opportunity_Error_Help_Text</fullName>
         <categories>Households</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Opportunity_Error_Help_Text</shortDescription>
         <value>Rollup errors can occur during nightly or manual rollups, and may affect the accuracy of your data.  Listed below are the errors, type of error, and a link to the record on which the error occurred. These errors are reset every time the nightly scheduled job or the manual rollups are run.  It is highly recommended these errors are addressed promptly to ensure the accuracy of your data.</value>
     </labels>
     <labels>
         <fullName>Opportunity_Rollup_Future_Call_Limit</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Opportunity Rollup Future Call Limit</shortDescription>
         <value>Did not roll up because there were too few future calls available.</value>
     </labels>
     <labels>
         <fullName>Opportunity_Rollup_Scheduling_Error_Text</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Opportunity Rollup Scheduling Error Text</shortDescription>
         <value>You have reached your limit of Scheduled Apex jobs and the Opportunity Rollups won\&apos;t run nightly. If you want this job to run nightly, delete one of your scheduled jobs and reload this page.</value>
     </labels>
     <labels>
         <fullName>Primary_Donor_Contact_Role</fullName>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>Primary Donor Contact Role</shortDescription>
         <value>Donor</value>
     </labels>
@@ -336,9 +336,9 @@
         <fullName>RollupErrorMessage</fullName>
         <categories>Households</categories>
         <language>en_US</language>
-        <protected>true</protected>
+        <protected>false</protected>
         <shortDescription>RollupErrorMessage</shortDescription>
-        <value>Error(s) occurred the last time your Opportunities were rolled up. Please see the &apos;Rollup Errors&apos; tab for more information.</value>
+        <value>Error(s) occurred the last time your Opportunities were rolled up. Please see the System Error Log panel for more information.</value>
     </labels>
     <labels>
         <fullName>SelectExistingAddress</fullName>
