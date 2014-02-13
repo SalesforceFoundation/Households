@@ -4,8 +4,8 @@
     <description>Button to copy the Household address down to its member Contacts.</description>
     <label>BTNHouseholdAddressCopy</label>
     <packageVersions>
-        <majorNumber>2</majorNumber>
-        <minorNumber>0</minorNumber>
         <namespace>npe01</namespace>
+        <majorNumber>2</majorNumber>
+        <minorNumber>96</minorNumber>
     </packageVersions>
 </ApexPage>

@@ -4,8 +4,8 @@
     <description>Contact Address Copy Button</description>
     <label>BTNContactAddressCopy</label>
     <packageVersions>
-        <majorNumber>2</majorNumber>
-        <minorNumber>0</minorNumber>
         <namespace>npe01</namespace>
+        <majorNumber>2</majorNumber>
+        <minorNumber>96</minorNumber>
     </packageVersions>
 </ApexPage>

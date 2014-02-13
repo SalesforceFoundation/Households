@@ -4,8 +4,8 @@
     <description>Provides interface for creating and managing user defined contact/household opportunity rollup fields.</description>
     <label>userRollupSettings</label>
     <packageVersions>
-        <majorNumber>2</majorNumber>
-        <minorNumber>0</minorNumber>
         <namespace>npe01</namespace>
+        <majorNumber>2</majorNumber>
+        <minorNumber>96</minorNumber>
     </packageVersions>
 </ApexPage>
