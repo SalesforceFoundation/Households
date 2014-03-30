@@ -4,7 +4,7 @@
     <label>householdsSettings</label>
     <packageVersions>
         <majorNumber>2</majorNumber>
-        <minorNumber>96</minorNumber>
+        <minorNumber>97</minorNumber>
         <namespace>npe01</namespace>
     </packageVersions>
 </ApexPage>

@@ -19,10 +19,10 @@
         <fullName>Always_Rollup_to_Primary_Contact__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>Always rollup donor statistics to the primary contact, and corresponding household, on an opportunity, even if the opportunity is not from an individual (i.e. from a company, foundation, etc.)</description>
+        <description>Always rollup donor statistics to the primary Contact Role, and corresponding household, on an opportunity, even if the opportunity is not from an individual (i.e. from a company, foundation, etc.)</description>
         <externalId>false</externalId>
-        <inlineHelpText>Always rollup donor statistics to the primary contact, and corresponding household, on an opportunity, even if the opportunity is not from an individual (i.e. from a company, foundation, etc.)</inlineHelpText>
-        <label>Always Rollup to Primary Contact</label>
+        <inlineHelpText>Always rollup donor statistics to the primary Contact Role, and corresponding household, on an opportunity, even if the opportunity is not from an individual (i.e. from a company, foundation, etc.)</inlineHelpText>
+        <label>Always Rollup to Primary Contact Role</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -111,10 +111,10 @@
         <fullName>Enable_Opp_Rollup_Triggers__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
-        <description>Check this box to update Opportunity statistics whenever Opportunities are inserted or updated (as long as capacity allows).  If unchecked, you should schedule regular Opportunity Rollups to keep your statistics up to date.</description>
+        <description>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Check this box to update Opportunity statistics whenever Opportunities are inserted or updated (as long as capacity allows).  If unchecked, you should schedule regular Opportunity Rollups to keep your statistics up to date.</inlineHelpText>
-        <label>Rollup Opportunity Stats in Triggers</label>
+        <inlineHelpText>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
+        <label>DEPRECATED-Enable_Opp_Rollup_Triggers</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
