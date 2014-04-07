@@ -6,38 +6,6 @@
         <name>CombinedRollupFieldset__c</name>
     </fields>
     <fields>
-        <label>Générateur actuel</label>
-        <name>CurrentGenerators__c</name>
-    </fields>
-    <fields>
-        <label>Statut de l&apos;envoi/installation</label>
-        <name>DeliveryInstallationStatus__c</name>
-        <picklistValues>
-            <masterLabel>Completed</masterLabel>
-            <translation><!-- Completed --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>In progress</masterLabel>
-            <translation><!-- In progress --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Yet to begin</masterLabel>
-            <translation><!-- Yet to begin --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label>Concurrent(s) principal(ux)</label>
-        <name>MainCompetitors__c</name>
-    </fields>
-    <fields>
-        <label>Numéro de commande</label>
-        <name>OrderNumber__c</name>
-    </fields>
-    <fields>
-        <label>Numéro de suivi</label>
-        <name>TrackingNumber__c</name>
-    </fields>
-    <fields>
         <help><!-- Controls if Household contact roles are created for Opportunities.  DEPRECATED.  Replaced by custom settings. --></help>
         <label><!-- _SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR --></label>
         <name>systemHouseholdContactRoleProcessor__c</name>

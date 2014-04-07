@@ -5,7 +5,7 @@
     <label>batchjobs</label>
     <packageVersions>
         <majorNumber>2</majorNumber>
-        <minorNumber>97</minorNumber>
+        <minorNumber>96</minorNumber>
         <namespace>npe01</namespace>
     </packageVersions>
 </ApexComponent>

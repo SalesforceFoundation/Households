@@ -34,10 +34,6 @@
         <relationshipLabel>Membres du Foyer</relationshipLabel>
     </fields>
     <fields>
-        <label>Langues</label>
-        <name>Languages__c</name>
-    </fields>
-    <fields>
         <label><!-- Largest Gift --></label>
         <name>LargestAmount__c</name>
     </fields>
@@ -68,22 +64,6 @@
     <fields>
         <label><!-- Last Gift Amount --></label>
         <name>LastOppAmount__c</name>
-    </fields>
-    <fields>
-        <label>Niveau</label>
-        <name>Level__c</name>
-        <picklistValues>
-            <masterLabel>Primary</masterLabel>
-            <translation>Principal</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Secondary</masterLabel>
-            <translation>Secondaire</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Tertiary</masterLabel>
-            <translation>Supérieur</translation>
-        </picklistValues>
     </fields>
     <fields>
         <label><!-- Membership End Date --></label>

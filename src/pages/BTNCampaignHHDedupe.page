@@ -1,1 +1,1 @@
-<apex:page standardController="Campaign" action="{! urlFor('/apex/npsp__HH_CampaignDedupeBTN', campaign.Id, null, true) }" />
+<apex:page standardController="Campaign" action="{! urlFor('/apex/npsp__HH_CampaignDedupeBTN?Id=' + campaign.Id) }" />

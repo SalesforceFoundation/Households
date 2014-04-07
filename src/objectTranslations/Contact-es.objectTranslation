@@ -34,10 +34,6 @@
         <relationshipLabel>Miembros del Hogar</relationshipLabel>
     </fields>
     <fields>
-        <label>Idiomas</label>
-        <name>Languages__c</name>
-    </fields>
-    <fields>
         <label><!-- Largest Gift --></label>
         <name>LargestAmount__c</name>
     </fields>
@@ -68,22 +64,6 @@
     <fields>
         <label><!-- Last Gift Amount --></label>
         <name>LastOppAmount__c</name>
-    </fields>
-    <fields>
-        <label>Nivel</label>
-        <name>Level__c</name>
-        <picklistValues>
-            <masterLabel>Primary</masterLabel>
-            <translation>Primario</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Secondary</masterLabel>
-            <translation>Secundario</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Tertiary</masterLabel>
-            <translation>Superior</translation>
-        </picklistValues>
     </fields>
     <fields>
         <label><!-- Membership End Date --></label>
