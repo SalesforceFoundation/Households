@@ -99,6 +99,17 @@ Household__r.HouseholdPhone__c)</formula>
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Languages__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Languages - DEPRECATED</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>LargestAmount__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
@@ -184,6 +195,29 @@ Household__r.LastCloseDate__c)</formula>
         <scale>2</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Level__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Level - DEPRECATED</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Secondary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tertiary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Primary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>MembershipEndDate__c</fullName>
@@ -514,6 +548,6 @@ Household__r.TotalOppAmount__c)</formula>
         <masterLabel>Copy Address to Household</masterLabel>
         <openType>sidebar</openType>
         <protected>false</protected>
-        <url>/apex/npsp__ADDR_CopyAddrHHObjBTN?id={!Contact.Id}</url>
+        <url>/apex/ADDR_CopyAddrHHObjBTN?id={!Contact.Id}</url>
     </webLinks>
 </CustomObject>
