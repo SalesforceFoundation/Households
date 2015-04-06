@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Households</fullName>
-    <apiAccessLevel>Unrestricted</apiAccessLevel>
-    <namespacePrefix>npo02</namespacePrefix>
     <types>
         <members>BATCH_HouseholdNaming</members>
         <members>BATCH_OppRollup</members>
@@ -245,12 +243,15 @@
         <name>CustomLabel</name>
     </types>
     <types>
-        <members>CustomLabels</members>
-        <name>CustomLabels</name>
+        <name>CustomLabel</name>
     </types>
     <types>
+        <members>Account</members>
+        <members>Campaign</members>
+        <members>Contact</members>
         <members>Household__c</members>
         <members>Households_Settings__c</members>
+        <members>Opportunity</members>
         <members>Opportunity_Rollup_Error__c</members>
         <members>User_Rollup_Field_Settings__c</members>
         <name>CustomObject</name>
@@ -300,6 +301,7 @@
     <types>
         <members>Household_Reports</members>
         <members>Household_Reports/Households_and_Donations</members>
+        <members>npe01__Nonprofit_Edition_Reports</members>
         <members>npe01__Nonprofit_Edition_Reports/NPSP_Campaign_Household_Mailing_List</members>
         <name>Report</name>
     </types>
@@ -329,6 +331,10 @@
         <name>WebLink</name>
     </types>
     <types>
+        <members>Contact</members>
+        <name>Workflow</name>
+    </types>
+    <types>
         <members>Contact.ContactPreferredPhone_WithHousehold</members>
         <name>WorkflowFieldUpdate</name>
     </types>
@@ -336,5 +342,5 @@
         <members>Contact.Contact%2EPreferred_Phone%5F%5Fc WithHousehold</members>
         <name>WorkflowRule</name>
     </types>
-    <version>33.0</version>
+    <version>29.0</version>
 </Package>
