@@ -49,13 +49,11 @@
     <deprecated>false</deprecated>
     <description>Physical mailing address for grouping contacts</description>
     <enableActivities>true</enableActivities>
-    <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
     <enableSharing>true</enableSharing>
-    <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
         <fullName>Manage_Household_Custom</fullName>
         <description>Fields displayed on manage household page</description>
