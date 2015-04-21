@@ -53,7 +53,6 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
-    <enableSharing>true</enableSharing>
     <fieldSets>
         <fullName>Manage_Household_Custom</fullName>
         <description>Fields displayed on manage household page</description>
