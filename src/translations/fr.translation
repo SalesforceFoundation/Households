@@ -228,8 +228,4 @@
             <name>Opportunities</name>
         </sections>
     </reportTypes>
-    <scontrols>
-        <label>HistoriqueTransactionsFoyer</label>
-        <name>HouseholdTransactionHistory</name>
-    </scontrols>
 </Translations>

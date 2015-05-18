@@ -310,10 +310,6 @@
         <name>ReportType</name>
     </types>
     <types>
-        <members>HouseholdTransactionHistory</members>
-        <name>Scontrol</name>
-    </types>
-    <types>
         <members>ManageHouseholdcss</members>
         <members>ManageHouseholdjs</members>
         <name>StaticResource</name>
