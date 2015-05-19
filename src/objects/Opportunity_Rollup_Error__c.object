@@ -11,7 +11,6 @@
         <inlineHelpText>Datetime of the error</inlineHelpText>
         <label>Error Datetime</label>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
     <fields>
@@ -22,7 +21,6 @@
         <label>Error Message</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -34,7 +32,6 @@
         <label>Error Object Type</label>
         <length>50</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -46,7 +43,6 @@
         <label>Error Record Link</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -58,7 +54,6 @@
         <label>Error Type</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>

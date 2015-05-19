@@ -9,7 +9,6 @@
         <inlineHelpText>Concatenated fields used during rollups to locate the most recent opportunity.</inlineHelpText>
         <label>Combined Rollup Fieldset</label>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -31,7 +30,6 @@
             <sorted>false</sorted>
         </picklist>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
 </CustomObject>

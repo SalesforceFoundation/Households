@@ -12,7 +12,6 @@
         <externalId>false</externalId>
         <inlineHelpText>If checked, the system will provide automatic naming for Household Names, Informal and Formal Greetings.</inlineHelpText>
         <label>Automatic Household Naming</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -23,7 +22,6 @@
         <externalId>false</externalId>
         <inlineHelpText>Always rollup donor statistics to the primary Contact Role, and corresponding household, on an opportunity, even if the opportunity is not from an individual (i.e. from a company, foundation, etc.)</inlineHelpText>
         <label>Always Rollup to Primary Contact Role</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -34,7 +32,6 @@
         <externalId>false</externalId>
         <inlineHelpText>This is a non-exposed setting to toggle household naming code to use an asynchronous version instead of the standard version.</inlineHelpText>
         <label>Async Household Naming</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -48,7 +45,6 @@
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
-        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
@@ -60,7 +56,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
         <label>DEPRECATED-Disable_HHAfter_trigger</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -71,7 +66,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
         <label>DEPRECATED-Disable_HHBefore_trigger</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -82,7 +76,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
         <label>DEPRECATED-Disable_Household_Opp_trigger</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -93,7 +86,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
         <label>DEPRECATED-Disable_Households_trigger</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -104,7 +96,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
         <label>DEPRECATED-Disable_OppRollup_trigger</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -115,7 +106,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
         <label>DEPRECATED-Enable_Opp_Rollup_Triggers</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -126,7 +116,6 @@
         <externalId>false</externalId>
         <inlineHelpText>Allows you to rollup closed Opportunity totals based on Opportunity Contact Role Roles.  Soft credit rollups happen only in the nightly batch job, and not on triggers.  They can be manually run using the Rollup Donations Batch tab.</inlineHelpText>
         <label>Enable Soft Credit Rollups</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -137,7 +126,6 @@
         <externalId>false</externalId>
         <inlineHelpText>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</inlineHelpText>
         <label>DEPRECATED-Enable Update Check</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -149,7 +137,6 @@
         <label>Opp RecTypes Excluded for Account Rollup</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -162,7 +149,6 @@
         <label>Opp Types Excluded for Account Rollup</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -175,7 +161,6 @@
         <label>Opp RecTypes Excluded for Contact Rollup</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -188,7 +173,6 @@
         <label>Opp Types Excluded for Contact Rollup</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -200,7 +184,6 @@
         <externalId>false</externalId>
         <inlineHelpText>The NPSP automatically checks for the presence of custom fiscal years, and disabled FY settings if they&apos;re found to avoid errors.  This setting overrides that safety-check for users who have accidentally enabled custom fiscal years.</inlineHelpText>
         <label>Force Fiscal Year</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -212,7 +195,6 @@
         <label>DEPRECATED-Has Package Update</label>
         <length>40</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -224,7 +206,6 @@
         <externalId>false</externalId>
         <inlineHelpText>Check this field to create automatic Contact Roles for Household members of the Primary Contact</inlineHelpText>
         <label>Household Contact Roles On</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
@@ -236,7 +217,6 @@
         <label>Household Creation Excluded Record Types</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -249,7 +229,6 @@
         <label>Household Mailing List Report</label>
         <length>18</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -262,7 +241,6 @@
         <label>Household Member Contact Role</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -275,7 +253,6 @@
         <label>Household OCR Excluded Record Types</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -288,7 +265,6 @@
         <label>Household Object Rules</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -300,7 +276,6 @@
         <inlineHelpText>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</inlineHelpText>
         <label>DEPRECATED-Last Update Check</label>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>DateTime</type>
     </fields>
     <fields>
@@ -312,7 +287,6 @@
         <label>DEPRECATED-Max Package Version</label>
         <length>12</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -327,7 +301,6 @@
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
-        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
@@ -341,7 +314,6 @@
         <label>Membership Record Type Names</label>
         <length>100</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -354,7 +326,6 @@
         <label>Opp Rollup Scheduled Job Id</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -366,7 +337,6 @@
         <inlineHelpText>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</inlineHelpText>
         <label>DEPRECATED-Package Update URL</label>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Url</type>
     </fields>
     <fields>
@@ -380,7 +350,6 @@
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
-        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
@@ -395,7 +364,6 @@
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
-        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
@@ -408,7 +376,6 @@
         <label>Soft Credit Roles</label>
         <length>255</length>
         <required>false</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -422,7 +389,6 @@
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
-        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
@@ -434,7 +400,6 @@
         <externalId>false</externalId>
         <inlineHelpText>Checking this box will cause Opportunity rollup totals to respect fiscal year, instead of calendar years settings. To set Fiscal Year information, go to Setup-&gt;Company Profile-&gt;Fiscal Year.  NOTE: Custom Fiscal Year Settings are NOT supported.</inlineHelpText>
         <label>Use Fiscal Year for Rollups</label>
-        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <label>Households Settings</label>

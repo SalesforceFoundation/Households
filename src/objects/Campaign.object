@@ -5,7 +5,6 @@
         <availability>online</availability>
         <description>Deduplicated mailing list of Households</description>
         <displayType>button</displayType>
-        <encodingKey>UTF-8</encodingKey>
         <height>600</height>
         <linkType>url</linkType>
         <masterLabel>Household Mailing List</masterLabel>

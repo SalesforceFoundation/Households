@@ -301,7 +301,6 @@
     <types>
         <members>Household_Reports</members>
         <members>Household_Reports/Households_and_Donations</members>
-        <members>npe01__Nonprofit_Edition_Reports</members>
         <members>npe01__Nonprofit_Edition_Reports/NPSP_Campaign_Household_Mailing_List</members>
         <name>Report</name>
     </types>
@@ -338,5 +337,5 @@
         <members>Contact.Contact%2EPreferred_Phone%5F%5Fc WithHousehold</members>
         <name>WorkflowRule</name>
     </types>
-    <version>29.0</version>
+    <version>26.0</version>
 </Package>

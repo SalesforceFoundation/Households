@@ -32,7 +32,7 @@
 * @date 2011 (2.3)
 * @description Controls generation of household names for lists of households 
 */
-@deprecated
+//cumulusci-managed@deprecated
 global virtual without sharing class HouseholdNaming {
       
     @future  
