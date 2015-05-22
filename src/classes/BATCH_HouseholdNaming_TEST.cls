@@ -32,6 +32,7 @@
 * @date 2011 (2.3)
 * @description Class provides a batchable wrapper for Household naming functionality. Generally called only on initial activation.
 */
+////cumulusci-managed@deprecated
 @isTest
 private class BATCH_HouseholdNaming_TEST {
     
