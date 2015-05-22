@@ -7,26 +7,29 @@
     <enableFeeds>false</enableFeeds>
     <fields>
         <fullName>Advanced_Household_Naming__c</fullName>
-        <defaultValue>false</defaultValue>
+        <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
+        <description>If checked, the system will provide automatic naming for Household Names, Informal and Formal Greetings.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Activate advanced household naming functionality in version 2.1+.  This will provide dynamic naming for Household Names, Informal and Formal Greetings.</inlineHelpText>
-        <label>Advanced Household Naming</label>
+        <inlineHelpText>If checked, the system will provide automatic naming for Household Names, Informal and Formal Greetings.</inlineHelpText>
+        <label>Automatic Household Naming</label>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Always_Rollup_to_Primary_Contact__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
+        <description>Always rollup donor statistics to the primary Contact Role, and corresponding household, on an opportunity, even if the opportunity is not from an individual (i.e. from a company, foundation, etc.)</description>
         <externalId>false</externalId>
-        <inlineHelpText>Always rollup to the primary contact, and corresponding household, on an opp. even if the opportunity is not from an individual (i.e. from a company, foundation, etc.)</inlineHelpText>
-        <label>Always Rollup to Primary Contact</label>
+        <inlineHelpText>Always rollup donor statistics to the primary Contact Role, and corresponding household, on an opportunity, even if the opportunity is not from an individual (i.e. from a company, foundation, etc.)</inlineHelpText>
+        <label>Always Rollup to Primary Contact Role</label>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Async_Household_Naming__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
+        <description>This is a non-exposed setting to toggle household naming code to use an asynchronous version instead of the standard version.</description>
         <externalId>false</externalId>
         <inlineHelpText>This is a non-exposed setting to toggle household naming code to use an asynchronous version instead of the standard version.</inlineHelpText>
         <label>Async Household Naming</label>
@@ -34,9 +37,12 @@
     </fields>
     <fields>
         <fullName>Batch_Size__c</fullName>
+        <defaultValue>200</defaultValue>
         <deprecated>false</deprecated>
+        <description>The number of records processed at a time when calculating donor statistics.  The default size is 200.  Reduce to a smaller number if the Opportunity Rollups are failing due to system limits.</description>
         <externalId>false</externalId>
-        <label>Batch Size</label>
+        <inlineHelpText>The number of records processed at a time when calculating donor statistics.  The default size is 200.  Reduce to a smaller number if the Opportunity Rollups are failing due to system limits.</inlineHelpText>
+        <label>Rollup Batch Size</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -47,77 +53,69 @@
         <fullName>DISABLE_HouseholdAfter_trigger__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>DISABLES the HouseholdAfter.trigger (Household__c, after update)</description>
+        <description>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</description>
         <externalId>false</externalId>
-        <inlineHelpText>!!WARNING!!
-DISABLES the HouseholdAfter.trigger (Household__c, after update)
-- checking this box will disable a trigger.  This can cause erratic and unpredictable behavior in your NPSP.  FOR ADVANCED CONSULTANT AND DEVELOPERS ONLY.</inlineHelpText>
-        <label>DISABLE_HouseholdAfter_trigger</label>
+        <inlineHelpText>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
+        <label>DEPRECATED-Disable_HHAfter_trigger</label>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>DISABLE_HouseholdBefore_trigger__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>DISABLES the HouseholdBefore.trigger (Household__c, before update)</description>
+        <description>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</description>
         <externalId>false</externalId>
-        <inlineHelpText>!!WARNING!!
-DISABLES the HouseholdBefore.trigger (Household__c, before update)
-- checking this box will disable a trigger.  This can cause erratic and unpredictable behavior in your NPSP. FOR ADVANCED CONSULTANTS AND DEVELOPERS ONLY.</inlineHelpText>
-        <label>DISABLE_HouseholdBefore_trigger</label>
+        <inlineHelpText>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
+        <label>DEPRECATED-Disable_HHBefore_trigger</label>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>DISABLE_Household_Opportunity_trigger__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>DISABLES the Household_Opportunity.trigger (Opportunity, after insert).</description>
+        <description>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</description>
         <externalId>false</externalId>
-        <inlineHelpText>!!WARNING!!
-DISABLES the Household_Opportunity.trigger (Opportunity, after insert)
-- checking this box will disable a trigger.  This can cause erratic and unpredictable behavior in your NPSP. FOR ADVANCED CONSULTANTS AND DEVELOPERS ONLY.</inlineHelpText>
-        <label>DISABLE_Household_Opportunity_trigger</label>
+        <inlineHelpText>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
+        <label>DEPRECATED-Disable_Household_Opp_trigger</label>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>DISABLE_Households_trigger__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>DISABLES the Households.trigger (Contact, after insert, after update, after delete)</description>
+        <description>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</description>
         <externalId>false</externalId>
-        <inlineHelpText>!!WARNING!!
-DISABLES the Households.trigger (Contact, after insert, after update, after delete)
-- checking this box will disable a trigger.  This can cause erratic and unpredictable behavior in your NPSP. FOR ADVANCED CONSULTANTS AND DEVELOPERS ONLY.</inlineHelpText>
-        <label>DISABLE_Households_trigger</label>
+        <inlineHelpText>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
+        <label>DEPRECATED-Disable_Households_trigger</label>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>DISABLE_OpportunityRollup_trigger__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update, after delete)</description>
+        <description>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</description>
         <externalId>false</externalId>
-        <inlineHelpText>!!WARNING!!
-DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update, after delete)
-- checking this box will disable a trigger.  This can cause erratic and unpredictable behavior. FOR ADVANCED CONSULTANTS AND DEVELOPERS ONLY.</inlineHelpText>
-        <label>DISABLE_OpportunityRollup_trigger</label>
+        <inlineHelpText>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
+        <label>DEPRECATED-Disable_OppRollup_trigger</label>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Enable_Opp_Rollup_Triggers__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
+        <description>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Check this box to update opportunity totals whenever opportunities are inserted or updated (as long as capacity allows).</inlineHelpText>
-        <label>Roll Up Opps in Triggers</label>
+        <inlineHelpText>DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings.</inlineHelpText>
+        <label>DEPRECATED-Enable_Opp_Rollup_Triggers</label>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Enable_Soft_Credit_Rollups__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
+        <description>Allows you to rollup closed Opportunity totals based on Opportunity Contact Role Roles.  Soft credit rollups happen only in the nightly batch job, and not on triggers.  They can be manually run using the Rollup Donations Batch tab.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Allows you to rollup closed Opportunity totals based on Opportunity Contact Role Roles.  Soft credit rollups happen only in the nightly batch job, and not on triggers.  They can be manually run using the Opportunity Rollups tab.</inlineHelpText>
+        <inlineHelpText>Allows you to rollup closed Opportunity totals based on Opportunity Contact Role Roles.  Soft credit rollups happen only in the nightly batch job, and not on triggers.  They can be manually run using the Rollup Donations Batch tab.</inlineHelpText>
         <label>Enable Soft Credit Rollups</label>
         <type>Checkbox</type>
     </fields>
@@ -125,18 +123,19 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
         <fullName>Enable_Update_Check__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>Controls if the package automatically checks for new updates and versions.</description>
+        <description>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Controls if the package automatically checks for new updates and versions.</inlineHelpText>
-        <label>Enable Update Check</label>
+        <inlineHelpText>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</inlineHelpText>
+        <label>DEPRECATED-Enable Update Check</label>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Excluded_Account_Opp_Rectypes__c</fullName>
         <deprecated>false</deprecated>
+        <description>Names of Opportunity Record Types to exclude from statistics when rolling up Account Opportunities.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Names of opportunity record types to exclude when rolling up account opportunities. Separate record type names with semicolons.</inlineHelpText>
-        <label>Opp Rectypes Excluded for Account Rollup</label>
+        <inlineHelpText>Names of Opportunity Record Types to exclude from statistics when rolling up Account Opportunities.</inlineHelpText>
+        <label>Opp RecTypes Excluded for Account Rollup</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
@@ -145,8 +144,9 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Excluded_Account_Opp_Types__c</fullName>
         <deprecated>false</deprecated>
+        <description>Values for the Opportunity Type field to exclude from statistics when rolling up Account Opportunities.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Values for the opportunity Type field to exclude when rolling up account opportunities. Separate types with semicolons.</inlineHelpText>
+        <inlineHelpText>Values for the Opportunity Type field to exclude from statistics when rolling up Account Opportunities.</inlineHelpText>
         <label>Opp Types Excluded for Account Rollup</label>
         <length>255</length>
         <required>false</required>
@@ -156,9 +156,10 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Excluded_Contact_Opp_Rectypes__c</fullName>
         <deprecated>false</deprecated>
+        <description>Names of Opportunity Record Types to exclude from statistics when rolling up Contact Opportunities.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Names of opportunity record types to exclude when rolling up contact opportunities. Separate record type names with semicolons.</inlineHelpText>
-        <label>Opp Rectypes Excluded for Contact Rollup</label>
+        <inlineHelpText>Names of Opportunity Record Types to exclude from statistics when rolling up Contact Opportunities.</inlineHelpText>
+        <label>Opp RecTypes Excluded for Contact Rollup</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
@@ -167,8 +168,9 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Excluded_Contact_Opp_Types__c</fullName>
         <deprecated>false</deprecated>
+        <description>Values for the Opportunity Type field to exclude from statistics when rolling up Contact Opportunities.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Values for the opportunity Type field to exclude when rolling up contact opportunities. Separate types with semicolons.</inlineHelpText>
+        <inlineHelpText>Values for the Opportunity Type field to exclude from statistics when rolling up Contact Opportunities.</inlineHelpText>
         <label>Opp Types Excluded for Contact Rollup</label>
         <length>255</length>
         <required>false</required>
@@ -188,8 +190,10 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Has_Package_Update__c</fullName>
         <deprecated>false</deprecated>
+        <description>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</description>
         <externalId>false</externalId>
-        <label>Has Package Update</label>
+        <inlineHelpText>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</inlineHelpText>
+        <label>DEPRECATED-Has Package Update</label>
         <length>40</length>
         <required>false</required>
         <type>Text</type>
@@ -199,6 +203,7 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
         <fullName>Household_Contact_Roles_On__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
+        <description>Check this field to create automatic Contact Roles for Household members of the Primary Contact</description>
         <externalId>false</externalId>
         <inlineHelpText>Check this field to create automatic Contact Roles for Household members of the Primary Contact</inlineHelpText>
         <label>Household Contact Roles On</label>
@@ -207,9 +212,10 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Household_Creation_Excluded_Recordtypes__c</fullName>
         <deprecated>false</deprecated>
+        <description>Contact Record Types excluded from Household creation.  This setting is ignored if you are using the Household Account model.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Contact recordtypes excluded from Household creation</inlineHelpText>
-        <label>Household Creation Excluded Recordtypes</label>
+        <inlineHelpText>Contact Record Types excluded from Household creation.  This setting is ignored if you are using the Household Account model.</inlineHelpText>
+        <label>Household Creation Excluded Record Types</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
@@ -221,7 +227,7 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
         <description>The report ID of the Household Mailing List Report used for Household-deduplicated Campaign mailing lists.  Report should be of Campaigns with Contacts, where Member Status does not contain &apos;Duplicate&apos;</description>
         <externalId>false</externalId>
         <inlineHelpText>The report ID of the Household Mailing List Report used for Household-deduplicated Campaign mailing lists.  Report should be of Campaigns with Contacts, where Member Status does not contain &apos;Duplicate&apos;</inlineHelpText>
-        <label>Household Mailing List ID</label>
+        <label>Household Mailing List Report</label>
         <length>18</length>
         <required>false</required>
         <type>Text</type>
@@ -230,8 +236,9 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Household_Member_Contact_Role__c</fullName>
         <deprecated>false</deprecated>
+        <description>The Role used when creating automatic Opportunity Contact Roles for Household members.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Select the Contact Role for Household Members</inlineHelpText>
+        <inlineHelpText>The Role used when creating automatic Opportunity Contact Roles for Household members.</inlineHelpText>
         <label>Household Member Contact Role</label>
         <length>255</length>
         <required>false</required>
@@ -241,9 +248,10 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Household_OCR_Excluded_Recordtypes__c</fullName>
         <deprecated>false</deprecated>
+        <description>Contact Record Types excluded from Household Opportunity Contact Role creation</description>
         <externalId>false</externalId>
-        <inlineHelpText>Contact recordtypes excluded from Household Opportunity Contact Role creation</inlineHelpText>
-        <label>Household OCR Excluded Recordtypes</label>
+        <inlineHelpText>Contact Record Types excluded from Household Opportunity Contact Role creation</inlineHelpText>
+        <label>Household OCR Excluded Record Types</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
@@ -252,9 +260,10 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Household_Rules__c</fullName>
         <deprecated>false</deprecated>
+        <description>Specifies which Contacts will have Households objects automatically created for them.  Note that this is only used for Contacts using the One-to-One or Individual Account Model.  This is ignored for Contacts with the Household Account Model.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Select which Contacts get Households: All, only those related to an Individual Account, or none.</inlineHelpText>
-        <label>Household Rules</label>
+        <inlineHelpText>Specifies which Contacts will have Households objects automatically created for them.  Note that this is only used for Contacts using the One-to-One or Individual Account Model.  This is ignored for Contacts with the Household Account Model.</inlineHelpText>
+        <label>Household Object Rules</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
@@ -263,16 +272,20 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Last_Update_Check__c</fullName>
         <deprecated>false</deprecated>
+        <description>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</description>
         <externalId>false</externalId>
-        <label>Last Update Check</label>
+        <inlineHelpText>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</inlineHelpText>
+        <label>DEPRECATED-Last Update Check</label>
         <required>false</required>
         <type>DateTime</type>
     </fields>
     <fields>
         <fullName>Max_Package_Version__c</fullName>
         <deprecated>false</deprecated>
+        <description>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</description>
         <externalId>false</externalId>
-        <label>Max Package Version</label>
+        <inlineHelpText>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</inlineHelpText>
+        <label>DEPRECATED-Max Package Version</label>
         <length>12</length>
         <required>false</required>
         <type>Text</type>
@@ -282,6 +295,7 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
         <fullName>Membership_Grace_Period__c</fullName>
         <defaultValue>30</defaultValue>
         <deprecated>false</deprecated>
+        <description>The length of the grace period (in days) after a membership expires (last end date) before the status moves from &apos;Grace Period&apos; to &apos;Expired&apos;.  Defaults to 30 days.</description>
         <externalId>false</externalId>
         <inlineHelpText>The length of the grace period (in days) after a membership expires (last end date) before the status moves from &apos;Grace Period&apos; to &apos;Expired&apos;.  Defaults to 30 days.</inlineHelpText>
         <label>Membership Grace Period</label>
@@ -293,9 +307,11 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     </fields>
     <fields>
         <fullName>Membership_Record_Types__c</fullName>
+        <defaultValue>&quot;Membership&quot;</defaultValue>
         <deprecated>false</deprecated>
+        <description>Names of Opportunity Record Types, such as Membership, that you want to roll up separately from other Opportunity Record Types.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Name of record types, such as Membership, that you want to roll up separately from other types. Separate record type names with semicolons.</inlineHelpText>
+        <inlineHelpText>Names of Opportunity Record Types, such as Membership, that you want to roll up separately from other Opportunity Record Types.</inlineHelpText>
         <label>Membership Record Type Names</label>
         <length>100</length>
         <required>false</required>
@@ -305,6 +321,7 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Opp_Rollup_Scheduled_Job_Id__c</fullName>
         <deprecated>false</deprecated>
+        <description>Id for the currently scheduled Opportunity Rollup Job</description>
         <externalId>false</externalId>
         <inlineHelpText>Id for the currently scheduled Opportunity Rollup Job</inlineHelpText>
         <label>Opp Rollup Scheduled Job Id</label>
@@ -316,8 +333,10 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Package_Update_URL__c</fullName>
         <deprecated>false</deprecated>
+        <description>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</description>
         <externalId>false</externalId>
-        <label>Package Update URL</label>
+        <inlineHelpText>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</inlineHelpText>
+        <label>DEPRECATED-Package Update URL</label>
         <required>false</required>
         <type>Url</type>
     </fields>
@@ -325,6 +344,7 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
         <fullName>Rollup_N_Day_Value__c</fullName>
         <defaultValue>365</defaultValue>
         <deprecated>false</deprecated>
+        <description>Provide a value for &apos;N day&apos; rollups, where &apos;N&apos; is the number of days from today into the past.  This value defaults to rollup over the past 365 days.</description>
         <externalId>false</externalId>
         <inlineHelpText>Provide a value for &apos;N day&apos; rollups, where &apos;N&apos; is the number of days from today into the past.  This value defaults to rollup over the past 365 days.</inlineHelpText>
         <label>Rollup N Day Value</label>
@@ -338,8 +358,9 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
         <fullName>Schedule_Job_Limit__c</fullName>
         <defaultValue>25</defaultValue>
         <deprecated>false</deprecated>
+        <description>The number of active scheduled Apex Jobs to look at when scheduling new jobs.</description>
         <externalId>false</externalId>
-        <inlineHelpText>The scheduled job limit used when auto-scheduling nightly rollups.</inlineHelpText>
+        <inlineHelpText>The number of active scheduled Apex Jobs to look at when scheduling new jobs.</inlineHelpText>
         <label>Schedule Job Limit</label>
         <precision>18</precision>
         <required>false</required>
@@ -350,8 +371,9 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Soft_Credit_Roles__c</fullName>
         <deprecated>false</deprecated>
+        <description>List of Opportunity Contact Role roles to include in soft credit rollups.</description>
         <externalId>false</externalId>
-        <inlineHelpText>List of roles to include in soft credit rollups.</inlineHelpText>
+        <inlineHelpText>List of Opportunity Contact Role roles to include in soft credit rollups.</inlineHelpText>
         <label>Soft Credit Roles</label>
         <length>255</length>
         <required>false</required>
@@ -361,10 +383,10 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
     <fields>
         <fullName>Update_Check_Interval__c</fullName>
         <deprecated>false</deprecated>
-        <description>The number of days between NPSP callouts to check for new versions of this package. The default value is 90 days.</description>
+        <description>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</description>
         <externalId>false</externalId>
-        <inlineHelpText>The number of days between NPSP callouts to check for new versions of this package. The default value is 90 days.</inlineHelpText>
-        <label>Update Check Interval</label>
+        <inlineHelpText>DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed.</inlineHelpText>
+        <label>DEPRECATED-Update Check Interval</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -375,9 +397,9 @@ DISABLES the OpportunityRollup.trigger (Opportunity, after insert, after update,
         <fullName>Use_Fiscal_Year_for_Rollups__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>Checking this box will cause opportunity rollup totals to respect fiscal year, instead of calendar years settings. To set Fiscal Year information, go to Setup-&gt;Company Profile-&gt;Fiscal Year. NOTE: Custom Fiscal Year Settings are NOT supported.</description>
+        <description>Checking this box will cause Opportunity rollup totals to respect fiscal year, instead of calendar years settings. To set Fiscal Year information, go to Setup-&gt;Company Profile-&gt;Fiscal Year.  NOTE: Custom Fiscal Year Settings are NOT supported.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Checking this box will cause opportunity rollup totals to respect fiscal year, instead of calendar years settings. To set Fiscal Year information, go to Setup-&gt;Company Profile-&gt;Fiscal Year.  NOTE: Custom Fiscal Year Settings are NOT supported.</inlineHelpText>
+        <inlineHelpText>Checking this box will cause Opportunity rollup totals to respect fiscal year, instead of calendar years settings. To set Fiscal Year information, go to Setup-&gt;Company Profile-&gt;Fiscal Year.  NOTE: Custom Fiscal Year Settings are NOT supported.</inlineHelpText>
         <label>Use Fiscal Year for Rollups</label>
         <type>Checkbox</type>
     </fields>
