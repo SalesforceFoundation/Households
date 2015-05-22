@@ -583,6 +583,7 @@ Household__r.TotalOppAmount__c)</formula>
         <fullName>Household</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
         <linkType>url</linkType>
         <masterLabel>Household</masterLabel>
         <openType>replace</openType>
