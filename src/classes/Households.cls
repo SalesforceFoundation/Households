@@ -35,9 +35,4 @@
 global without sharing class Households { 
     webservice static String getHouseholdLastTransaction(Id householdId) { return null; }
     webservice static String getHouseholdTransactionTotal(Id householdId) { return null; }
-    
-    static testmethod void test() {
-    	Households.getHouseholdLastTransaction(null);
-    	Households.getHouseholdTransactionTotal(null);
-    }
 }

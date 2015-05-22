@@ -11,7 +11,6 @@
         <label>Field Action</label>
         <length>50</length>
         <required>true</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -23,7 +22,6 @@
         <label>Object Name</label>
         <length>50</length>
         <required>true</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -35,7 +33,6 @@
         <label>Source Field</label>
         <length>50</length>
         <required>true</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -47,7 +44,6 @@
         <label>Target Field</label>
         <length>50</length>
         <required>true</required>
-        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>

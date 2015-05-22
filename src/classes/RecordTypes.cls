@@ -4,7 +4,7 @@
 * @description Provides recordtype wrapper for easy access in other codeblocks 
 */
 
-@deprecated
+//cumulusci-managed@deprecated
 global class RecordTypes {
     global static String giftRecordTypeNameForTests;
     global static String membershipRecordTypeNameForTests;            
@@ -18,15 +18,4 @@ global class RecordTypes {
     global static List<SelectOption> getRecordTypesForSelectList(String objectName) {return null;}
     global static List<SelectOption> getStringRecordTypesForSelectList(String objectName) {return null;}
     
-    static testmethod void test() {
-    	RecordTypes.GetRecordTypeId(null, null);
-    	RecordTypes.getRecordTypeNameForGiftsTests(null);
-    	RecordTypes.getRecordTypeNameForMembershipTests(null);
-    	RecordTypes.GetRecordTypeName(null, null);
-    	RecordTypes.GetRecordTypeIdSet(null, null);
-    	RecordTypes.GetRecordTypeIdMap(null);
-    	RecordTypes.GetOppNamingSuffix(null);
-    	RecordTypes.getRecordTypesForSelectList(null);
-    	RecordTypes.getStringRecordTypesForSelectList(null);
-    }
 }

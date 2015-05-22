@@ -32,16 +32,9 @@
 * @date 2011 (2.3)
 * @description Class provides a batchable wrapper for Household naming functionality. Generally called only on initial activation.
 */
-@deprecated
+//cumulusci-managed@deprecated
 global class BATCH_HouseholdNaming implements Database.Batchable<SObject> {
     global database.Querylocator start(Database.BatchableContext bc) {return null;}
-    global public void execute(Database.BatchableContext bc, Sobject[] result) { }
+    global void execute(Database.BatchableContext bc, Sobject[] result) { }
     global void finish(Database.BatchableContext bc) { }
-    
-    static testmethod void test() {
-        BATCH_HouseholdNaming batch = new BATCH_HouseholdNaming();
-        batch.start(null);
-        batch.execute(null, null);
-        batch.finish(null);	
-    }
 }

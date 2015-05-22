@@ -14,9 +14,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>Edit</actionName>
-        <content>manageHousehold</content>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Visualforce</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>List</actionName>
@@ -24,9 +22,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
-        <content>manageHousehold</content>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Visualforce</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>Tab</actionName>
@@ -47,6 +43,36 @@
     <fieldSets>
         <fullName>Manage_Household_Custom</fullName>
         <description>Fields displayed on manage household page</description>
+        <displayedFields>
+            <field>LargestAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastMembershipAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>HouseholdPhone__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MembershipEndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Addressee__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
         <label>Manage_Household_Custom</label>
     </fieldSets>
     <fields>
@@ -83,6 +109,7 @@
     </fields>
     <fields>
         <fullName>Best_Gift_Year_Total__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Best Gift Year Total</label>
         <precision>18</precision>
@@ -93,6 +120,7 @@
     </fields>
     <fields>
         <fullName>Best_Gift_Year__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Best Gift Year</label>
         <length>4</length>
@@ -574,17 +602,19 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <fullName>Copy_Household_Address_to_Contacts</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
         <height>600</height>
-        <linkType>page</linkType>
+        <linkType>url</linkType>
         <masterLabel>Copy Household Address to Contacts</masterLabel>
         <openType>sidebar</openType>
-        <page>BTNHouseholdAddressCopy</page>
         <protected>false</protected>
+        <url>/apex/npsp__ADDR_CopyAddrHHObjBTN?id={!Household__c.Id}</url>
     </webLinks>
     <webLinks>
         <fullName>New_Household_Member</fullName>
         <availability>online</availability>
         <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
         <linkType>url</linkType>
         <masterLabel>New Household Member</masterLabel>
         <openType>replace</openType>

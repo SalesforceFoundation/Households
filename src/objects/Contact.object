@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <enableFeeds>true</enableFeeds>
     <fields>
         <fullName>AverageAmount__c</fullName>
         <defaultValue>0</defaultValue>
@@ -48,7 +47,7 @@
         <fullName>Formula_HouseholdMailingAddress__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF(npe01__Organization_Type__c == &apos;HH Account&apos;,
+        <formula>IF(npe01__Organization_Type__c == &apos;Household Account&apos;,
 
 Account.BillingStreet &amp; BR() &amp;
 Account.BillingCity &amp; IF(LEN(Account.BillingCity) &gt; 0, &quot;, &quot;, &quot;&quot;) &amp; Account.BillingState &amp; &quot; &quot; &amp; Account.BillingPostalCode 
@@ -65,7 +64,7 @@ Household__r.Formula_MailingAddress__c)</formula>
         <fullName>Formula_HouseholdPhone__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF(npe01__Organization_Type__c == &apos;HH Account&apos;, 
+        <formula>IF(npe01__Organization_Type__c == &apos;Household Account&apos;, 
 Account.HouseholdPhone__c,
 Household__r.HouseholdPhone__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -100,17 +99,6 @@ Household__r.HouseholdPhone__c)</formula>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Languages__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Languages - DEPRECATED</label>
-        <length>100</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>LargestAmount__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
@@ -126,7 +114,7 @@ Household__r.HouseholdPhone__c)</formula>
         <fullName>LastCloseDateHH__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF(npe01__Organization_Type__c == &apos;HH Account&apos;, 
+        <formula>IF(npe01__Organization_Type__c == &apos;Household Account&apos;, 
 Account.LastCloseDate__c,
 Household__r.LastCloseDate__c)</formula>
         <label>Last Household Gift Date</label>
@@ -196,56 +184,6 @@ Household__r.LastCloseDate__c)</formula>
         <scale>2</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Currency</type>
-    </fields>
-    <fields>
-        <fullName>LeadSource</fullName>
-        <picklist>
-            <picklistValues>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Phone Inquiry</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Partner Referral</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>Level__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Level - DEPRECATED</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Secondary</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Tertiary</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Primary</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>MembershipEndDate__c</fullName>
@@ -344,7 +282,7 @@ Household__r.LastCloseDate__c)</formula>
         <fullName>OppAmountLastYearHH__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF(npe01__Organization_Type__c == &apos;HH Account&apos;, 
+        <formula>IF(npe01__Organization_Type__c == &apos;Household Account&apos;, 
 Account.OppAmountLastYear__c,
 Household__r.OppAmountLastYear__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -370,7 +308,7 @@ Household__r.OppAmountLastYear__c)</formula>
         <fullName>OppAmountThisYearHH__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF(npe01__Organization_Type__c == &apos;HH Account&apos;, 
+        <formula>IF(npe01__Organization_Type__c == &apos;Household Account&apos;, 
 Account.OppAmountThisYear__c,
 Household__r.OppAmountThisYear__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -443,14 +381,6 @@ Household__r.OppAmountThisYear__c)</formula>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Number</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>OwnerId</fullName>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>ReportsToId</fullName>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>SmallestAmount__c</fullName>
@@ -564,7 +494,7 @@ Household__r.OppAmountThisYear__c)</formula>
         <fullName>Total_Household_Gifts__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF(npe01__Organization_Type__c == &apos;HH Account&apos;, 
+        <formula>IF(npe01__Organization_Type__c == &apos;Household Account&apos;, 
 Account.TotalOppAmount__c,
 Household__r.TotalOppAmount__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -574,391 +504,16 @@ Household__r.TotalOppAmount__c)</formula>
         <scale>2</scale>
         <type>Currency</type>
     </fields>
-    <fields>
-        <fullName>npe01__AlternateEmail__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Alternate Email is an optional fourth email: Not personal, preferred, or work email.</description>
-        <externalId>false</externalId>
-        <label>Alternate Email</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Email</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>npe01__HomeEmail__c</fullName>
-        <deprecated>false</deprecated>
-        <description>See Preferred Email field.</description>
-        <externalId>false</externalId>
-        <label>Personal Email</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Email</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>npe01__Home_Address__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Formula: Uses primary address type field to determine Home Address from Mailing or Other address.</description>
-        <externalId>false</externalId>
-        <formula>if(
-  ISPICKVAL(npe01__Primary_Address_Type__c,&quot;Home&quot;),
-  if(LEN(MailingStreet)&gt;0, MailingStreet &amp; &quot;, &quot; , &quot;&quot; ) &amp; 
-  if(LEN(MailingCity)&gt;0, MailingCity &amp; &quot;, &quot; , &quot;&quot; )&amp; 
-  if(LEN(MailingState)&gt;0, MailingState &amp; &quot; &quot; , &quot;&quot; )&amp; 
-  if(LEN(MailingPostalCode)&gt;0, MailingPostalCode,&quot;&quot;) &amp; 
-  If(LEN( MailingCountry ) &gt;0, &quot;, &quot; &amp;MailingCountry,&quot;&quot;)
-,
-if(ISPICKVAL(npe01__Secondary_Address_Type__c,&quot;Home&quot;),
-  if(LEN(OtherStreet)&gt;0, OtherStreet &amp; &quot;, &quot; , &quot;&quot; ) &amp; 
-  if(LEN(OtherCity)&gt;0, OtherCity &amp; &quot;, &quot; , &quot;&quot; )&amp; 
-  if(LEN(OtherState)&gt;0, OtherState &amp; &quot; &quot; , &quot;&quot; )&amp; 
-  if(LEN(OtherPostalCode)&gt;0, OtherPostalCode,&quot;&quot;) &amp; 
-  If(LEN(OtherCountry ) &gt;0, &quot;, &quot; &amp; OtherCountry,&quot;&quot;)
-  ,&quot;&quot;
-)
-)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Home Address</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>npe01__Last_Donation_Date__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Formula:  The Last Donation Date of the Account where this Contact is the One to One Contact.   This has been superseded by the &apos;Last Gift Date&apos; field in the Households package.</description>
-        <externalId>false</externalId>
-        <formula>if( Account.npe01__One2OneContact__c = Id ,
-Account.npe01__LastDonationDate__c,
-null
-)</formula>
-        <label>Last Transaction Date</label>
-        <required>false</required>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>npe01__Lifetime_Giving_History_Amount__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Formula:  The Lifetime Donation Amount of the Account where this Contact is the One to One Contact.  This field has been superseded by the &apos;Total Amount&apos; field in the Households package.</description>
-        <externalId>false</externalId>
-        <formula>IF( Account.npe01__One2OneContact__c = Id ,
-Account.npe01__LifetimeDonationHistory_Amount__c,
-null
-)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Lifetime Transaction Total</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>2</scale>
-        <type>Currency</type>
-    </fields>
-    <fields>
-        <fullName>npe01__Organization_Type__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Formula: In order of preference, the SYSTEM_AccountType field, the Account Type field, and &quot;Organization&quot;.</description>
-        <externalId>false</externalId>
-        <formula>NULLVALUE(IF( Account.npe01__SYSTEM_AccountType__c==&quot;&quot;, TEXT(Account.Type),Account.npe01__SYSTEM_AccountType__c),&quot;Organization&quot; )</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Organization Type</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>npe01__Other_Address__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Formula: If the Primary Address Type is Other, the Mailing Address.  If the Secondary Address Type is Other, the Other Address.</description>
-        <externalId>false</externalId>
-        <formula>if(
-  ISPICKVAL(npe01__Primary_Address_Type__c,&quot;Other&quot;),
-  if(LEN(MailingStreet)&gt;0, MailingStreet &amp; &quot;, &quot; , &quot;&quot; ) &amp; 
-  if(LEN(MailingCity)&gt;0, MailingCity &amp; &quot;, &quot; , &quot;&quot; )&amp; 
-  if(LEN(MailingState)&gt;0, MailingState &amp; &quot; &quot; , &quot;&quot; )&amp; 
-  if(LEN(MailingPostalCode)&gt;0, MailingPostalCode,&quot;&quot;) &amp; 
-  If(LEN( MailingCountry ) &gt;0, &quot;, &quot; &amp;MailingCountry,&quot;&quot;)
-,
-if(ISPICKVAL(npe01__Secondary_Address_Type__c,&quot;Other&quot;),
-  if(LEN(OtherStreet)&gt;0, OtherStreet &amp; &quot;, &quot; , &quot;&quot; ) &amp; 
-  if(LEN(OtherCity)&gt;0, OtherCity &amp; &quot;, &quot; , &quot;&quot; )&amp; 
-  if(LEN(OtherState)&gt;0, OtherState &amp; &quot; &quot; , &quot;&quot; )&amp; 
-  if(LEN(OtherPostalCode)&gt;0, OtherPostalCode,&quot;&quot;) &amp; 
-  If(LEN(OtherCountry ) &gt;0, &quot;, &quot; &amp; OtherCountry,&quot;&quot;)
-  ,&quot;&quot;
-)
-)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Other Address</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>npe01__PreferredPhone__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Which phone number should be used for most communications involving this Contact?</description>
-        <externalId>false</externalId>
-        <label>Preferred Phone</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Home</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Work</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Mobile</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Household</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>npe01__Preferred_Email__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Which email should be used for most communications involving this Contact?</description>
-        <externalId>false</externalId>
-        <label>Preferred Email</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Personal</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Work</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Alternate</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Home</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Household</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>npe01__Primary_Address_Type__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Which type of address is the mailing address?</description>
-        <externalId>false</externalId>
-        <label>Primary Address Type</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Home</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Work</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>npe01__Private__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Excludes this Contact from One to One or Bucket account processing.</description>
-        <externalId>false</externalId>
-        <label>Private</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>npe01__Secondary_Address_Type__c</fullName>
-        <deprecated>false</deprecated>
-        <description>What type of address is the other address?</description>
-        <externalId>false</externalId>
-        <label>Secondary Address Type</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Home</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Work</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>npe01__SystemAccountProcessor__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Hidden system field: do not change.  Updated by automatic processes.  See Contacts &amp; Organization settings.</description>
-        <externalId>false</externalId>
-        <label>_SYSTEM: ACCOUNT PROCESSOR</label>
-        <picklist>
-            <picklistValues>
-                <fullName>One-to-One</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Individual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>npe01__SystemIsIndividual__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Deprecated field.  Do not use.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>This field is no longer used and should not be referenced. It has been replaced by Type_of_Account__c</inlineHelpText>
-        <label>_SYSTEM: IsIndividual - DEPRECATED</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>npe01__Type_of_Account__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Formula: &quot;Individual&quot; or &quot;Organization&quot; depending on Account setting.</description>
-        <externalId>false</externalId>
-        <formula>IF(Account.npe01__SYSTEMIsIndividual__c,&quot;Individual&quot;,&quot;Organization&quot;)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>Shows the type of Account this Contact is connected to.</inlineHelpText>
-        <label>Type of Account</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>npe01__WorkEmail__c</fullName>
-        <deprecated>false</deprecated>
-        <description>See Preferred Email field.</description>
-        <externalId>false</externalId>
-        <label>Work Email</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Email</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>npe01__WorkPhone__c</fullName>
-        <deprecated>false</deprecated>
-        <description>See &apos;Preferred Phone&apos; field.</description>
-        <externalId>false</externalId>
-        <label>Work Phone</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Phone</type>
-    </fields>
-    <fields>
-        <fullName>npe01__Work_Address__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Formula: If the Primary Address Type is Work, the Mailing Address.  If the Secondary Address Type is Work, the Other Address.</description>
-        <externalId>false</externalId>
-        <formula>if(
-  ISPICKVAL(npe01__Primary_Address_Type__c,&quot;Work&quot;),
-  if(LEN(MailingStreet)&gt;0, MailingStreet &amp; &quot;, &quot; , &quot;&quot; ) &amp; 
-  if(LEN(MailingCity)&gt;0, MailingCity &amp; &quot;, &quot; , &quot;&quot; )&amp; 
-  if(LEN(MailingState)&gt;0, MailingState &amp; &quot; &quot; , &quot;&quot; )&amp; 
-  if(LEN(MailingPostalCode)&gt;0, MailingPostalCode,&quot;&quot;) &amp; 
-  If(LEN( MailingCountry ) &gt;0, &quot;, &quot; &amp;MailingCountry,&quot;&quot;)
-,
-if(ISPICKVAL(npe01__Secondary_Address_Type__c,&quot;Work&quot;),
-  if(LEN(OtherStreet)&gt;0, OtherStreet &amp; &quot;, &quot; , &quot;&quot; ) &amp; 
-  if(LEN(OtherCity)&gt;0, OtherCity &amp; &quot;, &quot; , &quot;&quot; )&amp; 
-  if(LEN(OtherState)&gt;0, OtherState &amp; &quot; &quot; , &quot;&quot; )&amp; 
-  if(LEN(OtherPostalCode)&gt;0, OtherPostalCode,&quot;&quot;) &amp; 
-  If(LEN(OtherCountry ) &gt;0, &quot;, &quot; &amp; OtherCountry,&quot;&quot;)
-  ,&quot;&quot; 
-)
-)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Work Address</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <listViews>
-        <fullName>AllContacts</fullName>
-        <columns>Soft_Credit_Total__c</columns>
-        <filterScope>Everything</filterScope>
-        <label>All Contacts</label>
-        <language>en_US</language>
-    </listViews>
-    <listViews>
-        <fullName>BirthdaysThisMonth</fullName>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>CONTACT.BIRTHDATE</field>
-            <operation>equals</operation>
-            <value>THIS_MONTH</value>
-        </filters>
-        <label>Birthdays This Month</label>
-    </listViews>
-    <listViews>
-        <fullName>MyContacts</fullName>
-        <filterScope>Mine</filterScope>
-        <label>My Contacts</label>
-    </listViews>
-    <listViews>
-        <fullName>NewLastWeek</fullName>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>CONTACT.CREATED_DATE</field>
-            <operation>equals</operation>
-            <value>LAST_WEEK</value>
-        </filters>
-        <label>New Last Week</label>
-    </listViews>
-    <listViews>
-        <fullName>NewThisWeek</fullName>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>CONTACT.CREATED_DATE</field>
-            <operation>equals</operation>
-            <value>THIS_WEEK</value>
-        </filters>
-        <label>New This Week</label>
-    </listViews>
     <webLinks>
         <fullName>Copy_Address_to_Household</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
         <height>600</height>
-        <linkType>page</linkType>
+        <linkType>url</linkType>
         <masterLabel>Copy Address to Household</masterLabel>
         <openType>sidebar</openType>
-        <page>BTNContactAddressCopy</page>
         <protected>false</protected>
+        <url>/apex/npsp__ADDR_CopyAddrHHObjBTN?id={!Contact.Id}</url>
     </webLinks>
 </CustomObject>

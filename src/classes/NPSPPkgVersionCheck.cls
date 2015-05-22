@@ -32,5 +32,5 @@
 * @date 2011 (2.3) 
 * @description Handles XML exchange for webservice callout to compare package versions 
 */
-@deprecated
+//cumulusci-managed@deprecated
 global without sharing class NPSPPkgVersionCheck { }

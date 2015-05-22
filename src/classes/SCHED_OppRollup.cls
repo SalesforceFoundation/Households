@@ -32,12 +32,7 @@
 * @date 2011 (2.0)
 * @description Supports the automatic scheduling of opportunity rollups  
 */
-@deprecated
+//cumulusci-managed@deprecated
 global class SCHED_OppRollup implements Schedulable {
     global void execute(SchedulableContext SC) { }
-    
-    static testmethod void test() {
-    	SCHED_OppRollup sched = new SCHED_OppRollup();
-    	sched.execute(null);
-    }
 }

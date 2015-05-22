@@ -339,16 +339,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Level__c</field>
-            <table>Household__c.Contacts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Languages__c</field>
-            <table>Household__c.Contacts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Formula_HouseholdMailingAddress__c</field>
             <table>Household__c.Contacts__r</table>
         </columns>
@@ -593,31 +583,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>PrimaryPartnerAccount</field>
-            <table>Household__c.Contacts__r.OpportunityContactRoles</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>DeliveryInstallationStatus__c</field>
-            <table>Household__c.Contacts__r.OpportunityContactRoles</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TrackingNumber__c</field>
-            <table>Household__c.Contacts__r.OpportunityContactRoles</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OrderNumber__c</field>
-            <table>Household__c.Contacts__r.OpportunityContactRoles</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CurrentGenerators__c</field>
-            <table>Household__c.Contacts__r.OpportunityContactRoles</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>MainCompetitors__c</field>
             <table>Household__c.Contacts__r.OpportunityContactRoles</table>
         </columns>
         <masterLabel>Opportunities</masterLabel>

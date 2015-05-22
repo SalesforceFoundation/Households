@@ -22,7 +22,7 @@
 * setup their household members, name, and greeting before creating the household. It will also allow the user
 * to set the address on the household.  
 */
-@deprecated
+//cumulusci-managed@deprecated
 global with sharing class ManageHousehold_EXT { 
 
     @RemoteAction
@@ -40,11 +40,4 @@ global with sharing class ManageHousehold_EXT {
     @RemoteAction
     global static string remoteSave(String state) {return null;}
     
-    static testmethod void test() {
-    	ManageHousehold_EXT.findContacts(null, null);
-    	ManageHousehold_EXT.remoteAddMember(null, false, null);
-    	ManageHousehold_EXT.remoteRemoveMember(null, null);
-    	ManageHousehold_EXT.remoteSetNaming(null, null, false, null, false, null, null);
-    	ManageHousehold_EXT.remoteSave(null);
-    }
 }
