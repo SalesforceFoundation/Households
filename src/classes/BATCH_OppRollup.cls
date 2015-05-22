@@ -37,11 +37,4 @@ global class BATCH_OppRollup implements Database.Batchable<SObject> {
 	global database.Querylocator start(Database.BatchableContext bc){return null;}	
 	global void execute(Database.BatchableContext bc, Sobject[] result) {}
 	global void finish(Database.BatchableContext bc) {}		
-
-    static testmethod void test() {
-        BATCH_OppRollup batch = new BATCH_OppRollup();
-        batch.start(null);
-        batch.execute(null, null);
-        batch.finish(null); 
-    }
 }

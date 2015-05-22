@@ -35,9 +35,4 @@
 //cumulusci-managed@deprecated
 global class SCHED_OppRollup implements Schedulable {
     global void execute(SchedulableContext SC) { }
-    
-    static testmethod void test() {
-    	SCHED_OppRollup sched = new SCHED_OppRollup();
-    	sched.execute(null);
-    }
 }

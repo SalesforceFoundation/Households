@@ -13,7 +13,7 @@
     * Neither the name of the Salesforce.com Foundation nor the names of
       its contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
-
+ 
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
     "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
     LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS 
@@ -25,14 +25,20 @@
     CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT 
     LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN 
     ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
-    POSSIBILITY OF SUCH DAMAGE.
+    POSSIBILITY OF SUCH DAMAGE.  
 */
 /**
 * @author Salesforce.com Foundation
-* @date 2011 (2.0)
-* @description Handles creation, deleting and moving of Households between Contacts 
+* @date 2011
+* @description Class provides a batchable wrapper for Opportunity Rollup functionality
 */
-global without sharing class Households { 
-    webservice static String getHouseholdLastTransaction(Id householdId) { return null; }
-    webservice static String getHouseholdTransactionTotal(Id householdId) { return null; }
+////cumulusci-managed@deprecated
+@isTest
+private class BATCH_OppRollup_TEST {
+    static testmethod void test() {
+        BATCH_OppRollup batch = new BATCH_OppRollup();
+        batch.start(null);
+        batch.execute(null, null);
+        batch.finish(null); 
+    }
 }

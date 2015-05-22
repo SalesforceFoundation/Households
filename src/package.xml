@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Households</fullName>
+    <postInstallClass/>
     <types>
         <members>BATCH_HouseholdNaming</members>
+        <members>BATCH_HouseholdNaming_TEST</members>
         <members>BATCH_OppRollup</members>
+        <members>BATCH_OppRollup_TEST</members>
         <members>HouseholdNaming</members>
+        <members>HouseholdNaming_TEST</members>
         <members>Households</members>
+        <members>Households_TEST</members>
         <members>ManageHousehold_EXT</members>
+        <members>ManageHousehold_EXT_TEST</members>
         <members>NPSPPkgVersionCheck</members>
         <members>OpportunityRollups</members>
         <members>RecordTypes</members>
+        <members>RecordTypes_TEST</members>
         <members>SCHED_OppRollup</members>
+        <members>SCHED_OppRollup_TEST</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -337,5 +345,6 @@
         <members>Contact.Contact%2EPreferred_Phone%5F%5Fc WithHousehold</members>
         <name>WorkflowRule</name>
     </types>
-    <version>26.0</version>
+    <uninstallClass/>
+    <version>29.0</version>
 </Package>

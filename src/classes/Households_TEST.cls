@@ -32,7 +32,10 @@
 * @date 2011 (2.0)
 * @description Handles creation, deleting and moving of Households between Contacts 
 */
-global without sharing class Households { 
-    webservice static String getHouseholdLastTransaction(Id householdId) { return null; }
-    webservice static String getHouseholdTransactionTotal(Id householdId) { return null; }
+@isTest
+private class Households_TEST {
+    static testmethod void test() {
+    	Households.getHouseholdLastTransaction(null);
+    	Households.getHouseholdTransactionTotal(null);
+    }
 }

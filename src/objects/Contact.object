@@ -508,6 +508,7 @@ Household__r.TotalOppAmount__c)</formula>
         <fullName>Copy_Address_to_Household</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
         <height>600</height>
         <linkType>url</linkType>
         <masterLabel>Copy Address to Household</masterLabel>

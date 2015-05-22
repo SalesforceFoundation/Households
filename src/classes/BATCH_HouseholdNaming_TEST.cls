@@ -13,7 +13,7 @@
     * Neither the name of the Salesforce.com Foundation nor the names of
       its contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
-
+ 
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
     "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
     LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS 
@@ -29,10 +29,16 @@
 */
 /**
 * @author Salesforce.com Foundation
-* @date 2011 (2.0)
-* @description Handles creation, deleting and moving of Households between Contacts 
+* @date 2011 (2.3)
+* @description Class provides a batchable wrapper for Household naming functionality. Generally called only on initial activation.
 */
-global without sharing class Households { 
-    webservice static String getHouseholdLastTransaction(Id householdId) { return null; }
-    webservice static String getHouseholdTransactionTotal(Id householdId) { return null; }
+@isTest
+private class BATCH_HouseholdNaming_TEST {
+    
+    static testmethod void test() {
+        BATCH_HouseholdNaming batch = new BATCH_HouseholdNaming();
+        batch.start(null);
+        batch.execute(null, null);
+        batch.finish(null);	
+    }
 }

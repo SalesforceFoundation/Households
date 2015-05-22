@@ -43,13 +43,4 @@ global virtual without sharing class HouseholdNaming {
     global virtual string getInformalName(list<Contact> ContactList){return null;}
     global virtual string getFormalName(list<Contact> ContactList){return null;}
     
-    static testmethod void test() {
-    	HouseholdNaming.FutureUpdateNames(null);
-    	HouseholdNaming hn = new HouseholdNaming();
-    	hn.getOtherName(null);
-    	hn.UpdateNames(null);
-    	hn.getHHName(null);
-    	hn.getInformalName(null);
-    	hn.getFormalName(null);
-    }
 }
