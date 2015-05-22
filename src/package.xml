@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Households</fullName>
-    <postInstallClass/>
     <types>
         <members>BATCH_HouseholdNaming</members>
         <members>BATCH_HouseholdNaming_TEST</members>
@@ -317,7 +316,8 @@
         <name>ReportType</name>
     </types>
     <types>
-        <members>*</members>
+        <members>ManageHouseholdcss</members>
+        <members>ManageHouseholdjs</members>
         <name>StaticResource</name>
     </types>
     <types>
@@ -328,6 +328,7 @@
     <types>
         <members>Campaign.Household_Mailing_List</members>
         <members>Contact.Copy_Address_to_Household</members>
+        <members>Contact.Household</members>
         <members>Household__c.Copy_Household_Address_to_Contacts</members>
         <members>Household__c.New_Household_Member</members>
         <name>WebLink</name>
@@ -344,6 +345,5 @@
         <members>Contact.Contact%2EPreferred_Phone%5F%5Fc WithHousehold</members>
         <name>WorkflowRule</name>
     </types>
-    <uninstallClass/>
     <version>29.0</version>
 </Package>
