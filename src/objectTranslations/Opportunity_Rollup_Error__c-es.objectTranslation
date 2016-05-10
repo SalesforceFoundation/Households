@@ -9,28 +9,28 @@
         <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
     </caseValues>
     <fields>
-        <help><!-- Datetime of the error --></help>
-        <label><!-- Error Datetime --></label>
+        <help>Fecha del error</help>
+        <label>Fecha del error</label>
         <name>Error_Datetime__c</name>
     </fields>
     <fields>
-        <help><!-- Full text of the error message --></help>
-        <label><!-- Error Message --></label>
+        <help>Texto completo del mensaje de error.</help>
+        <label>Mensaje del error</label>
         <name>Error_Message__c</name>
     </fields>
     <fields>
-        <help><!-- The object type to which this error refers --></help>
-        <label><!-- Error Object Type --></label>
+        <help>El objeto al cual se refiere este error</help>
+        <label>Tipo de objeto del error</label>
         <name>Error_Object_Type__c</name>
     </fields>
     <fields>
-        <help><!-- Link to the record on which the error occurred --></help>
-        <label><!-- Error Record Link --></label>
+        <help>URL al registro en el cual ocurrió el error.</help>
+        <label>URL al registro del error</label>
         <name>Error_Record_Link__c</name>
     </fields>
     <fields>
-        <help><!-- Type of error that occurred --></help>
-        <label><!-- Error Type --></label>
+        <help>Tipo de error que ocurrió.</help>
+        <label>Tipo de error</label>
         <name>Error_Type__c</name>
     </fields>
     <gender><!-- Feminine --></gender>

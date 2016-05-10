@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label><!-- Add --></label>
+        <label>Agregar</label>
         <name>Add</name>
     </customLabels>
     <customLabels>
-        <label><!-- Add and merge Households --></label>
+        <label>Agregar y combinar Familias</label>
         <name>AddAndMerge</name>
     </customLabels>
     <customLabels>
-        <label><!-- Add and remove from old Household --></label>
+        <label>Agregar y borrar desde antigua Familia</label>
         <name>AddAndRemove</name>
     </customLabels>
     <customLabels>
-        <label><!-- Add Members --></label>
+        <label>Agregar Miembros</label>
         <name>AddHouseholdMembers</name>
     </customLabels>
     <customLabels>
-        <label><!-- AddressCopyFailure --></label>
+        <label>Ocurrió un error mientras se copiaban las direcciones.</label>
         <name>AddressCopyFailure</name>
     </customLabels>
     <customLabels>
-        <label><!-- AddressCopySuccess --></label>
+        <label>Dirección copiada exitosamente.</label>
         <name>AddressCopySuccess</name>
     </customLabels>
     <customLabels>
-        <label><!-- AddressCopyUnknownObject --></label>
+        <label>El Copiado de Direcciones no está disponible para este tipo de objeto.</label>
         <name>AddressCopyUnknownObject</name>
     </customLabels>
     <customLabels>
-        <label><!-- Set the home address on all household members to this address. --></label>
+        <label>Establecer esta dirección como la Dirección de la familia en todos los miembros de la familia</label>
         <name>AddressToAllMembers</name>
     </customLabels>
     <customLabels>
-        <label><!-- Already In Household --></label>
+        <label>Ya está en la Familia.</label>
         <name>AlreadyInHousehold</name>
     </customLabels>
     <customLabels>
-        <label><!-- Auto Formal Greeting --></label>
+        <label>Auto Saludo Formal</label>
         <name>AutoFormalGreeting</name>
     </customLabels>
     <customLabels>
-        <label><!-- Auto Informal Greeting --></label>
+        <label>Auto Saludo Informal.</label>
         <name>AutoInformalGreeting</name>
     </customLabels>
     <customLabels>
-        <label><!-- Auto Name --></label>
+        <label>Auto Nombre</label>
         <name>AutoName</name>
     </customLabels>
     <customLabels>
-        <label><!-- Change --></label>
+        <label>Cambiar</label>
         <name>Change</name>
     </customLabels>
     <customLabels>
-        <label><!-- Change Address --></label>
+        <label>Cambiar Direcciones</label>
         <name>ChangeAddress</name>
     </customLabels>
     <customLabels>
-        <label><!-- Changes have not been saved. --></label>
+        <label>Los cambios no hay sido guardados.</label>
         <name>ChangesNotSaved</name>
     </customLabels>
     <customLabels>
-        <label><!-- Already in a household --></label>
+        <label>ya está en una Familia. ¿Quiere agregar este contacto con o sin sus miembros de familia existentes?</label>
         <name>ContactAlreadyInHousehold</name>
     </customLabels>
     <customLabels>
-        <label><!-- Last Name is required. --></label>
+        <label>Apellido obligatorio.</label>
         <name>ContactLastNameRqd</name>
     </customLabels>
     <customLabels>
-        <label><!-- Enter a First Name and Last Name. --></label>
+        <label>Ingrese un Nombre y Apellido.</label>
         <name>ContactNameRqd</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact will be created when Household is saved. --></label>
+        <label>El contacto se creará cuando se guarda la Familia</label>
         <name>CreatedOnSave</name>
     </customLabels>
     <customLabels>
-        <label>Casa</label>
+        <label>Familia</label>
         <name>DefaultHouseholdName</name>
     </customLabels>
     <customLabels>
@@ -85,67 +85,67 @@
         <name>DefaultHouseholdTransactionCurrency</name>
     </customLabels>
     <customLabels>
-        <label><!-- Delete --></label>
+        <label>Eliminar</label>
         <name>Delete</name>
     </customLabels>
     <customLabels>
-        <label><!-- Enter a new address --></label>
+        <label>Completar una nueva dirección</label>
         <name>EnterNewAddress</name>
     </customLabels>
     <customLabels>
-        <label><!-- Exclude Contact from automatic Household naming: --></label>
+        <label>Excluir contacto del nombramiento automático de la Familia</label>
         <name>ExcludeText</name>
     </customLabels>
     <customLabels>
-        <label><!-- Existing Household --></label>
+        <label>Familia existente</label>
         <name>ExistingHousehold</name>
     </customLabels>
     <customLabels>
-        <label><!-- Find contact by name ... --></label>
+        <label>Encontrar contacto por nombre…</label>
         <name>FindContactByName</name>
     </customLabels>
     <customLabels>
-        <label><!-- Household Address --></label>
+        <label>Dirección de familia</label>
         <name>HouseholdAddress</name>
     </customLabels>
     <customLabels>
-        <label><!-- HouseholdAnonymousGreeting --></label>
+        <label>Señor o señora</label>
         <name>HouseholdAnonymousGreeting</name>
     </customLabels>
     <customLabels>
-        <label><!-- HouseholdAnonymousName --></label>
+        <label>Anónima</label>
         <name>HouseholdAnonymousName</name>
     </customLabels>
     <customLabels>
-        <label><!-- Household Details --></label>
+        <label>Detalles de familia</label>
         <name>HouseholdDetails</name>
     </customLabels>
     <customLabels>
-        <label><!-- Household Members --></label>
+        <label>Miembros del Hogar</label>
         <name>HouseholdMembers</name>
     </customLabels>
     <customLabels>
-        <label><!-- HouseholdNameConnector --></label>
+        <label>y</label>
         <name>HouseholdNameConnector</name>
     </customLabels>
     <customLabels>
-        <label><!-- HouseholdNameOverrun --></label>
+        <label>Amigos</label>
         <name>HouseholdNameOverrun</name>
     </customLabels>
     <customLabels>
-        <label>No Opportunities</label>
+        <label>No oportunidades</label>
         <name>Household_Contact_Role_Processor_Off</name>
     </customLabels>
     <customLabels>
-        <label>All Opportunities</label>
+        <label>Todas las oportunidades</label>
         <name>Household_Contact_Role_Processor_On</name>
     </customLabels>
     <customLabels>
-        <label><!-- Household Contact Roles Help Text --></label>
+        <label>Automáticamente crear Función del contacto en oportunidades para los miembros de la familia del donante principal</label>
         <name>Household_Contact_Roles_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>Household Credit</label>
+        <label>Miembro de familia</label>
         <name>Household_Member_Contact_Role</name>
     </customLabels>
     <customLabels>
@@ -153,63 +153,65 @@
         <name>Household_Rules_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label><!-- Manage Household --></label>
+        <label>Gestionar familia</label>
         <name>ManageHousehold</name>
     </customLabels>
     <customLabels>
-        <label><!-- Text used to cause a household name or greeting replacement --></label>
+        <label>REEMPLAZAR</label>
         <name>NameReplacementText</name>
     </customLabels>
     <customLabels>
-        <label><!-- New Contact --></label>
+        <label>Nuevo contacto</label>
         <name>NewContact</name>
     </customLabels>
     <customLabels>
-        <label><!-- There are currently no Contacts in this Household. --></label>
+        <label>Actualmente no hay contactos en esta familia.</label>
         <name>NoContacts</name>
     </customLabels>
     <customLabels>
-        <label><!-- Opportunity_Error_Help_Text --></label>
+        <label>Errores en totales pueden ocurrir durante el trabajo programado nocturno o en cálculos manuales, y pueden afectar la exactitud de los datos. A continuación se enumeran los errores, tipo de error, y un link al registro en el que se produjo el error. Estos errores se actualizan siempre que el trabajo de la noche o los cálculos manuales se ejecutan. Es muy recomendable que estos errores se traten de inmediato para garantizar la exactitud de los datos.</label>
         <name>Opportunity_Error_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label><!-- Opportunity Rollup Future Call Limit --></label>
+        <label>No se ejecutó porque había pocas llamadas futuras disponibles</label>
         <name>Opportunity_Rollup_Future_Call_Limit</name>
     </customLabels>
     <customLabels>
-        <label><!-- Opportunity Rollup Scheduling Error Text --></label>
+        <label>Ha llegado a su límite de trabajo programadas Apex y los totales de oportunidad no se ejecutará por las noches. Si desea que esta tarea se ejecute todas las noches, elimina una de las tareas programadas y recarga esta página.</label>
         <name>Opportunity_Rollup_Scheduling_Error_Text</name>
     </customLabels>
     <customLabels>
-        <label>Household Credit</label>
+        <label>Donante</label>
         <name>Primary_Donor_Contact_Role</name>
     </customLabels>
     <customLabels>
-        <label><!-- RollupErrorMessage --></label>
+        <label>Error/es que ocurrieron la última vez que se calcularon los totales para Oportunidades. Por favor ver el panel System Error Log para más información.</label>
         <name>RollupErrorMessage</name>
     </customLabels>
     <customLabels>
-        <label><!-- Select an existing address --></label>
+        <label>Seleccionar una dirección existente</label>
         <name>SelectExistingAddress</name>
     </customLabels>
     <customLabels>
-        <label><!-- Set Address --></label>
+        <label>Definir Dirección</label>
         <name>SetAddress</name>
     </customLabels>
     <customLabels>
-        <label><!-- UDRDescription --></label>
+        <label>Configuración que contrala los totales definidos por el usuario de la Oportunidad/Donación al Contacto, Cuenta o Familia. Cambiar estos cambiará como se comporta el Nonprofit Starter Pack. 
+
+ADVERTENCIA: Una mala configuración puede causar que los totales fallen. Por favor testear a fondo los totales definidos por el usuario antes de pasarlos a producción.</label>
         <name>UDRDescription</name>
     </customLabels>
     <customTabs>
-        <label><!-- Households Settings --></label>
+        <label>Configuración de Familias</label>
         <name>Households_Settings</name>
     </customTabs>
     <customTabs>
-        <label><!-- Opportunity Rollups --></label>
+        <label>Totales en oportunidades</label>
         <name>Opportunity_Rollups</name>
     </customTabs>
     <customTabs>
-        <label><!-- User Rollups --></label>
+        <label>Totales del usuario</label>
         <name>User_Rollups</name>
     </customTabs>
     <reportTypes>
