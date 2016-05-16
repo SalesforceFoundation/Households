@@ -258,7 +258,7 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Household Contact Roles Help Text</shortDescription>
-        <value>Create automatic Opportunity Contact Roles for Household members of the primary donor</value>
+        <value>These settings let you automatically create Opportunity Contact Roles for Household members whenever an Opportunity is created.</value>
     </labels>
     <labels>
         <fullName>Household_Member_Contact_Role</fullName>
@@ -360,8 +360,8 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>UDRDescription</shortDescription>
-        <value>Settings that control user defined rollups from the Opportunity/Donation to a Contact, Account or Household. Changing these will change how your Nonprofit Starter Pack behaves.
-
-WARNING: Misconfigured Settings may cause your rollups to fail. Please test your user-defined rollups thoroughly before deploying to production.</value>
+        <value>These settings let you create and manage user defined rollups from an Opportunity (Donation) to a Contact, Account, or Household.  After you create a User Defined Rollup, you may want to use Rollup Donations Batch in NPSP Settings | Bulk Data Processes to recalculate all rollups in your instance and ensure that your new rollup field is correctly populated. 
+ 
+WARNING: Keep in mind that rollups change how your Nonprofit Starter Pack behaves. Improperly configured settings may cause your rollups to fail. Please test your user defined rollups thoroughly before deploying to production.</value>
     </labels>
 </CustomLabels>

@@ -19,9 +19,9 @@
         <fullName>Always_Rollup_to_Primary_Contact__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>Always rollup donor statistics to the primary Contact Role, and corresponding household, on an opportunity, even if the opportunity is not from an individual (i.e. from a company, foundation, etc.)</description>
+        <description>When this option is selected, Salesforce will ALWAYS roll up donor data to the Opportunity&apos;s Primary Contact, and corresponding Household Account or record, even if the Opportunity is not from an individual (i.e., from a company, a foundation, and so on). If left unselected, and the Opportunity&apos;s Account is an organization, only the organization will receive credit for the Opportunity.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Always rollup donor statistics to the primary Contact Role, and corresponding household, on an opportunity, even if the opportunity is not from an individual (i.e. from a company, foundation, etc.)</inlineHelpText>
+        <inlineHelpText>When this option is selected, Salesforce will ALWAYS roll up donor data to the Opportunity&apos;s Primary Contact, and corresponding Household Account or record, even if the Opportunity is not from an individual (i.e., from a company, a foundation, and so on). If left unselected, and the Opportunity&apos;s Account is an organization, only the organization will receive credit for the Opportunity.</inlineHelpText>
         <label>Always Rollup to Primary Contact Role</label>
         <type>Checkbox</type>
     </fields>
@@ -113,9 +113,9 @@
         <fullName>Enable_Soft_Credit_Rollups__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>Allows you to rollup closed Opportunity totals based on Opportunity Contact Role Roles.  Soft credit rollups happen only in the nightly batch job, and not on triggers.  They can be manually run using the Rollup Donations Batch tab.</description>
+        <description>Rolls up Closed/Won Opportunity totals to Contact records based on assigned Opportunity Contact Roles. Soft credit rollups only happen in nightly batches, but you can run them manually from the Rollup Donations Batch settings.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Allows you to rollup closed Opportunity totals based on Opportunity Contact Role Roles.  Soft credit rollups happen only in the nightly batch job, and not on triggers.  They can be manually run using the Rollup Donations Batch tab.</inlineHelpText>
+        <inlineHelpText>Rolls up Closed/Won Opportunity totals to Contact records based on assigned Opportunity Contact Roles. Soft credit rollups only happen in nightly batches, but you can run them manually from the Rollup Donations Batch settings.</inlineHelpText>
         <label>Enable Soft Credit Rollups</label>
         <type>Checkbox</type>
     </fields>
@@ -135,7 +135,7 @@
         <description>Names of Opportunity Record Types to exclude from statistics when rolling up Account Opportunities.</description>
         <externalId>false</externalId>
         <inlineHelpText>Names of Opportunity Record Types to exclude from statistics when rolling up Account Opportunities.</inlineHelpText>
-        <label>Opp RecTypes Excluded for Account Rollup</label>
+        <label>Opp Rec Types Excluded for Account Rollup</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
@@ -144,9 +144,9 @@
     <fields>
         <fullName>Excluded_Account_Opp_Types__c</fullName>
         <deprecated>false</deprecated>
-        <description>Values for the Opportunity Type field to exclude from statistics when rolling up Account Opportunities.</description>
+        <description>Opportunities that have this value in the Type picklist won&apos;t be included in rollups to the Account.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Values for the Opportunity Type field to exclude from statistics when rolling up Account Opportunities.</inlineHelpText>
+        <inlineHelpText>Opportunities that have this value in the Type picklist won&apos;t be included in rollups to the Account.</inlineHelpText>
         <label>Opp Types Excluded for Account Rollup</label>
         <length>255</length>
         <required>false</required>
@@ -156,10 +156,10 @@
     <fields>
         <fullName>Excluded_Contact_Opp_Rectypes__c</fullName>
         <deprecated>false</deprecated>
-        <description>Names of Opportunity Record Types to exclude from statistics when rolling up Contact Opportunities.</description>
+        <description>Opportunities with the selected record types won&apos;t be included in rollups to the Contact. Control or Command click to select more than one record type.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Names of Opportunity Record Types to exclude from statistics when rolling up Contact Opportunities.</inlineHelpText>
-        <label>Opp RecTypes Excluded for Contact Rollup</label>
+        <inlineHelpText>Opportunities with the selected record types won&apos;t be included in rollups to the Contact. Control or Command click to select more than one record type.</inlineHelpText>
+        <label>Opp Rec Types Excluded for Contact Rollup</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
@@ -168,9 +168,9 @@
     <fields>
         <fullName>Excluded_Contact_Opp_Types__c</fullName>
         <deprecated>false</deprecated>
-        <description>Values for the Opportunity Type field to exclude from statistics when rolling up Contact Opportunities.</description>
+        <description>Opportunities that have this value in the Type picklist won&apos;t be included in rollups to the Contact.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Values for the Opportunity Type field to exclude from statistics when rolling up Contact Opportunities.</inlineHelpText>
+        <inlineHelpText>Opportunities that have this value in the Type picklist won&apos;t be included in rollups to the Contact.</inlineHelpText>
         <label>Opp Types Excluded for Contact Rollup</label>
         <length>255</length>
         <required>false</required>
@@ -203,9 +203,9 @@
         <fullName>Household_Contact_Roles_On__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>Check this field to create automatic Contact Roles for Household members of the Primary Contact</description>
+        <description>Automatically creates Contact Roles for Household members of the Opportunity&apos;s Primary Contact.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Check this field to create automatic Contact Roles for Household members of the Primary Contact</inlineHelpText>
+        <inlineHelpText>Automatically creates Contact Roles for Household members of the Opportunity&apos;s Primary Contact.</inlineHelpText>
         <label>Household Contact Roles On</label>
         <type>Checkbox</type>
     </fields>
@@ -236,9 +236,9 @@
     <fields>
         <fullName>Household_Member_Contact_Role__c</fullName>
         <deprecated>false</deprecated>
-        <description>The Role used when creating automatic Opportunity Contact Roles for Household members.</description>
+        <description>The Contact Role you want to use for Household Members.</description>
         <externalId>false</externalId>
-        <inlineHelpText>The Role used when creating automatic Opportunity Contact Roles for Household members.</inlineHelpText>
+        <inlineHelpText>The Contact Role you want to use for Household Members.</inlineHelpText>
         <label>Household Member Contact Role</label>
         <length>255</length>
         <required>false</required>
@@ -248,9 +248,9 @@
     <fields>
         <fullName>Household_OCR_Excluded_Recordtypes__c</fullName>
         <deprecated>false</deprecated>
-        <description>Contact Record Types excluded from Household Opportunity Contact Role creation</description>
+        <description>The Contact Record Types you want to exclude from automatic Household Member Contact Role creation. For example, you might want to create a &quot;child&quot; record type for children Contacts in the Household, and enter it here. Salesforce would then exclude those Contacts from receiving the Household Member Contact Role when the Opportunity is created.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Contact Record Types excluded from Household Opportunity Contact Role creation</inlineHelpText>
+        <inlineHelpText>The Contact Record Types you want to exclude from automatic Household Member Contact Role creation. For example, you might want to create a &quot;child&quot; record type for children Contacts in the Household, and enter it here. Salesforce would then exclude those Contacts from receiving the Household Member Contact Role when the Opportunity is created.</inlineHelpText>
         <label>Household OCR Excluded Record Types</label>
         <length>255</length>
         <required>false</required>
@@ -371,9 +371,9 @@
     <fields>
         <fullName>Soft_Credit_Roles__c</fullName>
         <deprecated>false</deprecated>
-        <description>List of Opportunity Contact Role roles to include in soft credit rollups.</description>
+        <description>Opportunity Contact Roles you want to include in Soft Credit rollups. Control or Command click to select multiple roles.</description>
         <externalId>false</externalId>
-        <inlineHelpText>List of Opportunity Contact Role roles to include in soft credit rollups.</inlineHelpText>
+        <inlineHelpText>Opportunity Contact Roles you want to include in Soft Credit rollups. Control or Command click to select multiple roles.</inlineHelpText>
         <label>Soft Credit Roles</label>
         <length>255</length>
         <required>false</required>
