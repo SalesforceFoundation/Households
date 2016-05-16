@@ -3,7 +3,6 @@
     <fields>
         <fullName>AverageAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>System field: do not change. Updated by automatic processes.</description>
         <externalId>false</externalId>
         <inlineHelpText>Average won Opportunity amount related to this Account.  Updated automatically.</inlineHelpText>
@@ -16,7 +15,6 @@
     </fields>
     <fields>
         <fullName>Best_Gift_Year_Total__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The sum of won Opportunity amounts in the Best Gift Year for this Account.</inlineHelpText>
         <label>Best Gift Year Total</label>
@@ -28,7 +26,6 @@
     </fields>
     <fields>
         <fullName>Best_Gift_Year__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The year in which the largest total amount of won Opportunities related to this Account occurred.  See also Best Gift Year Total.</inlineHelpText>
         <label>Best Gift Year</label>
@@ -40,7 +37,6 @@
     </fields>
     <fields>
         <fullName>FirstCloseDate__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The earliest won Opportunity (by Close Date) with amount greater than zero related to this Account.</inlineHelpText>
@@ -51,7 +47,6 @@
     </fields>
     <fields>
         <fullName>Formal_Greeting__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically.</inlineHelpText>
         <label>Formal Greeting</label>
@@ -61,7 +56,6 @@
     </fields>
     <fields>
         <fullName>HouseholdPhone__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Household Phone</label>
         <required>false</required>
@@ -70,7 +64,6 @@
     </fields>
     <fields>
         <fullName>Informal_Greeting__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically.</inlineHelpText>
         <label>Informal Greeting</label>
@@ -81,7 +74,6 @@
     <fields>
         <fullName>LargestAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The largest amount of a won Opportunity related to this Account.</inlineHelpText>
@@ -94,7 +86,6 @@
     </fields>
     <fields>
         <fullName>LastCloseDate__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The most recent Close Date of a won Opportunity related to this Account with amount greater than zero.</inlineHelpText>
@@ -106,7 +97,6 @@
     <fields>
         <fullName>LastMembershipAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The amount of the most recent (by Close Date) won Membership Opportunity (by Record Type) for this Account.</inlineHelpText>
@@ -119,7 +109,6 @@
     </fields>
     <fields>
         <fullName>LastMembershipDate__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The most recent Close Date of a won Membership Opportunity (by Record Type) related to this Account.</inlineHelpText>
@@ -130,7 +119,6 @@
     </fields>
     <fields>
         <fullName>LastMembershipLevel__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>Membership level from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.&quot;</inlineHelpText>
@@ -143,7 +131,6 @@
     </fields>
     <fields>
         <fullName>LastMembershipOrigin__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>Membership &quot;origin&quot; (new, renew...) from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.</inlineHelpText>
@@ -157,7 +144,6 @@
     <fields>
         <fullName>LastOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The amount of the most recent won Opportunity (by Close Date) with amount greater than zero related to this Account.</inlineHelpText>
@@ -170,7 +156,6 @@
     </fields>
     <fields>
         <fullName>MembershipEndDate__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>Membership end date from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.</inlineHelpText>
@@ -181,7 +166,6 @@
     </fields>
     <fields>
         <fullName>MembershipJoinDate__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>Membership start date from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.</inlineHelpText>
@@ -193,7 +177,6 @@
     <fields>
         <fullName>NumberOfClosedOpps__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total number of won Opportunities  related to this Account.</inlineHelpText>
@@ -208,7 +191,6 @@
     <fields>
         <fullName>NumberOfMembershipOpps__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total number of won Membership Opportunities (Record Type) related to this Account.</inlineHelpText>
@@ -223,7 +205,6 @@
     <fields>
         <fullName>OppAmount2YearsAgo__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types and FY/CY in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total amount of won Opportunities related to this Account, closed within the year or fiscal year preceding last year (see Household Settings).</inlineHelpText>
@@ -237,7 +218,6 @@
     <fields>
         <fullName>OppAmountLastNDays__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types and FY/CY in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total amount of won Opportunities related to this Account, closed in the last number of days defined in Household Settings.</inlineHelpText>
@@ -251,7 +231,6 @@
     <fields>
         <fullName>OppAmountLastYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types and FY/CY in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total amount of won Opportunities related to this Account, closed in the current year or fiscal year.</inlineHelpText>
@@ -265,7 +244,6 @@
     <fields>
         <fullName>OppAmountThisYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types and FY/CY in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total amount of won Opportunities related to this Account, closed in the current year or fiscal year.</inlineHelpText>
@@ -279,7 +257,6 @@
     <fields>
         <fullName>OppsClosed2YearsAgo__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types and FY/CY in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total number of won Opportunities with amount greater than zero related to this Account, closed within the year or fiscal year preceding last year.</inlineHelpText>
@@ -294,7 +271,6 @@
     <fields>
         <fullName>OppsClosedLastNDays__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types and FY/CY in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total amount of won Opportunities related to this Account, closed in the last number of days defined in Household Settings.</inlineHelpText>
@@ -309,7 +285,6 @@
     <fields>
         <fullName>OppsClosedLastYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types and FY/CY in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total number of won Opportunities with amount greater than zero related to this Account, closed in the previous year or fiscal year (see Household Settings).</inlineHelpText>
@@ -324,7 +299,6 @@
     <fields>
         <fullName>OppsClosedThisYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types and FY/CY in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total number of won Opportunities with amount greater than zero related to this Account, closed in the current year or fiscal year (see Household Settings).</inlineHelpText>
@@ -338,7 +312,6 @@
     </fields>
     <fields>
         <fullName>SYSTEM_CUSTOM_NAMING__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>For Household Accounts, specifies which name related fields should not be automatically populated by the Householding code.</inlineHelpText>
         <label>_SYSTEM: CUSTOM NAMING</label>
@@ -364,7 +337,6 @@
     <fields>
         <fullName>SmallestAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The smallest non-zero amount of a won Opportunity related to this Account.</inlineHelpText>
@@ -378,7 +350,6 @@
     <fields>
         <fullName>TotalMembershipOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total amount of won Membership Opportunities (Record Type) related to this Account.</inlineHelpText>
@@ -392,7 +363,6 @@
     <fields>
         <fullName>TotalOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not manually update. Updated by automatic processes. See excluded Record Types in Household Settings.</description>
         <externalId>false</externalId>
         <inlineHelpText>The sum of amounts of all won Opportunities related to this Account.</inlineHelpText>
