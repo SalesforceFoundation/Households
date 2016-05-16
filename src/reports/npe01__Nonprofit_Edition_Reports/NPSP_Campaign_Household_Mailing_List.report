@@ -27,6 +27,15 @@
     <columns>
         <field>ADDRESS2_COUNTRY</field>
     </columns>
+    <columns>
+        <field>Contact.Formula_HouseholdMailingAddress__c</field>
+    </columns>
+    <columns>
+        <field>Account.Formal_Greeting__c</field>
+    </columns>
+    <columns>
+        <field>Account.Informal_Greeting__c</field>
+    </columns>
     <description>Lists addresses for a mailing campaign, avoiding household duplicates - RUN FROM BUTTON IN CAMPAIGN</description>
     <filter>
         <criteriaItems>
@@ -40,7 +49,7 @@
     <name>NPSP Campaign Household Mailing List</name>
     <params>
         <name>scopeid</name>
-        <value>701800000009kvP</value>
+        <value>000000000000000</value>
     </params>
     <params>
         <name>co</name>
