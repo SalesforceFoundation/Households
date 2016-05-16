@@ -19,9 +19,9 @@
         <fullName>Always_Rollup_to_Primary_Contact__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
-        <description>When this option is selected, Salesforce will ALWAYS roll up donor data to the Opportunity&apos;s Primary Contact, and corresponding Household Account or record, even if the Opportunity is not from an individual (i.e., from a company, a foundation, and so on). If left unselected, and the Opportunity&apos;s Account is an organization, only the organization will receive credit for the Opportunity.</description>
+        <description>When selected, Salesforce will ALWAYS roll up donor data to the Opportunity&apos;s Primary Contact, and corresponding Household Account or record, even if the Opportunity is not from an individual. If left unselected, only the organization will receive credit.</description>
         <externalId>false</externalId>
-        <inlineHelpText>When this option is selected, Salesforce will ALWAYS roll up donor data to the Opportunity&apos;s Primary Contact, and corresponding Household Account or record, even if the Opportunity is not from an individual (i.e., from a company, a foundation, and so on). If left unselected, and the Opportunity&apos;s Account is an organization, only the organization will receive credit for the Opportunity.</inlineHelpText>
+        <inlineHelpText>When selected, Salesforce will ALWAYS roll up donor data to the Opportunity&apos;s Primary Contact, and corresponding Household Account or record, even if the Opportunity is not from an individual. If left unselected, only the organization will receive credit.</inlineHelpText>
         <label>Always Rollup to Primary Contact Role</label>
         <type>Checkbox</type>
     </fields>
@@ -135,7 +135,7 @@
         <description>Names of Opportunity Record Types to exclude from statistics when rolling up Account Opportunities.</description>
         <externalId>false</externalId>
         <inlineHelpText>Names of Opportunity Record Types to exclude from statistics when rolling up Account Opportunities.</inlineHelpText>
-        <label>Opp Rec Types Excluded for Account Rollup</label>
+        <label>Opp RecTypes Excluded for Account Rollup</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
@@ -159,7 +159,7 @@
         <description>Opportunities with the selected record types won&apos;t be included in rollups to the Contact. Control or Command click to select more than one record type.</description>
         <externalId>false</externalId>
         <inlineHelpText>Opportunities with the selected record types won&apos;t be included in rollups to the Contact. Control or Command click to select more than one record type.</inlineHelpText>
-        <label>Opp Rec Types Excluded for Contact Rollup</label>
+        <label>Opp RecTypes Excluded for Contact Rollup</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
@@ -248,9 +248,9 @@
     <fields>
         <fullName>Household_OCR_Excluded_Recordtypes__c</fullName>
         <deprecated>false</deprecated>
-        <description>The Contact Record Types you want to exclude from automatic Household Member Contact Role creation. For example, you might want to create a &quot;child&quot; record type for children Contacts in the Household, and enter it here. Salesforce would then exclude those Contacts from receiving the Household Member Contact Role when the Opportunity is created.</description>
+        <description>The Contact Record Types you want to exclude from automatic Household Member Contact Role creation. Salesforce would then exclude those Contacts from receiving the Household Member Contact Role when the Opportunity is created.</description>
         <externalId>false</externalId>
-        <inlineHelpText>The Contact Record Types you want to exclude from automatic Household Member Contact Role creation. For example, you might want to create a &quot;child&quot; record type for children Contacts in the Household, and enter it here. Salesforce would then exclude those Contacts from receiving the Household Member Contact Role when the Opportunity is created.</inlineHelpText>
+        <inlineHelpText>The Contact Record Types you want to exclude from automatic Household Member Contact Role creation. Salesforce would then exclude those Contacts from receiving the Household Member Contact Role when the Opportunity is created.</inlineHelpText>
         <label>Household OCR Excluded Record Types</label>
         <length>255</length>
         <required>false</required>
