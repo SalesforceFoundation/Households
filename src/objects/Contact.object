@@ -444,7 +444,7 @@ Household__r.OppAmountThisYear__c)</formula>
     <fields>
         <fullName>Soft_Credit_Total__c</fullName>
         <externalId>false</externalId>
-        <inlineHelpText>Total amount in soft credits for this Contact&apos;s lifetime. Defined in the NPSP Settings tab.</inlineHelpText>
+        <inlineHelpText>Total amount in soft credits for this Contact&apos;s lifetime. Defined in the Household Settings tab.</inlineHelpText>
         <label>Soft Credit Total</label>
         <precision>18</precision>
         <required>false</required>
