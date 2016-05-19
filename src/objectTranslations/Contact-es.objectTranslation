@@ -196,15 +196,15 @@
         <name>SystemHouseholdProcessor__c</name>
         <picklistValues>
             <masterLabel>All Individual Contacts</masterLabel>
-            <translation>Todos los contactos individuales</translation>
+            <translation><!-- All Individual Contacts --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>All New or Edited Contacts</masterLabel>
-            <translation>Todos los contactos nuevos o modificados</translation>
+            <translation><!-- All New or Edited Contacts --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>No Contacts</masterLabel>
-            <translation>No contactos</translation>
+            <translation><!-- No Contacts --></translation>
         </picklistValues>
     </fields>
     <fields>

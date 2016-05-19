@@ -210,7 +210,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Name</masterLabel>
-            <translation>Nombre</translation>
+            <translation><!-- Name --></translation>
         </picklistValues>
     </fields>
     <fields>
