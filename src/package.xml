@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Households</fullName>
-    <packageType>UNMANAGED</packageType>
     <types>
         <members>BATCH_HouseholdNaming</members>
         <members>BATCH_HouseholdNaming_TEST</members>
@@ -29,7 +28,6 @@
         <members>BTNCampaignHHDedupe</members>
         <members>BTNContactAddressCopy</members>
         <members>BTNHouseholdAddressCopy</members>
-        <members>CustomLabels</members>
         <members>HouseholdTransactionHistory</members>
         <members>householdsSettings</members>
         <members>manageHousehold</members>
@@ -252,29 +250,40 @@
         <name>CustomLabel</name>
     </types>
     <types>
-        <members>CustomLabels</members>
-        <name>CustomLabels</name>
+        <name>CustomLabel</name>
     </types>
     <types>
+        <members>Account</members>
+        <members>Campaign</members>
+        <members>Contact</members>
         <members>Household__c</members>
         <members>Households_Settings__c</members>
+        <members>Opportunity</members>
         <members>Opportunity_Rollup_Error__c</members>
         <members>User_Rollup_Field_Settings__c</members>
         <name>CustomObject</name>
     </types>
     <types>
         <members>Account-es</members>
+        <members>Account-fr</members>
         <members>Campaign-es</members>
+        <members>Campaign-fr</members>
         <members>Contact-es</members>
+        <members>Contact-fr</members>
         <members>Household__c-en_US</members>
         <members>Household__c-es</members>
+        <members>Household__c-fr</members>
         <members>Households_Settings__c-en_US</members>
         <members>Households_Settings__c-es</members>
+        <members>Households_Settings__c-fr</members>
         <members>Opportunity-es</members>
+        <members>Opportunity-fr</members>
         <members>Opportunity_Rollup_Error__c-en_US</members>
         <members>Opportunity_Rollup_Error__c-es</members>
+        <members>Opportunity_Rollup_Error__c-fr</members>
         <members>User_Rollup_Field_Settings__c-en_US</members>
         <members>User_Rollup_Field_Settings__c-es</members>
+        <members>User_Rollup_Field_Settings__c-fr</members>
         <name>CustomObjectTranslation</name>
     </types>
     <types>
@@ -299,6 +308,7 @@
     <types>
         <members>Household_Reports</members>
         <members>Household_Reports/Households_and_Donations</members>
+        <members>npe01__Nonprofit_Edition_Reports</members>
         <members>npe01__Nonprofit_Edition_Reports/NPSP_Campaign_Household_Mailing_List</members>
         <name>Report</name>
     </types>
@@ -313,6 +323,7 @@
     </types>
     <types>
         <members>es</members>
+        <members>fr</members>
         <name>Translations</name>
     </types>
     <types>
@@ -322,6 +333,10 @@
         <members>Household__c.Copy_Household_Address_to_Contacts</members>
         <members>Household__c.New_Household_Member</members>
         <name>WebLink</name>
+    </types>
+    <types>
+        <members>Contact</members>
+        <name>Workflow</name>
     </types>
     <types>
         <members>Contact.ContactPreferredPhone_WithHousehold</members>
