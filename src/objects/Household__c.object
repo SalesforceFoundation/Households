@@ -5,6 +5,10 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>Clone</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -17,11 +21,19 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -32,193 +44,238 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <deprecated>false</deprecated>
     <description>Physical mailing address for grouping contacts</description>
     <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
     <fieldSets>
         <fullName>Manage_Household_Custom</fullName>
         <availableFields>
-            <field>MembershipJoinDate__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>OwnerId</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>Name</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>LastModifiedDate</field>
+            <field>Always_Anonymous__c</field>
+            <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
             <field>AverageAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
             <field>Best_Gift_Year_Total__c</field>
+            <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
             <field>Best_Gift_Year__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>FirstCloseDate__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>Formal_Greeting__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>Formula_MailingAddress__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>Informal_Greeting__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>LargestAmount__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>LastCloseDate__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>LastMembershipAmount__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>LastMembershipDate__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>LastMembershipLevel__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>LastMembershipOrigin__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>LastOppAmount__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>MailingCity__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>MailingCountry__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>MailingPostalCode__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>MailingState__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>MailingStreet__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>MembershipEndDate__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>SystemModstamp</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>Membership_Span__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>Membership_Status__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>NumberOfClosedOpps__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>NumberOfMembershipOpps__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>OppAmount2YearsAgo__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>OppAmountLastNDays__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>OppAmountLastYear__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>OppAmountThisYear__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>OppsClosed2YearsAgo__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>OppsClosedLastNDays__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>OppsClosedLastYear__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>OppsClosedThisYear__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>SYSTEM_CUSTOM_NAMING__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>SmallestAmount__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>TotalMembershipOppAmount__c</field>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>TotalOppAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
             <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>CreatedDate</field>
+            <field>FirstCloseDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Formal_Greeting__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Formula_MailingAddress__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>HouseholdEmail__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Informal_Greeting__c</field>
+            <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
             <field>LastActivityDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastCloseDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastMembershipDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastMembershipLevel__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastMembershipOrigin__c</field>
+            <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
             <field>LastModifiedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastOppAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>MailingCity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>MailingCountry__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>MailingPostalCode__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>MailingState__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>MailingStreet__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>MembershipJoinDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Membership_Span__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Membership_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>NumberOfClosedOpps__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>NumberOfMembershipOpps__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OppAmount2YearsAgo__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OppAmountLastNDays__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OppAmountLastYear__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OppAmountThisYear__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OppsClosed2YearsAgo__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OppsClosedLastNDays__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OppsClosedLastYear__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OppsClosedThisYear__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OwnerId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SYSTEM_CUSTOM_NAMING__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SmallestAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SystemModstamp</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>TotalMembershipOppAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>TotalOppAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <description>Fields displayed on manage household page</description>
@@ -256,30 +313,29 @@
     </fieldSets>
     <fields>
         <fullName>Addressee__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Addressee</label>
         <length>255</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>Always_Anonymous__c</fullName>
         <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
         <description>Used to set the Household name and other fields using anonymous information.</description>
         <externalId>false</externalId>
         <inlineHelpText>Used to set the Household name and other fields using anonymous information.</inlineHelpText>
         <label>Always Anonymous</label>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>AverageAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Average amount of won Opportunities related to this Household by a related Contact with primary Opportunity Contact Role.</inlineHelpText>
@@ -288,11 +344,11 @@
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
     <fields>
         <fullName>Best_Gift_Year_Total__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The sum of won Opportunity amounts in the Best Gift Year for this Household via Contacts with primary Opportunity Contact Role.  See also Best Gift Year.</inlineHelpText>
         <label>Best Gift Year Total</label>
@@ -300,45 +356,45 @@
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
     <fields>
         <fullName>Best_Gift_Year__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The year in which the largest total amount of won Opportunities related to this Household via Contacts with primary Opportunity Contact Role occurred.  See also Best Gift Year Total.</inlineHelpText>
         <label>Best Gift Year</label>
         <length>4</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>FirstCloseDate__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The earliest Close Date of a won Opportunity related to this Household via Contacts with primary Contact Role.</inlineHelpText>
         <label>First Gift Date</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
     <fields>
         <fullName>Formal_Greeting__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Uses fields of non-excluded, ordered related Contacts. Generated automatically.</inlineHelpText>
         <label>Formal Greeting</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>TextArea</type>
     </fields>
     <fields>
         <fullName>Formula_MailingAddress__c</fullName>
-        <deprecated>false</deprecated>
         <description>Formula: Concatenation of other Mailing fields for this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed.</description>
         <externalId>false</externalId>
         <formula>MailingStreet__c &amp; BR() &amp;
@@ -349,59 +405,59 @@ MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot
         <label>Mailing Address</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>HouseholdEmail__c</fullName>
-        <deprecated>false</deprecated>
         <description>Set by the original Contact which created this Household. Can be edited in Household, but does not update Contact.</description>
         <externalId>false</externalId>
         <inlineHelpText>Set by the original Contact which created this Household. Can be edited in Household, but does not update Contact.</inlineHelpText>
         <label>Household Email</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Email</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>HouseholdPhone__c</fullName>
-        <deprecated>false</deprecated>
         <description>Set by the original Contact which created this Household. Can be edited in Household, but does not update Contact.</description>
         <externalId>false</externalId>
         <inlineHelpText>Set by the original Contact which created this Household. Can be edited in Household, but does not update Contact.</inlineHelpText>
         <label>Household Phone</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Phone</type>
     </fields>
     <fields>
         <fullName>Household_ID__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Household ID</label>
         <precision>7</precision>
         <required>false</required>
         <scale>0</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>Informal_Greeting__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Uses fields of non-excluded, ordered related Contacts.  Generated automatically.</inlineHelpText>
         <label>Informal Greeting</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>TextArea</type>
     </fields>
     <fields>
         <fullName>LargestAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The largest won Opportunity amount for this Household via related Contacts with primary Opportunity Contact Role.</inlineHelpText>
@@ -410,23 +466,23 @@ MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
     <fields>
         <fullName>LastCloseDate__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Most recent Close Date of a won Opportunity for this Household via related Contacts with primary Contact Role.</inlineHelpText>
         <label>Last Gift Date</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
     <fields>
         <fullName>LastMembershipAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The most recent won Membership Opportunity (Record Type) amount for this Household via related Contacts with primary Opportunity Contact Role.</inlineHelpText>
@@ -435,22 +491,22 @@ MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
     <fields>
         <fullName>LastMembershipDate__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The most recent Close Date of a won Membership Opportunity for this Household via related Contacts with primary Opportunity Contact Role.</inlineHelpText>
         <label>Last Membership Date</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
     <fields>
         <fullName>LastMembershipLevel__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The Membership Level of the most recent won Membership Opportunity for this Household via related Contacts with primary Opportunity Contact Role.</inlineHelpText>
@@ -458,12 +514,12 @@ MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot
         <length>255</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>LastMembershipOrigin__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The Origin (new, renew...) of the most recent won Membership Opportunity for this Household via related Contacts with primary Opportunity Contact Role.</inlineHelpText>
@@ -471,13 +527,13 @@ MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot
         <length>255</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>LastOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The most recent won Opportunity amount for this Household via related Contacts with primary Opportunity Contact Role.</inlineHelpText>
@@ -486,11 +542,11 @@ MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
     <fields>
         <fullName>MailingCity__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed.</inlineHelpText>
@@ -498,12 +554,12 @@ MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot
         <length>255</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>MailingCountry__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed.</inlineHelpText>
@@ -511,12 +567,12 @@ MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot
         <length>255</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>MailingPostalCode__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed.</inlineHelpText>
@@ -524,12 +580,12 @@ MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot
         <length>10</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>MailingState__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed.</inlineHelpText>
@@ -537,12 +593,12 @@ MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot
         <length>255</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>MailingStreet__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed.</inlineHelpText>
@@ -550,34 +606,34 @@ MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot
         <length>255</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>MembershipEndDate__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The Membership End Date of the most recent won Membership Opportunity for his Household via related Contacts with primary Opportunity Contact Role.</inlineHelpText>
         <label>Membership End Date</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
     <fields>
         <fullName>MembershipJoinDate__c</fullName>
-        <deprecated>false</deprecated>
         <description>Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The earliest Membership Join Date of the oldest Membership Opportunity (Close Date, Record Type) for his Household via related Contacts with primary Opportunity Contact Role.</inlineHelpText>
         <label>Membership Join Date</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
     <fields>
         <fullName>Membership_Span__c</fullName>
-        <deprecated>false</deprecated>
         <description>Formula: The number of years for which this Household has had a Member.</description>
         <externalId>false</externalId>
         <formula>year(MembershipEndDate__c ) - year(MembershipJoinDate__c)</formula>
@@ -588,12 +644,12 @@ MailingCity__c &amp; IF(LEN(MailingCity__c)  &gt; 0, &quot;, &quot;, &quot;&quot
         <required>false</required>
         <scale>0</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>Membership_Status__c</fullName>
-        <deprecated>false</deprecated>
         <description>Grace period defaults to 30 days. This can be adjusted in the Households Settings tab.</description>
         <externalId>false</externalId>
         <formula>if ( MembershipEndDate__c  &lt;today(), if (MembershipEndDate__c  &gt; ( TODAY() - 
@@ -603,13 +659,13 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <label>Membership Status</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>NumberOfClosedOpps__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>See Household Settings for excluded Record Types and FY/CY.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total number of gifts related to this Household by Contact and primary Opportunity Contact Role.</inlineHelpText>
@@ -618,13 +674,13 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <required>false</required>
         <scale>0</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>NumberOfMembershipOpps__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>See Household Settings for excluded Record Types and FY/CY.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total amount of won Membership Opportunities (Record Type) related to this Household by Contact and primary Opportunity Contact Role.</inlineHelpText>
@@ -633,13 +689,13 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <required>false</required>
         <scale>0</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>OppAmount2YearsAgo__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>See Household Settings for excluded Record Types and FY/CY.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Total Gifts Two Years Ago on Household by Contact and primary Opportunity Contact Role.</inlineHelpText>
@@ -648,12 +704,12 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
     <fields>
         <fullName>OppAmountLastNDays__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>See Household Settings for excluded Record Types and FY/CY.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total amount of won Opportunities related to this Household, closed in the last number of days defined in Household Settings, related by Contact and primary Opportunity Contact Role.</inlineHelpText>
@@ -662,12 +718,12 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
     <fields>
         <fullName>OppAmountLastYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>See Household Settings for excluded Record Types and FY/CY.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Total Gifts Last Year on Household by Contact and primary Opportunity Contact Role.</inlineHelpText>
@@ -676,12 +732,12 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
     <fields>
         <fullName>OppAmountThisYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>See Household Settings for excluded Record Types and FY/CY.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>Total Gifts This Year on Household by Contact and primary Opportunity Contact Role.</inlineHelpText>
@@ -690,12 +746,12 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
     <fields>
         <fullName>OppsClosed2YearsAgo__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>See Household Settings for excluded Record Types and FY/CY.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The number of won Opportunities with Close Date in the last 2 years related to this Household via related Contacts with primary Opportunity Contact Role.</inlineHelpText>
@@ -704,13 +760,13 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <required>false</required>
         <scale>0</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>OppsClosedLastNDays__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>See Household Settings for excluded Record Types and FY/CY.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The number of won Opportunities with Close Date in the last N days (Household Settings) related to this Household via related Contacts with primary Opportunity Contact Role.</inlineHelpText>
@@ -719,13 +775,13 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <required>false</required>
         <scale>0</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>OppsClosedLastYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>See Household Settings for excluded Record Types and FY/CY.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The number of won Opportunities with Close Date in the last year related to this Household via related Contacts with primary Contact Role.</inlineHelpText>
@@ -734,13 +790,13 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <required>false</required>
         <scale>0</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>OppsClosedThisYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>See Household Settings for excluded Record Types and FY/CY.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The number of won Opportunities with Close Date this year related to this Household via related Contacts with primary Opportunity Contact Role.</inlineHelpText>
@@ -749,12 +805,12 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <required>false</required>
         <scale>0</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
     </fields>
     <fields>
         <fullName>SYSTEM_CUSTOM_NAMING__c</fullName>
-        <deprecated>false</deprecated>
         <description>Hidden system field: do not change. Updated by automatic processes.</description>
         <externalId>false</externalId>
         <inlineHelpText>Name, Formal Greeting, or Informal Greeting</inlineHelpText>
@@ -775,13 +831,13 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
             <sorted>false</sorted>
         </picklist>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>SmallestAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>See Household Settings for excluded Record Types and FY/CY.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The smallest amount of a won Opportunity related to this Household by Contact and primary Opportunity Contact Role.</inlineHelpText>
@@ -790,12 +846,12 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
     <fields>
         <fullName>TotalMembershipOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>See Household Settings for excluded Record Types and FY/CY.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The total amount of won Membership Opportunities (Record Type) related to this Household by Contact and primary Opportunity Contact Role.</inlineHelpText>
@@ -804,12 +860,12 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
     <fields>
         <fullName>TotalOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <description>See Household Settings for excluded Record Types and FY/CY.  Do not update, updated by automatic process.</description>
         <externalId>false</externalId>
         <inlineHelpText>The sum of won Opportunity Amounts related to this Household by Contact and primary Opportunity Contact Role.</inlineHelpText>
@@ -818,6 +874,7 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
     <label>Household</label>

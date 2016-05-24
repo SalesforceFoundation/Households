@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label><!-- Average Gift --></label>
+        <help><!-- The average amount of all won Opportunities related to this Contact by a primary Opportunity Contact Role. --></help>
+        <label>Donación promedio</label>
         <name>AverageAmount__c</name>
     </fields>
     <fields>
-        <label><!-- Best Gift Year Total --></label>
+        <help><!-- The sum of won Opportunity amounts in the Best Gift Year. --></help>
+        <label>Total en año de mejor donación</label>
         <name>Best_Gift_Year_Total__c</name>
     </fields>
     <fields>
-        <label><!-- Best Gift Year --></label>
+        <help><!-- The year of the largest total amount of won Opportunities related to this Contact by primary Contact Role.  See also Best Gift Year Total. --></help>
+        <label>Año de mejor donación</label>
         <name>Best_Gift_Year__c</name>
     </fields>
     <fields>
-        <label><!-- First Gift Date --></label>
+        <help><!-- The oldest Close Date of a won Opportunity with amount greater than zero related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Fecha de primera donación</label>
         <name>FirstCloseDate__c</name>
     </fields>
     <fields>
+        <help><!-- Formula: Clone of the Household Mailing address (also a Formula) --></help>
         <label>Dirección del Hogar</label>
         <name>Formula_HouseholdMailingAddress__c</name>
     </fields>
     <fields>
+        <help><!-- Formula: Simple formula of Household Phone field. --></help>
         <label>Teléfono del Hogar</label>
         <name>Formula_HouseholdPhone__c</name>
     </fields>
     <fields>
-        <label><!-- Household Naming Order --></label>
+        <help><!-- Determines the order in which Contact names are used to generate Household name. --></help>
+        <label>Orden en el nombre de la familia</label>
         <name>Household_Naming_Order__c</name>
     </fields>
     <fields>
@@ -34,48 +41,57 @@
         <relationshipLabel>Miembros del Hogar</relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Largest Gift --></label>
+        <help><!-- The largest amount of a won Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Monto de la mayor donación</label>
         <name>LargestAmount__c</name>
     </fields>
     <fields>
-        <label><!-- Last Household Gift Date --></label>
+        <label>Fecha de última donación de la familia</label>
         <name>LastCloseDateHH__c</name>
     </fields>
     <fields>
-        <label><!-- Last Gift Date --></label>
+        <help><!-- The close date of the most recent won Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Fecha de última donación</label>
         <name>LastCloseDate__c</name>
     </fields>
     <fields>
-        <label><!-- Last Membership Amount --></label>
+        <help><!-- The amount of the most recent (by Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Monto de última membresía</label>
         <name>LastMembershipAmount__c</name>
     </fields>
     <fields>
-        <label><!-- Last Membership Date --></label>
+        <help><!-- The most recent Close Date of a won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Fecha de última membresía</label>
         <name>LastMembershipDate__c</name>
     </fields>
     <fields>
-        <label><!-- Last Membership Level --></label>
+        <help><!-- The level of the most recent (by Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Nivel de última membresía</label>
         <name>LastMembershipLevel__c</name>
     </fields>
     <fields>
-        <label><!-- Last Membership Origin --></label>
+        <help><!-- The origin (new, renewal, reacquire...) of the most recent (Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Origen de última membresía</label>
         <name>LastMembershipOrigin__c</name>
     </fields>
     <fields>
-        <label><!-- Last Gift Amount --></label>
+        <help><!-- The amount of the most recent won Opportunity by Close Date related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Monto de última donación</label>
         <name>LastOppAmount__c</name>
     </fields>
     <fields>
-        <label><!-- Membership End Date --></label>
+        <help><!-- The Membership End Date of the most recent (Close Date) Membership Opportunity (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Fecha de fin de membresía</label>
         <name>MembershipEndDate__c</name>
     </fields>
     <fields>
-        <label><!-- Membership Join Date --></label>
+        <help><!-- The Join Date of the oldest (Close Date) Membership Opportunity (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Fecha de inicio de membresía</label>
         <name>MembershipJoinDate__c</name>
     </fields>
     <fields>
-        <help><!-- Determines which household names this contact is NOT included as part of. --></help>
-        <label><!-- Naming Exclusions --></label>
+        <help>Determina en cuales saludos de la familia el contacto NO esta incluido.</help>
+        <label>Exclusión en el nombres de familia</label>
         <name>Naming_Exclusions__c</name>
         <picklistValues>
             <masterLabel>Household__c.Formal_Greeting__c</masterLabel>
@@ -91,75 +107,88 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Total Number of Gifts --></label>
+        <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Cantidad de donaciones</label>
         <name>NumberOfClosedOpps__c</name>
     </fields>
     <fields>
-        <label><!-- Number of Memberships --></label>
+        <help><!-- The number of won Membership Opportunities (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Cantidad de membresías</label>
         <name>NumberOfMembershipOpps__c</name>
     </fields>
     <fields>
-        <label><!-- Total Gifts Two Years Ago --></label>
+        <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed two years ago. --></help>
+        <label>Total donado hace dos años</label>
         <name>OppAmount2YearsAgo__c</name>
     </fields>
     <fields>
-        <label><!-- Total Gifts Last N Days --></label>
+        <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed in the last number of days defined in Household Settings. --></help>
+        <label>Total donado últimos N días</label>
         <name>OppAmountLastNDays__c</name>
     </fields>
     <fields>
-        <label><!-- Total Household Gifts Last Year --></label>
+        <help><!-- Formula:  Total Gifts Last Year on related Household. --></help>
+        <label>Total donado por familia el año pasado</label>
         <name>OppAmountLastYearHH__c</name>
     </fields>
     <fields>
-        <label><!-- Total Gifts Last Year --></label>
+        <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed last year. --></help>
+        <label>Total donando el año pasado</label>
         <name>OppAmountLastYear__c</name>
     </fields>
     <fields>
-        <label><!-- Total Household Gifts This Year --></label>
+        <help><!-- Formula:  Total Gifts This Year on related Household. --></help>
+        <label>Total donado por familia este año</label>
         <name>OppAmountThisYearHH__c</name>
     </fields>
     <fields>
-        <label><!-- Total Gifts This Year --></label>
+        <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed this year. --></help>
+        <label>Total donado este año</label>
         <name>OppAmountThisYear__c</name>
     </fields>
     <fields>
-        <label><!-- Number of Gifts Two Years Ago --></label>
+        <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed two years ago. --></help>
+        <label>Cantidad de donaciones hace dos años</label>
         <name>OppsClosed2YearsAgo__c</name>
     </fields>
     <fields>
-        <label><!-- Number of Gifts Last N Days --></label>
+        <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed in the last number of days defined in Household Settings. --></help>
+        <label>Cantidad de donaciones últimos N días</label>
         <name>OppsClosedLastNDays__c</name>
     </fields>
     <fields>
-        <label><!-- Number of Gifts Last Year --></label>
+        <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed last year. --></help>
+        <label>Cantidad de donaciones el año pasado</label>
         <name>OppsClosedLastYear__c</name>
     </fields>
     <fields>
-        <label><!-- Number of Gifts This Year --></label>
+        <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed this year. --></help>
+        <label>Cantidad de donaciones este año</label>
         <name>OppsClosedThisYear__c</name>
     </fields>
     <fields>
-        <label><!-- Smallest Gift --></label>
+        <help><!-- The smallest amount of a won Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Monto de la menor donación</label>
         <name>SmallestAmount__c</name>
     </fields>
     <fields>
-        <help><!-- Total soft credit amount last year. --></help>
-        <label><!-- Soft Credit Last Year --></label>
+        <help>Monto total de crédito blando el año pasado</help>
+        <label>Crédito blando el año pasado</label>
         <name>Soft_Credit_Last_Year__c</name>
     </fields>
     <fields>
-        <help><!-- Total soft credit amount this year --></help>
-        <label><!-- Soft Credit This Year --></label>
+        <help>Monto total de crédito blando este año</help>
+        <label>Crédito blando este año</label>
         <name>Soft_Credit_This_Year__c</name>
     </fields>
     <fields>
-        <help><!-- Total amount in soft credits for this Contact&apos;s lifetime. Defined in the Household Settings tab. --></help>
-        <label><!-- Soft Credit Total --></label>
+        <help>Monto total de crédito blando del contacto. Se define en la configuración del NPSP.</help>
+        <label>Total crédito blando</label>
         <name>Soft_Credit_Total__c</name>
     </fields>
     <fields>
-        <help><!-- Total soft credit amount two years ago. --></help>
-        <label><!-- Soft Credit Two Years Ago --></label>
+        <help>Monto total de crédito blando hace dos años</help>
+        <label>Crédito blando hace dos años</label>
         <name>Soft_Credit_Two_Years_Ago__c</name>
     </fields>
     <fields>
@@ -179,19 +208,26 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Total Membership Amount --></label>
+        <help><!-- The total amount of won Membership Opportunities (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Monto total de membresías</label>
         <name>TotalMembershipOppAmount__c</name>
     </fields>
     <fields>
-        <label><!-- Total Gifts --></label>
+        <help><!-- The sum of won Opportunity Amounts related to this Contact by primary Opportunity Contact Role. --></help>
+        <label>Total donado</label>
         <name>TotalOppAmount__c</name>
     </fields>
     <fields>
-        <label><!-- Total Household Gifts --></label>
+        <help><!-- Formula:  Total Gifts on related Household. --></help>
+        <label>Total donado por la familia</label>
         <name>Total_Household_Gifts__c</name>
     </fields>
     <webLinks>
-        <label><!-- Copy_Address_to_Household --></label>
+        <label>Copiar dirección en la familia</label>
         <name>Copy_Address_to_Household</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Household --></label>
+        <name>Household</name>
     </webLinks>
 </CustomObjectTranslation>
