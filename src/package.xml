@@ -264,23 +264,31 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>Account-de</members>
         <members>Account-es</members>
         <members>Account-fr</members>
+        <members>Campaign-de</members>
         <members>Campaign-es</members>
         <members>Campaign-fr</members>
+        <members>Contact-de</members>
         <members>Contact-es</members>
         <members>Contact-fr</members>
+        <members>Household__c-de</members>
         <members>Household__c-en_US</members>
         <members>Household__c-es</members>
         <members>Household__c-fr</members>
+        <members>Households_Settings__c-de</members>
         <members>Households_Settings__c-en_US</members>
         <members>Households_Settings__c-es</members>
         <members>Households_Settings__c-fr</members>
+        <members>Opportunity-de</members>
         <members>Opportunity-es</members>
         <members>Opportunity-fr</members>
+        <members>Opportunity_Rollup_Error__c-de</members>
         <members>Opportunity_Rollup_Error__c-en_US</members>
         <members>Opportunity_Rollup_Error__c-es</members>
         <members>Opportunity_Rollup_Error__c-fr</members>
+        <members>User_Rollup_Field_Settings__c-de</members>
         <members>User_Rollup_Field_Settings__c-en_US</members>
         <members>User_Rollup_Field_Settings__c-es</members>
         <members>User_Rollup_Field_Settings__c-fr</members>
@@ -321,6 +329,7 @@
         <name>StaticResource</name>
     </types>
     <types>
+        <members>de</members>
         <members>es</members>
         <members>fr</members>
         <name>Translations</name>
