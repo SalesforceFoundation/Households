@@ -114,11 +114,6 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>LastActivityDate</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
             <field>LastCloseDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
