@@ -248,8 +248,4 @@
         <label>個人に世帯住所をコピー</label>
         <name>Copy_Household_Address_to_Contacts</name>
     </webLinks>
-    <webLinks>
-        <label>新しい世帯メンバー</label>
-        <name>New_Household_Member</name>
-    </webLinks>
 </CustomObjectTranslation>
