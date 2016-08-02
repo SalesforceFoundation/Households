@@ -348,7 +348,6 @@
         <members>Contact.Copy_Address_to_Household</members>
         <members>Contact.Household</members>
         <members>Household__c.Copy_Household_Address_to_Contacts</members>
-        <members>Household__c.New_Household_Member</members>
         <name>WebLink</name>
     </types>
     <types>
