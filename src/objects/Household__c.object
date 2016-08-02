@@ -917,16 +917,4 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <protected>false</protected>
         <url>/apex/npsp__ADDR_CopyAddrHHObjBTN?id={!Household__c.Id}</url>
     </webLinks>
-    <webLinks>
-        <fullName>New_Household_Member</fullName>
-        <availability>online</availability>
-        <displayType>massActionButton</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <linkType>url</linkType>
-        <masterLabel>New Household Member</masterLabel>
-        <openType>replace</openType>
-        <protected>false</protected>
-        <requireRowSelection>false</requireRowSelection>
-        <url>{!URLFOR($Action.Contact.NewContact, null, [  Contact.AssistantName = &quot;bob&quot;])}</url>
-    </webLinks>
 </CustomObject>
