@@ -369,16 +369,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>npe01__Last_Donation_Date__c</field>
-            <table>Household__c.Contacts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>npe01__Lifetime_Giving_History_Amount__c</field>
-            <table>Household__c.Contacts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>npe01__Organization_Type__c</field>
             <table>Household__c.Contacts__r</table>
         </columns>
@@ -415,11 +405,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>npe01__SystemAccountProcessor__c</field>
-            <table>Household__c.Contacts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>npe01__SystemIsIndividual__c</field>
             <table>Household__c.Contacts__r</table>
         </columns>
         <columns>
