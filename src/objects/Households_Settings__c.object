@@ -311,7 +311,7 @@
         <externalId>false</externalId>
         <inlineHelpText>Names of Opportunity Record Types, such as Membership, that you want to roll up separately from other Opportunity Record Types.</inlineHelpText>
         <label>Membership Record Type Names</label>
-        <length>100</length>
+        <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
