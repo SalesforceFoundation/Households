@@ -362,6 +362,6 @@
         <shortDescription>UDRDescription</shortDescription>
         <value>These settings let you create and manage user defined rollups from an Opportunity (Donation) to a Contact, Account, or Household.  After you create a User Defined Rollup, you may want to use Rollup Donations Batch in NPSP Settings | Bulk Data Processes to recalculate all rollups in your instance and ensure that your new rollup field is correctly populated. 
  
-WARNING: Keep in mind that rollups change how your Nonprofit Starter Pack behaves. Improperly configured settings may cause your rollups to fail. Please test your user defined rollups thoroughly before deploying to production.</value>
+WARNING: Keep in mind that rollups change how your Nonprofit Success Pack behaves. Improperly configured settings may cause your rollups to fail. Please test your user defined rollups thoroughly before deploying to production.</value>
     </labels>
 </CustomLabels>

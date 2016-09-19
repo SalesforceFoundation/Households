@@ -197,7 +197,7 @@
         <name>SetAddress</name>
     </customLabels>
     <customLabels>
-        <label>Configuración que contrala los totales definidos por el usuario de la Oportunidad/Donación al Contacto, Cuenta o Familia. Cambiar estos cambiará como se comporta el Nonprofit Starter Pack. 
+        <label>Configuración que contrala los totales definidos por el usuario de la Oportunidad/Donación al Contacto, Cuenta o Familia. Cambiar estos cambiará como se comporta el Nonprofit Success Pack. 
 
 ADVERTENCIA: Una mala configuración puede causar que los totales fallen. Por favor testear a fondo los totales definidos por el usuario antes de pasarlos a producción.</label>
         <name>UDRDescription</name>

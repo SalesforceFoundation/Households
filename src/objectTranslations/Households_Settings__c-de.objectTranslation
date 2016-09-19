@@ -96,7 +96,7 @@
         <name>Enable_Soft_Credit_Rollups__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed. --></help>
+        <help><!-- DEPRECATED. New versions of the Nonprofit Success Pack will be automatically installed. --></help>
         <label><!-- DEPRECATED-Enable Update Check --></label>
         <name>Enable_Update_Check__c</name>
     </fields>
@@ -126,7 +126,7 @@
         <name>Force_Fiscal_Year__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed. --></help>
+        <help><!-- DEPRECATED. New versions of the Nonprofit Success Pack will be automatically installed. --></help>
         <label><!-- DEPRECATED-Has Package Update --></label>
         <name>Has_Package_Update__c</name>
     </fields>
@@ -161,12 +161,12 @@
         <name>Household_Rules__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed. --></help>
+        <help><!-- DEPRECATED. New versions of the Nonprofit Success Pack will be automatically installed. --></help>
         <label><!-- DEPRECATED-Last Update Check --></label>
         <name>Last_Update_Check__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed. --></help>
+        <help><!-- DEPRECATED. New versions of the Nonprofit Success Pack will be automatically installed. --></help>
         <label><!-- DEPRECATED-Max Package Version --></label>
         <name>Max_Package_Version__c</name>
     </fields>
@@ -186,7 +186,7 @@
         <name>Opp_Rollup_Scheduled_Job_Id__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed. --></help>
+        <help><!-- DEPRECATED. New versions of the Nonprofit Success Pack will be automatically installed. --></help>
         <label><!-- DEPRECATED-Package Update URL --></label>
         <name>Package_Update_URL__c</name>
     </fields>
@@ -206,7 +206,7 @@
         <name>Soft_Credit_Roles__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. New versions of the Nonprofit Starter Pack will be automatically installed. --></help>
+        <help><!-- DEPRECATED. New versions of the Nonprofit Success Pack will be automatically installed. --></help>
         <label><!-- DEPRECATED-Update Check Interval --></label>
         <name>Update_Check_Interval__c</name>
     </fields>
