@@ -197,7 +197,7 @@
         <name>SetAddress</name>
     </customLabels>
     <customLabels>
-        <label>支援から個人、団体または世帯へのユーザ定義積み上げ集計を制御する設定。これらを変更すると、Nonprofit Starter Pack の動作が変わります。
+        <label>支援から個人、団体または世帯へのユーザ定義積み上げ集計を制御する設定。これらを変更すると、Nonprofit Success Pack の動作が変わります。
 
 警告: 設定に誤りがあると、積み上げ集計に失敗する可能性があります。本番環境にリリースする前に、ユーザ定義積み上げ集計を十分にテストしてください。</label>
         <name>UDRDescription</name>

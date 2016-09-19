@@ -197,7 +197,7 @@
         <name>SetAddress</name>
     </customLabels>
     <customLabels>
-        <label>Einstellungen, die benutzerdefinierte Rollups steuern, von Opportunity/Spende zu einem Kontakt, Account oder Haushalt Änderungen daran ändern das Verhalten Ihres Nonprofit Starter Packs.
+        <label>Einstellungen, die benutzerdefinierte Rollups steuern, von Opportunity/Spende zu einem Kontakt, Account oder Haushalt Änderungen daran ändern das Verhalten Ihres Nonprofit Success Packs.
 
 WARNUNG: Falsch konfigurierte Einstellungen können verursachen, dass das Rollup fehlschlägt. Testen Sie Ihre benutzerdefinierten Rollups gründlich, bevor Sie sie für die Produktion bereitstellen.</label>
         <name>UDRDescription</name>
