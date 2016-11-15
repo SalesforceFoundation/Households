@@ -1,0 +1,9 @@
+project:
+    name: Households
+    package:
+        name: Households
+        namespace: npo02
+        api_version: 36.0
+    dependencies:
+        - namespace: npe01
+          version: 3.4
