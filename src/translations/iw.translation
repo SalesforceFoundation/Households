@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label>הוסף</label>
+        <name>Add</name>
+    </customLabels>
+    <customLabels>
+        <label>הוסף ומזג משקי בית</label>
+        <name>AddAndMerge</name>
+    </customLabels>
+    <customLabels>
+        <label>הוסף והסר ממשק הבית הישן</label>
+        <name>AddAndRemove</name>
+    </customLabels>
+    <customLabels>
+        <label>הוספת חברים</label>
+        <name>AddHouseholdMembers</name>
+    </customLabels>
+    <customLabels>
+        <label>אירעה שגיאה במהלך העתקת הכתובת.</label>
+        <name>AddressCopyFailure</name>
+    </customLabels>
+    <customLabels>
+        <label>הכתובת הועתקה בהצלחה.</label>
+        <name>AddressCopySuccess</name>
+    </customLabels>
+    <customLabels>
+        <label>העתקת כתובת אינה נתמכת עבור סוג אובייקט זה.</label>
+        <name>AddressCopyUnknownObject</name>
+    </customLabels>
+    <customLabels>
+        <label>הגדר את הכתובת בבית של כל חברי משק הבית ככתובת זו.</label>
+        <name>AddressToAllMembers</name>
+    </customLabels>
+    <customLabels>
+        <label>כבר נכלל במשק הבית</label>
+        <name>AlreadyInHousehold</name>
+    </customLabels>
+    <customLabels>
+        <label>ברכה רשמית אוטומטית</label>
+        <name>AutoFormalGreeting</name>
+    </customLabels>
+    <customLabels>
+        <label>ברכה לא רשמית אוטומטית</label>
+        <name>AutoInformalGreeting</name>
+    </customLabels>
+    <customLabels>
+        <label>שם אוטומטי</label>
+        <name>AutoName</name>
+    </customLabels>
+    <customLabels>
+        <label>שינוי</label>
+        <name>Change</name>
+    </customLabels>
+    <customLabels>
+        <label>שנה כתובת</label>
+        <name>ChangeAddress</name>
+    </customLabels>
+    <customLabels>
+        <label>השינויים לא נשמרו.</label>
+        <name>ChangesNotSaved</name>
+    </customLabels>
+    <customLabels>
+        <label>כבר נכלל במשק הבית. האם ברצונך להוסיף איש קשר זה עם חברי משק הבית הקיימים שלו או בלעדיהם?</label>
+        <name>ContactAlreadyInHousehold</name>
+    </customLabels>
+    <customLabels>
+        <label>דרוש שם משפחה.</label>
+        <name>ContactLastNameRqd</name>
+    </customLabels>
+    <customLabels>
+        <label>הזן שם פרטי ושם משפחה.</label>
+        <name>ContactNameRqd</name>
+    </customLabels>
+    <customLabels>
+        <label>איש הקשר ייווצר כאשר משק הבית יישמר.</label>
+        <name>CreatedOnSave</name>
+    </customLabels>
+    <customLabels>
+        <label>משק בית</label>
+        <name>DefaultHouseholdName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DefaultHouseholdTransactionCurrency --></label>
+        <name>DefaultHouseholdTransactionCurrency</name>
+    </customLabels>
+    <customLabels>
+        <label>מחיקה</label>
+        <name>Delete</name>
+    </customLabels>
+    <customLabels>
+        <label>הזן כתובת חדשה</label>
+        <name>EnterNewAddress</name>
+    </customLabels>
+    <customLabels>
+        <label>אל תכלול איש קשר במתן שמות אוטומטי למשק בית:</label>
+        <name>ExcludeText</name>
+    </customLabels>
+    <customLabels>
+        <label>משק בית קיים</label>
+        <name>ExistingHousehold</name>
+    </customLabels>
+    <customLabels>
+        <label>חפש איש קשר לפי שם...</label>
+        <name>FindContactByName</name>
+    </customLabels>
+    <customLabels>
+        <label>כתובת משק הבית</label>
+        <name>HouseholdAddress</name>
+    </customLabels>
+    <customLabels>
+        <label>אדון או גברת</label>
+        <name>HouseholdAnonymousGreeting</name>
+    </customLabels>
+    <customLabels>
+        <label>אנונימי</label>
+        <name>HouseholdAnonymousName</name>
+    </customLabels>
+    <customLabels>
+        <label>פרטי משק בית</label>
+        <name>HouseholdDetails</name>
+    </customLabels>
+    <customLabels>
+        <label>חברי משק בית</label>
+        <name>HouseholdMembers</name>
+    </customLabels>
+    <customLabels>
+        <label>וגם</label>
+        <name>HouseholdNameConnector</name>
+    </customLabels>
+    <customLabels>
+        <label>חברים</label>
+        <name>HouseholdNameOverrun</name>
+    </customLabels>
+    <customLabels>
+        <label>אין הזדמנויות</label>
+        <name>Household_Contact_Role_Processor_Off</name>
+    </customLabels>
+    <customLabels>
+        <label>כל ההזדמנויות</label>
+        <name>Household_Contact_Role_Processor_On</name>
+    </customLabels>
+    <customLabels>
+        <label>הגדרות אלה מאפשרות לך ליצור באופן אוטומטי תפקידי איש קשר בהזדמנויות עבור חברי משק בית בכל פעם שנוצרת הזדמנות.</label>
+        <name>Household_Contact_Roles_Help_Text</name>
+    </customLabels>
+    <customLabels>
+        <label>חבר משק בית</label>
+        <name>Household_Member_Contact_Role</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Household Rules Help Text --></label>
+        <name>Household_Rules_Help_Text</name>
+    </customLabels>
+    <customLabels>
+        <label>נהל משק בית</label>
+        <name>ManageHousehold</name>
+    </customLabels>
+    <customLabels>
+        <label>החלף</label>
+        <name>NameReplacementText</name>
+    </customLabels>
+    <customLabels>
+        <label>איש קשר חדש</label>
+        <name>NewContact</name>
+    </customLabels>
+    <customLabels>
+        <label>אין כרגע אנשי קשר במשק בית זה.</label>
+        <name>NoContacts</name>
+    </customLabels>
+    <customLabels>
+        <label>שגיאות סיכום יכולות להתרחש במהלך סיכומים ליליים או ידניים, ועלולות להשפיע על דיוק הנתונים שלך.  להלן רשימת השגיאות, סוג השגיאה וקישור אל הרשומה שבה אירעה השגיאה. שגיאות אלה מתאפסות בכל הפעלה של המשימה המתוזמנת לשעות הלילה או הסיכומים הידניים.  מומלץ בחום לטפל בשגיאות אלה ללא דיחוי כדי להבטיח שהנתונים שלך יישארו מדויקים.</label>
+        <name>Opportunity_Error_Help_Text</name>
+    </customLabels>
+    <customLabels>
+        <label>לא בוצע סיכום משום שמספר השיחות העתידיות היה נמוך מדי.</label>
+        <name>Opportunity_Rollup_Future_Call_Limit</name>
+    </customLabels>
+    <customLabels>
+        <label>הגעת למגבלה על מספר משימות Apex המתוזמנות וסיכום ההזדמנויות לא יפעל בשעות הלילה. אם ברצונך להפעיל משימה זו בלילה, מחק אחת מהמשימות המתוזמנות שלך וטען דף זה מחדש.</label>
+        <name>Opportunity_Rollup_Scheduling_Error_Text</name>
+    </customLabels>
+    <customLabels>
+        <label>תורם</label>
+        <name>Primary_Donor_Contact_Role</name>
+    </customLabels>
+    <customLabels>
+        <label>אירעו שגיאות במהלך הסיכום האחרון של ההזדמנויות שלך. למידע נוסף, עיין בחלונית של יומן שגיאות המערכת.</label>
+        <name>RollupErrorMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>בחר כתובת קיימת</label>
+        <name>SelectExistingAddress</name>
+    </customLabels>
+    <customLabels>
+        <label>הגדר כתובת</label>
+        <name>SetAddress</name>
+    </customLabels>
+    <customLabels>
+        <label>הגדרות אלה מאפשרות לך ליצור ולנהל סיכומים בהגדרת משתמש מהזדמנות (תרומה) אל איש קשר, חשבון או משק בית.  לאחר שתיצור סיכום בהגדרת משתמש, ייתכן שתרצה להשתמש באצוות סיכום תרומות ב&apos;הגדרות NPSP | תהליכי אצוות נתונים&apos; כדי לחשב מחדש את כל הסיכומים במופע שלך ולהבטיח ששדה הסיכום החדש התמלא בצורה נכונה. 
+ 
+אזהרה: זכור שהסיכומים משפיעים על ההתנהגות של &apos;ערכת ההצלחה למלכ&quot;רים&apos;. הגדרות שגויות עלולות לגרום לכשל של הסיכומים. לפני היישום, בדוק בקפידה את הסיכומים בהגדרת המשתמש שלך.</label>
+        <name>UDRDescription</name>
+    </customLabels>
+    <customTabs>
+        <label>הגדרות משקי בית</label>
+        <name>Households_Settings</name>
+    </customTabs>
+    <customTabs>
+        <label>סיכומי הזדמנויות</label>
+        <name>Opportunity_Rollups</name>
+    </customTabs>
+    <customTabs>
+        <label>סיכומי משתמש</label>
+        <name>User_Rollups</name>
+    </customTabs>
+    <reportTypes>
+        <description>משקי בית ותרומות</description>
+        <label>משקי בית ותרומות</label>
+        <name>Households_and_Donations</name>
+        <sections>
+            <label>חברי משק בית</label>
+            <name>Household Members</name>
+        </sections>
+        <sections>
+            <label>משקי בית</label>
+            <name>Households</name>
+        </sections>
+        <sections>
+            <label>תרומות</label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+</Translations>

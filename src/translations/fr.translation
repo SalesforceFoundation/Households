@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label><!-- Add --></label>
+        <label>Ajouter</label>
         <name>Add</name>
     </customLabels>
     <customLabels>
-        <label><!-- Add and merge Households --></label>
+        <label>Ajouter et fusionner des foyers</label>
         <name>AddAndMerge</name>
     </customLabels>
     <customLabels>
-        <label><!-- Add and remove from old Household --></label>
+        <label>Ajouter et supprimer de l’ancien foyer</label>
         <name>AddAndRemove</name>
     </customLabels>
     <customLabels>
-        <label><!-- Add Members --></label>
+        <label>Ajouter des membres</label>
         <name>AddHouseholdMembers</name>
     </customLabels>
     <customLabels>
-        <label><!-- AddressCopyFailure --></label>
+        <label>Une erreur s’est produite lors de la copie de l’adresse.</label>
         <name>AddressCopyFailure</name>
     </customLabels>
     <customLabels>
-        <label><!-- AddressCopySuccess --></label>
+        <label>L’adresse n’a pas été copiée correctement.</label>
         <name>AddressCopySuccess</name>
     </customLabels>
     <customLabels>
-        <label><!-- AddressCopyUnknownObject --></label>
+        <label>La copie d’adresse n’est pas compatible avec ce type d’objet.</label>
         <name>AddressCopyUnknownObject</name>
     </customLabels>
     <customLabels>
-        <label><!-- Set the home address on all household members to this address. --></label>
+        <label>Définissez cette adresse comme adresse de domicile pour tous les membres du foyer.</label>
         <name>AddressToAllMembers</name>
     </customLabels>
     <customLabels>
-        <label><!-- Already In Household --></label>
+        <label>Déjà dans le foyer</label>
         <name>AlreadyInHousehold</name>
     </customLabels>
     <customLabels>
-        <label><!-- Auto Formal Greeting --></label>
+        <label>Salutation formelle automatique</label>
         <name>AutoFormalGreeting</name>
     </customLabels>
     <customLabels>
-        <label><!-- Auto Informal Greeting --></label>
+        <label>Salutation informelle automatique</label>
         <name>AutoInformalGreeting</name>
     </customLabels>
     <customLabels>
-        <label><!-- Auto Name --></label>
+        <label>Nom automatique</label>
         <name>AutoName</name>
     </customLabels>
     <customLabels>
-        <label><!-- Change --></label>
+        <label>Modifier</label>
         <name>Change</name>
     </customLabels>
     <customLabels>
-        <label><!-- Change Address --></label>
+        <label>Modifier l’adresse</label>
         <name>ChangeAddress</name>
     </customLabels>
     <customLabels>
-        <label><!-- Changes have not been saved. --></label>
+        <label>Les modifications n’ont pas été enregistrées.</label>
         <name>ChangesNotSaved</name>
     </customLabels>
     <customLabels>
-        <label><!-- Already in a household --></label>
+        <label>est déjà dans un foyer. Souhaitez-vous ajouter ce contact avec ou sans les membres de foyer existants ?</label>
         <name>ContactAlreadyInHousehold</name>
     </customLabels>
     <customLabels>
-        <label><!-- Last Name is required. --></label>
+        <label>Le nom est requis.</label>
         <name>ContactLastNameRqd</name>
     </customLabels>
     <customLabels>
-        <label><!-- Enter a First Name and Last Name. --></label>
+        <label>Saisissez un prénom et un nom.</label>
         <name>ContactNameRqd</name>
     </customLabels>
     <customLabels>
-        <label><!-- Contact will be created when Household is saved. --></label>
+        <label>Le contact sera créé lors de l’enregistrement du foyer.</label>
         <name>CreatedOnSave</name>
     </customLabels>
     <customLabels>
@@ -85,51 +85,51 @@
         <name>DefaultHouseholdTransactionCurrency</name>
     </customLabels>
     <customLabels>
-        <label><!-- Delete --></label>
+        <label>Supprimer</label>
         <name>Delete</name>
     </customLabels>
     <customLabels>
-        <label><!-- Enter a new address --></label>
+        <label>Saisissez une nouvelle adresse</label>
         <name>EnterNewAddress</name>
     </customLabels>
     <customLabels>
-        <label><!-- Exclude Contact from automatic Household naming: --></label>
+        <label>Exclure le contact de la dénomination automatique de foyer :</label>
         <name>ExcludeText</name>
     </customLabels>
     <customLabels>
-        <label><!-- Existing Household --></label>
+        <label>Foyer existant</label>
         <name>ExistingHousehold</name>
     </customLabels>
     <customLabels>
-        <label><!-- Find contact by name ... --></label>
+        <label>Rechercher un contact par nom ...</label>
         <name>FindContactByName</name>
     </customLabels>
     <customLabels>
-        <label><!-- Household Address --></label>
+        <label>Adresse de foyer</label>
         <name>HouseholdAddress</name>
     </customLabels>
     <customLabels>
-        <label><!-- HouseholdAnonymousGreeting --></label>
+        <label>M. ou Mme</label>
         <name>HouseholdAnonymousGreeting</name>
     </customLabels>
     <customLabels>
-        <label><!-- HouseholdAnonymousName --></label>
+        <label>Anonyme</label>
         <name>HouseholdAnonymousName</name>
     </customLabels>
     <customLabels>
-        <label><!-- Household Details --></label>
+        <label>Détails sur le foyer</label>
         <name>HouseholdDetails</name>
     </customLabels>
     <customLabels>
-        <label><!-- Household Members --></label>
+        <label>Membres du foyer</label>
         <name>HouseholdMembers</name>
     </customLabels>
     <customLabels>
-        <label><!-- HouseholdNameConnector --></label>
+        <label>et</label>
         <name>HouseholdNameConnector</name>
     </customLabels>
     <customLabels>
-        <label><!-- HouseholdNameOverrun --></label>
+        <label>amis</label>
         <name>HouseholdNameOverrun</name>
     </customLabels>
     <customLabels>
@@ -141,7 +141,7 @@
         <name>Household_Contact_Role_Processor_On</name>
     </customLabels>
     <customLabels>
-        <label><!-- Household Contact Roles Help Text --></label>
+        <label>Ces paramètres vous permettent de créer automatiquement des rôles de contact d’opportunité pour les membres de foyer lorsqu’une opportunité est créée.</label>
         <name>Household_Contact_Roles_Help_Text</name>
     </customLabels>
     <customLabels>
@@ -153,31 +153,31 @@
         <name>Household_Rules_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label><!-- Manage Household --></label>
+        <label>Gérer un foyer</label>
         <name>ManageHousehold</name>
     </customLabels>
     <customLabels>
-        <label><!-- Text used to cause a household name or greeting replacement --></label>
+        <label>REMPLACER</label>
         <name>NameReplacementText</name>
     </customLabels>
     <customLabels>
-        <label><!-- New Contact --></label>
+        <label>Nouveau contact</label>
         <name>NewContact</name>
     </customLabels>
     <customLabels>
-        <label><!-- There are currently no Contacts in this Household. --></label>
+        <label>Ce foyer ne contient actuellement aucun contact.</label>
         <name>NoContacts</name>
     </customLabels>
     <customLabels>
-        <label><!-- Opportunity_Error_Help_Text --></label>
+        <label>Des erreurs de cumul peuvent se produire lors des cumuls nocturnes ou manuels, et peuvent affecter l’exactitude de vos données.  La liste ci-dessous contient les erreurs, les types d’erreur, et un lien vers l’enregistrement sur lequel l’erreur s’est produite. Ces erreurs sont réinitialisées à chaque fois qu’une tâche nocturne planifiée ou un cumul manuel est exécuté.  Il est hautement recommandé de remédier à ces problèmes rapidement pour garantir l’exactitude de vos données.</label>
         <name>Opportunity_Error_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label><!-- Opportunity Rollup Future Call Limit --></label>
+        <label>Cumul non effectué car trop d’appels futurs étaient disponibles.</label>
         <name>Opportunity_Rollup_Future_Call_Limit</name>
     </customLabels>
     <customLabels>
-        <label><!-- Opportunity Rollup Scheduling Error Text --></label>
+        <label>Vous avez atteint votre limite de tâches Apex planifiées et les cumuls d’opportunité nocturne ne seront pas effectués. Si vous voulez que cette tâche nocturne soit exécutée, supprimez une de vos tâches planifiées et rechargez cette page.</label>
         <name>Opportunity_Rollup_Scheduling_Error_Text</name>
     </customLabels>
     <customLabels>
@@ -185,34 +185,37 @@
         <name>Primary_Donor_Contact_Role</name>
     </customLabels>
     <customLabels>
-        <label><!-- RollupErrorMessage --></label>
+        <label>Erreur(s) survenue(s) la dernière fois que vos opportunités ont été cumulées. Veuillez consulter le panneau du journal des erreurs systèmes pour plus d’informations.</label>
         <name>RollupErrorMessage</name>
     </customLabels>
     <customLabels>
-        <label><!-- Select an existing address --></label>
+        <label>Sélectionnez une adresse existante</label>
         <name>SelectExistingAddress</name>
     </customLabels>
     <customLabels>
-        <label><!-- Set Address --></label>
+        <label>Définir l’adresse</label>
         <name>SetAddress</name>
     </customLabels>
     <customLabels>
-        <label><!-- UDRDescription --></label>
+        <label>Ces paramètres vous permettent de créer et gérer les cumuls définis par utilisateur d’une opportunité (don) à un contact, compte ou foyer.  Après avoir créé un cumul défini par utilisateur, vous pouvez souhaiter utiliser le cumul de dons par lot dans Paramètres NPSP | Processus de données en masse pour recalculer tous les cumuls de votre instance et assurer que votre nouveau champ de cumul est rempli correctement. 
+ 
+AVERTISSEMENT : N’oubliez pas que les cumuls modifient la façon dont votre pack NPSP se comporte. Des paramètres configurés de manière incorrecte peuvent faire échouer vos cumuls. Testez rigoureusement vos cumuls définis par utilisateur avant de les déployer en production.</label>
         <name>UDRDescription</name>
     </customLabels>
     <customTabs>
-        <label><!-- Households Settings --></label>
+        <label>Paramètres de foyers</label>
         <name>Households_Settings</name>
     </customTabs>
     <customTabs>
-        <label><!-- Opportunity Rollups --></label>
+        <label>Cumuls d’opportunité</label>
         <name>Opportunity_Rollups</name>
     </customTabs>
     <customTabs>
-        <label><!-- User Rollups --></label>
+        <label>Cumuls d’utilisateur</label>
         <name>User_Rollups</name>
     </customTabs>
     <reportTypes>
+        <description>Foyers et dons</description>
         <label>Foyers et Dons</label>
         <name>Households_and_Donations</name>
         <sections>

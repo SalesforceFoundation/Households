@@ -9,28 +9,28 @@
         <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
     </caseValues>
     <fields>
-        <help><!-- Datetime of the error --></help>
-        <label><!-- Error Datetime --></label>
+        <help>Date et heure de l’erreur</help>
+        <label>Date et heure de l’erreur</label>
         <name>Error_Datetime__c</name>
     </fields>
     <fields>
-        <help><!-- Full text of the error message --></help>
-        <label><!-- Error Message --></label>
+        <help>Texte complet du message d’erreur</help>
+        <label>Message d’erreur</label>
         <name>Error_Message__c</name>
     </fields>
     <fields>
-        <help><!-- The object type to which this error refers --></help>
-        <label><!-- Error Object Type --></label>
+        <help>Le type d’objet auquel cette erreur se réfère</help>
+        <label>Type d’objet d’erreur</label>
         <name>Error_Object_Type__c</name>
     </fields>
     <fields>
-        <help><!-- Link to the record on which the error occurred --></help>
-        <label><!-- Error Record Link --></label>
+        <help>Lien vers l’enregistrement sur lequel l’erreur s’est produite.</help>
+        <label>Lien d’enregistrement d’erreur</label>
         <name>Error_Record_Link__c</name>
     </fields>
     <fields>
-        <help><!-- Type of error that occurred --></help>
-        <label><!-- Error Type --></label>
+        <help>Type de l’erreur survenue</help>
+        <label>Type d’erreur</label>
         <name>Error_Type__c</name>
     </fields>
     <gender><!-- Masculine --></gender>

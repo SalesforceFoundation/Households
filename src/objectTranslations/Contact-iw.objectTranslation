@@ -2,96 +2,96 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <help><!-- The average amount of all won Opportunities related to this Contact by a primary Opportunity Contact Role. --></help>
-        <label>Don moyen</label>
+        <label>תרומה ממוצעת</label>
         <name>AverageAmount__c</name>
     </fields>
     <fields>
         <help><!-- The sum of won Opportunity amounts in the Best Gift Year. --></help>
-        <label>Total de la meilleure année de don</label>
+        <label>סה&quot;כ בשנת התרומות הטובה ביותר</label>
         <name>Best_Gift_Year_Total__c</name>
     </fields>
     <fields>
         <help><!-- The year of the largest total amount of won Opportunities related to this Contact by primary Contact Role.  See also Best Gift Year Total. --></help>
-        <label>Meilleure année de don</label>
+        <label>שנת התרומות הטובה ביותר</label>
         <name>Best_Gift_Year__c</name>
     </fields>
     <fields>
         <help><!-- The oldest Close Date of a won Opportunity with amount greater than zero related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Date du premier don</label>
+        <label>תאריך תרומה ראשונה</label>
         <name>FirstCloseDate__c</name>
     </fields>
     <fields>
         <help><!-- Formula: Clone of the Household Mailing address (also a Formula) --></help>
-        <label>Adresse du Foyer</label>
+        <label>כתובות למשלוח דואר של משק הבית</label>
         <name>Formula_HouseholdMailingAddress__c</name>
     </fields>
     <fields>
         <help><!-- Formula: Simple formula of Household Phone field. --></help>
-        <label>Téléphone du Foyer</label>
+        <label>טלפון של משק הבית</label>
         <name>Formula_HouseholdPhone__c</name>
     </fields>
     <fields>
         <help><!-- Determines the order in which Contact names are used to generate Household name. --></help>
-        <label>Ordre de dénomination du foyer</label>
+        <label>סדר שמות במשק בית</label>
         <name>Household_Naming_Order__c</name>
     </fields>
     <fields>
-        <label>Foyer</label>
+        <label>משק בית</label>
         <name>Household__c</name>
-        <relationshipLabel>Membres du Foyer</relationshipLabel>
+        <relationshipLabel>חברי משק בית</relationshipLabel>
     </fields>
     <fields>
         <help><!-- The largest amount of a won Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Don le plus élevé</label>
+        <label>התרומה הגדולה ביותר</label>
         <name>LargestAmount__c</name>
     </fields>
     <fields>
-        <label>Date du dernier don du foyer</label>
+        <label>תאריך תרומה אחרונה של משק הבית</label>
         <name>LastCloseDateHH__c</name>
     </fields>
     <fields>
         <help><!-- The close date of the most recent won Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Date du dernier don</label>
+        <label>תאריך תרומה אחרונה</label>
         <name>LastCloseDate__c</name>
     </fields>
     <fields>
         <help><!-- The amount of the most recent (by Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Dernier montant d’adhésion</label>
+        <label>סכום חברות אחרונה</label>
         <name>LastMembershipAmount__c</name>
     </fields>
     <fields>
         <help><!-- The most recent Close Date of a won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Dernière date d’adhésion</label>
+        <label>תאריך חברות אחרונה</label>
         <name>LastMembershipDate__c</name>
     </fields>
     <fields>
         <help><!-- The level of the most recent (by Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Dernier niveau d’adhésion</label>
+        <label>רמת חברות אחרונה</label>
         <name>LastMembershipLevel__c</name>
     </fields>
     <fields>
         <help><!-- The origin (new, renewal, reacquire...) of the most recent (Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Dernière origine d’adhésion</label>
+        <label>מקור חברות אחרונה</label>
         <name>LastMembershipOrigin__c</name>
     </fields>
     <fields>
         <help><!-- The amount of the most recent won Opportunity by Close Date related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Montant du dernier don</label>
+        <label>סכום תרומה אחרונה</label>
         <name>LastOppAmount__c</name>
     </fields>
     <fields>
         <help><!-- The Membership End Date of the most recent (Close Date) Membership Opportunity (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Date de fin d’adhésion</label>
+        <label>תאריך סיום חברות</label>
         <name>MembershipEndDate__c</name>
     </fields>
     <fields>
         <help><!-- The Join Date of the oldest (Close Date) Membership Opportunity (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Date d’adhésion</label>
+        <label>תאריך התחלת חברות</label>
         <name>MembershipJoinDate__c</name>
     </fields>
     <fields>
-        <help>Détermine de quels noms de foyer ce contact ne fait PAS partie.</help>
-        <label>Exclusions de dénomination</label>
+        <help>הגדרה זו קובעת באילו שמות של משקי בית איש קשר זה אינו נכלל.</help>
+        <label>אי הכללה בשמות</label>
         <name>Naming_Exclusions__c</name>
         <picklistValues>
             <masterLabel>Household__c.Formal_Greeting__c</masterLabel>
@@ -108,87 +108,87 @@
     </fields>
     <fields>
         <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Nombre total de dons</label>
+        <label>מספר תרומות כולל</label>
         <name>NumberOfClosedOpps__c</name>
     </fields>
     <fields>
         <help><!-- The number of won Membership Opportunities (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Nombre d’adhésions</label>
+        <label>מספר חברויות</label>
         <name>NumberOfMembershipOpps__c</name>
     </fields>
     <fields>
         <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed two years ago. --></help>
-        <label>Total des dons totaux il y a deux ans</label>
+        <label>סה&quot;כ תרומות לפני שנתיים</label>
         <name>OppAmount2YearsAgo__c</name>
     </fields>
     <fields>
         <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed in the last number of days defined in Household Settings. --></help>
-        <label>Total des dons sur les N derniers jours</label>
+        <label>סה&quot;כ תרומות ב-N הימים האחרונים</label>
         <name>OppAmountLastNDays__c</name>
     </fields>
     <fields>
         <help><!-- Formula:  Total Gifts Last Year on related Household. --></help>
-        <label>Dons totaux du foyer de l’année dernière</label>
+        <label>סה&quot;כ תרומות משק בית בשנה שעברה</label>
         <name>OppAmountLastYearHH__c</name>
     </fields>
     <fields>
         <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed last year. --></help>
-        <label>Total des dons sur l’année dernière</label>
+        <label>סה&quot;כ תרומות בשנה שעברה</label>
         <name>OppAmountLastYear__c</name>
     </fields>
     <fields>
         <help><!-- Formula:  Total Gifts This Year on related Household. --></help>
-        <label>Dons totaux du foyer cette année</label>
+        <label>סה&quot;כ תרומות משק בית בשנה הנוכחית</label>
         <name>OppAmountThisYearHH__c</name>
     </fields>
     <fields>
         <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed this year. --></help>
-        <label>Total des dons cette année</label>
+        <label>סה&quot;כ תרומות בשנה הנוכחית</label>
         <name>OppAmountThisYear__c</name>
     </fields>
     <fields>
         <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed two years ago. --></help>
-        <label>Nombre de dons il y a deux ans</label>
+        <label>מספר תרומות לפני שנתיים</label>
         <name>OppsClosed2YearsAgo__c</name>
     </fields>
     <fields>
         <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed in the last number of days defined in Household Settings. --></help>
-        <label>Nombre de dons des N derniers jours</label>
+        <label>מספר תרומות ב-N הימים האחרונים</label>
         <name>OppsClosedLastNDays__c</name>
     </fields>
     <fields>
         <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed last year. --></help>
-        <label>Nombre de dons de l’année dernière</label>
+        <label>מספר תרומות בשנה שעברה</label>
         <name>OppsClosedLastYear__c</name>
     </fields>
     <fields>
         <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed this year. --></help>
-        <label>Nombre de dons cette année</label>
+        <label>מספר תרומות בשנה הנוכחית</label>
         <name>OppsClosedThisYear__c</name>
     </fields>
     <fields>
         <help><!-- The smallest amount of a won Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Don le moins élevé</label>
+        <label>התרומה הקטנה ביותר</label>
         <name>SmallestAmount__c</name>
     </fields>
     <fields>
-        <help>Montant total de crédit de groupe de l’année dernière.</help>
-        <label>Crédit de groupe de l’année dernière</label>
+        <help>סכום הקרדיט הכולל בשנה שעברה.</help>
+        <label>תרומות מערכתיות בשנה שעברה</label>
         <name>Soft_Credit_Last_Year__c</name>
     </fields>
     <fields>
-        <help>Montant total de crédit de groupe cette année</help>
-        <label>Crédit de groupe cette année</label>
+        <help>סכום הקרדיט הכולל בשנה הנוכחית</help>
+        <label>תרומות מערכתיות בשנה הנוכחית</label>
         <name>Soft_Credit_This_Year__c</name>
     </fields>
     <fields>
-        <help>Montant total en crédits de groupe sur la durée de vie de ce contact. Défini dans l’onglet de configuration de foyer.</help>
-        <label>Total de crédit de groupe</label>
+        <help>סכום הקרדיט הכולל במחזור החיים של איש קשר זה. נקבע בכרטיסיית ההגדרות של משק הבית.</help>
+        <label>סה&quot;כ תרומות מערכתיות</label>
         <name>Soft_Credit_Total__c</name>
     </fields>
     <fields>
-        <help>Montant total de crédit de groupe il y a deux ans.</help>
-        <label>Crédit de groupe il y a deux ans</label>
+        <help>סכום הקרדיט הכולל לפני שנתיים.</help>
+        <label>תרומות מערכתיות לפני שנתיים</label>
         <name>Soft_Credit_Two_Years_Ago__c</name>
     </fields>
     <fields>
@@ -209,25 +209,25 @@
     </fields>
     <fields>
         <help><!-- The total amount of won Membership Opportunities (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Montant total d’adhésion</label>
+        <label>סה&quot;כ סכום חברות</label>
         <name>TotalMembershipOppAmount__c</name>
     </fields>
     <fields>
         <help><!-- The sum of won Opportunity Amounts related to this Contact by primary Opportunity Contact Role. --></help>
-        <label>Total des dons</label>
+        <label>סה&quot;כ תרומות</label>
         <name>TotalOppAmount__c</name>
     </fields>
     <fields>
         <help><!-- Formula:  Total Gifts on related Household. --></help>
-        <label>Dons totaux du foyer</label>
+        <label>סה&quot;כ תרומות משק בית</label>
         <name>Total_Household_Gifts__c</name>
     </fields>
     <webLinks>
-        <label>Copier une adresse vers un foyer</label>
+        <label>העתק כתובת למשק בית</label>
         <name>Copy_Address_to_Household</name>
     </webLinks>
     <webLinks>
-        <label>Foyer</label>
+        <label>משק בית</label>
         <name>Household</name>
     </webLinks>
 </CustomObjectTranslation>
