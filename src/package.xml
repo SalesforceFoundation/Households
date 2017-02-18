@@ -18,6 +18,7 @@
         <members>RecordTypes_TEST</members>
         <members>SCHED_OppRollup</members>
         <members>SCHED_OppRollup_TEST</members>
+        <members>UTIL_CustomLabel_TEST</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -250,7 +251,8 @@
         <name>CustomLabel</name>
     </types>
     <types>
-        <name>CustomLabel</name>
+        <members>CustomLabels</members>
+        <name>CustomLabels</name>
     </types>
     <types>
         <members>Account</members>
