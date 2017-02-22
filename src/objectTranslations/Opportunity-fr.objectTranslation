@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help><!-- Concatenated fields used during rollups to locate the most recent opportunity. --></help>
+        <help><!-- Formula: Concatenated fields used during rollups to locate the most recent opportunity. --></help>
         <label><!-- Combined Rollup Fieldset --></label>
         <name>CombinedRollupFieldset__c</name>
     </fields>
