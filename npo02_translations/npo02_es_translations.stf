@@ -1,0 +1,256 @@
+Language code: es
+Type: Bilingual
+
+------------------TRANSLATED-------------------
+
+ButtonOrLink.Household__c.Copy_Household_Address_to_Contacts	Copy Household Address to Contacts	Copiar dirección de la familia en el contacto	-
+ButtonOrLink.Campaign.Household_Mailing_List	Household Mailing List	Lista de envío de familia	-
+ButtonOrLink.Contact.Copy_Address_to_Household	Copy Address to Household	Copiar dirección en la familia	-
+CustomField.Household__c.Addressee.FieldLabel	Addressee	Destinatario	-
+CustomField.Household__c.Always_Anonymous.FieldLabel	Always Anonymous	Siempre anónima	-
+CustomField.Household__c.AverageAmount.FieldLabel	Average Gift	Donación promedio	-
+CustomField.Household__c.Best_Gift_Year.FieldLabel	Best Gift Year	Año de la mejor donación	-
+CustomField.Household__c.Best_Gift_Year_Total.FieldLabel	Best Gift Year Total	Total en año de mejor donación	-
+CustomField.Household__c.FirstCloseDate.FieldLabel	First Gift Date	Fecha de la primera donación	-
+CustomField.Household__c.Formal_Greeting.FieldLabel	Formal Greeting	Saludo formal	-
+CustomField.Household__c.Formula_MailingAddress.FieldLabel	Mailing Address	Dirección	-
+CustomField.Household__c.HouseholdEmail.FieldLabel	Household Email	Correo electrónico del Hogar	-
+CustomField.Household__c.HouseholdPhone.FieldLabel	Household Phone	Teléfono del Hogar	-
+CustomField.Household__c.Household_ID.FieldLabel	Household ID	ID Hogar	-
+CustomField.Household__c.Informal_Greeting.FieldLabel	Informal Greeting	Saludo informal	-
+CustomField.Household__c.LargestAmount.FieldLabel	Largest Gift	Monto de la mayor donación	-
+CustomField.Household__c.LastCloseDate.FieldLabel	Last Gift Date	Fecha de la última donación	-
+CustomField.Household__c.LastMembershipAmount.FieldLabel	Last Membership Amount	Monto de la última membresía	-
+CustomField.Household__c.LastMembershipDate.FieldLabel	Last Membership Date	Fecha de la última membresía	-
+CustomField.Household__c.LastMembershipLevel.FieldLabel	Last Membership Level	Nivel de la última membresía	-
+CustomField.Household__c.LastMembershipOrigin.FieldLabel	Last Membership Origin	Origen de la última membresía	-
+CustomField.Household__c.LastOppAmount.FieldLabel	Last Gift Amount	Monto de la última donación	-
+CustomField.Household__c.MailingCity.FieldLabel	Mailing City	Ciudad	-
+CustomField.Household__c.MailingCountry.FieldLabel	Mailing Country	País	-
+CustomField.Household__c.MailingPostalCode.FieldLabel	Mailing Zip/Postal Code	Código Postal	-
+CustomField.Household__c.MailingState.FieldLabel	Mailing State/Province	Estado/Provincia	-
+CustomField.Household__c.MailingStreet.FieldLabel	Mailing Street	Calle	-
+CustomField.Household__c.MembershipEndDate.FieldLabel	Membership End Date	Fecha de fin de la membresía	-
+CustomField.Household__c.MembershipJoinDate.FieldLabel	Membership Join Date	Fecha de inicio de la membresía	-
+CustomField.Household__c.Membership_Span.FieldLabel	Membership Span	Duración de la membresía	-
+CustomField.Household__c.Membership_Status.FieldLabel	Membership Status	Estado de la membresía	-
+CustomField.Household__c.Membership_Status.HelpText	Current, expired, or grace period	Actual, vencida, o en período de gracia	-
+CustomField.Household__c.NumberOfClosedOpps.FieldLabel	Total Number of Gifts	Cantidad de donaciones	-
+CustomField.Household__c.NumberOfMembershipOpps.FieldLabel	Number of Memberships	Cantidad de membresías	-
+CustomField.Household__c.OppAmount2YearsAgo.FieldLabel	Total Gifts Two Years Ago	Total donado hace dos años	-
+CustomField.Household__c.OppAmountLastNDays.FieldLabel	Total Gifts Last N Days	Total donado últimos N días	-
+CustomField.Household__c.OppAmountLastYear.FieldLabel	Total Gifts Last Year	Total donando el año pasado	-
+CustomField.Household__c.OppAmountThisYear.FieldLabel	Total Gifts This Year	Total donado este año	-
+CustomField.Household__c.OppsClosed2YearsAgo.FieldLabel	Number of Gifts Two Years Ago	Cantidad de donaciones hace dos años	-
+CustomField.Household__c.OppsClosedLastNDays.FieldLabel	Number of Gifts Last N Days	Cantidad de donaciones últimos N días	-
+CustomField.Household__c.OppsClosedLastYear.FieldLabel	Number of Gifts Last Year	Cantidad de donaciones el año pasado	-
+CustomField.Household__c.OppsClosedThisYear.FieldLabel	Number of Gifts This Year	Cantidad de donaciones este año	-
+CustomField.Household__c.SmallestAmount.FieldLabel	Smallest Gift	Monto de la menor donación	-
+CustomField.Household__c.TotalMembershipOppAmount.FieldLabel	Total Membership Amount	Monto total de membresías	-
+CustomField.Household__c.TotalOppAmount.FieldLabel	Total Gifts	Total donado	-
+CustomField.Households_Settings__c.Advanced_Household_Naming.FieldLabel	Automatic Household Naming	Nombrar automáticamente a la familia	-
+CustomField.Households_Settings__c.Advanced_Household_Naming.HelpText	If checked, the system will provide automatic naming for Household Names, Informal and Formal Greetings.	Si seleccionado, el sistema proveerá automáticamente de nombres para el Nombre de la familia, Saludo informal y Saludo formal	-
+CustomField.Households_Settings__c.Always_Rollup_to_Primary_Contact.FieldLabel	Always Rollup to Primary Contact Role	Sumar a totales de la f. de c. principal	-
+CustomField.Households_Settings__c.Always_Rollup_to_Primary_Contact.HelpText	Always rollup donor statistics to the primary Contact Role, and corresponding household, on an opportunity, even if the opportunity is not from an individual (i.e. from a company, foundation, etc.)	Siempre sumar a los totales de donaciones del contacto con función de contacto principal, y a su correspondiente familia, en una oportunidad, incluso si la oportunidad no es de un individuo (por ejemplo: de una empresa, fundación, etc.)	-
+CustomField.Households_Settings__c.Async_Household_Naming.FieldLabel	Async Household Naming	Nombramiento asíncrono de Familia	-
+CustomField.Households_Settings__c.Async_Household_Naming.HelpText	This is a non-exposed setting to toggle household naming code to use an asynchronous version instead of the standard version.	Ese es una configuración no expuesta para desactivar el código de nombramiento de familias y usar una versión asincrónica	-
+CustomField.Households_Settings__c.Batch_Size.FieldLabel	Rollup Batch Size	Tamaño del lote de totales	-
+CustomField.Households_Settings__c.Batch_Size.HelpText	The number of records processed at a time when calculating donor statistics.  The default size is 200.  Reduce to a smaller number if the Opportunity Rollups are failing due to system limits.	El número de registros que se procesa a la vez cuando se calculas las estadísticas del donante. Por defecto el tamaño es de 200. Reducir a un número menor si los Totales de oportunidades están fallando debido a limites en el sistema.	-
+CustomField.Households_Settings__c.Enable_Soft_Credit_Rollups.FieldLabel	Enable Soft Credit Rollups	Habilitar totales de créditos blandos	-
+CustomField.Households_Settings__c.Enable_Soft_Credit_Rollups.HelpText	Allows you to rollup closed Opportunity totals based on Opportunity Contact Role Roles.  Soft credit rollups happen only in the nightly batch job, and not on triggers.  They can be manually run using the Rollup Donations Batch tab.	Permite calcular totales de op. cerradas basados en la fun. del contacto en la op. Se calculan solamente en el trabajo programado de la noche, y no en triggers. Pueden ser calculados manualmente usando la pestaña de Lote de totales de donaciones.	-
+CustomField.Households_Settings__c.Excluded_Account_Opp_Rectypes.FieldLabel	Opp RecTypes Excluded for Account Rollup	TdR Op. excl. de totales en cuenta	-
+CustomField.Households_Settings__c.Excluded_Account_Opp_Rectypes.HelpText	Names of Opportunity Record Types to exclude from statistics when rolling up Account Opportunities.	Nombre del tipo de registro de oportunidad excluidos de las estadísticas cuando se calculan los totales de oportunidades en cuenta.	-
+CustomField.Households_Settings__c.Excluded_Account_Opp_Types.FieldLabel	Opp Types Excluded for Account Rollup	Tipos de op. excl. de totales en cuentas	-
+CustomField.Households_Settings__c.Excluded_Account_Opp_Types.HelpText	Values for the Opportunity Type field to exclude from statistics when rolling up Account Opportunities.	Valores de el campo Tipo en oportunidad que se excluyen de las estadísticas cuando se calculan los totales de oportunidades en cuenta.	-
+CustomField.Households_Settings__c.Excluded_Contact_Opp_Rectypes.FieldLabel	Opp RecTypes Excluded for Contact Rollup	TdR Op. excl. de totales en contactos	-
+CustomField.Households_Settings__c.Excluded_Contact_Opp_Rectypes.HelpText	Names of Opportunity Record Types to exclude from statistics when rolling up Contact Opportunities.	Nombre del tipo de registro de oportunidad excluidos de las estadísticas cuando se calculan los totales de oportunidades en contactos.	-
+CustomField.Households_Settings__c.Excluded_Contact_Opp_Types.FieldLabel	Opp Types Excluded for Contact Rollup	T. de op. excl. de totales en contactos	-
+CustomField.Households_Settings__c.Excluded_Contact_Opp_Types.HelpText	Values for the Opportunity Type field to exclude from statistics when rolling up Contact Opportunities.	Valores de el campo Tipo en oportunidad que se excluyen de las estadísticas cuando se calculan los totales de oportunidades en contactos.	-
+CustomField.Households_Settings__c.Force_Fiscal_Year.FieldLabel	Force Fiscal Year	Forzar año fiscal	-
+CustomField.Households_Settings__c.Force_Fiscal_Year.HelpText	The NPSP automatically checks for the presence of custom fiscal years, and disabled FY settings if they're found to avoid errors.  This setting overrides that safety-check for users who have accidentally enabled custom fiscal years.	El NPSP automáticamente busca años fiscales (AF) personalizados, y deshabilita la configuración del AF si se encuentra para evitar errores. Esta configuración sobrescribe esta búsqueda para usuarios que hayan accidentalmente habilitado AF personalizado.	-
+CustomField.Households_Settings__c.Household_Contact_Roles_On.FieldLabel	Household Contact Roles On	Función del contacto en familia activado	-
+CustomField.Households_Settings__c.Household_Contact_Roles_On.HelpText	Check this field to create automatic Contact Roles for Household members of the Primary Contact	Seleccionar este campo para crear automáticamente funciones del contacto para miembros de la familia del contacto principal.	-
+CustomField.Households_Settings__c.Household_Creation_Excluded_Recordtypes.FieldLabel	Household Creation Excluded Record Types	TdR. excl. de la creación de familias	-
+CustomField.Households_Settings__c.Household_Creation_Excluded_Recordtypes.HelpText	Contact Record Types excluded from Household creation.  This setting is ignored if you are using the Household Account model.	Tipos de registro de los contactos excluidos de la creación de familias. Esta configuración es ignorada si se esta utilizando el modelo de cuentas Familia.	-
+CustomField.Households_Settings__c.Household_Mailing_List_ID.FieldLabel	Household Mailing List Report	Informe de lista de envío de familia	-
+CustomField.Households_Settings__c.Household_Mailing_List_ID.HelpText	The report ID of the Household Mailing List Report used for Household-deduplicated Campaign mailing lists.  Report should be of Campaigns with Contacts, where Member Status does not contain 'Duplicate'	El ID del informe de la lista de envío de la familia usado para la campaña lista de envío sin duplicar de la familia. El informe debe ser de Campañas con contactos, donde miembro de campaña no incluye "Duplicado"	-
+CustomField.Households_Settings__c.Household_Member_Contact_Role.FieldLabel	Household Member Contact Role	F. del contacto del miembro de familia	-
+CustomField.Households_Settings__c.Household_Member_Contact_Role.HelpText	The Role used when creating automatic Opportunity Contact Roles for Household members.	La función usada cuando se crea automáticamente las funciones de contacto en la oportunidad para los miembros de la familia.	-
+CustomField.Households_Settings__c.Household_OCR_Excluded_Recordtypes.FieldLabel	Household OCR Excluded Record Types	TdR excl. de la f. de contacto en op.	-
+CustomField.Households_Settings__c.Household_OCR_Excluded_Recordtypes.HelpText	Contact Record Types excluded from Household Opportunity Contact Role creation	Tipo de registro del contacto excluido de la creación de funciones del contacto en oportunidades para familias	-
+CustomField.Households_Settings__c.Household_Rules.FieldLabel	Household Object Rules	Reglas del objeto familias	-
+CustomField.Households_Settings__c.Household_Rules.HelpText	Specifies which Contacts will have Households objects automatically created for them.  Note that this is only used for Contacts using the One-to-One or Individual Account Model.  This is ignored for Contacts with the Household Account Model.	Especifica a que contactos se les creará automáticamente un objeto familias. Notar que esto solo se utilizará para contactos que tengan el modelo de cuenta Uno-a-Uno o Individual. Esto se ignorará para contactos con el modelo de cuenta Familias.	-
+CustomField.Households_Settings__c.Membership_Grace_Period.FieldLabel	Membership Grace Period	Período de gracia de la membresía	-
+CustomField.Households_Settings__c.Membership_Grace_Period.HelpText	The length of the grace period (in days) after a membership expires (last end date) before the status moves from 'Grace Period' to 'Expired'.  Defaults to 30 days.	La duración del período de gracia (en días) después de que la membresía vence (última fecha de fin) antes que el estado se cambie de "Período de gracia" a "Vendida". Por defecto son 30 días.	-
+CustomField.Households_Settings__c.Membership_Record_Types.FieldLabel	Membership Record Type Names	Tipo de registro de membresía	-
+CustomField.Households_Settings__c.Membership_Record_Types.HelpText	Names of Opportunity Record Types, such as Membership, that you want to roll up separately from other Opportunity Record Types.	Nombre del tipo de registro de oportunidades, como Membresía, que se quiere que sumen a totales diferentes de otros tipos de registro de oportunidad.	-
+CustomField.Households_Settings__c.Opp_Rollup_Scheduled_Job_Id.FieldLabel	Opp Rollup Scheduled Job Id	Id trabajos program. de totales de op.	-
+CustomField.Households_Settings__c.Opp_Rollup_Scheduled_Job_Id.HelpText	Id for the currently scheduled Opportunity Rollup Job	Id del actual trabajo programado de los totales de oportunidades.	-
+CustomField.Households_Settings__c.Rollup_N_Day_Value.FieldLabel	Rollup N Day Value	Valor de N en totales	-
+CustomField.Households_Settings__c.Rollup_N_Day_Value.HelpText	Provide a value for 'N day' rollups, where 'N' is the number of days from today into the past.  This value defaults to rollup over the past 365 days.	Asignar un valor para los totales "N días", donde "N" es el número de días de hoy hacía el pasado. Por defecto este valor calcula los últimos 365 días.	-
+CustomField.Households_Settings__c.Schedule_Job_Limit.FieldLabel	Schedule Job Limit	Límite de trabajos programados	-
+CustomField.Households_Settings__c.Schedule_Job_Limit.HelpText	The number of active scheduled Apex Jobs to look at when scheduling new jobs.	El número de trabajos programados de Apex activados a considerar cuando se programa un nuevo trabajo.	-
+CustomField.Households_Settings__c.Soft_Credit_Roles.FieldLabel	Soft Credit Roles	Función de crédito blando	-
+CustomField.Households_Settings__c.Soft_Credit_Roles.HelpText	List of Opportunity Contact Role roles to include in soft credit rollups.	Lista de funciones del contacto en la oportunidad a incluir para el calculo de totales de crédito blando.	-
+CustomField.Households_Settings__c.Use_Fiscal_Year_for_Rollups.FieldLabel	Use Fiscal Year for Rollups	Usar año fiscal en totales	-
+CustomField.Households_Settings__c.Use_Fiscal_Year_for_Rollups.HelpText	Checking this box will cause Opportunity rollup totals to respect fiscal year, instead of calendar years settings. To set Fiscal Year information, go to Setup->Company Profile->Fiscal Year.  NOTE: Custom Fiscal Year Settings are NOT supported.	Seleccionar este campo hará que los totales en oportunidades respeten el año fiscal, en vez del año calendario. Para configurar el AF, ir a Configuración -> Perfil de la compañía -> Año fiscal. Nota: NO funciona con una configuración personalizada de AF	-
+CustomField.Opportunity_Rollup_Error__c.Error_Datetime.FieldLabel	Error Datetime	Fecha del error	-
+CustomField.Opportunity_Rollup_Error__c.Error_Datetime.HelpText	Datetime of the error	Fecha del error	-
+CustomField.Opportunity_Rollup_Error__c.Error_Message.FieldLabel	Error Message	Mensaje del error	-
+CustomField.Opportunity_Rollup_Error__c.Error_Message.HelpText	Full text of the error message	Texto completo del mensaje de error.	-
+CustomField.Opportunity_Rollup_Error__c.Error_Object_Type.FieldLabel	Error Object Type	Tipo de objeto del error	-
+CustomField.Opportunity_Rollup_Error__c.Error_Object_Type.HelpText	The object type to which this error refers	El objeto al cual se refiere este error	-
+CustomField.Opportunity_Rollup_Error__c.Error_Record_Link.FieldLabel	Error Record Link	URL al registro del error	-
+CustomField.Opportunity_Rollup_Error__c.Error_Record_Link.HelpText	Link to the record on which the error occurred	URL al registro en el cual ocurrió el error.	-
+CustomField.Opportunity_Rollup_Error__c.Error_Type.FieldLabel	Error Type	Tipo de error	-
+CustomField.Opportunity_Rollup_Error__c.Error_Type.HelpText	Type of error that occurred	Tipo de error que ocurrió.	-
+CustomField.User_Rollup_Field_Settings__c.Field_Action.FieldLabel	Field Action	Acción	-
+CustomField.User_Rollup_Field_Settings__c.Field_Action.HelpText	The rollup action (MIN, MAX, SUM, COUNT) to be performed on the source field	La acción en el total (MIN, MAX, SUMA, CUENTA) a realizarse en el campo de origen.	-
+CustomField.User_Rollup_Field_Settings__c.Object_Name.FieldLabel	Object Name	Nombre del objeto	-
+CustomField.User_Rollup_Field_Settings__c.Object_Name.HelpText	The object this user rollup is mapped to	El objeto al que este total esta relacionado.	-
+CustomField.User_Rollup_Field_Settings__c.Source_Field.FieldLabel	Source Field	Campo de origen	-
+CustomField.User_Rollup_Field_Settings__c.Source_Field.HelpText	The source field and action from the object for this user rollup	El campo de origen y la acción del objeto para este total.	-
+CustomField.User_Rollup_Field_Settings__c.Target_Field.FieldLabel	Target Field	Campo de destino	-
+CustomField.User_Rollup_Field_Settings__c.Target_Field.HelpText	The target field for placing the rolled-up value for this user defined rollup	Campo de destino donde se completará el valor de este total definido por el usuario.	-
+CustomField.Account.AverageAmount.FieldLabel	Average Gift	Donación promedio	-
+CustomField.Account.Best_Gift_Year.FieldLabel	Best Gift Year	Año de la mejor donación	-
+CustomField.Account.Best_Gift_Year_Total.FieldLabel	Best Gift Year Total	Total en año de mejor donación	-
+CustomField.Account.FirstCloseDate.FieldLabel	First Gift Date	Fecha de la primera donación	-
+CustomField.Account.Formal_Greeting.FieldLabel	Formal Greeting	Saludo formal	-
+CustomField.Account.Formal_Greeting.HelpText	For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically.	Para Cuenta Familia, usa campos de contactos relacionados no excluidos y ordenados. Se genera automáticamente.	-
+CustomField.Account.HouseholdPhone.FieldLabel	Household Phone	Teléfono de la familia	-
+CustomField.Account.Informal_Greeting.FieldLabel	Informal Greeting	Saludo informal	-
+CustomField.Account.Informal_Greeting.HelpText	For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically.	Para Cuenta Familia, usa campos de contactos relacionados no excluidos y ordenados. Se genera automáticamente.	-
+CustomField.Account.LargestAmount.FieldLabel	Largest Gift	Monto de la mayor donación	-
+CustomField.Account.LastCloseDate.FieldLabel	Last Gift Date	Fecha de la última donación	-
+CustomField.Account.LastMembershipAmount.FieldLabel	Last Membership Amount	Monto de la última membresía	-
+CustomField.Account.LastMembershipDate.FieldLabel	Last Membership Date	Fecha de la última membresía	-
+CustomField.Account.LastMembershipLevel.FieldLabel	Last Membership Level	Nivel de la última membresía	-
+CustomField.Account.LastMembershipOrigin.FieldLabel	Last Membership Origin	Origen de la última membresía	-
+CustomField.Account.LastOppAmount.FieldLabel	Last Gift Amount	Monto de la última donación	-
+CustomField.Account.MembershipEndDate.FieldLabel	Membership End Date	Fecha de fin de la membresía	-
+CustomField.Account.MembershipJoinDate.FieldLabel	Membership Join Date	Fecha de inicio de la membresía	-
+CustomField.Account.NumberOfClosedOpps.FieldLabel	Total Number of Gifts	Cantidad de donaciones	-
+CustomField.Account.NumberOfMembershipOpps.FieldLabel	Number of Memberships	Cantidad de membresías	-
+CustomField.Account.OppAmount2YearsAgo.FieldLabel	Total Gifts Two Years Ago	Total donado hace dos años	-
+CustomField.Account.OppAmountLastNDays.FieldLabel	Total Gifts Last N Days	Total donado últimos N días	-
+CustomField.Account.OppAmountLastYear.FieldLabel	Total Gifts Last Year	Total donando el año pasado	-
+CustomField.Account.OppAmountThisYear.FieldLabel	Total Gifts This Year	Total donado este año	-
+CustomField.Account.OppsClosed2YearsAgo.FieldLabel	Number of Gifts Two Years Ago	Cantidad de donaciones hace dos años	-
+CustomField.Account.OppsClosedLastNDays.FieldLabel	Number of Gifts Last N Days	Cantidad de donaciones últimos N días	-
+CustomField.Account.OppsClosedLastYear.FieldLabel	Number of Gifts Last Year	Cantidad de donaciones el año pasado	-
+CustomField.Account.OppsClosedThisYear.FieldLabel	Number of Gifts This Year	Cantidad de donaciones este año	-
+CustomField.Account.SYSTEM_CUSTOM_NAMING.HelpText	For Household Accounts, specifies which name related fields should not be automatically populated by the Householding code.	Para Cuentas Familias, especifica que campos de nombres no deben completarse automáticamente por el código de Familias.	-
+CustomField.Account.SmallestAmount.FieldLabel	Smallest Gift	Monto de la menor donación	-
+CustomField.Account.TotalMembershipOppAmount.FieldLabel	Total Membership Amount	Monto total de membresías	-
+CustomField.Account.TotalOppAmount.FieldLabel	Total Gifts	Total donado	-
+CustomField.Contact.AverageAmount.FieldLabel	Average Gift	Donación promedio	-
+CustomField.Contact.Best_Gift_Year.FieldLabel	Best Gift Year	Año de mejor donación	-
+CustomField.Contact.Best_Gift_Year_Total.FieldLabel	Best Gift Year Total	Total en año de mejor donación	-
+CustomField.Contact.FirstCloseDate.FieldLabel	First Gift Date	Fecha de primera donación	-
+CustomField.Contact.Formula_HouseholdMailingAddress.FieldLabel	Household Mailing Address	Dirección del Hogar	-
+CustomField.Contact.Formula_HouseholdPhone.FieldLabel	Household Phone	Teléfono del Hogar	-
+CustomField.Contact.Household.FieldLabel	Household	Hogar	-
+CustomField.Contact.Household.RelatedListLabel	Household Members	Miembros del Hogar	-
+CustomField.Contact.Household_Naming_Order.FieldLabel	Household Naming Order	Orden en el nombre de la familia	-
+CustomField.Contact.LargestAmount.FieldLabel	Largest Gift	Monto de la mayor donación	-
+CustomField.Contact.LastCloseDate.FieldLabel	Last Gift Date	Fecha de última donación	-
+CustomField.Contact.LastCloseDateHH.FieldLabel	Last Household Gift Date	Fecha de última donación de la familia	-
+CustomField.Contact.LastMembershipAmount.FieldLabel	Last Membership Amount	Monto de última membresía	-
+CustomField.Contact.LastMembershipDate.FieldLabel	Last Membership Date	Fecha de última membresía	-
+CustomField.Contact.LastMembershipLevel.FieldLabel	Last Membership Level	Nivel de última membresía	-
+CustomField.Contact.LastMembershipOrigin.FieldLabel	Last Membership Origin	Origen de última membresía	-
+CustomField.Contact.LastOppAmount.FieldLabel	Last Gift Amount	Monto de última donación	-
+CustomField.Contact.MembershipEndDate.FieldLabel	Membership End Date	Fecha de fin de membresía	-
+CustomField.Contact.MembershipJoinDate.FieldLabel	Membership Join Date	Fecha de inicio de membresía	-
+CustomField.Contact.Naming_Exclusions.FieldLabel	Naming Exclusions	Exclusión en el nombres de familia	-
+CustomField.Contact.Naming_Exclusions.HelpText	Determines which household names this contact is NOT included as part of.	Determina en cuales saludos de la familia el contacto NO esta incluido.	-
+CustomField.Contact.NumberOfClosedOpps.FieldLabel	Total Number of Gifts	Cantidad de donaciones	-
+CustomField.Contact.NumberOfMembershipOpps.FieldLabel	Number of Memberships	Cantidad de membresías	-
+CustomField.Contact.OppAmount2YearsAgo.FieldLabel	Total Gifts Two Years Ago	Total donado hace dos años	-
+CustomField.Contact.OppAmountLastNDays.FieldLabel	Total Gifts Last N Days	Total donado últimos N días	-
+CustomField.Contact.OppAmountLastYear.FieldLabel	Total Gifts Last Year	Total donando el año pasado	-
+CustomField.Contact.OppAmountLastYearHH.FieldLabel	Total Household Gifts Last Year	Total donado por familia el año pasado	-
+CustomField.Contact.OppAmountThisYear.FieldLabel	Total Gifts This Year	Total donado este año	-
+CustomField.Contact.OppAmountThisYearHH.FieldLabel	Total Household Gifts This Year	Total donado por familia este año	-
+CustomField.Contact.OppsClosed2YearsAgo.FieldLabel	Number of Gifts Two Years Ago	Cantidad de donaciones hace dos años	-
+CustomField.Contact.OppsClosedLastNDays.FieldLabel	Number of Gifts Last N Days	Cantidad de donaciones últimos N días	-
+CustomField.Contact.OppsClosedLastYear.FieldLabel	Number of Gifts Last Year	Cantidad de donaciones el año pasado	-
+CustomField.Contact.OppsClosedThisYear.FieldLabel	Number of Gifts This Year	Cantidad de donaciones este año	-
+CustomField.Contact.SmallestAmount.FieldLabel	Smallest Gift	Monto de la menor donación	-
+CustomField.Contact.Soft_Credit_Last_Year.FieldLabel	Soft Credit Last Year	Crédito blando el año pasado	-
+CustomField.Contact.Soft_Credit_Last_Year.HelpText	Total soft credit amount last year.	Monto total de crédito blando el año pasado	-
+CustomField.Contact.Soft_Credit_This_Year.FieldLabel	Soft Credit This Year	Crédito blando este año	-
+CustomField.Contact.Soft_Credit_This_Year.HelpText	Total soft credit amount this year	Monto total de crédito blando este año	-
+CustomField.Contact.Soft_Credit_Total.FieldLabel	Soft Credit Total	Total crédito blando	-
+CustomField.Contact.Soft_Credit_Total.HelpText	Total amount in soft credits for this Contact's lifetime. Defined in the Household Settings tab.	Monto total de crédito blando del contacto. Se define en la configuración del NPSP.	-
+CustomField.Contact.Soft_Credit_Two_Years_Ago.FieldLabel	Soft Credit Two Years Ago	Crédito blando hace dos años	-
+CustomField.Contact.Soft_Credit_Two_Years_Ago.HelpText	Total soft credit amount two years ago.	Monto total de crédito blando hace dos años	-
+CustomField.Contact.TotalMembershipOppAmount.FieldLabel	Total Membership Amount	Monto total de membresías	-
+CustomField.Contact.TotalOppAmount.FieldLabel	Total Gifts	Total donado	-
+CustomField.Contact.Total_Household_Gifts.FieldLabel	Total Household Gifts	Total donado por la familia	-
+CustomField.Opportunity.CombinedRollupFieldset.FieldLabel	Combined Rollup Fieldset	Conjunto de campos combinados	-
+CustomField.Opportunity.CombinedRollupFieldset.HelpText	Concatenated fields used during rollups to locate the most recent opportunity.	Concatenación de campos usados durante el calculo de totales para localizar la oportunidad más reciente.	-
+CustomReportType.Households_and_Donations.Name	Households and Donations	Familias y Donaciones	-
+CustomReportType.Households_and_Donations.Description	Households and Donations	Familias y Donaciones	-
+CrtLayoutSection.Households_and_Donations_1	Households	Familias	-
+CrtLayoutSection.Households_and_Donations_2	Household Members	Miembros de Familias	-
+CrtLayoutSection.Households_and_Donations_3	Opportunities	Oportunidades	-
+LayoutSection.Household__c.Household Layout.Custom Links_5	Custom Links	Vínculos personalizados	-
+LayoutSection.Household__c.Household Layout.Donation Information_1	Donation Information	Información de la donación	-
+LayoutSection.Household__c.Household Layout.Donation Totals_2	Donation Totals	Totales de la donación	-
+LayoutSection.Household__c.Household Layout.Household Information_0	Household Information	Información de la Familia	-
+PicklistValue.Opportunity.systemHouseholdContactRoleProcessor.All Opportunities	All Opportunities	Todas las oportunidades	-
+PicklistValue.Opportunity.systemHouseholdContactRoleProcessor.No Opportunities	No Opportunities	No oportunidades	-
+WebTab.Households_Settings	Households Settings	Configuración de Familias	-
+WebTab.Opportunity_Rollups	Opportunity Rollups	Totales en oportunidades	-
+WebTab.User_Rollups	User Rollups	Totales del usuario	-
+CustomLabel.Add	Add	Agregar	-
+CustomLabel.AddAndMerge	Add and merge Households	Agregar y combinar Familias	-
+CustomLabel.AddAndRemove	Add and remove from old Household	Agregar y borrar desde antigua Familia	-
+CustomLabel.AddHouseholdMembers	Add Members	Agregar Miembros	-
+CustomLabel.AddressCopyFailure	An error occurred during the copying of the address.	Ocurrió un error mientras se copiaban las direcciones.	-
+CustomLabel.AddressCopySuccess	Address copied successfully.	Dirección copiada exitosamente.	-
+CustomLabel.AddressCopyUnknownObject	Address Copy is not supported for this object type.	El Copiado de Direcciones no está disponible para este tipo de objeto.	-
+CustomLabel.AddressToAllMembers	Set the home address on all household members to this address.	Establecer esta dirección como la Dirección de la familia en todos los miembros de la familia	-
+CustomLabel.AlreadyInHousehold	Already In Household	Ya está en la Familia.	-
+CustomLabel.AutoFormalGreeting	Auto Formal Greeting	Auto Saludo Formal	-
+CustomLabel.AutoInformalGreeting	Auto Informal Greeting	Auto Saludo Informal.	-
+CustomLabel.AutoName	Auto Name	Auto Nombre	-
+CustomLabel.Change	Change	Cambiar	-
+CustomLabel.ChangeAddress	Change Address	Cambiar Direcciones	-
+CustomLabel.ChangesNotSaved	Changes have not been saved.	Los cambios no hay sido guardados.	-
+CustomLabel.ContactAlreadyInHousehold	is already in a household. Would you like to add this contact with or without their existing household members?	ya está en una Familia. ¿Quiere agregar este contacto con o sin sus miembros de familia existentes?	-
+CustomLabel.ContactLastNameRqd	Last Name is required.	Apellido obligatorio.	-
+CustomLabel.ContactNameRqd	Enter a First Name and Last Name.	Ingrese un Nombre y Apellido.	-
+CustomLabel.CreatedOnSave	Contact will be created when Household is saved.	El contacto se creará cuando se guarda la Familia	-
+CustomLabel.DefaultHouseholdName	Household	Familia	-
+CustomLabel.DefaultHouseholdTransactionCurrency	$	€	-
+CustomLabel.Delete	Delete	Eliminar	-
+CustomLabel.EnterNewAddress	Enter a new address	Completar una nueva dirección	-
+CustomLabel.ExcludeText	Exclude Contact from automatic Household naming:	Excluir contacto del nombramiento automático de la Familia	-
+CustomLabel.ExistingHousehold	Existing Household	Familia existente	-
+CustomLabel.FindContactByName	Find contact by name ...	Encontrar contacto por nombre…	-
+CustomLabel.HouseholdAddress	Household Address	Dirección de familia	-
+CustomLabel.HouseholdAnonymousGreeting	Sir or Madam	Señor o señora	-
+CustomLabel.HouseholdAnonymousName	Anonymous	Anónima	-
+CustomLabel.HouseholdDetails	Household Details	Detalles de familia	-
+CustomLabel.HouseholdMembers	Household Members	Miembros del Hogar	-
+CustomLabel.HouseholdNameConnector	and	y	-
+CustomLabel.HouseholdNameOverrun	Friends	Amigos	-
+CustomLabel.Household_Contact_Role_Processor_Off	No Opportunities	No oportunidades	-
+CustomLabel.Household_Contact_Role_Processor_On	All Opportunities	Todas las oportunidades	-
+CustomLabel.Household_Contact_Roles_Help_Text	These settings let you automatically create Opportunity Contact Roles for Household members whenever an Opportunity is created.	Automáticamente crear Función del contacto en oportunidades para los miembros de la familia del donante principal	-
+CustomLabel.Household_Member_Contact_Role	Household Member	Miembro de familia	-
+CustomLabel.ManageHousehold	Manage Household	Gestionar familia	-
+CustomLabel.NameReplacementText	REPLACE	REEMPLAZAR	-
+CustomLabel.NewContact	New Contact	Nuevo contacto	-
+CustomLabel.NoContacts	There are currently no Contacts in this Household.	Actualmente no hay contactos en esta familia.	-
+CustomLabel.Opportunity_Error_Help_Text	Rollup errors can occur during nightly or manual rollups, and may affect the accuracy of your data.  Listed below are the errors, type of error, and a link to the record on which the error occurred. These errors are reset every time the nightly scheduled job or the manual rollups are run.  It is highly recommended these errors are addressed promptly to ensure the accuracy of your data.	Errores en totales pueden ocurrir durante el trabajo programado nocturno o en cálculos manuales, y pueden afectar la exactitud de los datos. A continuación se enumeran los errores, tipo de error, y un link al registro en el que se produjo el error. Estos errores se actualizan siempre que el trabajo de la noche o los cálculos manuales se ejecutan. Es muy recomendable que estos errores se traten de inmediato para garantizar la exactitud de los datos.	-
+CustomLabel.Opportunity_Rollup_Future_Call_Limit	Did not roll up because there were too few future calls available.	No se ejecutó porque había pocas llamadas futuras disponibles	-
+CustomLabel.Opportunity_Rollup_Scheduling_Error_Text	You have reached your limit of Scheduled Apex jobs and the Opportunity Rollups won\'t run nightly. If you want this job to run nightly, delete one of your scheduled jobs and reload this page.	Ha llegado a su límite de trabajo programadas Apex y los totales de oportunidad no se ejecutará por las noches. Si desea que esta tarea se ejecute todas las noches, elimina una de las tareas programadas y recarga esta página.	-
+CustomLabel.Primary_Donor_Contact_Role	Donor	Donante	-
+CustomLabel.RollupErrorMessage	Error(s) occurred the last time your Opportunities were rolled up. Please see the System Error Log panel for more information.	Error/es que ocurrieron la última vez que se calcularon los totales para Oportunidades. Por favor ver el panel System Error Log para más información.	-
+CustomLabel.SelectExistingAddress	Select an existing address	Seleccionar una dirección existente	-
+CustomLabel.SetAddress	Set Address	Definir Dirección	-
+CustomLabel.UDRDescription	These settings let you create and manage user defined rollups from an Opportunity (Donation) to a Contact, Account, or Household.  After you create a User Defined Rollup, you may want to use Rollup Donations Batch in NPSP Settings | Bulk Data Processes to recalculate all rollups in your instance and ensure that your new rollup field is correctly populated. \n \nWARNING: Keep in mind that rollups change how your Nonprofit Success Pack behaves. Improperly configured settings may cause your rollups to fail. Please test your user defined rollups thoroughly before deploying to production.	Configuración que contrala los totales definidos por el usuario de la Oportunidad/Donación al Contacto, Cuenta o Familia. Cambiar estos cambiará como se comporta el Nonprofit Success Pack. \n\nADVERTENCIA: Una mala configuración puede causar que los totales fallen. Por favor testear a fondo los totales definidos por el usuario antes de pasarlos a producción.	-
