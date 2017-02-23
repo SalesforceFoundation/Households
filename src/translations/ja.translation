@@ -81,7 +81,7 @@
         <name>DefaultHouseholdName</name>
     </customLabels>
     <customLabels>
-        <label>￥</label>
+        <label><!-- DefaultHouseholdTransactionCurrency --></label>
         <name>DefaultHouseholdTransactionCurrency</name>
     </customLabels>
     <customLabels>
