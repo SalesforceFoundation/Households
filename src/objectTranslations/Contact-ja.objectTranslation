@@ -227,7 +227,7 @@
         <name>Copy_Address_to_Household</name>
     </webLinks>
     <webLinks>
-        <label><!-- Household --></label>
+        <label>世帯</label>
         <name>Household</name>
     </webLinks>
 </CustomObjectTranslation>
