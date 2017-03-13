@@ -1,113 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label><!-- Average Gift --></label>
+        <help><!-- Average won Opportunity amount related to this Account.  Updated automatically. --></help>
+        <label>Don moyen</label>
         <name>AverageAmount__c</name>
     </fields>
     <fields>
-        <label><!-- Best Gift Year Total --></label>
+        <help><!-- The sum of won Opportunity amounts in the Best Gift Year for this Account. --></help>
+        <label>Total de la meilleure année de don</label>
         <name>Best_Gift_Year_Total__c</name>
     </fields>
     <fields>
-        <label><!-- Best Gift Year --></label>
+        <help><!-- The year in which the largest total amount of won Opportunities related to this Account occurred.  See also Best Gift Year Total. --></help>
+        <label>Meilleure année de don</label>
         <name>Best_Gift_Year__c</name>
     </fields>
     <fields>
-        <label><!-- First Gift Date --></label>
+        <help><!-- The earliest won Opportunity (by Close Date) with amount greater than zero related to this Account. --></help>
+        <label>Date du premier don</label>
         <name>FirstCloseDate__c</name>
     </fields>
     <fields>
-        <help><!-- For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically. --></help>
-        <label><!-- Formal Greeting --></label>
+        <help>Pour les comptes de foyer, utilise les champs de contacts associés non exclus, ordonnés. Généré automatiquement.</help>
+        <label>Salutation formelle</label>
         <name>Formal_Greeting__c</name>
     </fields>
     <fields>
-        <label><!-- Household Phone --></label>
+        <label>Téléphone de foyer</label>
         <name>HouseholdPhone__c</name>
     </fields>
     <fields>
-        <help><!-- For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically. --></help>
-        <label><!-- Informal Greeting --></label>
+        <help>Pour les comptes de foyer, utilise les champs de contacts associés non exclus, ordonnés. Généré automatiquement.</help>
+        <label>Salutation informelle</label>
         <name>Informal_Greeting__c</name>
     </fields>
     <fields>
-        <label><!-- Largest Gift --></label>
+        <help><!-- The largest amount of a won Opportunity related to this Account. --></help>
+        <label>Don le plus élevé</label>
         <name>LargestAmount__c</name>
     </fields>
     <fields>
-        <label><!-- Last Gift Date --></label>
+        <help><!-- The most recent Close Date of a won Opportunity related to this Account with amount greater than zero. --></help>
+        <label>Date du dernier don</label>
         <name>LastCloseDate__c</name>
     </fields>
     <fields>
-        <label><!-- Last Membership Amount --></label>
+        <help><!-- The amount of the most recent (by Close Date) won Membership Opportunity (by Record Type) for this Account. --></help>
+        <label>Dernier montant d’adhésion</label>
         <name>LastMembershipAmount__c</name>
     </fields>
     <fields>
-        <label><!-- Last Membership Date --></label>
+        <help><!-- The most recent Close Date of a won Membership Opportunity (by Record Type) related to this Account. --></help>
+        <label>Dernière date d’adhésion</label>
         <name>LastMembershipDate__c</name>
     </fields>
     <fields>
-        <label><!-- Last Membership Level --></label>
+        <help><!-- Membership level from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.&quot; --></help>
+        <label>Dernier niveau d’adhésion</label>
         <name>LastMembershipLevel__c</name>
     </fields>
     <fields>
-        <label><!-- Last Membership Origin --></label>
+        <help><!-- Membership &quot;origin&quot; (new, renew...) from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account. --></help>
+        <label>Dernière origine d’adhésion</label>
         <name>LastMembershipOrigin__c</name>
     </fields>
     <fields>
-        <label><!-- Last Gift Amount --></label>
+        <help><!-- The amount of the most recent won Opportunity (by Close Date) with amount greater than zero related to this Account. --></help>
+        <label>Montant du dernier don</label>
         <name>LastOppAmount__c</name>
     </fields>
     <fields>
-        <label><!-- Membership End Date --></label>
+        <help><!-- Membership end date from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account. --></help>
+        <label>Date de fin d’adhésion</label>
         <name>MembershipEndDate__c</name>
     </fields>
     <fields>
-        <label><!-- Membership Join Date --></label>
+        <help><!-- Membership start date from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account. --></help>
+        <label>Date d’adhésion</label>
         <name>MembershipJoinDate__c</name>
     </fields>
     <fields>
-        <label><!-- Total Number of Gifts --></label>
+        <help><!-- The total number of won Opportunities  related to this Account. --></help>
+        <label>Nombre total de dons</label>
         <name>NumberOfClosedOpps__c</name>
     </fields>
     <fields>
-        <label><!-- Number of Memberships --></label>
+        <help><!-- The total number of won Membership Opportunities (Record Type) related to this Account. --></help>
+        <label>Nombre d’adhésions</label>
         <name>NumberOfMembershipOpps__c</name>
     </fields>
     <fields>
-        <label><!-- Total Gifts Two Years Ago --></label>
+        <help><!-- The total amount of won Opportunities related to this Account, closed within the year or fiscal year preceding last year (see Household Settings). --></help>
+        <label>Total des dons totaux il y a deux ans</label>
         <name>OppAmount2YearsAgo__c</name>
     </fields>
     <fields>
-        <label><!-- Total Gifts Last N Days --></label>
+        <help><!-- The total amount of won Opportunities related to this Account, closed in the last number of days defined in Household Settings. --></help>
+        <label>Total des dons sur les N derniers jours</label>
         <name>OppAmountLastNDays__c</name>
     </fields>
     <fields>
-        <label><!-- Total Gifts Last Year --></label>
+        <help><!-- The total amount of won Opportunities related to this Account, closed in the current year or fiscal year. --></help>
+        <label>Total des dons sur l’année dernière</label>
         <name>OppAmountLastYear__c</name>
     </fields>
     <fields>
-        <label><!-- Total Gifts This Year --></label>
+        <help><!-- The total amount of won Opportunities related to this Account, closed in the current year or fiscal year. --></help>
+        <label>Total des dons cette année</label>
         <name>OppAmountThisYear__c</name>
     </fields>
     <fields>
-        <label><!-- Number of Gifts Two Years Ago --></label>
+        <help><!-- The total number of won Opportunities with amount greater than zero related to this Account, closed within the year or fiscal year preceding last year. --></help>
+        <label>Nombre de dons il y a deux ans</label>
         <name>OppsClosed2YearsAgo__c</name>
     </fields>
     <fields>
-        <label><!-- Number of Gifts Last N Days --></label>
+        <help><!-- The total amount of won Opportunities related to this Account, closed in the last number of days defined in Household Settings. --></help>
+        <label>Nombre de dons des N derniers jours</label>
         <name>OppsClosedLastNDays__c</name>
     </fields>
     <fields>
-        <label><!-- Number of Gifts Last Year --></label>
+        <help><!-- The total number of won Opportunities with amount greater than zero related to this Account, closed in the previous year or fiscal year (see Household Settings). --></help>
+        <label>Nombre de dons de l’année dernière</label>
         <name>OppsClosedLastYear__c</name>
     </fields>
     <fields>
-        <label><!-- Number of Gifts This Year --></label>
+        <help><!-- The total number of won Opportunities with amount greater than zero related to this Account, closed in the current year or fiscal year (see Household Settings). --></help>
+        <label>Nombre de dons cette année</label>
         <name>OppsClosedThisYear__c</name>
     </fields>
     <fields>
-        <help><!-- For Household Accounts, specifies which name related fields should not be automatically populated by the Householding code. --></help>
+        <help>Pour les comptes de foyer, indique quels champs associés au nom ne doivent pas être remplis automatiquement par le code de foyer.</help>
         <label><!-- _SYSTEM: CUSTOM NAMING --></label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
         <picklistValues>
@@ -124,15 +147,18 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Smallest Gift --></label>
+        <help><!-- The smallest non-zero amount of a won Opportunity related to this Account. --></help>
+        <label>Don le moins élevé</label>
         <name>SmallestAmount__c</name>
     </fields>
     <fields>
-        <label><!-- Total Membership Amount --></label>
+        <help><!-- The total amount of won Membership Opportunities (Record Type) related to this Account. --></help>
+        <label>Montant total d’adhésion</label>
         <name>TotalMembershipOppAmount__c</name>
     </fields>
     <fields>
-        <label><!-- Total Gifts --></label>
+        <help><!-- The sum of amounts of all won Opportunities related to this Account. --></help>
+        <label>Total des dons</label>
         <name>TotalOppAmount__c</name>
     </fields>
 </CustomObjectTranslation>
