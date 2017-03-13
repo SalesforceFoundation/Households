@@ -9,23 +9,23 @@
         <value><!-- Households Settings --></value>
     </caseValues>
     <fields>
-        <help><!-- If checked, the system will provide automatic naming for Household Names, Informal and Formal Greetings. --></help>
-        <label><!-- Automatic Household Naming --></label>
+        <help>Si coché, le système fournira automatiquement un nom pour les noms de foyers et les salutations formelles et informelles.</help>
+        <label>Dénomination automatique de foyer</label>
         <name>Advanced_Household_Naming__c</name>
     </fields>
     <fields>
-        <help><!-- Always rollup donor statistics to the primary Contact Role, and corresponding household, on an opportunity, even if the opportunity is not from an individual (i.e. from a company, foundation, etc.) --></help>
-        <label><!-- Always Rollup to Primary Contact Role --></label>
+        <help>Toujours cumuler les statistiques de donateur sur le rôle de contact principal et le foyer correspondant, pour une opportunité, même si elle ne provient pas d’un individu (par exemple une entreprise, une fondation, etc.)</help>
+        <label>Cumul tjrs sur rôle de contact principal</label>
         <name>Always_Rollup_to_Primary_Contact__c</name>
     </fields>
     <fields>
-        <help><!-- This is a non-exposed setting to toggle household naming code to use an asynchronous version instead of the standard version. --></help>
-        <label><!-- Async Household Naming --></label>
+        <help>Ce paramètre non exposé déclenche l’utilisation d’une version asynchrone du code de dénomination des foyers, au lieu de la version standard.</help>
+        <label>Dénomination de foyer asynchrone</label>
         <name>Async_Household_Naming__c</name>
     </fields>
     <fields>
-        <help><!-- The number of records processed at a time when calculating donor statistics.  The default size is 200.  Reduce to a smaller number if the Opportunity Rollups are failing due to system limits. --></help>
-        <label><!-- Rollup Batch Size --></label>
+        <help>Le nombre d’enregistrements traités en une fois lors du calcul des statistiques de donateurs.  La taille par défaut est 200.  Si les cumuls d’opportunités échouent à cause des limites du système, réduisez pour un nombre moins élevé.</help>
+        <label>Taille de lot de cumul</label>
         <name>Batch_Size__c</name>
     </fields>
     <fields>
@@ -59,8 +59,8 @@
         <name>Enable_Opp_Rollup_Triggers__c</name>
     </fields>
     <fields>
-        <help><!-- Allows you to rollup closed Opportunity totals based on Opportunity Contact Role Roles.  Soft credit rollups happen only in the nightly batch job, and not on triggers.  They can be manually run using the Rollup Donations Batch tab. --></help>
-        <label><!-- Enable Soft Credit Rollups --></label>
+        <help>Permet le cumul des totaux d’opp. fermées selon les rôles des contacts. Les cumuls de crédits de groupe ne se produisent que dans la tâche nocturne, pas sur les déclencheurs. Ils peuvent être exécutés manuellement dans l’onglet de cumul de dons par lot.</help>
+        <label>Activer les cumuls de crédits de groupe</label>
         <name>Enable_Soft_Credit_Rollups__c</name>
     </fields>
     <fields>
@@ -69,28 +69,28 @@
         <name>Enable_Update_Check__c</name>
     </fields>
     <fields>
-        <help><!-- Names of Opportunity Record Types to exclude from statistics when rolling up Account Opportunities. --></help>
-        <label><!-- Opp RecTypes Excluded for Account Rollup --></label>
+        <help>Noms des types d’enregistrement d’opportunité à exclure des statistiques lors du cumul des opportunités d’un compte.</help>
+        <label>Types d’enr. d’opp. exclus cumul compte</label>
         <name>Excluded_Account_Opp_Rectypes__c</name>
     </fields>
     <fields>
-        <help><!-- Values for the Opportunity Type field to exclude from statistics when rolling up Account Opportunities. --></help>
-        <label><!-- Opp Types Excluded for Account Rollup --></label>
+        <help>Valeurs du champ de type d’opportunité à exclure des statistiques lors du cumul des opportunités d’un compte.</help>
+        <label>Types d’opp. exclus cumul par compte</label>
         <name>Excluded_Account_Opp_Types__c</name>
     </fields>
     <fields>
-        <help><!-- Names of Opportunity Record Types to exclude from statistics when rolling up Contact Opportunities. --></help>
-        <label><!-- Opp RecTypes Excluded for Contact Rollup --></label>
+        <help>Noms des types d’enregistrement d’opportunité à exclure des statistiques lors du cumul des opportunités d’un contact.</help>
+        <label>Types d’enr. d’opp. exclus cumul contact</label>
         <name>Excluded_Contact_Opp_Rectypes__c</name>
     </fields>
     <fields>
-        <help><!-- Values for the Opportunity Type field to exclude from statistics when rolling up Contact Opportunities. --></help>
-        <label><!-- Opp Types Excluded for Contact Rollup --></label>
+        <help>Valeurs du champ de type d’opportunité à exclure des statistiques lors du cumul des opportunités d’un contact.</help>
+        <label>Types d’opp. exclus cumul par contact</label>
         <name>Excluded_Contact_Opp_Types__c</name>
     </fields>
     <fields>
-        <help><!-- The NPSP automatically checks for the presence of custom fiscal years, and disabled FY settings if they&apos;re found to avoid errors.  This setting overrides that safety-check for users who have accidentally enabled custom fiscal years. --></help>
-        <label><!-- Force Fiscal Year --></label>
+        <help>NPSP vérifie automatiquement la présence d’années personnalisées et désactive les paramètres d’année fiscale, pour éviter des erreurs. Ce paramètre contourne cette vérification pour les utilisateurs ayant activé les années fiscales personnalisées.</help>
+        <label>Forcer l’année fiscale personnalisée</label>
         <name>Force_Fiscal_Year__c</name>
     </fields>
     <fields>
@@ -99,33 +99,33 @@
         <name>Has_Package_Update__c</name>
     </fields>
     <fields>
-        <help><!-- Check this field to create automatic Contact Roles for Household members of the Primary Contact --></help>
-        <label><!-- Household Contact Roles On --></label>
+        <help>Cocher ce champ pour créer des rôles de contacts automatiques pour les membres du foyer du contact principal</help>
+        <label>Rôles de contact de foyer</label>
         <name>Household_Contact_Roles_On__c</name>
     </fields>
     <fields>
-        <help><!-- Contact Record Types excluded from Household creation.  This setting is ignored if you are using the Household Account model. --></help>
-        <label><!-- Household Creation Excluded Record Types --></label>
+        <help>Les types d’enregistrement de contact exclus de la création de foyer.  Ce paramètre est ignoré si vous utilisez le modèle de compte de foyer.</help>
+        <label>Types d’enr. exclus de création de foyer</label>
         <name>Household_Creation_Excluded_Recordtypes__c</name>
     </fields>
     <fields>
-        <help><!-- The report ID of the Household Mailing List Report used for Household-deduplicated Campaign mailing lists.  Report should be of Campaigns with Contacts, where Member Status does not contain &apos;Duplicate&apos; --></help>
-        <label><!-- Household Mailing List Report --></label>
+        <help>L’ID du rapport sur la liste de publipostage de foyer utilisé pour les campagnes de publipostage dédupliquées par foyer.  Le rapport doit contenir les campagnes avec des contacts dont le statut de membre ne contient pas « Duplicate »</help>
+        <label>Rapport liste de publipostage de foyer</label>
         <name>Household_Mailing_List_ID__c</name>
     </fields>
     <fields>
-        <help><!-- The Role used when creating automatic Opportunity Contact Roles for Household members. --></help>
-        <label><!-- Household Member Contact Role --></label>
+        <help>Le rôle utilisé lors de la création automatique de rôles de contact d’opportunité pour les membres de foyer.</help>
+        <label>Rôle de contact de membre de foyer</label>
         <name>Household_Member_Contact_Role__c</name>
     </fields>
     <fields>
-        <help><!-- Contact Record Types excluded from Household Opportunity Contact Role creation --></help>
-        <label><!-- Household OCR Excluded Record Types --></label>
+        <help>Les types d’enregistrement de contact exclus de la création de rôle de contact d’opportunité de foyer</help>
+        <label>Types d’enr. exclus rôles de contact</label>
         <name>Household_OCR_Excluded_Recordtypes__c</name>
     </fields>
     <fields>
-        <help><!-- Specifies which Contacts will have Households objects automatically created for them.  Note that this is only used for Contacts using the One-to-One or Individual Account Model.  This is ignored for Contacts with the Household Account Model. --></help>
-        <label><!-- Household Object Rules --></label>
+        <help>Indique pour quels contacts des objets de foyer seront créés automatiquement.  Notez que ceci n’est utilisé que pour les contacts utilisant le modèle de compte autocréé ou d’individus,  et ignoré pour les contacts ayant le modèle de compte de foyer.</help>
+        <label>Règles d’objets de foyer</label>
         <name>Household_Rules__c</name>
     </fields>
     <fields>
@@ -139,18 +139,18 @@
         <name>Max_Package_Version__c</name>
     </fields>
     <fields>
-        <help><!-- The length of the grace period (in days) after a membership expires (last end date) before the status moves from &apos;Grace Period&apos; to &apos;Expired&apos;.  Defaults to 30 days. --></help>
-        <label><!-- Membership Grace Period --></label>
+        <help>La durée (en jours) de la période de grâce après l’expiration d’une adhésion (dernière date de fin) avant que le statut passe de « Période de grâce » à « Expiré ».  La valeur par défaut est 30 jours.</help>
+        <label>Période de grâce d’adhésion</label>
         <name>Membership_Grace_Period__c</name>
     </fields>
     <fields>
-        <help><!-- Names of Opportunity Record Types, such as Membership, that you want to roll up separately from other Opportunity Record Types. --></help>
-        <label><!-- Membership Record Type Names --></label>
+        <help>Noms des types d’enregistrement d’opportunité, comme adhésion, que vous souhaitez cumuler séparément des autres types d’enregistrement d’opportunité.</help>
+        <label>Noms de type d’enregistrement d’adhésion</label>
         <name>Membership_Record_Types__c</name>
     </fields>
     <fields>
-        <help><!-- Id for the currently scheduled Opportunity Rollup Job --></help>
-        <label><!-- Opp Rollup Scheduled Job Id --></label>
+        <help>ID pour la tâche de cumul d’opportunités actuellement planifiée</help>
+        <label>ID de tâche planifiée de cumul d’opp.</label>
         <name>Opp_Rollup_Scheduled_Job_Id__c</name>
     </fields>
     <fields>
@@ -159,18 +159,18 @@
         <name>Package_Update_URL__c</name>
     </fields>
     <fields>
-        <help><!-- Provide a value for &apos;N day&apos; rollups, where &apos;N&apos; is the number of days from today into the past.  This value defaults to rollup over the past 365 days. --></help>
-        <label><!-- Rollup N Day Value --></label>
+        <help>Fournit une valeur pour les cumuls sur N jours, où N est le nombre de jours passés jusqu’à aujourd’hui.  Cette valeur cumule sur les derniers 365 jours par défaut.</help>
+        <label>Valeur de cumul N jours</label>
         <name>Rollup_N_Day_Value__c</name>
     </fields>
     <fields>
-        <help><!-- The number of active scheduled Apex Jobs to look at when scheduling new jobs. --></help>
-        <label><!-- Schedule Job Limit --></label>
+        <help>Le nombre de tâches Apex planifiées actives à viser lors de la création de nouvelles tâches.</help>
+        <label>Limitation des tâches prévues</label>
         <name>Schedule_Job_Limit__c</name>
     </fields>
     <fields>
-        <help><!-- List of Opportunity Contact Role roles to include in soft credit rollups. --></help>
-        <label><!-- Soft Credit Roles --></label>
+        <help>Liste de rôles de contact d’opportunité à inclure dans les cumuls de crédits de groupe.</help>
+        <label>Rôles de crédits de groupe</label>
         <name>Soft_Credit_Roles__c</name>
     </fields>
     <fields>
@@ -179,8 +179,8 @@
         <name>Update_Check_Interval__c</name>
     </fields>
     <fields>
-        <help><!-- Checking this box will cause Opportunity rollup totals to respect fiscal year, instead of calendar years settings. To set Fiscal Year information, go to Setup-&gt;Company Profile-&gt;Fiscal Year.  NOTE: Custom Fiscal Year Settings are NOT supported. --></help>
-        <label><!-- Use Fiscal Year for Rollups --></label>
+        <help>Totaux de cumul d’opp. respectant les années fiscales, non les années civiles. Pour définir les infos d’année fiscale, accéder à Configuration-&gt;Profil d’entreprise-&gt;Année fiscale  REMARQUE : params d’année fiscale personnalisés NON pris en charge.</help>
+        <label>Utiliser l’année fiscale pour les cumuls</label>
         <name>Use_Fiscal_Year_for_Rollups__c</name>
     </fields>
     <gender><!-- Masculine --></gender>
