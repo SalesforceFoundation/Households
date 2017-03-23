@@ -2,197 +2,197 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <help><!-- The average amount of all won Opportunities related to this Contact by a primary Opportunity Contact Role. --></help>
-        <label><!-- Average Gift --></label>
+        <label>Gemiddelde Gift</label>
         <name>AverageAmount__c</name>
     </fields>
     <fields>
         <help><!-- The sum of won Opportunity amounts in the Best Gift Year. --></help>
-        <label><!-- Best Gift Year Total --></label>
+        <label>Beste Gift Jaar Totaal</label>
         <name>Best_Gift_Year_Total__c</name>
     </fields>
     <fields>
         <help><!-- The year of the largest total amount of won Opportunities related to this Contact by primary Contact Role.  See also Best Gift Year Total. --></help>
-        <label><!-- Best Gift Year --></label>
+        <label>Beste Gift Jaar</label>
         <name>Best_Gift_Year__c</name>
     </fields>
     <fields>
         <help><!-- The oldest Close Date of a won Opportunity with amount greater than zero related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- First Gift Date --></label>
+        <label>Eerste Gift Datum</label>
         <name>FirstCloseDate__c</name>
     </fields>
     <fields>
         <help><!-- Formula: Clone of the Household Mailing address (also a Formula) --></help>
-        <label><!-- Household Mailing Address --></label>
+        <label>Verzendadres Huishouden</label>
         <name>Formula_HouseholdMailingAddress__c</name>
     </fields>
     <fields>
         <help><!-- Formula: Simple formula of Household Phone field. --></help>
-        <label><!-- Household Phone --></label>
+        <label>Telefoon Huishouden</label>
         <name>Formula_HouseholdPhone__c</name>
     </fields>
     <fields>
         <help><!-- Determines the order in which Contact names are used to generate Household name. --></help>
-        <label><!-- Household Naming Order --></label>
+        <label>Huishouden Naamgeving Order</label>
         <name>Household_Naming_Order__c</name>
     </fields>
     <fields>
-        <label><!-- Household --></label>
+        <label>Huishouden</label>
         <name>Household__c</name>
-        <relationshipLabel><!-- Household Members --></relationshipLabel>
+        <relationshipLabel>Huishoud Leden</relationshipLabel>
     </fields>
     <fields>
         <help><!-- The largest amount of a won Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Largest Gift --></label>
+        <label>Grootste Gift</label>
         <name>LargestAmount__c</name>
     </fields>
     <fields>
-        <label><!-- Last Household Gift Date --></label>
+        <label>Laatste Gift Datum Huishouden</label>
         <name>LastCloseDateHH__c</name>
     </fields>
     <fields>
         <help><!-- The close date of the most recent won Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Last Gift Date --></label>
+        <label>Laatste Gift Datum</label>
         <name>LastCloseDate__c</name>
     </fields>
     <fields>
         <help><!-- The amount of the most recent (by Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Last Membership Amount --></label>
+        <label>Laatste Lidmaatschap Bedrag</label>
         <name>LastMembershipAmount__c</name>
     </fields>
     <fields>
         <help><!-- The most recent Close Date of a won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Last Membership Date --></label>
+        <label>Laaste Lidmaatschap Datum</label>
         <name>LastMembershipDate__c</name>
     </fields>
     <fields>
         <help><!-- The level of the most recent (by Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Last Membership Level --></label>
+        <label>Laatste Lidmaatschap Level</label>
         <name>LastMembershipLevel__c</name>
     </fields>
     <fields>
         <help><!-- The origin (new, renewal, reacquire...) of the most recent (Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Last Membership Origin --></label>
+        <label>Laatste Lidmaatschap Oorsprong</label>
         <name>LastMembershipOrigin__c</name>
     </fields>
     <fields>
         <help><!-- The amount of the most recent won Opportunity by Close Date related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Last Gift Amount --></label>
+        <label>Laatste Gift Bedrag</label>
         <name>LastOppAmount__c</name>
     </fields>
     <fields>
         <help><!-- The Membership End Date of the most recent (Close Date) Membership Opportunity (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Membership End Date --></label>
+        <label>Einddatum Lidmaatschap</label>
         <name>MembershipEndDate__c</name>
     </fields>
     <fields>
         <help><!-- The Join Date of the oldest (Close Date) Membership Opportunity (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Membership Join Date --></label>
+        <label>Begindatum Lidmaatschap</label>
         <name>MembershipJoinDate__c</name>
     </fields>
     <fields>
-        <help><!-- Select to exclude this Contact&apos;s name from various generated Household names. --></help>
-        <label><!-- Naming Exclusions --></label>
+        <help>Bepaald welke namen van het huishouden deze Contactpersoon NIET bijhoort.</help>
+        <label>Uitsluitingen benoemen</label>
         <name>Naming_Exclusions__c</name>
         <picklistValues>
             <masterLabel>Household__c.Formal_Greeting__c</masterLabel>
-            <translation><!-- Household__c.Formal_Greeting__c --></translation>
+            <translation>Huishouden__c.Formele_Begroeting__c</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Household__c.Informal_Greeting__c</masterLabel>
-            <translation><!-- Household__c.Informal_Greeting__c --></translation>
+            <translation>Huishouden__c.Informele_Begroeting__c</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Household__c.Name</masterLabel>
-            <translation><!-- Household__c.Name --></translation>
+            <translation>Huishouden__c.Naam</translation>
         </picklistValues>
     </fields>
     <fields>
         <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Total Number of Gifts --></label>
+        <label>Totaal Aantal Giften</label>
         <name>NumberOfClosedOpps__c</name>
     </fields>
     <fields>
         <help><!-- The number of won Membership Opportunities (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Number of Memberships --></label>
+        <label>Aantal Lidmaatschappen</label>
         <name>NumberOfMembershipOpps__c</name>
     </fields>
     <fields>
         <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed two years ago. --></help>
-        <label><!-- Total Gifts Two Years Ago --></label>
+        <label>Giften Twee Jaar Geleden Totaal</label>
         <name>OppAmount2YearsAgo__c</name>
     </fields>
     <fields>
         <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed in the last number of days defined in Household Settings. --></help>
-        <label><!-- Total Gifts Last N Days --></label>
+        <label>Giften Laatste N Dagen Totaal</label>
         <name>OppAmountLastNDays__c</name>
     </fields>
     <fields>
         <help><!-- Formula:  Total Gifts Last Year on related Household. --></help>
-        <label><!-- Total Household Gifts Last Year --></label>
+        <label>Giften Huishouden Vorig Jaar Totaal</label>
         <name>OppAmountLastYearHH__c</name>
     </fields>
     <fields>
         <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed last year. --></help>
-        <label><!-- Total Gifts Last Year --></label>
+        <label>Giften Vorig Jaar Totaal</label>
         <name>OppAmountLastYear__c</name>
     </fields>
     <fields>
         <help><!-- Formula:  Total Gifts This Year on related Household. --></help>
-        <label><!-- Total Household Gifts This Year --></label>
+        <label>Giften Huishouden Huidig Jaar Totaal</label>
         <name>OppAmountThisYearHH__c</name>
     </fields>
     <fields>
         <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed this year. --></help>
-        <label><!-- Total Gifts This Year --></label>
+        <label>Giften Huidig Jaar Totaal</label>
         <name>OppAmountThisYear__c</name>
     </fields>
     <fields>
         <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed two years ago. --></help>
-        <label><!-- Number of Gifts Two Years Ago --></label>
+        <label>Aantal Giften Twee Jaar Geleden</label>
         <name>OppsClosed2YearsAgo__c</name>
     </fields>
     <fields>
         <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed in the last number of days defined in Household Settings. --></help>
-        <label><!-- Number of Gifts Last N Days --></label>
+        <label>Aantal Giften Laatste N Dagen</label>
         <name>OppsClosedLastNDays__c</name>
     </fields>
     <fields>
         <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed last year. --></help>
-        <label><!-- Number of Gifts Last Year --></label>
+        <label>Aantal Giften Vorig Jaar</label>
         <name>OppsClosedLastYear__c</name>
     </fields>
     <fields>
         <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed this year. --></help>
-        <label><!-- Number of Gifts This Year --></label>
+        <label>Aantal Giften Huidig Jaar</label>
         <name>OppsClosedThisYear__c</name>
     </fields>
     <fields>
         <help><!-- The smallest amount of a won Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Smallest Gift --></label>
+        <label>Kleinste Gift</label>
         <name>SmallestAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The sum of soft credit Opportunity amounts last year determined by Opportunity Contact Role and filtered by Roles in Household Settings. --></help>
-        <label><!-- Soft Credit Last Year --></label>
+        <help>Totale soft credit hoeveelheid vorig jaar.</help>
+        <label>Soft Credit Vorig Jaar</label>
         <name>Soft_Credit_Last_Year__c</name>
     </fields>
     <fields>
-        <help><!-- Total soft credit amount this year --></help>
-        <label><!-- Soft Credit This Year --></label>
+        <help>Totale soft credit hoeveelheid dit jaar.</help>
+        <label>Soft Credit Huidg Jaar</label>
         <name>Soft_Credit_This_Year__c</name>
     </fields>
     <fields>
-        <help><!-- Total amount in soft credits for this Contact&apos;s lifetime. Defined in the Household Settings tab. --></help>
-        <label><!-- Soft Credit Total --></label>
+        <help>Totaal hoeveelheid soft credits voor het leven van deze Contactpersoon. Gedefinieerd in de Huishouden Instellingen tab.</help>
+        <label>Soft Credit Totaal</label>
         <name>Soft_Credit_Total__c</name>
     </fields>
     <fields>
-        <help><!-- The sum of soft credit Opportunity amounts two years ago determined by Opportunity Contact Role and filtered by Roles in Household Settings. --></help>
-        <label><!-- Soft Credit Two Years Ago --></label>
+        <help>Totale soft credit hoeveelheid twee jaar geleden.</help>
+        <label>Soft Credit Twee Jaar Geleden</label>
         <name>Soft_Credit_Two_Years_Ago__c</name>
     </fields>
     <fields>
-        <label><!-- _SYSTEM: HOUSEHOLD PROCESSOR-DEPRECATED --></label>
+        <label>_SYSTEEM: HUISHOUDEN PROCESSOR-AFGEKEURD</label>
         <name>SystemHouseholdProcessor__c</name>
         <picklistValues>
             <masterLabel>All Individual Contacts</masterLabel>
@@ -209,25 +209,25 @@
     </fields>
     <fields>
         <help><!-- The total amount of won Membership Opportunities (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Total Membership Amount --></label>
+        <label>Totaal Lidmaatschap Bedrag</label>
         <name>TotalMembershipOppAmount__c</name>
     </fields>
     <fields>
         <help><!-- The sum of won Opportunity Amounts related to this Contact by primary Opportunity Contact Role. --></help>
-        <label><!-- Total Gifts --></label>
+        <label>Giften Totaal</label>
         <name>TotalOppAmount__c</name>
     </fields>
     <fields>
         <help><!-- Formula:  Total Gifts on related Household. --></help>
-        <label><!-- Total Household Gifts --></label>
+        <label>Giften Huishouden Totaal</label>
         <name>Total_Household_Gifts__c</name>
     </fields>
     <webLinks>
-        <label><!-- Copy_Address_to_Household --></label>
+        <label>Kopieer Adres naar Huishouden</label>
         <name>Copy_Address_to_Household</name>
     </webLinks>
     <webLinks>
-        <label><!-- Household --></label>
+        <label>Huishouden</label>
         <name>Household</name>
     </webLinks>
 </CustomObjectTranslation>

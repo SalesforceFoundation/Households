@@ -201,27 +201,27 @@
         <name>UDRDescription</name>
     </customLabels>
     <customTabs>
-        <label><!-- Households Settings --></label>
+        <label>Huishoud Instellingen</label>
         <name>Households_Settings</name>
     </customTabs>
     <customTabs>
-        <label><!-- Opportunity Rollups --></label>
+        <label>Opportunity Roll-ups</label>
         <name>Opportunity_Rollups</name>
     </customTabs>
     <customTabs>
-        <label><!-- User Rollups --></label>
+        <label>Gebruiker Roll-ups</label>
         <name>User_Rollups</name>
     </customTabs>
     <reportTypes>
-        <description><!-- Households and Donations --></description>
-        <label><!-- Households and Donations --></label>
+        <description>Huishoudens en Donaties</description>
+        <label>Huishoudens en Donaties</label>
         <name>Households_and_Donations</name>
         <sections>
-            <label><!-- Household Members --></label>
+            <label>Leden van het Huishouden</label>
             <name>Household Members</name>
         </sections>
         <sections>
-            <label><!-- Households --></label>
+            <label>Huishoudens</label>
             <name>Households</name>
         </sections>
         <sections>
