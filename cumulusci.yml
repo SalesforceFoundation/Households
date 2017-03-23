@@ -6,7 +6,9 @@ project:
         api_version: 36.0
     dependencies:
         - namespace: npe01
-          version: 3.4
+          version: 3.5
+    git:
+        prefix_release: rel/
 
 flows:
     ci_master:
