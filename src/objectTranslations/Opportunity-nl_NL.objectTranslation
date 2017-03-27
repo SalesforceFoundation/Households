@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help>Aaneengeschakelde velden worden gebruikt tijdens rollups om de meest recente opportunity te lokaliseren.</help>
+        <label>Gecombineerde Rollup Veldset</label>
+        <name>CombinedRollupFieldset__c</name>
+    </fields>
+    <fields>
+        <help>Controleert of Huishoud contactrollen zijn gemaakt voor Opportunities. AFGEKEURD. Vervangen door aangepaste instellingen.</help>
+        <label>_SYSTEEM: HUISHOUD CONTACT ROLPROCESSOR</label>
+        <name>systemHouseholdContactRoleProcessor__c</name>
+        <picklistValues>
+            <masterLabel>All Opportunities</masterLabel>
+            <translation>Alle Opportunities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Opportunities</masterLabel>
+            <translation>Geen Opportunities</translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

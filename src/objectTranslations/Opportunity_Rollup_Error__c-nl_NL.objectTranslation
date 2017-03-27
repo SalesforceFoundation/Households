@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+    </caseValues>
+    <fields>
+        <help>Datum en tijd van de fout</help>
+        <label>Fout Datum tijd</label>
+        <name>Error_Datetime__c</name>
+    </fields>
+    <fields>
+        <help>De volledige tekst van de foutmelding</help>
+        <label>Foutmelding</label>
+        <name>Error_Message__c</name>
+    </fields>
+    <fields>
+        <help>Het type object waarnaar deze fout verwijst</help>
+        <label>Fout Type Object</label>
+        <name>Error_Object_Type__c</name>
+    </fields>
+    <fields>
+        <help>Link naar het record waar de fout is opgetreden</help>
+        <label>Fout Record Link</label>
+        <name>Error_Record_Link__c</name>
+    </fields>
+    <fields>
+        <help>Het Type fout die is opgetreden</help>
+        <label>Fout Type</label>
+        <name>Error_Type__c</name>
+    </fields>
+    <gender><!-- Neuter --></gender>
+</CustomObjectTranslation>
