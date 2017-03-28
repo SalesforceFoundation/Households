@@ -7,7 +7,7 @@
     <label>userRollupSettings</label>
     <packageVersions>
         <majorNumber>3</majorNumber>
-        <minorNumber>5</minorNumber>
+        <minorNumber>6</minorNumber>
         <namespace>npe01</namespace>
     </packageVersions>
 </ApexPage>
