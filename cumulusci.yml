@@ -5,8 +5,7 @@ project:
         namespace: npo02
         api_version: 36.0
     dependencies:
-        - namespace: npe01
-          version: 3.6
+        - github: https://github.com/SalesforceFoundation/Contacts_and_Organizations
     git:
         prefix_release: rel/
 
