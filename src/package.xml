@@ -268,45 +268,53 @@
         <members>Account-de</members>
         <members>Account-es</members>
         <members>Account-fr</members>
+        <members>Account-iw</members>
         <members>Account-ja</members>
         <members>Account-nl_NL</members>
         <members>Campaign-de</members>
         <members>Campaign-es</members>
         <members>Campaign-fr</members>
+        <members>Campaign-iw</members>
         <members>Campaign-ja</members>
         <members>Campaign-nl_NL</members>
         <members>Contact-de</members>
         <members>Contact-es</members>
         <members>Contact-fr</members>
+        <members>Contact-iw</members>
         <members>Contact-ja</members>
         <members>Contact-nl_NL</members>
         <members>Household__c-de</members>
         <members>Household__c-en_US</members>
         <members>Household__c-es</members>
         <members>Household__c-fr</members>
+        <members>Household__c-iw</members>
         <members>Household__c-ja</members>
         <members>Household__c-nl_NL</members>
         <members>Households_Settings__c-de</members>
         <members>Households_Settings__c-en_US</members>
         <members>Households_Settings__c-es</members>
         <members>Households_Settings__c-fr</members>
+        <members>Households_Settings__c-iw</members>
         <members>Households_Settings__c-ja</members>
         <members>Households_Settings__c-nl_NL</members>
         <members>Opportunity-de</members>
         <members>Opportunity-es</members>
         <members>Opportunity-fr</members>
+        <members>Opportunity-iw</members>
         <members>Opportunity-ja</members>
         <members>Opportunity-nl_NL</members>
         <members>Opportunity_Rollup_Error__c-de</members>
         <members>Opportunity_Rollup_Error__c-en_US</members>
         <members>Opportunity_Rollup_Error__c-es</members>
         <members>Opportunity_Rollup_Error__c-fr</members>
+        <members>Opportunity_Rollup_Error__c-iw</members>
         <members>Opportunity_Rollup_Error__c-ja</members>
         <members>Opportunity_Rollup_Error__c-nl_NL</members>
         <members>User_Rollup_Field_Settings__c-de</members>
         <members>User_Rollup_Field_Settings__c-en_US</members>
         <members>User_Rollup_Field_Settings__c-es</members>
         <members>User_Rollup_Field_Settings__c-fr</members>
+        <members>User_Rollup_Field_Settings__c-iw</members>
         <members>User_Rollup_Field_Settings__c-ja</members>
         <members>User_Rollup_Field_Settings__c-nl_NL</members>
         <name>CustomObjectTranslation</name>
@@ -349,6 +357,7 @@
         <members>de</members>
         <members>es</members>
         <members>fr</members>
+        <members>iw</members>
         <members>ja</members>
         <members>nl_NL</members>
         <name>Translations</name>

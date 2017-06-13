@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>None</article>
+        <plural>false</plural>
+        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>false</plural>
+        <value><!-- הDEPRECATED-Opportunity Rollup Errors --></value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>true</plural>
+        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>true</plural>
+        <value><!-- הDEPRECATED-Opportunity Rollup Errors --></value>
+    </caseValues>
+    <fields>
+        <help>התאריך והשעה של השגיאה</help>
+        <label>תאריך ושעה של שגיאה</label>
+        <name>Error_Datetime__c</name>
+    </fields>
+    <fields>
+        <help>הטקסט המלא של הודעת השגיאה</help>
+        <label>הודעת שגיאה</label>
+        <name>Error_Message__c</name>
+    </fields>
+    <fields>
+        <help>סוג האובייקט שאליו מתייחסת השגיאה</help>
+        <label>סוג אובייקט שגיאה</label>
+        <name>Error_Object_Type__c</name>
+    </fields>
+    <fields>
+        <help>קישור אל הרשומה שבה התרחשה השגיאה</help>
+        <label>קישור לרשומת שגיאה</label>
+        <name>Error_Record_Link__c</name>
+    </fields>
+    <fields>
+        <help>סוג השגיאה שהתרחשה</help>
+        <label>סוג שגיאה</label>
+        <name>Error_Type__c</name>
+    </fields>
+    <gender><!-- Masculine --></gender>
+</CustomObjectTranslation>
