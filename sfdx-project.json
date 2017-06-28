@@ -1,0 +1,10 @@
+{
+  "packageDirectories": [
+    {
+      "path": "src",
+      "default": true
+    }
+  ],
+  "namespace": "npo02",
+  "sourceApiVersion": "36.0"
+}
