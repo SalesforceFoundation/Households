@@ -22,7 +22,3 @@ flows:
             # Don't run uninstall_packaged_incremental
             5:
                 - task: None
-            # Set run_tests_debug to query for test classes with the namespace
-            8:
-                options:
-                    managed: True
