@@ -36,8 +36,7 @@
     <columns>
         <field>Account.Informal_Greeting__c</field>
     </columns>
-    <description>REPORT DEPRECATED 2017 NOVEMBER.
-Lists addresses for a mailing campaign, avoiding household duplicates - RUN FROM BUTTON IN CAMPAIGN</description>
+    <description>NO LONGER USED with Household Mailing List button on Campaign. Replaced with NPSP_Campaign_Household_Mailing_List_V2</description>
     <filter>
         <criteriaItems>
             <column>MEMBER_STATUS</column>
