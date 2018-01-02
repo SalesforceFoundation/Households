@@ -341,7 +341,6 @@
     <types>
         <members>Household_Reports</members>
         <members>Household_Reports/Households_and_Donations</members>
-        <members>npe01__Nonprofit_Edition_Reports/NPSP_Campaign_Household_Mailing_List</members>
         <name>Report</name>
     </types>
     <types>
