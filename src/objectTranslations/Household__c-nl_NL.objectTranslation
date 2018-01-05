@@ -13,47 +13,47 @@
         <name>Addressee__c</name>
     </fields>
     <fields>
-        <help><!-- Used to set the Household name and other fields using anonymous information. --></help>
+        <help>Wordt gebruikt om het Huishouden een naam te geven met anonieme informatie.</help>
         <label>Altijd Anoniem</label>
         <name>Always_Anonymous__c</name>
     </fields>
     <fields>
-        <help><!-- Average amount of won Opportunities related to this Household by a related Contact with primary Opportunity Contact Role. --></help>
+        <help>Gemiddeld bedrag van Gewonnen Opportunities op het Huishouden door een gerelateerde Contactpersoon met een Primair Opportunity Contactpersoon Rol.</help>
         <label>Gemiddelde Gift</label>
         <name>AverageAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The sum of won Opportunity amounts in the Best Gift Year for this Household via Contacts with primary Opportunity Contact Role.  See also Best Gift Year. --></help>
+        <help>Het totaalbedrag van Gewonnen Opportunities op het Huishouden in het Beste Gift Jaar via een Contactpersoon met een Primair Opportunity Contactpersoon Rol. Zie ook Beste Gift Jaar.</help>
         <label>Beste Gift Jaar Totaal</label>
         <name>Best_Gift_Year_Total__c</name>
     </fields>
     <fields>
-        <help><!-- The year in which the largest total amount of won Opportunities related to this Household via Contacts with primary Opportunity Contact Role occurred.  See also Best Gift Year Total. --></help>
+        <help>Het jaar waarin het grootste totaalbedrag van Gewonnen Opportunities op het Huishouden is binnengekomen via een Contactpersoon met een Primair Opportunity Contactpersoon Rol. Zie ook Beste Gift Jaar Totaal.</help>
         <label>Best Gift Jaar</label>
         <name>Best_Gift_Year__c</name>
     </fields>
     <fields>
-        <help><!-- The earliest Close Date of a won Opportunity related to this Household via Contacts with primary Contact Role. --></help>
+        <help>De Eerste Gift Datum van een Gewonnen Opportunity op dit Huishouden via een Contactpersoon met een Primair Opportunity Contactpersoon Rol.</help>
         <label>Eerste Gift Datum</label>
         <name>FirstCloseDate__c</name>
     </fields>
     <fields>
-        <help><!-- Uses fields of non-excluded, ordered related Contacts. Generated automatically. --></help>
+        <help>Gebruikt velden van niet uitgeloten gesorteerde gerelateerde Contactpersonen. Automatisch gegenereerd.</help>
         <label>Formele Begroeting</label>
         <name>Formal_Greeting__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: Concatenation of other Mailing fields for this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed. --></help>
-        <label>Verzend Adres</label>
+        <help>Formule: Samenvoeging van Postvelden voor dit Huishouden. Kan worden bijgewerkt via de Bijwerken Huishouden Pagina, maar werkt het Contactpersoon niet bij tenzij er geklikt wordt op &quot;Kopieer Huishouden Adres naar Contactpersonen&quot;.</help>
+        <label>Postadres</label>
         <name>Formula_MailingAddress__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be edited in Household, but does not update Contact. --></help>
+        <help>Overgenomen van de Contactpersoon die dit Huishouden heeft gecreëerd. Kan gewijzigd worden in het Huishouden, maar wordt niet bijgewerkt in de Contactpersoon.</help>
         <label>Huishouden E-mail</label>
         <name>HouseholdEmail__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be edited in Household, but does not update Contact. --></help>
+        <help>Overgenomen van de Contactpersoon die dit Huishouden heeft gecreëerd. Kan gewijzigd worden in het Huishouden, maar wordt niet bijgewerkt in de Contactpersoon.</help>
         <label>Huishouden Telefoon</label>
         <name>HouseholdPhone__c</name>
     </fields>
@@ -62,142 +62,142 @@
         <name>Household_ID__c</name>
     </fields>
     <fields>
-        <help><!-- Uses fields of non-excluded, ordered related Contacts.  Generated automatically. --></help>
+        <help>Gebruikt velden van niet uitgeloten gesorteerde gerelateerde Contactpersonen. Automatisch gegenereerd.</help>
         <label>Informele Begroeting</label>
         <name>Informal_Greeting__c</name>
     </fields>
     <fields>
-        <help><!-- The largest won Opportunity amount for this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Het grootste Gewonnen Opportunity Bedrag op dit Huishouden via een Contactpersoon met een Primair Opportunity Contactpersoon Rol.</help>
         <label>Grootste Gift</label>
         <name>LargestAmount__c</name>
     </fields>
     <fields>
-        <help><!-- Most recent Close Date of a won Opportunity for this Household via related Contacts with primary Contact Role. --></help>
+        <help>Meest recente Sluitingsdatum van een Gewonnen Opportunity op dit Huishouden via een Contactpersoon met een Primair Opportunity Contactpersoon Rol.</help>
         <label>Laatste Gift Datum</label>
         <name>LastCloseDate__c</name>
     </fields>
     <fields>
-        <help><!-- The most recent won Membership Opportunity (Record Type) amount for this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Meest recente Gewonnen Lidmaatschap Opportunity (Recordtype) Bedrag op dit Huishouden via een Contactpersoon met een Primair Opportunity Contactpersoon Rol.</help>
         <label>Laatste Lidmaatschap Bedrag</label>
         <name>LastMembershipAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The most recent Close Date of a won Membership Opportunity for this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Meest recente Sluitingsdatum van een Gewonnen Lidmaatschap Opportunity op dit Huishouden via een Contactpersoon met een Primair Opportunity Contactpersoon Rol.</help>
         <label>Laatste Lidmaatschap Datum</label>
         <name>LastMembershipDate__c</name>
     </fields>
     <fields>
-        <help><!-- The Membership Level of the most recent won Membership Opportunity for this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Het Lidmaatschap Niveau van de meest recent Gewonnen Lidmaatschap Opportunity op dit Huishouden via een Contactpersoon met een Primair Opportunity Contactpersoon Rol.</help>
         <label>Laatste Lidmaatschap Niveau</label>
         <name>LastMembershipLevel__c</name>
     </fields>
     <fields>
-        <help><!-- The Origin (new, renew...) of the most recent won Membership Opportunity for this Household via related Contacts with primary Opportunity Contact Role. --></help>
-        <label>Laatste Lidmaatschap Oorsprong</label>
+        <help>De Herkomst van de meest recent Gewonnen Lidmaatschap Opportunity op dit Huishouden via een Contactpersoon met een Primair Opportunity Contactpersoon Rol.</help>
+        <label>Laatste Lidmaatschap Herkomst</label>
         <name>LastMembershipOrigin__c</name>
     </fields>
     <fields>
-        <help><!-- The most recent won Opportunity amount for this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Meest recente Gewonnen Opportunity Bedrag op dit Huishouden via een Contactpersoon met een Primair Opportunity Contactpersoon Rol.</help>
         <label>Laatste Gift Bedrag</label>
         <name>LastOppAmount__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed. --></help>
-        <label>Verzend Stad</label>
+        <help>Overgenomen van de Contactpersoon die dit Huishouden heeft gecreëerd. Kan worden bijgewerkt via de Bijwerken Huishouden Pagina, maar werkt het Contactpersoon niet bij tenzij er geklikt wordt op &quot;Kopieer Huishouden Adres naar Contactpersonen&quot;.</help>
+        <label>Stad</label>
         <name>MailingCity__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed. --></help>
-        <label>Verzend Land</label>
+        <help>Overgenomen van de Contactpersoon die dit Huishouden heeft gecreëerd. Kan worden bijgewerkt via de Bijwerken Huishouden Pagina, maar werkt het Contactpersoon niet bij tenzij er geklikt wordt op &quot;Kopieer Huishouden Adres naar Contactpersonen&quot;.</help>
+        <label>Land</label>
         <name>MailingCountry__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed. --></help>
-        <label>Verzend Zip/Post Code</label>
+        <help>Overgenomen van de Contactpersoon die dit Huishouden heeft gecreëerd. Kan worden bijgewerkt via de Bijwerken Huishouden Pagina, maar werkt het Contactpersoon niet bij tenzij er geklikt wordt op &quot;Kopieer Huishouden Adres naar Contactpersonen&quot;.</help>
+        <label>Postcode</label>
         <name>MailingPostalCode__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed. --></help>
-        <label>Verzend Staat/Provincie</label>
+        <help>Overgenomen van de Contactpersoon die dit Huishouden heeft gecreëerd. Kan worden bijgewerkt via de Bijwerken Huishouden Pagina, maar werkt het Contactpersoon niet bij tenzij er geklikt wordt op &quot;Kopieer Huishouden Adres naar Contactpersonen&quot;.</help>
+        <label>Provincie</label>
         <name>MailingState__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed. --></help>
-        <label>Verzend Straat</label>
+        <help>Overgenomen van de Contactpersoon die dit Huishouden heeft gecreëerd. Kan worden bijgewerkt via de Bijwerken Huishouden Pagina, maar werkt het Contactpersoon niet bij tenzij er geklikt wordt op &quot;Kopieer Huishouden Adres naar Contactpersonen&quot;.</help>
+        <label>Straat</label>
         <name>MailingStreet__c</name>
     </fields>
     <fields>
-        <help><!-- The Membership End Date of the most recent won Membership Opportunity for his Household via related Contacts with primary Opportunity Contact Role. --></help>
-        <label>Lidmaatschap Eind Datum</label>
+        <help>Meest recente Einddatum van een Gewonnen Lidmaatschap Opportunity op dit Huishouden via een Contactpersoon met een Primair Opportunity Contactpersoon Rol.</help>
+        <label>Lidmaatschap Einddatum</label>
         <name>MembershipEndDate__c</name>
     </fields>
     <fields>
-        <help><!-- The earliest Membership Join Date of the oldest Membership Opportunity (Close Date, Record Type) for his Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>De eerste Lidmaatschap Begindatum van de oudste Lidmaatschap Opportunity (Sluitingsdatum, Recordtype) op dit Huishouden via een Contactpersoon met een Primair Opportunity Contactpersoon Rol.</help>
         <label>Lidmaatschap Toetredingsdatum</label>
         <name>MembershipJoinDate__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: The number of years for which this Household has had a Member. --></help>
+        <help>Formule: Het aantal jaar dat dit Huishouden een Lidmaatschap heeft gehad.</help>
         <label>Lidmaatschap Duur</label>
         <name>Membership_Span__c</name>
     </fields>
     <fields>
-        <help>Huidig, verlopen, of bedenktijd</help>
+        <help>Formule: Huidig, verlopen, of respijtperiode. De Respijtperiode kan worden ingesteld in de Huishouden Instellingen.</help>
         <label>Lidmaatschap Status</label>
         <name>Membership_Status__c</name>
     </fields>
     <fields>
-        <help><!-- The total number of gifts related to this Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>Het totaal aantal giften gerelateerd aan dit Huishouden via Contactpersonen en Primaire Opportunity Contactpersoon Rollen.</help>
         <label>Totaal Aantal Giften</label>
         <name>NumberOfClosedOpps__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Membership Opportunities (Record Type) related to this Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>Het totaalbedrag aan Gewonnen Lidmaatschap Opportunities (Recordtype) gerelateerd aan dit Huishouden via Contactpersonen en Primaire Opportunity Contactpersoon Rollen.</help>
         <label>Aantal Lidmaatschappen</label>
         <name>NumberOfMembershipOpps__c</name>
     </fields>
     <fields>
-        <help><!-- Total Gifts Two Years Ago on Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>Totaal Giften Twee Jaar Geleden gerelateerd aan dit Huishouden via Contactpersonen en Primaire Opportunity Contactpersoon Rollen.</help>
         <label>Totaal Giften Twee Jaar Geleden</label>
         <name>OppAmount2YearsAgo__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Opportunities related to this Household, closed in the last number of days defined in Household Settings, related by Contact and primary Opportunity Contact Role. --></help>
+        <help>Het totaalbedrag aan Gewonnen Opportunities in de laatste N dagen, zoals gedefinieerd in de Huishouden Instellingen, gerelateerd aan dit Huishouden via Contactpersonen en Primaire Opportunity Contactpersoon Rollen.</help>
         <label>Totaal Giften Laatste N Dagen</label>
         <name>OppAmountLastNDays__c</name>
     </fields>
     <fields>
-        <help><!-- Total Gifts Last Year on Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>Totaal Giften Vorig Jaar gerelateerd aan dit Huishouden via Contactpersonen en Primaire Opportunity Contactpersoon Rollen.</help>
         <label>Totaal Giften Vorig Jaar</label>
         <name>OppAmountLastYear__c</name>
     </fields>
     <fields>
-        <help><!-- Total Gifts This Year on Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>Totaal Giften Huidig Jaar gerelateerd aan dit Huishouden via Contactpersonen en Primaire Opportunity Contactpersoon Rollen.</help>
         <label>Totaal Giften Huidig Jaar</label>
         <name>OppAmountThisYear__c</name>
     </fields>
     <fields>
-        <help><!-- The number of won Opportunities with Close Date in the last 2 years related to this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Het totaal aantal giften van Gewonnen Opportunities van twee jaar geleden gerelateerd aan dit Huishouden via Contactpersonen en Primaire Opportunity Contactpersoon Rollen.</help>
         <label>Aantal Giften Twee Jaar Geleden</label>
         <name>OppsClosed2YearsAgo__c</name>
     </fields>
     <fields>
-        <help><!-- The number of won Opportunities with Close Date in the last N days (Household Settings) related to this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Het totaal aantal giften van Gewonnen Opportunities in de laatste N dagen, zoals gedefinieerd in de Huishouden Instellingen, gerelateerd aan dit Huishouden via Contactpersonen en Primaire Opportunity Contactpersoon Rollen.</help>
         <label>Aantal Giften Laatste N Dagen</label>
         <name>OppsClosedLastNDays__c</name>
     </fields>
     <fields>
-        <help><!-- The number of won Opportunities with Close Date in the last year related to this Household via related Contacts with primary Contact Role. --></help>
+        <help>Het totaal aantal giften van Gewonnen Opportunities van vorig jaar gerelateerd aan dit Huishouden via Contactpersonen en Primaire Opportunity Contactpersoon Rollen.</help>
         <label>Aantal Giften Vorig Jaar</label>
         <name>OppsClosedLastYear__c</name>
     </fields>
     <fields>
-        <help><!-- The number of won Opportunities with Close Date this year related to this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Het totaal aantal giften van Gewonnen Opportunities van het huidige jaar gerelateerd aan dit Huishouden via Contactpersonen en Primaire Opportunity Contactpersoon Rollen.</help>
         <label>Aantal Giften Huidig Jaar</label>
         <name>OppsClosedThisYear__c</name>
     </fields>
     <fields>
-        <help><!-- Name, Formal Greeting, or Informal Greeting --></help>
+        <help>Naam, Formele Begroeting of Informele Begroeting</help>
         <label>_SYSTEM: AANGEPAST BENOEMEN</label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
         <picklistValues>
@@ -214,17 +214,17 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- The smallest amount of a won Opportunity related to this Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>Het Kleinste Bedrag van een Gewonnen Opportunity gerelateerd aan dit Huishouden via Contactpersonen en Primaire Opportunity Contactpersoon Rollen.</help>
         <label>Kleinste Gift</label>
         <name>SmallestAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Membership Opportunities (Record Type) related to this Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>Het totaalbedrag van Gewonnen Lidmaatschap Opportunities (Recordtype) gerelateerd aan dit Huishouden via Contactpersonen en Primaire Opportunity Contactpersoon Rollen.</help>
         <label>Totaal Lidmaatschap Bedrag</label>
         <name>TotalMembershipOppAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The sum of won Opportunity Amounts related to this Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>De som van Gewonnen Opportunity Bedragen gerelateerd aan dit Huishouden via Contactpersonen en Primaire Opportunity Contactpersoon Rollen.</help>
         <label>Totaal Giften</label>
         <name>TotalOppAmount__c</name>
     </fields>
@@ -232,7 +232,7 @@
     <layouts>
         <layout>Household Layout</layout>
         <sections>
-            <label><!-- Custom Links --></label>
+            <label>Aangepaste Koppelingen</label>
             <section>Custom Links</section>
         </sections>
         <sections>
@@ -244,13 +244,13 @@
             <section>Donation Totals</section>
         </sections>
         <sections>
-            <label>Huishoud Informatie</label>
+            <label>Huishouden Informatie</label>
             <section>Household Information</section>
         </sections>
     </layouts>
     <nameFieldLabel><!-- Household Name --></nameFieldLabel>
     <webLinks>
-        <label>Kopieer Huishoud Adres naar Contactpersonen</label>
+        <label>Kopieer Adres Huishouden naar Contactpersonen</label>
         <name>Copy_Household_Address_to_Contacts</name>
     </webLinks>
 </CustomObjectTranslation>
