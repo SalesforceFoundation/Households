@@ -9,12 +9,12 @@
         <value><!-- User Rollup Field Settings --></value>
     </caseValues>
     <fields>
-        <help>De rollup actie (MIN, MAX, SUM, COUNT) die uitgevoerd moet worden op het bron veld.</help>
+        <help>De rollup actie (MIN, MAX, SOM, Recordtelling) die uitgevoerd moet worden op het bron veld.</help>
         <label>Veld Actie</label>
         <name>Field_Action__c</name>
     </fields>
     <fields>
-        <help>Het object waar deze gebruiker rollup toegewezen aan is.</help>
+        <help>Het object waar deze gebruiker rollup aan toegewezen is.</help>
         <label>Object Naam</label>
         <name>Object_Name__c</name>
     </fields>
