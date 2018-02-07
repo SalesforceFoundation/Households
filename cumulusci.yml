@@ -6,6 +6,7 @@ project:
         api_version: 36.0
     dependencies:
         - github: https://github.com/SalesforceFoundation/Contacts_and_Organizations
+          tag: rel/3.8
     git:
         prefix_release: rel/
 
