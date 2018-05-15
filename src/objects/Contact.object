@@ -52,8 +52,8 @@
         <formula>IF(npe01__Organization_Type__c == &apos;Household Account&apos;,
 
 Account.BillingStreet &amp; BR() &amp;
-Account.BillingCity &amp; IF(LEN(Account.BillingCity) &gt; 0, &quot;, &quot;, &quot;&quot;) &amp; Account.BillingState &amp; &quot; &quot; &amp; Account.BillingPostalCode 
-&amp; if (LEN(Account.BillingCountry)&gt;0,BR()&amp; Account.BillingCountry,&quot;&quot;) ,
+Account.BillingCity &amp; IF(ISBLANK(Account.BillingCity), &quot;&quot;, &quot;, &quot;) &amp; Account.BillingState &amp; &quot; &quot; &amp; Account.BillingPostalCode 
+&amp; IF(ISBLANK(Account.BillingCountry), &quot;&quot;, BR()&amp; Account.BillingCountry),
 
 Household__r.Formula_MailingAddress__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
