@@ -25,3 +25,7 @@
 Referenced Packages
 build.properties
 salesforce.schema
+
+**/.sfdx
+**/.vscode/
+**/*.pyc
