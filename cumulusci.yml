@@ -10,15 +10,11 @@ project:
         prefix_release: rel/
 
 flows:
-    ci_master:
-        tasks:
-            # Don't run uninstall_packaged_incremental
-            3:
-                - task: None
-            8:
-                - task: None
-    ci_feature:
-        tasks:
-            # Don't run uninstall_packaged_incremental
-            5:
-                - task: None
+    deploy_unmanaged:
+        steps:
+            4:
+                task: None
+    deploy_packaging:
+        steps:
+            6:
+                task: None
