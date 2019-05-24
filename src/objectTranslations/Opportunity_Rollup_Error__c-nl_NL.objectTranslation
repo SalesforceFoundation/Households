@@ -10,7 +10,7 @@
     </caseValues>
     <fields>
         <help>Datum en tijd van de fout</help>
-        <label>Fout Datum tijd</label>
+        <label>Fout Datum/Tijd</label>
         <name>Error_Datetime__c</name>
     </fields>
     <fields>
