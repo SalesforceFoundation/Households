@@ -29,3 +29,5 @@ salesforce.schema
 **/.sfdx
 **/.vscode/
 **/*.pyc
+
+.cci
