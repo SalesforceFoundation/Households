@@ -1,164 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fields>
-        <help>Gemiddeld Gewonnen Opportunity Bedrag gerelateerd aan dit Account. Wordt automatisch bijgewerkt.</help>
-        <label>Gemiddelde Gift</label>
-        <name>AverageAmount__c</name>
-    </fields>
-    <fields>
-        <help>De som van Gewonnen Opportunity Bedragen in het Beste Gift Jaar op dit Account.</help>
-        <label>Beste Gift Jaar Totaal</label>
-        <name>Best_Gift_Year_Total__c</name>
-    </fields>
-    <fields>
-        <help>Het jaar waarin het grootste bedrag van Gewonnen Opportunities gerelateerd aan dit Account is binnengekomen. Zie ook Beste Gift Jaar Totaal.</help>
-        <label>Beste Gift Jaar</label>
-        <name>Best_Gift_Year__c</name>
-    </fields>
-    <fields>
-        <help>De eerste Gewonnen Opportunity (Sluitingsdatum) met een Bedrag groter dan nul gerelateerd aan dit Account.</help>
-        <label>Eerste Gift Datum</label>
-        <name>FirstCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>Voor Huishouden Accounts, gebruikt velden van niet uitgesloten, gerangschikte gerelateerde Contactpersonen. Automatisch gegenereerd.</help>
-        <label>Formele Begroeting</label>
-        <name>Formal_Greeting__c</name>
-    </fields>
-    <fields>
-        <label>Telefoon Huishouden</label>
-        <name>HouseholdPhone__c</name>
-    </fields>
-    <fields>
-        <help>Voor Huishouden Accounts, gebruikt velden van niet uitgesloten, gerangschikte gerelateerde Contactpersonen. Automatisch gegenereerd.</help>
-        <label>Informele Begroeting</label>
-        <name>Informal_Greeting__c</name>
-    </fields>
-    <fields>
-        <help>Het grootste Bedrag van een Gewonnen Opportunity gerelateerd aan dit Account.</help>
-        <label>Grootste Gift</label>
-        <name>LargestAmount__c</name>
-    </fields>
-    <fields>
-        <help>De meest recente Sluitingsdatum van een Gewonnen Opportunity met een Bedrag groter dan nul gerelateerd aan dit Account.</help>
-        <label>Laatste Gift Datum</label>
-        <name>LastCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>Het Bedrag van de meest recente (Sluitingsdatum) Gewonnen Lidmaatschap Opportunity gerelateerd aan dit Account.</help>
-        <label>Laatste Lidmaatschap Bedrag</label>
-        <name>LastMembershipAmount__c</name>
-    </fields>
-    <fields>
-        <help>De meest recente Sluitingsdatum van een Gewonnen Lidmaatschap Opportunity gerelateerd aan dit Account.</help>
-        <label>Laatste Lidmaatschap Datum</label>
-        <name>LastMembershipDate__c</name>
-    </fields>
-    <fields>
-        <help>Lidmaatschap Niveau van de meest recente Gewonnen Lidmaatschap Opportunity gerelateerd aan dit Account.</help>
-        <label>Laatste Lidmaatschap Niveau</label>
-        <name>LastMembershipLevel__c</name>
-    </fields>
-    <fields>
-        <help>Lidmaatschap Herkomst van de meest recente Gewonnen Lidmaatschap Opportunity gerelateerd aan dit Account.</help>
-        <label>Laatste Lidmaatschap Herkomst</label>
-        <name>LastMembershipOrigin__c</name>
-    </fields>
-    <fields>
-        <help>Het Bedrag van de meest recente (Sluitingsdatum) Gewonnen Opportunity met een Bedrag groter dan nul gerelateerd aan dit Account.</help>
-        <label>Laatste Gift Bedrag</label>
-        <name>LastOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>Lidmaatschap Einddatum van de meest recente Gewonnen Lidmaatschap Opportunity gerelateerd aan dit Account.</help>
-        <label>Einddatum Lidmaatschap</label>
-        <name>MembershipEndDate__c</name>
-    </fields>
-    <fields>
-        <help>Lidmaatschap Startdatum van de meest recente Gewonnen Lidmaatschap Opportunity gerelateerd aan dit Account.</help>
-        <label>Begindatum Lidmaatschap</label>
-        <name>MembershipJoinDate__c</name>
-    </fields>
-    <fields>
-        <help>Het totaal aantal Gewonnen Opportunities gerelateerd aan dit Account.</help>
-        <label>Totaal Aantal Giften</label>
-        <name>NumberOfClosedOpps__c</name>
-    </fields>
-    <fields>
-        <help>Het totaal aantal Gewonnen Lidmaatschap Opportunities gerelateerd aan dit Account.</help>
-        <label>Aantal Lidmaatschappen</label>
-        <name>NumberOfMembershipOpps__c</name>
-    </fields>
-    <fields>
-        <help>Het totaalbedrag van Gewonnen Opportunities gerelateerd aan dit Account, van twee fiscale jaren geleden.</help>
-        <label>Totaal Giften Twee Jaar Geleden</label>
-        <name>OppAmount2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>Het totaalbedrag van Gewonnen Opportunities gerelateerd aan dit Account en gesloten in de laatste N dagen, waarin N is gedefinieerd in de Huishouden Instellingen.</help>
-        <label>Totaal Giften Laatste N Dagen</label>
-        <name>OppAmountLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>Het totaalbedrag van Gewonnen Opportunities gerelateerd aan dit Account, van het vorig fiscaal jaar.</help>
-        <label>Totaal Giften Vorig Jaar</label>
-        <name>OppAmountLastYear__c</name>
-    </fields>
-    <fields>
-        <help>Het totaalbedrag van Gewonnen Opportunities gerelateerd aan dit Account, van het huidige fiscaal jaar.</help>
-        <label>Totaal Giften Dit Jaar</label>
-        <name>OppAmountThisYear__c</name>
-    </fields>
-    <fields>
-        <help>Het totaal aantal Gewonnen Opportunities met een Bedrag groter dan nul gerelateerd aan dit Account, van twee fiscale jaren geleden.</help>
-        <label>Aantal Giften Twee Jaar Geleden</label>
-        <name>OppsClosed2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>Het totaal aantal Gewonnen Opportunities gerelateerd aan dit Account en gesloten in de laatste N dagen, waarin N is gedefinieerd in de Huishouden Instellingen.</help>
-        <label>Aantal Giften Laatste N Dagen</label>
-        <name>OppsClosedLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>Het totaal aantal Gewonnen Opportunities met een Bedrag groter dan nul gerelateerd aan dit Account, van het vorig fiscaal jaar.</help>
-        <label>Aantal Giften Vorig Jaar</label>
-        <name>OppsClosedLastYear__c</name>
-    </fields>
-    <fields>
-        <help>Het totaal aantal Gewonnen Opportunities met een Bedrag groter dan nul gerelateerd aan dit Account, in het huidig fiscaal jaar.</help>
-        <label>Aantal Giften Huidig Jaar</label>
-        <name>OppsClosedThisYear__c</name>
-    </fields>
-    <fields>
-        <help>Voor Huishouden Accounts, specificeer welke naam gerelateerde velden niet automatisch gevuld moeten worden door de Huishouden code.</help>
-        <label>_SYSTEM: AANGEPASTE NAAMGEVING</label>
-        <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation>Formele_Begroeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation>Informele_Begroeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation><!-- Name --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>Het kleinste Bedrag boven nul gerelateerd aan dit Account.</help>
-        <label>Kleinste Gift</label>
-        <name>SmallestAmount__c</name>
-    </fields>
-    <fields>
-        <help>Het totaalbedrag van Gewonnen Lidmaatschap Opportunities gerelateerd aan dit Account.</help>
-        <label>Totaal Lidmaatschap Bedag</label>
-        <name>TotalMembershipOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>De som van alle Gewonnen Opportunities Bedragen gerelateerd aan dit Account.</help>
-        <label>Totaal Giften</label>
-        <name>TotalOppAmount__c</name>
-    </fields>
+  <fields>
+    <name>AverageAmount__c</name>
+    <help>Bedrag van Gemiddelde gewonnen opportunity, dat is gerelateerd aan deze account. Wordt automatisch bijgewerkt.</help>
+    <label>Gemiddelde gift</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year_Total__c</name>
+    <help>De som van gewonnen bedragen van Opportunity in Beste jaar van giften voor deze account.</help>
+    <label>Totaal van beste jaar van giften</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year__c</name>
+    <help>Het jaar waarin zich het grootste totaalbedrag voordeed van gewonnen opportunities die zijn gerelateerd aan deze account. Zie ook Totaal van beste jaar van giften.</help>
+    <label>Beste jaar van giften</label>
+  </fields>
+  <fields>
+    <name>FirstCloseDate__c</name>
+    <help>De vroegste gewonnen Opportunity (op Sluitingsdatum) met een bedrag groter dan nul, die is gerelateerd aan deze account.</help>
+    <label>Datum van eerste gift</label>
+  </fields>
+  <fields>
+    <name>Formal_Greeting__c</name>
+    <help>Gebruikt voor Accounts voor huishouden velden van niet-uitgesloten, gerangschikte gerelateerde contactpersonen. Automatisch gegenereerd.</help>
+    <label>Formele begroeting</label>
+  </fields>
+  <fields>
+    <name>HouseholdPhone__c</name>
+    <label>Telefoon van huishouden</label>
+  </fields>
+  <fields>
+    <name>Informal_Greeting__c</name>
+    <help>Gebruikt voor Accounts voor huishouden velden van niet-uitgesloten, gerangschikte gerelateerde contactpersonen. Automatisch gegenereerd.</help>
+    <label>Informele begroeting</label>
+  </fields>
+  <fields>
+    <name>LargestAmount__c</name>
+    <help>Het grootste bedrag van een gewonnen Opportunity, dat is gerelateerd aan deze account.</help>
+    <label>Grootste gift</label>
+  </fields>
+  <fields>
+    <name>LastCloseDate__c</name>
+    <help>De recentste Sluitingsdatum van een gewonnen Opportunity die is gerelateerd aan deze account, met een bedrag groter dan nul.</help>
+    <label>Datum van laatste gift</label>
+  </fields>
+  <fields>
+    <name>LastMembershipAmount__c</name>
+    <help>Het bedrag van de recentste (op Sluitingsdatum) gewonnen Opportunity van lidmaatschap (op Recordtype), die is gerelateerd aan deze account.</help>
+    <label>Laatste bedrag van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>LastMembershipDate__c</name>
+    <help>De recentste Sluitingsdatum van een gewonnen Opportunity van lidmaatschap (op Recordtype), die is gerelateerd aan deze account.</help>
+    <label>Laatste datum van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>LastMembershipLevel__c</name>
+    <help>Lidmaatschapsniveau van de recentste (op Sluitingsdatum) gewonnen Opportunity van lidmaatschap (op Recordtype), die is gerelateerd aan deze account.</help>
+    <label>Laatste niveau van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>LastMembershipOrigin__c</name>
+    <help>"Herkomst" (nieuw, verlengen, ...) van lidmaatschap van de recentste (op Sluitingsdatum) gewonnen Opportunity van lidmaatschap (op Recordtype), die is gerelateerd aan deze account.</help>
+    <label>Laatste herkomst van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>LastOppAmount__c</name>
+    <help>Het bedrag van de recentste gewonnen Opportunity (op Sluitingsdatum) met een bedrag groter dan nul, die is gerelateerd aan deze account.</help>
+    <label>Bedrag van laatste gift</label>
+  </fields>
+  <fields>
+    <name>MembershipEndDate__c</name>
+    <help>Lidmaatschapsniveau van de recentste (op Sluitingsdatum) gewonnen Opportunity van lidmaatschap (op Recordtype), die is gerelateerd aan deze account.</help>
+    <label>Einddatum van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>MembershipJoinDate__c</name>
+    <help>Lidmaatschapsniveau van de recentste (op Sluitingsdatum) gewonnen Opportunity van lidmaatschap (op Recordtype), die is gerelateerd aan deze account.</help>
+    <label>Datum van lid worden van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>NumberOfClosedOpps__c</name>
+    <help>Het totale aantal gewonnen Opportunities, dat is gerelateerd aan deze account.</help>
+    <label>Totale aantal giften</label>
+  </fields>
+  <fields>
+    <name>NumberOfMembershipOpps__c</name>
+    <help>Het totale aantal gewonnen Opportunities van lidmaatschap (op Recordtype), dat is gerelateerd aan deze account.</help>
+    <label>Aantal lidmaatschappen</label>
+  </fields>
+  <fields>
+    <name>OppAmount2YearsAgo__c</name>
+    <help>Het totaalbedrag van gewonnen Opportunities, dat is gerelateerd aan deze account en dat is gesloten binnen het jaar of fiscale jaar dat voorafging aan afgelopen jaar (zie Instellingen voor huishouden).</help>
+    <label>Totaal aan giften twee jaar geleden</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastNDays__c</name>
+    <help>Het totaalbedrag van gewonnen Opportunities, dat is gerelateerd aan deze account en is gesloten in de laatste aantal dagen dat is gedefinieerd in Instellingen voor huishouden.</help>
+    <label>Totaal aan giften laatste n dagen</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastYear__c</name>
+    <help>Het totaalbedrag van gewonnen Opportunities, dat is gerelateerd aan deze account en dat is gesloten in het huidige jaar of fiscale jaar.</help>
+    <label>Totaal aan giften vorig jaar</label>
+  </fields>
+  <fields>
+    <name>OppAmountThisYear__c</name>
+    <help>Het totaalbedrag van gewonnen Opportunities, dat is gerelateerd aan deze account en dat is gesloten in het huidige jaar of fiscale jaar.</help>
+    <label>Totaal aan giften dit jaar</label>
+  </fields>
+  <fields>
+    <name>OppsClosed2YearsAgo__c</name>
+    <help>Het totale aantal gewonnen Opportunities met een bedrag groter dan nul, dat is gerelateerd aan deze account en dat is gesloten binnen het jaar of fiscale jaar dat voorafging aan afgelopen jaar.</help>
+    <label>Totaal aan giften twee jaar geleden</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastNDays__c</name>
+    <help>Het totale aantal gewonnen Opportunities, dat is gerelateerd aan deze account en gesloten in het laatste aantal dagen dat is gedefinieerd in Instellingen voor huishouden.</help>
+    <label>Aantal aan giften laatste n dagen</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastYear__c</name>
+    <help>Het totale aantal gewonnen Opportunities met een bedrag groter dan nul, dat is gerelateerd aan deze account en is gesloten in het vorige jaar of fiscale jaar (zie Instellingen voor huishouden).</help>
+    <label>Aantal aan giften vorig jaar</label>
+  </fields>
+  <fields>
+    <name>OppsClosedThisYear__c</name>
+    <help>Het totale aantal gewonnen Opportunities met een bedrag groter dan nul, dat is gerelateerd aan deze account en is gesloten in het huidige jaar of fiscale jaar (zie Instellingen voor huishouden).</help>
+    <label>Aantal aan giften huidig jaar</label>
+  </fields>
+  <fields>
+    <name>SYSTEM_CUSTOM_NAMING__c</name>
+    <help>Geeft voor Accounts voor huishouden aan welke aan naam gerelateerde velden niet automatisch moeten worden ingevuld door de code voor Huishouden.</help>
+    <label>_SYSTEM: AANGEPASTE NAAMGEVING</label>
+    <picklistValues>
+      <masterLabel>Name</masterLabel>
+      <translation>Naam</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Formal_Greeting__c</masterLabel>
+      <translation>Formal_Greeting__c</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Informal_Greeting__c</masterLabel>
+      <translation>Informal_Greeting__c</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>SmallestAmount__c</name>
+    <help>Het kleinste niet-nul bedrag van een gewonnen Opportunity, dat is gerelateerd aan deze account.</help>
+    <label>Kleinste gift</label>
+  </fields>
+  <fields>
+    <name>TotalMembershipOppAmount__c</name>
+    <help>Het totale aantal gewonnen Opportunities van lidmaatschap (op Recordtype), dat is gerelateerd aan deze account.</help>
+    <label>Totale bedrag van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>TotalOppAmount__c</name>
+    <help>De som van bedragen van alle gewonnen Opportunities, die zijn gerelateerd aan deze account.</help>
+    <label>Totaal aan giften</label>
+  </fields>
 </CustomObjectTranslation>
