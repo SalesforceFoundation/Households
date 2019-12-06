@@ -1,377 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label>Agregar</label>
         <name>Add</name>
+        <label>Agregar</label>
     </customLabels>
     <customLabels>
-        <label>Agregar y combinar hogares</label>
         <name>AddAndMerge</name>
+        <label>Agregar y combinar hogares</label>
     </customLabels>
     <customLabels>
-        <label>Agregar y borrar desde hogar antiguo</label>
         <name>AddAndRemove</name>
+        <label>Agregar y borrar desde hogar antiguo</label>
     </customLabels>
     <customLabels>
-        <label>Agregar miembros</label>
         <name>AddHouseholdMembers</name>
+        <label>Agregar miembros</label>
     </customLabels>
     <customLabels>
-        <label>Ocurrió un error al copiar las direcciones.</label>
         <name>AddressCopyFailure</name>
+        <label>Ocurrió un error al copiar las direcciones.</label>
     </customLabels>
     <customLabels>
-        <label>Dirección copiada correctamente.</label>
         <name>AddressCopySuccess</name>
+        <label>Dirección copiada correctamente.</label>
     </customLabels>
     <customLabels>
-        <label>La copia de direcciones no está disponible para este tipo de objeto.</label>
         <name>AddressCopyUnknownObject</name>
+        <label>La copia de direcciones no está disponible para este tipo de objeto.</label>
     </customLabels>
     <customLabels>
-        <label>Establece esta dirección como la dirección del hogar en todos los miembros del hogar.</label>
         <name>AddressToAllMembers</name>
+        <label>Establece esta dirección como la dirección del hogar en todos los miembros del hogar.</label>
     </customLabels>
     <customLabels>
-        <label>Ya está en el hogar.</label>
         <name>AlreadyInHousehold</name>
+        <label>Ya está en el hogar.</label>
     </customLabels>
     <customLabels>
-        <label>Saludo formal automático</label>
         <name>AutoFormalGreeting</name>
+        <label>Saludo formal automático</label>
     </customLabels>
     <customLabels>
-        <label>Saludo informal automático</label>
         <name>AutoInformalGreeting</name>
+        <label>Saludo informal automático</label>
     </customLabels>
     <customLabels>
-        <label>Nombre automático</label>
         <name>AutoName</name>
+        <label>Nombre automático</label>
     </customLabels>
     <customLabels>
-        <label>Cambiar</label>
         <name>Change</name>
+        <label>Cambiar</label>
     </customLabels>
     <customLabels>
-        <label>Cambiar direcciones</label>
         <name>ChangeAddress</name>
+        <label>Cambiar direcciones</label>
     </customLabels>
     <customLabels>
-        <label>Los cambios no fueron guardados.</label>
         <name>ChangesNotSaved</name>
+        <label>Los cambios no fueron guardados.</label>
     </customLabels>
     <customLabels>
-        <label>ya está en un hogar. ¿Quiere agregar este contacto con o sin los miembros de su hogar existentes?</label>
         <name>ContactAlreadyInHousehold</name>
+        <label>ya está en un hogar. ¿Quiere agregar este contacto con o sin los miembros de su hogar existentes?</label>
     </customLabels>
     <customLabels>
-        <label>El apellido obligatorio.</label>
         <name>ContactLastNameRqd</name>
+        <label>El apellido obligatorio.</label>
     </customLabels>
     <customLabels>
-        <label>Introduzca el nombre y el apellido.</label>
         <name>ContactNameRqd</name>
+        <label>Introduzca el nombre y el apellido.</label>
     </customLabels>
     <customLabels>
-        <label>El contacto se creará cuando se guarde el hogar.</label>
         <name>CreatedOnSave</name>
+        <label>El contacto se creará cuando se guarde el hogar.</label>
     </customLabels>
     <customLabels>
-        <label>Hogar</label>
         <name>DefaultHouseholdName</name>
+        <label>Hogar</label>
     </customLabels>
     <customLabels>
-        <label>€</label>
         <name>DefaultHouseholdTransactionCurrency</name>
+        <label>€</label>
     </customLabels>
     <customLabels>
-        <label>Eliminar</label>
         <name>Delete</name>
+        <label>Eliminar</label>
     </customLabels>
     <customLabels>
-        <label>Introduzca una nueva dirección</label>
         <name>EnterNewAddress</name>
+        <label>Introduzca una nueva dirección</label>
     </customLabels>
     <customLabels>
-        <label>Excluir contacto de nomenclatura automática de hogares</label>
         <name>ExcludeText</name>
+        <label>Excluir contacto de nomenclatura automática de hogares</label>
     </customLabels>
     <customLabels>
-        <label>Hogar existente</label>
         <name>ExistingHousehold</name>
+        <label>Hogar existente</label>
     </customLabels>
     <customLabels>
-        <label>Encontrar contacto por nombre…</label>
         <name>FindContactByName</name>
+        <label>Encontrar contacto por nombre…</label>
     </customLabels>
     <customLabels>
-        <label>Dirección de hogar</label>
         <name>HouseholdAddress</name>
+        <label>Dirección de hogar</label>
     </customLabels>
     <customLabels>
-        <label>Señor o señora</label>
         <name>HouseholdAnonymousGreeting</name>
+        <label>Señor o señora</label>
     </customLabels>
     <customLabels>
-        <label>Anónima</label>
         <name>HouseholdAnonymousName</name>
+        <label>Anónima</label>
     </customLabels>
     <customLabels>
-        <label>Detalles de hogar</label>
         <name>HouseholdDetails</name>
+        <label>Detalles de hogar</label>
     </customLabels>
     <customLabels>
-        <label>Miembros del hogar</label>
         <name>HouseholdMembers</name>
+        <label>Miembros del hogar</label>
     </customLabels>
     <customLabels>
-        <label>y</label>
         <name>HouseholdNameConnector</name>
+        <label>y</label>
     </customLabels>
     <customLabels>
-        <label>Amigos</label>
         <name>HouseholdNameOverrun</name>
+        <label>Amigos</label>
     </customLabels>
     <customLabels>
-        <label>No hay oportunidades</label>
         <name>Household_Contact_Role_Processor_Off</name>
+        <label>No hay oportunidades</label>
     </customLabels>
     <customLabels>
-        <label>Todas las oportunidades</label>
         <name>Household_Contact_Role_Processor_On</name>
+        <label>Todas las oportunidades</label>
     </customLabels>
     <customLabels>
-        <label>Estos parámetros le permiten crear automáticamente funciones de contacto de oportunidad para los miembros del hogar siempre que se crea una oportunidad.</label>
         <name>Household_Contact_Roles_Help_Text</name>
+        <label>Estos parámetros le permiten crear automáticamente funciones de contacto de oportunidad para los miembros del hogar siempre que se crea una oportunidad.</label>
     </customLabels>
     <customLabels>
-        <label>Miembro de hogar</label>
         <name>Household_Member_Contact_Role</name>
+        <label>Miembro de hogar</label>
     </customLabels>
     <customLabels>
-        <label>DESUSADO. No se utiliza. Seleccione qué contactos obtienen hogares: todos, solo aquellos relacionados con una cuenta individual o ninguno.</label>
         <name>Household_Rules_Help_Text</name>
+        <label>DESUSADO. No se utiliza. Seleccione qué contactos obtienen hogares: todos, solo aquellos relacionados con una cuenta individual o ninguno.</label>
     </customLabels>
     <customLabels>
-        <label>Gestionar hogar</label>
         <name>ManageHousehold</name>
+        <label>Gestionar hogar</label>
     </customLabels>
     <customLabels>
-        <label>REEMPLAZAR</label>
         <name>NameReplacementText</name>
+        <label>REEMPLAZAR</label>
     </customLabels>
     <customLabels>
-        <label>Nuevo contacto</label>
         <name>NewContact</name>
+        <label>Nuevo contacto</label>
     </customLabels>
     <customLabels>
-        <label>En estos momentos no hay contactos en este hogar.</label>
         <name>NoContacts</name>
+        <label>En estos momentos no hay contactos en este hogar.</label>
     </customLabels>
     <customLabels>
-        <label>Los errores en las totalizaciones pueden ocurrir durante totalizaciones programadas por la noche o en totalizaciones manuales, y pueden afectar la exactitud de los datos. A continuación se enumeran los errores, el tipo de error y un vínculo al registro en el que se produjo el error. Estos errores se restablecen siempre que se ejecuta el trabajo de totalización programado por la noche o manual. Es muy recomendable que estos errores se solucionen de inmediato para garantizar la exactitud de los datos.</label>
         <name>Opportunity_Error_Help_Text</name>
+        <label>Los errores en las totalizaciones pueden ocurrir durante totalizaciones programadas por la noche o en totalizaciones manuales, y pueden afectar la exactitud de los datos. A continuación se enumeran los errores, el tipo de error y un vínculo al registro en el que se produjo el error. Estos errores se restablecen siempre que se ejecuta el trabajo de totalización programado por la noche o manual. Es muy recomendable que estos errores se solucionen de inmediato para garantizar la exactitud de los datos.</label>
     </customLabels>
     <customLabels>
-        <label>No se ejecutó la totalización porque había pocas llamadas futuras disponibles.</label>
         <name>Opportunity_Rollup_Future_Call_Limit</name>
+        <label>No se ejecutó la totalización porque había pocas llamadas futuras disponibles.</label>
     </customLabels>
     <customLabels>
-        <label>Ha llegado a su límite de trabajos programados de Apex y las totalizaciones de oportunidades no se ejecutarán por la noche. Si desea que este trabajo se ejecute por la noche, elimine uno de sus trabajos programados y vuelva a cargar esta página.</label>
         <name>Opportunity_Rollup_Scheduling_Error_Text</name>
+        <label>Ha llegado a su límite de trabajos programados de Apex y las totalizaciones de oportunidades no se ejecutarán por la noche. Si desea que este trabajo se ejecute por la noche, elimine uno de sus trabajos programados y vuelva a cargar esta página.</label>
     </customLabels>
     <customLabels>
-        <label>Donante</label>
         <name>Primary_Donor_Contact_Role</name>
+        <label>Donante</label>
     </customLabels>
     <customLabels>
-        <label>Se produjeron errores desde la última vez que se totalizaron sus oportunidades. Vea el panel de registro de errores del sistema para obtener más información.</label>
         <name>RollupErrorMessage</name>
+        <label>Se produjeron errores desde la última vez que se totalizaron sus oportunidades. Vea el panel de registro de errores del sistema para obtener más información.</label>
     </customLabels>
     <customLabels>
-        <label>Seleccionar una dirección existente</label>
         <name>SelectExistingAddress</name>
+        <label>Seleccionar una dirección existente</label>
     </customLabels>
     <customLabels>
-        <label>Establecer dirección</label>
         <name>SetAddress</name>
+        <label>Establecer dirección</label>
     </customLabels>
     <customLabels>
+        <name>UDRDescription</name>
         <label>Estos parámetros le permiten crear y gestionar totalizaciones procedentes de una oportunidad (donación) a un contacto, cuenta u hogar. Después de crear una totalización definida por el usuario, es posible que desee utilizar el Lote totalización de donaciones en Configuración de NPSP | Procesos en lote para volver a calcular todas las totalizaciones de su instancia y garantizar que su nuevo campo de totalización está correctamente cumplimentado.
 
 ADVERTENCIA: Tenga en cuenta que las totalizaciones cambian el comportamiento de Nonprofit Success Pack. Una mala configuración puede provocar que fallen sus totalizaciones. Pruebe a fondo sus totalizaciones definidas por el usuario antes de implementarlos a producción.</label>
-        <name>UDRDescription</name>
     </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Confirm Message --></label>
-        <name>npe01__Contact_Merge_Error_Confirm_Message</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error Confirm Message Households --></label>
-        <name>npe01__Contact_Merge_Error_Confirm_Message_Households</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error Confirm Message Nothing Found --></label>
-        <name>npe01__Contact_Merge_Error_Confirm_Message_Nothing_Found</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Contact not found --></label>
-        <name>npe01__Contact_Merge_Error_Contact_not_found</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Lock failed --></label>
-        <name>npe01__Contact_Merge_Error_Lock_failed</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Merge Failed --></label>
-        <name>npe01__Contact_Merge_Error_Merge_Failed</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - No Master --></label>
-        <name>npe01__Contact_Merge_Error_No_Master</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Query Failed --></label>
-        <name>npe01__Contact_Merge_Error_Query_Failed</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Too Few Contacts --></label>
-        <name>npe01__Contact_Merge_Error_Too_Few_Contacts</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Too Many Contacts --></label>
-        <name>npe01__Contact_Merge_Error_Too_Many_Contacts</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - please retry --></label>
-        <name>npe01__Contact_Merge_Error_please_retry</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Step1 --></label>
-        <name>npe01__Contact_Merge_Step1</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Step2 --></label>
-        <name>npe01__Contact_Merge_Step2</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Step3 --></label>
-        <name>npe01__Contact_Merge_Step3</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Step4 --></label>
-        <name>npe01__Contact_Merge_Step4</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contacts Settings Account Model Help Text --></label>
-        <name>npe01__Contacts_Settings_Account_Model_Help_Text</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contacts Settings Contact Roles Help Text --></label>
-        <name>npe01__Contacts_Settings_Contact_Roles_Help_Text</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- DefaultContactTransactionCurrency --></label>
-        <name>npe01__DefaultContactTransactionCurrency</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Suffix added to the name of the original donation to form matching donation name --></label>
-        <name>npe01__Matching_Donation_Record_Suffix</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Record type for matching donation. Set to $Source to match the original donation --></label>
-        <name>npe01__Matching_Donation_Record_Type</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Opportunity Contact Role Error - Bad Contact Id --></label>
-        <name>npe01__Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
-    </customLabels>
-    <customPageWebLinks>
-        <label><!-- Nonprofit Edition Reports --></label>
-        <name>Nonprofit_Edition_Reports</name>
-    </customPageWebLinks>
-    <customTabs>
-        <label><!-- Contact Merge (OLD) --></label>
-        <name>Contact_Merge</name>
-    </customTabs>
-    <customTabs>
-        <label><!-- Contacts Settings --></label>
-        <name>Contacts_Settings</name>
-    </customTabs>
-    <customTabs>
-        <label>Configuración de hogares</label>
-        <name>Households_Settings</name>
-    </customTabs>
-    <customTabs>
-        <label>Totalizaciones en oportunidades</label>
-        <name>Opportunity_Rollups</name>
-    </customTabs>
-    <customTabs>
-        <label><!-- Payment Mapping --></label>
-        <name>Payment_Mapping</name>
-    </customTabs>
-    <customTabs>
-        <label>Totalizaciones de usuario</label>
-        <name>User_Rollups</name>
-    </customTabs>
-    <quickActions>
-        <label><!-- LogACall --></label>
-        <name>LogACall</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewAccount --></label>
-        <name>NewAccount</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewCase --></label>
-        <name>NewCase</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewContact --></label>
-        <name>NewContact</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewEvent --></label>
-        <name>NewEvent</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewGroup --></label>
-        <name>NewGroup</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewLead --></label>
-        <name>NewLead</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewNote --></label>
-        <name>NewNote</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewOpportunity --></label>
-        <name>NewOpportunity</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewTask --></label>
-        <name>NewTask</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- SendEmail --></label>
-        <name>SendEmail</name>
-    </quickActions>
     <reportTypes>
-        <label>Hogares y donaciones</label>
         <name>Households_and_Donations</name>
-        <sections>
-            <label>Miembros de hogar</label>
-            <name>Household Members</name>
-        </sections>
+        <label>Hogares y donaciones</label>
         <sections>
             <label>Hogares</label>
             <name>Households</name>
+        </sections>
+        <sections>
+            <label>Miembros de hogar</label>
+            <name>Household Members</name>
         </sections>
         <sections>
             <label>Oportunidades</label>
             <name>Opportunities</name>
         </sections>
     </reportTypes>
+    <customTabs>
+        <name>Households_Settings</name>
+        <label>Configuración de hogares</label>
+    </customTabs>
+    <customTabs>
+        <name>Opportunity_Rollups</name>
+        <label>Totalizaciones en oportunidades</label>
+    </customTabs>
+    <customTabs>
+        <name>User_Rollups</name>
+        <label>Totalizaciones de usuario</label>
+    </customTabs>
 </Translations>

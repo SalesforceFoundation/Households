@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <webLinks>
-        <label>Lista de envío de Hogar</label>
-        <name>Household_Mailing_List</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- ViewCampaignInfluenceReport --></label>
-        <name>ViewCampaignInfluenceReport</name>
-    </webLinks>
+  <webLinks>
+    <name>Household_Mailing_List</name>
+    <label>Lista de envío de Hogar</label>
+  </webLinks>
 </CustomObjectTranslation>

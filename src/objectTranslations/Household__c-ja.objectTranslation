@@ -1,251 +1,255 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value>世帯</value>
-    </caseValues>
-    <fields>
-        <label>住所</label>
-        <name>Addressee__c</name>
-    </fields>
-    <fields>
-        <help>匿名情報を使用して世帯名やその他の項目を設定するために使用します。</help>
-        <label>常に匿名</label>
-        <name>Always_Anonymous__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている関連個人による、この世帯に関連する成立支援の平均金額。</help>
-        <label>平均支援金額</label>
-        <name>AverageAmount__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている個人による、この世帯の最大支援年における成立支援の合計金額。「最大支援年」も参照。</help>
-        <label>最大支援年の総額</label>
-        <name>Best_Gift_Year_Total__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている個人による、この世帯に関連する成立支援の総額が最高であった年。「最大支援年の総額」も参照。</help>
-        <label>最大支援年</label>
-        <name>Best_Gift_Year__c</name>
-    </fields>
-    <fields>
-        <help>主個人の役割が設定されている個人による、この世帯に関連する成立支援の最初の完了日。</help>
-        <label>最初の支援日</label>
-        <name>FirstCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>除外なしで順序付けされた関係する個人の項目を使用します。自動的に生成されます。</help>
-        <label>公式の挨拶</label>
-        <name>Formal_Greeting__c</name>
-    </fields>
-    <fields>
-        <help>数式: この世帯の他の郵送先項目の連結。世帯の編集ページで更新できますが、[個人に世帯住所をコピー] ボタンをオンにしている場合を除き、個人は更新されません。</help>
-        <label>住所(郵送先)</label>
-        <name>Formula_MailingAddress__c</name>
-    </fields>
-    <fields>
-        <help>この世帯の作成の元となった個人によって設定されます。[世帯] で編集できますが、個人は更新されません。</help>
-        <label>世帯メール</label>
-        <name>HouseholdEmail__c</name>
-    </fields>
-    <fields>
-        <help>この世帯の作成の元となった個人によって設定されます。[世帯] で編集できますが、個人は更新されません。</help>
-        <label>世帯電話</label>
-        <name>HouseholdPhone__c</name>
-    </fields>
-    <fields>
-        <label>世帯 ID</label>
-        <name>Household_ID__c</name>
-    </fields>
-    <fields>
-        <help>除外なしで順序付けされた関係する個人の項目を使用します。自動的に生成されます。</help>
-        <label>非公式の挨拶</label>
-        <name>Informal_Greeting__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている関連個人による、この世帯の成立支援の最大金額。</help>
-        <label>最大支援金額</label>
-        <name>LargestAmount__c</name>
-    </fields>
-    <fields>
-        <help>主個人の役割が設定されている関連個人による、この世帯の成立支援の最も新しい完了日。</help>
-        <label>最終支援日</label>
-        <name>LastCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている関連個人による、この世帯の最も新しい成立会費支援 (レコードタイプ) の金額。</help>
-        <label>最終会費支援金額</label>
-        <name>LastMembershipAmount__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている関連個人による、この世帯の成立会費支援の最も新しい完了日。</help>
-        <label>最終会費支援日</label>
-        <name>LastMembershipDate__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている関連個人による、この世帯の最も新しい成立会費支援の会員レベル。</help>
-        <label>最終会員レベル</label>
-        <name>LastMembershipLevel__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている関連個人による、この世帯の最も新しい成立会費支援の状況 (新規、更新など)。</help>
-        <label>最終会員状況</label>
-        <name>LastMembershipOrigin__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている関連個人による、この世帯の最も新しい成立支援の金額。</help>
-        <label>最終支援金額</label>
-        <name>LastOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>この世帯の作成の元となった個人によって設定されます。世帯の編集ページで更新できますが、[個人に世帯住所をコピー] ボタンをオンにしている場合を除き、個人は更新されません。</help>
-        <label>市区郡(郵送先)</label>
-        <name>MailingCity__c</name>
-    </fields>
-    <fields>
-        <help>この世帯の作成の元となった個人によって設定されます。世帯の編集ページで更新できますが、[個人に世帯住所をコピー] ボタンをオンにしている場合を除き、個人は更新されません。</help>
-        <label>国(郵送先)</label>
-        <name>MailingCountry__c</name>
-    </fields>
-    <fields>
-        <help>この世帯の作成の元となった個人によって設定されます。世帯の編集ページで更新できますが、[個人に世帯住所をコピー] ボタンをオンにしている場合を除き、個人は更新されません。</help>
-        <label>郵便番号(郵送先)</label>
-        <name>MailingPostalCode__c</name>
-    </fields>
-    <fields>
-        <help>この世帯の作成の元となった個人によって設定されます。世帯の編集ページで更新できますが、[個人に世帯住所をコピー] ボタンをオンにしている場合を除き、個人は更新されません。</help>
-        <label>都道府県(郵送先)</label>
-        <name>MailingState__c</name>
-    </fields>
-    <fields>
-        <help>この世帯の作成の元となった個人によって設定されます。世帯の編集ページで更新できますが、[個人に世帯住所をコピー] ボタンをオンにしている場合を除き、個人は更新されません。</help>
-        <label>町名・番地(郵送先)</label>
-        <name>MailingStreet__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている関連個人による、この世帯の最も新しい成立会費支援の会員終了日。</help>
-        <label>会員終了日</label>
-        <name>MembershipEndDate__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている関連個人による、この世帯の最も古い (完了日) 会費支援 (レコードタイプ) の最初の入会年月日。</help>
-        <label>入会年月日</label>
-        <name>MembershipJoinDate__c</name>
-    </fields>
-    <fields>
-        <help>数式: この世帯にメンバーがいる年数。</help>
-        <label>会員期間(年)</label>
-        <name>Membership_Span__c</name>
-    </fields>
-    <fields>
-        <help>期限内、期限切れ、または猶予期間</help>
-        <label>会員ステータス</label>
-        <name>Membership_Status__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている個人による、この世帯に関連する支援の合計回数。</help>
-        <label>これまでの支援回数</label>
-        <name>NumberOfClosedOpps__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている個人による、この世帯に関連する成立会費支援 (レコードタイプ) の合計金額。</help>
-        <label>会費払込回数</label>
-        <name>NumberOfMembershipOpps__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている個人による、世帯の一昨年の支援総額。</help>
-        <label>一昨年の支援総額</label>
-        <name>OppAmount2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている個人による、この世帯に関連する成立支援で、[世帯設定] に定義されている過去の日数の間に完了したものの総額。</help>
-        <label>N日間の支援総額</label>
-        <name>OppAmountLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている個人による、世帯の昨年の支援総額。</help>
-        <label>昨年の支援総額</label>
-        <name>OppAmountLastYear__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている個人による、世帯の今年の支援総額。</help>
-        <label>今年の支援総額</label>
-        <name>OppAmountThisYear__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている関連個人による、この世帯に関連する成立支援で、完了日が過去 2 年間であるものの回数。</help>
-        <label>一昨年の支援回数</label>
-        <name>OppsClosed2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている関連個人による、この世帯に関連する成立支援で、完了日が過去 N 日間 (世帯設定) であるものの回数。</help>
-        <label>N日間の支援回数</label>
-        <name>OppsClosedLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>主個人の役割が設定されている関連個人による、この世帯に関連する成立支援で、完了日が昨年であるものの回数。</help>
-        <label>昨年の支援回数</label>
-        <name>OppsClosedLastYear__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている関連個人による、この世帯に関連する成立支援で、完了日が今年であるものの回数。</help>
-        <label>今年の支援回数</label>
-        <name>OppsClosedThisYear__c</name>
-    </fields>
-    <fields>
-        <help>名前、公式の挨拶、非公式の挨拶のいずれか</help>
-        <label>_SYSTEM: CUSTOM NAMING</label>
-        <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation>Formal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation>Informal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation>名前</translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている個人による、この世帯に関連する成立支援の最小金額。</help>
-        <label>最小支援金額</label>
-        <name>SmallestAmount__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている個人による、この世帯に関連する成立会費支援 (レコードタイプ) の合計金額。</help>
-        <label>会費支援総額</label>
-        <name>TotalMembershipOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>主支援個人の役割が設定されている個人による、この世帯に関連する成立支援の合計金額。</help>
-        <label>これまでの支援総額</label>
-        <name>TotalOppAmount__c</name>
-    </fields>
-    <layouts>
-        <layout>Household Layout</layout>
-        <sections>
-            <label>カスタムリンク</label>
-            <section>Custom Links</section>
-        </sections>
-        <sections>
-            <label>支援情報</label>
-            <section>Donation Information</section>
-        </sections>
-        <sections>
-            <label>支援総額</label>
-            <section>Donation Totals</section>
-        </sections>
-        <sections>
-            <label>世帯情報</label>
-            <section>Household Information</section>
-        </sections>
-    </layouts>
-    <nameFieldLabel>世帯名</nameFieldLabel>
-    <webLinks>
-        <label>個人に世帯住所をコピー</label>
-        <name>Copy_Household_Address_to_Contacts</name>
-    </webLinks>
+  <fields>
+    <name>Addressee__c</name>
+    <label>住所</label>
+  </fields>
+  <fields>
+    <name>Always_Anonymous__c</name>
+    <help>匿名情報を使用して世帯名やその他の項目を設定するために使用します。</help>
+    <label>常に匿名</label>
+  </fields>
+  <fields>
+    <name>AverageAmount__c</name>
+    <help>主支援個人の役割が設定されている関連個人による、この世帯に関連する成立支援の平均金額。</help>
+    <label>平均支援金額</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year_Total__c</name>
+    <help>主支援個人の役割が設定されている個人による、この世帯の最大支援年における成立支援の合計金額。「最大支援年」も参照。</help>
+    <label>最大支援年の総額</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year__c</name>
+    <help>主支援個人の役割が設定されている個人による、この世帯に関連する成立支援の総額が最高であった年。「最大支援年の総額」も参照。</help>
+    <label>最大支援年</label>
+  </fields>
+  <fields>
+    <name>FirstCloseDate__c</name>
+    <help>主個人の役割が設定されている個人による、この世帯に関連する成立支援の最初の完了日。</help>
+    <label>最初の支援日</label>
+  </fields>
+  <fields>
+    <name>Formal_Greeting__c</name>
+    <help>除外なしで順序付けされた関係する個人の項目を使用します。自動的に生成されます。</help>
+    <label>公式の挨拶</label>
+  </fields>
+  <fields>
+    <name>Formula_MailingAddress__c</name>
+    <help>数式: この世帯の他の郵送先項目の連結。世帯の編集ページで更新できますが、[個人に世帯住所をコピー] ボタンをオンにしている場合を除き、個人は更新されません。</help>
+    <label>住所(郵送先)</label>
+  </fields>
+  <fields>
+    <name>HouseholdEmail__c</name>
+    <help>この世帯の作成の元となった個人によって設定されます。[世帯] で編集できますが、個人は更新されません。</help>
+    <label>世帯メール</label>
+  </fields>
+  <fields>
+    <name>HouseholdPhone__c</name>
+    <help>この世帯の作成の元となった個人によって設定されます。[世帯] で編集できますが、個人は更新されません。</help>
+    <label>世帯電話</label>
+  </fields>
+  <fields>
+    <name>Household_ID__c</name>
+    <label>世帯 ID</label>
+  </fields>
+  <fields>
+    <name>Informal_Greeting__c</name>
+    <help>除外なしで順序付けされた関係する個人の項目を使用します。自動的に生成されます。</help>
+    <label>非公式の挨拶</label>
+  </fields>
+  <fields>
+    <name>LargestAmount__c</name>
+    <help>主支援個人の役割が設定されている関連個人による、この世帯の成立支援の最大金額。</help>
+    <label>最大支援金額</label>
+  </fields>
+  <fields>
+    <name>LastCloseDate__c</name>
+    <help>主個人の役割が設定されている関連個人による、この世帯の成立支援の最も新しい完了日。</help>
+    <label>最終支援日</label>
+  </fields>
+  <fields>
+    <name>LastMembershipAmount__c</name>
+    <help>主支援個人の役割が設定されている関連個人による、この世帯の最も新しい成立会費支援 (レコードタイプ) の金額。</help>
+    <label>最終会費支援金額</label>
+  </fields>
+  <fields>
+    <name>LastMembershipDate__c</name>
+    <help>主支援個人の役割が設定されている関連個人による、この世帯の成立会費支援の最も新しい完了日。</help>
+    <label>最終会費支援日</label>
+  </fields>
+  <fields>
+    <name>LastMembershipLevel__c</name>
+    <help>主支援個人の役割が設定されている関連個人による、この世帯の最も新しい成立会費支援の会員レベル。</help>
+    <label>最終会員レベル</label>
+  </fields>
+  <fields>
+    <name>LastMembershipOrigin__c</name>
+    <help>主支援個人の役割が設定されている関連個人による、この世帯の最も新しい成立会費支援の状況 (新規、更新など)。</help>
+    <label>最終会員状況</label>
+  </fields>
+  <fields>
+    <name>LastOppAmount__c</name>
+    <help>主支援個人の役割が設定されている関連個人による、この世帯の最も新しい成立支援の金額。</help>
+    <label>最終支援金額</label>
+  </fields>
+  <fields>
+    <name>MailingCity__c</name>
+    <help>この世帯の作成の元となった個人によって設定されます。世帯の編集ページで更新できますが、[個人に世帯住所をコピー] ボタンをオンにしている場合を除き、個人は更新されません。</help>
+    <label>市区郡(郵送先)</label>
+  </fields>
+  <fields>
+    <name>MailingCountry__c</name>
+    <help>この世帯の作成の元となった個人によって設定されます。世帯の編集ページで更新できますが、[個人に世帯住所をコピー] ボタンをオンにしている場合を除き、個人は更新されません。</help>
+    <label>国(郵送先)</label>
+  </fields>
+  <fields>
+    <name>MailingPostalCode__c</name>
+    <help>この世帯の作成の元となった個人によって設定されます。世帯の編集ページで更新できますが、[個人に世帯住所をコピー] ボタンをオンにしている場合を除き、個人は更新されません。</help>
+    <label>郵便番号(郵送先)</label>
+  </fields>
+  <fields>
+    <name>MailingState__c</name>
+    <help>この世帯の作成の元となった個人によって設定されます。世帯の編集ページで更新できますが、[個人に世帯住所をコピー] ボタンをオンにしている場合を除き、個人は更新されません。</help>
+    <label>都道府県(郵送先)</label>
+  </fields>
+  <fields>
+    <name>MailingStreet__c</name>
+    <help>この世帯の作成の元となった個人によって設定されます。世帯の編集ページで更新できますが、[個人に世帯住所をコピー] ボタンをオンにしている場合を除き、個人は更新されません。</help>
+    <label>町名・番地(郵送先)</label>
+  </fields>
+  <fields>
+    <name>MembershipEndDate__c</name>
+    <help>主支援個人の役割が設定されている関連個人による、この世帯の最も新しい成立会費支援の会員終了日。</help>
+    <label>会員終了日</label>
+  </fields>
+  <fields>
+    <name>MembershipJoinDate__c</name>
+    <help>主支援個人の役割が設定されている関連個人による、この世帯の最も古い (完了日) 会費支援 (レコードタイプ) の最初の入会年月日。</help>
+    <label>入会年月日</label>
+  </fields>
+  <fields>
+    <name>Membership_Span__c</name>
+    <help>数式: この世帯にメンバーがいる年数。</help>
+    <label>会員期間(年)</label>
+  </fields>
+  <fields>
+    <name>Membership_Status__c</name>
+    <help>期限内、期限切れ、または猶予期間</help>
+    <label>会員ステータス</label>
+  </fields>
+  <fields>
+    <name>NumberOfClosedOpps__c</name>
+    <help>主支援個人の役割が設定されている個人による、この世帯に関連する支援の合計回数。</help>
+    <label>これまでの支援回数</label>
+  </fields>
+  <fields>
+    <name>NumberOfMembershipOpps__c</name>
+    <help>主支援個人の役割が設定されている個人による、この世帯に関連する成立会費支援 (レコードタイプ) の合計金額。</help>
+    <label>会費払込回数</label>
+  </fields>
+  <fields>
+    <name>OppAmount2YearsAgo__c</name>
+    <help>主支援個人の役割が設定されている個人による、世帯の一昨年の支援総額。</help>
+    <label>一昨年の支援総額</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastNDays__c</name>
+    <help>主支援個人の役割が設定されている個人による、この世帯に関連する成立支援で、[世帯設定] に定義されている過去の日数の間に完了したものの総額。</help>
+    <label>N日間の支援総額</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastYear__c</name>
+    <help>主支援個人の役割が設定されている個人による、世帯の昨年の支援総額。</help>
+    <label>昨年の支援総額</label>
+  </fields>
+  <fields>
+    <name>OppAmountThisYear__c</name>
+    <help>主支援個人の役割が設定されている個人による、世帯の今年の支援総額。</help>
+    <label>今年の支援総額</label>
+  </fields>
+  <fields>
+    <name>OppsClosed2YearsAgo__c</name>
+    <help>主支援個人の役割が設定されている関連個人による、この世帯に関連する成立支援で、完了日が過去 2 年間であるものの回数。</help>
+    <label>一昨年の支援回数</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastNDays__c</name>
+    <help>主支援個人の役割が設定されている関連個人による、この世帯に関連する成立支援で、完了日が過去 N 日間 (世帯設定) であるものの回数。</help>
+    <label>N日間の支援回数</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastYear__c</name>
+    <help>主個人の役割が設定されている関連個人による、この世帯に関連する成立支援で、完了日が昨年であるものの回数。</help>
+    <label>昨年の支援回数</label>
+  </fields>
+  <fields>
+    <name>OppsClosedThisYear__c</name>
+    <help>主支援個人の役割が設定されている関連個人による、この世帯に関連する成立支援で、完了日が今年であるものの回数。</help>
+    <label>今年の支援回数</label>
+  </fields>
+  <fields>
+    <name>SYSTEM_CUSTOM_NAMING__c</name>
+    <help>名前、公式の挨拶、非公式の挨拶のいずれか</help>
+    <label>_SYSTEM: CUSTOM NAMING</label>
+    <picklistValues>
+      <masterLabel>Name</masterLabel>
+      <translation>名前</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Formal_Greeting__c</masterLabel>
+      <translation>Formal_Greeting__c</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Informal_Greeting__c</masterLabel>
+      <translation>Informal_Greeting__c</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>SmallestAmount__c</name>
+    <help>主支援個人の役割が設定されている個人による、この世帯に関連する成立支援の最小金額。</help>
+    <label>最小支援金額</label>
+  </fields>
+  <fields>
+    <name>TotalMembershipOppAmount__c</name>
+    <help>主支援個人の役割が設定されている個人による、この世帯に関連する成立会費支援 (レコードタイプ) の合計金額。</help>
+    <label>会費支援総額</label>
+  </fields>
+  <fields>
+    <name>TotalOppAmount__c</name>
+    <help>主支援個人の役割が設定されている個人による、この世帯に関連する成立支援の合計金額。</help>
+    <label>これまでの支援総額</label>
+  </fields>
+  <webLinks>
+    <name>Copy_Household_Address_to_Contacts</name>
+    <label>個人に世帯住所をコピー</label>
+  </webLinks>
+  <layouts>
+    <layout>Household Layout</layout>
+    <sections>
+      <label>世帯情報</label>
+      <section>Household Information</section>
+    </sections>
+    <sections>
+      <label>支援情報</label>
+      <section>Donation Information</section>
+    </sections>
+    <sections>
+      <label>支援総額</label>
+      <section>Donation Totals</section>
+    </sections>
+    <sections>
+      <label>カスタムリンク</label>
+      <section>Custom Links</section>
+    </sections>
+  </layouts>
+  <nameFieldLabel>世帯名</nameFieldLabel>
+  <standardFields>
+    <name>Name</name>
+    <label>世帯名</label>
+  </standardFields>
+  <caseValues>
+    <plural>false</plural>
+    <value>世帯</value>
+  </caseValues>
 </CustomObjectTranslation>

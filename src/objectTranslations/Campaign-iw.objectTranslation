@@ -4,8 +4,4 @@
         <label>רשימת דיוור של משק בית</label>
         <name>Household_Mailing_List</name>
     </webLinks>
-    <webLinks>
-        <label><!-- ViewCampaignInfluenceReport --></label>
-        <name>ViewCampaignInfluenceReport</name>
-    </webLinks>
 </CustomObjectTranslation>

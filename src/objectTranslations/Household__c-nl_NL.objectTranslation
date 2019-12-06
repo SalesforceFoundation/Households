@@ -1,256 +1,260 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value>Huishouden</value>
-    </caseValues>
-    <caseValues>
-        <plural>true</plural>
-        <value>Huishoudens</value>
-    </caseValues>
-    <fields>
-        <label>Geadresseerde</label>
-        <name>Addressee__c</name>
-    </fields>
-    <fields>
-        <help>Wordt gebruikt voor het instellen van de naam van het Huishouden en andere velden met behulp van anonieme informatie.</help>
-        <label>Altijd anoniem</label>
-        <name>Always_Anonymous__c</name>
-    </fields>
-    <fields>
-        <help>Gemiddeld bedrag van gewonnen Opportunities gerelateerd aan dit Huishouden, op een gerelateerde Contactpersoon met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Gemiddelde gift</label>
-        <name>AverageAmount__c</name>
-    </fields>
-    <fields>
-        <help>De som van bedragen van gewonnen Opportunities in het Beste jaar van giften voor dit huishouden via Contactpersonen met primaire Opportunitycontactpersoonsrol. Zie ook Beste jaar van giften.</help>
-        <label>Totaal van beste jaar van giften</label>
-        <name>Best_Gift_Year_Total__c</name>
-    </fields>
-    <fields>
-        <help>Het jaar waarin zich het grootste totaalbedrag van gewonnen Opportunities, dat is gerelateerd  aan dit Huishouden, via Contactpersonen met primaire Opportunitycontactpersoonsrol voordeed. Zie ook Totaal van beste jaar van giften.</help>
-        <label>Beste jaar van giften</label>
-        <name>Best_Gift_Year__c</name>
-    </fields>
-    <fields>
-        <help>De vroegste Sluitingsdatum van een gewonnen Opportunity die is gerelateerd aan dit Huishouden via Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Datum van eerste gift</label>
-        <name>FirstCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>Gebruikt velden van niet-uitgesloten gesorteerde gerelateerde Contactpersonen. Automatisch gegenereerd.</help>
-        <label>Formele begroeting</label>
-        <name>Formal_Greeting__c</name>
-    </fields>
-    <fields>
-        <help>Formule: aaneenvoeging van andere velden voor Postadres voor dit Huishouden. Kan worden bijgewerkt op de pagina Bewerking van huishouden, maar werkt Contactpersoon niet bij, tenzij &quot;Adres van huishouden kopiëren naar Contactpersonen&quot; wordt gebruikt.</help>
-        <label>Postadres</label>
-        <name>Formula_MailingAddress__c</name>
-    </fields>
-    <fields>
-        <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan wel worden bewerkt in Huishouden, maar werkt Contactpersoon niet bij.</help>
-        <label>E-mailadres van huishouden</label>
-        <name>HouseholdEmail__c</name>
-    </fields>
-    <fields>
-        <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan wel worden bewerkt in Huishouden, maar werkt Contactpersoon niet bij.</help>
-        <label>Telefoon van huishouden</label>
-        <name>HouseholdPhone__c</name>
-    </fields>
-    <fields>
-        <label>ID van huishouden</label>
-        <name>Household_ID__c</name>
-    </fields>
-    <fields>
-        <help>Gebruikt velden van niet-uitgesloten gesorteerde gerelateerde Contactpersonen. Automatisch gegenereerd.</help>
-        <label>Informele begroeting</label>
-        <name>Informal_Greeting__c</name>
-    </fields>
-    <fields>
-        <help>Het grootste bedrag van gewonnen Opportunity voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Grootste gift</label>
-        <name>LargestAmount__c</name>
-    </fields>
-    <fields>
-        <help>Recentste Sluitingsdatum van een gewonnen Opportunity voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Datum van laatste gift</label>
-        <name>LastCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>Recentste bedrag van gewonnen Opportunity van lidmaatschap (op Recordtype) voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Laatste bedrag van lidmaatschap</label>
-        <name>LastMembershipAmount__c</name>
-    </fields>
-    <fields>
-        <help>Recentste Sluitingsdatum van een gewonnen Opportunity van lidmaatschap voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Laatste datum van lidmaatschap</label>
-        <name>LastMembershipDate__c</name>
-    </fields>
-    <fields>
-        <help>Het lidmaatschapsniveau van de recentst gewonnen Opportunity van lidmaatschap voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Laatste niveau van lidmaatschap</label>
-        <name>LastMembershipLevel__c</name>
-    </fields>
-    <fields>
-        <help>De herkomst (nieuw, verlenging, ...) van de recentst gewonnen Opportunity van lidmaatschap voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Laatste herkomst van lidmaatschap</label>
-        <name>LastMembershipOrigin__c</name>
-    </fields>
-    <fields>
-        <help>Recentste bedrag van gewonnen Opportunity voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Bedrag van laatste gift</label>
-        <name>LastOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan worden bijgewerkt via pagina Bewerking van huishouden, maar werkt Contactpersoon niet bij, tenzij &quot;Adres van huishouden kopiëren naar Contactpersonen&quot; wordt gebruikt.</help>
-        <label>Postplaats</label>
-        <name>MailingCity__c</name>
-    </fields>
-    <fields>
-        <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan worden bijgewerkt via pagina Bewerking van huishouden, maar werkt Contactpersoon niet bij, tenzij &quot;Adres van huishouden kopiëren naar Contactpersonen&quot; wordt gebruikt.</help>
-        <label>Postland</label>
-        <name>MailingCountry__c</name>
-    </fields>
-    <fields>
-        <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan worden bijgewerkt via pagina Bewerking van huishouden, maar werkt Contactpersoon niet bij, tenzij &quot;Adres van huishouden kopiëren naar Contactpersonen&quot; wordt gebruikt.</help>
-        <label>Postpostcode</label>
-        <name>MailingPostalCode__c</name>
-    </fields>
-    <fields>
-        <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan worden bijgewerkt via pagina Bewerking van huishouden, maar werkt Contactpersoon niet bij, tenzij &quot;Adres van huishouden kopiëren naar Contactpersonen&quot; wordt gebruikt.</help>
-        <label>Poststaat/-provincie</label>
-        <name>MailingState__c</name>
-    </fields>
-    <fields>
-        <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan worden bijgewerkt via pagina Bewerking van huishouden, maar werkt Contactpersoon niet bij, tenzij &quot;Adres van huishouden kopiëren naar Contactpersonen&quot; wordt gebruikt.</help>
-        <label>Poststraat</label>
-        <name>MailingStreet__c</name>
-    </fields>
-    <fields>
-        <help>De Einddatum van lidmaatschap van de recentst gewonnen Opportunity van lidmaatschap voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Einddatum van lidmaatschap</label>
-        <name>MembershipEndDate__c</name>
-    </fields>
-    <fields>
-        <help>De vroegste Datum van lid worden van lidmaatschap van de oudste Opportunity van lidmaatschap (op Sluitingsdatum, Recordtype) voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Datum van lid worden van lidmaatschap</label>
-        <name>MembershipJoinDate__c</name>
-    </fields>
-    <fields>
-        <help>Formule: het aantal jaren dat dit Huishouden een Lid heeft gehad.</help>
-        <label>Lidmaatschapsbereik</label>
-        <name>Membership_Span__c</name>
-    </fields>
-    <fields>
-        <help>Formule: huidig, verlopen of bewaarperiode. Standaard bewaarperiode wordt ingesteld in Instellingen voor huishouden.</help>
-        <label>Status van lidmaatschap</label>
-        <name>Membership_Status__c</name>
-    </fields>
-    <fields>
-        <help>Het totale aantal giften, dat is gerelateerd aan dit Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
-        <label>Totale aantal giften</label>
-        <name>NumberOfClosedOpps__c</name>
-    </fields>
-    <fields>
-        <help>Het totale bedrag van gewonnen Opportunities van lidmaatschap (op Recordtype), dat is gerelateerd aan dit Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
-        <label>Aantal lidmaatschappen</label>
-        <name>NumberOfMembershipOpps__c</name>
-    </fields>
-    <fields>
-        <help>Totaal aan giften twee jaar geleden voor Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
-        <label>Totaal aan giften twee jaar geleden</label>
-        <name>OppAmount2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>Het totale bedrag van gewonnen Opportunities, dat is gerelateerd aan dit Huishouden en is gesloten in het laatste aantal dagen zoals gedefinieerd in Instellingen voor huishouden, gerelateerd op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
-        <label>Totaal aan giften laatste n dagen</label>
-        <name>OppAmountLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>Totaal aan giften vorig jaar voor Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
-        <label>Totaal aan giften vorig jaar</label>
-        <name>OppAmountLastYear__c</name>
-    </fields>
-    <fields>
-        <help>Totaal aan giften dit jaar voor Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
-        <label>Totaal aan giften dit jaar</label>
-        <name>OppAmountThisYear__c</name>
-    </fields>
-    <fields>
-        <help>Het aantal gewonnen Opportunities met Sluitingsdatum in de afgelopen twee jaar, die zijn gerelateerd aan dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Totaal aan giften twee jaar geleden</label>
-        <name>OppsClosed2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>Het aantal gewonnen Opportunities met Sluitingsdatum in de laatste n dagen (Instellingen voor huishouden), die zijn gerelateerd aan dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Aantal aan giften laatste n dagen</label>
-        <name>OppsClosedLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>Het aantal gewonnen Opportunities met Sluitingsdatum in het afgelopen jaar, die zijn gerelateerd aan dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Aantal aan giften vorig jaar</label>
-        <name>OppsClosedLastYear__c</name>
-    </fields>
-    <fields>
-        <help>Het aantal gewonnen Opportunities met Sluitingsdatum dit jaar, die zijn gerelateerd aan dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
-        <label>Aantal aan giften huidig jaar</label>
-        <name>OppsClosedThisYear__c</name>
-    </fields>
-    <fields>
-        <help>Naam, Formele begroeting of Informele begroeting</help>
-        <label>_SYSTEM: AANGEPASTE NAAMGEVING</label>
-        <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation>Formal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation>Informal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation>Naam</translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>Het kleinste bedrag van een gewonnen Opportunity, dat is gerelateerd aan dit Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
-        <label>Kleinste gift</label>
-        <name>SmallestAmount__c</name>
-    </fields>
-    <fields>
-        <help>Het totale bedrag van gewonnen Opportunities van lidmaatschap (op Recordtype), dat is gerelateerd aan dit Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
-        <label>Totale bedrag van lidmaatschap</label>
-        <name>TotalMembershipOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>De som van gewonnen Opportunitybedragen, die is gerelateerd aan dit Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
-        <label>Totaal aan giften</label>
-        <name>TotalOppAmount__c</name>
-    </fields>
-    <gender>Neuter</gender>
-    <layouts>
-        <layout>Household Layout</layout>
-        <sections>
-            <label>Aangepaste koppelingen</label>
-            <section>Custom Links</section>
-        </sections>
-        <sections>
-            <label>Gegevens over donatie</label>
-            <section>Donation Information</section>
-        </sections>
-        <sections>
-            <label>Totaal aan donaties</label>
-            <section>Donation Totals</section>
-        </sections>
-        <sections>
-            <label>Gegevens over huishouden</label>
-            <section>Household Information</section>
-        </sections>
-    </layouts>
-    <nameFieldLabel>Naam van huishouden</nameFieldLabel>
-    <webLinks>
-        <label>Adres van huishouden kopiëren naar Contactpersonen</label>
-        <name>Copy_Household_Address_to_Contacts</name>
-    </webLinks>
+  <fields>
+    <name>Addressee__c</name>
+    <label>Geadresseerde</label>
+  </fields>
+  <fields>
+    <name>Always_Anonymous__c</name>
+    <help>Wordt gebruikt voor het instellen van de naam van het Huishouden en andere velden met behulp van anonieme informatie.</help>
+    <label>Altijd anoniem</label>
+  </fields>
+  <fields>
+    <name>AverageAmount__c</name>
+    <help>Gemiddeld bedrag van gewonnen Opportunities gerelateerd aan dit Huishouden, op een gerelateerde Contactpersoon met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Gemiddelde gift</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year_Total__c</name>
+    <help>De som van bedragen van gewonnen Opportunities in het Beste jaar van giften voor dit huishouden via Contactpersonen met primaire Opportunitycontactpersoonsrol. Zie ook Beste jaar van giften.</help>
+    <label>Totaal van beste jaar van giften</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year__c</name>
+    <help>Het jaar waarin zich het grootste totaalbedrag van gewonnen Opportunities, dat is gerelateerd  aan dit Huishouden, via Contactpersonen met primaire Opportunitycontactpersoonsrol voordeed. Zie ook Totaal van beste jaar van giften.</help>
+    <label>Beste jaar van giften</label>
+  </fields>
+  <fields>
+    <name>FirstCloseDate__c</name>
+    <help>De vroegste Sluitingsdatum van een gewonnen Opportunity die is gerelateerd aan dit Huishouden via Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Datum van eerste gift</label>
+  </fields>
+  <fields>
+    <name>Formal_Greeting__c</name>
+    <help>Gebruikt velden van niet-uitgesloten gesorteerde gerelateerde Contactpersonen. Automatisch gegenereerd.</help>
+    <label>Formele begroeting</label>
+  </fields>
+  <fields>
+    <name>Formula_MailingAddress__c</name>
+    <help>Formule: aaneenvoeging van andere velden voor Postadres voor dit Huishouden. Kan worden bijgewerkt op de pagina Bewerking van huishouden, maar werkt Contactpersoon niet bij, tenzij "Adres van huishouden kopiëren naar Contactpersonen" wordt gebruikt.</help>
+    <label>Postadres</label>
+  </fields>
+  <fields>
+    <name>HouseholdEmail__c</name>
+    <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan wel worden bewerkt in Huishouden, maar werkt Contactpersoon niet bij.</help>
+    <label>E-mailadres van huishouden</label>
+  </fields>
+  <fields>
+    <name>HouseholdPhone__c</name>
+    <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan wel worden bewerkt in Huishouden, maar werkt Contactpersoon niet bij.</help>
+    <label>Telefoon van huishouden</label>
+  </fields>
+  <fields>
+    <name>Household_ID__c</name>
+    <label>ID van huishouden</label>
+  </fields>
+  <fields>
+    <name>Informal_Greeting__c</name>
+    <help>Gebruikt velden van niet-uitgesloten gesorteerde gerelateerde Contactpersonen. Automatisch gegenereerd.</help>
+    <label>Informele begroeting</label>
+  </fields>
+  <fields>
+    <name>LargestAmount__c</name>
+    <help>Het grootste bedrag van gewonnen Opportunity voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Grootste gift</label>
+  </fields>
+  <fields>
+    <name>LastCloseDate__c</name>
+    <help>Recentste Sluitingsdatum van een gewonnen Opportunity voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Datum van laatste gift</label>
+  </fields>
+  <fields>
+    <name>LastMembershipAmount__c</name>
+    <help>Recentste bedrag van gewonnen Opportunity van lidmaatschap (op Recordtype) voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Laatste bedrag van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>LastMembershipDate__c</name>
+    <help>Recentste Sluitingsdatum van een gewonnen Opportunity van lidmaatschap voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Laatste datum van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>LastMembershipLevel__c</name>
+    <help>Het lidmaatschapsniveau van de recentst gewonnen Opportunity van lidmaatschap voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Laatste niveau van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>LastMembershipOrigin__c</name>
+    <help>De herkomst (nieuw, verlenging, ...) van de recentst gewonnen Opportunity van lidmaatschap voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Laatste herkomst van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>LastOppAmount__c</name>
+    <help>Recentste bedrag van gewonnen Opportunity voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Bedrag van laatste gift</label>
+  </fields>
+  <fields>
+    <name>MailingCity__c</name>
+    <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan worden bijgewerkt via pagina Bewerking van huishouden, maar werkt Contactpersoon niet bij, tenzij "Adres van huishouden kopiëren naar Contactpersonen" wordt gebruikt.</help>
+    <label>Postplaats</label>
+  </fields>
+  <fields>
+    <name>MailingCountry__c</name>
+    <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan worden bijgewerkt via pagina Bewerking van huishouden, maar werkt Contactpersoon niet bij, tenzij "Adres van huishouden kopiëren naar Contactpersonen" wordt gebruikt.</help>
+    <label>Postland</label>
+  </fields>
+  <fields>
+    <name>MailingPostalCode__c</name>
+    <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan worden bijgewerkt via pagina Bewerking van huishouden, maar werkt Contactpersoon niet bij, tenzij "Adres van huishouden kopiëren naar Contactpersonen" wordt gebruikt.</help>
+    <label>Postpostcode</label>
+  </fields>
+  <fields>
+    <name>MailingState__c</name>
+    <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan worden bijgewerkt via pagina Bewerking van huishouden, maar werkt Contactpersoon niet bij, tenzij "Adres van huishouden kopiëren naar Contactpersonen" wordt gebruikt.</help>
+    <label>Poststaat/-provincie</label>
+  </fields>
+  <fields>
+    <name>MailingStreet__c</name>
+    <help>Ingesteld door de oorspronkelijke contactpersoon die dit huishouden heeft gemaakt. Kan worden bijgewerkt via pagina Bewerking van huishouden, maar werkt Contactpersoon niet bij, tenzij "Adres van huishouden kopiëren naar Contactpersonen" wordt gebruikt.</help>
+    <label>Poststraat</label>
+  </fields>
+  <fields>
+    <name>MembershipEndDate__c</name>
+    <help>De Einddatum van lidmaatschap van de recentst gewonnen Opportunity van lidmaatschap voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Einddatum van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>MembershipJoinDate__c</name>
+    <help>De vroegste Datum van lid worden van lidmaatschap van de oudste Opportunity van lidmaatschap (op Sluitingsdatum, Recordtype) voor dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Datum van lid worden van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>Membership_Span__c</name>
+    <help>Formule: het aantal jaren dat dit Huishouden een Lid heeft gehad.</help>
+    <label>Lidmaatschapsbereik</label>
+  </fields>
+  <fields>
+    <name>Membership_Status__c</name>
+    <help>Formule: huidig, verlopen of bewaarperiode. Standaard bewaarperiode wordt ingesteld in Instellingen voor huishouden.</help>
+    <label>Status van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>NumberOfClosedOpps__c</name>
+    <help>Het totale aantal giften, dat is gerelateerd aan dit Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
+    <label>Totale aantal giften</label>
+  </fields>
+  <fields>
+    <name>NumberOfMembershipOpps__c</name>
+    <help>Het totale bedrag van gewonnen Opportunities van lidmaatschap (op Recordtype), dat is gerelateerd aan dit Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
+    <label>Aantal lidmaatschappen</label>
+  </fields>
+  <fields>
+    <name>OppAmount2YearsAgo__c</name>
+    <help>Totaal aan giften twee jaar geleden voor Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
+    <label>Totaal aan giften twee jaar geleden</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastNDays__c</name>
+    <help>Het totale bedrag van gewonnen Opportunities, dat is gerelateerd aan dit Huishouden en is gesloten in het laatste aantal dagen zoals gedefinieerd in Instellingen voor huishouden, gerelateerd op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
+    <label>Totaal aan giften laatste n dagen</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastYear__c</name>
+    <help>Totaal aan giften vorig jaar voor Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
+    <label>Totaal aan giften vorig jaar</label>
+  </fields>
+  <fields>
+    <name>OppAmountThisYear__c</name>
+    <help>Totaal aan giften dit jaar voor Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
+    <label>Totaal aan giften dit jaar</label>
+  </fields>
+  <fields>
+    <name>OppsClosed2YearsAgo__c</name>
+    <help>Het aantal gewonnen Opportunities met Sluitingsdatum in de afgelopen twee jaar, die zijn gerelateerd aan dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Totaal aan giften twee jaar geleden</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastNDays__c</name>
+    <help>Het aantal gewonnen Opportunities met Sluitingsdatum in de laatste n dagen (Instellingen voor huishouden), die zijn gerelateerd aan dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Aantal aan giften laatste n dagen</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastYear__c</name>
+    <help>Het aantal gewonnen Opportunities met Sluitingsdatum in het afgelopen jaar, die zijn gerelateerd aan dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Aantal aan giften vorig jaar</label>
+  </fields>
+  <fields>
+    <name>OppsClosedThisYear__c</name>
+    <help>Het aantal gewonnen Opportunities met Sluitingsdatum dit jaar, die zijn gerelateerd aan dit Huishouden via gerelateerde Contactpersonen met primaire Opportunitycontactpersoonsrol.</help>
+    <label>Aantal aan giften huidig jaar</label>
+  </fields>
+  <fields>
+    <name>SYSTEM_CUSTOM_NAMING__c</name>
+    <help>Naam, Formele begroeting of Informele begroeting</help>
+    <label>_SYSTEM: AANGEPASTE NAAMGEVING</label>
+    <picklistValues>
+      <masterLabel>Name</masterLabel>
+      <translation>Naam</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Formal_Greeting__c</masterLabel>
+      <translation>Formal_Greeting__c</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Informal_Greeting__c</masterLabel>
+      <translation>Informal_Greeting__c</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>SmallestAmount__c</name>
+    <help>Het kleinste bedrag van een gewonnen Opportunity, dat is gerelateerd aan dit Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
+    <label>Kleinste gift</label>
+  </fields>
+  <fields>
+    <name>TotalMembershipOppAmount__c</name>
+    <help>Het totale bedrag van gewonnen Opportunities van lidmaatschap (op Recordtype), dat is gerelateerd aan dit Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
+    <label>Totale bedrag van lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>TotalOppAmount__c</name>
+    <help>De som van gewonnen Opportunitybedragen, die is gerelateerd aan dit Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
+    <label>Totaal aan giften</label>
+  </fields>
+  <webLinks>
+    <name>Copy_Household_Address_to_Contacts</name>
+    <label>Adres van huishouden kopiëren naar Contactpersonen</label>
+  </webLinks>
+  <layouts>
+    <layout>Household Layout</layout>
+    <sections>
+      <label>Gegevens over huishouden</label>
+      <section>Household Information</section>
+    </sections>
+    <sections>
+      <label>Gegevens over donatie</label>
+      <section>Donation Information</section>
+    </sections>
+    <sections>
+      <label>Totaal aan donaties</label>
+      <section>Donation Totals</section>
+    </sections>
+    <sections>
+      <label>Aangepaste koppelingen</label>
+      <section>Custom Links</section>
+    </sections>
+  </layouts>
+  <nameFieldLabel>Naam van huishouden</nameFieldLabel>
+  <standardFields>
+    <name>Name</name>
+    <label>Naam van huishouden</label>
+  </standardFields>
+  <gender>Neuter</gender>
+  <caseValues>
+    <plural>false</plural>
+    <value>Huishouden</value>
+  </caseValues>
+  <caseValues>
+    <plural>true</plural>
+    <value>Huishoudens</value>
+  </caseValues>
 </CustomObjectTranslation>

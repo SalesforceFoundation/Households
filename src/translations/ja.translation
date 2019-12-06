@@ -1,377 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label>追加</label>
         <name>Add</name>
+        <label>追加</label>
     </customLabels>
     <customLabels>
-        <label>世帯の追加とマージ</label>
         <name>AddAndMerge</name>
+        <label>世帯の追加とマージ</label>
     </customLabels>
     <customLabels>
-        <label>古い世帯からの追加と削除</label>
         <name>AddAndRemove</name>
+        <label>古い世帯からの追加と削除</label>
     </customLabels>
     <customLabels>
-        <label>メンバーの追加</label>
         <name>AddHouseholdMembers</name>
+        <label>メンバーの追加</label>
     </customLabels>
     <customLabels>
-        <label>住所のコピー中にエラーが発生しました。</label>
         <name>AddressCopyFailure</name>
+        <label>住所のコピー中にエラーが発生しました。</label>
     </customLabels>
     <customLabels>
-        <label>住所のコピーが完了しました。</label>
         <name>AddressCopySuccess</name>
+        <label>住所のコピーが完了しました。</label>
     </customLabels>
     <customLabels>
-        <label>住所のコピー機能は、このオブジェクトタイプをサポートしていません。</label>
         <name>AddressCopyUnknownObject</name>
+        <label>住所のコピー機能は、このオブジェクトタイプをサポートしていません。</label>
     </customLabels>
     <customLabels>
-        <label>すべての世帯メンバーの自宅住所をこの住所に設定します。</label>
         <name>AddressToAllMembers</name>
+        <label>すべての世帯メンバーの自宅住所をこの住所に設定します。</label>
     </customLabels>
     <customLabels>
-        <label>すでに世帯メンバーです</label>
         <name>AlreadyInHousehold</name>
+        <label>すでに世帯メンバーです</label>
     </customLabels>
     <customLabels>
-        <label>公式の自動挨拶</label>
         <name>AutoFormalGreeting</name>
+        <label>公式の自動挨拶</label>
     </customLabels>
     <customLabels>
-        <label>非公式の自動挨拶</label>
         <name>AutoInformalGreeting</name>
+        <label>非公式の自動挨拶</label>
     </customLabels>
     <customLabels>
-        <label>自動命名</label>
         <name>AutoName</name>
+        <label>自動命名</label>
     </customLabels>
     <customLabels>
-        <label>変更</label>
         <name>Change</name>
+        <label>変更</label>
     </customLabels>
     <customLabels>
-        <label>住所の変更</label>
         <name>ChangeAddress</name>
+        <label>住所の変更</label>
     </customLabels>
     <customLabels>
-        <label>変更が保存されていません。</label>
         <name>ChangesNotSaved</name>
+        <label>変更が保存されていません。</label>
     </customLabels>
     <customLabels>
-        <label>はすでに世帯にあります。この個人を追加するときに既存の世帯メンバーを含めるかどうかを選択してください。</label>
         <name>ContactAlreadyInHousehold</name>
+        <label>はすでに世帯にあります。この個人を追加するときに既存の世帯メンバーを含めるかどうかを選択してください。</label>
     </customLabels>
     <customLabels>
-        <label>姓は必須です。</label>
         <name>ContactLastNameRqd</name>
+        <label>姓は必須です。</label>
     </customLabels>
     <customLabels>
-        <label>名と姓を入力してください。</label>
         <name>ContactNameRqd</name>
+        <label>名と姓を入力してください。</label>
     </customLabels>
     <customLabels>
-        <label>個人は世帯の保存時に作成されます。</label>
         <name>CreatedOnSave</name>
+        <label>個人は世帯の保存時に作成されます。</label>
     </customLabels>
     <customLabels>
-        <label>世帯</label>
         <name>DefaultHouseholdName</name>
+        <label>世帯</label>
     </customLabels>
     <customLabels>
-        <label>￥</label>
         <name>DefaultHouseholdTransactionCurrency</name>
+        <label>￥</label>
     </customLabels>
     <customLabels>
-        <label>削除</label>
         <name>Delete</name>
+        <label>削除</label>
     </customLabels>
     <customLabels>
-        <label>新しい住所を入力</label>
         <name>EnterNewAddress</name>
+        <label>新しい住所を入力</label>
     </customLabels>
     <customLabels>
-        <label>自動世帯命名から個人を除外:</label>
         <name>ExcludeText</name>
+        <label>自動世帯命名から個人を除外:</label>
     </customLabels>
     <customLabels>
-        <label>既存の世帯</label>
         <name>ExistingHousehold</name>
+        <label>既存の世帯</label>
     </customLabels>
     <customLabels>
-        <label>名前で個人を検索...</label>
         <name>FindContactByName</name>
+        <label>名前で個人を検索...</label>
     </customLabels>
     <customLabels>
-        <label>世帯の住所</label>
         <name>HouseholdAddress</name>
+        <label>世帯の住所</label>
     </customLabels>
     <customLabels>
-        <label>お客様各位</label>
         <name>HouseholdAnonymousGreeting</name>
+        <label>お客様各位</label>
     </customLabels>
     <customLabels>
-        <label>匿名</label>
         <name>HouseholdAnonymousName</name>
+        <label>匿名</label>
     </customLabels>
     <customLabels>
-        <label>世帯の詳細</label>
         <name>HouseholdDetails</name>
+        <label>世帯の詳細</label>
     </customLabels>
     <customLabels>
-        <label>世帯メンバー</label>
         <name>HouseholdMembers</name>
-    </customLabels>
-    <customLabels>
-        <label>および</label>
-        <name>HouseholdNameConnector</name>
-    </customLabels>
-    <customLabels>
-        <label>友達</label>
-        <name>HouseholdNameOverrun</name>
-    </customLabels>
-    <customLabels>
-        <label>支援なし</label>
-        <name>Household_Contact_Role_Processor_Off</name>
-    </customLabels>
-    <customLabels>
-        <label>すべての支援</label>
-        <name>Household_Contact_Role_Processor_On</name>
-    </customLabels>
-    <customLabels>
-        <label>主支援者の世帯メンバーの自動的に作成される支援個人の役割を作成</label>
-        <name>Household_Contact_Roles_Help_Text</name>
-    </customLabels>
-    <customLabels>
         <label>世帯メンバー</label>
+    </customLabels>
+    <customLabels>
+        <name>HouseholdNameConnector</name>
+        <label>および</label>
+    </customLabels>
+    <customLabels>
+        <name>HouseholdNameOverrun</name>
+        <label>友達</label>
+    </customLabels>
+    <customLabels>
+        <name>Household_Contact_Role_Processor_Off</name>
+        <label>支援なし</label>
+    </customLabels>
+    <customLabels>
+        <name>Household_Contact_Role_Processor_On</name>
+        <label>すべての支援</label>
+    </customLabels>
+    <customLabels>
+        <name>Household_Contact_Roles_Help_Text</name>
+        <label>主支援者の世帯メンバーの自動的に作成される支援個人の役割を作成</label>
+    </customLabels>
+    <customLabels>
         <name>Household_Member_Contact_Role</name>
+        <label>世帯メンバー</label>
     </customLabels>
     <customLabels>
-        <label>廃止。未使用。世帯に属する個人を、全員、個々の団体に関連する個人のみ、なしの中から選択します。</label>
         <name>Household_Rules_Help_Text</name>
+        <label>廃止。未使用。世帯に属する個人を、全員、個々の団体に関連する個人のみ、なしの中から選択します。</label>
     </customLabels>
     <customLabels>
-        <label>世帯の管理</label>
         <name>ManageHousehold</name>
+        <label>世帯の管理</label>
     </customLabels>
     <customLabels>
-        <label>REPLACE</label>
         <name>NameReplacementText</name>
+        <label>REPLACE</label>
     </customLabels>
     <customLabels>
-        <label>新規個人</label>
         <name>NewContact</name>
+        <label>新規個人</label>
     </customLabels>
     <customLabels>
-        <label>現在、この世帯には個人がありません。</label>
         <name>NoContacts</name>
+        <label>現在、この世帯には個人がありません。</label>
     </customLabels>
     <customLabels>
-        <label>夜間または手動の積み上げ集計時に積み上げ集計エラーが発生し、データの精度に影響する可能性があります。エラー、エラーの種類、およびエラーが発生したレコードへのリンクを次に示します。これらのエラーは、夜間にスケジュールされているジョブまたは手動の積み上げ集計の実行ごとにリセットされます。データの精度を確保するために、これらのエラーにすぐに対応することを強くお勧めします。</label>
         <name>Opportunity_Error_Help_Text</name>
+        <label>夜間または手動の積み上げ集計時に積み上げ集計エラーが発生し、データの精度に影響する可能性があります。エラー、エラーの種類、およびエラーが発生したレコードへのリンクを次に示します。これらのエラーは、夜間にスケジュールされているジョブまたは手動の積み上げ集計の実行ごとにリセットされます。データの精度を確保するために、これらのエラーにすぐに対応することを強くお勧めします。</label>
     </customLabels>
     <customLabels>
-        <label>使用可能な future コールが少なすぎるため積み上げ集計されませんでした。</label>
         <name>Opportunity_Rollup_Future_Call_Limit</name>
+        <label>使用可能な future コールが少なすぎるため積み上げ集計されませんでした。</label>
     </customLabels>
     <customLabels>
-        <label>スケジュール済み Apex ジョブの制限に達したため、支援積み上げ集計が夜間に実行されません。このジョブを夜間に実行するには、スケジュール済みジョブのいずれかを削除してこのページを再読み込みしてください。</label>
         <name>Opportunity_Rollup_Scheduling_Error_Text</name>
+        <label>スケジュール済み Apex ジョブの制限に達したため、支援積み上げ集計が夜間に実行されません。このジョブを夜間に実行するには、スケジュール済みジョブのいずれかを削除してこのページを再読み込みしてください。</label>
     </customLabels>
     <customLabels>
-        <label>支援者</label>
         <name>Primary_Donor_Contact_Role</name>
+        <label>支援者</label>
     </customLabels>
     <customLabels>
-        <label>支援が最後に積み上げ集計されたときにエラーが発生しました。詳細は、[システムエラーログ] パネルを参照してください。</label>
         <name>RollupErrorMessage</name>
+        <label>支援が最後に積み上げ集計されたときにエラーが発生しました。詳細は、[システムエラーログ] パネルを参照してください。</label>
     </customLabels>
     <customLabels>
-        <label>既存の住所を選択</label>
         <name>SelectExistingAddress</name>
+        <label>既存の住所を選択</label>
     </customLabels>
     <customLabels>
-        <label>住所を設定</label>
         <name>SetAddress</name>
+        <label>住所を設定</label>
     </customLabels>
     <customLabels>
+        <name>UDRDescription</name>
         <label>支援から個人、団体または世帯へのユーザ定義積み上げ集計を制御する設定。これらを変更すると、Nonprofit Success Pack の動作が変わります。
 
 警告: 設定に誤りがあると、積み上げ集計に失敗する可能性があります。本番環境にリリースする前に、ユーザ定義積み上げ集計を十分にテストしてください。</label>
-        <name>UDRDescription</name>
     </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Confirm Message --></label>
-        <name>npe01__Contact_Merge_Error_Confirm_Message</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error Confirm Message Households --></label>
-        <name>npe01__Contact_Merge_Error_Confirm_Message_Households</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error Confirm Message Nothing Found --></label>
-        <name>npe01__Contact_Merge_Error_Confirm_Message_Nothing_Found</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Contact not found --></label>
-        <name>npe01__Contact_Merge_Error_Contact_not_found</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Lock failed --></label>
-        <name>npe01__Contact_Merge_Error_Lock_failed</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Merge Failed --></label>
-        <name>npe01__Contact_Merge_Error_Merge_Failed</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - No Master --></label>
-        <name>npe01__Contact_Merge_Error_No_Master</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Query Failed --></label>
-        <name>npe01__Contact_Merge_Error_Query_Failed</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Too Few Contacts --></label>
-        <name>npe01__Contact_Merge_Error_Too_Few_Contacts</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - Too Many Contacts --></label>
-        <name>npe01__Contact_Merge_Error_Too_Many_Contacts</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Error - please retry --></label>
-        <name>npe01__Contact_Merge_Error_please_retry</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Step1 --></label>
-        <name>npe01__Contact_Merge_Step1</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Step2 --></label>
-        <name>npe01__Contact_Merge_Step2</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Step3 --></label>
-        <name>npe01__Contact_Merge_Step3</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contact Merge Step4 --></label>
-        <name>npe01__Contact_Merge_Step4</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contacts Settings Account Model Help Text --></label>
-        <name>npe01__Contacts_Settings_Account_Model_Help_Text</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Contacts Settings Contact Roles Help Text --></label>
-        <name>npe01__Contacts_Settings_Contact_Roles_Help_Text</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- DefaultContactTransactionCurrency --></label>
-        <name>npe01__DefaultContactTransactionCurrency</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Suffix added to the name of the original donation to form matching donation name --></label>
-        <name>npe01__Matching_Donation_Record_Suffix</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Record type for matching donation. Set to $Source to match the original donation --></label>
-        <name>npe01__Matching_Donation_Record_Type</name>
-    </customLabels>
-    <customLabels>
-        <label><!-- Opportunity Contact Role Error - Bad Contact Id --></label>
-        <name>npe01__Opportunity_Contact_Role_Error_Bad_Contact_Id</name>
-    </customLabels>
-    <customPageWebLinks>
-        <label><!-- Nonprofit Edition Reports --></label>
-        <name>Nonprofit_Edition_Reports</name>
-    </customPageWebLinks>
-    <customTabs>
-        <label><!-- Contact Merge (OLD) --></label>
-        <name>Contact_Merge</name>
-    </customTabs>
-    <customTabs>
-        <label><!-- Contacts Settings --></label>
-        <name>Contacts_Settings</name>
-    </customTabs>
-    <customTabs>
-        <label>世帯設定</label>
-        <name>Households_Settings</name>
-    </customTabs>
-    <customTabs>
-        <label>支援積み上げ集計</label>
-        <name>Opportunity_Rollups</name>
-    </customTabs>
-    <customTabs>
-        <label><!-- Payment Mapping --></label>
-        <name>Payment_Mapping</name>
-    </customTabs>
-    <customTabs>
-        <label>ユーザ積み上げ集計</label>
-        <name>User_Rollups</name>
-    </customTabs>
-    <quickActions>
-        <label><!-- LogACall --></label>
-        <name>LogACall</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewAccount --></label>
-        <name>NewAccount</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewCase --></label>
-        <name>NewCase</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewContact --></label>
-        <name>NewContact</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewEvent --></label>
-        <name>NewEvent</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewGroup --></label>
-        <name>NewGroup</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewLead --></label>
-        <name>NewLead</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewNote --></label>
-        <name>NewNote</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewOpportunity --></label>
-        <name>NewOpportunity</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewTask --></label>
-        <name>NewTask</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- SendEmail --></label>
-        <name>SendEmail</name>
-    </quickActions>
     <reportTypes>
-        <label>世帯と支援</label>
         <name>Households_and_Donations</name>
-        <sections>
-            <label>世帯メンバー</label>
-            <name>Household Members</name>
-        </sections>
+        <label>世帯と支援</label>
         <sections>
             <label>世帯</label>
             <name>Households</name>
+        </sections>
+        <sections>
+            <label>世帯メンバー</label>
+            <name>Household Members</name>
         </sections>
         <sections>
             <label>支援</label>
             <name>Opportunities</name>
         </sections>
     </reportTypes>
+    <customTabs>
+        <name>Households_Settings</name>
+        <label>世帯設定</label>
+    </customTabs>
+    <customTabs>
+        <name>Opportunity_Rollups</name>
+        <label>支援積み上げ集計</label>
+    </customTabs>
+    <customTabs>
+        <name>User_Rollups</name>
+        <label>ユーザ積み上げ集計</label>
+    </customTabs>
 </Translations>
