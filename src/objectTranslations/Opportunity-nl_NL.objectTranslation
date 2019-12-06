@@ -1,21 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>CombinedRollupFieldset__c</name>
-    <help>Formule: aaneengevoegde velden die worden gebruikt tijdens totaliseringen om de recentste opportunity te vinden.</help>
-    <label>Veldset voor gecombineerde totalisering</label>
-  </fields>
-  <fields>
-    <name>systemHouseholdContactRoleProcessor__c</name>
-    <help>Bepaalt of contactpersoonsrollen voor Huishouden worden gemaakt voor Opportunities. VEROUDERD. Vervangen door aangepaste instellingen.</help>
-    <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
-    <picklistValues>
-      <masterLabel>All Opportunities</masterLabel>
-      <translation>Alle opportunities</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>No Opportunities</masterLabel>
-      <translation>Geen opportunities</translation>
-    </picklistValues>
-  </fields>
+    <fields>
+        <help>Formule: aaneengevoegde velden die worden gebruikt tijdens totaliseringen om de recentste opportunity te vinden.</help>
+        <label>Veldset voor gecombineerde totalisering</label>
+        <name>CombinedRollupFieldset__c</name>
+    </fields>
+    <fields>
+        <help>Formule: Het Bedrag van deze Opportunity minus het Betaling Afschrijvingsbedrag en Betaling Ontvangen Bedrag.</help>
+        <label><!-- Remaining Balance --></label>
+        <name>npe01__Amount_Outstanding__c</name>
+    </fields>
+    <fields>
+        <help>Totale waarde van de Betalingen die gemarkeerd zijn als afgeschreven of niet incasseerbaar voor deze Opportunity.</help>
+        <label><!-- Payment Writeoff Amount --></label>
+        <name>npe01__Amount_Written_Off__c</name>
+    </fields>
+    <fields>
+        <help>Verborgen veld voor het aannemen van een Contactpersoon Id voor Contactpersoon Rol creatie.</help>
+        <label><!-- Contact Id for Role --></label>
+        <name>npe01__Contact_Id_for_Role__c</name>
+    </fields>
+    <fields>
+        <help>Als betalingen actief zijn, en indien aangevinkt, een nieuwe betaling zal niet automatisch gemaakt worden voor deze opportunity.</help>
+        <label><!-- Do Not Automatically Create Payment --></label>
+        <name>npe01__Do_Not_Automatically_Create_Payment__c</name>
+    </fields>
+    <fields>
+        <help>Formule: is de gerelateerde Account gedefinieerd als een individu of niet.</help>
+        <label><!-- Is Opp From Individual --></label>
+        <name>npe01__Is_Opp_From_Individual__c</name>
+    </fields>
+    <fields>
+        <help>Bepaalt de waarde op het Contactpersoon of Account van het Laaste Lidmaatschap Niveau Veld.</help>
+        <label><!-- Member Level --></label>
+        <name>npe01__Member_Level__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation>Brons</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation>Goud</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation>Zilver</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Datum waarop Lidmaatschap periode eindigt.</help>
+        <label><!-- Membership End Date --></label>
+        <name>npe01__Membership_End_Date__c</name>
+    </fields>
+    <fields>
+        <help>Is dit een vernieuwing, een nieuw Lidmaatschap, of een verlopen Lidmaatschap met iemand die is teruggekomen.</help>
+        <label><!-- Membership Origin --></label>
+        <name>npe01__Membership_Origin__c</name>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation>Nieuw</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reacquire</masterLabel>
+            <translation>Terugkerend</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation>Vernieuwend</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Datum waarop Lidmaatschap periode begint</help>
+        <label><!-- Membership Start Date --></label>
+        <name>npe01__Membership_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help>Totaal aantal Betalingen voor deze Opportunity (donatie)</help>
+        <label><!-- Number of Payments --></label>
+        <name>npe01__Number_of_Payments__c</name>
+    </fields>
+    <fields>
+        <help>De totale waarde van Betalingen die gemarkeerd zijn als betaald voor deze Opportunity.</help>
+        <label><!-- Payment Amount Received --></label>
+        <name>npe01__Payments_Made__c</name>
+    </fields>
+    <fields>
+        <help>Bepaalt of contactpersoonsrollen voor Huishouden worden gemaakt voor Opportunities. VEROUDERD. Vervangen door aangepaste instellingen.</help>
+        <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
+        <name>systemHouseholdContactRoleProcessor__c</name>
+        <picklistValues>
+            <masterLabel>All Opportunities</masterLabel>
+            <translation>Alle opportunities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Opportunities</masterLabel>
+            <translation>Geen opportunities</translation>
+        </picklistValues>
+    </fields>
+    <webLinks>
+        <label><!-- New_Contact_Donation --></label>
+        <name>npe01__New_Contact_Donation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Organization_Donation --></label>
+        <name>npe01__New_Organization_Donation</name>
+    </webLinks>
 </CustomObjectTranslation>

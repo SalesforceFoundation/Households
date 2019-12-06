@@ -251,15 +251,12 @@
         <name>CustomLabel</name>
     </types>
     <types>
-        <name>CustomLabel</name>
+        <members>CustomLabels</members>
+        <name>CustomLabels</name>
     </types>
     <types>
-        <members>Account</members>
-        <members>Campaign</members>
-        <members>Contact</members>
         <members>Household__c</members>
         <members>Households_Settings__c</members>
-        <members>Opportunity</members>
         <members>Opportunity_Rollup_Error__c</members>
         <members>User_Rollup_Field_Settings__c</members>
         <name>CustomObject</name>
@@ -367,10 +364,6 @@
         <members>Contact.Household</members>
         <members>Household__c.Copy_Household_Address_to_Contacts</members>
         <name>WebLink</name>
-    </types>
-    <types>
-        <members>Contact</members>
-        <name>Workflow</name>
     </types>
     <types>
         <members>Contact.ContactPreferredPhone_WithHousehold</members>

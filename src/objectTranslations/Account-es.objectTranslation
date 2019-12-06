@@ -1,164 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>AverageAmount__c</name>
-    <help>Importe de oportunidad ganada medio relacionado con esta cuenta. Se actualiza automáticamente.</help>
-    <label>Donación promedio</label>
-  </fields>
-  <fields>
-    <name>Best_Gift_Year_Total__c</name>
-    <help>La suma de los importes de oportunidades ganadas en el Año de mejor donación para esta cuenta.</help>
-    <label>Total en año de mejor donación</label>
-  </fields>
-  <fields>
-    <name>Best_Gift_Year__c</name>
-    <help>El año en el que se produjo el importe total más grande de oportunidades ganadas relacionadas con esta cuenta. Consulte también Total en año de mejor donación.</help>
-    <label>Año de mejor donación</label>
-  </fields>
-  <fields>
-    <name>FirstCloseDate__c</name>
-    <help>La oportunidad ganada más temprana (por Fecha de cierre) con importe superior a cero relacionada con esta cuenta.</help>
-    <label>Fecha de primera donación</label>
-  </fields>
-  <fields>
-    <name>Formal_Greeting__c</name>
-    <help>Para cuentas Hogar, utiliza campos de contactos relacionados no excluidos y ordenados. Se genera automáticamente.</help>
-    <label>Saludo formal</label>
-  </fields>
-  <fields>
-    <name>HouseholdPhone__c</name>
-    <label>Teléfono del hogar</label>
-  </fields>
-  <fields>
-    <name>Informal_Greeting__c</name>
-    <help>Para cuentas Hogar, utiliza campos de contactos relacionados no excluidos y ordenados. Se genera automáticamente.</help>
-    <label>Saludo informal</label>
-  </fields>
-  <fields>
-    <name>LargestAmount__c</name>
-    <help>El importe más grande de una oportunidad ganada relacionado con esta cuenta.</help>
-    <label>Importe de la mayor donación</label>
-  </fields>
-  <fields>
-    <name>LastCloseDate__c</name>
-    <help>La Fecha de cierre más reciente de una oportunidad ganada relacionada con esta cuenta con un importe superior a cero.</help>
-    <label>Fecha de última donación</label>
-  </fields>
-  <fields>
-    <name>LastMembershipAmount__c</name>
-    <help>El importe de la Oportunidad de afiliación (por Tipo de registro) ganada más reciente (por Fecha de cierre) para esta cuenta.</help>
-    <label>Importe de última afiliación</label>
-  </fields>
-  <fields>
-    <name>LastMembershipDate__c</name>
-    <help>La Fecha de cierre más reciente de una Oportunidad de afiliación (por Tipo de registro) relacionada con esta cuenta.</help>
-    <label>Fecha de última afiliación</label>
-  </fields>
-  <fields>
-    <name>LastMembershipLevel__c</name>
-    <help>Nivel de afiliación procedente de la Oportunidad de afiliación (por Tipo de registro) ganada más reciente (por Fecha de cierre) relacionado con esta cuenta.</help>
-    <label>Nivel de última afiliación</label>
-  </fields>
-  <fields>
-    <name>LastMembershipOrigin__c</name>
-    <help>"Origen" de afiliación (nuevo, renovación...) procedente de la Oportunidad de afiliación (por Tipo de registro) ganada más reciente (por Fecha de cierre) relacionado con esta cuenta.</help>
-    <label>Origen de última afiliación</label>
-  </fields>
-  <fields>
-    <name>LastOppAmount__c</name>
-    <help>El importe de la oportunidad ganada más reciente (por Fecha de cierre) con importe superior a cero relacionada con esta cuenta.</help>
-    <label>Importe de última donación</label>
-  </fields>
-  <fields>
-    <name>MembershipEndDate__c</name>
-    <help>Fecha de finalización de afiliación procedente de la Oportunidad de afiliación (por Tipo de registro) ganada más reciente (por Fecha de cierre) relacionado con esta cuenta.</help>
-    <label>Fecha de fin de la afiliación</label>
-  </fields>
-  <fields>
-    <name>MembershipJoinDate__c</name>
-    <help>Fecha de inicio de afiliación procedente de la Oportunidad de afiliación (por Tipo de registro) ganada más reciente (por Fecha de cierre) relacionado con esta cuenta.</help>
-    <label>Fecha de inicio de afiliación</label>
-  </fields>
-  <fields>
-    <name>NumberOfClosedOpps__c</name>
-    <help>Número total de oportunidades ganadas relacionadas con esta cuenta.</help>
-    <label>Número total de donaciones</label>
-  </fields>
-  <fields>
-    <name>NumberOfMembershipOpps__c</name>
-    <help>Número total de oportunidades de afiliación ganadas (Tipo de registro) relacionadas con esta cuenta.</help>
-    <label>Cantidad de afiliaciones</label>
-  </fields>
-  <fields>
-    <name>OppAmount2YearsAgo__c</name>
-    <help>El importe total de oportunidades ganadas relacionadas con esta cuenta, cerradas dentro del año fiscal anterior al último año (consulte Configuración de Hogar).</help>
-    <label>Total donado hace dos años</label>
-  </fields>
-  <fields>
-    <name>OppAmountLastNDays__c</name>
-    <help>El importe total de oportunidades ganadas relacionadas con esta cuenta, cerradas en el último número de días definido en Configuración de Hogar.</help>
-    <label>Total donado en los últimos N días</label>
-  </fields>
-  <fields>
-    <name>OppAmountLastYear__c</name>
-    <help>El importe total de oportunidades ganadas relacionadas con esta cuenta, cerradas en el año corriente o año fiscal.</help>
-    <label>Total donado el año pasado</label>
-  </fields>
-  <fields>
-    <name>OppAmountThisYear__c</name>
-    <help>El importe total de oportunidades ganadas relacionadas con esta cuenta, cerradas en el año corriente o año fiscal.</help>
-    <label>Total donado este año</label>
-  </fields>
-  <fields>
-    <name>OppsClosed2YearsAgo__c</name>
-    <help>El número total de oportunidades ganadas con un importe superior a cero relacionadas con esta cuenta, cerradas dentro del año o año fiscal anterior al último año.</help>
-    <label>Cantidad de donaciones hace dos años</label>
-  </fields>
-  <fields>
-    <name>OppsClosedLastNDays__c</name>
-    <help>El importe total de oportunidades ganadas relacionadas con esta cuenta, cerradas en el último número de días definido en Configuración de Hogar.</help>
-    <label>Cantidad de donaciones últimos N días</label>
-  </fields>
-  <fields>
-    <name>OppsClosedLastYear__c</name>
-    <help>El número total de oportunidades ganadas con un importe superior a cero relacionadas con esta cuenta, cerradas en el año o el año fiscal anterior (consulte Configuración de Hogar).</help>
-    <label>Cantidad de donaciones el año pasado</label>
-  </fields>
-  <fields>
-    <name>OppsClosedThisYear__c</name>
-    <help>El número total de oportunidades ganadas con un importe superior a cero relacionadas con esta cuenta, cerradas en el año o el año fiscal corriente (consulte Configuración de Hogar).</help>
-    <label>Cantidad de donaciones este año</label>
-  </fields>
-  <fields>
-    <name>SYSTEM_CUSTOM_NAMING__c</name>
-    <help>Para cuentas Hogar, especifica qué campos de nombres no deben completarse automáticamente por el código de Hogares.</help>
-    <label>_SYSTEM: NOMENCLATURA PERSONALIZADA</label>
-    <picklistValues>
-      <masterLabel>Name</masterLabel>
-      <translation>Nombre</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Formal_Greeting__c</masterLabel>
-      <translation>Formal_Greeting__c</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Informal_Greeting__c</masterLabel>
-      <translation>Informal_Greeting__c</translation>
-    </picklistValues>
-  </fields>
-  <fields>
-    <name>SmallestAmount__c</name>
-    <help>El importe más pequeño superior a cero de una oportunidad ganada relacionado con esta cuenta.</help>
-    <label>Importe de la menor donación</label>
-  </fields>
-  <fields>
-    <name>TotalMembershipOppAmount__c</name>
-    <help>El importe total de oportunidades de afiliación ganadas (Tipo de registro) relacionadas con esta cuenta.</help>
-    <label>Importe total de afiliaciones</label>
-  </fields>
-  <fields>
-    <name>TotalOppAmount__c</name>
-    <help>La suma de importes de todas las oportunidades ganadas relacionado con esta cuenta.</help>
-    <label>Total donado</label>
-  </fields>
+    <fields>
+        <help>Importe de oportunidad ganada medio relacionado con esta cuenta. Se actualiza automáticamente.</help>
+        <label>Donación promedio</label>
+        <name>AverageAmount__c</name>
+    </fields>
+    <fields>
+        <help>La suma de los importes de oportunidades ganadas en el Año de mejor donación para esta cuenta.</help>
+        <label>Total en año de mejor donación</label>
+        <name>Best_Gift_Year_Total__c</name>
+    </fields>
+    <fields>
+        <help>El año en el que se produjo el importe total más grande de oportunidades ganadas relacionadas con esta cuenta. Consulte también Total en año de mejor donación.</help>
+        <label>Año de mejor donación</label>
+        <name>Best_Gift_Year__c</name>
+    </fields>
+    <fields>
+        <help>La oportunidad ganada más temprana (por Fecha de cierre) con importe superior a cero relacionada con esta cuenta.</help>
+        <label>Fecha de primera donación</label>
+        <name>FirstCloseDate__c</name>
+    </fields>
+    <fields>
+        <help>Para cuentas Hogar, utiliza campos de contactos relacionados no excluidos y ordenados. Se genera automáticamente.</help>
+        <label>Saludo formal</label>
+        <name>Formal_Greeting__c</name>
+    </fields>
+    <fields>
+        <label>Teléfono del hogar</label>
+        <name>HouseholdPhone__c</name>
+    </fields>
+    <fields>
+        <help>Para cuentas Hogar, utiliza campos de contactos relacionados no excluidos y ordenados. Se genera automáticamente.</help>
+        <label>Saludo informal</label>
+        <name>Informal_Greeting__c</name>
+    </fields>
+    <fields>
+        <help>El importe más grande de una oportunidad ganada relacionado con esta cuenta.</help>
+        <label>Importe de la mayor donación</label>
+        <name>LargestAmount__c</name>
+    </fields>
+    <fields>
+        <help>La Fecha de cierre más reciente de una oportunidad ganada relacionada con esta cuenta con un importe superior a cero.</help>
+        <label>Fecha de última donación</label>
+        <name>LastCloseDate__c</name>
+    </fields>
+    <fields>
+        <help>El importe de la Oportunidad de afiliación (por Tipo de registro) ganada más reciente (por Fecha de cierre) para esta cuenta.</help>
+        <label>Importe de última afiliación</label>
+        <name>LastMembershipAmount__c</name>
+    </fields>
+    <fields>
+        <help>La Fecha de cierre más reciente de una Oportunidad de afiliación (por Tipo de registro) relacionada con esta cuenta.</help>
+        <label>Fecha de última afiliación</label>
+        <name>LastMembershipDate__c</name>
+    </fields>
+    <fields>
+        <help>Nivel de afiliación procedente de la Oportunidad de afiliación (por Tipo de registro) ganada más reciente (por Fecha de cierre) relacionado con esta cuenta.</help>
+        <label>Nivel de última afiliación</label>
+        <name>LastMembershipLevel__c</name>
+    </fields>
+    <fields>
+        <help>&quot;Origen&quot; de afiliación (nuevo, renovación...) procedente de la Oportunidad de afiliación (por Tipo de registro) ganada más reciente (por Fecha de cierre) relacionado con esta cuenta.</help>
+        <label>Origen de última afiliación</label>
+        <name>LastMembershipOrigin__c</name>
+    </fields>
+    <fields>
+        <help>El importe de la oportunidad ganada más reciente (por Fecha de cierre) con importe superior a cero relacionada con esta cuenta.</help>
+        <label>Importe de última donación</label>
+        <name>LastOppAmount__c</name>
+    </fields>
+    <fields>
+        <help>Fecha de finalización de afiliación procedente de la Oportunidad de afiliación (por Tipo de registro) ganada más reciente (por Fecha de cierre) relacionado con esta cuenta.</help>
+        <label>Fecha de fin de la afiliación</label>
+        <name>MembershipEndDate__c</name>
+    </fields>
+    <fields>
+        <help>Fecha de inicio de afiliación procedente de la Oportunidad de afiliación (por Tipo de registro) ganada más reciente (por Fecha de cierre) relacionado con esta cuenta.</help>
+        <label>Fecha de inicio de afiliación</label>
+        <name>MembershipJoinDate__c</name>
+    </fields>
+    <fields>
+        <help>Número total de oportunidades ganadas relacionadas con esta cuenta.</help>
+        <label>Número total de donaciones</label>
+        <name>NumberOfClosedOpps__c</name>
+    </fields>
+    <fields>
+        <help>Número total de oportunidades de afiliación ganadas (Tipo de registro) relacionadas con esta cuenta.</help>
+        <label>Cantidad de afiliaciones</label>
+        <name>NumberOfMembershipOpps__c</name>
+    </fields>
+    <fields>
+        <help>El importe total de oportunidades ganadas relacionadas con esta cuenta, cerradas dentro del año fiscal anterior al último año (consulte Configuración de Hogar).</help>
+        <label>Total donado hace dos años</label>
+        <name>OppAmount2YearsAgo__c</name>
+    </fields>
+    <fields>
+        <help>El importe total de oportunidades ganadas relacionadas con esta cuenta, cerradas en el último número de días definido en Configuración de Hogar.</help>
+        <label>Total donado en los últimos N días</label>
+        <name>OppAmountLastNDays__c</name>
+    </fields>
+    <fields>
+        <help>El importe total de oportunidades ganadas relacionadas con esta cuenta, cerradas en el año corriente o año fiscal.</help>
+        <label>Total donado el año pasado</label>
+        <name>OppAmountLastYear__c</name>
+    </fields>
+    <fields>
+        <help>El importe total de oportunidades ganadas relacionadas con esta cuenta, cerradas en el año corriente o año fiscal.</help>
+        <label>Total donado este año</label>
+        <name>OppAmountThisYear__c</name>
+    </fields>
+    <fields>
+        <help>El número total de oportunidades ganadas con un importe superior a cero relacionadas con esta cuenta, cerradas dentro del año o año fiscal anterior al último año.</help>
+        <label>Cantidad de donaciones hace dos años</label>
+        <name>OppsClosed2YearsAgo__c</name>
+    </fields>
+    <fields>
+        <help>El importe total de oportunidades ganadas relacionadas con esta cuenta, cerradas en el último número de días definido en Configuración de Hogar.</help>
+        <label>Cantidad de donaciones últimos N días</label>
+        <name>OppsClosedLastNDays__c</name>
+    </fields>
+    <fields>
+        <help>El número total de oportunidades ganadas con un importe superior a cero relacionadas con esta cuenta, cerradas en el año o el año fiscal anterior (consulte Configuración de Hogar).</help>
+        <label>Cantidad de donaciones el año pasado</label>
+        <name>OppsClosedLastYear__c</name>
+    </fields>
+    <fields>
+        <help>El número total de oportunidades ganadas con un importe superior a cero relacionadas con esta cuenta, cerradas en el año o el año fiscal corriente (consulte Configuración de Hogar).</help>
+        <label>Cantidad de donaciones este año</label>
+        <name>OppsClosedThisYear__c</name>
+    </fields>
+    <fields>
+        <help>Para cuentas Hogar, especifica qué campos de nombres no deben completarse automáticamente por el código de Hogares.</help>
+        <label>_SYSTEM: NOMENCLATURA PERSONALIZADA</label>
+        <name>SYSTEM_CUSTOM_NAMING__c</name>
+        <picklistValues>
+            <masterLabel>Formal_Greeting__c</masterLabel>
+            <translation>Formal_Greeting__c</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informal_Greeting__c</masterLabel>
+            <translation>Informal_Greeting__c</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Name</masterLabel>
+            <translation>Nombre</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>El importe más pequeño superior a cero de una oportunidad ganada relacionado con esta cuenta.</help>
+        <label>Importe de la menor donación</label>
+        <name>SmallestAmount__c</name>
+    </fields>
+    <fields>
+        <help>El importe total de oportunidades de afiliación ganadas (Tipo de registro) relacionadas con esta cuenta.</help>
+        <label>Importe total de afiliaciones</label>
+        <name>TotalMembershipOppAmount__c</name>
+    </fields>
+    <fields>
+        <help>La suma de importes de todas las oportunidades ganadas relacionado con esta cuenta.</help>
+        <label>Total donado</label>
+        <name>TotalOppAmount__c</name>
+    </fields>
+    <fields>
+        <help>El contacto principal para esta cuenta, o el contacto Uno-a-Uno para la cuenta Uno-a-Uno.</help>
+        <label><!-- Primary Contact --></label>
+        <name>npe01__One2OneContact__c</name>
+        <relationshipLabel><!-- Account --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Indica si la cuenta es o no una cuenta especial para contactos (Familia, Uno-a-Uno, Individual) vs una cuenta normal.</help>
+        <label><!-- _SYSTEM: IsIndividual --></label>
+        <name>npe01__SYSTEMIsIndividual__c</name>
+    </fields>
+    <fields>
+        <help>Indica el modelo de cuenta: Familia, Uno-a-Uno o Individual.</help>
+        <label><!-- _SYSTEM: AccountType --></label>
+        <name>npe01__SYSTEM_AccountType__c</name>
+    </fields>
 </CustomObjectTranslation>

@@ -1,164 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>AverageAmount__c</name>
-    <help>この団体に関連する成立支援の平均金額。自動的に更新されます。</help>
-    <label>平均支援金額</label>
-  </fields>
-  <fields>
-    <name>Best_Gift_Year_Total__c</name>
-    <help>この団体の最大支援年における成立支援の合計金額。</help>
-    <label>最大支援年の総額</label>
-  </fields>
-  <fields>
-    <name>Best_Gift_Year__c</name>
-    <help>この団体に関連する成立支援の総額が最高であった年。「最大支援年の総額」も参照。</help>
-    <label>最大支援年</label>
-  </fields>
-  <fields>
-    <name>FirstCloseDate__c</name>
-    <help>この団体に関連する、金額が 0 より大きい成立支援が最初に行われた日 (完了日)。</help>
-    <label>最初の支援日</label>
-  </fields>
-  <fields>
-    <name>Formal_Greeting__c</name>
-    <help>世帯団体で、除外なしで順序付けされた関係する個人の項目を使用します。自動的に生成されます。</help>
-    <label>公式の挨拶</label>
-  </fields>
-  <fields>
-    <name>HouseholdPhone__c</name>
-    <label>世帯電話</label>
-  </fields>
-  <fields>
-    <name>Informal_Greeting__c</name>
-    <help>世帯団体で、除外なしで順序付けされた関係する個人の項目を使用します。自動的に生成されます。</help>
-    <label>非公式の挨拶</label>
-  </fields>
-  <fields>
-    <name>LargestAmount__c</name>
-    <help>この団体に関連する成立支援の最大金額。</help>
-    <label>最大支援金額</label>
-  </fields>
-  <fields>
-    <name>LastCloseDate__c</name>
-    <help>この団体に関連する、金額が 0 より大きい成立支援の最も新しい完了日。</help>
-    <label>最終支援日</label>
-  </fields>
-  <fields>
-    <name>LastMembershipAmount__c</name>
-    <help>この団体の最も新しい (完了日) 成立会費支援 (レコードタイプ) の金額。</help>
-    <label>最終会費支援金額</label>
-  </fields>
-  <fields>
-    <name>LastMembershipDate__c</name>
-    <help>この団体に関連する成立会費支援 (レコードタイプ) の最も新しい完了日。</help>
-    <label>最終会費支援日</label>
-  </fields>
-  <fields>
-    <name>LastMembershipLevel__c</name>
-    <help>この団体に関連する最も新しい (完了日) 成立会費支援 (レコードタイプ) の会員レベル。</help>
-    <label>最終会員レベル</label>
-  </fields>
-  <fields>
-    <name>LastMembershipOrigin__c</name>
-    <help>この団体に関連する最も新しい (完了日) 成立会費支援 (レコードタイプ) の会員状況 (新規、更新など)。</help>
-    <label>最終会員状況</label>
-  </fields>
-  <fields>
-    <name>LastOppAmount__c</name>
-    <help>この団体に関連する、金額が 0 より大きい成立支援で、最も新しい (完了日) ものの金額。</help>
-    <label>最終支援金額</label>
-  </fields>
-  <fields>
-    <name>MembershipEndDate__c</name>
-    <help>この団体に関連する最も新しい (完了日) 成立会費支援 (レコードタイプ) の会員終了日。</help>
-    <label>会員終了日</label>
-  </fields>
-  <fields>
-    <name>MembershipJoinDate__c</name>
-    <help>この団体に関連する最も新しい (完了日) 成立会費支援 (レコードタイプ) の会員開始日。</help>
-    <label>入会年月日</label>
-  </fields>
-  <fields>
-    <name>NumberOfClosedOpps__c</name>
-    <help>この団体に関連する成立支援の合計回数。</help>
-    <label>これまでの支援回数</label>
-  </fields>
-  <fields>
-    <name>NumberOfMembershipOpps__c</name>
-    <help>この団体に関連する成立会費支援 (レコードタイプ) の合計回数。</help>
-    <label>会費払込回数</label>
-  </fields>
-  <fields>
-    <name>OppAmount2YearsAgo__c</name>
-    <help>この団体に関連する成立支援で、前々年または前々年度に完了したものの総額 (「世帯設定」を参照)。</help>
-    <label>一昨年の支援総額</label>
-  </fields>
-  <fields>
-    <name>OppAmountLastNDays__c</name>
-    <help>この団体に関連する成立支援で、[世帯設定] に定義されている過去の日数の間に完了したものの総額。</help>
-    <label>N日間の支援総額</label>
-  </fields>
-  <fields>
-    <name>OppAmountLastYear__c</name>
-    <help>この団体に関連する成立支援で、今年または今年度に完了したものの総額。</help>
-    <label>昨年の支援総額</label>
-  </fields>
-  <fields>
-    <name>OppAmountThisYear__c</name>
-    <help>この団体に関連する成立支援で、今年または今年度に完了したものの総額。</help>
-    <label>今年の支援総額</label>
-  </fields>
-  <fields>
-    <name>OppsClosed2YearsAgo__c</name>
-    <help>この団体に関連する、金額が 0 より大きい成立支援で、前々年または前々年度に完了したものの合計回数。</help>
-    <label>一昨年の支援回数</label>
-  </fields>
-  <fields>
-    <name>OppsClosedLastNDays__c</name>
-    <help>この団体に関連する成立支援で、[世帯設定] に定義されている過去の日数の間に完了したものの総額。</help>
-    <label>N日間の支援回数</label>
-  </fields>
-  <fields>
-    <name>OppsClosedLastYear__c</name>
-    <help>この団体に関連する、金額が 0 より大きい成立支援で、前年または前年度に完了したものの合計回数 (「世帯設定」を参照)。</help>
-    <label>昨年の支援回数</label>
-  </fields>
-  <fields>
-    <name>OppsClosedThisYear__c</name>
-    <help>この団体に関連する、金額が 0 より大きい成立支援で、今年または今年度に完了したものの合計回数 (「世帯設定」を参照)。</help>
-    <label>今年の支援回数</label>
-  </fields>
-  <fields>
-    <name>SYSTEM_CUSTOM_NAMING__c</name>
-    <help>世帯団体で、世帯コードによっては自動的に入力されない名前関連項目を指定します。</help>
-    <label>_SYSTEM: CUSTOM NAMING</label>
-    <picklistValues>
-      <masterLabel>Name</masterLabel>
-      <translation>名前</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Formal_Greeting__c</masterLabel>
-      <translation>Formal_Greeting__c</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Informal_Greeting__c</masterLabel>
-      <translation>Informal_Greeting__c</translation>
-    </picklistValues>
-  </fields>
-  <fields>
-    <name>SmallestAmount__c</name>
-    <help>この団体に関連する、0 以外の成立支援の最小金額。</help>
-    <label>最小支援金額</label>
-  </fields>
-  <fields>
-    <name>TotalMembershipOppAmount__c</name>
-    <help>この団体に関連する成立会費支援 (レコードタイプ) の総額。</help>
-    <label>会費支援総額</label>
-  </fields>
-  <fields>
-    <name>TotalOppAmount__c</name>
-    <help>この団体に関連するすべての成立支援の合計金額。</help>
-    <label>これまでの支援総額</label>
-  </fields>
+    <fields>
+        <help>この団体に関連する成立支援の平均金額。自動的に更新されます。</help>
+        <label>平均支援金額</label>
+        <name>AverageAmount__c</name>
+    </fields>
+    <fields>
+        <help>この団体の最大支援年における成立支援の合計金額。</help>
+        <label>最大支援年の総額</label>
+        <name>Best_Gift_Year_Total__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する成立支援の総額が最高であった年。「最大支援年の総額」も参照。</help>
+        <label>最大支援年</label>
+        <name>Best_Gift_Year__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する、金額が 0 より大きい成立支援が最初に行われた日 (完了日)。</help>
+        <label>最初の支援日</label>
+        <name>FirstCloseDate__c</name>
+    </fields>
+    <fields>
+        <help>世帯団体で、除外なしで順序付けされた関係する個人の項目を使用します。自動的に生成されます。</help>
+        <label>公式の挨拶</label>
+        <name>Formal_Greeting__c</name>
+    </fields>
+    <fields>
+        <label>世帯電話</label>
+        <name>HouseholdPhone__c</name>
+    </fields>
+    <fields>
+        <help>世帯団体で、除外なしで順序付けされた関係する個人の項目を使用します。自動的に生成されます。</help>
+        <label>非公式の挨拶</label>
+        <name>Informal_Greeting__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する成立支援の最大金額。</help>
+        <label>最大支援金額</label>
+        <name>LargestAmount__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する、金額が 0 より大きい成立支援の最も新しい完了日。</help>
+        <label>最終支援日</label>
+        <name>LastCloseDate__c</name>
+    </fields>
+    <fields>
+        <help>この団体の最も新しい (完了日) 成立会費支援 (レコードタイプ) の金額。</help>
+        <label>最終会費支援金額</label>
+        <name>LastMembershipAmount__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する成立会費支援 (レコードタイプ) の最も新しい完了日。</help>
+        <label>最終会費支援日</label>
+        <name>LastMembershipDate__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する最も新しい (完了日) 成立会費支援 (レコードタイプ) の会員レベル。</help>
+        <label>最終会員レベル</label>
+        <name>LastMembershipLevel__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する最も新しい (完了日) 成立会費支援 (レコードタイプ) の会員状況 (新規、更新など)。</help>
+        <label>最終会員状況</label>
+        <name>LastMembershipOrigin__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する、金額が 0 より大きい成立支援で、最も新しい (完了日) ものの金額。</help>
+        <label>最終支援金額</label>
+        <name>LastOppAmount__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する最も新しい (完了日) 成立会費支援 (レコードタイプ) の会員終了日。</help>
+        <label>会員終了日</label>
+        <name>MembershipEndDate__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する最も新しい (完了日) 成立会費支援 (レコードタイプ) の会員開始日。</help>
+        <label>入会年月日</label>
+        <name>MembershipJoinDate__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する成立支援の合計回数。</help>
+        <label>これまでの支援回数</label>
+        <name>NumberOfClosedOpps__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する成立会費支援 (レコードタイプ) の合計回数。</help>
+        <label>会費払込回数</label>
+        <name>NumberOfMembershipOpps__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する成立支援で、前々年または前々年度に完了したものの総額 (「世帯設定」を参照)。</help>
+        <label>一昨年の支援総額</label>
+        <name>OppAmount2YearsAgo__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する成立支援で、[世帯設定] に定義されている過去の日数の間に完了したものの総額。</help>
+        <label>N日間の支援総額</label>
+        <name>OppAmountLastNDays__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する成立支援で、今年または今年度に完了したものの総額。</help>
+        <label>昨年の支援総額</label>
+        <name>OppAmountLastYear__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する成立支援で、今年または今年度に完了したものの総額。</help>
+        <label>今年の支援総額</label>
+        <name>OppAmountThisYear__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する、金額が 0 より大きい成立支援で、前々年または前々年度に完了したものの合計回数。</help>
+        <label>一昨年の支援回数</label>
+        <name>OppsClosed2YearsAgo__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する成立支援で、[世帯設定] に定義されている過去の日数の間に完了したものの総額。</help>
+        <label>N日間の支援回数</label>
+        <name>OppsClosedLastNDays__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する、金額が 0 より大きい成立支援で、前年または前年度に完了したものの合計回数 (「世帯設定」を参照)。</help>
+        <label>昨年の支援回数</label>
+        <name>OppsClosedLastYear__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する、金額が 0 より大きい成立支援で、今年または今年度に完了したものの合計回数 (「世帯設定」を参照)。</help>
+        <label>今年の支援回数</label>
+        <name>OppsClosedThisYear__c</name>
+    </fields>
+    <fields>
+        <help>世帯団体で、世帯コードによっては自動的に入力されない名前関連項目を指定します。</help>
+        <label>_SYSTEM: CUSTOM NAMING</label>
+        <name>SYSTEM_CUSTOM_NAMING__c</name>
+        <picklistValues>
+            <masterLabel>Formal_Greeting__c</masterLabel>
+            <translation>Formal_Greeting__c</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informal_Greeting__c</masterLabel>
+            <translation>Informal_Greeting__c</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Name</masterLabel>
+            <translation>名前</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>この団体に関連する、0 以外の成立支援の最小金額。</help>
+        <label>最小支援金額</label>
+        <name>SmallestAmount__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連する成立会費支援 (レコードタイプ) の総額。</help>
+        <label>会費支援総額</label>
+        <name>TotalMembershipOppAmount__c</name>
+    </fields>
+    <fields>
+        <help>この団体に関連するすべての成立支援の合計金額。</help>
+        <label>これまでの支援総額</label>
+        <name>TotalOppAmount__c</name>
+    </fields>
+    <fields>
+        <help>世帯団体の主個人、または 1 対 1 団体の 1 対 1 個人。</help>
+        <label><!-- Primary Contact --></label>
+        <name>npe01__One2OneContact__c</name>
+        <relationshipLabel><!-- Account --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この団体が「個人」(true) であるか「団体」(false) であるかを示します。</help>
+        <label><!-- _SYSTEM: IsIndividual --></label>
+        <name>npe01__SYSTEMIsIndividual__c</name>
+    </fields>
+    <fields>
+        <help>システムフィールド：利用または変更することは禁止</help>
+        <label><!-- _SYSTEM: AccountType --></label>
+        <name>npe01__SYSTEM_AccountType__c</name>
+    </fields>
 </CustomObjectTranslation>

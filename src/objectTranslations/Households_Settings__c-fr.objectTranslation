@@ -1,178 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>Advanced_Household_Naming__c</name>
-    <help>Si coché, le système fournira automatiquement un nom pour les noms de foyers, ainsi que pour les salutations formelles et informelles.</help>
-    <label>Dénomination automatique de foyer</label>
-  </fields>
-  <fields>
-    <name>Always_Rollup_to_Primary_Contact__c</name>
-    <help>Si coché, Salesforce cumulera TOUJOURS les données donateur sur le contact principal de l’opportunité et le compte ou l’enregistrement foyer correspondant, même si l’opportunité ne provient pas d’un individu. Sinon, seule l’organisation recevra un crédit.</help>
-    <label>Cumul tjrs sur rôle de contact principal</label>
-  </fields>
-  <fields>
-    <name>Async_Household_Naming__c</name>
-    <help>Ce paramètre non exposé déclenche l’utilisation d’une version asynchrone du code de dénomination des foyers, au lieu de la version standard.</help>
-    <label>Dénomination de foyer asynchrone</label>
-  </fields>
-  <fields>
-    <name>Batch_Size__c</name>
-    <help>Le nombre d’enregistrements traités en une fois lors du calcul des statistiques de donateurs. La taille par défaut est 200. Si les cumuls d’opportunités échouent à cause des limites du système, réduisez le nombre d’enregistrements.</help>
-    <label>Taille de lot de cumul</label>
-  </fields>
-  <fields>
-    <name>DISABLE_HouseholdAfter_trigger__c</name>
-    <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
-    <label>DEPRECATED-Disable_HHAfter_trigger</label>
-  </fields>
-  <fields>
-    <name>DISABLE_HouseholdBefore_trigger__c</name>
-    <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
-    <label>DEPRECATED-Disable_HHBefore_trigger</label>
-  </fields>
-  <fields>
-    <name>DISABLE_Household_Opportunity_trigger__c</name>
-    <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
-    <label>DEPRECATED-Disable_Household_Opp_trigger</label>
-  </fields>
-  <fields>
-    <name>DISABLE_Households_trigger__c</name>
-    <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
-    <label>DEPRECATED-Disable_Households_trigger</label>
-  </fields>
-  <fields>
-    <name>DISABLE_OpportunityRollup_trigger__c</name>
-    <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
-    <label>DEPRECATED-Disable_OppRollup_trigger</label>
-  </fields>
-  <fields>
-    <name>Enable_Opp_Rollup_Triggers__c</name>
-    <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
-    <label>DEPRECATED-Enable_Opp_Rollup_Triggers</label>
-  </fields>
-  <fields>
-    <name>Enable_Soft_Credit_Rollups__c</name>
-    <help>Cumule les totaux d’opp. fermées gagnées selon les rôles de contact d’opp. attribués. Les cumuls de crédits indirects ne se produisent que dans la tâche nocturne, mais vous pouvez les exécuter manuellement dans les paramètres de cumul de dons par lot.</help>
-    <label>Activer les cumuls de crédits indirects</label>
-  </fields>
-  <fields>
-    <name>Enable_Update_Check__c</name>
-    <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
-    <label>DÉPRÉCIÉ-Activer vérif. de mise à jour</label>
-  </fields>
-  <fields>
-    <name>Excluded_Account_Opp_Rectypes__c</name>
-    <help>Noms des types d’enregistrement d’opportunité à exclure des statistiques lors du cumul des opportunités d’un compte.</help>
-    <label>Types d’enr. d’opp. exclus cumul compte</label>
-  </fields>
-  <fields>
-    <name>Excluded_Account_Opp_Types__c</name>
-    <help>Les opportunités qui ont cette valeur dans la liste de sélection Type ne seront pas incluses dans les cumuls du compte.</help>
-    <label>Types d’opp. exclus cumul compte</label>
-  </fields>
-  <fields>
-    <name>Excluded_Contact_Opp_Rectypes__c</name>
-    <help>Les opportunités avec les types d’enregistrement sélectionnés ne seront pas incluses dans les cumuls du contact .Cliquez sur Ctrl ou Commande pour sélectionner plusieurs types d’enregistrements.</help>
-    <label>Types d’enr. d’opp. exclus cumul contact</label>
-  </fields>
-  <fields>
-    <name>Excluded_Contact_Opp_Types__c</name>
-    <help>Les opportunités qui ont cette valeur dans la liste de sélection Type ne seront pas incluses dans les cumuls du contact.</help>
-    <label>Types d’opp. exclus cumul contact</label>
-  </fields>
-  <fields>
-    <name>Force_Fiscal_Year__c</name>
-    <help>NPSP vérifie automatiquement les exercices fiscaux personnalisés et désactive les paramètres d’exercice fiscal, pour éviter des erreurs. Ce paramètre contourne cette vérification pour les utilisateurs ayant activé les exercices fiscaux personnalisés.</help>
-    <label>Forcer l’année fiscale personnalisée</label>
-  </fields>
-  <fields>
-    <name>Has_Package_Update__c</name>
-    <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
-    <label>DÉPRÉCIÉ-Mise à jour du package incluse</label>
-  </fields>
-  <fields>
-    <name>Household_Contact_Roles_On__c</name>
-    <help>Crée automatiquement des rôles de contacts pour les membres du foyer du contact principal de l’opportunité.</help>
-    <label>Rôles de contact de foyer</label>
-  </fields>
-  <fields>
-    <name>Household_Creation_Excluded_Recordtypes__c</name>
-    <help>Les types d’enregistrement de contact exclus de la création de foyer. Ce paramètre est ignoré si vous utilisez le modèle de compte de foyer.</help>
-    <label>Types d’enr. exclus de création de foyer</label>
-  </fields>
-  <fields>
-    <name>Household_Mailing_List_ID__c</name>
-    <help>L’ID du rapport sur la liste de publipostage de foyer utilisé pour les campagnes de publipostage dédupliquées par foyer. Le rapport doit contenir les campagnes avec des contacts dont le statut de membre ne contient pas « Doublon »</help>
-    <label>Rapport liste de publipostage de foyer</label>
-  </fields>
-  <fields>
-    <name>Household_Member_Contact_Role__c</name>
-    <help>Le rôle de contact que vous souhaitez utiliser pour les membres de foyer.</help>
-    <label>Rôle de contact de membre de foyer</label>
-  </fields>
-  <fields>
-    <name>Household_OCR_Excluded_Recordtypes__c</name>
-    <help>Les types d’enregistrement de contact que vous souhaitez exclure de la création automatique de rôle de contact de membre du foyer. Salesforce empêcherait alors les contacts de recevoir le rôle de contact de membre de foyer lorsque l’opportunité est créée.</help>
-    <label>Types d’enr. exclus rôles de contact</label>
-  </fields>
-  <fields>
-    <name>Household_Rules__c</name>
-    <help>Indique pour quels contacts des objets de foyer seront créés automatiquement. Notez que ceci n’est utilisé que pour les contacts utilisant le modèle de compte un-à-un ou individuel, et ignoré pour les contacts ayant le modèle de compte de foyer.</help>
-    <label>Règles d’objets de foyer</label>
-  </fields>
-  <fields>
-    <name>Last_Update_Check__c</name>
-    <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
-    <label>DÉPRÉCIÉ-Dernière vérif. de mise à jour</label>
-  </fields>
-  <fields>
-    <name>Max_Package_Version__c</name>
-    <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
-    <label>DÉPRÉCIÉ-Version max du package</label>
-  </fields>
-  <fields>
-    <name>Membership_Grace_Period__c</name>
-    <help>La durée (en jours) de la période de grâce après l’expiration d’une adhésion (dernière date de fin) avant que le statut passe de « Période de grâce » à « Expiré ». La valeur par défaut est 30 jours.</help>
-    <label>Période de grâce d’adhésion</label>
-  </fields>
-  <fields>
-    <name>Membership_Record_Types__c</name>
-    <help>Noms des types d’enregistrement d’opportunité, comme adhésion, que vous souhaitez cumuler séparément des autres types d’enregistrement d’opportunité.</help>
-    <label>Noms de type d’enregistrement d’adhésion</label>
-  </fields>
-  <fields>
-    <name>Opp_Rollup_Scheduled_Job_Id__c</name>
-    <help>ID pour la tâche de cumul d’opportunités actuellement planifiée</help>
-    <label>ID de tâche planifiée de cumul d’opp.</label>
-  </fields>
-  <fields>
-    <name>Package_Update_URL__c</name>
-    <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
-    <label>DÉPRÉCIÉ-URL de mise à jour du package</label>
-  </fields>
-  <fields>
-    <name>Rollup_N_Day_Value__c</name>
-    <help>Fournit une valeur pour les cumuls sur N jours, où N est le nombre de jours passés jusqu’à aujourd’hui. Cette valeur cumule sur les derniers 365 jours par défaut.</help>
-    <label>Valeur de cumul N jours</label>
-  </fields>
-  <fields>
-    <name>Schedule_Job_Limit__c</name>
-    <help>Le nombre de tâches Apex planifiées actives à viser lors de la création de nouvelles tâches.</help>
-    <label>Limitation des tâches prévues</label>
-  </fields>
-  <fields>
-    <name>Soft_Credit_Roles__c</name>
-    <help>Liste de rôles de contact d’opportunité à inclure dans les cumuls de crédits indirects. Cliquez sur Ctrl ou Commande pour sélectionner plusieurs rôles.</help>
-    <label>Rôles de crédits indirects</label>
-  </fields>
-  <fields>
-    <name>Update_Check_Interval__c</name>
-    <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
-    <label>DÉPRÉCIÉ-Mettre à jour intervalle vérif.</label>
-  </fields>
-  <fields>
-    <name>Use_Fiscal_Year_for_Rollups__c</name>
-    <help>Totaux de cumul d’opp. respectant les années fiscales, non les années civiles. Pour définir les infos d’année fiscale, accéder à Configuration-&gt;Profil d’entreprise-&gt;Année fiscale. REMARQUE : params d’année fiscale personnalisés NON pris en charge.</help>
-    <label>Utiliser l’année fiscale pour les cumuls</label>
-  </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Households Settings --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Households Settings --></value>
+    </caseValues>
+    <fields>
+        <help>Si coché, le système fournira automatiquement un nom pour les noms de foyers, ainsi que pour les salutations formelles et informelles.</help>
+        <label>Dénomination automatique de foyer</label>
+        <name>Advanced_Household_Naming__c</name>
+    </fields>
+    <fields>
+        <help>Si coché, Salesforce cumulera TOUJOURS les données donateur sur le contact principal de l’opportunité et le compte ou l’enregistrement foyer correspondant, même si l’opportunité ne provient pas d’un individu. Sinon, seule l’organisation recevra un crédit.</help>
+        <label>Cumul tjrs sur rôle de contact principal</label>
+        <name>Always_Rollup_to_Primary_Contact__c</name>
+    </fields>
+    <fields>
+        <help>Ce paramètre non exposé déclenche l’utilisation d’une version asynchrone du code de dénomination des foyers, au lieu de la version standard.</help>
+        <label>Dénomination de foyer asynchrone</label>
+        <name>Async_Household_Naming__c</name>
+    </fields>
+    <fields>
+        <help>Le nombre d’enregistrements traités en une fois lors du calcul des statistiques de donateurs. La taille par défaut est 200. Si les cumuls d’opportunités échouent à cause des limites du système, réduisez le nombre d’enregistrements.</help>
+        <label>Taille de lot de cumul</label>
+        <name>Batch_Size__c</name>
+    </fields>
+    <fields>
+        <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
+        <label>DEPRECATED-Disable_HHAfter_trigger</label>
+        <name>DISABLE_HouseholdAfter_trigger__c</name>
+    </fields>
+    <fields>
+        <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
+        <label>DEPRECATED-Disable_HHBefore_trigger</label>
+        <name>DISABLE_HouseholdBefore_trigger__c</name>
+    </fields>
+    <fields>
+        <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
+        <label>DEPRECATED-Disable_Household_Opp_trigger</label>
+        <name>DISABLE_Household_Opportunity_trigger__c</name>
+    </fields>
+    <fields>
+        <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
+        <label>DEPRECATED-Disable_Households_trigger</label>
+        <name>DISABLE_Households_trigger__c</name>
+    </fields>
+    <fields>
+        <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
+        <label>DEPRECATED-Disable_OppRollup_trigger</label>
+        <name>DISABLE_OpportunityRollup_trigger__c</name>
+    </fields>
+    <fields>
+        <help>DÉPRÉCIÉ. Le comportement du déclencheur est désormais contrôlé dans la page Configuration de déclencheur des paramètres NPSP.</help>
+        <label>DEPRECATED-Enable_Opp_Rollup_Triggers</label>
+        <name>Enable_Opp_Rollup_Triggers__c</name>
+    </fields>
+    <fields>
+        <help>Cumule les totaux d’opp. fermées gagnées selon les rôles de contact d’opp. attribués. Les cumuls de crédits indirects ne se produisent que dans la tâche nocturne, mais vous pouvez les exécuter manuellement dans les paramètres de cumul de dons par lot.</help>
+        <label>Activer les cumuls de crédits indirects</label>
+        <name>Enable_Soft_Credit_Rollups__c</name>
+    </fields>
+    <fields>
+        <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
+        <label>DÉPRÉCIÉ-Activer vérif. de mise à jour</label>
+        <name>Enable_Update_Check__c</name>
+    </fields>
+    <fields>
+        <help>Noms des types d’enregistrement d’opportunité à exclure des statistiques lors du cumul des opportunités d’un compte.</help>
+        <label>Types d’enr. d’opp. exclus cumul compte</label>
+        <name>Excluded_Account_Opp_Rectypes__c</name>
+    </fields>
+    <fields>
+        <help>Les opportunités qui ont cette valeur dans la liste de sélection Type ne seront pas incluses dans les cumuls du compte.</help>
+        <label>Types d’opp. exclus cumul compte</label>
+        <name>Excluded_Account_Opp_Types__c</name>
+    </fields>
+    <fields>
+        <help>Les opportunités avec les types d’enregistrement sélectionnés ne seront pas incluses dans les cumuls du contact .Cliquez sur Ctrl ou Commande pour sélectionner plusieurs types d’enregistrements.</help>
+        <label>Types d’enr. d’opp. exclus cumul contact</label>
+        <name>Excluded_Contact_Opp_Rectypes__c</name>
+    </fields>
+    <fields>
+        <help>Les opportunités qui ont cette valeur dans la liste de sélection Type ne seront pas incluses dans les cumuls du contact.</help>
+        <label>Types d’opp. exclus cumul contact</label>
+        <name>Excluded_Contact_Opp_Types__c</name>
+    </fields>
+    <fields>
+        <help>NPSP vérifie automatiquement les exercices fiscaux personnalisés et désactive les paramètres d’exercice fiscal, pour éviter des erreurs. Ce paramètre contourne cette vérification pour les utilisateurs ayant activé les exercices fiscaux personnalisés.</help>
+        <label>Forcer l’année fiscale personnalisée</label>
+        <name>Force_Fiscal_Year__c</name>
+    </fields>
+    <fields>
+        <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
+        <label>DÉPRÉCIÉ-Mise à jour du package incluse</label>
+        <name>Has_Package_Update__c</name>
+    </fields>
+    <fields>
+        <help>Crée automatiquement des rôles de contacts pour les membres du foyer du contact principal de l’opportunité.</help>
+        <label>Rôles de contact de foyer</label>
+        <name>Household_Contact_Roles_On__c</name>
+    </fields>
+    <fields>
+        <help>Les types d’enregistrement de contact exclus de la création de foyer. Ce paramètre est ignoré si vous utilisez le modèle de compte de foyer.</help>
+        <label>Types d’enr. exclus de création de foyer</label>
+        <name>Household_Creation_Excluded_Recordtypes__c</name>
+    </fields>
+    <fields>
+        <help>L’ID du rapport sur la liste de publipostage de foyer utilisé pour les campagnes de publipostage dédupliquées par foyer. Le rapport doit contenir les campagnes avec des contacts dont le statut de membre ne contient pas « Doublon »</help>
+        <label>Rapport liste de publipostage de foyer</label>
+        <name>Household_Mailing_List_ID__c</name>
+    </fields>
+    <fields>
+        <help>Le rôle de contact que vous souhaitez utiliser pour les membres de foyer.</help>
+        <label>Rôle de contact de membre de foyer</label>
+        <name>Household_Member_Contact_Role__c</name>
+    </fields>
+    <fields>
+        <help>Les types d’enregistrement de contact que vous souhaitez exclure de la création automatique de rôle de contact de membre du foyer. Salesforce empêcherait alors les contacts de recevoir le rôle de contact de membre de foyer lorsque l’opportunité est créée.</help>
+        <label>Types d’enr. exclus rôles de contact</label>
+        <name>Household_OCR_Excluded_Recordtypes__c</name>
+    </fields>
+    <fields>
+        <help>Indique pour quels contacts des objets de foyer seront créés automatiquement. Notez que ceci n’est utilisé que pour les contacts utilisant le modèle de compte un-à-un ou individuel, et ignoré pour les contacts ayant le modèle de compte de foyer.</help>
+        <label>Règles d’objets de foyer</label>
+        <name>Household_Rules__c</name>
+    </fields>
+    <fields>
+        <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
+        <label>DÉPRÉCIÉ-Dernière vérif. de mise à jour</label>
+        <name>Last_Update_Check__c</name>
+    </fields>
+    <fields>
+        <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
+        <label>DÉPRÉCIÉ-Version max du package</label>
+        <name>Max_Package_Version__c</name>
+    </fields>
+    <fields>
+        <help>La durée (en jours) de la période de grâce après l’expiration d’une adhésion (dernière date de fin) avant que le statut passe de « Période de grâce » à « Expiré ». La valeur par défaut est 30 jours.</help>
+        <label>Période de grâce d’adhésion</label>
+        <name>Membership_Grace_Period__c</name>
+    </fields>
+    <fields>
+        <help>Noms des types d’enregistrement d’opportunité, comme adhésion, que vous souhaitez cumuler séparément des autres types d’enregistrement d’opportunité.</help>
+        <label>Noms de type d’enregistrement d’adhésion</label>
+        <name>Membership_Record_Types__c</name>
+    </fields>
+    <fields>
+        <help>ID pour la tâche de cumul d’opportunités actuellement planifiée</help>
+        <label>ID de tâche planifiée de cumul d’opp.</label>
+        <name>Opp_Rollup_Scheduled_Job_Id__c</name>
+    </fields>
+    <fields>
+        <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
+        <label>DÉPRÉCIÉ-URL de mise à jour du package</label>
+        <name>Package_Update_URL__c</name>
+    </fields>
+    <fields>
+        <help>Fournit une valeur pour les cumuls sur N jours, où N est le nombre de jours passés jusqu’à aujourd’hui. Cette valeur cumule sur les derniers 365 jours par défaut.</help>
+        <label>Valeur de cumul N jours</label>
+        <name>Rollup_N_Day_Value__c</name>
+    </fields>
+    <fields>
+        <help>Le nombre de tâches Apex planifiées actives à viser lors de la création de nouvelles tâches.</help>
+        <label>Limitation des tâches prévues</label>
+        <name>Schedule_Job_Limit__c</name>
+    </fields>
+    <fields>
+        <help>Liste de rôles de contact d’opportunité à inclure dans les cumuls de crédits indirects. Cliquez sur Ctrl ou Commande pour sélectionner plusieurs rôles.</help>
+        <label>Rôles de crédits indirects</label>
+        <name>Soft_Credit_Roles__c</name>
+    </fields>
+    <fields>
+        <help>DÉPRÉCIÉ. Les nouvelles versions de Nonprofit Success Pack seront automatiquement installées.</help>
+        <label>DÉPRÉCIÉ-Mettre à jour intervalle vérif.</label>
+        <name>Update_Check_Interval__c</name>
+    </fields>
+    <fields>
+        <help>Totaux de cumul d’opp. respectant les années fiscales, non les années civiles. Pour définir les infos d’année fiscale, accéder à Configuration-&gt;Profil d’entreprise-&gt;Année fiscale. REMARQUE : params d’année fiscale personnalisés NON pris en charge.</help>
+        <label>Utiliser l’année fiscale pour les cumuls</label>
+        <name>Use_Fiscal_Year_for_Rollups__c</name>
+    </fields>
+    <gender><!-- Masculine --></gender>
+    <startsWith><!-- Consonant --></startsWith>
 </CustomObjectTranslation>
