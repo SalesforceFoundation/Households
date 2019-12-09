@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>CombinedRollupFieldset__c</name>
-    <help>Formule : Champs concaténés utilisés lors de cumuls pour localiser l’opportunité la plus récente.</help>
-    <label>Ensemble de champs de cumul combiné</label>
-  </fields>
-  <fields>
-    <name>systemHouseholdContactRoleProcessor__c</name>
-    <help>Contrôle si les rôles de contact de foyer sont créés pour les opportunités. DÉPRÉCIÉ. Remplacé par les paramètres personnalisés.</help>
-    <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
-    <picklistValues>
-      <masterLabel>All Opportunities</masterLabel>
-      <translation>Toutes les opportunités</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>No Opportunities</masterLabel>
-      <translation>Aucune opportunité</translation>
-    </picklistValues>
-  </fields>
+    <fields>
+        <help>Formule : Champs concaténés utilisés lors de cumuls pour localiser l’opportunité la plus récente.</help>
+        <label>Ensemble de champs de cumul combiné</label>
+        <name>CombinedRollupFieldset__c</name>
+    </fields>
+    <fields>
+        <help>Contrôle si les rôles de contact de foyer sont créés pour les opportunités. DÉPRÉCIÉ. Remplacé par les paramètres personnalisés.</help>
+        <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
+        <name>systemHouseholdContactRoleProcessor__c</name>
+        <picklistValues>
+            <masterLabel>All Opportunities</masterLabel>
+            <translation>Toutes les opportunités</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Opportunities</masterLabel>
+            <translation>Aucune opportunité</translation>
+        </picklistValues>
+    </fields>
 </CustomObjectTranslation>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>CombinedRollupFieldset__c</name>
-    <help>最新の支援を見つけるために積み上げ集計中に使用される連結項目。</help>
-    <label>結合された積み上げ集計項目セット</label>
-  </fields>
-  <fields>
-    <name>systemHouseholdContactRoleProcessor__c</name>
-    <help>支援に世帯の個人の役割を作成するかどうかを制御します。廃止。カスタム設定に置き換えられました。</help>
-    <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
-    <picklistValues>
-      <masterLabel>All Opportunities</masterLabel>
-      <translation>すべての支援</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>No Opportunities</masterLabel>
-      <translation>支援なし</translation>
-    </picklistValues>
-  </fields>
+    <fields>
+        <help>最新の支援を見つけるために積み上げ集計中に使用される連結項目。</help>
+        <label>結合された積み上げ集計項目セット</label>
+        <name>CombinedRollupFieldset__c</name>
+    </fields>
+    <fields>
+        <help>支援に世帯の個人の役割を作成するかどうかを制御します。廃止。カスタム設定に置き換えられました。</help>
+        <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
+        <name>systemHouseholdContactRoleProcessor__c</name>
+        <picklistValues>
+            <masterLabel>All Opportunities</masterLabel>
+            <translation>すべての支援</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Opportunities</masterLabel>
+            <translation>支援なし</translation>
+        </picklistValues>
+    </fields>
 </CustomObjectTranslation>
