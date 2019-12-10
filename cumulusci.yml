@@ -28,4 +28,3 @@ tasks:
             elements:
                 - path: src/*ranslations/**/*ranslation
                   xpath: /*/*[re:match(ns:name, '...+__..+')]
-#                  xpath: /*/*[re:match(ns:name, '..+__..+__c')]
