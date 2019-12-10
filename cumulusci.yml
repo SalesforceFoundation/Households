@@ -18,3 +18,14 @@ flows:
         steps:
             6:
                 task: None
+
+tasks:
+    cleanup_translation_metadata:
+        description: Delete extraneous metadata from translated files
+        class_path: tasks.modify.RemoveElementsXPath
+        options:
+            output_style: salesforce
+            elements:
+                - path: src/*ranslations/**/*ranslation
+                  xpath: /*/*[re:match(ns:name, '...+__..+')]
+#                  xpath: /*/*[re:match(ns:name, '..+__..+__c')]
