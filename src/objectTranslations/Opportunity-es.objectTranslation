@@ -1,21 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>CombinedRollupFieldset__c</name>
-    <help>Fórmula: Campos concatenados empleados durante las totalizaciones para localizar la oportunidad más reciente.</help>
-    <label>Conjunto de campos combinados</label>
-  </fields>
-  <fields>
-    <name>systemHouseholdContactRoleProcessor__c</name>
-    <help>Consola si las funciones de contacto de hogar se crean para oportunidades. DESUSADO. Sustituido por configuración personalizada.</help>
-    <label>_SYSTEM: PROCES FUNCIONES CONTACTO HOGAR</label>
-    <picklistValues>
-      <masterLabel>All Opportunities</masterLabel>
-      <translation>Todas las oportunidades</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>No Opportunities</masterLabel>
-      <translation>No hay oportunidades</translation>
-    </picklistValues>
-  </fields>
+    <fields>
+        <help>Fórmula: Campos concatenados empleados durante las totalizaciones para localizar la oportunidad más reciente.</help>
+        <label>Conjunto de campos combinados</label>
+        <name>CombinedRollupFieldset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Generator(s) --></label>
+        <name>CurrentGenerators__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery/Installation Status --></label>
+        <name>DeliveryInstallationStatus__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In progress</masterLabel>
+            <translation><!-- In progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yet to begin</masterLabel>
+            <translation><!-- Yet to begin --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Main Competitor(s) --></label>
+        <name>MainCompetitors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>OrderNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tracking Number --></label>
+        <name>TrackingNumber__c</name>
+    </fields>
+    <fields>
+        <help>Fórmula: El importe de esta oportunidad menos el Monto de pagos cancelados y el Monto de pagos recibidos.</help>
+        <label><!-- Remaining Balance --></label>
+        <name>npe01__Amount_Outstanding__c</name>
+    </fields>
+    <fields>
+        <help>Valor total de los pagos marcados como cancelados o imposibles de cobrar para esta oportunidad.</help>
+        <label><!-- Payment Writeoff Amount --></label>
+        <name>npe01__Amount_Written_Off__c</name>
+    </fields>
+    <fields>
+        <help>Campo oculto para pasar el Id del contacto para la creación de una Función de Contacto</help>
+        <label><!-- Contact Id for Role --></label>
+        <name>npe01__Contact_Id_for_Role__c</name>
+    </fields>
+    <fields>
+        <help>Si pagos esta activado, y este campo seleccionado, un nuevo pago NO será automáticamente creado para esta oportunidad.</help>
+        <label><!-- Do Not Automatically Create Payment --></label>
+        <name>npe01__Do_Not_Automatically_Create_Payment__c</name>
+    </fields>
+    <fields>
+        <help>Fórmula: Si la cuenta relacionada esta o no definida como un individuo (SYSTEMIsIndividual__c)</help>
+        <label><!-- Is Opp From Individual --></label>
+        <name>npe01__Is_Opp_From_Individual__c</name>
+    </fields>
+    <fields>
+        <help>Determina el valor del nivel de la última membresía en un contacto o una cuenta</help>
+        <label><!-- Member Level --></label>
+        <name>npe01__Member_Level__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation>Bronce</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation>Oro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation>Plata</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Fecha en la que la membresía termina.</help>
+        <label><!-- Membership End Date --></label>
+        <name>npe01__Membership_End_Date__c</name>
+    </fields>
+    <fields>
+        <help>Es esta una renovación, una nueva membresía o una membresía de alguien que se fue y ahora retorna.</help>
+        <label><!-- Membership Origin --></label>
+        <name>npe01__Membership_Origin__c</name>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation>Nueva</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reacquire</masterLabel>
+            <translation>Re-adquirida</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation>Renovación</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Fecha en el que el período de la membresía inicia</help>
+        <label><!-- Membership Start Date --></label>
+        <name>npe01__Membership_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help>Cantidad total de pagos para esta oportunidad.</help>
+        <label><!-- Number of Payments --></label>
+        <name>npe01__Number_of_Payments__c</name>
+    </fields>
+    <fields>
+        <help>El valor total de los pagos marcados como recibidos para esta oportunidad.</help>
+        <label><!-- Payment Amount Received --></label>
+        <name>npe01__Payments_Made__c</name>
+    </fields>
+    <fields>
+        <help>Consola si las funciones de contacto de hogar se crean para oportunidades. DESUSADO. Sustituido por configuración personalizada.</help>
+        <label>_SYSTEM: PROCES FUNCIONES CONTACTO HOGAR</label>
+        <name>systemHouseholdContactRoleProcessor__c</name>
+        <picklistValues>
+            <masterLabel>All Opportunities</masterLabel>
+            <translation>Todas las oportunidades</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Opportunities</masterLabel>
+            <translation>No hay oportunidades</translation>
+        </picklistValues>
+    </fields>
+    <webLinks>
+        <label><!-- DeliveryStatus --></label>
+        <name>DeliveryStatus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Contact_Donation --></label>
+        <name>npe01__New_Contact_Donation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Organization_Donation --></label>
+        <name>npe01__New_Organization_Donation</name>
+    </webLinks>
 </CustomObjectTranslation>

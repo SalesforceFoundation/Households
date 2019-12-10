@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <help><!-- Average won Opportunity amount related to this Account.  Updated automatically. --></help>
         <label>תרומה ממוצעת</label>
         <name>AverageAmount__c</name>
@@ -14,6 +26,22 @@
         <help><!-- The year in which the largest total amount of won Opportunities related to this Account occurred.  See also Best Gift Year Total. --></help>
         <label>שנת התרומות הטובה ביותר</label>
         <name>Best_Gift_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Priority --></label>
+        <name>CustomerPriority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help><!-- The earliest won Opportunity (by Close Date) with amount greater than zero related to this Account. --></help>
@@ -90,6 +118,10 @@
         <name>NumberOfMembershipOpps__c</name>
     </fields>
     <fields>
+        <label><!-- Number of Locations --></label>
+        <name>NumberofLocations__c</name>
+    </fields>
+    <fields>
         <help><!-- The total amount of won Opportunities related to this Account, closed within the year or fiscal year preceding last year (see Household Settings). --></help>
         <label>סה&quot;כ תרומות לפני שנתיים</label>
         <name>OppAmount2YearsAgo__c</name>
@@ -130,6 +162,34 @@
         <name>OppsClosedThisYear__c</name>
     </fields>
     <fields>
+        <label><!-- SLA Expiration Date --></label>
+        <name>SLAExpirationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA Serial Number --></label>
+        <name>SLASerialNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA --></label>
+        <name>SLA__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation><!-- Bronze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platinum</masterLabel>
+            <translation><!-- Platinum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <help>עבור חשבונות משק בית, מציין אילו שדות הקשורים לשם לא צריכים להתמלא באופן אוטומטי על-ידי הקוד של משק הבית.</help>
         <label><!-- _SYSTEM: CUSTOM NAMING --></label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
@@ -161,4 +221,40 @@
         <label>סה&quot;כ תרומות</label>
         <name>TotalOppAmount__c</name>
     </fields>
+    <fields>
+        <label><!-- Upsell Opportunity --></label>
+        <name>UpsellOpportunity__c</name>
+        <picklistValues>
+            <masterLabel>Maybe</masterLabel>
+            <translation><!-- Maybe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The primary contact for the Account, or the One2One contact for a One2One account. --></help>
+        <label><!-- Primary Contact --></label>
+        <name>npe01__One2OneContact__c</name>
+        <relationshipLabel><!-- Account --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether or not this Account is special for Contacts (Household, One-to-One, Individual) vs a normal Account. --></help>
+        <label><!-- _SYSTEM: IsIndividual --></label>
+        <name>npe01__SYSTEMIsIndividual__c</name>
+    </fields>
+    <fields>
+        <help>שדה מערכת: לא להשתמש או לשנות.</help>
+        <label><!-- _SYSTEM: AccountType --></label>
+        <name>npe01__SYSTEM_AccountType__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Billing --></label>
+        <name>Billing</name>
+    </webLinks>
 </CustomObjectTranslation>
