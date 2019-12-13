@@ -200,19 +200,7 @@
         <help>Nombre, Saludo formal o Saludo informal</help>
         <label>_SYSTEM: NOMENCLATURA PERSONALIZADA</label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation>Formal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation>Informal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation>Nombre</translation>
-        </picklistValues>
-    </fields>
+        </fields>
     <fields>
         <help>El importe menor de una oportunidad ganada relacionada con este hogar por un contacto y una función del contacto de oportunidad principal.</help>
         <label>Importe de la menor donación</label>

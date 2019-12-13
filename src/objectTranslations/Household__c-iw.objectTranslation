@@ -212,19 +212,7 @@
         <help><!-- Name, Formal Greeting, or Informal Greeting --></help>
         <label><!-- _SYSTEM: CUSTOM NAMING --></label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation><!-- Formal_Greeting__c --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation><!-- Informal_Greeting__c --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation><!-- Name --></translation>
-        </picklistValues>
-    </fields>
+        </fields>
     <fields>
         <help><!-- The smallest amount of a won Opportunity related to this Household by Contact and primary Opportunity Contact Role. --></help>
         <label>התרומה הקטנה ביותר</label>

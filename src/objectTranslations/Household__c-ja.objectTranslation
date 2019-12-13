@@ -196,19 +196,7 @@
         <help>名前、公式の挨拶、非公式の挨拶のいずれか</help>
         <label>_SYSTEM: CUSTOM NAMING</label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation>Formal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation>Informal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation>名前</translation>
-        </picklistValues>
-    </fields>
+        </fields>
     <fields>
         <help>主支援個人の役割が設定されている個人による、この世帯に関連する成立支援の最小金額。</help>
         <label>最小支援金額</label>

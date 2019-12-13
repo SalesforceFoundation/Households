@@ -133,19 +133,7 @@
         <help>Pour les comptes de foyer, indique les champs associés au nom qui ne doivent pas être remplis automatiquement par le code de foyer.</help>
         <label>_SYSTEM: CUSTOM NAMING</label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation>Formal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation>Informal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation>Nom</translation>
-        </picklistValues>
-    </fields>
+        </fields>
     <fields>
         <help>Le plus petit montant non nul d&apos;une opportunité gagnée associée à ce compte.</help>
         <label>Don le moins élevé</label>

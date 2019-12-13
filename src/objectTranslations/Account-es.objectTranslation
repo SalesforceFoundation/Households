@@ -133,19 +133,7 @@
         <help>Para cuentas Hogar, especifica qué campos de nombres no deben completarse automáticamente por el código de Hogares.</help>
         <label>_SYSTEM: NOMENCLATURA PERSONALIZADA</label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation>Formal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation>Informal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation>Nombre</translation>
-        </picklistValues>
-    </fields>
+        </fields>
     <fields>
         <help>El importe más pequeño superior a cero de una oportunidad ganada relacionado con esta cuenta.</help>
         <label>Importe de la menor donación</label>

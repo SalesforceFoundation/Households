@@ -200,19 +200,7 @@
         <help>Naam, Formele begroeting of Informele begroeting</help>
         <label>_SYSTEM: AANGEPASTE NAAMGEVING</label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation>Formal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation>Informal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation>Naam</translation>
-        </picklistValues>
-    </fields>
+        </fields>
     <fields>
         <help>Het kleinste bedrag van een gewonnen Opportunity, dat is gerelateerd aan dit Huishouden op Contactpersoon en primaire Opportunitycontactpersoonsrol.</help>
         <label>Kleinste gift</label>

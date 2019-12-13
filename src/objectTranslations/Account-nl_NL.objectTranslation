@@ -133,19 +133,7 @@
         <help>Geeft voor Accounts voor huishouden aan welke aan naam gerelateerde velden niet automatisch moeten worden ingevuld door de code voor Huishouden.</help>
         <label>_SYSTEM: AANGEPASTE NAAMGEVING</label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation>Formal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation>Informal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation>Naam</translation>
-        </picklistValues>
-    </fields>
+        </fields>
     <fields>
         <help>Het kleinste niet-nul bedrag van een gewonnen Opportunity, dat is gerelateerd aan deze account.</help>
         <label>Kleinste gift</label>

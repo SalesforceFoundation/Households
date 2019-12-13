@@ -232,19 +232,7 @@
         <help>Name, formelle Anrede oder informelle Anrede</help>
         <label>_SYSTEM: BENUTZERDEFINIERTE BENENNUNG</label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation>Formal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation>Informal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation>Name</translation>
-        </picklistValues>
-    </fields>
+        </fields>
     <fields>
         <help>Der kleinste Betrag einer in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.gewonnenen Opportunity.</help>
         <label>Kleinste Schenkung</label>

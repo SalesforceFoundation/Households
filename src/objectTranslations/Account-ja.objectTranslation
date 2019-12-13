@@ -133,19 +133,7 @@
         <help>世帯団体で、世帯コードによっては自動的に入力されない名前関連項目を指定します。</help>
         <label>_SYSTEM: CUSTOM NAMING</label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation>Formal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation>Informal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation>名前</translation>
-        </picklistValues>
-    </fields>
+        </fields>
     <fields>
         <help>この団体に関連する、0 以外の成立支援の最小金額。</help>
         <label>最小支援金額</label>

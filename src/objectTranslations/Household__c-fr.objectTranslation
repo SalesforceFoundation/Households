@@ -200,19 +200,7 @@
         <help>Nom, Salutation formelle ou Salutation informelle</help>
         <label>_SYSTEM: CUSTOM NAMING</label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation>Formal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation>Informal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation>Nom</translation>
-        </picklistValues>
-    </fields>
+        </fields>
     <fields>
         <help>Le plus petit montant d’une opportunité gagnée associée à ce foyer par contact et rôle de contact d’opportunité principal.</help>
         <label>Don le moins élevé</label>
