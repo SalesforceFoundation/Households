@@ -25,33 +25,33 @@
         <name>Batch_Size__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_HHAfter_trigger --></label>
+        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+        <label>廃止-Disable_HHAfter_trigger</label>
         <name>DISABLE_HouseholdAfter_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_HHBefore_trigger --></label>
+        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+        <label>廃止-Disable_HHBefore_trigger</label>
         <name>DISABLE_HouseholdBefore_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_Household_Opp_trigger --></label>
+        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+        <label>廃止-Disable_Household_Opp_trigger</label>
         <name>DISABLE_Household_Opportunity_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_Households_trigger --></label>
+        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+        <label>廃止-Disable_Households_trigger</label>
         <name>DISABLE_Households_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Disable_OppRollup_trigger --></label>
+        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+        <label>廃止-Disable_OppRollup_trigger</label>
         <name>DISABLE_OpportunityRollup_trigger__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. Trigger behavior now controlled in the Trigger Configuration page of NPSP Settings. --></help>
-        <label><!-- DEPRECATED-Enable_Opp_Rollup_Triggers --></label>
+        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+        <label>廃止-Enable_Opp_Rollup_Triggers</label>
         <name>Enable_Opp_Rollup_Triggers__c</name>
     </fields>
     <fields>
@@ -60,8 +60,8 @@
         <name>Enable_Soft_Credit_Rollups__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label>更新確認の有効化</label>
+        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+        <label>廃止-更新確認の有効化</label>
         <name>Enable_Update_Check__c</name>
     </fields>
     <fields>
@@ -90,8 +90,8 @@
         <name>Force_Fiscal_Year__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Has Package Update --></label>
+        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+        <label>廃止-パッケージを更新可能</label>
         <name>Has_Package_Update__c</name>
     </fields>
     <fields>
@@ -125,13 +125,13 @@
         <name>Household_Rules__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label>最終更新確認日時</label>
+        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+        <label>廃止-最終更新確認日時</label>
         <name>Last_Update_Check__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Max Package Version --></label>
+        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+        <label>廃止-最大パッケージバージョン</label>
         <name>Max_Package_Version__c</name>
     </fields>
     <fields>
@@ -150,8 +150,8 @@
         <name>Opp_Rollup_Scheduled_Job_Id__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label><!-- DEPRECATED-Package Update URL --></label>
+        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+        <label>廃止-パッケージ更新 URL</label>
         <name>Package_Update_URL__c</name>
     </fields>
     <fields>
@@ -170,8 +170,8 @@
         <name>Soft_Credit_Roles__c</name>
     </fields>
     <fields>
-        <help><!-- DEPRECATED. New versions of the Nonprofit Success Pack will be automatically installed. --></help>
-        <label>更新確認間隔</label>
+        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+        <label>廃止-更新確認間隔</label>
         <name>Update_Check_Interval__c</name>
     </fields>
     <fields>

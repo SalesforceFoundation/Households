@@ -46,13 +46,13 @@
         <name>Field_Action__c</name>
     </fields>
     <fields>
-        <help>Das Objekt, dem dieser Benutzer-Rollup zugeordnet wird</help>
+        <help>Das Objekt, dem dieser Benutzer-Rollup zugeordnet ist</help>
         <label>Objektname</label>
         <name>Object_Name__c</name>
     </fields>
     <fields>
         <help>Das Ausgangsfeld und die Aktion vom Objekt für diesen Benutzer-Rollup</help>
-        <label>Quellenfeld</label>
+        <label>Quellfeld</label>
         <name>Source_Field__c</name>
     </fields>
     <fields>

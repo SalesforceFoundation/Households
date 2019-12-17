@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label>Voeg toe</label>
+        <label>Toevoegen</label>
         <name>Add</name>
     </customLabels>
     <customLabels>
-        <label>Voeg toe en voeg Huishoudens samen</label>
+        <label>Huishoudens toevoegen en samenvoegen</label>
         <name>AddAndMerge</name>
     </customLabels>
     <customLabels>
-        <label>Voeg toe en verwijder het oude Huishouden</label>
+        <label>Toevoegen en verwijderen vanuit oude huishouden</label>
         <name>AddAndRemove</name>
     </customLabels>
     <customLabels>
-        <label>Voeg Leden toe</label>
+        <label>Leden toevoegen</label>
         <name>AddHouseholdMembers</name>
     </customLabels>
     <customLabels>
-        <label>Een error trad op tijdens het kopiëren van het adres.</label>
+        <label>Er heeft zich een fout voorgedaan tijdens het kopiëren van het adres.</label>
         <name>AddressCopyFailure</name>
     </customLabels>
     <customLabels>
-        <label>Adres succesvol gekopieerd.</label>
+        <label>Kopiëren van adres geslaagd.</label>
         <name>AddressCopySuccess</name>
     </customLabels>
     <customLabels>
-        <label>Adres Kopiëren niet ondersteund voor dit object type.</label>
+        <label>Adres kopiëren wordt niet ondersteund voor dit object type.</label>
         <name>AddressCopyUnknownObject</name>
     </customLabels>
     <customLabels>
-        <label>Stel dit adres in als Huisadres van alle leden.</label>
+        <label>Stel dit adres in als thuisadres van alle leden van het huishouden.</label>
         <name>AddressToAllMembers</name>
     </customLabels>
     <customLabels>
-        <label>Bestaat al in Huishouden</label>
+        <label>Al in huishouden</label>
         <name>AlreadyInHousehold</name>
     </customLabels>
     <customLabels>
-        <label>Automatische Formele Begroeting</label>
+        <label>Automatische formele begroeting</label>
         <name>AutoFormalGreeting</name>
     </customLabels>
     <customLabels>
-        <label>Automatische Informele Begroeting</label>
+        <label>Automatische informele begroeting</label>
         <name>AutoInformalGreeting</name>
     </customLabels>
     <customLabels>
-        <label>Automatische Naam</label>
+        <label>Automatische naam</label>
         <name>AutoName</name>
     </customLabels>
     <customLabels>
-        <label>Wijzig</label>
+        <label>Wijzigen</label>
         <name>Change</name>
     </customLabels>
     <customLabels>
-        <label>Wijzig Adres</label>
+        <label>Adres wijzigen</label>
         <name>ChangeAddress</name>
     </customLabels>
     <customLabels>
@@ -61,7 +61,7 @@
         <name>ChangesNotSaved</name>
     </customLabels>
     <customLabels>
-        <label>is al in een Huishouden. Wil je deze toevoegen met of zonder de bestaande leden van het Huishouden?</label>
+        <label>is al in een huishouden. Wilt u deze contactpersoon toevoegen met of zonder hun bestaande leden van het huishouden?</label>
         <name>ContactAlreadyInHousehold</name>
     </customLabels>
     <customLabels>
@@ -69,11 +69,11 @@
         <name>ContactLastNameRqd</name>
     </customLabels>
     <customLabels>
-        <label>Voer een Voornaam en Achternaam in.</label>
+        <label>Geef een voornaam en achternaam op.</label>
         <name>ContactNameRqd</name>
     </customLabels>
     <customLabels>
-        <label>Contactpersonen worden gecreëerd bij het opslaan van een Huishouden.</label>
+        <label>Contactpersonen worden gemaakt bij het opslaan van een huishouden.</label>
         <name>CreatedOnSave</name>
     </customLabels>
     <customLabels>
@@ -81,7 +81,7 @@
         <name>DefaultHouseholdName</name>
     </customLabels>
     <customLabels>
-        <label><!-- DefaultHouseholdTransactionCurrency --></label>
+        <label>$</label>
         <name>DefaultHouseholdTransactionCurrency</name>
     </customLabels>
     <customLabels>
@@ -89,27 +89,27 @@
         <name>Delete</name>
     </customLabels>
     <customLabels>
-        <label>Voer nieuw adres in</label>
+        <label>Een nieuw adres opgeven</label>
         <name>EnterNewAddress</name>
     </customLabels>
     <customLabels>
-        <label>Uitsluiten Contactpersonen van automatische Naamgeving Huishouden:</label>
+        <label>Contactpersonen uitsluiten van automatische naamgeving voor Huishouden:</label>
         <name>ExcludeText</name>
     </customLabels>
     <customLabels>
-        <label>Bestaand Huishouden</label>
+        <label>Bestaande huishouden</label>
         <name>ExistingHousehold</name>
     </customLabels>
     <customLabels>
-        <label>Vind Contactpersoon op naam ...</label>
+        <label>Contactpersoon zoeken op naam...</label>
         <name>FindContactByName</name>
     </customLabels>
     <customLabels>
-        <label>Huishouden Adres</label>
+        <label>Adres van huishouden</label>
         <name>HouseholdAddress</name>
     </customLabels>
     <customLabels>
-        <label>De heer of mevrouw</label>
+        <label>Meneer of mevrouw</label>
         <name>HouseholdAnonymousGreeting</name>
     </customLabels>
     <customLabels>
@@ -117,11 +117,11 @@
         <name>HouseholdAnonymousName</name>
     </customLabels>
     <customLabels>
-        <label>Huishouden Details</label>
+        <label>Details van huishouden</label>
         <name>HouseholdDetails</name>
     </customLabels>
     <customLabels>
-        <label>Leden Huishouden</label>
+        <label>Leden van huishouden</label>
         <name>HouseholdMembers</name>
     </customLabels>
     <customLabels>
@@ -133,27 +133,27 @@
         <name>HouseholdNameOverrun</name>
     </customLabels>
     <customLabels>
-        <label>Geen Opportunities</label>
+        <label>Geen opportunities</label>
         <name>Household_Contact_Role_Processor_Off</name>
     </customLabels>
     <customLabels>
-        <label>Alle Opportunities</label>
+        <label>Alle opportunities</label>
         <name>Household_Contact_Role_Processor_On</name>
     </customLabels>
     <customLabels>
-        <label>Deze instellingen zorgen voor het automatisch aanmaken van Opportunity Contactpersoon Rollen voor leden van een Huishouden wanneer een Opportunity gemaakt wordt.</label>
+        <label>Met deze instellingen kunt u automatisch Contactpersoonsrollen voor opportunity maken voor leden van een huishouden telkens wanneer er een opportunity wordt gemaakt.</label>
         <name>Household_Contact_Roles_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>Lid Huishouden</label>
+        <label>Lid van huishouden</label>
         <name>Household_Member_Contact_Role</name>
     </customLabels>
     <customLabels>
-        <label>VEROUDERD.  Not Used.  Select which Contacts get Households: All, only those related to an Individual Account, or none.</label>
+        <label>VEROUDERD. Niet gebruikt. Kies welke contactpersonen Huishoudens krijgen: alle, alleen die gerelateerd aan Account voor individu, of geen.</label>
         <name>Household_Rules_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>Beheren Huishouden</label>
+        <label>Huishouden beheren</label>
         <name>ManageHousehold</name>
     </customLabels>
     <customLabels>
@@ -161,63 +161,122 @@
         <name>NameReplacementText</name>
     </customLabels>
     <customLabels>
-        <label>Nieuw Contactpersoon</label>
+        <label>Nieuwe contactpersoon</label>
         <name>NewContact</name>
     </customLabels>
     <customLabels>
-        <label>Er zijn op dit moment geen Contactpersonen in dit Huishouden.</label>
+        <label>Er zijn op dit moment geen contactpersonen in dit huishouden.</label>
         <name>NoContacts</name>
     </customLabels>
     <customLabels>
-        <label>Rollup foutmeldingen kunnen ontstaan tijdens geplande bijwerkingen of handmatige bijwerkingen en kunnen de nauwkeurigheid van de data beïnvloeden. Onderstaand zijn de foutmeldingen, het type foutmelding en een koppeling naar het record waarop de foutmelding plaatsvond. Deze foutmeldingen worden bij elke uitvoeting opnieuw ingesteld. Het wordt aangeraden deze meldingen te verhelpen om de nauwkeurigheid van de data te waarborgen.</label>
+        <label>Totaliseringsfouten kunnen zich voordoen tijdens nachtelijke of handmatige totaliseringen en kunnen de nauwkeurigheid van uw gegevens beïnvloeden. Hieronder staan de fouten, het type fout en een koppeling naar de record bij welke de fout zich voordeed. Deze fouten worden bij opnieuw ingesteld telkens wanneer de nachtelijke geplande taak of de handmatige totaliseringen worden uitgevoerd. U wordt dringend aangeraden om deze fouten onmiddellijk te verhelpen om de nauwkeurigheid van uw gegevens te waarborgen.</label>
         <name>Opportunity_Error_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>Kon niet opgerold worden omdat er te weinig future calls beschikbaar zijn.</label>
+        <label>Is niet getotaliseerd, omdat er te weinig toekomstige aanroepen beschikbaar zijn.</label>
         <name>Opportunity_Rollup_Future_Call_Limit</name>
     </customLabels>
     <customLabels>
-        <label>Het limiet van het aantal Geplande Apex opdrachten is bereikt, waardoor de Opportunity Rollups niet draaien. Verwijder een geplande opdracht en herlaad deze pagina om deze opdracht te laten uitvoeren.</label>
+        <label>U hebt uw limiet van Geplande Apex-taken bereikt, waardoor de Opportunitytotaliseringen niet &apos;s nachts worden uitgevoerd. Als u deze taak &apos;s nachts wilt (laten) uitvoeren, verwijdert u een van uw geplande taken en laadt u deze pagina opnieuw.</label>
         <name>Opportunity_Rollup_Scheduling_Error_Text</name>
     </customLabels>
     <customLabels>
-        <label>Donateur</label>
+        <label>Donor</label>
         <name>Primary_Donor_Contact_Role</name>
     </customLabels>
     <customLabels>
-        <label>Er zijn fouten opgetreden de laatste keer dat uw Opportunities opgerold zijn. Bekijk de Foutopsporingslogboeken voor meer informatie.</label>
+        <label>Er hebben zich een of meer fouten voorgedaan bij de laatste maal dat uw opportunities zijn getotaliseerd. Bekijk het deelvenster Systeemfoutenlogboek voor meer informatie.</label>
         <name>RollupErrorMessage</name>
     </customLabels>
     <customLabels>
-        <label>Selecteer een bestaand adres</label>
+        <label>Een bestaand adres selecteren</label>
         <name>SelectExistingAddress</name>
     </customLabels>
     <customLabels>
-        <label>Stel Adres in</label>
+        <label>Adres instellen</label>
         <name>SetAddress</name>
     </customLabels>
     <customLabels>
-        <label>Met deze instellingen kunt u door de gebruiker gedefinieerde Rollups aanmaken en beheren van Opportunity (Donatie) naar een Contactpersoon, Account of Huishouden. Om uw gedefinieerde Rollup te controleren, kunt u de Rollup Donaties Batch in de NPSP Instellingen gebruiken.</label>
+        <label>Met deze instellingen kunt u door de gebruiker gedefinieerde totaliseringen maken en beheren op basis van een Opportunity (Donatie) voor een contactpersoon, account of huishouden. Nadat u een door de gebruiker gedefinieerde totalisering hebt gemaakt, wilt u wellicht Batch van donaties totaliseren in NPSP-instellingen | Bulkgegevensprocessen gebruiken om alle totaliseringen op uw exemplaar opnieuw te berekenen en ervoor te zorgen dat uw nieuwe totaliseringsveld correct wordt ingevuld.  WAARSCHUWING: totaliseringen wijzigen de werking van uw Nonprofit Success Pack. Door onjuist geconfigureerde instellingen kunnen uw totaliseringen mislukken. Test uw door de gebruiker gedefinieerde totaliseringen grondig voordat u gaat implementeren naar productie.</label>
         <name>UDRDescription</name>
     </customLabels>
+    <customPageWebLinks>
+        <label><!-- Nonprofit Edition Reports --></label>
+        <name>Nonprofit_Edition_Reports</name>
+    </customPageWebLinks>
     <customTabs>
-        <label>Huishouden Instellingen</label>
+        <label><!-- Contact Merge (OLD) --></label>
+        <name>Contact_Merge</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Contacts Settings --></label>
+        <name>Contacts_Settings</name>
+    </customTabs>
+    <customTabs>
+        <label>Instellingen voor huishouden</label>
         <name>Households_Settings</name>
     </customTabs>
     <customTabs>
-        <label>Opportunity Rollups</label>
+        <label>Opportunitytotaliseringen</label>
         <name>Opportunity_Rollups</name>
     </customTabs>
     <customTabs>
-        <label>Gebruiker Rollups</label>
+        <label><!-- Payment Mapping --></label>
+        <name>Payment_Mapping</name>
+    </customTabs>
+    <customTabs>
+        <label>Gebruikerstotaliseringen</label>
         <name>User_Rollups</name>
     </customTabs>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
     <reportTypes>
-        <description>Huishoudens en Donaties</description>
-        <label>Huishoudens en Donaties</label>
+        <label>Huishoudens en donaties</label>
         <name>Households_and_Donations</name>
         <sections>
-            <label>Leden van het Huishouden</label>
+            <label>Leden van huishouden</label>
             <name>Household Members</name>
         </sections>
         <sections>
@@ -225,7 +284,7 @@
             <name>Households</name>
         </sections>
         <sections>
-            <label><!-- Opportunities --></label>
+            <label>Opportunities</label>
             <name>Opportunities</name>
         </sections>
     </reportTypes>

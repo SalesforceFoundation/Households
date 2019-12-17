@@ -6,8 +6,8 @@
         <name>CombinedRollupFieldset__c</name>
     </fields>
     <fields>
-        <help><!-- Controls if Household contact roles are created for Opportunities.  DEPRECATED.  Replaced by custom settings. --></help>
-        <label><!-- _SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR --></label>
+        <help>支援に世帯の個人の役割を作成するかどうかを制御します。廃止。カスタム設定に置き換えられました。</help>
+        <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
         <name>systemHouseholdContactRoleProcessor__c</name>
         <picklistValues>
             <masterLabel>All Opportunities</masterLabel>
@@ -18,4 +18,4 @@
             <translation>支援なし</translation>
         </picklistValues>
     </fields>
-</CustomObjectTranslation>
+    </CustomObjectTranslation>

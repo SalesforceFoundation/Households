@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help><!-- The average amount of all won Opportunities related to this Contact by a primary Opportunity Contact Role. --></help>
+        <help>Le montant moyen de toutes les opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Don moyen</label>
         <name>AverageAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The sum of won Opportunity amounts in the Best Gift Year. --></help>
+        <help>La somme des montants des opportunités gagnées dans la meilleure année de don.</help>
         <label>Total de la meilleure année de don</label>
         <name>Best_Gift_Year_Total__c</name>
     </fields>
     <fields>
-        <help><!-- The year of the largest total amount of won Opportunities related to this Contact by primary Contact Role.  See also Best Gift Year Total. --></help>
+        <help>L’année du montant total le plus élevé des opportunités gagnées associées à ce contact par rôle de contact principal. Voir aussi Total de la meilleure année de don.</help>
         <label>Meilleure année de don</label>
         <name>Best_Gift_Year__c</name>
     </fields>
     <fields>
-        <help><!-- The oldest Close Date of a won Opportunity with amount greater than zero related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>La date de fermeture la plus ancienne d&apos;une opportunité gagnée avec un montant supérieur à zéro associée à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Date du premier don</label>
         <name>FirstCloseDate__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: Clone of the Household Mailing address (also a Formula) --></help>
+        <help>Formule : clone de l’adresse postale du foyer (également une formule)</help>
         <label>Adresse du Foyer</label>
         <name>Formula_HouseholdMailingAddress__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: Simple formula of Household Phone field. --></help>
+        <help>Formule : simple formule du champ téléphone du foyer.</help>
         <label>Téléphone du Foyer</label>
         <name>Formula_HouseholdPhone__c</name>
     </fields>
     <fields>
-        <help><!-- Determines the order in which Contact names are used to generate Household name. --></help>
+        <help>Détermine l’ordre dans lequel les noms de contact sont utilisés pour générer le nom du foyer.</help>
         <label>Ordre de dénomination du foyer</label>
         <name>Household_Naming_Order__c</name>
     </fields>
@@ -41,7 +41,7 @@
         <relationshipLabel>Membres du Foyer</relationshipLabel>
     </fields>
     <fields>
-        <help><!-- The largest amount of a won Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>Le montant le plus élevé d’une opportunité gagnée associée à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Don le plus élevé</label>
         <name>LargestAmount__c</name>
     </fields>
@@ -50,176 +50,176 @@
         <name>LastCloseDateHH__c</name>
     </fields>
     <fields>
-        <help><!-- The close date of the most recent won Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>La date de fermeture de l&apos;opportunité gagnée la plus récente associée à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Date du dernier don</label>
         <name>LastCloseDate__c</name>
     </fields>
     <fields>
-        <help><!-- The amount of the most recent (by Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>Le montant de l’opportunité (type d&apos;enregistrement) d’adhésion gagnée la plus récente (par date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Dernier montant d’adhésion</label>
         <name>LastMembershipAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The most recent Close Date of a won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>La date de fermeture la plus récente d&apos;une opportunité (type d&apos;enregistrement) d’adhésion gagnée associée à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Dernière date d’adhésion</label>
         <name>LastMembershipDate__c</name>
     </fields>
     <fields>
-        <help><!-- The level of the most recent (by Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>Le niveau de l&apos;opportunité (type d&apos;enregistrement) d’adhésion gagnée la plus récente (par date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Dernier niveau d’adhésion</label>
         <name>LastMembershipLevel__c</name>
     </fields>
     <fields>
-        <help><!-- The origin (new, renewal, reacquire...) of the most recent (Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>L’origine (nouveau, renouvellement, réacquisition), de l’opportunité (type d&apos;enregistrement) d’adhésion gagnée la plus récente (date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Dernière origine d’adhésion</label>
         <name>LastMembershipOrigin__c</name>
     </fields>
     <fields>
-        <help><!-- The amount of the most recent won Opportunity by Close Date related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>Le montant de l&apos;opportunité gagnée la plus récente par date de fermeture associée à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Montant du dernier don</label>
         <name>LastOppAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The Membership End Date of the most recent (Close Date) Membership Opportunity (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>La date de fin d’adhésion de l&apos;opportunité (type d&apos;enregistrement) d’adhésion la plus récente (par date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Date de fin d’adhésion</label>
         <name>MembershipEndDate__c</name>
     </fields>
     <fields>
-        <help><!-- The Join Date of the oldest (Close Date) Membership Opportunity (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>La date d’adhésion de l&apos;opportunité (type d&apos;enregistrement) d’adhésion la plus ancienne (par date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Date d’adhésion</label>
         <name>MembershipJoinDate__c</name>
     </fields>
     <fields>
-        <help>Détermine de quels noms de foyer ce contact ne fait PAS partie.</help>
+        <help>Sélectionnez cette option pour exclure le nom de ce contact de plusieurs noms de foyer générés.</help>
         <label>Exclusions de dénomination</label>
         <name>Naming_Exclusions__c</name>
         <picklistValues>
             <masterLabel>Household__c.Formal_Greeting__c</masterLabel>
-            <translation><!-- Household__c.Formal_Greeting__c --></translation>
+            <translation>Household__c.Formal_Greeting__c</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Household__c.Informal_Greeting__c</masterLabel>
-            <translation><!-- Household__c.Informal_Greeting__c --></translation>
+            <translation>Household__c.Informal_Greeting__c</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Household__c.Name</masterLabel>
-            <translation><!-- Household__c.Name --></translation>
+            <translation>Household__c.Name</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Nombre total de dons</label>
         <name>NumberOfClosedOpps__c</name>
     </fields>
     <fields>
-        <help><!-- The number of won Membership Opportunities (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>Le nombre d&apos;opportunités (type d&apos;enregistrement) d’adhésion gagnées associées à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Nombre d’adhésions</label>
         <name>NumberOfMembershipOpps__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed two years ago. --></help>
-        <label>Total des dons totaux il y a deux ans</label>
+        <help>Le montant total des opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal, fermées il y a deux ans.</help>
+        <label>Total des dons il y a deux ans</label>
         <name>OppAmount2YearsAgo__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed in the last number of days defined in Household Settings. --></help>
+        <help>Le montant total d’opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal, fermées au cours des derniers jours tels que définis dans les Paramètres de foyer.</help>
         <label>Total des dons sur les N derniers jours</label>
         <name>OppAmountLastNDays__c</name>
     </fields>
     <fields>
-        <help><!-- Formula:  Total Gifts Last Year on related Household. --></help>
-        <label>Dons totaux du foyer de l’année dernière</label>
+        <help>Formule : total des dons l’année dernière d’un foyer associé.</help>
+        <label>Total des dons du foyer l’année dernière</label>
         <name>OppAmountLastYearHH__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed last year. --></help>
-        <label>Total des dons sur l’année dernière</label>
+        <help>Le montant total des opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal, fermées l’année dernière.</help>
+        <label>Total des dons l’année dernière</label>
         <name>OppAmountLastYear__c</name>
     </fields>
     <fields>
-        <help><!-- Formula:  Total Gifts This Year on related Household. --></help>
-        <label>Dons totaux du foyer cette année</label>
+        <help>Formule : total des dons cette année d’un foyer associé.</help>
+        <label>Total des dons du foyer cette année</label>
         <name>OppAmountThisYearHH__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed this year. --></help>
+        <help>Le montant total des opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal, fermées cette année.</help>
         <label>Total des dons cette année</label>
         <name>OppAmountThisYear__c</name>
     </fields>
     <fields>
-        <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed two years ago. --></help>
+        <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal, fermées il y a deux ans.</help>
         <label>Nombre de dons il y a deux ans</label>
         <name>OppsClosed2YearsAgo__c</name>
     </fields>
     <fields>
-        <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed in the last number of days defined in Household Settings. --></help>
-        <label>Nombre de dons des N derniers jours</label>
+        <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal, fermées au cours des derniers jours tels que définis dans les Paramètres de foyer.</help>
+        <label>Nombre de dons sur les N derniers jours</label>
         <name>OppsClosedLastNDays__c</name>
     </fields>
     <fields>
-        <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed last year. --></help>
-        <label>Nombre de dons de l’année dernière</label>
+        <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal, fermées l’année dernière.</help>
+        <label>Nombre de dons l’année dernière</label>
         <name>OppsClosedLastYear__c</name>
     </fields>
     <fields>
-        <help><!-- The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed this year. --></help>
+        <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal, fermées cette année.</help>
         <label>Nombre de dons cette année</label>
         <name>OppsClosedThisYear__c</name>
     </fields>
     <fields>
-        <help><!-- The smallest amount of a won Opportunity related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>Le plus petit montant d’une opportunité gagnée associée à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Don le moins élevé</label>
         <name>SmallestAmount__c</name>
     </fields>
     <fields>
-        <help>Montant total de crédit de groupe de l’année dernière.</help>
-        <label>Crédit de groupe de l’année dernière</label>
+        <help>Montant total de crédit indirect au cours de l’année dernière déterminé par un rôle de contact d’opportunité et filtré par les rôles dans les Paramètres de foyer.</help>
+        <label>Crédit indirect l’année dernière</label>
         <name>Soft_Credit_Last_Year__c</name>
     </fields>
     <fields>
-        <help>Montant total de crédit de groupe cette année</help>
-        <label>Crédit de groupe cette année</label>
+        <help>Montant total de crédit indirect cette année</help>
+        <label>Crédit indirect cette année</label>
         <name>Soft_Credit_This_Year__c</name>
     </fields>
     <fields>
-        <help>Montant total en crédits de groupe sur la durée de vie de ce contact. Défini dans l’onglet de configuration de foyer.</help>
-        <label>Total de crédit de groupe</label>
+        <help>Montant total de crédits indirects sur la durée de vie de ce contact. Défini dans l’onglet de configuration de foyer.</help>
+        <label>Total de crédit indirect</label>
         <name>Soft_Credit_Total__c</name>
     </fields>
     <fields>
-        <help>Montant total de crédit de groupe il y a deux ans.</help>
-        <label>Crédit de groupe il y a deux ans</label>
+        <help>Montant total de crédit indirect il y a deux ans déterminé par un rôle de contact d’opportunité et filtré par les rôles dans les Paramètres de foyer.</help>
+        <label>Crédit indirect il y a deux ans</label>
         <name>Soft_Credit_Two_Years_Ago__c</name>
     </fields>
     <fields>
-        <label><!-- _SYSTEM: HOUSEHOLD PROCESSOR-DEPRECATED --></label>
+        <label>_SYSTEM: HOUSEHOLD PROCESSOR-DEPRECATED</label>
         <name>SystemHouseholdProcessor__c</name>
         <picklistValues>
             <masterLabel>All Individual Contacts</masterLabel>
-            <translation><!-- All Individual Contacts --></translation>
+            <translation>Tous les contacts individuels</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>All New or Edited Contacts</masterLabel>
-            <translation><!-- All New or Edited Contacts --></translation>
+            <translation>Tous les contacts nouveaux ou modifiés</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>No Contacts</masterLabel>
-            <translation><!-- No Contacts --></translation>
+            <translation>Aucun contact</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- The total amount of won Membership Opportunities (Record Type) related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>Le montant total d&apos;opportunités (type d&apos;enregistrement) d’adhésion gagnées associées à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Montant total d’adhésion</label>
         <name>TotalMembershipOppAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The sum of won Opportunity Amounts related to this Contact by primary Opportunity Contact Role. --></help>
+        <help>La somme des montants d&apos;opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal.</help>
         <label>Total des dons</label>
         <name>TotalOppAmount__c</name>
     </fields>
     <fields>
-        <help><!-- Formula:  Total Gifts on related Household. --></help>
-        <label>Dons totaux du foyer</label>
+        <help>Formule : total des dons d’un foyer associé.</help>
+        <label>Total des dons du foyer</label>
         <name>Total_Household_Gifts__c</name>
     </fields>
     <webLinks>

@@ -10,7 +10,7 @@
     </caseValues>
     <fields>
         <help>L’action de cumul (MIN, MAX, SUM, COUNT) à effectuer sur le champ source</help>
-        <label>Action de champ</label>
+        <label>Champ Action</label>
         <name>Field_Action__c</name>
     </fields>
     <fields>
@@ -20,12 +20,12 @@
     </fields>
     <fields>
         <help>Le champ source et l’action de l’objet pour ce cumul d’utilisateur</help>
-        <label>Champ source</label>
+        <label>Champ Source</label>
         <name>Source_Field__c</name>
     </fields>
     <fields>
-        <help>Le champ cible pour le placement de la valeur cumulée pour ce cumul défini par utilisateur</help>
-        <label>Champ cible</label>
+        <help>Le champ cible pour le placement de la valeur cumulée pour ce cumul défini par l’utilisateur</help>
+        <label>Champ Cible</label>
         <name>Target_Field__c</name>
     </fields>
     <gender><!-- Masculine --></gender>

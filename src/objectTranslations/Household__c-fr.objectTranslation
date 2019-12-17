@@ -2,58 +2,58 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Household --></value>
+        <value>Foyer</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Household --></value>
+        <value>Foyers</value>
     </caseValues>
     <fields>
         <label>Destinataire</label>
         <name>Addressee__c</name>
     </fields>
     <fields>
-        <help><!-- Used to set the Household name and other fields using anonymous information. --></help>
+        <help>Utilisé pour définir le nom du foyer et d’autres champs à l’aide d’informations anonymes.</help>
         <label>Toujours anonyme</label>
         <name>Always_Anonymous__c</name>
     </fields>
     <fields>
-        <help><!-- Average amount of won Opportunities related to this Household by a related Contact with primary Opportunity Contact Role. --></help>
+        <help>Le montant moyen des opportunités gagnées associées à ce foyer par un contact associé avec un rôle de contact d’opportunité principal.</help>
         <label>Don moyen</label>
         <name>AverageAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The sum of won Opportunity amounts in the Best Gift Year for this Household via Contacts with primary Opportunity Contact Role.  See also Best Gift Year. --></help>
+        <help>La somme des montants des opportunités gagnées dans la meilleure année de don pour ce foyer via les contacts avec un rôle de contact d’opportunité principal. Voir aussi Meilleure année de don.</help>
         <label>Total de la meilleure année de don</label>
         <name>Best_Gift_Year_Total__c</name>
     </fields>
     <fields>
-        <help><!-- The year in which the largest total amount of won Opportunities related to this Household via Contacts with primary Opportunity Contact Role occurred.  See also Best Gift Year Total. --></help>
+        <help>L’année d’occurrence du montant total le plus élevé des opportunités gagnées associées à ce foyer via les contacts avec un rôle de contact d’opportunité principal. Voir aussi Total de la meilleure année de don.</help>
         <label>Meilleure année de don</label>
         <name>Best_Gift_Year__c</name>
     </fields>
     <fields>
-        <help><!-- The earliest Close Date of a won Opportunity related to this Household via Contacts with primary Contact Role. --></help>
+        <help>La date de fermeture la plus ancienne d&apos;une opportunité gagnée associée à ce foyer via les contacts avec un rôle de contact principal.</help>
         <label>Date du premier don</label>
         <name>FirstCloseDate__c</name>
     </fields>
     <fields>
-        <help><!-- Uses fields of non-excluded, ordered related Contacts. Generated automatically. --></help>
+        <help>Utilise les champs de contacts associés non exclus, ordonnés. La salutation est générée automatiquement.</help>
         <label>Salutation formelle</label>
         <name>Formal_Greeting__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: Concatenation of other Mailing fields for this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed. --></help>
-        <label>Adresse</label>
+        <help>Formule : concaténation d’autres champs d’adresse postale pour ce foyer. Peut être mis à jour dans la page Modification du foyer mais ne met pas à jour le contact sauf si le bouton « Copier une adresse de domicile dans les contacts » est activé.</help>
+        <label>Adresse postale</label>
         <name>Formula_MailingAddress__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be edited in Household, but does not update Contact. --></help>
+        <help>Défini par le contact d’origine qui a créé ce foyer. Peut être modifié dans Foyer, mais ne met pas à jour le contact.</help>
         <label>E-mail du Foyer</label>
         <name>HouseholdEmail__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be edited in Household, but does not update Contact. --></help>
+        <help>Défini par le contact d’origine qui a créé ce foyer. Peut être modifié dans Foyer, mais ne met pas à jour le contact.</help>
         <label>Téléphone du Foyer</label>
         <name>HouseholdPhone__c</name>
     </fields>
@@ -62,177 +62,165 @@
         <name>Household_ID__c</name>
     </fields>
     <fields>
-        <help><!-- Uses fields of non-excluded, ordered related Contacts.  Generated automatically. --></help>
+        <help>Utilise les champs de contacts associés non exclus, ordonnés. La salutation est générée automatiquement.</help>
         <label>Salutation informelle</label>
         <name>Informal_Greeting__c</name>
     </fields>
     <fields>
-        <help><!-- The largest won Opportunity amount for this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Le montant le plus élevé des opportunités gagnées pour ce foyer via des contacts associés avec un rôle de contact d’opportunité principal.</help>
         <label>Don le plus élevé</label>
         <name>LargestAmount__c</name>
     </fields>
     <fields>
-        <help><!-- Most recent Close Date of a won Opportunity for this Household via related Contacts with primary Contact Role. --></help>
+        <help>La date de fermeture la plus récente d&apos;une opportunité gagnée pour ce foyer via des contacts associés avec un rôle de contact principal.</help>
         <label>Date du dernier don</label>
         <name>LastCloseDate__c</name>
     </fields>
     <fields>
-        <help><!-- The most recent won Membership Opportunity (Record Type) amount for this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Le montant le plus récent d&apos;opportunités (type d&apos;enregistrement) d’adhésion gagnées pour ce foyer via des contacts associés avec un rôle de contact d’opportunité principal.</help>
         <label>Dernier montant d’adhésion</label>
         <name>LastMembershipAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The most recent Close Date of a won Membership Opportunity for this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>La date de fermeture la plus récente d&apos;une opportunité d’adhésion gagnée associée pour ce foyer via des contacts associés avec un rôle de contact d’opportunité principal.</help>
         <label>Dernière date d’adhésion</label>
         <name>LastMembershipDate__c</name>
     </fields>
     <fields>
-        <help><!-- The Membership Level of the most recent won Membership Opportunity for this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Le niveau d’adhésion de l’opportunité d’adhésion gagnée la plus récente pour ce foyer via des contacts associés avec un rôle de contact Adhésion principal.</help>
         <label>Dernier niveau d’adhésion</label>
         <name>LastMembershipLevel__c</name>
     </fields>
     <fields>
-        <help><!-- The Origin (new, renew...) of the most recent won Membership Opportunity for this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>L’origine (nouvelle, renouvellement...) de l’opportunité d’adhésion gagnée la plus récente pour ce foyer via des contacts associés avec un rôle de contact d’opportunité principal.</help>
         <label>Dernière origine d’adhésion</label>
         <name>LastMembershipOrigin__c</name>
     </fields>
     <fields>
-        <help><!-- The most recent won Opportunity amount for this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Le montant le plus récent des opportunités gagnées pour ce foyer via des contacts associés avec un rôle de contact d’opportunité principal.</help>
         <label>Montant du dernier don</label>
         <name>LastOppAmount__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed. --></help>
-        <label>Ville</label>
+        <help>Définie par le contact d’origine qui a créé ce foyer. Peut être mise à jour dans la page Modification du foyer mais ne met pas à jour le contact sauf si le bouton « Copier une adresse de domicile dans les contacts » est activé.</help>
+        <label>Ville (adresse postale)</label>
         <name>MailingCity__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed. --></help>
-        <label>Pays</label>
+        <help>Défini par le contact d’origine qui a créé ce foyer. Peut être mis à jour dans la page Modification du foyer mais ne met pas à jour le contact sauf si le bouton « Copier une adresse de domicile dans les contacts » est activé.</help>
+        <label>Pays (adresse postale)</label>
         <name>MailingCountry__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed. --></help>
+        <help>Défini par le contact d’origine qui a créé ce foyer. Peut être mis à jour dans la page Modification du foyer mais ne met pas à jour le contact sauf si le bouton « Copier une adresse de domicile dans les contacts » est activé.</help>
         <label>Code postal</label>
         <name>MailingPostalCode__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed. --></help>
-        <label>Région</label>
+        <help>Définie par le contact d’origine qui a créé ce foyer. Peut être mise à jour dans la page Modification du foyer mais ne met pas à jour le contact sauf si le bouton « Copier une adresse de domicile dans les contacts » est activé.</help>
+        <label>Région/Province (adresse postale)</label>
         <name>MailingState__c</name>
     </fields>
     <fields>
-        <help><!-- Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed. --></help>
-        <label>Rue</label>
+        <help>Définie par le contact d’origine qui a créé ce foyer. Peut être mise à jour dans la page Modification du foyer mais ne met pas à jour le contact sauf si le bouton « Copier une adresse de domicile dans les contacts » est activé.</help>
+        <label>Rue (adresse postale)</label>
         <name>MailingStreet__c</name>
     </fields>
     <fields>
-        <help><!-- The Membership End Date of the most recent won Membership Opportunity for his Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>La date de fin d’adhésion de l’opportunité d’adhésion gagnée la plus récente pour ce foyer via des contacts associés avec un rôle de contact Adhésion principal.</help>
         <label>Date de fin d’adhésion</label>
         <name>MembershipEndDate__c</name>
     </fields>
     <fields>
-        <help><!-- The earliest Membership Join Date of the oldest Membership Opportunity (Close Date, Record Type) for his Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>La plus ancienne date d’adhésion de la plus ancienne opportunité d’adhésion (date de fermeture, type d’enregistrement) pour ce foyer via des contacts associés avec un rôle de contact d’opportunité principal.</help>
         <label>Date d’adhésion</label>
         <name>MembershipJoinDate__c</name>
     </fields>
     <fields>
-        <help><!-- Formula: The number of years for which this Household has had a Member. --></help>
+        <help>Formule : Le nombre d’années pour lesquelles ce foyer a eu un membre.</help>
         <label>Durée d’adhésion</label>
         <name>Membership_Span__c</name>
     </fields>
     <fields>
-        <help>Actuel, expiré ou en période de grâce</help>
+        <help>Formule : Actuel, expiré ou en période de grâce. Période de grâce par défaut définie dans les paramètres de foyer.</help>
         <label>Statut d’adhésion</label>
         <name>Membership_Status__c</name>
     </fields>
     <fields>
-        <help><!-- The total number of gifts related to this Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>Le nombre total de dons associés à ce foyer par contact et rôle de contact d’opportunité principal.</help>
         <label>Nombre total de dons</label>
         <name>NumberOfClosedOpps__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Membership Opportunities (Record Type) related to this Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>Le montant total d&apos;opportunités (type d&apos;enregistrement) d’adhésion gagnées associées à ce foyer par contact et rôle de contact d’opportunité principal.</help>
         <label>Nombre d’adhésions</label>
         <name>NumberOfMembershipOpps__c</name>
     </fields>
     <fields>
-        <help><!-- Total Gifts Two Years Ago on Household by Contact and primary Opportunity Contact Role. --></help>
-        <label>Total des dons totaux il y a deux ans</label>
+        <help>Total des dons il y a deux ans par contact et rôle de contact d’opportunité principal.</help>
+        <label>Total des dons il y a deux ans</label>
         <name>OppAmount2YearsAgo__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Opportunities related to this Household, closed in the last number of days defined in Household Settings, related by Contact and primary Opportunity Contact Role. --></help>
+        <help>Le montant total d’opportunités gagnées associées à ce foyer, fermées au cours des derniers jours tels que définis dans les Paramètres de foyer, associées par contact et rôle de contact d’opportunité principal.</help>
         <label>Total des dons sur les N derniers jours</label>
         <name>OppAmountLastNDays__c</name>
     </fields>
     <fields>
-        <help><!-- Total Gifts Last Year on Household by Contact and primary Opportunity Contact Role. --></help>
-        <label>Total des dons sur l’année dernière</label>
+        <help>Total des dons l’année dernière d’un foyer par contact et rôle de contact d’opportunité principal.</help>
+        <label>Total des dons l’année dernière</label>
         <name>OppAmountLastYear__c</name>
     </fields>
     <fields>
-        <help><!-- Total Gifts This Year on Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>Total des dons d&apos;un foyer cette année par contact et rôle de contact d’opportunité principal.</help>
         <label>Total des dons cette année</label>
         <name>OppAmountThisYear__c</name>
     </fields>
     <fields>
-        <help><!-- The number of won Opportunities with Close Date in the last 2 years related to this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Le nombre d’opportunités gagnées avec une date de fermeture au cours des 2 dernières années associées à ce foyer via les contacts associés avec un rôle de contact d’opportunité principal.</help>
         <label>Nombre de dons il y a deux ans</label>
         <name>OppsClosed2YearsAgo__c</name>
     </fields>
     <fields>
-        <help><!-- The number of won Opportunities with Close Date in the last N days (Household Settings) related to this Household via related Contacts with primary Opportunity Contact Role. --></help>
-        <label>Nombre de dons des N derniers jours</label>
+        <help>Le nombre d’opportunités gagnées avec une date de fermeture au cours des N derniers jours (Paramètres de foyer) associées à ce foyer via les contacts associés avec un rôle de contact d’opportunité principal.</help>
+        <label>Nombre de dons sur les N derniers jours</label>
         <name>OppsClosedLastNDays__c</name>
     </fields>
     <fields>
-        <help><!-- The number of won Opportunities with Close Date in the last year related to this Household via related Contacts with primary Contact Role. --></help>
-        <label>Nombre de dons de l’année dernière</label>
+        <help>Le nombre d’opportunités gagnées avec une date de fermeture au cours de l’année dernière associées à ce foyer via les contacts associés avec un rôle de contact principal.</help>
+        <label>Nombre de dons l’année dernière</label>
         <name>OppsClosedLastYear__c</name>
     </fields>
     <fields>
-        <help><!-- The number of won Opportunities with Close Date this year related to this Household via related Contacts with primary Opportunity Contact Role. --></help>
+        <help>Le nombre d’opportunités gagnées avec une date de fermeture cette année associées à ce foyer via les contacts associés avec un rôle de contact d’opportunité principal.</help>
         <label>Nombre de dons cette année</label>
         <name>OppsClosedThisYear__c</name>
     </fields>
     <fields>
-        <help><!-- Name, Formal Greeting, or Informal Greeting --></help>
-        <label><!-- _SYSTEM: CUSTOM NAMING --></label>
+        <help>Nom, Salutation formelle ou Salutation informelle</help>
+        <label>_SYSTEM: CUSTOM NAMING</label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation><!-- Formal_Greeting__c --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation><!-- Informal_Greeting__c --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation><!-- Name --></translation>
-        </picklistValues>
-    </fields>
+        </fields>
     <fields>
-        <help><!-- The smallest amount of a won Opportunity related to this Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>Le plus petit montant d’une opportunité gagnée associée à ce foyer par contact et rôle de contact d’opportunité principal.</help>
         <label>Don le moins élevé</label>
         <name>SmallestAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Membership Opportunities (Record Type) related to this Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>Le montant total d&apos;opportunités (type d&apos;enregistrement) d’adhésion gagnées associées à ce foyer par contact et rôle de contact d’opportunité principal.</help>
         <label>Montant total d’adhésion</label>
         <name>TotalMembershipOppAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The sum of won Opportunity Amounts related to this Household by Contact and primary Opportunity Contact Role. --></help>
+        <help>La somme des montants d&apos;opportunités gagnées associées à ce foyer par contact et rôle de contact d’opportunité principal.</help>
         <label>Total des dons</label>
         <name>TotalOppAmount__c</name>
     </fields>
-    <gender><!-- Masculine --></gender>
+    <gender>Masculine</gender>
     <layouts>
         <layout>Household Layout</layout>
         <sections>
-            <label><!-- Custom Links --></label>
+            <label>Liens personnalisés</label>
             <section>Custom Links</section>
         </sections>
         <sections>
@@ -248,8 +236,8 @@
             <section>Household Information</section>
         </sections>
     </layouts>
-    <nameFieldLabel><!-- Household Name --></nameFieldLabel>
-    <startsWith><!-- Consonant --></startsWith>
+    <nameFieldLabel>Nom du foyer</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
     <webLinks>
         <label>Copier une adresse de domicile dans les contacts</label>
         <name>Copy_Household_Address_to_Contacts</name>

@@ -133,19 +133,7 @@
         <help>עבור חשבונות משק בית, מציין אילו שדות הקשורים לשם לא צריכים להתמלא באופן אוטומטי על-ידי הקוד של משק הבית.</help>
         <label><!-- _SYSTEM: CUSTOM NAMING --></label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation><!-- Formal_Greeting__c --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation><!-- Informal_Greeting__c --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation><!-- Name --></translation>
-        </picklistValues>
-    </fields>
+        </fields>
     <fields>
         <help><!-- The smallest non-zero amount of a won Opportunity related to this Account. --></help>
         <label>התרומה הקטנה ביותר</label>
@@ -161,4 +149,4 @@
         <label>סה&quot;כ תרומות</label>
         <name>TotalOppAmount__c</name>
     </fields>
-</CustomObjectTranslation>
+    </CustomObjectTranslation>

@@ -24,7 +24,7 @@
         <name>Error_Object_Type__c</name>
     </fields>
     <fields>
-        <help>Lien vers l’enregistrement sur lequel l’erreur s’est produite.</help>
+        <help>Lien vers l’enregistrement sur lequel l’erreur s’est produite</help>
         <label>Lien d’enregistrement d’erreur</label>
         <name>Error_Record_Link__c</name>
     </fields>

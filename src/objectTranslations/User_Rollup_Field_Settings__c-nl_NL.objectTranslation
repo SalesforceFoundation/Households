@@ -9,23 +9,23 @@
         <value><!-- User Rollup Field Settings --></value>
     </caseValues>
     <fields>
-        <help>De rollup actie (MIN, MAX, SOM, Recordtelling) die uitgevoerd moet worden op het bron veld.</help>
-        <label>Veld Actie</label>
+        <help>De totaliseringsactie (MIN, MAX, SUM, COUNT) die moet worden uitgevoerd op het bronveld</help>
+        <label>Veldactie</label>
         <name>Field_Action__c</name>
     </fields>
     <fields>
-        <help>Het object waar deze gebruiker rollup aan toegewezen is.</help>
-        <label>Object Naam</label>
+        <help>Het object waaraan deze totalisering van gebruiker is toegewezen</help>
+        <label>Objectnaam</label>
         <name>Object_Name__c</name>
     </fields>
     <fields>
-        <help>Het bron veld en actie van het object voor deze gebruiker rollup</help>
-        <label>Bron Veld</label>
+        <help>Het bronveld en de actie vanuit het object voor deze totalisering van gebruiker</help>
+        <label>Bronveld</label>
         <name>Source_Field__c</name>
     </fields>
     <fields>
-        <help>Het doel veld voor het plaatsen van de rolled-up waarde voor de gebruiker die de rollup definieert.</help>
-        <label>Doel Veld</label>
+        <help>Het doelveld voor het plaatsen van de totaliseringswaarde voor deze door de gebruiker gedefinieerde totalisering</help>
+        <label>Doelveld</label>
         <name>Target_Field__c</name>
     </fields>
     <gender><!-- Neuter --></gender>
