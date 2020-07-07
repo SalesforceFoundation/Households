@@ -1,187 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value><!-- Households Settings --></value>
-    </caseValues>
-    <caseValues>
-        <plural>true</plural>
-        <value><!-- Households Settings --></value>
-    </caseValues>
-    <fields>
-        <help>Si se selecciona, el sistema proporcionará automáticamente nombres para el Nombre del hogar, Saludo informal y Saludo formal</help>
-        <label>Nomenclatura de hogar automática</label>
-        <name>Advanced_Household_Naming__c</name>
-    </fields>
-    <fields>
-        <help>Salesforce SIEMPRE totalizará los datos de donaciones con el Contacto principal de la oportunidad y con la cuenta o registro de hogar, incluso si la oportunidad no es de un individuo. Si no se selecciona, solo la organización recibirá el crédito.</help>
-        <label>Totalizar siempre en función contacto pr</label>
-        <name>Always_Rollup_to_Primary_Contact__c</name>
-    </fields>
-    <fields>
-        <help>Este es un parámetro no expuesto para alternar el código de nomenclatura de hogares para utilizar una una versión asíncrona de la versión estándar.</help>
-        <label>Nomenclatura asíncrona de hogares</label>
-        <name>Async_Household_Naming__c</name>
-    </fields>
-    <fields>
-        <help>El número de registros que se procesa a la vez cuando al calcular datos estadísticos de donantes. El tamaño predeterminado es de 200. Reduzca a un número menor si Totalizaciones de oportunidades está fallando debido a limites en el sistema.</help>
-        <label>Tamaño del lote de totalizaciones</label>
-        <name>Batch_Size__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
-        <label>DESUSADO-Disable_HHAfter_trigger</label>
-        <name>DISABLE_HouseholdAfter_trigger__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
-        <label>DESUSADO-Disable_HHBefore_trigger</label>
-        <name>DISABLE_HouseholdBefore_trigger__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
-        <label>DESUSADO-Disable_Household_Opp_trigger</label>
-        <name>DISABLE_Household_Opportunity_trigger__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
-        <label>DESUSADO-Disable_Households_trigger</label>
-        <name>DISABLE_Households_trigger__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
-        <label>DESUSADO-Disable_OppRollup_trigger</label>
-        <name>DISABLE_OpportunityRollup_trigger__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
-        <label>DESUSADO-Enable_Opp_Rollup_Triggers</label>
-        <name>Enable_Opp_Rollup_Triggers__c</name>
-    </fields>
-    <fields>
-        <help>Totaliza los totales de oportunidades Cerradas/Ganadas con registros de Contacto basados en funciones de contacto de oportunidades. Las totalizaciones de créditos blandos solo se producen en lotes nocturnos, pero puede ejecutarlos manualmente desde la configuración de Lote de donaciones de totalización.</help>
-        <label>Activar totalizaciones créditos blandos</label>
-        <name>Enable_Soft_Credit_Rollups__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
-        <label>DESUSADO-Activar comprob. actualización</label>
-        <name>Enable_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>Nombre del tipo de registro de oportunidad excluidos de las estadísticas cuando se calculan los totales de oportunidades en cuenta.</help>
-        <label>Tipos reg op excluidos para totalización</label>
-        <name>Excluded_Account_Opp_Rectypes__c</name>
-    </fields>
-    <fields>
-        <help>Las oportunidades que tienen este valor en la lista de selección Tipo no se incluirán en las totalizaciones de la cuenta.</help>
-        <label>Tipos de op excluidos para totalización</label>
-        <name>Excluded_Account_Opp_Types__c</name>
-    </fields>
-    <fields>
-        <help>Las oportunidades con los tipos de registros seleccionados no se incluirán en las totalizaciones del contacto. Pulse Control o Comando haciendo clic para seleccionar más de un tipo de registro.</help>
-        <label>Tipos reg excluidos totalizac contactos</label>
-        <name>Excluded_Contact_Opp_Rectypes__c</name>
-    </fields>
-    <fields>
-        <help>Las oportunidades que tienen este valor en la lista de selección Tipo no se incluirán en las totalizaciones del contacto.</help>
-        <label>Tipos op excluidos totalizac contactos</label>
-        <name>Excluded_Contact_Opp_Types__c</name>
-    </fields>
-    <fields>
-        <help>NPSP comprueba automáticamente la presencia de años fiscales personalizados y los desactiva para evitar errores. Esta configuración sustituye la comprobación de seguridad para usuarios que hayan accidentalmente activado los años fiscales personalizados.</help>
-        <label>Forzar año fiscal</label>
-        <name>Force_Fiscal_Year__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
-        <label>DESUSADO-Tiene actualización de paquete</label>
-        <name>Has_Package_Update__c</name>
-    </fields>
-    <fields>
-        <help>Crea automáticamente funciones de contacto para miembros de hogares del contacto principal de la oportunidad.</help>
-        <label>Funciones del contacto en hogar activada</label>
-        <name>Household_Contact_Roles_On__c</name>
-    </fields>
-    <fields>
-        <help>Tipos de registro de los contactos excluidos de la creación de hogares. Esta configuración es ignorada si se esta utilizando el modelo de cuentas Hogar.</help>
-        <label>Tipos registros excluidos creación hogar</label>
-        <name>Household_Creation_Excluded_Recordtypes__c</name>
-    </fields>
-    <fields>
-        <help>El Id. del informe de la lista de envío de hogar empleado para las listas de envío de campaña sin duplicar del hogar. El informe debe ser de Campañas con contactos, donde miembro de campaña no incluye &quot;Duplicado&quot;</help>
-        <label>Informe de lista de envío de hogar</label>
-        <name>Household_Mailing_List_ID__c</name>
-    </fields>
-    <fields>
-        <help>La función del contacto que desea utilizar para Miembros de hogar.</help>
-        <label>Función del contacto de miembro de hogar</label>
-        <name>Household_Member_Contact_Role__c</name>
-    </fields>
-    <fields>
-        <help>Los tipos de registro del contacto que desea excluir de la creación de funciones del contacto de miembros de hogar. Salesforce luego excluirá esos contactos de la recepción de la función de contacto de miembro de hogar cuando se cree la oportunidad.</help>
-        <label>Tipos de registro excluido OCR de hogar</label>
-        <name>Household_OCR_Excluded_Recordtypes__c</name>
-    </fields>
-    <fields>
-        <help>Especifica qué contactos tendrán objetos Hogar creados automáticamente. Tenga en cuenta que esto solo se utiliza para contactos que tienen el modelo de cuenta Uno a uno o Individuo. Esto se ignorará para contactos con el modelo de cuenta Hogar.</help>
-        <label>Reglas de objeto Hogar</label>
-        <name>Household_Rules__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
-        <label>DESUSADO-Última comprob. actualización</label>
-        <name>Last_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
-        <label>DESUSADO-Versión de paquete máxima</label>
-        <name>Max_Package_Version__c</name>
-    </fields>
-    <fields>
-        <help>La duración del período de gracia (en días) después de que la afiliación vence (última fecha de finalización) antes que el estado se cambie de &quot;Período de gracia&quot; a &quot;Vencido&quot;. Tiene 30 días como valor predeterminado.</help>
-        <label>Período de gracia de la afiliación</label>
-        <name>Membership_Grace_Period__c</name>
-    </fields>
-    <fields>
-        <help>Nombre del tipo de registro de oportunidades, como Afiliación, que se quiere que sumen a totales diferentes de otros tipos de registro de oportunidad.</help>
-        <label>Nombres de tipos registros de afiliación</label>
-        <name>Membership_Record_Types__c</name>
-    </fields>
-    <fields>
-        <help>Id. del trabajo de totalización de oportunidad programado en estos momentos.</help>
-        <label>Id trabajo programado totalización op.</label>
-        <name>Opp_Rollup_Scheduled_Job_Id__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
-        <label>DESUSADO-URL de actualización de paquete</label>
-        <name>Package_Update_URL__c</name>
-    </fields>
-    <fields>
-        <help>Proporcione un valor para totalizaciones de &quot;N días&quot;, donde &quot;N&quot; es el número de días desde hoy hacia el pasado. Este valor toma de forma predeterminada totalizar los últimos 365 días.</help>
-        <label>Valor de Totalizar N días</label>
-        <name>Rollup_N_Day_Value__c</name>
-    </fields>
-    <fields>
-        <help>El número de trabajos programados de Apex activados a considerar cuando se programa un nuevo trabajo.</help>
-        <label>Límite de trabajos programados</label>
-        <name>Schedule_Job_Limit__c</name>
-    </fields>
-    <fields>
-        <help>Lista de funciones de contactos de oportunidades que desea incluir en totalizaciones de créditos blancos. Pulse Control o Comando y haga clic para seleccionar varias funciones.</help>
-        <label>Funciones de créditos blandos</label>
-        <name>Soft_Credit_Roles__c</name>
-    </fields>
-    <fields>
-        <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
-        <label>DESUSADO-Actualizar intervalo comprobac.</label>
-        <name>Update_Check_Interval__c</name>
-    </fields>
-    <fields>
-        <help>La totalización de las oportunidades respetarán el año fiscal en vez de los años de calendario. Para establecer el año fiscal, vaya a Configuración -&gt; Perfil de empresa -&gt; Año fiscal. NOTA: NO funciona con configuración personalizada de AF.</help>
-        <label>Usar año fiscal para totalizaciones</label>
-        <name>Use_Fiscal_Year_for_Rollups__c</name>
-    </fields>
-    <gender><!-- Feminine --></gender>
+  <fields>
+    <name>Advanced_Household_Naming__c</name>
+    <help>Si se selecciona, el sistema proporcionará automáticamente nombres para el Nombre del hogar, Saludo informal y Saludo formal</help>
+    <label>Nomenclatura de hogar automática</label>
+  </fields>
+  <fields>
+    <name>Always_Rollup_to_Primary_Contact__c</name>
+    <help>Salesforce SIEMPRE totalizará los datos de donaciones con el Contacto principal de la oportunidad y con la cuenta o registro de hogar, incluso si la oportunidad no es de un individuo. Si no se selecciona, solo la organización recibirá el crédito.</help>
+    <label>Totalizar siempre en función contacto pr</label>
+  </fields>
+  <fields>
+    <name>Async_Household_Naming__c</name>
+    <help>Este es un parámetro no expuesto para alternar el código de nomenclatura de hogares para utilizar una una versión asíncrona de la versión estándar.</help>
+    <label>Nomenclatura asíncrona de hogares</label>
+  </fields>
+  <fields>
+    <name>Batch_Size__c</name>
+    <help>El número de registros que se procesa a la vez cuando al calcular datos estadísticos de donantes. El tamaño predeterminado es de 200. Reduzca a un número menor si Totalizaciones de oportunidades está fallando debido a limites en el sistema.</help>
+    <label>Tamaño del lote de totalizaciones</label>
+  </fields>
+  <fields>
+    <name>DISABLE_HouseholdAfter_trigger__c</name>
+    <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+    <label>DESUSADO-Disable_HHAfter_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_HouseholdBefore_trigger__c</name>
+    <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+    <label>DESUSADO-Disable_HHBefore_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_Household_Opportunity_trigger__c</name>
+    <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+    <label>DESUSADO-Disable_Household_Opp_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_Households_trigger__c</name>
+    <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+    <label>DESUSADO-Disable_Households_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityRollup_trigger__c</name>
+    <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+    <label>DESUSADO-Disable_OppRollup_trigger</label>
+  </fields>
+  <fields>
+    <name>Enable_Opp_Rollup_Triggers__c</name>
+    <help>DESUSADO. El comportamiento del desencadenador está ahora controlado en la página Configuración de desencadenadores de Configuración de NPSP.</help>
+    <label>DESUSADO-Enable_Opp_Rollup_Triggers</label>
+  </fields>
+  <fields>
+    <name>Enable_Soft_Credit_Rollups__c</name>
+    <help>Totaliza los totales de oportunidades Cerradas/Ganadas con registros de Contacto basados en funciones de contacto de oportunidades. Las totalizaciones de créditos blandos solo se producen en lotes nocturnos, pero puede ejecutarlos manualmente desde la configuración de Lote de donaciones de totalización.</help>
+    <label>Activar totalizaciones créditos blandos</label>
+  </fields>
+  <fields>
+    <name>Enable_Update_Check__c</name>
+    <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+    <label>DESUSADO-Activar comprob. actualización</label>
+  </fields>
+  <fields>
+    <name>Excluded_Account_Opp_Rectypes__c</name>
+    <help>Nombre del tipo de registro de oportunidad excluidos de las estadísticas cuando se calculan los totales de oportunidades en cuenta.</help>
+    <label>Tipos reg op excluidos para totalización</label>
+  </fields>
+  <fields>
+    <name>Excluded_Account_Opp_Types__c</name>
+    <help>Las oportunidades que tienen este valor en la lista de selección Tipo no se incluirán en las totalizaciones de la cuenta.</help>
+    <label>Tipos de op excluidos para totalización</label>
+  </fields>
+  <fields>
+    <name>Excluded_Contact_Opp_Rectypes__c</name>
+    <help>Las oportunidades con los tipos de registros seleccionados no se incluirán en las totalizaciones del contacto. Pulse Control o Comando haciendo clic para seleccionar más de un tipo de registro.</help>
+    <label>Tipos reg excluidos totalizac contactos</label>
+  </fields>
+  <fields>
+    <name>Excluded_Contact_Opp_Types__c</name>
+    <help>Las oportunidades que tienen este valor en la lista de selección Tipo no se incluirán en las totalizaciones del contacto.</help>
+    <label>Tipos op excluidos totalizac contactos</label>
+  </fields>
+  <fields>
+    <name>Force_Fiscal_Year__c</name>
+    <help>NPSP comprueba automáticamente la presencia de años fiscales personalizados y los desactiva para evitar errores. Esta configuración sustituye la comprobación de seguridad para usuarios que hayan accidentalmente activado los años fiscales personalizados.</help>
+    <label>Forzar año fiscal</label>
+  </fields>
+  <fields>
+    <name>Has_Package_Update__c</name>
+    <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+    <label>DESUSADO-Tiene actualización de paquete</label>
+  </fields>
+  <fields>
+    <name>Household_Contact_Roles_On__c</name>
+    <help>Crea automáticamente funciones de contacto para miembros de hogares del contacto principal de la oportunidad.</help>
+    <label>Funciones del contacto en hogar activada</label>
+  </fields>
+  <fields>
+    <name>Household_Creation_Excluded_Recordtypes__c</name>
+    <help>Tipos de registro de los contactos excluidos de la creación de hogares. Esta configuración es ignorada si se esta utilizando el modelo de cuentas Hogar.</help>
+    <label>Tipos registros excluidos creación hogar</label>
+  </fields>
+  <fields>
+    <name>Household_Mailing_List_ID__c</name>
+    <help>El Id. del informe de la lista de envío de hogar empleado para las listas de envío de campaña sin duplicar del hogar. El informe debe ser de Campañas con contactos, donde miembro de campaña no incluye "Duplicado"</help>
+    <label>Informe de lista de envío de hogar</label>
+  </fields>
+  <fields>
+    <name>Household_Member_Contact_Role__c</name>
+    <help>La función del contacto que desea utilizar para Miembros de hogar.</help>
+    <label>Función del contacto de miembro de hogar</label>
+  </fields>
+  <fields>
+    <name>Household_OCR_Excluded_Recordtypes__c</name>
+    <help>Los tipos de registro del contacto que desea excluir de la creación de funciones del contacto de miembros de hogar. Salesforce luego excluirá esos contactos de la recepción de la función de contacto de miembro de hogar cuando se cree la oportunidad.</help>
+    <label>Tipos de registro excluido OCR de hogar</label>
+  </fields>
+  <fields>
+    <name>Household_Rules__c</name>
+    <help>Especifica qué contactos tendrán objetos Hogar creados automáticamente. Tenga en cuenta que esto solo se utiliza para contactos que tienen el modelo de cuenta Uno a uno o Individuo. Esto se ignorará para contactos con el modelo de cuenta Hogar.</help>
+    <label>Reglas de objeto Hogar</label>
+  </fields>
+  <fields>
+    <name>Last_Update_Check__c</name>
+    <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+    <label>DESUSADO-Última comprob. actualización</label>
+  </fields>
+  <fields>
+    <name>Max_Package_Version__c</name>
+    <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+    <label>DESUSADO-Versión de paquete máxima</label>
+  </fields>
+  <fields>
+    <name>Membership_Grace_Period__c</name>
+    <help>La duración del período de gracia (en días) después de que la afiliación vence (última fecha de finalización) antes que el estado se cambie de "Período de gracia" a "Vencido". Tiene 30 días como valor predeterminado.</help>
+    <label>Período de gracia de la afiliación</label>
+  </fields>
+  <fields>
+    <name>Membership_Record_Types__c</name>
+    <help>Nombre del tipo de registro de oportunidades, como Afiliación, que se quiere que sumen a totales diferentes de otros tipos de registro de oportunidad.</help>
+    <label>Nombres de tipos registros de afiliación</label>
+  </fields>
+  <fields>
+    <name>Opp_Rollup_Scheduled_Job_Id__c</name>
+    <help>Id. del trabajo de totalización de oportunidad programado en estos momentos.</help>
+    <label>Id trabajo programado totalización op.</label>
+  </fields>
+  <fields>
+    <name>Package_Update_URL__c</name>
+    <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+    <label>DESUSADO-URL de actualización de paquete</label>
+  </fields>
+  <fields>
+    <name>Rollup_N_Day_Value__c</name>
+    <help>Proporcione un valor para totalizaciones de "N días", donde "N" es el número de días desde hoy hacia el pasado. Este valor toma de forma predeterminada totalizar los últimos 365 días.</help>
+    <label>Valor de Totalizar N días</label>
+  </fields>
+  <fields>
+    <name>Schedule_Job_Limit__c</name>
+    <help>El número de trabajos programados de Apex activados a considerar cuando se programa un nuevo trabajo.</help>
+    <label>Límite de trabajos programados</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_Roles__c</name>
+    <help>Lista de funciones de contactos de oportunidades que desea incluir en totalizaciones de créditos blancos. Pulse Control o Comando y haga clic para seleccionar varias funciones.</help>
+    <label>Funciones de créditos blandos</label>
+  </fields>
+  <fields>
+    <name>Update_Check_Interval__c</name>
+    <help>DESUSADO. Se instalarán automáticamente nuevas versiones del Nonprofit Success Pack.</help>
+    <label>DESUSADO-Actualizar intervalo comprobac.</label>
+  </fields>
+  <fields>
+    <name>Use_Fiscal_Year_for_Rollups__c</name>
+    <help>La totalización de las oportunidades respetarán el año fiscal en vez de los años de calendario. Para establecer el año fiscal, vaya a Configuración -&gt; Perfil de empresa -&gt; Año fiscal. NOTA: NO funciona con configuración personalizada de AF.</help>
+    <label>Usar año fiscal para totalizaciones</label>
+  </fields>
 </CustomObjectTranslation>

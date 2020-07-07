@@ -1,293 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label>Hinzufügen</label>
         <name>Add</name>
+        <label>[Add]l'介]</label>
     </customLabels>
     <customLabels>
-        <label>Haushalte hinzufügen und zusammenführen</label>
         <name>AddAndMerge</name>
+        <label>[Add and merge Households]l'介引户הа]</label>
     </customLabels>
     <customLabels>
-        <label>Hinzufügen und aus altem Haushalt entfernen</label>
         <name>AddAndRemove</name>
+        <label>[Add and remove from old Household]l'介引户הаí先]</label>
     </customLabels>
     <customLabels>
-        <label>Mitglieder hinzufügen</label>
         <name>AddHouseholdMembers</name>
+        <label>[Add Members]l'介引]</label>
     </customLabels>
     <customLabels>
-        <label>Beim Kopieren der Adresse ist ein Fehler aufgetreten.</label>
         <name>AddressCopyFailure</name>
+        <label>[An error occurred during the copying of the address.]l'介引户הаí先ร简аน取정]</label>
     </customLabels>
     <customLabels>
-        <label>Adresse erfolgreich kopiert.</label>
         <name>AddressCopySuccess</name>
+        <label>[Address copied successfully.]l'介引户הаí]</label>
     </customLabels>
     <customLabels>
-        <label>Das Kopieren von Adressen wird bei diesem Objekttyp nicht unterstützt.</label>
         <name>AddressCopyUnknownObject</name>
+        <label>[Address Copy is not supported for this object type.]l'介引户הаí先ร简аน取정]</label>
     </customLabels>
     <customLabels>
-        <label>Legen Sie die Privatadresse für alle Mitglieder des Haushalts mit dieser Adresse fest.</label>
         <name>AddressToAllMembers</name>
+        <label>[Set the home address on all household members to this address.]l'介引户הаí先ร简аน取정úσι]</label>
     </customLabels>
     <customLabels>
-        <label>Bereits im Haushalt vorhanden</label>
         <name>AlreadyInHousehold</name>
+        <label>[Already In Household]l'介引户ה]</label>
     </customLabels>
     <customLabels>
-        <label>Autom. formelle Anrede</label>
         <name>AutoFormalGreeting</name>
+        <label>[Auto Formal Greeting]l'介引户ה]</label>
     </customLabels>
     <customLabels>
-        <label>Autom. informelle Anrede</label>
         <name>AutoInformalGreeting</name>
+        <label>[Auto Informal Greeting]l'介引户ה]</label>
     </customLabels>
     <customLabels>
-        <label>Autom. Name</label>
         <name>AutoName</name>
+        <label>[Auto Name]l'介]</label>
     </customLabels>
     <customLabels>
-        <label>Ändern</label>
         <name>Change</name>
+        <label>[Change]l']</label>
     </customLabels>
     <customLabels>
-        <label>Adresse ändern</label>
         <name>ChangeAddress</name>
+        <label>[Change Address]l'介引]</label>
     </customLabels>
     <customLabels>
-        <label>Änderungen nicht gespeichert.</label>
         <name>ChangesNotSaved</name>
+        <label>[Changes have not been saved.]l'介引户הаí]</label>
     </customLabels>
     <customLabels>
-        <label>ist bereits im Haushalt vorhanden. Möchten Sie diesen Kontakt mit oder ohne seine vorhandenen Haushalt-Mitglieder hinzufügen?</label>
         <name>ContactAlreadyInHousehold</name>
+        <label>[is already in a household. Would you like to add this contact with or without their existing household members?]l'介引户הаí先ร简аน取정úσιмÜП介]</label>
     </customLabels>
     <customLabels>
-        <label>Der Nachname ist erforderlich.</label>
         <name>ContactLastNameRqd</name>
+        <label>[Last Name is required.]l'介引户ה]</label>
     </customLabels>
     <customLabels>
-        <label>Geben Sie einen Vornamen und Nachnamen ein.</label>
         <name>ContactNameRqd</name>
+        <label>[Enter a First Name and Last Name.]l'介引户הаí先]</label>
     </customLabels>
     <customLabels>
-        <label>Der Kontakt wird beim Speichern des Haushalts erstellt.</label>
         <name>CreatedOnSave</name>
+        <label>[Contact will be created when Household is saved.]l'介引户הаí先ร简аน取]</label>
     </customLabels>
     <customLabels>
-        <label>Haushalt</label>
         <name>DefaultHouseholdName</name>
+        <label>[Household]l'介]</label>
     </customLabels>
     <customLabels>
-        <label>$</label>
         <name>DefaultHouseholdTransactionCurrency</name>
+        <label>[$]l]</label>
     </customLabels>
     <customLabels>
-        <label>Löschen</label>
         <name>Delete</name>
+        <label>[Delete]l']</label>
     </customLabels>
     <customLabels>
-        <label>Neue Adresse eingeben</label>
         <name>EnterNewAddress</name>
+        <label>[Enter a new address]l'介引户]</label>
     </customLabels>
     <customLabels>
-        <label>Kontakt von automatischer Haushalt-Benennung ausschließen:</label>
         <name>ExcludeText</name>
+        <label>[Exclude Contact from automatic Household naming:]l'介引户הаí先ร简аน取]</label>
     </customLabels>
     <customLabels>
-        <label>Bestehender Haushalt</label>
         <name>ExistingHousehold</name>
+        <label>[Existing Household]l'介引户]</label>
     </customLabels>
     <customLabels>
-        <label>Kontakt nach Namen suchen...</label>
         <name>FindContactByName</name>
+        <label>[Find contact by name ...]l'介引户הа]</label>
     </customLabels>
     <customLabels>
-        <label>Haushalt-Adresse</label>
         <name>HouseholdAddress</name>
+        <label>[Household Address]l'介引户]</label>
     </customLabels>
     <customLabels>
-        <label>Herr oder Frau</label>
         <name>HouseholdAnonymousGreeting</name>
+        <label>[Sir or Madam]l'介引]</label>
     </customLabels>
     <customLabels>
-        <label>Anonym</label>
         <name>HouseholdAnonymousName</name>
+        <label>[Anonymous]l'介]</label>
     </customLabels>
     <customLabels>
-        <label>Haushalt-Details</label>
         <name>HouseholdDetails</name>
+        <label>[Household Details]l'介引户]</label>
     </customLabels>
     <customLabels>
-        <label>Haushalt-Mitglieder</label>
         <name>HouseholdMembers</name>
+        <label>[Household Members]l'介引户]</label>
     </customLabels>
     <customLabels>
-        <label>und</label>
         <name>HouseholdNameConnector</name>
+        <label>[and]l'介]</label>
     </customLabels>
     <customLabels>
-        <label>Freunde</label>
         <name>HouseholdNameOverrun</name>
+        <label>[Friends]l']</label>
     </customLabels>
     <customLabels>
-        <label>Keine Opportunities</label>
         <name>Household_Contact_Role_Processor_Off</name>
+        <label>[No Opportunities]l'介引]</label>
     </customLabels>
     <customLabels>
-        <label>Alle Opportunities</label>
         <name>Household_Contact_Role_Processor_On</name>
+        <label>[All Opportunities]l'介引户]</label>
     </customLabels>
     <customLabels>
-        <label>Mit diesen Einstellungen können Sie automatisch Opportunity-Kontaktrollen für Haushalt-Mitglieder erstellen, wenn eine Opportunity erstellt wird.</label>
         <name>Household_Contact_Roles_Help_Text</name>
+        <label>[These settings let you automatically create Opportunity Contact Roles for Household members whenever an Opportunity is created.]l'介引户הаí先ร简аน取정úσιмÜП介мのα]</label>
     </customLabels>
     <customLabels>
-        <label>Haushalt-Mitglied</label>
         <name>Household_Member_Contact_Role</name>
+        <label>[Household Member]l'介引]</label>
     </customLabels>
     <customLabels>
-        <label>ERSETZT. Nicht verwendet. Auswählen, welche Kontakte Haushalte erhalten: Alle, nur diejenigen, die mit einem einzelnen Account verbunden sind, oder keine.</label>
         <name>Household_Rules_Help_Text</name>
+        <label>[DEPRECATED.  Not Used.  Select which Contacts get Households: All, only those related to an Individual Account, or none.]l'介引户הаí先ร简аน取정úσιмÜП介мの]</label>
     </customLabels>
     <customLabels>
-        <label>Haushalt verwalten</label>
         <name>ManageHousehold</name>
+        <label>[Manage Household]l'介引]</label>
     </customLabels>
     <customLabels>
-        <label>ERSETZEN</label>
         <name>NameReplacementText</name>
+        <label>[REPLACE]l']</label>
     </customLabels>
     <customLabels>
-        <label>Neuer Kontakt</label>
         <name>NewContact</name>
+        <label>[New Contact]l'介引]</label>
     </customLabels>
     <customLabels>
-        <label>In diesem Haushalt sind aktuell keine Kontakte vorhanden.</label>
         <name>NoContacts</name>
+        <label>[There are currently no Contacts in this Household.]l'介引户הаí先ร简аน取정]</label>
     </customLabels>
     <customLabels>
-        <label>Rollup-Fehler können bei nächtlichen oder manuellen Rollups auftreten und die Genauigkeit Ihrer Daten beeinträchtigen. Nachfolgend sind die Fehler, der Fehlertyp und ein Link zum Datensatz mit dem Fehler aufgeführt. Diese Fehler werden bei jeder Ausführung des nächtlichen Auftrags oder manuellen Rollups zurückgesetzt. Es wird dringend empfohlen, diese Fehler umgehend zu beheben, um die Genauigkeit der Daten sicherzustellen.</label>
         <name>Opportunity_Error_Help_Text</name>
+        <label>[Rollup errors can occur during nightly or manual rollups, and may affect the accuracy of your data.  Listed below are the errors, type of error, and a link to the record on which the error occurred. These errors are reset every time the nightly scheduled job or the manual rollups are run.  It is highly recommended these errors are addressed promptly to ensure the accuracy of your data.]l'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذะяřт紹소иЗ介นşрωtبčنごдčש帳าаůсחое簡üγกвцΕ戶н客иез개介引]</label>
     </customLabels>
     <customLabels>
-        <label>Es wurde kein Rollup durchgeführt, weil zu wenig zukünftige Anrufe verfügbar sind.</label>
         <name>Opportunity_Rollup_Future_Call_Limit</name>
+        <label>[Did not roll up because there were too few future calls available.]l'介引户הаí先ร简аน取정úσιм]</label>
     </customLabels>
     <customLabels>
-        <label>Sie haben die maximale Anzahl der geplanten Apex-Aufträge erreicht und die Opportunity-Rollups werden nicht in der Nacht durchgeführt. Wenn dieser Auftrag in der Nacht ausgeführt werden soll, müssen Sie einen der geplanten Aufträge löschen und diese Seite neu laden.</label>
         <name>Opportunity_Rollup_Scheduling_Error_Text</name>
+        <label>[You have reached your limit of Scheduled Apex jobs and the Opportunity Rollups won\'t run nightly. If you want this job to run nightly, delete one of your scheduled jobs and reload this page.]l'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذะяřт紹소]</label>
     </customLabels>
     <customLabels>
-        <label>Spender</label>
         <name>Primary_Donor_Contact_Role</name>
+        <label>[Donor]l'介引户]</label>
     </customLabels>
     <customLabels>
-        <label>Beim letzten Rollup Ihrer Opportunities sind Fehler aufgetreten. Weitere Informationen finden Sie im Bereich &quot;Systemfehlerprotokoll&quot;.</label>
         <name>RollupErrorMessage</name>
+        <label>[Error(s) occurred the last time your Opportunities were rolled up. Please see the System Error Log panel for more information.]l'介引户הаí先ร简аน取정úσιмÜП介мのα]</label>
     </customLabels>
     <customLabels>
-        <label>Vorhandene Adresse auswählen</label>
         <name>SelectExistingAddress</name>
+        <label>[Select an existing address]l'介引户הа]</label>
     </customLabels>
     <customLabels>
-        <label>Adresse festlegen</label>
         <name>SetAddress</name>
+        <label>[Set Address]l'介引]</label>
     </customLabels>
     <customLabels>
-        <label>Mit diesen Einstellungen können Sie benutzerdefinierte Rollups aus einer Opportunity (Spende) zu einem Kontakt, Account oder Haushalt erstellen und verwalten. Nachdem Sie einen benutzerdefinierten Rollup erstellt haben, können Sie den Rollup-Spenden-Batch unter NPSP-Einstellungen | Massendatenvorgänge verwenden, um alle Rollups in Ihrer Instanz neu zu berechnen und sicherzustellen, dass Ihr neues Rollup-Feld die richtigen Daten enthält.
-
-WARNUNG: Denken Sie daran, dass das Verhalten Ihres Nonprofit Success Packs durch Rollups geändert wird. Falsch konfigurierte Einstellungen können verursachen, dass das Rollup fehlschlägt. Testen Sie Ihre benutzerdefinierten Rollups gründlich, bevor Sie sie für die Produktion bereitstellen.</label>
         <name>UDRDescription</name>
+        <label>[These settings let you create and manage user defined rollups from an Opportunity (Donation) to a Contact, Account, or Household.  After you create a User Defined Rollup, you may want to use Rollup Donations Batch in NPSP Settings | Bulk Data Processes to recalculate all rollups in your instance and ensure that your new rollup field is correctly populated. 
+ 
+WARNING: Keep in mind that rollups change how your Nonprofit Success Pack behaves. Improperly configured settings may cause your rollups to fail. Please test your user defined rollups thoroughly before deploying to production.]l'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذะяřт紹소иЗ介นşрωtبčنごдčש帳าаůсחое簡üγกвцΕ戶н客иез개介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذะяřт紹소иЗ介นşр]</label>
     </customLabels>
-    <customPageWebLinks>
-        <label><!-- Nonprofit Edition Reports --></label>
-        <name>Nonprofit_Edition_Reports</name>
-    </customPageWebLinks>
-    <customTabs>
-        <label><!-- Contact Merge (OLD) --></label>
-        <name>Contact_Merge</name>
-    </customTabs>
-    <customTabs>
-        <label><!-- Contacts Settings --></label>
-        <name>Contacts_Settings</name>
-    </customTabs>
-    <customTabs>
-        <label>Haushalt-Einstellungen</label>
-        <name>Households_Settings</name>
-    </customTabs>
-    <customTabs>
-        <label>Opportunity-Rollups</label>
-        <name>Opportunity_Rollups</name>
-    </customTabs>
-    <customTabs>
-        <label><!-- Payment Mapping --></label>
-        <name>Payment_Mapping</name>
-    </customTabs>
-    <customTabs>
-        <label>Benutzer-Rollups</label>
-        <name>User_Rollups</name>
-    </customTabs>
-    <quickActions>
-        <label><!-- LogACall --></label>
-        <name>LogACall</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewAccount --></label>
-        <name>NewAccount</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewCase --></label>
-        <name>NewCase</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewContact --></label>
-        <name>NewContact</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewEvent --></label>
-        <name>NewEvent</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewGroup --></label>
-        <name>NewGroup</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewLead --></label>
-        <name>NewLead</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewNote --></label>
-        <name>NewNote</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewOpportunity --></label>
-        <name>NewOpportunity</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewTask --></label>
-        <name>NewTask</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- SendEmail --></label>
-        <name>SendEmail</name>
-    </quickActions>
     <reportTypes>
-        <label>Haushalte und Spenden</label>
         <name>Households_and_Donations</name>
+        <label>[Households and Donations]l'介引户הа]</label>
         <sections>
-            <label>Haushalt-Mitglieder</label>
-            <name>Household Members</name>
-        </sections>
-        <sections>
-            <label>Haushalte</label>
+            <label>[Households]l'介引]</label>
             <name>Households</name>
         </sections>
         <sections>
-            <label>Opportunities</label>
+            <label>[Household Members]l'介引户]</label>
+            <name>Household Members</name>
+        </sections>
+        <sections>
+            <label>[Opportunities]l'介]</label>
             <name>Opportunities</name>
         </sections>
     </reportTypes>
+    <customTabs>
+        <name>Households_Settings</name>
+        <label>[Households Settings]l'介引户]</label>
+    </customTabs>
+    <customTabs>
+        <name>Opportunity_Rollups</name>
+        <label>[Opportunity Rollups]l'介引户]</label>
+    </customTabs>
+    <customTabs>
+        <name>User_Rollups</name>
+        <label>[User Rollups]l'介引]</label>
+    </customTabs>
 </Translations>

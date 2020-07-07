@@ -1,64 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <caseType>Nominative</caseType>
-        <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Nominative</caseType>
-        <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Accusative</caseType>
-        <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Genitive</caseType>
-        <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Dative</caseType>
-        <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
-    </caseValues>
-    <fields>
-        <help>Die Rollup-Aktion (MIN, MAX, SUM, COUNT), die im Ausgangsfeld ausgeführt werden soll</help>
-        <label>Feldaktion</label>
-        <name>Field_Action__c</name>
-    </fields>
-    <fields>
-        <help>Das Objekt, dem dieser Benutzer-Rollup zugeordnet ist</help>
-        <label>Objektname</label>
-        <name>Object_Name__c</name>
-    </fields>
-    <fields>
-        <help>Das Ausgangsfeld und die Aktion vom Objekt für diesen Benutzer-Rollup</help>
-        <label>Quellfeld</label>
-        <name>Source_Field__c</name>
-    </fields>
-    <fields>
-        <help>Das Zielfeld für den Wert des Rollups für diesen benutzerdefinierten Rollup</help>
-        <label>Zielfeld</label>
-        <name>Target_Field__c</name>
-    </fields>
-    <gender><!-- Neuter --></gender>
+  <fields>
+    <name>Field_Action__c</name>
+    <help>[The rollup action (MIN, MAX, SUM, COUNT) to be performed on the source field]o'介引户הаí先ร简аน取정úσιмÜП介]</help>
+    <label>[Field Action]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Object_Name__c</name>
+    <help>[The object this user rollup is mapped to]o'介引户הаí先ร简а]</help>
+    <label>[Object Name]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Source_Field__c</name>
+    <help>[The source field and action from the object for this user rollup]o'介引户הаí先ร简аน取정úσιм]</help>
+    <label>[Source Field]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Target_Field__c</name>
+    <help>[The target field for placing the rolled-up value for this user defined rollup]o'介引户הаí先ร简аน取정úσιмÜП介м]</help>
+    <label>[Target Field]o'介引]</label>
+  </fields>
 </CustomObjectTranslation>

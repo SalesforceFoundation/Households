@@ -1,152 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fields>
-        <help>Im Durchschnitt gewonnener Opportunity-Betrag in Verbindung mit diesem Account. Wir automatisch aktualisiert.</help>
-        <label>Durchschnittliche Schenkung</label>
-        <name>AverageAmount__c</name>
-    </fields>
-    <fields>
-        <help>Die Summe der gewonnenen Opportunity-Beträge im Jahr der besten Schenkung für diesen Account.</help>
-        <label>Jahr der besten Schenkung gesamt</label>
-        <name>Best_Gift_Year_Total__c</name>
-    </fields>
-    <fields>
-        <help>Das Jahr, aus dem der höchste Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Opportunities stammt. Siehe auch &quot;Jahr der besten Schenkung gesamt&quot;.</help>
-        <label>Jahr der besten Schenkung</label>
-        <name>Best_Gift_Year__c</name>
-    </fields>
-    <fields>
-        <help>Die früheste in Verbindung mit diesem Account gewonnene Opportunity (nach Schlusstermin) mit einem Betrag über null.</help>
-        <label>Datum der ersten Schenkung</label>
-        <name>FirstCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>Verwendet bei Haushalt-Accounts Felder nicht ausgeschlossener beauftragter zugehöriger Kontakte. Wird automatisch generiert.</help>
-        <label>Formelle Anrede</label>
-        <name>Formal_Greeting__c</name>
-    </fields>
-    <fields>
-        <label>Haushalt Telefon</label>
-        <name>HouseholdPhone__c</name>
-    </fields>
-    <fields>
-        <help>Verwendet bei Haushalt-Accounts Felder nicht ausgeschlossener beauftragter zugehöriger Kontakte. Automatisch generiert.</help>
-        <label>Informelle Anrede</label>
-        <name>Informal_Greeting__c</name>
-    </fields>
-    <fields>
-        <help>Der größte Betrag einer in Verbindung mit diesem Account gewonnenen Opportunity.</help>
-        <label>Größte Schenkung</label>
-        <name>LargestAmount__c</name>
-    </fields>
-    <fields>
-        <help>Das letzte Schlussdatum einer in Verbindung mit diesem Account gewonnenen Opportunity mit einem Betrag über null.</help>
-        <label>Datum des letzten Schenkung</label>
-        <name>LastCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>Der Betrag der für diesen Account zuletzt (nach Schlusstermin) gewonnenen Mitgliedschaft-Opportunity (nach Datensatztyp).</help>
-        <label>Betrag der letzten Mitgliedschaft</label>
-        <name>LastMembershipAmount__c</name>
-    </fields>
-    <fields>
-        <help>Der letzte Schlusstermin einer in Verbindung mit diesem Account gewonnenen Mitgliedschaft-Opportunity (nach Datensatztyp).</help>
-        <label>Datum der letzten Mitgliedschaft</label>
-        <name>LastMembershipDate__c</name>
-    </fields>
-    <fields>
-        <help>Mitgliedschaft-Ebene der in Verbindung mit diesem Account zuletzt (nach Schlusstermin) gewonnenen Mitgliedschaft-Opportunity (nach Datensatztyp).</help>
-        <label>Ebene der letzten Mitgliedschaft</label>
-        <name>LastMembershipLevel__c</name>
-    </fields>
-    <fields>
-        <help>Mitgliedschaft-&quot;Ursprung&quot; (neu, verlängert...) der zuletzt (nach Schlusstermin) in Verbindung mit diesem Account gewonnenen Mitgliedschaft-Opportunity (nach Datensatztyp).</help>
-        <label>Ursprung der letzten Mitgliedschaft</label>
-        <name>LastMembershipOrigin__c</name>
-    </fields>
-    <fields>
-        <help>Der Betrag der zuletzt in Verbindung mit diesem Account gewonnenen Opportunity (nach Schlusstermin) mit einem Betrag über null.</help>
-        <label>Betrag der letzten Schenkung</label>
-        <name>LastOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>Mitgliedschaft-Enddatum der in Verbindung mit diesem Account zuletzt (nach Schlusstermin) gewonnenen Mitgliedschaft-Opportunity (nach Datensatztyp).</help>
-        <label>Enddatum der Mitgliedschaft</label>
-        <name>MembershipEndDate__c</name>
-    </fields>
-    <fields>
-        <help>Mitgliedschaft-Startdatum der in Verbindung mit diesem Account zuletzt (nach Schlusstermin) gewonnenen Mitgliedschaft-Opportunity (nach Datensatztyp).</help>
-        <label>Beitrittsdatum der Mitgliedschaft</label>
-        <name>MembershipJoinDate__c</name>
-    </fields>
-    <fields>
-        <help>Die Gesamtzahl der in Verbindung mit diesem Account gewonnenen Opportunities.</help>
-        <label>Gesamtzahl der Schenkungen</label>
-        <name>NumberOfClosedOpps__c</name>
-    </fields>
-    <fields>
-        <help>Die Gesamtzahl der in Verbindung mit diesem Account gewonnenen Mitgliedschaft-Opportunities (Datensatztyp).</help>
-        <label>Anzahl der Mitgliedschaften</label>
-        <name>NumberOfMembershipOpps__c</name>
-    </fields>
-    <fields>
-        <help>Der Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Opportunities, die in dem Jahr oder Geschäftsjahr vor dem letzten Jahr geschlossen wurden (siehe Haushalt-Einstellungen).</help>
-        <label>Schenkungen gesamt vor zwei Jahren</label>
-        <name>OppAmount2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>Der Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Opportunities, die in den letzten in den Haushalt-Einstellungen definierten N Tagen geschlossen wurden.</help>
-        <label>Schenkungen gesamt in letzten N Tagen</label>
-        <name>OppAmountLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>Der Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Opportunities, die im aktuellen Jahr oder Geschäftsjahr geschlossen wurden.</help>
-        <label>Schenkungen gesamt im letzten Jahr</label>
-        <name>OppAmountLastYear__c</name>
-    </fields>
-    <fields>
-        <help>Der Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Opportunities, die im aktuellen Jahr oder Geschäftsjahr geschlossen wurden.</help>
-        <label>Schenkungen gesamt dieses Jahr</label>
-        <name>OppAmountThisYear__c</name>
-    </fields>
-    <fields>
-        <help>Die Gesamtzahl der in Verbindung mit diesem Account gewonnenen Opportunities mit einem Betrag über null, die in dem Jahr oder Geschäftsjahr vor dem letzten Jahr geschlossen wurden.</help>
-        <label>Anzahl der Schenkungen vor zwei Jahren</label>
-        <name>OppsClosed2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>Der Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Opportunities, die in den letzten in den Haushalt-Einstellungen definierten N Tagen geschlossen wurden.</help>
-        <label>Anzahl Schenkungen in letzten N Tagen</label>
-        <name>OppsClosedLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>Die Gesamtzahl der in Verbindung mit diesem Account gewonnenen Opportunities mit einem Betrag über null, die im letzten Jahr oder Geschäftsjahr geschlossen wurden (siehe Haushalt-Einstellungen).</help>
-        <label>Anzahl der Schenkungen letztes Jahr</label>
-        <name>OppsClosedLastYear__c</name>
-    </fields>
-    <fields>
-        <help>Die Gesamtzahl der in Verbindung mit diesem Account gewonnenen Opportunities mit einem Betrag über null, die im aktuellen Jahr oder Geschäftsjahr geschlossen wurden (siehe Haushalt-Einstellungen).</help>
-        <label>Anzahl der Schenkungen dieses Jahr</label>
-        <name>OppsClosedThisYear__c</name>
-    </fields>
-    <fields>
-        <help>Gibt bei Haushalt-Accounts an, in welche namensbezogenen Felder der Haushalt-Code nicht automatisch eingetragen werden soll.</help>
-        <label>_SYSTEM: BENUTZERDEFINIERTE BENENNUNG</label>
-        <name>SYSTEM_CUSTOM_NAMING__c</name>
-        </fields>
-    <fields>
-        <help>Der kleinste Betrag größer als null einer in Verbindung mit diesem Account gewonnenen Opportunity.</help>
-        <label>Kleinste Schenkung</label>
-        <name>SmallestAmount__c</name>
-    </fields>
-    <fields>
-        <help>Der Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Mitgliedschaft-Opportunities (Datensatztyp).</help>
-        <label>Gesamtbetrag der Mitgliedschaft</label>
-        <name>TotalMembershipOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>Die Summe der Beträge aller in Verbindung mit diesem Account gewonnenen Opportunities.</help>
-        <label>Schenkungen gesamt</label>
-        <name>TotalOppAmount__c</name>
-    </fields>
-    </CustomObjectTranslation>
+  <fields>
+    <name>AverageAmount__c</name>
+    <help>[Average won Opportunity amount related to this Account.  Updated automatically.]o'介引户הаí先ร简аน取정úσιмÜП介м]</help>
+    <label>[Average Gift]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year_Total__c</name>
+    <help>[The sum of won Opportunity amounts in the Best Gift Year for this Account.]o'介引户הаí先ร简аน取정úσιмÜП介]</help>
+    <label>[Best Gift Year Total]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year__c</name>
+    <help>[The year in which the largest total amount of won Opportunities related to this Account occurred.  See also Best Gift Year Total.]o'介引户הаí先ร简аน取정úσιмÜП介мのα]</help>
+    <label>[Best Gift Year]o'介引]</label>
+  </fields>
+  <fields>
+    <name>FirstCloseDate__c</name>
+    <help>[The earliest won Opportunity (by Close Date) with amount greater than zero related to this Account.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةб]</help>
+    <label>[First Gift Date]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Formal_Greeting__c</name>
+    <help>[For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically.]o'介引户הаí先ร简аน取정úσιмÜ]</help>
+    <label>[Formal Greeting]o'介引]</label>
+  </fields>
+  <fields>
+    <name>HouseholdPhone__c</name>
+    <label>[Household Phone]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Informal_Greeting__c</name>
+    <help>[For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically.]o'介引户הаí先ร简аน取정úσιмÜ]</help>
+    <label>[Informal Greeting]o'介引户]</label>
+  </fields>
+  <fields>
+    <name>LargestAmount__c</name>
+    <help>[The largest amount of a won Opportunity related to this Account.]o'介引户הаí先ร简аน取정úσιм]</help>
+    <label>[Largest Gift]o'介引]</label>
+  </fields>
+  <fields>
+    <name>LastCloseDate__c</name>
+    <help>[The most recent Close Date of a won Opportunity related to this Account with amount greater than zero.]o'介引户הаí先ร简аน取정úσιмÜ]</help>
+    <label>[Last Gift Date]o'介引]</label>
+  </fields>
+  <fields>
+    <name>LastMembershipAmount__c</name>
+    <help>[The amount of the most recent (by Close Date) won Membership Opportunity (by Record Type) for this Account.]o'介引户הаí先ร简аน取정úσιмÜП]</help>
+    <label>[Last Membership Amount]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>LastMembershipDate__c</name>
+    <help>[The most recent Close Date of a won Membership Opportunity (by Record Type) related to this Account.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй]</help>
+    <label>[Last Membership Date]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>LastMembershipLevel__c</name>
+    <help>[Membership level from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account."]o'介引户הаí先ร简аน取정úσιмÜП介м]</help>
+    <label>[Last Membership Level]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>LastMembershipOrigin__c</name>
+    <help>[Membership "origin" (new, renew...) from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแ]</help>
+    <label>[Last Membership Origin]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>LastOppAmount__c</name>
+    <help>[The amount of the most recent won Opportunity (by Close Date) with amount greater than zero related to this Account.]o'介引户הаí先ร简аน取정úσιмÜП介м]</help>
+    <label>[Last Gift Amount]o'介引]</label>
+  </fields>
+  <fields>
+    <name>MembershipEndDate__c</name>
+    <help>[Membership end date from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.]o'介引户הаí先ร简аน取정úσιмÜП介мの]</help>
+    <label>[Membership End Date]o'介引户]</label>
+  </fields>
+  <fields>
+    <name>MembershipJoinDate__c</name>
+    <help>[Membership start date from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.]o'介引户הаí先ร简аน取정úσιмÜП介мの]</help>
+    <label>[Membership Join Date]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>NumberOfClosedOpps__c</name>
+    <help>[The total number of won Opportunities  related to this Account.]o'介引户הаí先ร简аน取정úσι]</help>
+    <label>[Total Number of Gifts]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>NumberOfMembershipOpps__c</name>
+    <help>[The total number of won Membership Opportunities (Record Type) related to this Account.]o'介引户הаí先ร简аน取정úσιмÜП介мのαş]</help>
+    <label>[Number of Memberships]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>OppAmount2YearsAgo__c</name>
+    <help>[The total amount of won Opportunities related to this Account, closed within the year or fiscal year preceding last year (see Household Settings).]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةб]</help>
+    <label>[Total Gifts Two Years Ago]o'介引户הа]</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastNDays__c</name>
+    <help>[The total amount of won Opportunities related to this Account, closed in the last number of days defined in Household Settings.]o'介引户הаí先ร简аน取정úσιмÜП介мのα]</help>
+    <label>[Total Gifts Last N Days]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastYear__c</name>
+    <help>[The total amount of won Opportunities related to this Account, closed in the current year or fiscal year.]o'介引户הаí先ร简аน取정úσιмÜП]</help>
+    <label>[Total Gifts Last Year]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>OppAmountThisYear__c</name>
+    <help>[The total amount of won Opportunities related to this Account, closed in the current year or fiscal year.]o'介引户הаí先ร简аน取정úσιмÜП]</help>
+    <label>[Total Gifts This Year]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>OppsClosed2YearsAgo__c</name>
+    <help>[The total number of won Opportunities with amount greater than zero related to this Account, closed within the year or fiscal year preceding last year.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй]</help>
+    <label>[Number of Gifts Two Years Ago]o'介引户הаí]</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastNDays__c</name>
+    <help>[The total amount of won Opportunities related to this Account, closed in the last number of days defined in Household Settings.]o'介引户הаí先ร简аน取정úσιмÜП介мのα]</help>
+    <label>[Number of Gifts Last N Days]o'介引户הаí]</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastYear__c</name>
+    <help>[The total number of won Opportunities with amount greater than zero related to this Account, closed in the previous year or fiscal year (see Household Settings).]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذ]</help>
+    <label>[Number of Gifts Last Year]o'介引户הа]</label>
+  </fields>
+  <fields>
+    <name>OppsClosedThisYear__c</name>
+    <help>[The total number of won Opportunities with amount greater than zero related to this Account, closed in the current year or fiscal year (see Household Settings).]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذ]</help>
+    <label>[Number of Gifts This Year]o'介引户הа]</label>
+  </fields>
+  <fields>
+    <name>SYSTEM_CUSTOM_NAMING__c</name>
+    <help>[For Household Accounts, specifies which name related fields should not be automatically populated by the Householding code.]o'介引户הаí先ร简аน取정úσιмÜП介мの]</help>
+    <label>[_SYSTEM: CUSTOM NAMING]o'介引户ה]</label>
+    <picklistValues>
+      <masterLabel>Name</masterLabel>
+      <translation>[Name]o'介引]</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Formal_Greeting__c</masterLabel>
+      <translation>[Formal_Greeting__c]o'介引户]</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Informal_Greeting__c</masterLabel>
+      <translation>[Informal_Greeting__c]o'介引户ה]</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>SmallestAmount__c</name>
+    <help>[The smallest non-zero amount of a won Opportunity related to this Account.]o'介引户הаí先ร简аน取정úσιмÜП介]</help>
+    <label>[Smallest Gift]o'介]</label>
+  </fields>
+  <fields>
+    <name>TotalMembershipOppAmount__c</name>
+    <help>[The total amount of won Membership Opportunities (Record Type) related to this Account.]o'介引户הаí先ร简аน取정úσιмÜП介мのαş]</help>
+    <label>[Total Membership Amount]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>TotalOppAmount__c</name>
+    <help>[The sum of amounts of all won Opportunities related to this Account.]o'介引户הаí先ร简аน取정úσιмÜ]</help>
+    <label>[Total Gifts]o'介引]</label>
+  </fields>
+</CustomObjectTranslation>

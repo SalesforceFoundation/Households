@@ -1,233 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fields>
-        <help>Der durchschnittliche Betrag aller in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
-        <label>Durchschnittliche Schenkung</label>
-        <name>AverageAmount__c</name>
-    </fields>
-    <fields>
-        <help>Die Summe der gewonnenen Opportunities im Jahr der besten Schenkungen.</help>
-        <label>Jahr der besten Schenkung gesamt</label>
-        <name>Best_Gift_Year_Total__c</name>
-    </fields>
-    <fields>
-        <help>Das Jahr, in dem der höchste Opportunity-Betrag in Verbindung mit diesem Kontakte mit primärer Kontaktrolle insgesamt gewonnen wurde. Siehe auch &quot;Jahr der besten Schenkung gesamt&quot;.</help>
-        <label>Jahr der besten Schenkung</label>
-        <name>Best_Gift_Year__c</name>
-    </fields>
-    <fields>
-        <help>Der früheste Schlusstermin einer in Verbindung mit diesem Kontakt mit primärer Opportunity-Kontaktrolle gewonnenen Opportunity mit einem Betrag über null.</help>
-        <label>Datum der ersten Schenkung</label>
-        <name>FirstCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>Formel: Duplikat der Postanschrift des Haushalts (auch &quot;Formel&quot; genannt)</help>
-        <label>Postanschrift des Haushalts</label>
-        <name>Formula_HouseholdMailingAddress__c</name>
-    </fields>
-    <fields>
-        <help>Formel: Einfache Formel des Felds &quot;Haushalt-Telefon&quot;.</help>
-        <label>Haushalt-Telefon</label>
-        <name>Formula_HouseholdPhone__c</name>
-    </fields>
-    <fields>
-        <help>Legt die Reihenfolge fest, in der Kontaktnamen zur Generierung des Haushalt-Namens verwendet werden.</help>
-        <label>Haushalt Reihenfolge der Benennung</label>
-        <name>Household_Naming_Order__c</name>
-    </fields>
-    <fields>
-        <label>Haushalt</label>
-        <name>Household__c</name>
-        <relationshipLabel>Haushalt-Mitglieder</relationshipLabel>
-    </fields>
-    <fields>
-        <help>Der größte Betrag einer in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunity.</help>
-        <label>Größte Schenkung</label>
-        <name>LargestAmount__c</name>
-    </fields>
-    <fields>
-        <label>Datum letzte Schenkung des Haushalts</label>
-        <name>LastCloseDateHH__c</name>
-    </fields>
-    <fields>
-        <help>Der Schlusstermin der letzten in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunity.</help>
-        <label>Datum der letzten Schenkung</label>
-        <name>LastCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>Der Betrag der letzten (nach dem Schlusstermin) in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft- (Datensatztyp) Opportunity.</help>
-        <label>Betrag der letzten Mitgliedschaft</label>
-        <name>LastMembershipAmount__c</name>
-    </fields>
-    <fields>
-        <help>Der letzte Schlusstermin einer in Verbindung mit diesem Haushalt nach primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft- (Datensatztyp) Opportunity.</help>
-        <label>Datum der letzten Mitgliedschaft</label>
-        <name>LastMembershipDate__c</name>
-    </fields>
-    <fields>
-        <help>Die Ebene der letzten (nach dem Schlusstermin) in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft (Datensatztyp) Opportunity.</help>
-        <label>Ebene der letzten Mitgliedschaft</label>
-        <name>LastMembershipLevel__c</name>
-    </fields>
-    <fields>
-        <help>Der Ursprung (neu, verlängert, erneut erworben) der letzten (Schlusstermin) in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft- (Datensatztyp) Opportunity.</help>
-        <label>Ursprung der letzten Mitgliedschaft</label>
-        <name>LastMembershipOrigin__c</name>
-    </fields>
-    <fields>
-        <help>Der Betrag der letzten (nach dem Schlusstermin) in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunity.</help>
-        <label>Betrag der letzten Schenkung</label>
-        <name>LastOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>Das Mitgliedschaft-Enddatum der letzten (Schlusstermin) Mitgliedschaft-Opportunity (Datensatztyp) in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle. </help>
-        <label>Enddatum der Mitgliedschaft</label>
-        <name>MembershipEndDate__c</name>
-    </fields>
-    <fields>
-        <help>Das Beitrittsdatum der ältesten (Schlusstermin) Mitgliedschaft-Opportunity (Datensatztyp) in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle.</help>
-        <label>Beitrittsdatum der Mitgliedschaft</label>
-        <name>MembershipJoinDate__c</name>
-    </fields>
-    <fields>
-        <help>Wählen Sie diese Option aus, um den Namen dieses Kontakts aus verschiedenen generierten Haushalt-Namen auszuschließen.</help>
-        <label>Benennungsausschlüsse</label>
-        <name>Naming_Exclusions__c</name>
-        <picklistValues>
-            <masterLabel>Household__c.Formal_Greeting__c</masterLabel>
-            <translation>Household__c.Formal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Household__c.Informal_Greeting__c</masterLabel>
-            <translation>Household__c.Informal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Household__c.Name</masterLabel>
-            <translation>Household__c.Name</translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>Die Gesamtzahl der in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunities mit einem Betrag über null.</help>
-        <label>Anzahl der Schenkungen gesamt</label>
-        <name>NumberOfClosedOpps__c</name>
-    </fields>
-    <fields>
-        <help>Die Anzahl der in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft-Opportunities (Datensatztyp).</help>
-        <label>Anzahl der Mitgliedschaften</label>
-        <name>NumberOfMembershipOpps__c</name>
-    </fields>
-    <fields>
-        <help>Der Gesamtbetrag der in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunities, die vor zwei Jahren geschlossen wurden.</help>
-        <label>Schenkungen gesamt vor zwei Jahren</label>
-        <name>OppAmount2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>Der Gesamtbetrag der in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunities, die in den letzten in den Haushalt-Einstellungen definierten N Tagen geschlossen wurden.</help>
-        <label>Schenkungen gesamt in letzten N Tagen</label>
-        <name>OppAmountLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>Formel: Schenkungen gesamt im letzten Jahr zum verbundenen Haushalt.</help>
-        <label>Schenkungen des Haushalts gesamt im letzten Jahr</label>
-        <name>OppAmountLastYearHH__c</name>
-    </fields>
-    <fields>
-        <help>Der Gesamtbetrag der in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunities, die im letzten Jahr geschlossen wurden.</help>
-        <label>Schenkungen gesamt im letzten Jahr</label>
-        <name>OppAmountLastYear__c</name>
-    </fields>
-    <fields>
-        <help>Formel: Schenkungen gesamt in diesem Jahr zum verbundenen Haushalt.</help>
-        <label>Schenkungen Haushalt gesamt dieses Jahr</label>
-        <name>OppAmountThisYearHH__c</name>
-    </fields>
-    <fields>
-        <help>Der Gesamtbetrag der in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunities, die in diesem Jahr geschlossen wurden.</help>
-        <label>Schenkungen gesamt dieses Jahr</label>
-        <name>OppAmountThisYear__c</name>
-    </fields>
-    <fields>
-        <help>Die Gesamtzahl der in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunities mit einem Betrag über null, die vor zwei Jahren geschlossen wurden.</help>
-        <label>Anzahl der Schenkungen vor zwei Jahren</label>
-        <name>OppsClosed2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>Die Gesamtzahl der in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunities mit einem Betrag über null, die in den letzten in den Haushalt-Einstellungen definierten N Tagen geschlossen wurden.</help>
-        <label>Anzahl Schenkungen in letzten N Tagen</label>
-        <name>OppsClosedLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>Die Gesamtzahl der in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunities mit einem Betrag über null, die letztes Jahr geschlossen wurden.</help>
-        <label>Anzahl der Schenkungen letztes Jahr</label>
-        <name>OppsClosedLastYear__c</name>
-    </fields>
-    <fields>
-        <help>Die Gesamtzahl der in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunities mit einem Betrag über null, die dieses Jahr geschlossen wurden.</help>
-        <label>Anzahl der Schenkungen dieses Jahr</label>
-        <name>OppsClosedThisYear__c</name>
-    </fields>
-    <fields>
-        <help>Der kleinste Betrag einer in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Opportunity.</help>
-        <label>Kleinste Schenkung</label>
-        <name>SmallestAmount__c</name>
-    </fields>
-    <fields>
-        <help>Die Summe der nach Opportunity-Kontaktrolle festgelegten und nach Rollen in den Haushalt-Einstellungen gefilterten Soft Credit-Opportunity-Beträge im letzten Jahr.</help>
-        <label>Soft Credit letztes Jahr</label>
-        <name>Soft_Credit_Last_Year__c</name>
-    </fields>
-    <fields>
-        <help>Gesamtbetrag an Soft Credits dieses Jahr</help>
-        <label>Soft Credit dieses Jahr</label>
-        <name>Soft_Credit_This_Year__c</name>
-    </fields>
-    <fields>
-        <help>Gesamtbetrag an Soft Credits während der Lebensdauer dieses Kontakts. Wird auf der Registerkarte &quot;Haushalt-Einstellungen&quot; definiert.</help>
-        <label>Soft Credit gesamt</label>
-        <name>Soft_Credit_Total__c</name>
-    </fields>
-    <fields>
-        <help>Die Summe der durch die Opportunity-Kontaktrolle festgelegten und nach Rollen in den Haushalt-Einstellungen gefilterten Soft Credit-Opportunity-Beträge vor zwei Jahren.</help>
-        <label>Soft Credit vor zwei Jahren</label>
-        <name>Soft_Credit_Two_Years_Ago__c</name>
-    </fields>
-    <fields>
-        <label>_SYSTEM: HAUSHALT-PROZESSOR - ERSETZT</label>
-        <name>SystemHouseholdProcessor__c</name>
-        <picklistValues>
-            <masterLabel>All Individual Contacts</masterLabel>
-            <translation>Alle einzelnen Kontakte</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>All New or Edited Contacts</masterLabel>
-            <translation>Alle neuen oder bearbeiteten Kontakte</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>No Contacts</masterLabel>
-            <translation>Keine Kontakte</translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>Der Gesamtbetrag der in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft-Opportunities (Datensatztyp).</help>
-        <label>Gesamtbetrag der Mitgliedschaft</label>
-        <name>TotalMembershipOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>Die Summe der in Verbindung mit diesem Kontakt nach primärer Opportunity-Kontaktrolle.gewonnenen Opportunities.</help>
-        <label>Schenkungen gesamt</label>
-        <name>TotalOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>Formel: Schenkungen gesamt zum verbundenen Haushalt.</help>
-        <label>Haushalt-Schenkungen gesamt</label>
-        <name>Total_Household_Gifts__c</name>
-    </fields>
-    <webLinks>
-        <label>Adresse in Haushalt kopieren</label>
-        <name>Copy_Address_to_Household</name>
-    </webLinks>
-    <webLinks>
-        <label>Haushalt</label>
-        <name>Household</name>
-    </webLinks>
+  <fields>
+    <name>AverageAmount__c</name>
+    <help>[The average amount of all won Opportunities related to this Contact by a primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП]</help>
+    <label>[Average Gift]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year_Total__c</name>
+    <help>[The sum of won Opportunity amounts in the Best Gift Year.]o'介引户הаí先ร简аน取정úσ]</help>
+    <label>[Best Gift Year Total]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year__c</name>
+    <help>[The year of the largest total amount of won Opportunities related to this Contact by primary Contact Role.  See also Best Gift Year Total.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแ]</help>
+    <label>[Best Gift Year]o'介引]</label>
+  </fields>
+  <fields>
+    <name>FirstCloseDate__c</name>
+    <help>[The oldest Close Date of a won Opportunity with amount greater than zero related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介мのαş]</help>
+    <label>[First Gift Date]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Formula_HouseholdMailingAddress__c</name>
+    <help>[Formula: Clone of the Household Mailing address (also a Formula)]o'介引户הаí先ร简аน取정úσιм]</help>
+    <label>[Household Mailing Address]o'介引户הа]</label>
+  </fields>
+  <fields>
+    <name>Formula_HouseholdPhone__c</name>
+    <help>[Formula: Simple formula of Household Phone field.]o'介引户הаí先ร简аน取]</help>
+    <label>[Household Phone]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Household_Naming_Order__c</name>
+    <help>[Determines the order in which Contact names are used to generate Household name.]o'介引户הаí先ร简аน取정úσιмÜП介мの]</help>
+    <label>[Household Naming Order]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>Household__c</name>
+    <relationshipLabel>[Household Members]o'介引户]</relationshipLabel>
+    <label>[Household]o'介]</label>
+  </fields>
+  <fields>
+    <name>LargestAmount__c</name>
+    <help>[The largest amount of a won Opportunity related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй]</help>
+    <label>[Largest Gift]o'介引]</label>
+  </fields>
+  <fields>
+    <name>LastCloseDateHH__c</name>
+    <label>[Last Household Gift Date]o'介引户הа]</label>
+  </fields>
+  <fields>
+    <name>LastCloseDate__c</name>
+    <help>[The close date of the most recent won Opportunity related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介]</help>
+    <label>[Last Gift Date]o'介引]</label>
+  </fields>
+  <fields>
+    <name>LastMembershipAmount__c</name>
+    <help>[The amount of the most recent (by Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةб]</help>
+    <label>[Last Membership Amount]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>LastMembershipDate__c</name>
+    <help>[The most recent Close Date of a won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介мのαş]</help>
+    <label>[Last Membership Date]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>LastMembershipLevel__c</name>
+    <help>[The level of the most recent (by Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةб]</help>
+    <label>[Last Membership Level]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>LastMembershipOrigin__c</name>
+    <help>[The origin (new, renewal, reacquire...) of the most recent (Close Date) won Membership (Record Type) Opportunity related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذะя]</help>
+    <label>[Last Membership Origin]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>LastOppAmount__c</name>
+    <help>[The amount of the most recent won Opportunity by Close Date related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介мの]</help>
+    <label>[Last Gift Amount]o'介引]</label>
+  </fields>
+  <fields>
+    <name>MembershipEndDate__c</name>
+    <help>[The Membership End Date of the most recent (Close Date) Membership Opportunity (Record Type) related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй]</help>
+    <label>[Membership End Date]o'介引户]</label>
+  </fields>
+  <fields>
+    <name>MembershipJoinDate__c</name>
+    <help>[The Join Date of the oldest (Close Date) Membership Opportunity (Record Type) related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแ]</help>
+    <label>[Membership Join Date]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>Naming_Exclusions__c</name>
+    <help>[Select to exclude this Contact's name from various generated Household names.]o'介引户הаí先ร简аน取정úσιмÜП介м]</help>
+    <label>[Naming Exclusions]o'介引户]</label>
+    <picklistValues>
+      <masterLabel>Household__c.Name</masterLabel>
+      <translation>[Household__c.Name]o'介引户]</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Household__c.Formal_Greeting__c</masterLabel>
+      <translation>[Household__c.Formal_Greeting__c]o'介引户הаí先]</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Household__c.Informal_Greeting__c</masterLabel>
+      <translation>[Household__c.Informal_Greeting__c]o'介引户הаí先]</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>NumberOfClosedOpps__c</name>
+    <help>[The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介мのα]</help>
+    <label>[Total Number of Gifts]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>NumberOfMembershipOpps__c</name>
+    <help>[The number of won Membership Opportunities (Record Type) related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介м]</help>
+    <label>[Number of Memberships]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>OppAmount2YearsAgo__c</name>
+    <help>[The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed two years ago.]o'介引户הаí先ร简аน取정úσιмÜП介мの]</help>
+    <label>[Total Gifts Two Years Ago]o'介引户הа]</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastNDays__c</name>
+    <help>[The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed in the last number of days defined in Household Settings.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذ]</help>
+    <label>[Total Gifts Last N Days]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastYearHH__c</name>
+    <help>[Formula:  Total Gifts Last Year on related Household.]o'介引户הаí先ร简аน取정]</help>
+    <label>[Total Household Gifts Last Year]o'介引户הаí先]</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastYear__c</name>
+    <help>[The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed last year.]o'介引户הаí先ร简аน取정úσιмÜП介м]</help>
+    <label>[Total Gifts Last Year]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>OppAmountThisYearHH__c</name>
+    <help>[Formula:  Total Gifts This Year on related Household.]o'介引户הаí先ร简аน取정]</help>
+    <label>[Total Household Gifts This Year]o'介引户הаí先]</label>
+  </fields>
+  <fields>
+    <name>OppAmountThisYear__c</name>
+    <help>[The total amount of won Opportunities related to this Contact by primary Opportunity Contact Role, closed this year.]o'介引户הаí先ร简аน取정úσιмÜП介м]</help>
+    <label>[Total Gifts This Year]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>OppsClosed2YearsAgo__c</name>
+    <help>[The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed two years ago.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй]</help>
+    <label>[Number of Gifts Two Years Ago]o'介引户הаí]</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastNDays__c</name>
+    <help>[The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed in the last number of days defined in Household Settings.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذะяřт紹소]</help>
+    <label>[Number of Gifts Last N Days]o'介引户הаí]</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastYear__c</name>
+    <help>[The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed last year.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةб]</help>
+    <label>[Number of Gifts Last Year]o'介引户הа]</label>
+  </fields>
+  <fields>
+    <name>OppsClosedThisYear__c</name>
+    <help>[The total number of won Opportunities with amount greater than zero related to this Contact by primary Opportunity Contact Role, closed this year.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแةб]</help>
+    <label>[Number of Gifts This Year]o'介引户הа]</label>
+  </fields>
+  <fields>
+    <name>SmallestAmount__c</name>
+    <help>[The smallest amount of a won Opportunity related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜ]</help>
+    <label>[Smallest Gift]o'介]</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_Last_Year__c</name>
+    <help>[The sum of soft credit Opportunity amounts last year determined by Opportunity Contact Role and filtered by Roles in Household Settings.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแ]</help>
+    <label>[Soft Credit Last Year]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_This_Year__c</name>
+    <help>[Total soft credit amount this year]o'介引户הаí先ร]</help>
+    <label>[Soft Credit This Year]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_Total__c</name>
+    <help>[Total amount in soft credits for this Contact's lifetime. Defined in the Household Settings tab.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแة]</help>
+    <label>[Soft Credit Total]o'介引户]</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_Two_Years_Ago__c</name>
+    <help>[The sum of soft credit Opportunity amounts two years ago determined by Opportunity Contact Role and filtered by Roles in Household Settings.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแة]</help>
+    <label>[Soft Credit Two Years Ago]o'介引户הа]</label>
+  </fields>
+  <fields>
+    <name>SystemHouseholdProcessor__c</name>
+    <label>[_SYSTEM: HOUSEHOLD PROCESSOR-DEPRECATED]o'介引户הаí先ร简]</label>
+    <picklistValues>
+      <masterLabel>All Individual Contacts</masterLabel>
+      <translation>[All Individual Contacts]o'介引户ה]</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>All New or Edited Contacts</masterLabel>
+      <translation>[All New or Edited Contacts]o'介引户הа]</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>No Contacts</masterLabel>
+      <translation>[No Contacts]o'介引]</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>TotalMembershipOppAmount__c</name>
+    <help>[The total amount of won Membership Opportunities (Record Type) related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介мの]</help>
+    <label>[Total Membership Amount]o'介引户ה]</label>
+  </fields>
+  <fields>
+    <name>TotalOppAmount__c</name>
+    <help>[The sum of won Opportunity Amounts related to this Contact by primary Opportunity Contact Role.]o'介引户הаí先ร简аน取정úσιмÜП介мのαşแة]</help>
+    <label>[Total Gifts]o'介引]</label>
+  </fields>
+  <fields>
+    <name>Total_Household_Gifts__c</name>
+    <help>[Formula:  Total Gifts on related Household.]o'介引户הаí先ร简а]</help>
+    <label>[Total Household Gifts]o'介引户ה]</label>
+  </fields>
+  <webLinks>
+    <name>Copy_Address_to_Household</name>
+    <label>[Copy Address to Household]o'介引户הа]</label>
+  </webLinks>
+  <webLinks>
+    <name>Household</name>
+    <label>[Household]o'介]</label>
+  </webLinks>
 </CustomObjectTranslation>
