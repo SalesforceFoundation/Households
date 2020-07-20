@@ -1,233 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連するすべての成立支援の平均金額。</help>
-        <label>平均支援金額</label>
-        <name>AverageAmount__c</name>
-    </fields>
-    <fields>
-        <help>最大支援年の成立支援の合計金額。</help>
-        <label>最大支援年の総額</label>
-        <name>Best_Gift_Year_Total__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主個人の役割) に関連する成立支援の総額が最高であった年。「最大支援年の総額」も参照。</help>
-        <label>最大支援年</label>
-        <name>Best_Gift_Year__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する、金額が 0 より大きい成立支援の最も古い完了日。</help>
-        <label>最初の支援日</label>
-        <name>FirstCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>数式: 世帯の郵送先住所のコピー (および数式)</help>
-        <label>世帯の郵送先住所</label>
-        <name>Formula_HouseholdMailingAddress__c</name>
-    </fields>
-    <fields>
-        <help>数式: [世帯電話] 項目の簡単な数式。</help>
-        <label>世帯電話</label>
-        <name>Formula_HouseholdPhone__c</name>
-    </fields>
-    <fields>
-        <help>世帯名の生成に使用する個人名の順序を決定します。</help>
-        <label>世帯命名順序</label>
-        <name>Household_Naming_Order__c</name>
-    </fields>
-    <fields>
-        <label>世帯</label>
-        <name>Household__c</name>
-        <relationshipLabel>世帯メンバー</relationshipLabel>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する成立支援の最大金額。</help>
-        <label>最大支援金額</label>
-        <name>LargestAmount__c</name>
-    </fields>
-    <fields>
-        <label>最終世帯支援日</label>
-        <name>LastCloseDateHH__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する最も新しい成立支援の完了日。</help>
-        <label>最終支援日</label>
-        <name>LastCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する最も新しい (完了日) 成立会費 (レコードタイプ) 支援の金額。</help>
-        <label>最終会費支援金額</label>
-        <name>LastMembershipAmount__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する成立会費 (レコードタイプ) 支援の最も新しい完了日。</help>
-        <label>最終会費支援日</label>
-        <name>LastMembershipDate__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する最も新しい (完了日) 成立会費 (レコードタイプ) 支援のレベル。</help>
-        <label>最終会員レベル</label>
-        <name>LastMembershipLevel__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する最も新しい (完了日) 成立会費 (レコードタイプ) 支援の状況 (新規、更新、復帰など)。</help>
-        <label>最終会員状況</label>
-        <name>LastMembershipOrigin__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する最も新しい (完了日) 成立支援の金額。</help>
-        <label>最終支援金額</label>
-        <name>LastOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する最も新しい (完了日) 会費支援 (レコードタイプ) の会員終了日。</help>
-        <label>会員終了日</label>
-        <name>MembershipEndDate__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する最も古い (完了日) 会費支援 (レコードタイプ) の入会日。</help>
-        <label>入会年月日</label>
-        <name>MembershipJoinDate__c</name>
-    </fields>
-    <fields>
-        <help>この個人が含まれない世帯名を決定します。</help>
-        <label>命名除外</label>
-        <name>Naming_Exclusions__c</name>
-        <picklistValues>
-            <masterLabel>Household__c.Formal_Greeting__c</masterLabel>
-            <translation>Household__c.Formal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Household__c.Informal_Greeting__c</masterLabel>
-            <translation>Household__c.Informal_Greeting__c</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Household__c.Name</masterLabel>
-            <translation>Household__c.Name</translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する、金額が 0 より大きい成立支援の合計回数。</help>
-        <label>これまでの支援回数</label>
-        <name>NumberOfClosedOpps__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する成立会費支援 (レコードタイプ) の回数。</help>
-        <label>会費払込回数</label>
-        <name>NumberOfMembershipOpps__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する成立支援で、一昨年に完了したものの総額。</help>
-        <label>一昨年の支援総額</label>
-        <name>OppAmount2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する成立支援で、[世帯設定] に定義されている過去の日数の間に完了したものの総額。</help>
-        <label>N日間の支援総額</label>
-        <name>OppAmountLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>数式: 関連する世帯の昨年の支援総額。</help>
-        <label>昨年の世帯支援総額</label>
-        <name>OppAmountLastYearHH__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する成立支援で、昨年に完了したものの総額。</help>
-        <label>昨年の支援総額</label>
-        <name>OppAmountLastYear__c</name>
-    </fields>
-    <fields>
-        <help>数式: 関連する世帯の今年の支援総額。</help>
-        <label>今年の世帯支援総額</label>
-        <name>OppAmountThisYearHH__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する成立支援で、今年完了したものの総額。</help>
-        <label>今年の支援総額</label>
-        <name>OppAmountThisYear__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する、金額が 0 より大きい成立支援で、一昨年前に完了したものの合計回数。</help>
-        <label>一昨年の支援回数</label>
-        <name>OppsClosed2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する、金額が 0 より大きい成立支援で、[世帯設定] に定義されている過去の日数の間に完了したものの合計回数。</help>
-        <label>N日間の支援回数</label>
-        <name>OppsClosedLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する、金額が 0 より大きい成立支援で、昨年に完了したものの合計回数。</help>
-        <label>昨年の支援回数</label>
-        <name>OppsClosedLastYear__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する、金額が 0 より大きい成立支援で、今年に完了したものの合計回数。</help>
-        <label>今年の支援回数</label>
-        <name>OppsClosedThisYear__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する成立支援の最小金額。</help>
-        <label>最小支援金額</label>
-        <name>SmallestAmount__c</name>
-    </fields>
-    <fields>
-        <help>昨年のソフトクレジットの総額。</help>
-        <label>昨年のソフトクレジット</label>
-        <name>Soft_Credit_Last_Year__c</name>
-    </fields>
-    <fields>
-        <help>今年のソフトクレジットの総額。</help>
-        <label>今年のソフトクレジット</label>
-        <name>Soft_Credit_This_Year__c</name>
-    </fields>
-    <fields>
-        <help>この個人の全期間のソフトクレジットの総額。[世帯設定] タブで定義します。</help>
-        <label>ソフトクレジット合計</label>
-        <name>Soft_Credit_Total__c</name>
-    </fields>
-    <fields>
-        <help>2 年前のソフトクレジットの総額。</help>
-        <label>2 年前のソフトクレジット</label>
-        <name>Soft_Credit_Two_Years_Ago__c</name>
-    </fields>
-    <fields>
-        <label>_SYSTEM: HOUSEHOLD PROCESSOR-廃止</label>
-        <name>SystemHouseholdProcessor__c</name>
-        <picklistValues>
-            <masterLabel>All Individual Contacts</masterLabel>
-            <translation>すべての各個人</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>All New or Edited Contacts</masterLabel>
-            <translation>すべての新規または編集済み個人</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>No Contacts</masterLabel>
-            <translation>個人なし</translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する成立会費支援 (レコードタイプ) の総額。</help>
-        <label>会費支援総額</label>
-        <name>TotalMembershipOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>この個人 (主支援個人の役割) に関連する成立支援の合計金額。</help>
-        <label>これまでの支援総額</label>
-        <name>TotalOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>数式: 関連する世帯の支援総額。</help>
-        <label>これまでの世帯支援総額</label>
-        <name>Total_Household_Gifts__c</name>
-    </fields>
-    <webLinks>
-        <label>世帯に住所をコピー</label>
-        <name>Copy_Address_to_Household</name>
-    </webLinks>
-    <webLinks>
-        <label>世帯</label>
-        <name>Household</name>
-    </webLinks>
+  <fields>
+    <name>AverageAmount__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連するすべての成立商談の平均金額。</help>
+    <label>平均支援金額</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year_Total__c</name>
+    <help>最大商談年の成立商談の合計金額。</help>
+    <label>最大支援年の総額</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year__c</name>
+    <help>この取引先責任者 (主取引先責任者の役割) に関連する成立商談の総額が最高であった年。「最大商談年の総額」も参照。</help>
+    <label>最大支援年</label>
+  </fields>
+  <fields>
+    <name>FirstCloseDate__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する、金額が 0 より大きい成立商談の最も古い完了日。</help>
+    <label>最初の支援日</label>
+  </fields>
+  <fields>
+    <name>Formula_HouseholdMailingAddress__c</name>
+    <help>数式: 世帯の郵送先住所のコピー (および数式)</help>
+    <label>世帯の郵送先住所</label>
+  </fields>
+  <fields>
+    <name>Formula_HouseholdPhone__c</name>
+    <help>数式: [世帯電話] 項目の簡単な数式。</help>
+    <label>世帯電話</label>
+  </fields>
+  <fields>
+    <name>Household_Naming_Order__c</name>
+    <help>世帯名の生成に使用する取引先責任者名の順序を決定します。</help>
+    <label>世帯命名順序</label>
+  </fields>
+  <fields>
+    <name>Household__c</name>
+    <relationshipLabel>世帯メンバー</relationshipLabel>
+    <label>世帯</label>
+  </fields>
+  <fields>
+    <name>LargestAmount__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する成立商談の最大金額。</help>
+    <label>最大支援金額</label>
+  </fields>
+  <fields>
+    <name>LastCloseDateHH__c</name>
+    <label>最終世帯支援日</label>
+  </fields>
+  <fields>
+    <name>LastCloseDate__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する最も新しい成立商談の完了日。</help>
+    <label>最終支援日</label>
+  </fields>
+  <fields>
+    <name>LastMembershipAmount__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する最も新しい (完了日) 成立会費 (レコードタイプ) 商談の金額。</help>
+    <label>最終会費支援金額</label>
+  </fields>
+  <fields>
+    <name>LastMembershipDate__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する成立会費 (レコードタイプ) 商談の最も新しい完了日。</help>
+    <label>最終会費支援日</label>
+  </fields>
+  <fields>
+    <name>LastMembershipLevel__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する最も新しい (完了日) 成立会費 (レコードタイプ) 商談のレベル。</help>
+    <label>最終会員レベル</label>
+  </fields>
+  <fields>
+    <name>LastMembershipOrigin__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する最も新しい (完了日) 成立会費 (レコードタイプ) 商談の状況 (新規、更新、復帰など)。</help>
+    <label>最終会員状況</label>
+  </fields>
+  <fields>
+    <name>LastOppAmount__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する最も新しい (完了日) 成立商談の金額。</help>
+    <label>最終支援金額</label>
+  </fields>
+  <fields>
+    <name>MembershipEndDate__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する最も新しい (完了日) 会費商談 (レコードタイプ) の会員終了日。</help>
+    <label>会員終了日</label>
+  </fields>
+  <fields>
+    <name>MembershipJoinDate__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する最も古い (完了日) 会費商談 (レコードタイプ) の入会日。</help>
+    <label>入会年月日</label>
+  </fields>
+  <fields>
+    <name>Naming_Exclusions__c</name>
+    <help>この取引先責任者が含まれない世帯名を決定します。</help>
+    <label>命名除外</label>
+    <picklistValues>
+      <masterLabel>Household__c.Name</masterLabel>
+      <translation>Household__c.Name</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Household__c.Formal_Greeting__c</masterLabel>
+      <translation>Household__c.Formal_Greeting__c</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Household__c.Informal_Greeting__c</masterLabel>
+      <translation>Household__c.Informal_Greeting__c</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>NumberOfClosedOpps__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する、金額が 0 より大きい成立商談の合計回数。</help>
+    <label>これまでの支援回数</label>
+  </fields>
+  <fields>
+    <name>NumberOfMembershipOpps__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する成立会費商談 (レコードタイプ) の回数。</help>
+    <label>会費払込回数</label>
+  </fields>
+  <fields>
+    <name>OppAmount2YearsAgo__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する成立商談で、一昨年に完了したものの総額。</help>
+    <label>一昨年の支援総額</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastNDays__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する成立商談で、[世帯設定] に定義されている過去の日数の間に完了したものの総額。</help>
+    <label>N日間の支援総額</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastYearHH__c</name>
+    <help>数式: 関連する世帯の昨年の支援総額。</help>
+    <label>昨年の世帯支援総額</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastYear__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する成立商談で、昨年に完了したものの総額。</help>
+    <label>昨年の支援総額</label>
+  </fields>
+  <fields>
+    <name>OppAmountThisYearHH__c</name>
+    <help>数式: 関連する世帯の今年の支援総額。</help>
+    <label>今年の世帯支援総額</label>
+  </fields>
+  <fields>
+    <name>OppAmountThisYear__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する成立商談で、今年完了したものの総額。</help>
+    <label>今年の支援総額</label>
+  </fields>
+  <fields>
+    <name>OppsClosed2YearsAgo__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する、金額が 0 より大きい成立商談で、一昨年前に完了したものの合計回数。</help>
+    <label>一昨年の支援回数</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastNDays__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する、金額が 0 より大きい成立商談で、[世帯設定] に定義されている過去の日数の間に完了したものの合計回数。</help>
+    <label>N日間の支援回数</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastYear__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する、金額が 0 より大きい成立商談で、昨年に完了したものの合計回数。</help>
+    <label>昨年の支援回数</label>
+  </fields>
+  <fields>
+    <name>OppsClosedThisYear__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する、金額が 0 より大きい成立商談で、今年に完了したものの合計回数。</help>
+    <label>今年の支援回数</label>
+  </fields>
+  <fields>
+    <name>SmallestAmount__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する成立商談の最小金額。</help>
+    <label>最小支援金額</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_Last_Year__c</name>
+    <help>昨年のソフトクレジットの総額。</help>
+    <label>昨年のソフトクレジット</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_This_Year__c</name>
+    <help>今年のソフトクレジットの総額。</help>
+    <label>今年のソフトクレジット</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_Total__c</name>
+    <help>この取引先責任者の全期間のソフトクレジットの総額。[世帯設定] タブで定義します。</help>
+    <label>ソフトクレジット合計</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_Two_Years_Ago__c</name>
+    <help>2 年前のソフトクレジットの総額。</help>
+    <label>2 年前のソフトクレジット</label>
+  </fields>
+  <fields>
+    <name>SystemHouseholdProcessor__c</name>
+    <label>_SYSTEM: HOUSEHOLD PROCESSOR-廃止</label>
+    <picklistValues>
+      <masterLabel>All Individual Contacts</masterLabel>
+      <translation>すべての個人取引先責任者</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>All New or Edited Contacts</masterLabel>
+      <translation>すべての新規または編集済み取引先責任者</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>No Contacts</masterLabel>
+      <translation>取引先責任者なし</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>TotalMembershipOppAmount__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する成立会費商談 (レコードタイプ) の総額。</help>
+    <label>会費支援総額</label>
+  </fields>
+  <fields>
+    <name>TotalOppAmount__c</name>
+    <help>この取引先責任者 (主商談取引先責任者の役割) に関連する成立商談の合計金額。</help>
+    <label>これまでの支援総額</label>
+  </fields>
+  <fields>
+    <name>Total_Household_Gifts__c</name>
+    <help>数式: 関連する世帯の支援総額。</help>
+    <label>これまでの世帯支援総額</label>
+  </fields>
+  <webLinks>
+    <name>Copy_Address_to_Household</name>
+    <label>世帯に住所をコピー</label>
+  </webLinks>
+  <webLinks>
+    <name>Household</name>
+    <label>世帯</label>
+  </webLinks>
 </CustomObjectTranslation>

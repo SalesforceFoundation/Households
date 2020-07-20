@@ -1,293 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
-        <label>Hinzufügen</label>
         <name>Add</name>
+        <label>Hinzufügen</label>
     </customLabels>
     <customLabels>
-        <label>Haushalte hinzufügen und zusammenführen</label>
         <name>AddAndMerge</name>
+        <label>Haushalte hinzufügen und zusammenführen</label>
     </customLabels>
     <customLabels>
-        <label>Hinzufügen und aus altem Haushalt entfernen</label>
         <name>AddAndRemove</name>
+        <label>Hinzufügen und aus altem Haushalt entfernen</label>
     </customLabels>
     <customLabels>
-        <label>Mitglieder hinzufügen</label>
         <name>AddHouseholdMembers</name>
+        <label>Mitglieder hinzufügen</label>
     </customLabels>
     <customLabels>
-        <label>Beim Kopieren der Adresse ist ein Fehler aufgetreten.</label>
         <name>AddressCopyFailure</name>
+        <label>Beim Kopieren der Adresse ist ein Fehler aufgetreten.</label>
     </customLabels>
     <customLabels>
-        <label>Adresse erfolgreich kopiert.</label>
         <name>AddressCopySuccess</name>
+        <label>Adresse erfolgreich kopiert.</label>
     </customLabels>
     <customLabels>
-        <label>Das Kopieren von Adressen wird bei diesem Objekttyp nicht unterstützt.</label>
         <name>AddressCopyUnknownObject</name>
+        <label>Das Kopieren von Adressen wird bei diesem Objekttyp nicht unterstützt.</label>
     </customLabels>
     <customLabels>
-        <label>Legen Sie die Privatadresse für alle Mitglieder des Haushalts mit dieser Adresse fest.</label>
         <name>AddressToAllMembers</name>
+        <label>Legen Sie die Privatadresse für alle Mitglieder des Haushalts mit dieser Adresse fest.</label>
     </customLabels>
     <customLabels>
-        <label>Bereits im Haushalt vorhanden</label>
         <name>AlreadyInHousehold</name>
+        <label>Bereits im Haushalt vorhanden</label>
     </customLabels>
     <customLabels>
-        <label>Autom. formelle Anrede</label>
         <name>AutoFormalGreeting</name>
+        <label>Autom. formelle Anrede</label>
     </customLabels>
     <customLabels>
-        <label>Autom. informelle Anrede</label>
         <name>AutoInformalGreeting</name>
+        <label>Autom. informelle Anrede</label>
     </customLabels>
     <customLabels>
-        <label>Autom. Name</label>
         <name>AutoName</name>
+        <label>Autom. Name</label>
     </customLabels>
     <customLabels>
-        <label>Ändern</label>
         <name>Change</name>
+        <label>Ändern</label>
     </customLabels>
     <customLabels>
-        <label>Adresse ändern</label>
         <name>ChangeAddress</name>
+        <label>Adresse ändern</label>
     </customLabels>
     <customLabels>
-        <label>Änderungen nicht gespeichert.</label>
         <name>ChangesNotSaved</name>
+        <label>Änderungen nicht gespeichert.</label>
     </customLabels>
     <customLabels>
-        <label>ist bereits im Haushalt vorhanden. Möchten Sie diesen Kontakt mit oder ohne seine vorhandenen Haushalt-Mitglieder hinzufügen?</label>
         <name>ContactAlreadyInHousehold</name>
+        <label>ist bereits im Haushalt vorhanden. Möchten Sie diesen Kontakt mit oder ohne seine vorhandenen Haushalt-Mitglieder hinzufügen?</label>
     </customLabels>
     <customLabels>
-        <label>Der Nachname ist erforderlich.</label>
         <name>ContactLastNameRqd</name>
+        <label>Der Nachname ist erforderlich.</label>
     </customLabels>
     <customLabels>
-        <label>Geben Sie einen Vornamen und Nachnamen ein.</label>
         <name>ContactNameRqd</name>
+        <label>Geben Sie einen Vornamen und Nachnamen ein.</label>
     </customLabels>
     <customLabels>
-        <label>Der Kontakt wird beim Speichern des Haushalts erstellt.</label>
         <name>CreatedOnSave</name>
+        <label>Der Kontakt wird beim Speichern des Haushalts erstellt.</label>
     </customLabels>
     <customLabels>
-        <label>Haushalt</label>
         <name>DefaultHouseholdName</name>
+        <label>Haushalt</label>
     </customLabels>
     <customLabels>
-        <label>$</label>
         <name>DefaultHouseholdTransactionCurrency</name>
+        <label>$</label>
     </customLabels>
     <customLabels>
-        <label>Löschen</label>
         <name>Delete</name>
+        <label>Löschen</label>
     </customLabels>
     <customLabels>
-        <label>Neue Adresse eingeben</label>
         <name>EnterNewAddress</name>
+        <label>Neue Adresse eingeben</label>
     </customLabels>
     <customLabels>
-        <label>Kontakt von automatischer Haushalt-Benennung ausschließen:</label>
         <name>ExcludeText</name>
+        <label>Kontakt von automatischer Haushalt-Benennung ausschließen:</label>
     </customLabels>
     <customLabels>
-        <label>Bestehender Haushalt</label>
         <name>ExistingHousehold</name>
+        <label>Bestehender Haushalt</label>
     </customLabels>
     <customLabels>
-        <label>Kontakt nach Namen suchen...</label>
         <name>FindContactByName</name>
+        <label>Kontakt nach Namen suchen...</label>
     </customLabels>
     <customLabels>
-        <label>Haushalt-Adresse</label>
         <name>HouseholdAddress</name>
+        <label>Haushalt-Adresse</label>
     </customLabels>
     <customLabels>
-        <label>Herr oder Frau</label>
         <name>HouseholdAnonymousGreeting</name>
+        <label>Herr oder Frau</label>
     </customLabels>
     <customLabels>
-        <label>Anonym</label>
         <name>HouseholdAnonymousName</name>
+        <label>Anonym</label>
     </customLabels>
     <customLabels>
-        <label>Haushalt-Details</label>
         <name>HouseholdDetails</name>
+        <label>Haushalt-Details</label>
     </customLabels>
     <customLabels>
-        <label>Haushalt-Mitglieder</label>
         <name>HouseholdMembers</name>
+        <label>Haushalt-Mitglieder</label>
     </customLabels>
     <customLabels>
-        <label>und</label>
         <name>HouseholdNameConnector</name>
+        <label>und</label>
     </customLabels>
     <customLabels>
-        <label>Freunde</label>
         <name>HouseholdNameOverrun</name>
+        <label>Freunde</label>
     </customLabels>
     <customLabels>
-        <label>Keine Opportunities</label>
         <name>Household_Contact_Role_Processor_Off</name>
+        <label>Keine Opportunities</label>
     </customLabels>
     <customLabels>
-        <label>Alle Opportunities</label>
         <name>Household_Contact_Role_Processor_On</name>
+        <label>Alle Opportunities</label>
     </customLabels>
     <customLabels>
-        <label>Mit diesen Einstellungen können Sie automatisch Opportunity-Kontaktrollen für Haushalt-Mitglieder erstellen, wenn eine Opportunity erstellt wird.</label>
         <name>Household_Contact_Roles_Help_Text</name>
+        <label>Mit diesen Einstellungen können Sie automatisch Opportunity-Kontaktrollen für Haushalt-Mitglieder erstellen, wenn eine Opportunity erstellt wird.</label>
     </customLabels>
     <customLabels>
-        <label>Haushalt-Mitglied</label>
         <name>Household_Member_Contact_Role</name>
+        <label>Haushalt-Mitglied</label>
     </customLabels>
     <customLabels>
-        <label>ERSETZT. Nicht verwendet. Auswählen, welche Kontakte Haushalte erhalten: Alle, nur diejenigen, die mit einem einzelnen Account verbunden sind, oder keine.</label>
         <name>Household_Rules_Help_Text</name>
+        <label>ERSETZT. Nicht verwendet. Auswählen, welche Kontakte Haushalte erhalten: Alle, nur diejenigen, die mit einem einzelnen Account verbunden sind, oder keine.</label>
     </customLabels>
     <customLabels>
-        <label>Haushalt verwalten</label>
         <name>ManageHousehold</name>
+        <label>Haushalt verwalten</label>
     </customLabels>
     <customLabels>
-        <label>ERSETZEN</label>
         <name>NameReplacementText</name>
+        <label>ERSETZEN</label>
     </customLabels>
     <customLabels>
-        <label>Neuer Kontakt</label>
         <name>NewContact</name>
+        <label>Neuer Kontakt</label>
     </customLabels>
     <customLabels>
-        <label>In diesem Haushalt sind aktuell keine Kontakte vorhanden.</label>
         <name>NoContacts</name>
+        <label>In diesem Haushalt sind aktuell keine Kontakte vorhanden.</label>
     </customLabels>
     <customLabels>
-        <label>Rollup-Fehler können bei nächtlichen oder manuellen Rollups auftreten und die Genauigkeit Ihrer Daten beeinträchtigen. Nachfolgend sind die Fehler, der Fehlertyp und ein Link zum Datensatz mit dem Fehler aufgeführt. Diese Fehler werden bei jeder Ausführung des nächtlichen Auftrags oder manuellen Rollups zurückgesetzt. Es wird dringend empfohlen, diese Fehler umgehend zu beheben, um die Genauigkeit der Daten sicherzustellen.</label>
         <name>Opportunity_Error_Help_Text</name>
+        <label>Rollup-Fehler können bei nächtlichen oder manuellen Rollups auftreten und die Genauigkeit Ihrer Daten beeinträchtigen. Nachfolgend sind die Fehler, der Fehlertyp und ein Link zum Datensatz mit dem Fehler aufgeführt. Diese Fehler werden bei jeder Ausführung des nächtlichen Auftrags oder manuellen Rollups zurückgesetzt. Es wird dringend empfohlen, diese Fehler umgehend zu beheben, um die Genauigkeit der Daten sicherzustellen.</label>
     </customLabels>
     <customLabels>
-        <label>Es wurde kein Rollup durchgeführt, weil zu wenig zukünftige Anrufe verfügbar sind.</label>
         <name>Opportunity_Rollup_Future_Call_Limit</name>
+        <label>Es wurde kein Rollup durchgeführt, weil zu wenig zukünftige Anrufe verfügbar sind.</label>
     </customLabels>
     <customLabels>
-        <label>Sie haben die maximale Anzahl der geplanten Apex-Aufträge erreicht und die Opportunity-Rollups werden nicht in der Nacht durchgeführt. Wenn dieser Auftrag in der Nacht ausgeführt werden soll, müssen Sie einen der geplanten Aufträge löschen und diese Seite neu laden.</label>
         <name>Opportunity_Rollup_Scheduling_Error_Text</name>
+        <label>Sie haben die maximale Anzahl der geplanten Apex-Aufträge erreicht und die Opportunity-Rollups werden nicht in der Nacht durchgeführt. Wenn dieser Auftrag in der Nacht ausgeführt werden soll, müssen Sie einen der geplanten Aufträge löschen und diese Seite neu laden.</label>
     </customLabels>
     <customLabels>
-        <label>Spender</label>
         <name>Primary_Donor_Contact_Role</name>
+        <label>Spender</label>
     </customLabels>
     <customLabels>
-        <label>Beim letzten Rollup Ihrer Opportunities sind Fehler aufgetreten. Weitere Informationen finden Sie im Bereich &quot;Systemfehlerprotokoll&quot;.</label>
         <name>RollupErrorMessage</name>
+        <label>Beim letzten Rollup Ihrer Opportunities sind Fehler aufgetreten. Weitere Informationen finden Sie im Bereich "Systemfehlerprotokoll".</label>
     </customLabels>
     <customLabels>
-        <label>Vorhandene Adresse auswählen</label>
         <name>SelectExistingAddress</name>
+        <label>Vorhandene Adresse auswählen</label>
     </customLabels>
     <customLabels>
-        <label>Adresse festlegen</label>
         <name>SetAddress</name>
+        <label>Adresse festlegen</label>
     </customLabels>
     <customLabels>
+        <name>UDRDescription</name>
         <label>Mit diesen Einstellungen können Sie benutzerdefinierte Rollups aus einer Opportunity (Spende) zu einem Kontakt, Account oder Haushalt erstellen und verwalten. Nachdem Sie einen benutzerdefinierten Rollup erstellt haben, können Sie den Rollup-Spenden-Batch unter NPSP-Einstellungen | Massendatenvorgänge verwenden, um alle Rollups in Ihrer Instanz neu zu berechnen und sicherzustellen, dass Ihr neues Rollup-Feld die richtigen Daten enthält.
 
 WARNUNG: Denken Sie daran, dass das Verhalten Ihres Nonprofit Success Packs durch Rollups geändert wird. Falsch konfigurierte Einstellungen können verursachen, dass das Rollup fehlschlägt. Testen Sie Ihre benutzerdefinierten Rollups gründlich, bevor Sie sie für die Produktion bereitstellen.</label>
-        <name>UDRDescription</name>
     </customLabels>
-    <customPageWebLinks>
-        <label><!-- Nonprofit Edition Reports --></label>
-        <name>Nonprofit_Edition_Reports</name>
-    </customPageWebLinks>
-    <customTabs>
-        <label><!-- Contact Merge (OLD) --></label>
-        <name>Contact_Merge</name>
-    </customTabs>
-    <customTabs>
-        <label><!-- Contacts Settings --></label>
-        <name>Contacts_Settings</name>
-    </customTabs>
-    <customTabs>
-        <label>Haushalt-Einstellungen</label>
-        <name>Households_Settings</name>
-    </customTabs>
-    <customTabs>
-        <label>Opportunity-Rollups</label>
-        <name>Opportunity_Rollups</name>
-    </customTabs>
-    <customTabs>
-        <label><!-- Payment Mapping --></label>
-        <name>Payment_Mapping</name>
-    </customTabs>
-    <customTabs>
-        <label>Benutzer-Rollups</label>
-        <name>User_Rollups</name>
-    </customTabs>
-    <quickActions>
-        <label><!-- LogACall --></label>
-        <name>LogACall</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewAccount --></label>
-        <name>NewAccount</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewCase --></label>
-        <name>NewCase</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewContact --></label>
-        <name>NewContact</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewEvent --></label>
-        <name>NewEvent</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewGroup --></label>
-        <name>NewGroup</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewLead --></label>
-        <name>NewLead</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewNote --></label>
-        <name>NewNote</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewOpportunity --></label>
-        <name>NewOpportunity</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- NewTask --></label>
-        <name>NewTask</name>
-    </quickActions>
-    <quickActions>
-        <label><!-- SendEmail --></label>
-        <name>SendEmail</name>
-    </quickActions>
     <reportTypes>
-        <label>Haushalte und Spenden</label>
         <name>Households_and_Donations</name>
-        <sections>
-            <label>Haushalt-Mitglieder</label>
-            <name>Household Members</name>
-        </sections>
+        <label>Haushalte und Spenden</label>
         <sections>
             <label>Haushalte</label>
             <name>Households</name>
+        </sections>
+        <sections>
+            <label>Haushalt-Mitglieder</label>
+            <name>Household Members</name>
         </sections>
         <sections>
             <label>Opportunities</label>
             <name>Opportunities</name>
         </sections>
     </reportTypes>
+    <customTabs>
+        <name>Households_Settings</name>
+        <label>Haushalt-Einstellungen</label>
+    </customTabs>
+    <customTabs>
+        <name>Opportunity_Rollups</name>
+        <label>Opportunity-Rollups</label>
+    </customTabs>
+    <customTabs>
+        <name>User_Rollups</name>
+        <label>Benutzer-Rollups</label>
+    </customTabs>
 </Translations>
