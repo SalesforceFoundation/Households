@@ -128,7 +128,7 @@
     </fields>
     <fields>
         <help>Formel: Schenkungen gesamt im letzten Jahr zum verbundenen Haushalt.</help>
-        <label>Schenkungen des Haushalts gesamt im letzten Jahr</label>
+        <label>Summe Schenkungen Haushalt letztes Jahr</label>
         <name>OppAmountLastYearHH__c</name>
     </fields>
     <fields>

@@ -75,7 +75,7 @@
         <name>Formal_Greeting__c</name>
     </fields>
     <fields>
-        <help>Formel: Verkettung anderer Postanschriftfelder für diesen Haushalt. Kann auf der Seite &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
+        <help>Formel: Verkettung anderer Postanschriftfelder für diesen Haushalt. Kann auf &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
         <label>Postanschrift</label>
         <name>Formula_MailingAddress__c</name>
     </fields>
@@ -134,27 +134,27 @@
         <name>LastOppAmount__c</name>
     </fields>
     <fields>
-        <help>Festlegung durch den ursprünglichen Kontakt, der diesen Haushalt erstellt hat. Kann auf der Seite &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
+        <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
         <label>Postanschrift Stadt</label>
         <name>MailingCity__c</name>
     </fields>
     <fields>
-        <help>Festlegung durch den ursprünglichen Kontakt, der diesen Haushalt erstellt hat. Kann auf der Seite &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
+        <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
         <label>Postanschrift Land</label>
         <name>MailingCountry__c</name>
     </fields>
     <fields>
-        <help>Festlegung durch den ursprünglichen Kontakt, der diesen Haushalt erstellt hat. Kann auf der Seite &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
+        <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
         <label>Postanschrift PLZ</label>
         <name>MailingPostalCode__c</name>
     </fields>
     <fields>
-        <help>Festlegung durch den ursprünglichen Kontakt, der diesen Haushalt erstellt hat. Kann auf der Seite &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
+        <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
         <label>Postanschrift Bundesstaat/Provinz</label>
         <name>MailingState__c</name>
     </fields>
     <fields>
-        <help>Festlegung durch den ursprünglichen Kontakt, der diesen Haushalt erstellt hat. Kann auf der Seite &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
+        <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
         <label>Postanschrift Straße</label>
         <name>MailingStreet__c</name>
     </fields>
@@ -215,7 +215,7 @@
     </fields>
     <fields>
         <help>Die Anzahl der mit Schlusstermin in den letzten N Tagen (Haushalt-Einstellungen) in Verbindung mit diesem Haushalt per verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
-        <label>Anzahl der Schenkungen in den letzten N Tagen</label>
+        <label>Anzahl Schenkungen in letzten N Tagen</label>
         <name>OppsClosedLastNDays__c</name>
     </fields>
     <fields>

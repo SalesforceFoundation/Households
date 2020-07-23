@@ -46,7 +46,7 @@
         <name>Advanced_Household_Naming__c</name>
     </fields>
     <fields>
-        <help>Bei Aktivierung führt Salesforce IMMER einen Rollup zu den Spenderdaten des primären Kontakts der Opportunity und dem entsprechenden Haushalt-Account oder -Datensatz durch, auch wenn die Opportunity nicht von einer Einzelperson stammt. Erfolgt keine Aktivierung, erhält nur die Organisation Kredit.</help>
+        <help>Bei aktivierter Option führt Salesforce IMMER einen Rollup zu den Spenderdaten des prim. Kontakts der Opp. und dem Haushalt-Account/-Datensatz durch, auch wenn die Opp. nicht von einer Person stammt. Ohne Aktivierung erhält nur die Organisation Kredit.</help>
         <label>Immer Rollup zu primärer Kontaktrolle</label>
         <name>Always_Rollup_to_Primary_Contact__c</name>
     </fields>

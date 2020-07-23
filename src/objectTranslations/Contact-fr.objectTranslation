@@ -172,23 +172,23 @@
         <name>SmallestAmount__c</name>
     </fields>
     <fields>
-        <help>Montant total de crédit indirect au cours de l’année dernière déterminé par un rôle de contact d’opportunité et filtré par les rôles dans les Paramètres de foyer.</help>
-        <label>Crédit indirect l’année dernière</label>
+        <help>Montant total de crédits indirects au cours de l’année dernière déterminé par un rôle de contact d’opportunité et filtré par les rôles dans les Paramètres de foyer.</help>
+        <label>Crédits indirects l&apos;année dernière</label>
         <name>Soft_Credit_Last_Year__c</name>
     </fields>
     <fields>
-        <help>Montant total de crédit indirect cette année</help>
-        <label>Crédit indirect cette année</label>
+        <help>Montant total de crédits indirects cette année</help>
+        <label>Crédits indirects cette année</label>
         <name>Soft_Credit_This_Year__c</name>
     </fields>
     <fields>
         <help>Montant total de crédits indirects sur la durée de vie de ce contact. Défini dans l’onglet de configuration de foyer.</help>
-        <label>Total de crédit indirect</label>
+        <label>Total crédits indirects</label>
         <name>Soft_Credit_Total__c</name>
     </fields>
     <fields>
-        <help>Montant total de crédit indirect il y a deux ans déterminé par un rôle de contact d’opportunité et filtré par les rôles dans les Paramètres de foyer.</help>
-        <label>Crédit indirect il y a deux ans</label>
+        <help>Montant total de crédits indirects il y a deux ans déterminé par un rôle de contact d’opportunité et filtré par les rôles dans les Paramètres de foyer.</help>
+        <label>Crédits indirects il y a deux ans</label>
         <name>Soft_Credit_Two_Years_Ago__c</name>
     </fields>
     <fields>

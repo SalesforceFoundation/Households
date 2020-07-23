@@ -201,7 +201,7 @@
         <name>UDRDescription</name>
     </customLabels>
     <customPageWebLinks>
-        <label><!-- Nonprofit Edition Reports --></label>
+        <label><!-- DEPRECATED: Nonprofit Edition Reports --></label>
         <name>Nonprofit_Edition_Reports</name>
     </customPageWebLinks>
     <customTabs>
@@ -288,4 +288,4 @@
             <name>Opportunities</name>
         </sections>
     </reportTypes>
-</Translations>
+    </Translations>
