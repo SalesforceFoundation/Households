@@ -1,292 +1,276 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>Addressee__c</name>
-    <label>Adressat</label>
-  </fields>
-  <fields>
-    <name>Always_Anonymous__c</name>
-    <help>Zur Einstellung des Haushalt-Namens und anderer Felder unter Verwendung anonymer Informationen.</help>
-    <label>Immer anonym</label>
-  </fields>
-  <fields>
-    <name>AverageAmount__c</name>
-    <help>Durchschnittlicher Betrag der in Verbindung mit diesem Haushalt von einem verbundenen Kontakt mit primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
-    <label>Durchschnittliche Schenkung</label>
-  </fields>
-  <fields>
-    <name>Best_Gift_Year_Total__c</name>
-    <help>Die Summe der im Jahr der besten Schenkung für diesen Haushalt über Kontakte mit primärer Opportunity-Kontaktrolle gewonnenen Opportunity-Beträge. Siehe auch "Jahr der besten Schenkung".</help>
-    <label>Jahr der besten Schenkung gesamt</label>
-  </fields>
-  <fields>
-    <name>Best_Gift_Year__c</name>
-    <help>Das Jahr, in dem der höchste Gesamtbetrag an Opportunities in Verbindung mit diesem Haushalt über Kontakte mit primärer Opportunity-Kontaktrolle gewonnen wurde. Siehe auch "Jahr der besten Schenkung gesamt".</help>
-    <label>Jahr der besten Schenkung</label>
-  </fields>
-  <fields>
-    <name>FirstCloseDate__c</name>
-    <help>Der früheste Schlusstermin einer in Verbindung mit diesem Haushalt über Kontakte mit primärer Kontaktrolle gewonnenen Opportunity.</help>
-    <label>Datum der ersten Schenkung</label>
-  </fields>
-  <fields>
-    <name>Formal_Greeting__c</name>
-    <help>Verwendet Felder nicht ausgeschlossener beauftragter zugehöriger Kontakte. Automatisch generiert.</help>
-    <label>Formelle Anrede</label>
-  </fields>
-  <fields>
-    <name>Formula_MailingAddress__c</name>
-    <help>Formel: Verkettung anderer Postanschriftfelder für diesen Haushalt. Kann auf "Haushalt bearbeiten" aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche "Adresse des Haushalts zu Kontakten hinzufügen" geklickt wird.</help>
-    <label>Postanschrift</label>
-  </fields>
-  <fields>
-    <name>HouseholdEmail__c</name>
-    <help>Wird durch den Kontakt eingestellt, der diesen Haushalt ursprünglich erstellt hat. Kann unter "Haushalt" bearbeitet werden, wird jedoch unter "Kontakt" nicht aktualisiert.</help>
-    <label>E-Mail-Adresse des Haushalts</label>
-  </fields>
-  <fields>
-    <name>HouseholdPhone__c</name>
-    <help>Wird durch den Kontakt eingestellt, der diesen Haushalt ursprünglich erstellt hat. Kann unter "Haushalt" bearbeitet werden, wird jedoch unter "Kontakt" nicht aktualisiert.</help>
-    <label>Haushalt-Telefon</label>
-  </fields>
-  <fields>
-    <name>Household_ID__c</name>
-    <label>Haushalt-Kennung</label>
-  </fields>
-  <fields>
-    <name>Informal_Greeting__c</name>
-    <help>Verwendet Felder nicht ausgeschlossener beauftragter zugehöriger Kontakte. Automatisch generiert.</help>
-    <label>Informelle Anrede</label>
-  </fields>
-  <fields>
-    <name>LargestAmount__c</name>
-    <help>Der größte Betrag der für diesen Haushalt von verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunity.</help>
-    <label>Größte Schenkung</label>
-  </fields>
-  <fields>
-    <name>LastCloseDate__c</name>
-    <help>Letzter Schlusstermin einer für diesen Haushalt über verbundene Kontakte mit primärer Kontaktrolle gewonnenen Opportunity.</help>
-    <label>Datum der letzten Schenkung</label>
-  </fields>
-  <fields>
-    <name>LastMembershipAmount__c</name>
-    <help>Der zuletzt für diesen Haushalt über verbundene Kontakte mit primärer Opportunity-Kontaktrolle gewonnene Mitgliedschaft-Opportunity- (Datensatztyp) Betrag.</help>
-    <label>Betrag der letzten Mitgliedschaft</label>
-  </fields>
-  <fields>
-    <name>LastMembershipDate__c</name>
-    <help>Der letzte Schlusstermin einer für diesen Haushalt über verbundene Kontakte mit primärer Kontaktrolle gewonnenen Mitgliedschaft-Opportunity.</help>
-    <label>Datum der letzten Mitgliedschaft</label>
-  </fields>
-  <fields>
-    <name>LastMembershipLevel__c</name>
-    <help>Die Mitgliedschaftebene der zuletzt für diesen Haushalt über verbundene Kontakte mit primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft-Opportunity.</help>
-    <label>Ebene der letzten Mitgliedschaft</label>
-  </fields>
-  <fields>
-    <name>LastMembershipOrigin__c</name>
-    <help>Der Ursprung (neu, verlängert...) der zuletzt für diesen Haushalt über verbundene Kontakte mit primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft-Opportunity.</help>
-    <label>Ursprung der letzten Mitgliedschaft</label>
-  </fields>
-  <fields>
-    <name>LastOppAmount__c</name>
-    <help>Der letzte Betrag der für diesen Haushalt von verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunity.</help>
-    <label>Betrag der letzten Schenkung</label>
-  </fields>
-  <fields>
-    <name>MailingCity__c</name>
-    <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf "Haushalt bearbeiten" aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche "Adresse des Haushalts zu Kontakten hinzufügen" geklickt wird.</help>
-    <label>Postanschrift Stadt</label>
-  </fields>
-  <fields>
-    <name>MailingCountry__c</name>
-    <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf "Haushalt bearbeiten" aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche "Adresse des Haushalts zu Kontakten hinzufügen" geklickt wird.</help>
-    <label>Postanschrift Land</label>
-  </fields>
-  <fields>
-    <name>MailingPostalCode__c</name>
-    <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf "Haushalt bearbeiten" aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche "Adresse des Haushalts zu Kontakten hinzufügen" geklickt wird.</help>
-    <label>Postanschrift PLZ</label>
-  </fields>
-  <fields>
-    <name>MailingState__c</name>
-    <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf "Haushalt bearbeiten" aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche "Adresse des Haushalts zu Kontakten hinzufügen" geklickt wird.</help>
-    <label>Postanschrift Bundesstaat/Provinz</label>
-  </fields>
-  <fields>
-    <name>MailingStreet__c</name>
-    <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf "Haushalt bearbeiten" aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche "Adresse des Haushalts zu Kontakten hinzufügen" geklickt wird.</help>
-    <label>Postanschrift Straße</label>
-  </fields>
-  <fields>
-    <name>MembershipEndDate__c</name>
-    <help>Das Mitgliedschaft-Enddatum der zuletzt für diesen Haushalt über verbundene Kontakte mit primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft-Opportunity.</help>
-    <label>Enddatum der Mitgliedschaft</label>
-  </fields>
-  <fields>
-    <name>MembershipJoinDate__c</name>
-    <help>Das früheste Beitrittsdatum der Mitgliedschaft der ältesten Mitgliedschaft-Opportunity (Schlusstermin, Datensatztyp) für diesen Haushalt über verbundene Kontakte mit primärer Kontaktrolle.</help>
-    <label>Beitrittsdatum der Mitgliedschaft</label>
-  </fields>
-  <fields>
-    <name>Membership_Span__c</name>
-    <help>Formel: Die Anzahl der Jahre, für die dieser Haushalt ein Mitglied hatte.</help>
-    <label>Zeitraum der Mitgliedschaft</label>
-  </fields>
-  <fields>
-    <name>Membership_Status__c</name>
-    <help>Formel: Aktueller, abgelaufener oder Kulanzzeitraum. Festlegung des Standardkulanzzeitraum in den Haushalt-Einstellungen.</help>
-    <label>Mitgliedschaft-Status</label>
-  </fields>
-  <fields>
-    <name>NumberOfClosedOpps__c</name>
-    <help>Die Gesamtzahl der Schenkungen in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
-    <label>Anzahl an Schenkungen gesamt</label>
-  </fields>
-  <fields>
-    <name>NumberOfMembershipOpps__c</name>
-    <help>Der Gesamtbetrag der in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft-Opportunities.</help>
-    <label>Anzahl der Mitgliedschaften</label>
-  </fields>
-  <fields>
-    <name>OppAmount2YearsAgo__c</name>
-    <help>Summe der Schenkungen von vor zwei Jahren für den Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
-    <label>Schenkungen gesamt vor zwei Jahren</label>
-  </fields>
-  <fields>
-    <name>OppAmountLastNDays__c</name>
-    <help>Der Gesamtbetrag der in Verbindung mit diesem Haushalt, in den letzten in den Haushalt-Einstellungen definierten N Tagen nach Kontakt und primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
-    <label>Schenkungen gesamt in letzten N Tagen</label>
-  </fields>
-  <fields>
-    <name>OppAmountLastYear__c</name>
-    <help>Summe der Schenkungen im letzten Jahr für den Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
-    <label>Schenkungen gesamt im letzten Jahr</label>
-  </fields>
-  <fields>
-    <name>OppAmountThisYear__c</name>
-    <help>Summe der Schenkungen in diesem Jahr für den Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
-    <label>Schenkungen gesamt in diesem Jahr</label>
-  </fields>
-  <fields>
-    <name>OppsClosed2YearsAgo__c</name>
-    <help>Die Anzahl der mit Schlusstermin in den letzten 2 Jahren in Verbindung mit diesem Haushalt per verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
-    <label>Anzahl der Schenkungen vor zwei Jahren</label>
-  </fields>
-  <fields>
-    <name>OppsClosedLastNDays__c</name>
-    <help>Die Anzahl der mit Schlusstermin in den letzten N Tagen (Haushalt-Einstellungen) in Verbindung mit diesem Haushalt per verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
-    <label>Anzahl Schenkungen in letzten N Tagen</label>
-  </fields>
-  <fields>
-    <name>OppsClosedLastYear__c</name>
-    <help>Die Anzahl der mit Schlusstermin im letzten Jahr in Verbindung mit diesem Haushalt per verbundenen Kontakten mit primärer Kontaktrolle gewonnenen Opportunities.</help>
-    <label>Anzahl der Schenkungen im letzten Jahr</label>
-  </fields>
-  <fields>
-    <name>OppsClosedThisYear__c</name>
-    <help>Die Anzahl der mit Schlusstermin in diesem Jahr in Verbindung mit diesem Haushalt per verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
-    <label>Anzahl der Schenkungen dieses Jahr</label>
-  </fields>
-  <fields>
-    <name>SYSTEM_CUSTOM_NAMING__c</name>
-    <help>Name, formelle Anrede oder informelle Anrede</help>
-    <label>_SYSTEM: BENUTZERDEFINIERTE BENENNUNG</label>
-    <picklistValues>
-      <masterLabel>Name</masterLabel>
-      <translation>Name</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Formal_Greeting__c</masterLabel>
-      <translation>Formal_Greeting__c</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Informal_Greeting__c</masterLabel>
-      <translation>Informal_Greeting__c</translation>
-    </picklistValues>
-  </fields>
-  <fields>
-    <name>SmallestAmount__c</name>
-    <help>Der kleinste Betrag einer in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.gewonnenen Opportunity.</help>
-    <label>Kleinste Schenkung</label>
-  </fields>
-  <fields>
-    <name>TotalMembershipOppAmount__c</name>
-    <help>Der Gesamtbetrag der in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft-Opportunities (Datensatztyp).</help>
-    <label>Gesamtbetrag der Mitgliedschaft</label>
-  </fields>
-  <fields>
-    <name>TotalOppAmount__c</name>
-    <help>Die Summe der in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.gewonnenen Opportunities.</help>
-    <label>Schenkungen gesamt</label>
-  </fields>
-  <webLinks>
-    <name>Copy_Household_Address_to_Contacts</name>
-    <label>Adresse des Haushalts zu Kontakten hinzufügen</label>
-  </webLinks>
-  <layouts>
-    <layout>Household Layout</layout>
-    <sections>
-      <label>Informationen zum Haushalt</label>
-      <section>Household Information</section>
-    </sections>
-    <sections>
-      <label>Spendeninformationen</label>
-      <section>Donation Information</section>
-    </sections>
-    <sections>
-      <label>Spendenbeträge gesamt</label>
-      <section>Donation Totals</section>
-    </sections>
-    <sections>
-      <label>Benutzerdefinierte Links</label>
-      <section>Custom Links</section>
-    </sections>
-  </layouts>
-  <nameFieldLabel>Haushalt-Name</nameFieldLabel>
-  <standardFields>
-    <name>Name</name>
-    <label>Haushalt-Name</label>
-  </standardFields>
-  <gender>Masculine</gender>
-  <caseValues>
-    <plural>false</plural>
-    <caseType>Nominative</caseType>
-    <value>Haushalt</value>
-  </caseValues>
-  <caseValues>
-    <plural>false</plural>
-    <caseType>Accusative</caseType>
-    <value>Haushalt</value>
-  </caseValues>
-  <caseValues>
-    <plural>false</plural>
-    <caseType>Dative</caseType>
-    <value>Haushalt</value>
-  </caseValues>
-  <caseValues>
-    <plural>false</plural>
-    <caseType>Genitive</caseType>
-    <value>Haushalts</value>
-  </caseValues>
-  <caseValues>
-    <plural>true</plural>
-    <caseType>Nominative</caseType>
-    <value>Haushalte</value>
-  </caseValues>
-  <caseValues>
-    <plural>true</plural>
-    <caseType>Accusative</caseType>
-    <value>Haushalte</value>
-  </caseValues>
-  <caseValues>
-    <plural>true</plural>
-    <caseType>Dative</caseType>
-    <value>Haushalten</value>
-  </caseValues>
-  <caseValues>
-    <plural>true</plural>
-    <caseType>Genitive</caseType>
-    <value>Haushalte</value>
-  </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Haushalt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Haushalte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Haushalt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Haushalte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Haushalts</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Haushalte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Haushalt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Haushalten</value>
+    </caseValues>
+    <fields>
+        <label>Adressat</label>
+        <name>Addressee__c</name>
+    </fields>
+    <fields>
+        <help>Zur Einstellung des Haushalt-Namens und anderer Felder unter Verwendung anonymer Informationen.</help>
+        <label>Immer anonym</label>
+        <name>Always_Anonymous__c</name>
+    </fields>
+    <fields>
+        <help>Durchschnittlicher Betrag der in Verbindung mit diesem Haushalt von einem verbundenen Kontakt mit primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
+        <label>Durchschnittliche Schenkung</label>
+        <name>AverageAmount__c</name>
+    </fields>
+    <fields>
+        <help>Die Summe der im Jahr der besten Schenkung für diesen Haushalt über Kontakte mit primärer Opportunity-Kontaktrolle gewonnenen Opportunity-Beträge. Siehe auch &quot;Jahr der besten Schenkung&quot;.</help>
+        <label>Jahr der besten Schenkung gesamt</label>
+        <name>Best_Gift_Year_Total__c</name>
+    </fields>
+    <fields>
+        <help>Das Jahr, in dem der höchste Gesamtbetrag an Opportunities in Verbindung mit diesem Haushalt über Kontakte mit primärer Opportunity-Kontaktrolle gewonnen wurde. Siehe auch &quot;Jahr der besten Schenkung gesamt&quot;.</help>
+        <label>Jahr der besten Schenkung</label>
+        <name>Best_Gift_Year__c</name>
+    </fields>
+    <fields>
+        <help>Der früheste Schlusstermin einer in Verbindung mit diesem Haushalt über Kontakte mit primärer Kontaktrolle gewonnenen Opportunity.</help>
+        <label>Datum der ersten Schenkung</label>
+        <name>FirstCloseDate__c</name>
+    </fields>
+    <fields>
+        <help>Verwendet Felder nicht ausgeschlossener beauftragter zugehöriger Kontakte. Automatisch generiert.</help>
+        <label>Formelle Anrede</label>
+        <name>Formal_Greeting__c</name>
+    </fields>
+    <fields>
+        <help>Formel: Verkettung anderer Postanschriftfelder für diesen Haushalt. Kann auf &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
+        <label>Postanschrift</label>
+        <name>Formula_MailingAddress__c</name>
+    </fields>
+    <fields>
+        <help>Wird durch den Kontakt eingestellt, der diesen Haushalt ursprünglich erstellt hat. Kann unter &quot;Haushalt&quot; bearbeitet werden, wird jedoch unter &quot;Kontakt&quot; nicht aktualisiert.</help>
+        <label>E-Mail-Adresse des Haushalts</label>
+        <name>HouseholdEmail__c</name>
+    </fields>
+    <fields>
+        <help>Wird durch den Kontakt eingestellt, der diesen Haushalt ursprünglich erstellt hat. Kann unter &quot;Haushalt&quot; bearbeitet werden, wird jedoch unter &quot;Kontakt&quot; nicht aktualisiert.</help>
+        <label>Haushalt-Telefon</label>
+        <name>HouseholdPhone__c</name>
+    </fields>
+    <fields>
+        <label>Haushalt-Kennung</label>
+        <name>Household_ID__c</name>
+    </fields>
+    <fields>
+        <help>Verwendet Felder nicht ausgeschlossener beauftragter zugehöriger Kontakte. Automatisch generiert.</help>
+        <label>Informelle Anrede</label>
+        <name>Informal_Greeting__c</name>
+    </fields>
+    <fields>
+        <help>Der größte Betrag der für diesen Haushalt von verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunity.</help>
+        <label>Größte Schenkung</label>
+        <name>LargestAmount__c</name>
+    </fields>
+    <fields>
+        <help>Letzter Schlusstermin einer für diesen Haushalt über verbundene Kontakte mit primärer Kontaktrolle gewonnenen Opportunity.</help>
+        <label>Datum der letzten Schenkung</label>
+        <name>LastCloseDate__c</name>
+    </fields>
+    <fields>
+        <help>Der zuletzt für diesen Haushalt über verbundene Kontakte mit primärer Opportunity-Kontaktrolle gewonnene Mitgliedschaft-Opportunity- (Datensatztyp) Betrag.</help>
+        <label>Betrag der letzten Mitgliedschaft</label>
+        <name>LastMembershipAmount__c</name>
+    </fields>
+    <fields>
+        <help>Der letzte Schlusstermin einer für diesen Haushalt über verbundene Kontakte mit primärer Kontaktrolle gewonnenen Mitgliedschaft-Opportunity.</help>
+        <label>Datum der letzten Mitgliedschaft</label>
+        <name>LastMembershipDate__c</name>
+    </fields>
+    <fields>
+        <help>Die Mitgliedschaftebene der zuletzt für diesen Haushalt über verbundene Kontakte mit primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft-Opportunity.</help>
+        <label>Ebene der letzten Mitgliedschaft</label>
+        <name>LastMembershipLevel__c</name>
+    </fields>
+    <fields>
+        <help>Der Ursprung (neu, verlängert...) der zuletzt für diesen Haushalt über verbundene Kontakte mit primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft-Opportunity.</help>
+        <label>Ursprung der letzten Mitgliedschaft</label>
+        <name>LastMembershipOrigin__c</name>
+    </fields>
+    <fields>
+        <help>Der letzte Betrag der für diesen Haushalt von verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunity.</help>
+        <label>Betrag der letzten Schenkung</label>
+        <name>LastOppAmount__c</name>
+    </fields>
+    <fields>
+        <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
+        <label>Postanschrift Stadt</label>
+        <name>MailingCity__c</name>
+    </fields>
+    <fields>
+        <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
+        <label>Postanschrift Land</label>
+        <name>MailingCountry__c</name>
+    </fields>
+    <fields>
+        <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
+        <label>Postanschrift PLZ</label>
+        <name>MailingPostalCode__c</name>
+    </fields>
+    <fields>
+        <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
+        <label>Postanschrift Bundesstaat/Provinz</label>
+        <name>MailingState__c</name>
+    </fields>
+    <fields>
+        <help>Festlegung durch den Originalkontakt, der diesen Haushalt erstellt hat. Kann auf &quot;Haushalt bearbeiten&quot; aktualisiert werden, aber der Kontakt wird erst aktualisiert, wenn auf die Schaltfläche &quot;Adresse des Haushalts zu Kontakten hinzufügen&quot; geklickt wird.</help>
+        <label>Postanschrift Straße</label>
+        <name>MailingStreet__c</name>
+    </fields>
+    <fields>
+        <help>Das Mitgliedschaft-Enddatum der zuletzt für diesen Haushalt über verbundene Kontakte mit primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft-Opportunity.</help>
+        <label>Enddatum der Mitgliedschaft</label>
+        <name>MembershipEndDate__c</name>
+    </fields>
+    <fields>
+        <help>Das früheste Beitrittsdatum der Mitgliedschaft der ältesten Mitgliedschaft-Opportunity (Schlusstermin, Datensatztyp) für diesen Haushalt über verbundene Kontakte mit primärer Kontaktrolle.</help>
+        <label>Beitrittsdatum der Mitgliedschaft</label>
+        <name>MembershipJoinDate__c</name>
+    </fields>
+    <fields>
+        <help>Formel: Die Anzahl der Jahre, für die dieser Haushalt ein Mitglied hatte.</help>
+        <label>Zeitraum der Mitgliedschaft</label>
+        <name>Membership_Span__c</name>
+    </fields>
+    <fields>
+        <help>Formel: Aktueller, abgelaufener oder Kulanzzeitraum. Festlegung des Standardkulanzzeitraum in den Haushalt-Einstellungen.</help>
+        <label>Mitgliedschaft-Status</label>
+        <name>Membership_Status__c</name>
+    </fields>
+    <fields>
+        <help>Die Gesamtzahl der Schenkungen in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
+        <label>Anzahl an Schenkungen gesamt</label>
+        <name>NumberOfClosedOpps__c</name>
+    </fields>
+    <fields>
+        <help>Der Gesamtbetrag der in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft-Opportunities.</help>
+        <label>Anzahl der Mitgliedschaften</label>
+        <name>NumberOfMembershipOpps__c</name>
+    </fields>
+    <fields>
+        <help>Summe der Schenkungen von vor zwei Jahren für den Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
+        <label>Schenkungen gesamt vor zwei Jahren</label>
+        <name>OppAmount2YearsAgo__c</name>
+    </fields>
+    <fields>
+        <help>Der Gesamtbetrag der in Verbindung mit diesem Haushalt, in den letzten in den Haushalt-Einstellungen definierten N Tagen nach Kontakt und primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
+        <label>Schenkungen gesamt in letzten N Tagen</label>
+        <name>OppAmountLastNDays__c</name>
+    </fields>
+    <fields>
+        <help>Summe der Schenkungen im letzten Jahr für den Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
+        <label>Schenkungen gesamt im letzten Jahr</label>
+        <name>OppAmountLastYear__c</name>
+    </fields>
+    <fields>
+        <help>Summe der Schenkungen in diesem Jahr für den Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
+        <label>Schenkungen gesamt in diesem Jahr</label>
+        <name>OppAmountThisYear__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der mit Schlusstermin in den letzten 2 Jahren in Verbindung mit diesem Haushalt per verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
+        <label>Anzahl der Schenkungen vor zwei Jahren</label>
+        <name>OppsClosed2YearsAgo__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der mit Schlusstermin in den letzten N Tagen (Haushalt-Einstellungen) in Verbindung mit diesem Haushalt per verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
+        <label>Anzahl Schenkungen in letzten N Tagen</label>
+        <name>OppsClosedLastNDays__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der mit Schlusstermin im letzten Jahr in Verbindung mit diesem Haushalt per verbundenen Kontakten mit primärer Kontaktrolle gewonnenen Opportunities.</help>
+        <label>Anzahl der Schenkungen im letzten Jahr</label>
+        <name>OppsClosedLastYear__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der mit Schlusstermin in diesem Jahr in Verbindung mit diesem Haushalt per verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
+        <label>Anzahl der Schenkungen dieses Jahr</label>
+        <name>OppsClosedThisYear__c</name>
+    </fields>
+    <fields>
+        <help>Name, formelle Anrede oder informelle Anrede</help>
+        <label>_SYSTEM: BENUTZERDEFINIERTE BENENNUNG</label>
+        <name>SYSTEM_CUSTOM_NAMING__c</name>
+        </fields>
+    <fields>
+        <help>Der kleinste Betrag einer in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.gewonnenen Opportunity.</help>
+        <label>Kleinste Schenkung</label>
+        <name>SmallestAmount__c</name>
+    </fields>
+    <fields>
+        <help>Der Gesamtbetrag der in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle gewonnenen Mitgliedschaft-Opportunities (Datensatztyp).</help>
+        <label>Gesamtbetrag der Mitgliedschaft</label>
+        <name>TotalMembershipOppAmount__c</name>
+    </fields>
+    <fields>
+        <help>Die Summe der in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.gewonnenen Opportunities.</help>
+        <label>Schenkungen gesamt</label>
+        <name>TotalOppAmount__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Household Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Spendeninformationen</label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label>Spendenbeträge gesamt</label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label>Informationen zum Haushalt</label>
+            <section>Household Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Haushalt-Name</nameFieldLabel>
+    <webLinks>
+        <label>Adresse des Haushalts zu Kontakten hinzufügen</label>
+        <name>Copy_Household_Address_to_Contacts</name>
+    </webLinks>
 </CustomObjectTranslation>

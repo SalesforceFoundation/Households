@@ -1,233 +1,368 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>AverageAmount__c</name>
-    <help>Le montant moyen de toutes les opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Don moyen</label>
-  </fields>
-  <fields>
-    <name>Best_Gift_Year_Total__c</name>
-    <help>La somme des montants des opportunités gagnées dans la meilleure année de don.</help>
-    <label>Total de la meilleure année de don</label>
-  </fields>
-  <fields>
-    <name>Best_Gift_Year__c</name>
-    <help>L’année du montant total le plus élevé des opportunités gagnées associées à ce contact par rôle de contact principal. Voir aussi Total de la meilleure année de don.</help>
-    <label>Meilleure année de don</label>
-  </fields>
-  <fields>
-    <name>FirstCloseDate__c</name>
-    <help>La date de fermeture la plus ancienne d'une opportunité gagnée avec un montant supérieur à zéro associée à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Date du premier don</label>
-  </fields>
-  <fields>
-    <name>Formula_HouseholdMailingAddress__c</name>
-    <help>Formule : clone de l’adresse postale du foyer (également une formule)</help>
-    <label>Adresse du Foyer</label>
-  </fields>
-  <fields>
-    <name>Formula_HouseholdPhone__c</name>
-    <help>Formule : simple formule du champ téléphone du foyer.</help>
-    <label>Téléphone du Foyer</label>
-  </fields>
-  <fields>
-    <name>Household_Naming_Order__c</name>
-    <help>Détermine l’ordre dans lequel les noms de contact sont utilisés pour générer le nom du foyer.</help>
-    <label>Ordre de dénomination du foyer</label>
-  </fields>
-  <fields>
-    <name>Household__c</name>
-    <relationshipLabel>Membres du Foyer</relationshipLabel>
-    <label>Foyer</label>
-  </fields>
-  <fields>
-    <name>LargestAmount__c</name>
-    <help>Le montant le plus élevé d’une opportunité gagnée associée à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Don le plus élevé</label>
-  </fields>
-  <fields>
-    <name>LastCloseDateHH__c</name>
-    <label>Date du dernier don du foyer</label>
-  </fields>
-  <fields>
-    <name>LastCloseDate__c</name>
-    <help>La date de fermeture de l'opportunité gagnée la plus récente associée à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Date du dernier don</label>
-  </fields>
-  <fields>
-    <name>LastMembershipAmount__c</name>
-    <help>Le montant de l’opportunité (type d'enregistrement) d’adhésion gagnée la plus récente (par date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Dernier montant d’adhésion</label>
-  </fields>
-  <fields>
-    <name>LastMembershipDate__c</name>
-    <help>La date de fermeture la plus récente d'une opportunité (type d'enregistrement) d’adhésion gagnée associée à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Dernière date d’adhésion</label>
-  </fields>
-  <fields>
-    <name>LastMembershipLevel__c</name>
-    <help>Le niveau de l'opportunité (type d'enregistrement) d’adhésion gagnée la plus récente (par date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Dernier niveau d’adhésion</label>
-  </fields>
-  <fields>
-    <name>LastMembershipOrigin__c</name>
-    <help>L’origine (nouveau, renouvellement, réacquisition), de l’opportunité (type d'enregistrement) d’adhésion gagnée la plus récente (date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Dernière origine d’adhésion</label>
-  </fields>
-  <fields>
-    <name>LastOppAmount__c</name>
-    <help>Le montant de l'opportunité gagnée la plus récente par date de fermeture associée à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Montant du dernier don</label>
-  </fields>
-  <fields>
-    <name>MembershipEndDate__c</name>
-    <help>La date de fin d’adhésion de l'opportunité (type d'enregistrement) d’adhésion la plus récente (par date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Date de fin d’adhésion</label>
-  </fields>
-  <fields>
-    <name>MembershipJoinDate__c</name>
-    <help>La date d’adhésion de l'opportunité (type d'enregistrement) d’adhésion la plus ancienne (par date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Date d’adhésion</label>
-  </fields>
-  <fields>
-    <name>Naming_Exclusions__c</name>
-    <help>Sélectionnez cette option pour exclure le nom de ce contact de plusieurs noms de foyer générés.</help>
-    <label>Exclusions de dénomination</label>
-    <picklistValues>
-      <masterLabel>Household__c.Name</masterLabel>
-      <translation>Household__c.Name</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Household__c.Formal_Greeting__c</masterLabel>
-      <translation>Household__c.Formal_Greeting__c</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Household__c.Informal_Greeting__c</masterLabel>
-      <translation>Household__c.Informal_Greeting__c</translation>
-    </picklistValues>
-  </fields>
-  <fields>
-    <name>NumberOfClosedOpps__c</name>
-    <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Nombre total de dons</label>
-  </fields>
-  <fields>
-    <name>NumberOfMembershipOpps__c</name>
-    <help>Le nombre d'opportunités (type d'enregistrement) d’adhésion gagnées associées à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Nombre d’adhésions</label>
-  </fields>
-  <fields>
-    <name>OppAmount2YearsAgo__c</name>
-    <help>Le montant total des opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal, fermées il y a deux ans.</help>
-    <label>Total des dons il y a deux ans</label>
-  </fields>
-  <fields>
-    <name>OppAmountLastNDays__c</name>
-    <help>Le montant total d’opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal, fermées au cours des derniers jours tels que définis dans les Paramètres de foyer.</help>
-    <label>Total des dons sur les N derniers jours</label>
-  </fields>
-  <fields>
-    <name>OppAmountLastYearHH__c</name>
-    <help>Formule : total des dons l’année dernière d’un foyer associé.</help>
-    <label>Total des dons du foyer l’année dernière</label>
-  </fields>
-  <fields>
-    <name>OppAmountLastYear__c</name>
-    <help>Le montant total des opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal, fermées l’année dernière.</help>
-    <label>Total des dons l’année dernière</label>
-  </fields>
-  <fields>
-    <name>OppAmountThisYearHH__c</name>
-    <help>Formule : total des dons cette année d’un foyer associé.</help>
-    <label>Total des dons du foyer cette année</label>
-  </fields>
-  <fields>
-    <name>OppAmountThisYear__c</name>
-    <help>Le montant total des opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal, fermées cette année.</help>
-    <label>Total des dons cette année</label>
-  </fields>
-  <fields>
-    <name>OppsClosed2YearsAgo__c</name>
-    <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal, fermées il y a deux ans.</help>
-    <label>Nombre de dons il y a deux ans</label>
-  </fields>
-  <fields>
-    <name>OppsClosedLastNDays__c</name>
-    <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal, fermées au cours des derniers jours tels que définis dans les Paramètres de foyer.</help>
-    <label>Nombre de dons sur les N derniers jours</label>
-  </fields>
-  <fields>
-    <name>OppsClosedLastYear__c</name>
-    <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal, fermées l’année dernière.</help>
-    <label>Nombre de dons l’année dernière</label>
-  </fields>
-  <fields>
-    <name>OppsClosedThisYear__c</name>
-    <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal, fermées cette année.</help>
-    <label>Nombre de dons cette année</label>
-  </fields>
-  <fields>
-    <name>SmallestAmount__c</name>
-    <help>Le plus petit montant d’une opportunité gagnée associée à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Don le moins élevé</label>
-  </fields>
-  <fields>
-    <name>Soft_Credit_Last_Year__c</name>
-    <help>Montant total de crédits indirects au cours de l’année dernière déterminé par un rôle de contact d’opportunité et filtré par les rôles dans les Paramètres de foyer.</help>
-    <label>Crédits indirects l'année dernière</label>
-  </fields>
-  <fields>
-    <name>Soft_Credit_This_Year__c</name>
-    <help>Montant total de crédits indirects cette année</help>
-    <label>Crédits indirects cette année</label>
-  </fields>
-  <fields>
-    <name>Soft_Credit_Total__c</name>
-    <help>Montant total de crédits indirects sur la durée de vie de ce contact. Défini dans l’onglet de configuration de foyer.</help>
-    <label>Total crédits indirects</label>
-  </fields>
-  <fields>
-    <name>Soft_Credit_Two_Years_Ago__c</name>
-    <help>Montant total de crédits indirects il y a deux ans déterminé par un rôle de contact d’opportunité et filtré par les rôles dans les Paramètres de foyer.</help>
-    <label>Crédits indirects il y a deux ans</label>
-  </fields>
-  <fields>
-    <name>SystemHouseholdProcessor__c</name>
-    <label>_SYSTEM: HOUSEHOLD PROCESSOR-DEPRECATED</label>
-    <picklistValues>
-      <masterLabel>All Individual Contacts</masterLabel>
-      <translation>Tous les contacts individuels</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>All New or Edited Contacts</masterLabel>
-      <translation>Tous les contacts nouveaux ou modifiés</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>No Contacts</masterLabel>
-      <translation>Aucun contact</translation>
-    </picklistValues>
-  </fields>
-  <fields>
-    <name>TotalMembershipOppAmount__c</name>
-    <help>Le montant total d'opportunités (type d'enregistrement) d’adhésion gagnées associées à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Montant total d’adhésion</label>
-  </fields>
-  <fields>
-    <name>TotalOppAmount__c</name>
-    <help>La somme des montants d'opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal.</help>
-    <label>Total des dons</label>
-  </fields>
-  <fields>
-    <name>Total_Household_Gifts__c</name>
-    <help>Formule : total des dons d’un foyer associé.</help>
-    <label>Total des dons du foyer</label>
-  </fields>
-  <webLinks>
-    <name>Copy_Address_to_Household</name>
-    <label>Copier une adresse vers un foyer</label>
-  </webLinks>
-  <webLinks>
-    <name>Household</name>
-    <label>Foyer</label>
-  </webLinks>
+    <fields>
+        <help>Le montant moyen de toutes les opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Don moyen</label>
+        <name>AverageAmount__c</name>
+    </fields>
+    <fields>
+        <help>La somme des montants des opportunités gagnées dans la meilleure année de don.</help>
+        <label>Total de la meilleure année de don</label>
+        <name>Best_Gift_Year_Total__c</name>
+    </fields>
+    <fields>
+        <help>L’année du montant total le plus élevé des opportunités gagnées associées à ce contact par rôle de contact principal. Voir aussi Total de la meilleure année de don.</help>
+        <label>Meilleure année de don</label>
+        <name>Best_Gift_Year__c</name>
+    </fields>
+    <fields>
+        <help>La date de fermeture la plus ancienne d&apos;une opportunité gagnée avec un montant supérieur à zéro associée à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Date du premier don</label>
+        <name>FirstCloseDate__c</name>
+    </fields>
+    <fields>
+        <help>Formule : clone de l’adresse postale du foyer (également une formule)</help>
+        <label>Adresse du Foyer</label>
+        <name>Formula_HouseholdMailingAddress__c</name>
+    </fields>
+    <fields>
+        <help>Formule : simple formule du champ téléphone du foyer.</help>
+        <label>Téléphone du Foyer</label>
+        <name>Formula_HouseholdPhone__c</name>
+    </fields>
+    <fields>
+        <help>Détermine l’ordre dans lequel les noms de contact sont utilisés pour générer le nom du foyer.</help>
+        <label>Ordre de dénomination du foyer</label>
+        <name>Household_Naming_Order__c</name>
+    </fields>
+    <fields>
+        <label>Foyer</label>
+        <name>Household__c</name>
+        <relationshipLabel>Membres du Foyer</relationshipLabel>
+    </fields>
+    <fields>
+        <help>Le montant le plus élevé d’une opportunité gagnée associée à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Don le plus élevé</label>
+        <name>LargestAmount__c</name>
+    </fields>
+    <fields>
+        <label>Date du dernier don du foyer</label>
+        <name>LastCloseDateHH__c</name>
+    </fields>
+    <fields>
+        <help>La date de fermeture de l&apos;opportunité gagnée la plus récente associée à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Date du dernier don</label>
+        <name>LastCloseDate__c</name>
+    </fields>
+    <fields>
+        <help>Le montant de l’opportunité (type d&apos;enregistrement) d’adhésion gagnée la plus récente (par date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Dernier montant d’adhésion</label>
+        <name>LastMembershipAmount__c</name>
+    </fields>
+    <fields>
+        <help>La date de fermeture la plus récente d&apos;une opportunité (type d&apos;enregistrement) d’adhésion gagnée associée à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Dernière date d’adhésion</label>
+        <name>LastMembershipDate__c</name>
+    </fields>
+    <fields>
+        <help>Le niveau de l&apos;opportunité (type d&apos;enregistrement) d’adhésion gagnée la plus récente (par date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Dernier niveau d’adhésion</label>
+        <name>LastMembershipLevel__c</name>
+    </fields>
+    <fields>
+        <help>L’origine (nouveau, renouvellement, réacquisition), de l’opportunité (type d&apos;enregistrement) d’adhésion gagnée la plus récente (date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Dernière origine d’adhésion</label>
+        <name>LastMembershipOrigin__c</name>
+    </fields>
+    <fields>
+        <help>Le montant de l&apos;opportunité gagnée la plus récente par date de fermeture associée à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Montant du dernier don</label>
+        <name>LastOppAmount__c</name>
+    </fields>
+    <fields>
+        <help>La date de fin d’adhésion de l&apos;opportunité (type d&apos;enregistrement) d’adhésion la plus récente (par date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Date de fin d’adhésion</label>
+        <name>MembershipEndDate__c</name>
+    </fields>
+    <fields>
+        <help>La date d’adhésion de l&apos;opportunité (type d&apos;enregistrement) d’adhésion la plus ancienne (par date de fermeture) associée à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Date d’adhésion</label>
+        <name>MembershipJoinDate__c</name>
+    </fields>
+    <fields>
+        <help>Sélectionnez cette option pour exclure le nom de ce contact de plusieurs noms de foyer générés.</help>
+        <label>Exclusions de dénomination</label>
+        <name>Naming_Exclusions__c</name>
+        <picklistValues>
+            <masterLabel>Household__c.Formal_Greeting__c</masterLabel>
+            <translation>Household__c.Formal_Greeting__c</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Household__c.Informal_Greeting__c</masterLabel>
+            <translation>Household__c.Informal_Greeting__c</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Household__c.Name</masterLabel>
+            <translation>Household__c.Name</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Nombre total de dons</label>
+        <name>NumberOfClosedOpps__c</name>
+    </fields>
+    <fields>
+        <help>Le nombre d&apos;opportunités (type d&apos;enregistrement) d’adhésion gagnées associées à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Nombre d’adhésions</label>
+        <name>NumberOfMembershipOpps__c</name>
+    </fields>
+    <fields>
+        <help>Le montant total des opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal, fermées il y a deux ans.</help>
+        <label>Total des dons il y a deux ans</label>
+        <name>OppAmount2YearsAgo__c</name>
+    </fields>
+    <fields>
+        <help>Le montant total d’opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal, fermées au cours des derniers jours tels que définis dans les Paramètres de foyer.</help>
+        <label>Total des dons sur les N derniers jours</label>
+        <name>OppAmountLastNDays__c</name>
+    </fields>
+    <fields>
+        <help>Formule : total des dons l’année dernière d’un foyer associé.</help>
+        <label>Total des dons du foyer l’année dernière</label>
+        <name>OppAmountLastYearHH__c</name>
+    </fields>
+    <fields>
+        <help>Le montant total des opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal, fermées l’année dernière.</help>
+        <label>Total des dons l’année dernière</label>
+        <name>OppAmountLastYear__c</name>
+    </fields>
+    <fields>
+        <help>Formule : total des dons cette année d’un foyer associé.</help>
+        <label>Total des dons du foyer cette année</label>
+        <name>OppAmountThisYearHH__c</name>
+    </fields>
+    <fields>
+        <help>Le montant total des opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal, fermées cette année.</help>
+        <label>Total des dons cette année</label>
+        <name>OppAmountThisYear__c</name>
+    </fields>
+    <fields>
+        <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal, fermées il y a deux ans.</help>
+        <label>Nombre de dons il y a deux ans</label>
+        <name>OppsClosed2YearsAgo__c</name>
+    </fields>
+    <fields>
+        <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal, fermées au cours des derniers jours tels que définis dans les Paramètres de foyer.</help>
+        <label>Nombre de dons sur les N derniers jours</label>
+        <name>OppsClosedLastNDays__c</name>
+    </fields>
+    <fields>
+        <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal, fermées l’année dernière.</help>
+        <label>Nombre de dons l’année dernière</label>
+        <name>OppsClosedLastYear__c</name>
+    </fields>
+    <fields>
+        <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce contact par un rôle de contact d’opportunité principal, fermées cette année.</help>
+        <label>Nombre de dons cette année</label>
+        <name>OppsClosedThisYear__c</name>
+    </fields>
+    <fields>
+        <help>Le plus petit montant d’une opportunité gagnée associée à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Don le moins élevé</label>
+        <name>SmallestAmount__c</name>
+    </fields>
+    <fields>
+        <help>Montant total de crédits indirects au cours de l’année dernière déterminé par un rôle de contact d’opportunité et filtré par les rôles dans les Paramètres de foyer.</help>
+        <label>Crédits indirects l&apos;année dernière</label>
+        <name>Soft_Credit_Last_Year__c</name>
+    </fields>
+    <fields>
+        <help>Montant total de crédits indirects cette année</help>
+        <label>Crédits indirects cette année</label>
+        <name>Soft_Credit_This_Year__c</name>
+    </fields>
+    <fields>
+        <help>Montant total de crédits indirects sur la durée de vie de ce contact. Défini dans l’onglet de configuration de foyer.</help>
+        <label>Total crédits indirects</label>
+        <name>Soft_Credit_Total__c</name>
+    </fields>
+    <fields>
+        <help>Montant total de crédits indirects il y a deux ans déterminé par un rôle de contact d’opportunité et filtré par les rôles dans les Paramètres de foyer.</help>
+        <label>Crédits indirects il y a deux ans</label>
+        <name>Soft_Credit_Two_Years_Ago__c</name>
+    </fields>
+    <fields>
+        <label>_SYSTEM: HOUSEHOLD PROCESSOR-DEPRECATED</label>
+        <name>SystemHouseholdProcessor__c</name>
+        <picklistValues>
+            <masterLabel>All Individual Contacts</masterLabel>
+            <translation>Tous les contacts individuels</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All New or Edited Contacts</masterLabel>
+            <translation>Tous les contacts nouveaux ou modifiés</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Contacts</masterLabel>
+            <translation>Aucun contact</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Le montant total d&apos;opportunités (type d&apos;enregistrement) d’adhésion gagnées associées à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Montant total d’adhésion</label>
+        <name>TotalMembershipOppAmount__c</name>
+    </fields>
+    <fields>
+        <help>La somme des montants d&apos;opportunités gagnées associées à ce contact par un rôle de contact d’opportunité principal.</help>
+        <label>Total des dons</label>
+        <name>TotalOppAmount__c</name>
+    </fields>
+    <fields>
+        <help>Formule : total des dons d’un foyer associé.</help>
+        <label>Total des dons du foyer</label>
+        <name>Total_Household_Gifts__c</name>
+    </fields>
+    <fields>
+        <help>Autre e-mail est un quatrième e-mail facultatif : en plus du personnel, préféré ou professionnel.</help>
+        <label><!-- Alternate Email --></label>
+        <name>npe01__AlternateEmail__c</name>
+    </fields>
+    <fields>
+        <help>Voir le champ E-mail préféré.</help>
+        <label><!-- Personal Email --></label>
+        <name>npe01__HomeEmail__c</name>
+    </fields>
+    <fields>
+        <help>Formule : Utilise le champ de type d’adresse principale pour déterminer l’adresse de domicile à partir de l’adresse postale ou d’une autre adresse.</help>
+        <label><!-- Home Address --></label>
+        <name>npe01__Home_Address__c</name>
+    </fields>
+    <fields>
+        <help>Formule : Par ordre de préférence, le champ SYSTEM_AccountType, le champ Type de compte, et « Organisation ».</help>
+        <label><!-- Organization Type --></label>
+        <name>npe01__Organization_Type__c</name>
+    </fields>
+    <fields>
+        <help>Formule : Si le type d’adresse principale est Autre, l’adresse postale. Si le type d’adresse secondaire est Autre, l’autre adresse.</help>
+        <label><!-- Other Address --></label>
+        <name>npe01__Other_Address__c</name>
+    </fields>
+    <fields>
+        <help>Quel numéro de téléphone doit être utilisé pour la plupart des communications impliquant ce contact ?</help>
+        <label><!-- Preferred Phone --></label>
+        <name>npe01__PreferredPhone__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation>Domicile</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile</masterLabel>
+            <translation>Mobile</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Autre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Professionnel</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Quel e-mail doit être utilisé pour la plupart des communications impliquant ce contact ?</help>
+        <label><!-- Preferred Email --></label>
+        <name>npe01__Preferred_Email__c</name>
+        <picklistValues>
+            <masterLabel>Alternate</masterLabel>
+            <translation>Autre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal</masterLabel>
+            <translation>Personnel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Professionnel</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Quel est le type de l’adresse postale ?</help>
+        <label><!-- Primary Address Type --></label>
+        <name>npe01__Primary_Address_Type__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation>Domicile</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Autre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Professionnel</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Exclut ce contact de tout traitement de compte individuel. Si vous laissez le champ Compte vide, il restera vide.</help>
+        <label><!-- Private --></label>
+        <name>npe01__Private__c</name>
+    </fields>
+    <fields>
+        <help>Quel est le type de l’autre adresse ?</help>
+        <label><!-- Secondary Address Type --></label>
+        <name>npe01__Secondary_Address_Type__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation>Domicile</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Autre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Professionnel</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>N&apos;EST PLUS UTILISÉ - Indique le modèle qui définit le comportement de la relation du compte : Individuel (à compartiments) ou un-à-un</help>
+        <label><!-- DEPRECATED - _SYSTEM: ACCOUNT PROCESSOR --></label>
+        <name>npe01__SystemAccountProcessor__c</name>
+        <picklistValues>
+            <masterLabel>Individual</masterLabel>
+            <translation>Individuel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>One-to-One</masterLabel>
+            <translation>Un-à-un</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Formule : « Individuel » ou « Organisation » en fonction du paramètre du compte.</help>
+        <label><!-- Type of Account --></label>
+        <name>npe01__Type_of_Account__c</name>
+    </fields>
+    <fields>
+        <help>Voir le champ E-mail préféré.</help>
+        <label><!-- Work Email --></label>
+        <name>npe01__WorkEmail__c</name>
+    </fields>
+    <fields>
+        <help>Voir le champ Téléphone préféré.</help>
+        <label><!-- Work Phone --></label>
+        <name>npe01__WorkPhone__c</name>
+    </fields>
+    <fields>
+        <help>Formule : L&apos;adresse postale si le Type d’adresse principale est Professionnel, l&apos;autre adresse si le Type d’adresse secondaire est Professionnel.</help>
+        <label><!-- Work Address --></label>
+        <name>npe01__Work_Address__c</name>
+    </fields>
+    <webLinks>
+        <label>Copier une adresse vers un foyer</label>
+        <name>Copy_Address_to_Household</name>
+    </webLinks>
+    <webLinks>
+        <label>Foyer</label>
+        <name>Household</name>
+    </webLinks>
 </CustomObjectTranslation>
