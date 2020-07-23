@@ -149,20 +149,4 @@
         <label>סה&quot;כ תרומות</label>
         <name>TotalOppAmount__c</name>
     </fields>
-    <fields>
-        <help><!-- The primary contact for the Account, or the One2One contact for a One2One account. --></help>
-        <label><!-- Primary Contact --></label>
-        <name>npe01__One2OneContact__c</name>
-        <relationshipLabel><!-- Account --></relationshipLabel>
-    </fields>
-    <fields>
-        <help><!-- Indicates whether or not this Account is special for Contacts (Household, One-to-One, Individual) vs a normal Account. --></help>
-        <label><!-- _SYSTEM: IsIndividual --></label>
-        <name>npe01__SYSTEMIsIndividual__c</name>
-    </fields>
-    <fields>
-        <help>שדה מערכת: לא להשתמש או לשנות.</help>
-        <label><!-- _SYSTEM: AccountType --></label>
-        <name>npe01__SYSTEM_AccountType__c</name>
-    </fields>
-</CustomObjectTranslation>
+    </CustomObjectTranslation>

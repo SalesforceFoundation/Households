@@ -149,20 +149,4 @@
         <label>Total des dons</label>
         <name>TotalOppAmount__c</name>
     </fields>
-    <fields>
-        <help>Le contact principal pour le compte, ou le contact un-à-un pour un compte un-à-un.</help>
-        <label><!-- Primary Contact --></label>
-        <name>npe01__One2OneContact__c</name>
-        <relationshipLabel><!-- Account --></relationshipLabel>
-    </fields>
-    <fields>
-        <help>Indique si ce compte est spécial pour les contacts (foyer, un-à-un, individuel) par rapport à un compte normal.</help>
-        <label><!-- _SYSTEM: IsIndividual --></label>
-        <name>npe01__SYSTEMIsIndividual__c</name>
-    </fields>
-    <fields>
-        <help>Indique le modèle de compte auquelce compte est destiné : foyer, un-à-un ou individuel (à compartiments).</help>
-        <label><!-- _SYSTEM: AccountType --></label>
-        <name>npe01__SYSTEM_AccountType__c</name>
-    </fields>
-</CustomObjectTranslation>
+    </CustomObjectTranslation>

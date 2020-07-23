@@ -149,20 +149,4 @@
         <label>Schenkungen gesamt</label>
         <name>TotalOppAmount__c</name>
     </fields>
-    <fields>
-        <help>Der Hauptansprechpartner für einen Haushalt-Account, oder der Eins-zu-Eins-Kontakt für einen Eins-zu-Eins-Account.</help>
-        <label><!-- Primary Contact --></label>
-        <name>npe01__One2OneContact__c</name>
-        <relationshipLabel><!-- Account --></relationshipLabel>
-    </fields>
-    <fields>
-        <help>Gibt an, ob dieser Account speziell für Kontakte (Haushalt, Eins-zu-Eins, Einzelperson) vorgesehen oder ein normaler Account ist.</help>
-        <label><!-- _SYSTEM: IsIndividual --></label>
-        <name>npe01__SYSTEMIsIndividual__c</name>
-    </fields>
-    <fields>
-        <help>Gibt an, für welches Accountmodell dieser Account steht: Haushalt, Eins-zu-Eins oder Einzelperson (Bucket).</help>
-        <label><!-- _SYSTEM: AccountType --></label>
-        <name>npe01__SYSTEM_AccountType__c</name>
-    </fields>
-</CustomObjectTranslation>
+    </CustomObjectTranslation>

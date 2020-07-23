@@ -149,20 +149,4 @@
         <label>Totaal aan giften</label>
         <name>TotalOppAmount__c</name>
     </fields>
-    <fields>
-        <help>De primaire contactpersoon voor de account of de contactpersoon voor One2One voor een One2One-account.</help>
-        <label><!-- Primary Contact --></label>
-        <name>npe01__One2OneContact__c</name>
-        <relationshipLabel><!-- Account --></relationshipLabel>
-    </fields>
-    <fields>
-        <help>Geeft aan of deze account al of niet speciaal is voor Contactpersonen (Huishouden, Eén-op-één, Individu) in tegenstelling tot een normale account.</help>
-        <label><!-- _SYSTEM: IsIndividual --></label>
-        <name>npe01__SYSTEMIsIndividual__c</name>
-    </fields>
-    <fields>
-        <help>Geeft aan voor welk model Account deze account is: Account voor huishouden, Eén-op-één of Individu (Bucket).</help>
-        <label><!-- _SYSTEM: AccountType --></label>
-        <name>npe01__SYSTEM_AccountType__c</name>
-    </fields>
-</CustomObjectTranslation>
+    </CustomObjectTranslation>

@@ -6,85 +6,6 @@
         <name>CombinedRollupFieldset__c</name>
     </fields>
     <fields>
-        <help>Fórmula: El importe de esta oportunidad menos el importe de los pagos amortizados y el importe de los pagos recibidos.</help>
-        <label><!-- Remaining Balance --></label>
-        <name>npe01__Amount_Outstanding__c</name>
-    </fields>
-    <fields>
-        <help>Valor total de los pagos marcados como amortizados o imposibles de cobrar para esta oportunidad.</help>
-        <label><!-- Payment Writeoff Amount --></label>
-        <name>npe01__Amount_Written_Off__c</name>
-    </fields>
-    <fields>
-        <help>Campo oculto para pasar un Id. de contacto para la creación de una función de contacto.</help>
-        <label><!-- Contact Id for Role --></label>
-        <name>npe01__Contact_Id_for_Role__c</name>
-    </fields>
-    <fields>
-        <help>Si los pagos están activos y este campo está seleccionado, no se creará un nuevo pago automáticamente para esta oportunidad.</help>
-        <label><!-- Do Not Automatically Create Payment --></label>
-        <name>npe01__Do_Not_Automatically_Create_Payment__c</name>
-    </fields>
-    <fields>
-        <help>Fórmula: Si la cuenta relacionada está o no definida como un individuo (SYSTEMIsIndividual__c)</help>
-        <label><!-- Is Opp From Individual --></label>
-        <name>npe01__Is_Opp_From_Individual__c</name>
-    </fields>
-    <fields>
-        <help>Determina el valor del contacto o la cuenta del campo Último nivel de afiliación.</help>
-        <label><!-- Member Level --></label>
-        <name>npe01__Member_Level__c</name>
-        <picklistValues>
-            <masterLabel>Bronze</masterLabel>
-            <translation>Bronce</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Gold</masterLabel>
-            <translation>Oro</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Silver</masterLabel>
-            <translation>Plata</translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>Fecha en la que termina el periodo de afiliación.</help>
-        <label><!-- Membership End Date --></label>
-        <name>npe01__Membership_End_Date__c</name>
-    </fields>
-    <fields>
-        <help>Es esta una renovación, una nueva afiliación o una afiliación de alguien que se fue y ha vuelto.</help>
-        <label><!-- Membership Origin --></label>
-        <name>npe01__Membership_Origin__c</name>
-        <picklistValues>
-            <masterLabel>New</masterLabel>
-            <translation>Nuevo</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Reacquire</masterLabel>
-            <translation>Reobtenida</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Renewal</masterLabel>
-            <translation>Renovación</translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>Fecha en el que se inicia el periodo de afiliación</help>
-        <label><!-- Membership Start Date --></label>
-        <name>npe01__Membership_Start_Date__c</name>
-    </fields>
-    <fields>
-        <help>Número total de pagos para esta oportunidad (Donación)</help>
-        <label><!-- Number of Payments --></label>
-        <name>npe01__Number_of_Payments__c</name>
-    </fields>
-    <fields>
-        <help>El valor total de los pagos marcados como recibidos para esta oportunidad.</help>
-        <label><!-- Payment Amount Received --></label>
-        <name>npe01__Payments_Made__c</name>
-    </fields>
-    <fields>
         <help>Consola si las funciones de contacto de hogar se crean para oportunidades. DESUSADO. Sustituido por configuración personalizada.</help>
         <label>_SYSTEM: PROCES FUNCIONES CONTACTO HOGAR</label>
         <name>systemHouseholdContactRoleProcessor__c</name>
@@ -97,12 +18,4 @@
             <translation>No hay oportunidades</translation>
         </picklistValues>
     </fields>
-    <webLinks>
-        <label><!-- New_Contact_Donation --></label>
-        <name>npe01__New_Contact_Donation</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- New_Organization_Donation --></label>
-        <name>npe01__New_Organization_Donation</name>
-    </webLinks>
-</CustomObjectTranslation>
+    </CustomObjectTranslation>

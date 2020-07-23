@@ -6,85 +6,6 @@
         <name>CombinedRollupFieldset__c</name>
     </fields>
     <fields>
-        <help>נוסחה: הסכום של הזדמנות זו פחות סכום מחיקת התשלום וסכום התשלום שהתקבל.</help>
-        <label><!-- Remaining Balance --></label>
-        <name>npe01__Amount_Outstanding__c</name>
-    </fields>
-    <fields>
-        <help>הערך הכולל של תשלומים שסומנו כמחוקים או בלתי ניתנים לגבייה עבור הזדמנות זו.</help>
-        <label><!-- Payment Writeoff Amount --></label>
-        <name>npe01__Amount_Written_Off__c</name>
-    </fields>
-    <fields>
-        <help>שדה מוסתר המשמש להעברת מזהה איש קשר לצורך יצירת תפקיד איש קשר.</help>
-        <label><!-- Contact Id for Role --></label>
-        <name>npe01__Contact_Id_for_Role__c</name>
-    </fields>
-    <fields>
-        <help>אם התשלומים פעילים, ואם אפשרות זו מסומנת, תשלום חדש לא ייווצר באופן אוטומטי עבור הזדמנות זו.</help>
-        <label><!-- Do Not Automatically Create Payment --></label>
-        <name>npe01__Do_Not_Automatically_Create_Payment__c</name>
-    </fields>
-    <fields>
-        <help>נוסחה: האם החשבון הקשור מוגדר כאישי (SYSTEMIsIndividual__c)</help>
-        <label><!-- Is Opp From Individual --></label>
-        <name>npe01__Is_Opp_From_Individual__c</name>
-    </fields>
-    <fields>
-        <help>קובעת את הערך של איש הקשר או החשבון בשדה &apos;רמת חברות אחרונה&apos;.</help>
-        <label><!-- Member Level --></label>
-        <name>npe01__Member_Level__c</name>
-        <picklistValues>
-            <masterLabel>Bronze</masterLabel>
-            <translation><!-- Bronze --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Gold</masterLabel>
-            <translation><!-- Gold --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Silver</masterLabel>
-            <translation><!-- Silver --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>תאריך סיום תקופת החברות.</help>
-        <label><!-- Membership End Date --></label>
-        <name>npe01__Membership_End_Date__c</name>
-    </fields>
-    <fields>
-        <help>אם מדובר בחידוש, חברות חדשה או חברות של מישהו שעזב או חזר.</help>
-        <label><!-- Membership Origin --></label>
-        <name>npe01__Membership_Origin__c</name>
-        <picklistValues>
-            <masterLabel>New</masterLabel>
-            <translation>חדש</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Reacquire</masterLabel>
-            <translation>רכוש מחדש</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Renewal</masterLabel>
-            <translation>חידוש</translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>תאריך ההתחלה של תקופת החברות</help>
-        <label><!-- Membership Start Date --></label>
-        <name>npe01__Membership_Start_Date__c</name>
-    </fields>
-    <fields>
-        <help>מספר התשלומים הכולל עבור הזדמנות (תרומה) זו</help>
-        <label><!-- Number of Payments --></label>
-        <name>npe01__Number_of_Payments__c</name>
-    </fields>
-    <fields>
-        <help>הערך הכולל של התשלומים המסומנים כתשלומים ששולמו עבור הזדמנות זו.</help>
-        <label><!-- Payment Amount Received --></label>
-        <name>npe01__Payments_Made__c</name>
-    </fields>
-    <fields>
         <help><!-- Controls if Household contact roles are created for Opportunities.  DEPRECATED.  Replaced by custom settings. --></help>
         <label><!-- _SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR --></label>
         <name>systemHouseholdContactRoleProcessor__c</name>
@@ -97,12 +18,4 @@
             <translation>אין הזדמנויות</translation>
         </picklistValues>
     </fields>
-    <webLinks>
-        <label><!-- New_Contact_Donation --></label>
-        <name>npe01__New_Contact_Donation</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- New_Organization_Donation --></label>
-        <name>npe01__New_Organization_Donation</name>
-    </webLinks>
-</CustomObjectTranslation>
+    </CustomObjectTranslation>

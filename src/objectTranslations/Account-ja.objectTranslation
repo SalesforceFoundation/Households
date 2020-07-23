@@ -149,20 +149,4 @@
         <label>これまでの支援総額</label>
         <name>TotalOppAmount__c</name>
     </fields>
-    <fields>
-        <help>団体の主個人、または 1 対 1 団体の 1 対 1 個人。</help>
-        <label><!-- Primary Contact --></label>
-        <name>npe01__One2OneContact__c</name>
-        <relationshipLabel><!-- Account --></relationshipLabel>
-    </fields>
-    <fields>
-        <help>この団体が通常の団体ではなく個人の特殊な団体 (世帯、1 対 1、個人) であるかを示します。</help>
-        <label><!-- _SYSTEM: IsIndividual --></label>
-        <name>npe01__SYSTEMIsIndividual__c</name>
-    </fields>
-    <fields>
-        <help>この団体が、世帯団体、1 対 1、個人 (バケット) のうち、どの団体モデルのものであるかを示します。</help>
-        <label><!-- _SYSTEM: AccountType --></label>
-        <name>npe01__SYSTEM_AccountType__c</name>
-    </fields>
-</CustomObjectTranslation>
+    </CustomObjectTranslation>

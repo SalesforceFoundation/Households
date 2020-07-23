@@ -22,6 +22,8 @@ tasks:
                   xpath: //ns:picklistValues[ns:masterLabel='Formal_Greeting__c']|//ns:picklistValues[ns:masterLabel='Informal_Greeting__c']|//ns:picklistValues[ns:masterLabel='Name']
                 - path: src/translations/**.translation
                   xpath: //ns:reportTypes[ns:name='screen_flows_prebuilt_crt']
+                - path: src/*ranslations/**/*ranslation
+                  xpath: /*/*[re:match(ns:name, '...+__..+')]                  
 
 flows:
     deploy_unmanaged:

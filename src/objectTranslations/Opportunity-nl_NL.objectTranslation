@@ -6,85 +6,6 @@
         <name>CombinedRollupFieldset__c</name>
     </fields>
     <fields>
-        <help>Formule: het bedrag van deze opportunity minus Afschrijvingsbedrag van betaling en Ontvangen bedrag van betaling.</help>
-        <label><!-- Remaining Balance --></label>
-        <name>npe01__Amount_Outstanding__c</name>
-    </fields>
-    <fields>
-        <help>Totale waarde van de betalingen gemarkeerd als afgeschreven of niet incasseerbaar voor deze opportunity.</help>
-        <label><!-- Payment Writeoff Amount --></label>
-        <name>npe01__Amount_Written_Off__c</name>
-    </fields>
-    <fields>
-        <help>Verborgen veld voor het doorgeven van een contactpersoons-ID voor het maken van een rol voor contactpersoon.</help>
-        <label><!-- Contact Id for Role --></label>
-        <name>npe01__Contact_Id_for_Role__c</name>
-    </fields>
-    <fields>
-        <help>Als betalingen actief zijn, en indien aangevinkt, wordt er niet automatisch een nieuwe betaling gemaakt voor deze opportunity.</help>
-        <label><!-- Do Not Automatically Create Payment --></label>
-        <name>npe01__Do_Not_Automatically_Create_Payment__c</name>
-    </fields>
-    <fields>
-        <help>Formule: of de gerelateerde account al dan niet is gedefinieerd als individu (SYSTEMIsIndividual__c)</help>
-        <label><!-- Is Opp From Individual --></label>
-        <name>npe01__Is_Opp_From_Individual__c</name>
-    </fields>
-    <fields>
-        <help>Bepaalt de waarde voor Contactpersoon of Account van het veld Laatste lidmaatschapsniveau.</help>
-        <label><!-- Member Level --></label>
-        <name>npe01__Member_Level__c</name>
-        <picklistValues>
-            <masterLabel>Bronze</masterLabel>
-            <translation>Bronze</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Gold</masterLabel>
-            <translation>Gold</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Silver</masterLabel>
-            <translation>Silver</translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>Datum waarop periode van lidmaatschap eindigt.</help>
-        <label><!-- Membership End Date --></label>
-        <name>npe01__Membership_End_Date__c</name>
-    </fields>
-    <fields>
-        <help>Als dit een verlenging, een nieuw lidmaatschap, of een lidmaatschap is van iemand die na opzegging is teruggekomen.</help>
-        <label><!-- Membership Origin --></label>
-        <name>npe01__Membership_Origin__c</name>
-        <picklistValues>
-            <masterLabel>New</masterLabel>
-            <translation>Nieuw</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Reacquire</masterLabel>
-            <translation>Opnieuw verwerven</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Renewal</masterLabel>
-            <translation>Verlenging</translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <help>Datum waarop de lidmaatschapsperiode begint</help>
-        <label><!-- Membership Start Date --></label>
-        <name>npe01__Membership_Start_Date__c</name>
-    </fields>
-    <fields>
-        <help>Totale aantal betalingen voor deze opportunity (donatie)</help>
-        <label><!-- Number of Payments --></label>
-        <name>npe01__Number_of_Payments__c</name>
-    </fields>
-    <fields>
-        <help>De totale waarde van betalingen die gemarkeerd zijn als betaald voor deze opportunity.</help>
-        <label><!-- Payment Amount Received --></label>
-        <name>npe01__Payments_Made__c</name>
-    </fields>
-    <fields>
         <help>Bepaalt of contactpersoonsrollen voor Huishouden worden gemaakt voor Opportunities. VEROUDERD. Vervangen door aangepaste instellingen.</help>
         <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
         <name>systemHouseholdContactRoleProcessor__c</name>
@@ -97,12 +18,4 @@
             <translation>Geen opportunities</translation>
         </picklistValues>
     </fields>
-    <webLinks>
-        <label><!-- New_Contact_Donation --></label>
-        <name>npe01__New_Contact_Donation</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- New_Organization_Donation --></label>
-        <name>npe01__New_Organization_Donation</name>
-    </webLinks>
-</CustomObjectTranslation>
+    </CustomObjectTranslation>
