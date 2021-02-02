@@ -1,182 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value><!-- Households Settings --></value>
-    </caseValues>
-    <fields>
-        <help>オンの場合、システムによって自動的に世帯名、公式の挨拶、および非公式の挨拶の名前が指定されます。</help>
-        <label>自動世帯命名</label>
-        <name>Advanced_Household_Naming__c</name>
-    </fields>
-    <fields>
-        <help>商談が個人によるものでない (会社や財団などからの) 場合でも、常に商談者の統計情報を商談の主取引先責任者の役割、および対応する世帯に積み上げ集計します。</help>
-        <label>常に主取引先責任者の役割に積み上げ集計</label>
-        <name>Always_Rollup_to_Primary_Contact__c</name>
-    </fields>
-    <fields>
-        <help>標準バージョンの代わりに非同期バージョンを使用するように世帯命名規則を切り替えるための非公開設定。</help>
-        <label>非同期世帯命名</label>
-        <name>Async_Household_Naming__c</name>
-    </fields>
-    <fields>
-        <help>商談者の統計情報の計算時に処理されるレコードの数。デフォルトサイズは 200 です。システムの制限により商談の積み上げ集計が失敗する場合は、この数値を小さくします。</help>
-        <label>積み上げ集計バッチサイズ</label>
-        <name>Batch_Size__c</name>
-    </fields>
-    <fields>
-        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
-        <label>廃止-Disable_HHAfter_trigger</label>
-        <name>DISABLE_HouseholdAfter_trigger__c</name>
-    </fields>
-    <fields>
-        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
-        <label>廃止-Disable_HHBefore_trigger</label>
-        <name>DISABLE_HouseholdBefore_trigger__c</name>
-    </fields>
-    <fields>
-        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
-        <label>廃止-Disable_Household_Opp_trigger</label>
-        <name>DISABLE_Household_Opportunity_trigger__c</name>
-    </fields>
-    <fields>
-        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
-        <label>廃止-Disable_Households_trigger</label>
-        <name>DISABLE_Households_trigger__c</name>
-    </fields>
-    <fields>
-        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
-        <label>廃止-Disable_OppRollup_trigger</label>
-        <name>DISABLE_OpportunityRollup_trigger__c</name>
-    </fields>
-    <fields>
-        <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
-        <label>廃止-Enable_Opp_Rollup_Triggers</label>
-        <name>Enable_Opp_Rollup_Triggers__c</name>
-    </fields>
-    <fields>
-        <help>商談取引先責任者の役割に基づいて、完了した商談の合計を積み上げ集計できるようにします。ソフトクレジット積み上げ集計は、夜間一括処理ジョブでのみ実行され、トリガでは実行されません。[商談の積み上げ集計のバッチ] タブを使用して手動で実行できます。</help>
-        <label>ソフトクレジット積み上げ集計の有効化</label>
-        <name>Enable_Soft_Credit_Rollups__c</name>
-    </fields>
-    <fields>
-        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
-        <label>廃止-更新確認の有効化</label>
-        <name>Enable_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>取引先商談の積み上げ集計時に統計から除外する商談レコードタイプの名前。</help>
-        <label>取引先積み上げ集計から除外する支援レコードタイプ</label>
-        <name>Excluded_Account_Opp_Rectypes__c</name>
-    </fields>
-    <fields>
-        <help>取引先商談の積み上げ集計時に統計から除外する商談種別項目の値。</help>
-        <label>取引先積み上げ集計から除外する支援種別</label>
-        <name>Excluded_Account_Opp_Types__c</name>
-    </fields>
-    <fields>
-        <help>取引先責任者商談の積み上げ集計時に統計から除外する商談レコードタイプの名前。</help>
-        <label>取引先責任者積み上げ集計から除外する支援レコードタイプ</label>
-        <name>Excluded_Contact_Opp_Rectypes__c</name>
-    </fields>
-    <fields>
-        <help>取引先責任者商談の積み上げ集計時に統計から除外する商談種別項目の値。</help>
-        <label>取引先責任者積み上げ集計から除外する支援種別</label>
-        <name>Excluded_Contact_Opp_Types__c</name>
-    </fields>
-    <fields>
-        <help>NPSP によってカスタム会計年度が存在するかが自動的に確認され、存在する場合はエラーを回避するためにカスタム会計年度設定を無効にします。この設定は、誤ってカスタム会計年度を有効にしているユーザの安全性チェックを上書きします。</help>
-        <label>会計年度を強制</label>
-        <name>Force_Fiscal_Year__c</name>
-    </fields>
-    <fields>
-        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
-        <label>廃止-パッケージを更新可能</label>
-        <name>Has_Package_Update__c</name>
-    </fields>
-    <fields>
-        <help>主取引先責任者の世帯メンバーの取引先責任者の役割を自動作成する場合はオンにします。</help>
-        <label>世帯取引先責任者の役割オン</label>
-        <name>Household_Contact_Roles_On__c</name>
-    </fields>
-    <fields>
-        <help>世帯の作成から除外する取引先責任者レコードタイプ。この設定は、世帯取引先モデルを使用している場合は無視されます。</help>
-        <label>世帯の作成から除外するレコードタイプ</label>
-        <name>Household_Creation_Excluded_Recordtypes__c</name>
-    </fields>
-    <fields>
-        <help>世帯の重複が排除されたキャンペーン郵送先名簿で使用される世帯郵送先名簿レポートのレポート ID。[メンバーの状況] に「重複」が含まれていない、取引先責任者が関連するキャンペーンのレポートにする必要があります。</help>
-        <label>世帯郵送先名簿レポート</label>
-        <name>Household_Mailing_List_ID__c</name>
-    </fields>
-    <fields>
-        <help>世帯メンバーの支援取引先責任者の役割を自動的に作成するときに使用される役割。</help>
-        <label>世帯メンバー取引先責任者の役割</label>
-        <name>Household_Member_Contact_Role__c</name>
-    </fields>
-    <fields>
-        <help>世帯の商談取引先責任者の役割作成から除外する取引先責任者レコードタイプ</help>
-        <label>世帯の支援個人の役割から除外するレコードタイプ</label>
-        <name>Household_OCR_Excluded_Recordtypes__c</name>
-    </fields>
-    <fields>
-        <help>世帯オブジェクトが自動的に作成される取引先責任者を指定します。1 対 1 または個人の取引先モデルを使用している取引先責任者のみに使用できます。世帯取引先モデルを使用している取引先責任者の場合は無視されます。</help>
-        <label>世帯オブジェクトルール</label>
-        <name>Household_Rules__c</name>
-    </fields>
-    <fields>
-        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
-        <label>廃止-最終更新確認日時</label>
-        <name>Last_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
-        <label>廃止-最大パッケージバージョン</label>
-        <name>Max_Package_Version__c</name>
-    </fields>
-    <fields>
-        <help>会員の期限が切れた (期限最終日) 後に状況が「猶予期間」から「期限切れ」に移行するまでの猶予期間 (日数)。デフォルトは 30 日です。</help>
-        <label>会員猶予期間</label>
-        <name>Membership_Grace_Period__c</name>
-    </fields>
-    <fields>
-        <help>他の商談レコードタイプから個別に積み上げ集計する、「会員」などの商談レコードタイプの名前。</help>
-        <label>会員レコードタイプ名</label>
-        <name>Membership_Record_Types__c</name>
-    </fields>
-    <fields>
-        <help>現在スケジュールされている商談積み上げ集計ジョブの ID</help>
-        <label>支援積み上げ集計スケジュール済みジョブ ID</label>
-        <name>Opp_Rollup_Scheduled_Job_Id__c</name>
-    </fields>
-    <fields>
-        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
-        <label>廃止-パッケージ更新 URL</label>
-        <name>Package_Update_URL__c</name>
-    </fields>
-    <fields>
-        <help>「N 日間」の積み上げ集計の値を指定します。「N」は現在の日付から過去の日付までの日数です。この値のデフォルトは、過去 365 日間の積み上げ集計です。</help>
-        <label>N 日間の積み上げ集計値</label>
-        <name>Rollup_N_Day_Value__c</name>
-    </fields>
-    <fields>
-        <help>新しいジョブをスケジュールするときに確認される有効なスケジュール済み Apex ジョブの数。</help>
-        <label>スケジュールジョブ制限</label>
-        <name>Schedule_Job_Limit__c</name>
-    </fields>
-    <fields>
-        <help>ソフトクレジット積み上げ集計に含める商談取引先責任者の役割のリスト。</help>
-        <label>ソフトクレジットの役割</label>
-        <name>Soft_Credit_Roles__c</name>
-    </fields>
-    <fields>
-        <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
-        <label>廃止-更新確認間隔</label>
-        <name>Update_Check_Interval__c</name>
-    </fields>
-    <fields>
-        <help>このボックスをオンにすると、商談積み上げ集計の合計にカレンダー年設定の代わりに会計年度が使用されます。会計年度情報を設定するには、[設定] -&gt; [組織プロファイル] -&gt; [会計年度] に移動します。注意: カスタム会計年度設定はサポートされていません。</help>
-        <label>積み上げ集計に会計年度を使用</label>
-        <name>Use_Fiscal_Year_for_Rollups__c</name>
-    </fields>
+  <fields>
+    <name>Advanced_Household_Naming__c</name>
+    <help>オンの場合、システムによって自動的に世帯名、公式の挨拶、および非公式の挨拶の名前が指定されます。</help>
+    <label>自動世帯命名</label>
+  </fields>
+  <fields>
+    <name>Always_Rollup_to_Primary_Contact__c</name>
+    <help>商談が個人によるものでない (会社や財団などからの) 場合でも、常に商談者の統計情報を商談の主取引先責任者の役割、および対応する世帯に積み上げ集計します。</help>
+    <label>常に主取引先責任者の役割に積み上げ集計</label>
+  </fields>
+  <fields>
+    <name>Async_Household_Naming__c</name>
+    <help>標準バージョンの代わりに非同期バージョンを使用するように世帯命名規則を切り替えるための非公開設定。</help>
+    <label>非同期世帯命名</label>
+  </fields>
+  <fields>
+    <name>Batch_Size__c</name>
+    <help>商談者の統計情報の計算時に処理されるレコードの数。デフォルトサイズは 200 です。システムの制限により商談の積み上げ集計が失敗する場合は、この数値を小さくします。</help>
+    <label>積み上げ集計バッチサイズ</label>
+  </fields>
+  <fields>
+    <name>DISABLE_HouseholdAfter_trigger__c</name>
+    <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+    <label>廃止-Disable_HHAfter_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_HouseholdBefore_trigger__c</name>
+    <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+    <label>廃止-Disable_HHBefore_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_Household_Opportunity_trigger__c</name>
+    <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+    <label>廃止-Disable_Household_Opp_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_Households_trigger__c</name>
+    <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+    <label>廃止-Disable_Households_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityRollup_trigger__c</name>
+    <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+    <label>廃止-Disable_OppRollup_trigger</label>
+  </fields>
+  <fields>
+    <name>Enable_Opp_Rollup_Triggers__c</name>
+    <help>廃止。トリガの動作が [NPSP 設定] の [トリガ設定] ページで制御されるようになりました。</help>
+    <label>廃止-Enable_Opp_Rollup_Triggers</label>
+  </fields>
+  <fields>
+    <name>Enable_Soft_Credit_Rollups__c</name>
+    <help>商談取引先責任者の役割に基づいて、完了した商談の合計を積み上げ集計できるようにします。ソフトクレジット積み上げ集計は、夜間一括処理ジョブでのみ実行され、トリガでは実行されません。[商談の積み上げ集計のバッチ] タブを使用して手動で実行できます。</help>
+    <label>ソフトクレジット積み上げ集計の有効化</label>
+  </fields>
+  <fields>
+    <name>Enable_Update_Check__c</name>
+    <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+    <label>廃止-更新確認の有効化</label>
+  </fields>
+  <fields>
+    <name>Excluded_Account_Opp_Rectypes__c</name>
+    <help>取引先商談の積み上げ集計時に統計から除外する商談レコードタイプの名前。</help>
+    <label>取引先積み上げ集計から除外する支援レコードタイプ</label>
+  </fields>
+  <fields>
+    <name>Excluded_Account_Opp_Types__c</name>
+    <help>取引先商談の積み上げ集計時に統計から除外する商談種別項目の値。</help>
+    <label>取引先積み上げ集計から除外する支援種別</label>
+  </fields>
+  <fields>
+    <name>Excluded_Contact_Opp_Rectypes__c</name>
+    <help>取引先責任者商談の積み上げ集計時に統計から除外する商談レコードタイプの名前。</help>
+    <label>取引先責任者積み上げ集計から除外する支援レコードタイプ</label>
+  </fields>
+  <fields>
+    <name>Excluded_Contact_Opp_Types__c</name>
+    <help>取引先責任者商談の積み上げ集計時に統計から除外する商談種別項目の値。</help>
+    <label>取引先責任者積み上げ集計から除外する支援種別</label>
+  </fields>
+  <fields>
+    <name>Force_Fiscal_Year__c</name>
+    <help>NPSP によってカスタム会計年度が存在するかが自動的に確認され、存在する場合はエラーを回避するためにカスタム会計年度設定を無効にします。この設定は、誤ってカスタム会計年度を有効にしているユーザの安全性チェックを上書きします。</help>
+    <label>会計年度を強制</label>
+  </fields>
+  <fields>
+    <name>Has_Package_Update__c</name>
+    <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+    <label>廃止-パッケージを更新可能</label>
+  </fields>
+  <fields>
+    <name>Household_Contact_Roles_On__c</name>
+    <help>主取引先責任者の世帯メンバーの取引先責任者の役割を自動作成する場合はオンにします。</help>
+    <label>世帯取引先責任者の役割オン</label>
+  </fields>
+  <fields>
+    <name>Household_Creation_Excluded_Recordtypes__c</name>
+    <help>世帯の作成から除外する取引先責任者レコードタイプ。この設定は、世帯取引先モデルを使用している場合は無視されます。</help>
+    <label>世帯の作成から除外するレコードタイプ</label>
+  </fields>
+  <fields>
+    <name>Household_Mailing_List_ID__c</name>
+    <help>世帯の重複が排除されたキャンペーン郵送先名簿で使用される世帯郵送先名簿レポートのレポート ID。[メンバーの状況] に「重複」が含まれていない、取引先責任者が関連するキャンペーンのレポートにする必要があります。</help>
+    <label>世帯郵送先名簿レポート</label>
+  </fields>
+  <fields>
+    <name>Household_Member_Contact_Role__c</name>
+    <help>世帯メンバーの支援取引先責任者の役割を自動的に作成するときに使用される役割。</help>
+    <label>世帯メンバー取引先責任者の役割</label>
+  </fields>
+  <fields>
+    <name>Household_OCR_Excluded_Recordtypes__c</name>
+    <help>世帯の商談取引先責任者の役割作成から除外する取引先責任者レコードタイプ</help>
+    <label>世帯の支援個人の役割から除外するレコードタイプ</label>
+  </fields>
+  <fields>
+    <name>Household_Rules__c</name>
+    <help>世帯オブジェクトが自動的に作成される取引先責任者を指定します。1 対 1 または個人の取引先モデルを使用している取引先責任者のみに使用できます。世帯取引先モデルを使用している取引先責任者の場合は無視されます。</help>
+    <label>世帯オブジェクトルール</label>
+  </fields>
+  <fields>
+    <name>Last_Update_Check__c</name>
+    <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+    <label>廃止-最終更新確認日時</label>
+  </fields>
+  <fields>
+    <name>Max_Package_Version__c</name>
+    <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+    <label>廃止-最大パッケージバージョン</label>
+  </fields>
+  <fields>
+    <name>Membership_Grace_Period__c</name>
+    <help>会員の期限が切れた (期限最終日) 後に状況が「猶予期間」から「期限切れ」に移行するまでの猶予期間 (日数)。デフォルトは 30 日です。</help>
+    <label>会員猶予期間</label>
+  </fields>
+  <fields>
+    <name>Membership_Record_Types__c</name>
+    <help>他の商談レコードタイプから個別に積み上げ集計する、「会員」などの商談レコードタイプの名前。</help>
+    <label>会員レコードタイプ名</label>
+  </fields>
+  <fields>
+    <name>Opp_Rollup_Scheduled_Job_Id__c</name>
+    <help>現在スケジュールされている商談積み上げ集計ジョブの ID</help>
+    <label>支援積み上げ集計スケジュール済みジョブ ID</label>
+  </fields>
+  <fields>
+    <name>Package_Update_URL__c</name>
+    <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+    <label>廃止-パッケージ更新 URL</label>
+  </fields>
+  <fields>
+    <name>Rollup_N_Day_Value__c</name>
+    <help>「N 日間」の積み上げ集計の値を指定します。「N」は現在の日付から過去の日付までの日数です。この値のデフォルトは、過去 365 日間の積み上げ集計です。</help>
+    <label>N 日間の積み上げ集計値</label>
+  </fields>
+  <fields>
+    <name>Schedule_Job_Limit__c</name>
+    <help>新しいジョブをスケジュールするときに確認される有効なスケジュール済み Apex ジョブの数。</help>
+    <label>スケジュールジョブ制限</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_Roles__c</name>
+    <help>ソフトクレジット積み上げ集計に含める商談取引先責任者の役割のリスト。</help>
+    <label>ソフトクレジットの役割</label>
+  </fields>
+  <fields>
+    <name>Update_Check_Interval__c</name>
+    <help>廃止。Nonprofit Success Pack の新バージョンが自動的にインストールされます。</help>
+    <label>廃止-更新確認間隔</label>
+  </fields>
+  <fields>
+    <name>Use_Fiscal_Year_for_Rollups__c</name>
+    <help>このボックスをオンにすると、商談積み上げ集計の合計にカレンダー年設定の代わりに会計年度が使用されます。会計年度情報を設定するには、[設定] -&gt; [組織プロファイル] -&gt; [会計年度] に移動します。注意: カスタム会計年度設定はサポートされていません。</help>
+    <label>積み上げ集計に会計年度を使用</label>
+  </fields>
 </CustomObjectTranslation>
