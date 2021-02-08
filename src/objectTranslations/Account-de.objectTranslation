@@ -2,22 +2,22 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <help>Im Durchschnitt gewonnener Opportunity-Betrag in Verbindung mit diesem Account. Wir automatisch aktualisiert.</help>
-        <label>Durchschnittliche Schenkung</label>
+        <label>Durchschnittliche Spende</label>
         <name>AverageAmount__c</name>
     </fields>
     <fields>
-        <help>Die Summe der gewonnenen Opportunity-Beträge im Jahr der besten Schenkung für diesen Account.</help>
-        <label>Jahr der besten Schenkung gesamt</label>
+        <help>Die Summe der gewonnenen Opportunity-Beträge im Jahr der besten Spende für diesen Account.</help>
+        <label>Jahr der besten Spende gesamt</label>
         <name>Best_Gift_Year_Total__c</name>
     </fields>
     <fields>
-        <help>Das Jahr, aus dem der höchste Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Opportunities stammt. Siehe auch &quot;Jahr der besten Schenkung gesamt&quot;.</help>
-        <label>Jahr der besten Schenkung</label>
+        <help>Das Jahr, aus dem der höchste Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Opportunities stammt. Siehe auch &quot;Jahr der besten Spende gesamt&quot;.</help>
+        <label>Jahr der besten Spende</label>
         <name>Best_Gift_Year__c</name>
     </fields>
     <fields>
         <help>Die früheste in Verbindung mit diesem Account gewonnene Opportunity (nach Schlusstermin) mit einem Betrag über null.</help>
-        <label>Datum der ersten Schenkung</label>
+        <label>Datum der ersten Spende</label>
         <name>FirstCloseDate__c</name>
     </fields>
     <fields>
@@ -36,12 +36,12 @@
     </fields>
     <fields>
         <help>Der größte Betrag einer in Verbindung mit diesem Account gewonnenen Opportunity.</help>
-        <label>Größte Schenkung</label>
+        <label>Größte Spende</label>
         <name>LargestAmount__c</name>
     </fields>
     <fields>
         <help>Das letzte Schlussdatum einer in Verbindung mit diesem Account gewonnenen Opportunity mit einem Betrag über null.</help>
-        <label>Datum des letzten Schenkung</label>
+        <label>Datum der letzten Spende</label>
         <name>LastCloseDate__c</name>
     </fields>
     <fields>
@@ -66,7 +66,7 @@
     </fields>
     <fields>
         <help>Der Betrag der zuletzt in Verbindung mit diesem Account gewonnenen Opportunity (nach Schlusstermin) mit einem Betrag über null.</help>
-        <label>Betrag der letzten Schenkung</label>
+        <label>Betrag der letzten Spende</label>
         <name>LastOppAmount__c</name>
     </fields>
     <fields>
@@ -81,7 +81,7 @@
     </fields>
     <fields>
         <help>Die Gesamtzahl der in Verbindung mit diesem Account gewonnenen Opportunities.</help>
-        <label>Gesamtzahl der Schenkungen</label>
+        <label>Gesamtzahl der Spenden</label>
         <name>NumberOfClosedOpps__c</name>
     </fields>
     <fields>
@@ -91,42 +91,42 @@
     </fields>
     <fields>
         <help>Der Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Opportunities, die in dem Jahr oder Geschäftsjahr vor dem letzten Jahr geschlossen wurden (siehe Haushalt-Einstellungen).</help>
-        <label>Schenkungen gesamt vor zwei Jahren</label>
+        <label>Spenden gesamt vor zwei Jahren</label>
         <name>OppAmount2YearsAgo__c</name>
     </fields>
     <fields>
         <help>Der Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Opportunities, die in den letzten in den Haushalt-Einstellungen definierten N Tagen geschlossen wurden.</help>
-        <label>Schenkungen gesamt in letzten N Tagen</label>
+        <label>Spenden gesamt in letzten N Tagen</label>
         <name>OppAmountLastNDays__c</name>
     </fields>
     <fields>
         <help>Der Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Opportunities, die im aktuellen Jahr oder Geschäftsjahr geschlossen wurden.</help>
-        <label>Schenkungen gesamt im letzten Jahr</label>
+        <label>Spenden gesamt im letzten Jahr</label>
         <name>OppAmountLastYear__c</name>
     </fields>
     <fields>
         <help>Der Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Opportunities, die im aktuellen Jahr oder Geschäftsjahr geschlossen wurden.</help>
-        <label>Schenkungen gesamt dieses Jahr</label>
+        <label>Spenden gesamt dieses Jahr</label>
         <name>OppAmountThisYear__c</name>
     </fields>
     <fields>
         <help>Die Gesamtzahl der in Verbindung mit diesem Account gewonnenen Opportunities mit einem Betrag über null, die in dem Jahr oder Geschäftsjahr vor dem letzten Jahr geschlossen wurden.</help>
-        <label>Anzahl der Schenkungen vor zwei Jahren</label>
+        <label>Anzahl der Spenden vor zwei Jahren</label>
         <name>OppsClosed2YearsAgo__c</name>
     </fields>
     <fields>
         <help>Der Gesamtbetrag der in Verbindung mit diesem Account gewonnenen Opportunities, die in den letzten in den Haushalt-Einstellungen definierten N Tagen geschlossen wurden.</help>
-        <label>Anzahl Schenkungen in letzten N Tagen</label>
+        <label>Anzahl Spenden in letzten N Tagen</label>
         <name>OppsClosedLastNDays__c</name>
     </fields>
     <fields>
         <help>Die Gesamtzahl der in Verbindung mit diesem Account gewonnenen Opportunities mit einem Betrag über null, die im letzten Jahr oder Geschäftsjahr geschlossen wurden (siehe Haushalt-Einstellungen).</help>
-        <label>Anzahl der Schenkungen letztes Jahr</label>
+        <label>Anzahl der Spenden letztes Jahr</label>
         <name>OppsClosedLastYear__c</name>
     </fields>
     <fields>
         <help>Die Gesamtzahl der in Verbindung mit diesem Account gewonnenen Opportunities mit einem Betrag über null, die im aktuellen Jahr oder Geschäftsjahr geschlossen wurden (siehe Haushalt-Einstellungen).</help>
-        <label>Anzahl der Schenkungen dieses Jahr</label>
+        <label>Anzahl der Spenden dieses Jahr</label>
         <name>OppsClosedThisYear__c</name>
     </fields>
     <fields>
@@ -136,7 +136,7 @@
         </fields>
     <fields>
         <help>Der kleinste Betrag größer als null einer in Verbindung mit diesem Account gewonnenen Opportunity.</help>
-        <label>Kleinste Schenkung</label>
+        <label>Kleinste Spende</label>
         <name>SmallestAmount__c</name>
     </fields>
     <fields>
@@ -146,7 +146,7 @@
     </fields>
     <fields>
         <help>Die Summe der Beträge aller in Verbindung mit diesem Account gewonnenen Opportunities.</help>
-        <label>Schenkungen gesamt</label>
+        <label>Spenden gesamt</label>
         <name>TotalOppAmount__c</name>
     </fields>
     </CustomObjectTranslation>

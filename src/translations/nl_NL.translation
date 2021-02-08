@@ -197,7 +197,7 @@
         <name>SetAddress</name>
     </customLabels>
     <customLabels>
-        <label>Met deze instellingen kunt u door de gebruiker gedefinieerde totaliseringen maken en beheren op basis van een Opportunity (Donatie) voor een contactpersoon, account of huishouden. Nadat u een door de gebruiker gedefinieerde totalisering hebt gemaakt, wilt u wellicht Batch van donaties totaliseren in NPSP-instellingen | Bulkgegevensprocessen gebruiken om alle totaliseringen op uw exemplaar opnieuw te berekenen en ervoor te zorgen dat uw nieuwe totaliseringsveld correct wordt ingevuld.  WAARSCHUWING: totaliseringen wijzigen de werking van uw Nonprofit Success Pack. Door onjuist geconfigureerde instellingen kunnen uw totaliseringen mislukken. Test uw door de gebruiker gedefinieerde totaliseringen grondig voordat u gaat implementeren naar productie.</label>
+        <label>Met deze instellingen kunt u door de gebruiker gedefinieerde totaliseringen maken en beheren op basis van een opportunity (donatie) voor een contactpersoon, account of huishouden. Nadat u een door de gebruiker gedefinieerde totalisering hebt gemaakt, wilt u wellicht Batch van donaties totaliseren in NPSP-instellingen | Bulkgegevensprocessen gebruiken om alle totaliseringen op uw exemplaar opnieuw te berekenen en ervoor te zorgen dat uw nieuwe totaliseringsveld correct wordt ingevuld.  WAARSCHUWING: totaliseringen wijzigen de werking van uw Nonprofit Success Pack. Door onjuist geconfigureerde instellingen kunnen uw totaliseringen mislukken. Test uw door de gebruiker gedefinieerde totaliseringen grondig voordat u gaat implementeren naar productie.</label>
         <name>UDRDescription</name>
     </customLabels>
     <customPageWebLinks>

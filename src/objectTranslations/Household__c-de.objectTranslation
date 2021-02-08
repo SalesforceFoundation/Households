@@ -51,22 +51,22 @@
     </fields>
     <fields>
         <help>Durchschnittlicher Betrag der in Verbindung mit diesem Haushalt von einem verbundenen Kontakt mit primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
-        <label>Durchschnittliche Schenkung</label>
+        <label>Durchschnittliche Spende</label>
         <name>AverageAmount__c</name>
     </fields>
     <fields>
-        <help>Die Summe der im Jahr der besten Schenkung für diesen Haushalt über Kontakte mit primärer Opportunity-Kontaktrolle gewonnenen Opportunity-Beträge. Siehe auch &quot;Jahr der besten Schenkung&quot;.</help>
-        <label>Jahr der besten Schenkung gesamt</label>
+        <help>Die Summe der im Jahr der besten Spende für diesen Haushalt über Kontakte mit primärer Opportunity-Kontaktrolle gewonnenen Opportunity-Beträge. Siehe auch &quot;Jahr der besten Spende&quot;.</help>
+        <label>Jahr der besten Spende gesamt</label>
         <name>Best_Gift_Year_Total__c</name>
     </fields>
     <fields>
-        <help>Das Jahr, in dem der höchste Gesamtbetrag an Opportunities in Verbindung mit diesem Haushalt über Kontakte mit primärer Opportunity-Kontaktrolle gewonnen wurde. Siehe auch &quot;Jahr der besten Schenkung gesamt&quot;.</help>
-        <label>Jahr der besten Schenkung</label>
+        <help>Das Jahr, in dem der höchste Gesamtbetrag an Opportunities in Verbindung mit diesem Haushalt über Kontakte mit primärer Opportunity-Kontaktrolle gewonnen wurde. Siehe auch &quot;Jahr der besten Spende gesamt&quot;.</help>
+        <label>Jahr der besten Spende</label>
         <name>Best_Gift_Year__c</name>
     </fields>
     <fields>
         <help>Der früheste Schlusstermin einer in Verbindung mit diesem Haushalt über Kontakte mit primärer Kontaktrolle gewonnenen Opportunity.</help>
-        <label>Datum der ersten Schenkung</label>
+        <label>Datum der ersten Spende</label>
         <name>FirstCloseDate__c</name>
     </fields>
     <fields>
@@ -100,12 +100,12 @@
     </fields>
     <fields>
         <help>Der größte Betrag der für diesen Haushalt von verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunity.</help>
-        <label>Größte Schenkung</label>
+        <label>Größte Spende</label>
         <name>LargestAmount__c</name>
     </fields>
     <fields>
         <help>Letzter Schlusstermin einer für diesen Haushalt über verbundene Kontakte mit primärer Kontaktrolle gewonnenen Opportunity.</help>
-        <label>Datum der letzten Schenkung</label>
+        <label>Datum der letzten Spende</label>
         <name>LastCloseDate__c</name>
     </fields>
     <fields>
@@ -130,7 +130,7 @@
     </fields>
     <fields>
         <help>Der letzte Betrag der für diesen Haushalt von verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunity.</help>
-        <label>Betrag der letzten Schenkung</label>
+        <label>Betrag der letzten Spende</label>
         <name>LastOppAmount__c</name>
     </fields>
     <fields>
@@ -179,8 +179,8 @@
         <name>Membership_Status__c</name>
     </fields>
     <fields>
-        <help>Die Gesamtzahl der Schenkungen in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
-        <label>Anzahl an Schenkungen gesamt</label>
+        <help>Die Gesamtzahl der Spenden in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
+        <label>Gesamtzahl der Spenden</label>
         <name>NumberOfClosedOpps__c</name>
     </fields>
     <fields>
@@ -189,43 +189,43 @@
         <name>NumberOfMembershipOpps__c</name>
     </fields>
     <fields>
-        <help>Summe der Schenkungen von vor zwei Jahren für den Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
-        <label>Schenkungen gesamt vor zwei Jahren</label>
+        <help>Summe der Spenden von vor zwei Jahren für den Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
+        <label>Spenden gesamt vor zwei Jahren</label>
         <name>OppAmount2YearsAgo__c</name>
     </fields>
     <fields>
         <help>Der Gesamtbetrag der in Verbindung mit diesem Haushalt, in den letzten in den Haushalt-Einstellungen definierten N Tagen nach Kontakt und primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
-        <label>Schenkungen gesamt in letzten N Tagen</label>
+        <label>Spenden gesamt in letzten N Tagen</label>
         <name>OppAmountLastNDays__c</name>
     </fields>
     <fields>
-        <help>Summe der Schenkungen im letzten Jahr für den Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
-        <label>Schenkungen gesamt im letzten Jahr</label>
+        <help>Summe der Spenden im letzten Jahr für den Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
+        <label>Spenden gesamt im letzten Jahr</label>
         <name>OppAmountLastYear__c</name>
     </fields>
     <fields>
-        <help>Summe der Schenkungen in diesem Jahr für den Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
-        <label>Schenkungen gesamt in diesem Jahr</label>
+        <help>Summe der Spenden in diesem Jahr für den Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.</help>
+        <label>Spenden gesamt dieses Jahr</label>
         <name>OppAmountThisYear__c</name>
     </fields>
     <fields>
         <help>Die Anzahl der mit Schlusstermin in den letzten 2 Jahren in Verbindung mit diesem Haushalt per verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
-        <label>Anzahl der Schenkungen vor zwei Jahren</label>
+        <label>Anzahl der Spenden vor zwei Jahren</label>
         <name>OppsClosed2YearsAgo__c</name>
     </fields>
     <fields>
         <help>Die Anzahl der mit Schlusstermin in den letzten N Tagen (Haushalt-Einstellungen) in Verbindung mit diesem Haushalt per verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
-        <label>Anzahl Schenkungen in letzten N Tagen</label>
+        <label>Anzahl Spenden in letzten N Tagen</label>
         <name>OppsClosedLastNDays__c</name>
     </fields>
     <fields>
         <help>Die Anzahl der mit Schlusstermin im letzten Jahr in Verbindung mit diesem Haushalt per verbundenen Kontakten mit primärer Kontaktrolle gewonnenen Opportunities.</help>
-        <label>Anzahl der Schenkungen im letzten Jahr</label>
+        <label>Anzahl der Spenden letztes Jahr</label>
         <name>OppsClosedLastYear__c</name>
     </fields>
     <fields>
         <help>Die Anzahl der mit Schlusstermin in diesem Jahr in Verbindung mit diesem Haushalt per verbundenen Kontakten mit primärer Opportunity-Kontaktrolle gewonnenen Opportunities.</help>
-        <label>Anzahl der Schenkungen dieses Jahr</label>
+        <label>Anzahl der Spenden dieses Jahr</label>
         <name>OppsClosedThisYear__c</name>
     </fields>
     <fields>
@@ -235,7 +235,7 @@
         </fields>
     <fields>
         <help>Der kleinste Betrag einer in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.gewonnenen Opportunity.</help>
-        <label>Kleinste Schenkung</label>
+        <label>Kleinste Spende</label>
         <name>SmallestAmount__c</name>
     </fields>
     <fields>
@@ -245,7 +245,7 @@
     </fields>
     <fields>
         <help>Die Summe der in Verbindung mit diesem Haushalt nach Kontakt und primärer Opportunity-Kontaktrolle.gewonnenen Opportunities.</help>
-        <label>Schenkungen gesamt</label>
+        <label>Spenden gesamt</label>
         <name>TotalOppAmount__c</name>
     </fields>
     <gender>Masculine</gender>

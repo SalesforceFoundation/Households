@@ -59,7 +59,7 @@
         <name>Enable_Opp_Rollup_Triggers__c</name>
     </fields>
     <fields>
-        <help>Totaliza los totales de oportunidades Cerradas/Ganadas con registros de Contacto basados en funciones de contacto de oportunidades. Las totalizaciones de créditos blandos solo se producen en lotes nocturnos, pero puede ejecutarlos manualmente desde la configuración de Lote de donaciones de totalización.</help>
+        <help>Totaliza oportunidades Cerradas/Ganadas con registros de Contacto por funciones de contacto de oportunidades. Las totalizaciones de créditos blandos se hacen en lotes nocturnos, y manualmente desde la configuración de Lote de donaciones de totalización.</help>
         <label>Activar totalizaciones créditos blandos</label>
         <name>Enable_Soft_Credit_Rollups__c</name>
     </fields>
