@@ -1,178 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>Advanced_Household_Naming__c</name>
-    <help>Bei Aktivierung werden die Haushalt-Namen sowie informelle und formelle Anreden automatisch bereitgestellt.</help>
-    <label>Automatische Benennung der Haushalte</label>
-  </fields>
-  <fields>
-    <name>Always_Rollup_to_Primary_Contact__c</name>
-    <help>Bei aktivierter Option führt Salesforce IMMER einen Rollup zu den Spenderdaten des prim. Kontakts der Opp. und dem Haushalt-Account/-Datensatz durch, auch wenn die Opp. nicht von einer Person stammt. Ohne Aktivierung erhält nur die Organisation Kredit.</help>
-    <label>Immer Rollup zu primärer Kontaktrolle</label>
-  </fields>
-  <fields>
-    <name>Async_Household_Naming__c</name>
-    <help>Hierbei handelt es sich um eine nicht angezeigte Einstellung zum Umschalten des Haushalt-Benennungscodes zur Verwendung einer asynchronen Version anstelle der Standardversion.</help>
-    <label>Asynchrone Benennung der Haushalte</label>
-  </fields>
-  <fields>
-    <name>Batch_Size__c</name>
-    <help>Die Anzahl der Datensätze, die beim Berechnen der Spenderstatistik gleichzeitig verarbeitet werden. Die Standardgröße ist 200. Verringern Sie die Anzahl, wenn die Opportunity-Rollups aufgrund von Systembeschränkungen fehlschlagen.</help>
-    <label>Rollup-Batchgröße</label>
-  </fields>
-  <fields>
-    <name>DISABLE_HouseholdAfter_trigger__c</name>
-    <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite "Auslöserkonfiguration" in den NPSP-Einstellungen gesteuert.</help>
-    <label>DEPRECATED-Disable_HHAfter_trigger</label>
-  </fields>
-  <fields>
-    <name>DISABLE_HouseholdBefore_trigger__c</name>
-    <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite "Auslöserkonfiguration" in den NPSP-Einstellungen gesteuert.</help>
-    <label>DEPRECATED-Disable_HHBefore_trigger</label>
-  </fields>
-  <fields>
-    <name>DISABLE_Household_Opportunity_trigger__c</name>
-    <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite "Auslöserkonfiguration" in den NPSP-Einstellungen gesteuert.</help>
-    <label>DEPRECATED-Disable_Household_Opp_trigger</label>
-  </fields>
-  <fields>
-    <name>DISABLE_Households_trigger__c</name>
-    <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite "Auslöserkonfiguration" in den NPSP-Einstellungen gesteuert.</help>
-    <label>DEPRECATED-Disable_Households_trigger</label>
-  </fields>
-  <fields>
-    <name>DISABLE_OpportunityRollup_trigger__c</name>
-    <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite "Auslöserkonfiguration" in den NPSP-Einstellungen gesteuert.</help>
-    <label>DEPRECATED-Disable_OppRollup_trigger</label>
-  </fields>
-  <fields>
-    <name>Enable_Opp_Rollup_Triggers__c</name>
-    <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite "Auslöserkonfiguration" in den NPSP-Einstellungen gesteuert.</help>
-    <label>DEPRECATED-Enable_Opp_Rollup_Triggers</label>
-  </fields>
-  <fields>
-    <name>Enable_Soft_Credit_Rollups__c</name>
-    <help>Ermöglicht Rollup v. geschl. Opport.-Gesamtwerten auf Basis d. Opport.-Kontaktrollen. Rollups v. Soft Credits werden während nächtl. Batchaufträge durchgef., nicht aufgrund v. Auslösern. Sie sind über "Batch zum Rollup von Spenden" manuell ausführbar.</help>
-    <label>Soft Credit-Rollups aktivieren</label>
-  </fields>
-  <fields>
-    <name>Enable_Update_Check__c</name>
-    <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
-    <label>ERSETZT-Update-Check aktivieren</label>
-  </fields>
-  <fields>
-    <name>Excluded_Account_Opp_Rectypes__c</name>
-    <help>Namen der Opportunity-Datensatztypen, die beim Rollup von Account-Opportunities von Statistiken ausgeschlossen werden sollen</help>
-    <label>Für Acc.-Rollup ausgeschl. Datens.typen</label>
-  </fields>
-  <fields>
-    <name>Excluded_Account_Opp_Types__c</name>
-    <help>Opportunities mit diesem Wert in der Typ-Auswahlliste werden nicht in Rollups in den Account einbezogen.</help>
-    <label>Für Acc.-Rollup ausgeschl. Opp.-Typen</label>
-  </fields>
-  <fields>
-    <name>Excluded_Contact_Opp_Rectypes__c</name>
-    <help>Opportunities mit den ausgewählten Datensatztypen werden nicht in Rollups in den Kontakt einbezogen. Klicken Sie zum Auswählen von mehr als nur einem Datensatztyp zusätzlich auf die Strg- oder die CMD-Taste.</help>
-    <label>Für Kont.-Rollup ausgeschl. Datens.typen</label>
-  </fields>
-  <fields>
-    <name>Excluded_Contact_Opp_Types__c</name>
-    <help>Opportunities mit diesem Wert in der Typ-Auswahlliste werden nicht in Rollups in den Kontakt einbezogen.</help>
-    <label>Für Kont.-Rollup ausgeschl. Opp-Typen</label>
-  </fields>
-  <fields>
-    <name>Force_Fiscal_Year__c</name>
-    <help>Beim NPSP wird autom. geprüft, ob benutzerdef. Geschäftsjahre vorhanden sind. Zur Fehlervermeid. werden gefundene Geschäftsjahreinst. deakt. So wird die Sicherheitsprüfung für Benutzer aufgehoben, die versehentlich benutzerdef. Geschäftsjahre akt. haben.</help>
-    <label>Geschäftsjahr erzwingen</label>
-  </fields>
-  <fields>
-    <name>Has_Package_Update__c</name>
-    <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
-    <label>ERSETZT-Paket-Update vorhanden</label>
-  </fields>
-  <fields>
-    <name>Household_Contact_Roles_On__c</name>
-    <help>Es werden automatisch Kontaktrollen für die Haushalt-Mitglieder des primären Kontakts der Opportunity erstellt.</help>
-    <label>Haushalt-Kontaktrollen Ein</label>
-  </fields>
-  <fields>
-    <name>Household_Creation_Excluded_Recordtypes__c</name>
-    <help>Kontaktdatensatztypen, die bei der Erstellung des Haushalts ausgeschlossen werden. Bei Verwendung des Haushalt-Account-Modells wird diese Einstellung ignoriert.</help>
-    <label>Bei Haush.erst. ausgeschl. Datens.typen</label>
-  </fields>
-  <fields>
-    <name>Household_Mailing_List_ID__c</name>
-    <help>Die Kennung des Berichts zur Haushalt-Mailingliste, die zur Entfernung von Haushalt-Duplikaten in den Kampagnen-Mailinglisten verwendet wird. Der Bericht sollte für Kampagnen mit Kontakten mit Mitglied-Status ohne "Duplikate" verwendet werden.</help>
-    <label>Bericht zur Haushalt-Mailingliste</label>
-  </fields>
-  <fields>
-    <name>Household_Member_Contact_Role__c</name>
-    <help>Die Kontaktrolle, die Sie für Haushalt-Mitglieder verwenden wollen.</help>
-    <label>Kontaktrolle für Haushalt-Mitglied</label>
-  </fields>
-  <fields>
-    <name>Household_OCR_Excluded_Recordtypes__c</name>
-    <help>Bei Kontaktdatensatztypen, die aus der autom. Erstellung der Kontaktrollen für Haushalt-Mitglieder ausgeschlossen werden, würden diese Kontakte bei Erstellung der Opportunity keine Kontaktrolle für Haushalt-Mitglieder erhalten.</help>
-    <label>Aus Opp.-Kont.roll. Ausg. Datens.typen</label>
-  </fields>
-  <fields>
-    <name>Household_Rules__c</name>
-    <help>Gibt an, für welche Kontakte autom. Haushalt-Objekte erstellt werden. Diese Opt. wird nur für Kontakte verwendet, die das Eins-zu-Eins- oder Einzelperson-Acc.-Modell verwenden. Für Kontakte mit dem Haushalt-Account-Modell wird diese Einstell. ignoriert.</help>
-    <label>Haushalt-Objektregeln</label>
-  </fields>
-  <fields>
-    <name>Last_Update_Check__c</name>
-    <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
-    <label>ERSETZT-Letzter Update-Check</label>
-  </fields>
-  <fields>
-    <name>Max_Package_Version__c</name>
-    <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
-    <label>ERSETZT-Max Paketversion</label>
-  </fields>
-  <fields>
-    <name>Membership_Grace_Period__c</name>
-    <help>Der Kulanzzeitraum (in Tagen) nach Ablauf der Mitgliedschaft (letztes Enddatum), bevor der Status von "Kulanzzeitraum" in "Abgelaufen" geändert wird. Standardmäßig auf 30 Tage gesetzt.</help>
-    <label>Kulanzzeitraum für Mitgliedschaft</label>
-  </fields>
-  <fields>
-    <name>Membership_Record_Types__c</name>
-    <help>Namen für Opportunity-Datensatztypen wie Mitgliedschaft, für die Sie separat einen Rollup von anderen Opportunity-Datensatztypen durchführen wollen.</help>
-    <label>Namen für Mitgliedschaft-Datensatztyp </label>
-  </fields>
-  <fields>
-    <name>Opp_Rollup_Scheduled_Job_Id__c</name>
-    <help>Kennung für den aktuell geplanten Opportunity-Rollup-Auftrag</help>
-    <label>Kennung für gepl. Opp.-Rollup-Auftrag</label>
-  </fields>
-  <fields>
-    <name>Package_Update_URL__c</name>
-    <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
-    <label>ERSETZT-Paket-Update-URL</label>
-  </fields>
-  <fields>
-    <name>Rollup_N_Day_Value__c</name>
-    <help>Geben Sie einen Wert für "N-Tage"-Rollups an, wobei "N" die Anzahl der Tage von heute zurück in die Vergangenheit bezeichnet. Dieser Wert gilt standardmäßig für einen Rollup für die letzten 365 Tage.</help>
-    <label>N-Tage-Wert für Rollup</label>
-  </fields>
-  <fields>
-    <name>Schedule_Job_Limit__c</name>
-    <help>Die Anzahl der aktiven geplanten Apex-Aufträge, die bei Planung neuer Aufträge beachtet werden müssen</help>
-    <label>Auftragsplanungsgrenze</label>
-  </fields>
-  <fields>
-    <name>Soft_Credit_Roles__c</name>
-    <help>Opportunity-Kontaktrollen, die in Rollups von Soft-Credits einbezogen werden sollen. Klicken Sie zum Auswählen von mehreren Rollen zusätzlich auf die Strg- oder die CMD-Taste.</help>
-    <label>Rollen für Soft Credits</label>
-  </fields>
-  <fields>
-    <name>Update_Check_Interval__c</name>
-    <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
-    <label>ERSETZT-Update-Check-Intervall</label>
-  </fields>
-  <fields>
-    <name>Use_Fiscal_Year_for_Rollups__c</name>
-    <help>Bei Akt. wird f. die Opport.-Rollup-Gesamtwerte das Geschäftsjahr statt der Einst. f. das Kalenderjahr verwendet. Festleg. der Gesch.jahrinf.: Setup -&gt; Unternehmensprofil -&gt; Geschäftsjahr. HINWEIS: Benutzerdef. Gesch.jahreinst. werden NICHT unterstützt.</help>
-    <label>Geschäftsjahr für Rollups verwenden</label>
-  </fields>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- Households Settings --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value><!-- Households Settings --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Households Settings --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Households Settings --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Households Settings --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Households Settings --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Households Settings --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Households Settings --></value>
+    </caseValues>
+    <fields>
+        <help>Bei Aktivierung werden die Haushalt-Namen sowie informelle und formelle Anreden automatisch bereitgestellt.</help>
+        <label>Automatische Benennung der Haushalte</label>
+        <name>Advanced_Household_Naming__c</name>
+    </fields>
+    <fields>
+        <help>Bei aktivierter Option führt Salesforce IMMER einen Rollup zu den Spenderdaten des prim. Kontakts der Opp. und dem Haushalt-Account/-Datensatz durch, auch wenn die Opp. nicht von einer Person stammt. Ohne Aktivierung erhält nur die Organisation Kredit.</help>
+        <label>Immer Rollup zu primärer Kontaktrolle</label>
+        <name>Always_Rollup_to_Primary_Contact__c</name>
+    </fields>
+    <fields>
+        <help>Hierbei handelt es sich um eine nicht angezeigte Einstellung zum Umschalten des Haushalt-Benennungscodes zur Verwendung einer asynchronen Version anstelle der Standardversion.</help>
+        <label>Asynchrone Benennung der Haushalte</label>
+        <name>Async_Household_Naming__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der Datensätze, die beim Berechnen der Spenderstatistik gleichzeitig verarbeitet werden. Die Standardgröße ist 200. Verringern Sie die Anzahl, wenn die Opportunity-Rollups aufgrund von Systembeschränkungen fehlschlagen.</help>
+        <label>Rollup-Batchgröße</label>
+        <name>Batch_Size__c</name>
+    </fields>
+    <fields>
+        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
+        <label>DEPRECATED-Disable_HHAfter_trigger</label>
+        <name>DISABLE_HouseholdAfter_trigger__c</name>
+    </fields>
+    <fields>
+        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
+        <label>DEPRECATED-Disable_HHBefore_trigger</label>
+        <name>DISABLE_HouseholdBefore_trigger__c</name>
+    </fields>
+    <fields>
+        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
+        <label>DEPRECATED-Disable_Household_Opp_trigger</label>
+        <name>DISABLE_Household_Opportunity_trigger__c</name>
+    </fields>
+    <fields>
+        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
+        <label>DEPRECATED-Disable_Households_trigger</label>
+        <name>DISABLE_Households_trigger__c</name>
+    </fields>
+    <fields>
+        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
+        <label>DEPRECATED-Disable_OppRollup_trigger</label>
+        <name>DISABLE_OpportunityRollup_trigger__c</name>
+    </fields>
+    <fields>
+        <help>ERSETZT. Das Auslöserverhalten wird jetzt über die Seite &quot;Auslöserkonfiguration&quot; in den NPSP-Einstellungen gesteuert.</help>
+        <label>DEPRECATED-Enable_Opp_Rollup_Triggers</label>
+        <name>Enable_Opp_Rollup_Triggers__c</name>
+    </fields>
+    <fields>
+        <help>Ermöglicht Rollup v. geschl. Opport.-Gesamtwerten auf Basis d. Opport.-Kontaktrollen. Rollups v. Soft Credits werden während nächtl. Batchaufträge durchgef., nicht aufgrund v. Auslösern. Sie sind über &quot;Batch zum Rollup von Spenden&quot; manuell ausführbar.</help>
+        <label>Soft Credit-Rollups aktivieren</label>
+        <name>Enable_Soft_Credit_Rollups__c</name>
+    </fields>
+    <fields>
+        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+        <label>ERSETZT-Update-Check aktivieren</label>
+        <name>Enable_Update_Check__c</name>
+    </fields>
+    <fields>
+        <help>Namen der Opportunity-Datensatztypen, die beim Rollup von Account-Opportunities von Statistiken ausgeschlossen werden sollen</help>
+        <label>Für Acc.-Rollup ausgeschl. Datens.typen</label>
+        <name>Excluded_Account_Opp_Rectypes__c</name>
+    </fields>
+    <fields>
+        <help>Opportunities mit diesem Wert in der Typ-Auswahlliste werden nicht in Rollups in den Account einbezogen.</help>
+        <label>Für Acc.-Rollup ausgeschl. Opp.-Typen</label>
+        <name>Excluded_Account_Opp_Types__c</name>
+    </fields>
+    <fields>
+        <help>Opportunities mit den ausgewählten Datensatztypen werden nicht in Rollups in den Kontakt einbezogen. Klicken Sie zum Auswählen von mehr als nur einem Datensatztyp zusätzlich auf die Strg- oder die CMD-Taste.</help>
+        <label>Für Kont.-Rollup ausgeschl. Datens.typen</label>
+        <name>Excluded_Contact_Opp_Rectypes__c</name>
+    </fields>
+    <fields>
+        <help>Opportunities mit diesem Wert in der Typ-Auswahlliste werden nicht in Rollups in den Kontakt einbezogen.</help>
+        <label>Für Kont.-Rollup ausgeschl. Opp-Typen</label>
+        <name>Excluded_Contact_Opp_Types__c</name>
+    </fields>
+    <fields>
+        <help>Beim NPSP wird autom. geprüft, ob benutzerdef. Geschäftsjahre vorhanden sind. Zur Fehlervermeid. werden gefundene Geschäftsjahreinst. deakt. So wird die Sicherheitsprüfung für Benutzer aufgehoben, die versehentlich benutzerdef. Geschäftsjahre akt. haben.</help>
+        <label>Geschäftsjahr erzwingen</label>
+        <name>Force_Fiscal_Year__c</name>
+    </fields>
+    <fields>
+        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+        <label>ERSETZT-Paket-Update vorhanden</label>
+        <name>Has_Package_Update__c</name>
+    </fields>
+    <fields>
+        <help>Es werden automatisch Kontaktrollen für die Haushalt-Mitglieder des primären Kontakts der Opportunity erstellt.</help>
+        <label>Haushalt-Kontaktrollen Ein</label>
+        <name>Household_Contact_Roles_On__c</name>
+    </fields>
+    <fields>
+        <help>Kontaktdatensatztypen, die bei der Erstellung des Haushalts ausgeschlossen werden. Bei Verwendung des Haushalt-Account-Modells wird diese Einstellung ignoriert.</help>
+        <label>Bei Haush.erst. ausgeschl. Datens.typen</label>
+        <name>Household_Creation_Excluded_Recordtypes__c</name>
+    </fields>
+    <fields>
+        <help>Die Kennung des Berichts zur Haushalt-Mailingliste, die zur Entfernung von Haushalt-Duplikaten in den Kampagnen-Mailinglisten verwendet wird. Der Bericht sollte für Kampagnen mit Kontakten mit Mitglied-Status ohne &quot;Duplikate&quot; verwendet werden.</help>
+        <label>Bericht zur Haushalt-Mailingliste</label>
+        <name>Household_Mailing_List_ID__c</name>
+    </fields>
+    <fields>
+        <help>Die Kontaktrolle, die Sie für Haushalt-Mitglieder verwenden wollen.</help>
+        <label>Kontaktrolle für Haushalt-Mitglied</label>
+        <name>Household_Member_Contact_Role__c</name>
+    </fields>
+    <fields>
+        <help>Bei Kontaktdatensatztypen, die aus der autom. Erstellung der Kontaktrollen für Haushalt-Mitglieder ausgeschlossen werden, würden diese Kontakte bei Erstellung der Opportunity keine Kontaktrolle für Haushalt-Mitglieder erhalten.</help>
+        <label>Aus Opp.-Kont.roll. Ausg. Datens.typen</label>
+        <name>Household_OCR_Excluded_Recordtypes__c</name>
+    </fields>
+    <fields>
+        <help>Gibt an, für welche Kontakte autom. Haushalt-Objekte erstellt werden. Diese Opt. wird nur für Kontakte verwendet, die das Eins-zu-Eins- oder Einzelperson-Acc.-Modell verwenden. Für Kontakte mit dem Haushalt-Account-Modell wird diese Einstell. ignoriert.</help>
+        <label>Haushalt-Objektregeln</label>
+        <name>Household_Rules__c</name>
+    </fields>
+    <fields>
+        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+        <label>ERSETZT-Letzter Update-Check</label>
+        <name>Last_Update_Check__c</name>
+    </fields>
+    <fields>
+        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+        <label>ERSETZT-Max Paketversion</label>
+        <name>Max_Package_Version__c</name>
+    </fields>
+    <fields>
+        <help>Der Kulanzzeitraum (in Tagen) nach Ablauf der Mitgliedschaft (letztes Enddatum), bevor der Status von &quot;Kulanzzeitraum&quot; in &quot;Abgelaufen&quot; geändert wird. Standardmäßig auf 30 Tage gesetzt.</help>
+        <label>Kulanzzeitraum für Mitgliedschaft</label>
+        <name>Membership_Grace_Period__c</name>
+    </fields>
+    <fields>
+        <help>Namen für Opportunity-Datensatztypen wie Mitgliedschaft, für die Sie separat einen Rollup von anderen Opportunity-Datensatztypen durchführen wollen.</help>
+        <label>Namen für Mitgliedschaft-Datensatztyp </label>
+        <name>Membership_Record_Types__c</name>
+    </fields>
+    <fields>
+        <help>Kennung für den aktuell geplanten Opportunity-Rollup-Auftrag</help>
+        <label>Kennung für gepl. Opp.-Rollup-Auftrag</label>
+        <name>Opp_Rollup_Scheduled_Job_Id__c</name>
+    </fields>
+    <fields>
+        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+        <label>ERSETZT-Paket-Update-URL</label>
+        <name>Package_Update_URL__c</name>
+    </fields>
+    <fields>
+        <help>Geben Sie einen Wert für &quot;N-Tage&quot;-Rollups an, wobei &quot;N&quot; die Anzahl der Tage von heute zurück in die Vergangenheit bezeichnet. Dieser Wert gilt standardmäßig für einen Rollup für die letzten 365 Tage.</help>
+        <label>N-Tage-Wert für Rollup</label>
+        <name>Rollup_N_Day_Value__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der aktiven geplanten Apex-Aufträge, die bei Planung neuer Aufträge beachtet werden müssen</help>
+        <label>Auftragsplanungsgrenze</label>
+        <name>Schedule_Job_Limit__c</name>
+    </fields>
+    <fields>
+        <help>Opportunity-Kontaktrollen, die in Rollups von Soft-Credits einbezogen werden sollen. Klicken Sie zum Auswählen von mehreren Rollen zusätzlich auf die Strg- oder die CMD-Taste.</help>
+        <label>Rollen für Soft Credits</label>
+        <name>Soft_Credit_Roles__c</name>
+    </fields>
+    <fields>
+        <help>ERSETZT. Es werden automatisch neue Versionen des Nonprofit Success Pack installiert.</help>
+        <label>ERSETZT-Update-Check-Intervall</label>
+        <name>Update_Check_Interval__c</name>
+    </fields>
+    <fields>
+        <help>Bei Akt. wird f. die Opport.-Rollup-Gesamtwerte das Geschäftsjahr statt der Einst. f. das Kalenderjahr verwendet. Festleg. der Gesch.jahrinf.: Setup -&gt; Unternehmensprofil -&gt; Geschäftsjahr. HINWEIS: Benutzerdef. Gesch.jahreinst. werden NICHT unterstützt.</help>
+        <label>Geschäftsjahr für Rollups verwenden</label>
+        <name>Use_Fiscal_Year_for_Rollups__c</name>
+    </fields>
+    <gender><!-- Neuter --></gender>
 </CustomObjectTranslation>

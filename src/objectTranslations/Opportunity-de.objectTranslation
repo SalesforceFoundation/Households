@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>CombinedRollupFieldset__c</name>
-    <help>Formel: Verkettete Felder, die während des Rollups zum Suchen der neuesten Opportunity verwendet werden.</help>
-    <label>Kombinierte Rollup-Felder</label>
-  </fields>
-  <fields>
-    <name>systemHouseholdContactRoleProcessor__c</name>
-    <help>Steuert, ob Haushalt-Kontaktrollen für Opportunities erstellt werden. ERSETZT. Ersetzt durch benutzerdefinierte Einstellungen.</help>
-    <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
-    <picklistValues>
-      <masterLabel>All Opportunities</masterLabel>
-      <translation>Alle Opportunities</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>No Opportunities</masterLabel>
-      <translation>Keine Opportunities</translation>
-    </picklistValues>
-  </fields>
-</CustomObjectTranslation>
+    <fields>
+        <help>Formel: Verkettete Felder, die während des Rollups zum Suchen der neuesten Opportunity verwendet werden.</help>
+        <label>Kombinierte Rollup-Felder</label>
+        <name>CombinedRollupFieldset__c</name>
+    </fields>
+    <fields>
+        <help>Steuert, ob Haushalt-Kontaktrollen für Opportunities erstellt werden. ERSETZT. Ersetzt durch benutzerdefinierte Einstellungen.</help>
+        <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
+        <name>systemHouseholdContactRoleProcessor__c</name>
+        <picklistValues>
+            <masterLabel>All Opportunities</masterLabel>
+            <translation>Alle Opportunities</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Opportunities</masterLabel>
+            <translation>Keine Opportunities</translation>
+        </picklistValues>
+    </fields>
+    </CustomObjectTranslation>
