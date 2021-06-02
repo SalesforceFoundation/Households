@@ -1,244 +1,260 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value>Hogar</value>
-    </caseValues>
-    <caseValues>
-        <plural>true</plural>
-        <value>Hogares</value>
-    </caseValues>
-    <fields>
-        <label>Destinatario</label>
-        <name>Addressee__c</name>
-    </fields>
-    <fields>
-        <help>Se utiliza para establecer el nombre del hogar u otros campos empleando información anónima.</help>
-        <label>Siempre anónimo</label>
-        <name>Always_Anonymous__c</name>
-    </fields>
-    <fields>
-        <help>El importe medio de las oportunidades ganadas relacionadas con este hogar por un contacto relacionado con la función de contacto de oportunidad principal.</help>
-        <label>Donación promedio</label>
-        <name>AverageAmount__c</name>
-    </fields>
-    <fields>
-        <help>La suma de los importes de oportunidades ganadas en el Año de mejor donación para este hogar a través de contactos con una función de contacto de oportunidad principal. Consulte también Año de mejor donación.</help>
-        <label>Total en año de mejor donación</label>
-        <name>Best_Gift_Year_Total__c</name>
-    </fields>
-    <fields>
-        <help>El año en el que se produjo el importe total más grande de oportunidades ganadas relacionadas con este hogar a través de la función de contacto de oportunidad principal. Consulte también Total en año de mejor donación.</help>
-        <label>Año de mejor donación</label>
-        <name>Best_Gift_Year__c</name>
-    </fields>
-    <fields>
-        <help>La fecha de cierre más reciente de una oportunidad relacionada con este hogar a través de contactos con función de contacto de principal.</help>
-        <label>Fecha de primera donación</label>
-        <name>FirstCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>Utiliza campos de contactos relacionados no excluidos y ordenados. Se genera automáticamente.</help>
-        <label>Saludo formal</label>
-        <name>Formal_Greeting__c</name>
-    </fields>
-    <fields>
-        <help>Fórmula: Concatenación de otros campos de correo para este hogar. Puede actualizarse en la página Modificación de hogar pero no actualiza contactos hasta que se pulse el botón &quot;Copiar dirección del hogar en contactos&quot;.</help>
-        <label>Dirección de postal</label>
-        <name>Formula_MailingAddress__c</name>
-    </fields>
-    <fields>
-        <help>Se establece por el contacto original que creó este hogar. Puede modificarse en Hogar, pero no actualiza el contacto.</help>
-        <label>Correo electrónico del hogar</label>
-        <name>HouseholdEmail__c</name>
-    </fields>
-    <fields>
-        <help>Se establece por el contacto original que creó este hogar. Puede modificarse en Hogar, pero no actualiza el contacto.</help>
-        <label>Teléfono del hogar</label>
-        <name>HouseholdPhone__c</name>
-    </fields>
-    <fields>
-        <label>Id. de Hogar</label>
-        <name>Household_ID__c</name>
-    </fields>
-    <fields>
-        <help>Utiliza campos de contactos relacionados no excluidos y ordenados. Se genera automáticamente.</help>
-        <label>Saludo informal</label>
-        <name>Informal_Greeting__c</name>
-    </fields>
-    <fields>
-        <help>El importe mayor de la oportunidad ganada relacionada con este hogar a través de contactos relacionados con la función de contacto de oportunidad principal.</help>
-        <label>Importe de la mayor donación</label>
-        <name>LargestAmount__c</name>
-    </fields>
-    <fields>
-        <help>La fecha de cierre más reciente de una oportunidad ganada relacionada con este hogar a través de contactos relacionados con función de contacto de principal.</help>
-        <label>Fecha de última donación</label>
-        <name>LastCloseDate__c</name>
-    </fields>
-    <fields>
-        <help>El importe de la oportunidad (Tipo de registro) de afiliación ganada más reciente para este hogar a través de contactos relacionados con la función de contacto de oportunidad principal.</help>
-        <label>Importe de última afiliación</label>
-        <name>LastMembershipAmount__c</name>
-    </fields>
-    <fields>
-        <help>La fecha de cierre más reciente de una oportunidad de afiliación ganada para este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
-        <label>Fecha de última afiliación</label>
-        <name>LastMembershipDate__c</name>
-    </fields>
-    <fields>
-        <help>El nivel de afiliación de la oportunidad de afiliación más reciente ganada para este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
-        <label>Nivel de la última afiliación</label>
-        <name>LastMembershipLevel__c</name>
-    </fields>
-    <fields>
-        <help>El origen (nuevo, renovación...) de la oportunidad de afiliación más reciente ganada para este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
-        <label>Origen de última afiliación</label>
-        <name>LastMembershipOrigin__c</name>
-    </fields>
-    <fields>
-        <help>El importe más reciente de la oportunidad ganada relacionada con este hogar a través de contactos relacionados con la función de contacto de oportunidad principal.</help>
-        <label>Importe de última donación</label>
-        <name>LastOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>Establecido por el contacto original que creó este hogar. Puede actualizarse en la página Modificación de hogar pero no actualiza contactos hasta que se pulse el botón &quot;Copiar dirección del hogar en contactos&quot;.</help>
-        <label>Ciudad postal</label>
-        <name>MailingCity__c</name>
-    </fields>
-    <fields>
-        <help>Establecido por el contacto original que creó este hogar. Puede actualizarse en la página Modificación de hogar pero no actualiza contactos hasta que se pulse el botón &quot;Copiar dirección del hogar en contactos&quot;.</help>
-        <label>País postal</label>
-        <name>MailingCountry__c</name>
-    </fields>
-    <fields>
-        <help>Establecido por el contacto original que creó este hogar. Puede actualizarse en la página Modificación de hogar pero no actualiza contactos hasta que se pulse el botón &quot;Copiar dirección del hogar en contactos&quot;.</help>
-        <label>Código Postal</label>
-        <name>MailingPostalCode__c</name>
-    </fields>
-    <fields>
-        <help>Establecido por el contacto original que creó este hogar. Puede actualizarse en la página Modificación de hogar pero no actualiza contactos hasta que se pulse el botón &quot;Copiar dirección del hogar en contactos&quot;.</help>
-        <label>Estado/Provincia postal</label>
-        <name>MailingState__c</name>
-    </fields>
-    <fields>
-        <help>Establecido por el contacto original que creó este hogar. Puede actualizarse en la página Modificación de hogar pero no actualiza contactos hasta que se pulse el botón &quot;Copiar dirección del hogar en contactos&quot;.</help>
-        <label>Calle postal</label>
-        <name>MailingStreet__c</name>
-    </fields>
-    <fields>
-        <help>La fecha de finalización de afiliación de la oportunidad de afiliación más reciente ganada para este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
-        <label>Fecha de fin de la afiliación</label>
-        <name>MembershipEndDate__c</name>
-    </fields>
-    <fields>
-        <help>La fecha de incorporación de afiliación más reciente de la oportunidad de afiliación más antigua (Fecha de cierre, Tipo de registro) para este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
-        <label>Fecha de inicio de afiliación</label>
-        <name>MembershipJoinDate__c</name>
-    </fields>
-    <fields>
-        <help>Fórmula: El número de días que ha tenido un miembro este hogar.</help>
-        <label>Duración de la afiliación</label>
-        <name>Membership_Span__c</name>
-    </fields>
-    <fields>
-        <help>Fórmula: Actual, vencida, o en período de gracia. El período de gracia predeterminado se establece en Configuración de Hogar.</help>
-        <label>Estado de la afiliación</label>
-        <name>Membership_Status__c</name>
-    </fields>
-    <fields>
-        <help>El número total de donaciones relacionadas con este hogar por un contacto y la función de contacto de oportunidad principal.</help>
-        <label>Cantidad total de donaciones</label>
-        <name>NumberOfClosedOpps__c</name>
-    </fields>
-    <fields>
-        <help>El importe total de oportunidades (Tipo de registro) de afiliación ganadas relacionadas con este hogar por un contacto y por una función del contacto de oportunidad principal.</help>
-        <label>Cantidad de afiliaciones</label>
-        <name>NumberOfMembershipOpps__c</name>
-    </fields>
-    <fields>
-        <help>Total donado hace dos años en el hogar por contacto y función de contacto de oportunidad principal.</help>
-        <label>Total donado hace dos años</label>
-        <name>OppAmount2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>El importe total de oportunidades ganadas relacionadas con este hogar, cerradas en el último número de días definido en Configuración de Hogar, relacionadas por contacto y función de contacto de oportunidad principal.</help>
-        <label>Total donado últimos N días</label>
-        <name>OppAmountLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>Total donado el año pasado en el hogar por contacto y función de contacto de oportunidad principal.</help>
-        <label>Total donado el año pasado</label>
-        <name>OppAmountLastYear__c</name>
-    </fields>
-    <fields>
-        <help>Total donado este año en el hogar por contacto y función de contacto de oportunidad principal.</help>
-        <label>Total donado este año</label>
-        <name>OppAmountThisYear__c</name>
-    </fields>
-    <fields>
-        <help>El número de oportunidades ganadas con una fecha de cierre en los últimos 2 años relacionadas con este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
-        <label>Cantidad de donaciones hace dos años</label>
-        <name>OppsClosed2YearsAgo__c</name>
-    </fields>
-    <fields>
-        <help>El número de oportunidades ganadas con una fecha de cierre en los últimos N días (Configuración de Hogar) relacionadas con este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
-        <label>Cantidad de donaciones últimos N días</label>
-        <name>OppsClosedLastNDays__c</name>
-    </fields>
-    <fields>
-        <help>El número de oportunidades ganadas con una fecha de cierre en el último año relacionadas con este hogar a través de contactos relacionados con función de contacto principal.</help>
-        <label>Cantidad de donaciones el año pasado</label>
-        <name>OppsClosedLastYear__c</name>
-    </fields>
-    <fields>
-        <help>El número de oportunidades ganadas con una fecha de cierre este año relacionadas con este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
-        <label>Cantidad de donaciones este año</label>
-        <name>OppsClosedThisYear__c</name>
-    </fields>
-    <fields>
-        <help>Nombre, Saludo formal o Saludo informal</help>
-        <label>_SYSTEM: NOMENCLATURA PERSONALIZADA</label>
-        <name>SYSTEM_CUSTOM_NAMING__c</name>
-        </fields>
-    <fields>
-        <help>El importe menor de una oportunidad ganada relacionada con este hogar por un contacto y una función del contacto de oportunidad principal.</help>
-        <label>Importe de la menor donación</label>
-        <name>SmallestAmount__c</name>
-    </fields>
-    <fields>
-        <help>El importe total de oportunidades (Tipo de registro) de afiliación ganadas relacionadas con este hogar por un contacto y por una función del contacto de oportunidad principal.</help>
-        <label>Importe total de afiliaciones</label>
-        <name>TotalMembershipOppAmount__c</name>
-    </fields>
-    <fields>
-        <help>La suma de importes de oportunidades ganadas relacionadas con este hogar por un contacto y una función del contacto de oportunidad principal.</help>
-        <label>Total donado</label>
-        <name>TotalOppAmount__c</name>
-    </fields>
-    <gender>Masculine</gender>
-    <layouts>
-        <layout>Household Layout</layout>
-        <sections>
-            <label>Vínculos personalizados</label>
-            <section>Custom Links</section>
-        </sections>
-        <sections>
-            <label>Información de la donación</label>
-            <section>Donation Information</section>
-        </sections>
-        <sections>
-            <label>Totales de donaciones</label>
-            <section>Donation Totals</section>
-        </sections>
-        <sections>
-            <label>Información del hogar</label>
-            <section>Household Information</section>
-        </sections>
-    </layouts>
-    <nameFieldLabel>Nombre de Hogar</nameFieldLabel>
-    <webLinks>
-        <label>Copiar dirección del hogar en contactos</label>
-        <name>Copy_Household_Address_to_Contacts</name>
-    </webLinks>
+  <fields>
+    <name>Addressee__c</name>
+    <label>Destinatario</label>
+  </fields>
+  <fields>
+    <name>Always_Anonymous__c</name>
+    <help>Se utiliza para establecer el nombre del hogar u otros campos empleando información anónima.</help>
+    <label>Siempre anónimo</label>
+  </fields>
+  <fields>
+    <name>AverageAmount__c</name>
+    <help>El importe medio de las oportunidades ganadas relacionadas con este hogar por un contacto relacionado con la función de contacto de oportunidad principal.</help>
+    <label>Donación promedio</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year_Total__c</name>
+    <help>La suma de los importes de oportunidades ganadas en el Año de mejor donación para este hogar a través de contactos con una función de contacto de oportunidad principal. Consulte también Año de mejor donación.</help>
+    <label>Total en año de mejor donación</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year__c</name>
+    <help>El año en el que se produjo el importe total más grande de oportunidades ganadas relacionadas con este hogar a través de la función de contacto de oportunidad principal. Consulte también Total en año de mejor donación.</help>
+    <label>Año de mejor donación</label>
+  </fields>
+  <fields>
+    <name>FirstCloseDate__c</name>
+    <help>La fecha de cierre más reciente de una oportunidad relacionada con este hogar a través de contactos con función de contacto de principal.</help>
+    <label>Fecha de primera donación</label>
+  </fields>
+  <fields>
+    <name>Formal_Greeting__c</name>
+    <help>Utiliza campos de contactos relacionados no excluidos y ordenados. Se genera automáticamente.</help>
+    <label>Saludo formal</label>
+  </fields>
+  <fields>
+    <name>Formula_MailingAddress__c</name>
+    <help>Fórmula: Concatenación de otros campos de correo para este hogar. Puede actualizarse en la página Modificación de hogar pero no actualiza contactos hasta que se pulse el botón "Copiar dirección del hogar en contactos".</help>
+    <label>Dirección de postal</label>
+  </fields>
+  <fields>
+    <name>HouseholdEmail__c</name>
+    <help>Se establece por el contacto original que creó este hogar. Puede modificarse en Hogar, pero no actualiza el contacto.</help>
+    <label>Correo electrónico del hogar</label>
+  </fields>
+  <fields>
+    <name>HouseholdPhone__c</name>
+    <help>Se establece por el contacto original que creó este hogar. Puede modificarse en Hogar, pero no actualiza el contacto.</help>
+    <label>Teléfono del hogar</label>
+  </fields>
+  <fields>
+    <name>Household_ID__c</name>
+    <label>Id. de Hogar</label>
+  </fields>
+  <fields>
+    <name>Informal_Greeting__c</name>
+    <help>Utiliza campos de contactos relacionados no excluidos y ordenados. Se genera automáticamente.</help>
+    <label>Saludo informal</label>
+  </fields>
+  <fields>
+    <name>LargestAmount__c</name>
+    <help>El importe mayor de la oportunidad ganada relacionada con este hogar a través de contactos relacionados con la función de contacto de oportunidad principal.</help>
+    <label>Importe de la mayor donación</label>
+  </fields>
+  <fields>
+    <name>LastCloseDate__c</name>
+    <help>La fecha de cierre más reciente de una oportunidad ganada relacionada con este hogar a través de contactos relacionados con función de contacto de principal.</help>
+    <label>Fecha de última donación</label>
+  </fields>
+  <fields>
+    <name>LastMembershipAmount__c</name>
+    <help>El importe de la oportunidad (Tipo de registro) de afiliación ganada más reciente para este hogar a través de contactos relacionados con la función de contacto de oportunidad principal.</help>
+    <label>Importe de última afiliación</label>
+  </fields>
+  <fields>
+    <name>LastMembershipDate__c</name>
+    <help>La fecha de cierre más reciente de una oportunidad de afiliación ganada para este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
+    <label>Fecha de última afiliación</label>
+  </fields>
+  <fields>
+    <name>LastMembershipLevel__c</name>
+    <help>El nivel de afiliación de la oportunidad de afiliación más reciente ganada para este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
+    <label>Nivel de la última afiliación</label>
+  </fields>
+  <fields>
+    <name>LastMembershipOrigin__c</name>
+    <help>El origen (nuevo, renovación...) de la oportunidad de afiliación más reciente ganada para este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
+    <label>Origen de última afiliación</label>
+  </fields>
+  <fields>
+    <name>LastOppAmount__c</name>
+    <help>El importe más reciente de la oportunidad ganada relacionada con este hogar a través de contactos relacionados con la función de contacto de oportunidad principal.</help>
+    <label>Importe de última donación</label>
+  </fields>
+  <fields>
+    <name>MailingCity__c</name>
+    <help>Establecido por el contacto original que creó este hogar. Puede actualizarse en la página Modificación de hogar pero no actualiza contactos hasta que se pulse el botón "Copiar dirección del hogar en contactos".</help>
+    <label>Ciudad postal</label>
+  </fields>
+  <fields>
+    <name>MailingCountry__c</name>
+    <help>Establecido por el contacto original que creó este hogar. Puede actualizarse en la página Modificación de hogar pero no actualiza contactos hasta que se pulse el botón "Copiar dirección del hogar en contactos".</help>
+    <label>País postal</label>
+  </fields>
+  <fields>
+    <name>MailingPostalCode__c</name>
+    <help>Establecido por el contacto original que creó este hogar. Puede actualizarse en la página Modificación de hogar pero no actualiza contactos hasta que se pulse el botón "Copiar dirección del hogar en contactos".</help>
+    <label>Código Postal</label>
+  </fields>
+  <fields>
+    <name>MailingState__c</name>
+    <help>Establecido por el contacto original que creó este hogar. Puede actualizarse en la página Modificación de hogar pero no actualiza contactos hasta que se pulse el botón "Copiar dirección del hogar en contactos".</help>
+    <label>Estado/Provincia postal</label>
+  </fields>
+  <fields>
+    <name>MailingStreet__c</name>
+    <help>Establecido por el contacto original que creó este hogar. Puede actualizarse en la página Modificación de hogar pero no actualiza contactos hasta que se pulse el botón "Copiar dirección del hogar en contactos".</help>
+    <label>Calle postal</label>
+  </fields>
+  <fields>
+    <name>MembershipEndDate__c</name>
+    <help>La fecha de finalización de afiliación de la oportunidad de afiliación más reciente ganada para este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
+    <label>Fecha de fin de la afiliación</label>
+  </fields>
+  <fields>
+    <name>MembershipJoinDate__c</name>
+    <help>La fecha de incorporación de afiliación más reciente de la oportunidad de afiliación más antigua (Fecha de cierre, Tipo de registro) para este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
+    <label>Fecha de inicio de afiliación</label>
+  </fields>
+  <fields>
+    <name>Membership_Span__c</name>
+    <help>Fórmula: El número de días que ha tenido un miembro este hogar.</help>
+    <label>Duración de la afiliación</label>
+  </fields>
+  <fields>
+    <name>Membership_Status__c</name>
+    <help>Fórmula: Actual, vencida, o en período de gracia. El período de gracia predeterminado se establece en Configuración de Hogar.</help>
+    <label>Estado de la afiliación</label>
+  </fields>
+  <fields>
+    <name>NumberOfClosedOpps__c</name>
+    <help>El número total de donaciones relacionadas con este hogar por un contacto y la función de contacto de oportunidad principal.</help>
+    <label>Cantidad total de donaciones</label>
+  </fields>
+  <fields>
+    <name>NumberOfMembershipOpps__c</name>
+    <help>El importe total de oportunidades (Tipo de registro) de afiliación ganadas relacionadas con este hogar por un contacto y por una función del contacto de oportunidad principal.</help>
+    <label>Cantidad de afiliaciones</label>
+  </fields>
+  <fields>
+    <name>OppAmount2YearsAgo__c</name>
+    <help>Total donado hace dos años en el hogar por contacto y función de contacto de oportunidad principal.</help>
+    <label>Total donado hace dos años</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastNDays__c</name>
+    <help>El importe total de oportunidades ganadas relacionadas con este hogar, cerradas en el último número de días definido en Configuración de Hogar, relacionadas por contacto y función de contacto de oportunidad principal.</help>
+    <label>Total donado últimos N días</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastYear__c</name>
+    <help>Total donado el año pasado en el hogar por contacto y función de contacto de oportunidad principal.</help>
+    <label>Total donado el año pasado</label>
+  </fields>
+  <fields>
+    <name>OppAmountThisYear__c</name>
+    <help>Total donado este año en el hogar por contacto y función de contacto de oportunidad principal.</help>
+    <label>Total donado este año</label>
+  </fields>
+  <fields>
+    <name>OppsClosed2YearsAgo__c</name>
+    <help>El número de oportunidades ganadas con una fecha de cierre en los últimos 2 años relacionadas con este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
+    <label>Cantidad de donaciones hace dos años</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastNDays__c</name>
+    <help>El número de oportunidades ganadas con una fecha de cierre en los últimos N días (Configuración de Hogar) relacionadas con este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
+    <label>Cantidad de donaciones últimos N días</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastYear__c</name>
+    <help>El número de oportunidades ganadas con una fecha de cierre en el último año relacionadas con este hogar a través de contactos relacionados con función de contacto principal.</help>
+    <label>Cantidad de donaciones el año pasado</label>
+  </fields>
+  <fields>
+    <name>OppsClosedThisYear__c</name>
+    <help>El número de oportunidades ganadas con una fecha de cierre este año relacionadas con este hogar a través de contactos relacionados con función de contacto de oportunidad principal.</help>
+    <label>Cantidad de donaciones este año</label>
+  </fields>
+  <fields>
+    <name>SYSTEM_CUSTOM_NAMING__c</name>
+    <help>Nombre, Saludo formal o Saludo informal</help>
+    <label>_SYSTEM: NOMENCLATURA PERSONALIZADA</label>
+    <picklistValues>
+      <masterLabel>Name</masterLabel>
+      <translation>Nombre</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Formal_Greeting__c</masterLabel>
+      <translation>Formal_Greeting__c</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Informal_Greeting__c</masterLabel>
+      <translation>Informal_Greeting__c</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>SmallestAmount__c</name>
+    <help>El importe menor de una oportunidad ganada relacionada con este hogar por un contacto y una función del contacto de oportunidad principal.</help>
+    <label>Importe de la menor donación</label>
+  </fields>
+  <fields>
+    <name>TotalMembershipOppAmount__c</name>
+    <help>El importe total de oportunidades (Tipo de registro) de afiliación ganadas relacionadas con este hogar por un contacto y por una función del contacto de oportunidad principal.</help>
+    <label>Importe total de afiliaciones</label>
+  </fields>
+  <fields>
+    <name>TotalOppAmount__c</name>
+    <help>La suma de importes de oportunidades ganadas relacionadas con este hogar por un contacto y una función del contacto de oportunidad principal.</help>
+    <label>Total donado</label>
+  </fields>
+  <webLinks>
+    <name>Copy_Household_Address_to_Contacts</name>
+    <label>Copiar dirección del hogar en contactos</label>
+  </webLinks>
+  <layouts>
+    <layout>Household Layout</layout>
+    <sections>
+      <label>Información del hogar</label>
+      <section>Household Information</section>
+    </sections>
+    <sections>
+      <label>Información de la donación</label>
+      <section>Donation Information</section>
+    </sections>
+    <sections>
+      <label>Totales de donaciones</label>
+      <section>Donation Totals</section>
+    </sections>
+    <sections>
+      <label>Vínculos personalizados</label>
+      <section>Custom Links</section>
+    </sections>
+  </layouts>
+  <nameFieldLabel>Nombre de Hogar</nameFieldLabel>
+  <standardFields>
+    <name>Name</name>
+    <label>Nombre de Hogar</label>
+  </standardFields>
+  <gender>Masculine</gender>
+  <caseValues>
+    <plural>false</plural>
+    <value>Hogar</value>
+  </caseValues>
+  <caseValues>
+    <plural>true</plural>
+    <value>Hogares</value>
+  </caseValues>
 </CustomObjectTranslation>

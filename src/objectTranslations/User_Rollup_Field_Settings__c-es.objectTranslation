@@ -1,32 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
-    </caseValues>
-    <caseValues>
-        <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
-    </caseValues>
-    <fields>
-        <help>La acción de totalización (MIN, MAX, SUMA, CUENTA) a realizar en el campo de origen.</help>
-        <label>Acción</label>
-        <name>Field_Action__c</name>
-    </fields>
-    <fields>
-        <help>El objeto al que esta totalización de usuario está relacionado.</help>
-        <label>Nombre del objeto</label>
-        <name>Object_Name__c</name>
-    </fields>
-    <fields>
-        <help>El campo de origen y la acción del objeto para esta totalización de usuario.</help>
-        <label>Campo de origen</label>
-        <name>Source_Field__c</name>
-    </fields>
-    <fields>
-        <help>El campo de destino donde se colocará el valor totalizado para esta totalización definida por el usuario.</help>
-        <label>Campo de destino</label>
-        <name>Target_Field__c</name>
-    </fields>
-    <gender><!-- Feminine --></gender>
+  <fields>
+    <name>Field_Action__c</name>
+    <help>La acción de totalización (MIN, MAX, SUMA, CUENTA) a realizar en el campo de origen.</help>
+    <label>Acción</label>
+  </fields>
+  <fields>
+    <name>Object_Name__c</name>
+    <help>El objeto al que esta totalización de usuario está relacionado.</help>
+    <label>Nombre del objeto</label>
+  </fields>
+  <fields>
+    <name>Source_Field__c</name>
+    <help>El campo de origen y la acción del objeto para esta totalización de usuario.</help>
+    <label>Campo de origen</label>
+  </fields>
+  <fields>
+    <name>Target_Field__c</name>
+    <help>El campo de destino donde se colocará el valor totalizado para esta totalización definida por el usuario.</help>
+    <label>Campo de destino</label>
+  </fields>
+  <gender>Feminine</gender>
+  <caseValues>
+    <plural>false</plural>
+    <value>Configuración de campo de totalización de usuario</value>
+  </caseValues>
+  <caseValues>
+    <plural>true</plural>
+    <value>Configuraciones de campos de totalización de usuarios</value>
+  </caseValues>
 </CustomObjectTranslation>

@@ -1,187 +1,187 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value><!-- Households Settings --></value>
-    </caseValues>
-    <caseValues>
-        <plural>true</plural>
-        <value><!-- Households Settings --></value>
-    </caseValues>
-    <fields>
-        <help>Indien aangevinkt, biedt het systeem automatische naamgeving voor namen voor huishoudens, informele en formele begroetingen.</help>
-        <label>Automatische naamgeving voor Huishouden</label>
-        <name>Advanced_Household_Naming__c</name>
-    </fields>
-    <fields>
-        <help>Bij selectie totaliseert Salesforce donorgegevens ALTIJD naar de Prim. contactpn. van Opportunity en gekoppelde Account voor huish./record, zelfs niet als de Oppy. niet afkomstig is van individu. Zonder selectie ontvangt alleen de organisatie krediet.</help>
-        <label>Altijd totaliseren n. Prim. contpers.rol</label>
-        <name>Always_Rollup_to_Primary_Contact__c</name>
-    </fields>
-    <fields>
-        <help>Dit is een niet-zichtbare instelling met aan-uitfunctie voor naamgevingscode voor huishoudens om een asynchrone versie te gebruiken in plaats van de standaardversie.</help>
-        <label>Asynchrone naamgeving voor Huishouden</label>
-        <name>Async_Household_Naming__c</name>
-    </fields>
-    <fields>
-        <help>Het aantal records dat tegelijk wordt verwerkt bij het berekenen van donorstatistieken. De standaardgrootte is 200. Verminder naar een kleiner aantal wanneer de Opportunitytotaliseringen mislukken wegens systeemlimieten.</help>
-        <label>Batchgrootte voor totalisering</label>
-        <name>Batch_Size__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
-        <label>VEROUDERD-Disable_HHAfter_trigger</label>
-        <name>DISABLE_HouseholdAfter_trigger__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
-        <label>VEROUDERD-Disable_HHBefore_trigger</label>
-        <name>DISABLE_HouseholdBefore_trigger__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
-        <label>VEROUDERD-Disable_Household_Opp_trigger</label>
-        <name>DISABLE_Household_Opportunity_trigger__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
-        <label>VEROUDERD-Disable_Households_trigger</label>
-        <name>DISABLE_Households_trigger__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
-        <label>VEROUDERD-Disable_OppRollup_trigger</label>
-        <name>DISABLE_OpportunityRollup_trigger__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
-        <label>VEROUDERD-Enable_Opp_Rollup_Triggers</label>
-        <name>Enable_Opp_Rollup_Triggers__c</name>
-    </fields>
-    <fields>
-        <help>Totaliseert totalen Gesl./gew. opportunities naar records voor Contactpersoon voor toegewezen Oppty.-contactpers.-rollen. Totaliseringen &quot;soft credits&quot; zijn alleen &apos;s nachts in batches; handmatig uitvoeren via instellingen Batch van donaties totaliseren.</help>
-        <label>Totalisering &quot;soft credits&quot; inschakelen</label>
-        <name>Enable_Soft_Credit_Rollups__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
-        <label>VEROUDERD-Updatecontrole inschakelen</label>
-        <name>Enable_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>Namen van Opportunityrecordtypen die moeten worden uitgesloten van statistieken bij totaliseren van Accountopportunities.</help>
-        <label>Geen RecTypes v. opp. bij accounttot.</label>
-        <name>Excluded_Account_Opp_Rectypes__c</name>
-    </fields>
-    <fields>
-        <help>Opportunities met deze waarde in de keuzelijst Type worden niet meegenomen in totaliseringen voor Account.</help>
-        <label>Geen opp.-typen bij accounttot.</label>
-        <name>Excluded_Account_Opp_Types__c</name>
-    </fields>
-    <fields>
-        <help>Opportunities met de geselecteerde recordtypen worden niet opgenomen in totaliseringen naar de Contactpersoon. Gebruik CTRL+klikken of Command+klikken om meer dan één recordtype te selecteren.</help>
-        <label>Geen RecTypes v. opp. bij cont.-tot.</label>
-        <name>Excluded_Contact_Opp_Rectypes__c</name>
-    </fields>
-    <fields>
-        <help>Opportunities met deze waarde in de keuzelijst Type worden niet meegenomen in totaliseringen voor Contactpersoon.</help>
-        <label>Geen opp.-typen bij cont.-tot.</label>
-        <name>Excluded_Contact_Opp_Types__c</name>
-    </fields>
-    <fields>
-        <help>NPSP controleert automatisch op aanwezigheid van fiscale jaren/uitgeschakelde FJ-instellingen als blijkt dat deze fouten vermijden. Deze instelling overschrijft de veiligheidscontrole voor gebruikers met per ongeluk aangepaste fiscale jaren.</help>
-        <label>Fiscaal jaar afdwingen</label>
-        <name>Force_Fiscal_Year__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
-        <label>VEROUDERD-Heeft pakketupdate</label>
-        <name>Has_Package_Update__c</name>
-    </fields>
-    <fields>
-        <help>Maakt automatisch contactpersoonsrollen voor leden van het huishouden van Primaire contactpersoon van Opportunity.</help>
-        <label>Contactpersoonsrollen huishouden Aan</label>
-        <name>Household_Contact_Roles_On__c</name>
-    </fields>
-    <fields>
-        <help>Contactpersoonsrecordtypen die zijn uitgesloten bij maken van Huishouden. Deze instelling wordt genegeerd bij gebruik van het model Account voor huishouden.</help>
-        <label>Geen RecTypes bij maken van huishouden</label>
-        <name>Household_Creation_Excluded_Recordtypes__c</name>
-    </fields>
-    <fields>
-        <help>De rapport-ID van het Rapport Verzendlijst huishouden, die wordt gebruikt voor verzendlijsten zonder duplicaten van Huishouden voor Campagne. Rapport moet van het type &quot;Campagnes met Contactpersonen&quot; zijn, waarbij Lidstatus niet gelijk is aan &apos;Duplicaat&apos;.</help>
-        <label>Rapport Verzendlijst huishouden</label>
-        <name>Household_Mailing_List_ID__c</name>
-    </fields>
-    <fields>
-        <help>De Contactpersoonsrol die u wilt gebruiken voor leden van een Huishouden.</help>
-        <label>Contactpersoonsrol lid van huishouden</label>
-        <name>Household_Member_Contact_Role__c</name>
-    </fields>
-    <fields>
-        <help>De Contactpersoonsrecordtypen die u wilt uitsluiten van het automatisch maken van Contactpersoonsrol lid van huishouden. Van Salesforce krijgen die contactpersonen dan geen Contactpersoonsrol lid van huishouden wanneer de Opportunity wordt gemaakt.</help>
-        <label>Geen OCR-recordtypen voor huishouden</label>
-        <name>Household_OCR_Excluded_Recordtypes__c</name>
-    </fields>
-    <fields>
-        <help>Geef aan welke contactpersonen automatisch een object Huishouden krijgen. Let op: wordt alleen gebruikt voor contactpersonen met als model voor Account Eén-op-één of Individu. Wordt genegeerd bij contactpersonen met Huishouden als model voor Account.</help>
-        <label>Regels voor object Huishouden</label>
-        <name>Household_Rules__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
-        <label>VEROUDERD-Laatste updatecontrole</label>
-        <name>Last_Update_Check__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
-        <label>VEROUDERD-Max. pakketversie</label>
-        <name>Max_Package_Version__c</name>
-    </fields>
-    <fields>
-        <help>De duur van de bewaarperiode (in dagen) nadat een lidmaatschap vervalt (laatste einddatum), voordat de status van &apos;Bewaarperiode&apos; naar &apos;Vervallen&apos; gaat. Standaard is 30 dagen.</help>
-        <label>Bewaarperiode voor lidmaatschap</label>
-        <name>Membership_Grace_Period__c</name>
-    </fields>
-    <fields>
-        <help>Namen van Opportunityrecordtypen, zoals Lidmaatschap, die u afzonderlijk wilt totaliseren vanuit andere Opportunityrecordtypen.</help>
-        <label>Recordtypenamen voor lidmaatschap</label>
-        <name>Membership_Record_Types__c</name>
-    </fields>
-    <fields>
-        <help>ID van de huidige geplande taak Totalisering van Opportunity.</help>
-        <label>ID gepl. taak totalisering Opportunity</label>
-        <name>Opp_Rollup_Scheduled_Job_Id__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
-        <label>VEROUDERD-URL van pakketupdate</label>
-        <name>Package_Update_URL__c</name>
-    </fields>
-    <fields>
-        <help>Geeft een waarde van totaliseringen voor &apos;N dagen&apos;, waarbij &apos;N&apos; het aantal dagen is vanaf vandaag naar het verleden. De waarde is standaard een totalisering voor de afgelopen 365 dagen.</help>
-        <label>Waarde totalisering dag n</label>
-        <name>Rollup_N_Day_Value__c</name>
-    </fields>
-    <fields>
-        <help>Het aantal actieve geplande Apex-taken, dat moet worden bekeken bij het plannen van nieuwe taken.</help>
-        <label>Limiet voor geplande taken</label>
-        <name>Schedule_Job_Limit__c</name>
-    </fields>
-    <fields>
-        <help>Opportunitycontactpersoonsrollen die u wilt opnemen in totaliseringen van &quot;soft credits&quot;. Gebruik CTRL+klikken of Command+klikken om meerdere rollen te selecteren.</help>
-        <label>Rollen voor &quot;soft credit&quot;</label>
-        <name>Soft_Credit_Roles__c</name>
-    </fields>
-    <fields>
-        <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
-        <label>VEROUDERD-Interval voor updatecontroles</label>
-        <name>Update_Check_Interval__c</name>
-    </fields>
-    <fields>
-        <help>Aangevinkt: totaliseringen van Opportunity gebruiken Fiscaal jaar, en niet instellingen voor kalenderjaar. Ga voor Fiscaal jaar-informatie naar Set-up-&gt;Bedrijfsprofiel-&gt;Fiscaal jaar. OPM.: instellingen voor aangepast Fiscaal jaar worden NIET ondersteund.</help>
-        <label>Fisc. jaar gebruiken voor totaliseringen</label>
-        <name>Use_Fiscal_Year_for_Rollups__c</name>
-    </fields>
-    <gender><!-- Neuter --></gender>
+  <fields>
+    <name>Advanced_Household_Naming__c</name>
+    <help>Indien aangevinkt, biedt het systeem automatische naamgeving voor namen voor huishoudens, informele en formele begroetingen.</help>
+    <label>Automatische naamgeving voor Huishouden</label>
+  </fields>
+  <fields>
+    <name>Always_Rollup_to_Primary_Contact__c</name>
+    <help>Bij selectie totaliseert Salesforce donorgegevens ALTIJD naar de Prim. contactpn. van Opportunity en gekoppelde Account voor huish./record, zelfs niet als de Oppy. niet afkomstig is van individu. Zonder selectie ontvangt alleen de organisatie krediet.</help>
+    <label>Altijd totaliseren n. Prim. contpers.rol</label>
+  </fields>
+  <fields>
+    <name>Async_Household_Naming__c</name>
+    <help>Dit is een niet-zichtbare instelling met aan-uitfunctie voor naamgevingscode voor huishoudens om een asynchrone versie te gebruiken in plaats van de standaardversie.</help>
+    <label>Asynchrone naamgeving voor Huishouden</label>
+  </fields>
+  <fields>
+    <name>Batch_Size__c</name>
+    <help>Het aantal records dat tegelijk wordt verwerkt bij het berekenen van donorstatistieken. De standaardgrootte is 200. Verminder naar een kleiner aantal wanneer de Opportunitytotaliseringen mislukken wegens systeemlimieten.</help>
+    <label>Batchgrootte voor totalisering</label>
+  </fields>
+  <fields>
+    <name>DISABLE_HouseholdAfter_trigger__c</name>
+    <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
+    <label>VEROUDERD-Disable_HHAfter_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_HouseholdBefore_trigger__c</name>
+    <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
+    <label>VEROUDERD-Disable_HHBefore_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_Household_Opportunity_trigger__c</name>
+    <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
+    <label>VEROUDERD-Disable_Household_Opp_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_Households_trigger__c</name>
+    <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
+    <label>VEROUDERD-Disable_Households_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityRollup_trigger__c</name>
+    <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
+    <label>VEROUDERD-Disable_OppRollup_trigger</label>
+  </fields>
+  <fields>
+    <name>Enable_Opp_Rollup_Triggers__c</name>
+    <help>VEROUDERD. Triggerwerking nu bepaald in de pagina Triggerconfiguratie van NPSP-instellingen.</help>
+    <label>VEROUDERD-Enable_Opp_Rollup_Triggers</label>
+  </fields>
+  <fields>
+    <name>Enable_Soft_Credit_Rollups__c</name>
+    <help>Totaliseert totalen Gesl./gew. opportunities naar records voor Contactpersoon voor toegewezen Oppty.-contactpers.-rollen. Totaliseringen "soft credits" zijn alleen 's nachts in batches; handmatig uitvoeren via instellingen Batch van donaties totaliseren.</help>
+    <label>Totalisering "soft credits" inschakelen</label>
+  </fields>
+  <fields>
+    <name>Enable_Update_Check__c</name>
+    <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+    <label>VEROUDERD-Updatecontrole inschakelen</label>
+  </fields>
+  <fields>
+    <name>Excluded_Account_Opp_Rectypes__c</name>
+    <help>Namen van Opportunityrecordtypen die moeten worden uitgesloten van statistieken bij totaliseren van Accountopportunities.</help>
+    <label>Geen RecTypes v. opp. bij accounttot.</label>
+  </fields>
+  <fields>
+    <name>Excluded_Account_Opp_Types__c</name>
+    <help>Opportunities met deze waarde in de keuzelijst Type worden niet meegenomen in totaliseringen voor Account.</help>
+    <label>Geen opp.-typen bij accounttot.</label>
+  </fields>
+  <fields>
+    <name>Excluded_Contact_Opp_Rectypes__c</name>
+    <help>Opportunities met de geselecteerde recordtypen worden niet opgenomen in totaliseringen naar de Contactpersoon. Gebruik CTRL+klikken of Command+klikken om meer dan één recordtype te selecteren.</help>
+    <label>Geen RecTypes v. opp. bij cont.-tot.</label>
+  </fields>
+  <fields>
+    <name>Excluded_Contact_Opp_Types__c</name>
+    <help>Opportunities met deze waarde in de keuzelijst Type worden niet meegenomen in totaliseringen voor Contactpersoon.</help>
+    <label>Geen opp.-typen bij cont.-tot.</label>
+  </fields>
+  <fields>
+    <name>Force_Fiscal_Year__c</name>
+    <help>NPSP controleert automatisch op aanwezigheid van fiscale jaren/uitgeschakelde FJ-instellingen als blijkt dat deze fouten vermijden. Deze instelling overschrijft de veiligheidscontrole voor gebruikers met per ongeluk aangepaste fiscale jaren.</help>
+    <label>Fiscaal jaar afdwingen</label>
+  </fields>
+  <fields>
+    <name>Has_Package_Update__c</name>
+    <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+    <label>VEROUDERD-Heeft pakketupdate</label>
+  </fields>
+  <fields>
+    <name>Household_Contact_Roles_On__c</name>
+    <help>Maakt automatisch contactpersoonsrollen voor leden van het huishouden van Primaire contactpersoon van Opportunity.</help>
+    <label>Contactpersoonsrollen huishouden Aan</label>
+  </fields>
+  <fields>
+    <name>Household_Creation_Excluded_Recordtypes__c</name>
+    <help>Contactpersoonsrecordtypen die zijn uitgesloten bij maken van Huishouden. Deze instelling wordt genegeerd bij gebruik van het model Account voor huishouden.</help>
+    <label>Geen RecTypes bij maken van huishouden</label>
+  </fields>
+  <fields>
+    <name>Household_Mailing_List_ID__c</name>
+    <help>De rapport-ID van het Rapport Verzendlijst huishouden, die wordt gebruikt voor verzendlijsten zonder duplicaten van Huishouden voor Campagne. Rapport moet van het type "Campagnes met Contactpersonen" zijn, waarbij Lidstatus niet gelijk is aan 'Duplicaat'.</help>
+    <label>Rapport Verzendlijst huishouden</label>
+  </fields>
+  <fields>
+    <name>Household_Member_Contact_Role__c</name>
+    <help>De Contactpersoonsrol die u wilt gebruiken voor leden van een Huishouden.</help>
+    <label>Contactpersoonsrol lid van huishouden</label>
+  </fields>
+  <fields>
+    <name>Household_OCR_Excluded_Recordtypes__c</name>
+    <help>De Contactpersoonsrecordtypen die u wilt uitsluiten van het automatisch maken van Contactpersoonsrol lid van huishouden. Van Salesforce krijgen die contactpersonen dan geen Contactpersoonsrol lid van huishouden wanneer de Opportunity wordt gemaakt.</help>
+    <label>Geen OCR-recordtypen voor huishouden</label>
+  </fields>
+  <fields>
+    <name>Household_Rules__c</name>
+    <help>Geef aan welke contactpersonen automatisch een object Huishouden krijgen. Let op: wordt alleen gebruikt voor contactpersonen met als model voor Account Eén-op-één of Individu. Wordt genegeerd bij contactpersonen met Huishouden als model voor Account.</help>
+    <label>Regels voor object Huishouden</label>
+  </fields>
+  <fields>
+    <name>Last_Update_Check__c</name>
+    <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+    <label>VEROUDERD-Laatste updatecontrole</label>
+  </fields>
+  <fields>
+    <name>Max_Package_Version__c</name>
+    <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+    <label>VEROUDERD-Max. pakketversie</label>
+  </fields>
+  <fields>
+    <name>Membership_Grace_Period__c</name>
+    <help>De duur van de bewaarperiode (in dagen) nadat een lidmaatschap vervalt (laatste einddatum), voordat de status van 'Bewaarperiode' naar 'Vervallen' gaat. Standaard is 30 dagen.</help>
+    <label>Bewaarperiode voor lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>Membership_Record_Types__c</name>
+    <help>Namen van Opportunityrecordtypen, zoals Lidmaatschap, die u afzonderlijk wilt totaliseren vanuit andere Opportunityrecordtypen.</help>
+    <label>Recordtypenamen voor lidmaatschap</label>
+  </fields>
+  <fields>
+    <name>Opp_Rollup_Scheduled_Job_Id__c</name>
+    <help>ID van de huidige geplande taak Totalisering van Opportunity.</help>
+    <label>ID gepl. taak totalisering Opportunity</label>
+  </fields>
+  <fields>
+    <name>Package_Update_URL__c</name>
+    <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+    <label>VEROUDERD-URL van pakketupdate</label>
+  </fields>
+  <fields>
+    <name>Rollup_N_Day_Value__c</name>
+    <help>Geeft een waarde van totaliseringen voor 'N dagen', waarbij 'N' het aantal dagen is vanaf vandaag naar het verleden. De waarde is standaard een totalisering voor de afgelopen 365 dagen.</help>
+    <label>Waarde totalisering dag n</label>
+  </fields>
+  <fields>
+    <name>Schedule_Job_Limit__c</name>
+    <help>Het aantal actieve geplande Apex-taken, dat moet worden bekeken bij het plannen van nieuwe taken.</help>
+    <label>Limiet voor geplande taken</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_Roles__c</name>
+    <help>Opportunitycontactpersoonsrollen die u wilt opnemen in totaliseringen van "soft credits". Gebruik CTRL+klikken of Command+klikken om meerdere rollen te selecteren.</help>
+    <label>Rollen voor "soft credit"</label>
+  </fields>
+  <fields>
+    <name>Update_Check_Interval__c</name>
+    <help>VEROUDERD. Nieuwe versies van het Nonprofit Success Pack worden automatisch geïnstalleerd.</help>
+    <label>VEROUDERD-Interval voor updatecontroles</label>
+  </fields>
+  <fields>
+    <name>Use_Fiscal_Year_for_Rollups__c</name>
+    <help>Aangevinkt: totaliseringen van Opportunity gebruiken Fiscaal jaar, en niet instellingen voor kalenderjaar. Ga voor Fiscaal jaar-informatie naar Set-up-&gt;Bedrijfsprofiel-&gt;Fiscaal jaar. OPM.: instellingen voor aangepast Fiscaal jaar worden NIET ondersteund.</help>
+    <label>Fisc. jaar gebruiken voor totaliseringen</label>
+  </fields>
+  <gender>Feminine</gender>
+  <caseValues>
+    <plural>false</plural>
+    <value>Instelling voor huishouden</value>
+  </caseValues>
+  <caseValues>
+    <plural>true</plural>
+    <value>Instellingen voor huishouden</value>
+  </caseValues>
 </CustomObjectTranslation>

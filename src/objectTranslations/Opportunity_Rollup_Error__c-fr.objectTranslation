@@ -1,38 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
-    </caseValues>
-    <caseValues>
-        <plural>true</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
-    </caseValues>
-    <fields>
-        <help>Date et heure de l’erreur</help>
-        <label>Date et heure de l’erreur</label>
-        <name>Error_Datetime__c</name>
-    </fields>
-    <fields>
-        <help>Texte complet du message d’erreur</help>
-        <label>Message d’erreur</label>
-        <name>Error_Message__c</name>
-    </fields>
-    <fields>
-        <help>Le type d’objet auquel cette erreur se réfère</help>
-        <label>Type d’objet d’erreur</label>
-        <name>Error_Object_Type__c</name>
-    </fields>
-    <fields>
-        <help>Lien vers l’enregistrement sur lequel l’erreur s’est produite</help>
-        <label>Lien d’enregistrement d’erreur</label>
-        <name>Error_Record_Link__c</name>
-    </fields>
-    <fields>
-        <help>Type de l’erreur survenue</help>
-        <label>Type d’erreur</label>
-        <name>Error_Type__c</name>
-    </fields>
-    <gender><!-- Masculine --></gender>
-    <startsWith><!-- Consonant --></startsWith>
+  <fields>
+    <name>Error_Datetime__c</name>
+    <help>Date et heure de l’erreur</help>
+    <label>Date et heure de l’erreur</label>
+  </fields>
+  <fields>
+    <name>Error_Message__c</name>
+    <help>Texte complet du message d’erreur</help>
+    <label>Message d’erreur</label>
+  </fields>
+  <fields>
+    <name>Error_Object_Type__c</name>
+    <help>Le type d’objet auquel cette erreur se réfère</help>
+    <label>Type d’objet d’erreur</label>
+  </fields>
+  <fields>
+    <name>Error_Record_Link__c</name>
+    <help>Lien vers l’enregistrement sur lequel l’erreur s’est produite</help>
+    <label>Lien d’enregistrement d’erreur</label>
+  </fields>
+  <fields>
+    <name>Error_Type__c</name>
+    <help>Type de l’erreur survenue</help>
+    <label>Type d’erreur</label>
+  </fields>
+  <gender>Feminine</gender>
+  <startsWith>Vowel</startsWith>
+  <caseValues>
+    <plural>false</plural>
+    <value>Erreur de cumul d’opportunité - DÉPRÉCIÉ</value>
+  </caseValues>
+  <caseValues>
+    <plural>true</plural>
+    <value>Erreurs de cumul d’opportunité - DÉPRÉCIÉ</value>
+  </caseValues>
 </CustomObjectTranslation>

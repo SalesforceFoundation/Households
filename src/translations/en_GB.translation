@@ -2,159 +2,159 @@
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customLabels>
         <name>Add</name>
-        <label>追加</label>
+        <label>Add</label>
     </customLabels>
     <customLabels>
         <name>AddAndMerge</name>
-        <label>世帯の追加とマージ</label>
+        <label>Add and merge Households</label>
     </customLabels>
     <customLabels>
         <name>AddAndRemove</name>
-        <label>古い世帯からの追加と削除</label>
+        <label>Add and remove from old Household</label>
     </customLabels>
     <customLabels>
         <name>AddHouseholdMembers</name>
-        <label>メンバーの追加</label>
+        <label>Add Members</label>
     </customLabels>
     <customLabels>
         <name>AddressCopyFailure</name>
-        <label>住所のコピー中にエラーが発生しました。</label>
+        <label>An error occurred during the copying of the address.</label>
     </customLabels>
     <customLabels>
         <name>AddressCopySuccess</name>
-        <label>住所のコピーが完了しました。</label>
+        <label>Address copied successfully.</label>
     </customLabels>
     <customLabels>
         <name>AddressCopyUnknownObject</name>
-        <label>住所のコピー機能は、このオブジェクトタイプをサポートしていません。</label>
+        <label>Address Copy is not supported for this object type.</label>
     </customLabels>
     <customLabels>
         <name>AddressToAllMembers</name>
-        <label>すべての世帯メンバーの自宅住所をこの住所に設定します。</label>
+        <label>Set the home address on all household members to this address.</label>
     </customLabels>
     <customLabels>
         <name>AlreadyInHousehold</name>
-        <label>すでに世帯メンバーです</label>
+        <label>Already In Household</label>
     </customLabels>
     <customLabels>
         <name>AutoFormalGreeting</name>
-        <label>公式の自動挨拶</label>
+        <label>Auto Formal Greeting</label>
     </customLabels>
     <customLabels>
         <name>AutoInformalGreeting</name>
-        <label>非公式の自動挨拶</label>
+        <label>Auto Informal Greeting</label>
     </customLabels>
     <customLabels>
         <name>AutoName</name>
-        <label>自動命名</label>
+        <label>Auto Name</label>
     </customLabels>
     <customLabels>
         <name>Change</name>
-        <label>変更</label>
+        <label>Change</label>
     </customLabels>
     <customLabels>
         <name>ChangeAddress</name>
-        <label>住所の変更</label>
+        <label>Change Address</label>
     </customLabels>
     <customLabels>
         <name>ChangesNotSaved</name>
-        <label>変更が保存されていません。</label>
+        <label>Changes have not been saved.</label>
     </customLabels>
     <customLabels>
         <name>ContactAlreadyInHousehold</name>
-        <label>はすでに世帯にあります。この取引先責任者を追加するときに既存の世帯メンバーを含めるかどうかを選択してください。</label>
+        <label>is already in a household. Would you like to add this contact with or without their existing household members?</label>
     </customLabels>
     <customLabels>
         <name>ContactLastNameRqd</name>
-        <label>姓は必須です。</label>
+        <label>Last Name is required.</label>
     </customLabels>
     <customLabels>
         <name>ContactNameRqd</name>
-        <label>名と姓を入力してください。</label>
+        <label>Enter a First Name and Last Name.</label>
     </customLabels>
     <customLabels>
         <name>CreatedOnSave</name>
-        <label>取引先責任者は世帯の保存時に作成されます。</label>
+        <label>Contact will be created when Household is saved.</label>
     </customLabels>
     <customLabels>
         <name>DefaultHouseholdName</name>
-        <label>世帯</label>
+        <label>Household</label>
     </customLabels>
     <customLabels>
         <name>DefaultHouseholdTransactionCurrency</name>
-        <label>￥</label>
+        <label>$</label>
     </customLabels>
     <customLabels>
         <name>Delete</name>
-        <label>削除</label>
+        <label>Delete</label>
     </customLabels>
     <customLabels>
         <name>EnterNewAddress</name>
-        <label>新しい住所を入力</label>
+        <label>Enter a new address</label>
     </customLabels>
     <customLabels>
         <name>ExcludeText</name>
-        <label>自動世帯命名から取引先責任者を除外:</label>
+        <label>Exclude Contact from automatic Household naming:</label>
     </customLabels>
     <customLabels>
         <name>ExistingHousehold</name>
-        <label>既存の世帯</label>
+        <label>Existing Household</label>
     </customLabels>
     <customLabels>
         <name>FindContactByName</name>
-        <label>名前で取引先責任者を検索...</label>
+        <label>Find contact by name ...</label>
     </customLabels>
     <customLabels>
         <name>HouseholdAddress</name>
-        <label>世帯の住所</label>
+        <label>Household Address</label>
     </customLabels>
     <customLabels>
         <name>HouseholdAnonymousGreeting</name>
-        <label>お客様各位</label>
+        <label>Sir or Madam</label>
     </customLabels>
     <customLabels>
         <name>HouseholdAnonymousName</name>
-        <label>匿名</label>
+        <label>Anonymous</label>
     </customLabels>
     <customLabels>
         <name>HouseholdDetails</name>
-        <label>世帯の詳細</label>
+        <label>Household Details</label>
     </customLabels>
     <customLabels>
         <name>HouseholdMembers</name>
-        <label>世帯メンバー</label>
+        <label>Household Members</label>
     </customLabels>
     <customLabels>
         <name>HouseholdNameConnector</name>
-        <label>および</label>
+        <label>and</label>
     </customLabels>
     <customLabels>
         <name>HouseholdNameOverrun</name>
-        <label>友達</label>
+        <label>Friends</label>
     </customLabels>
     <customLabels>
         <name>Household_Contact_Role_Processor_Off</name>
-        <label>商談なし</label>
+        <label>No Opportunities</label>
     </customLabels>
     <customLabels>
         <name>Household_Contact_Role_Processor_On</name>
-        <label>すべての商談</label>
+        <label>All Opportunities</label>
     </customLabels>
     <customLabels>
         <name>Household_Contact_Roles_Help_Text</name>
-        <label>主支援者の世帯メンバーの自動的に作成される支援取引先責任者の役割を作成</label>
+        <label>These settings let you automatically create Opportunity Contact Roles for Household members whenever an Opportunity is created.</label>
     </customLabels>
     <customLabels>
         <name>Household_Member_Contact_Role</name>
-        <label>世帯メンバー</label>
+        <label>Household Member</label>
     </customLabels>
     <customLabels>
         <name>Household_Rules_Help_Text</name>
-        <label>廃止。未使用。世帯に属する取引先責任者を、全員、個人の取引先に関連する取引先責任者のみ、なしの中から選択します。</label>
+        <label>DEPRECATED.  Not Used.  Select which Contacts get Households: All, only those related to an Individual Account, or none.</label>
     </customLabels>
     <customLabels>
         <name>ManageHousehold</name>
-        <label>世帯の管理</label>
+        <label>Manage Household</label>
     </customLabels>
     <customLabels>
         <name>NameReplacementText</name>
@@ -162,72 +162,72 @@
     </customLabels>
     <customLabels>
         <name>NewContact</name>
-        <label>新規取引先責任者</label>
+        <label>New Contact</label>
     </customLabels>
     <customLabels>
         <name>NoContacts</name>
-        <label>現在、この世帯には取引先責任者がありません。</label>
+        <label>There are currently no Contacts in this Household.</label>
     </customLabels>
     <customLabels>
         <name>Opportunity_Error_Help_Text</name>
-        <label>夜間または手動の積み上げ集計時に積み上げ集計エラーが発生し、データの精度に影響する可能性があります。エラー、エラーの種類、およびエラーが発生したレコードへのリンクを次に示します。これらのエラーは、夜間にスケジュールされているジョブまたは手動の積み上げ集計の実行ごとにリセットされます。データの精度を確保するために、これらのエラーにすぐに対応することを強くお勧めします。</label>
+        <label>Rollup errors can occur during nightly or manual rollups, and may affect the accuracy of your data.  Listed below are the errors, type of error, and a link to the record on which the error occurred. These errors are reset every time the nightly scheduled job or the manual rollups are run.  It is highly recommended these errors are addressed promptly to ensure the accuracy of your data.</label>
     </customLabels>
     <customLabels>
         <name>Opportunity_Rollup_Future_Call_Limit</name>
-        <label>使用可能な future コールが少なすぎるため積み上げ集計されませんでした。</label>
+        <label>Did not roll up because there were too few future calls available.</label>
     </customLabels>
     <customLabels>
         <name>Opportunity_Rollup_Scheduling_Error_Text</name>
-        <label>スケジュール済み Apex ジョブの制限に達したため、商談積み上げ集計が夜間に実行されません。このジョブを夜間に実行するには、スケジュール済みジョブのいずれかを削除してこのページを再読み込みしてください。</label>
+        <label>You have reached your limit of Scheduled Apex jobs and the Opportunity Rollups won\'t run nightly. If you want this job to run nightly, delete one of your scheduled jobs and reload this page.</label>
     </customLabels>
     <customLabels>
         <name>Primary_Donor_Contact_Role</name>
-        <label>支援者</label>
+        <label>Donor</label>
     </customLabels>
     <customLabels>
         <name>RollupErrorMessage</name>
-        <label>商談が最後に積み上げ集計されたときにエラーが発生しました。詳細は、[システムエラーログ] パネルを参照してください。</label>
+        <label>Error(s) occurred the last time your Opportunities were rolled up. Please see the System Error Log panel for more information.</label>
     </customLabels>
     <customLabels>
         <name>SelectExistingAddress</name>
-        <label>既存の住所を選択</label>
+        <label>Select an existing address</label>
     </customLabels>
     <customLabels>
         <name>SetAddress</name>
-        <label>住所を設定</label>
+        <label>Set Address</label>
     </customLabels>
     <customLabels>
         <name>UDRDescription</name>
-        <label>支援から個人、団体または世帯へのユーザ定義積み上げ集計を制御する設定。これらを変更すると、Nonprofit Success Pack の動作が変わります。
-
-警告: 設定に誤りがあると、積み上げ集計に失敗する可能性があります。本番環境にリリースする前に、ユーザ定義積み上げ集計を十分にテストしてください。</label>
+        <label>These settings let you create and manage user defined rollups from an Opportunity (Donation) to a Contact, Account, or Household.  After you create a User Defined Rollup, you may want to use Rollup Donations Batch in NPSP Settings | Bulk Data Processes to recalculate all rollups in your instance and ensure that your new rollup field is correctly populated. 
+ 
+WARNING: Keep in mind that rollups change how your Nonprofit Success Pack behaves. Improperly configured settings may cause your rollups to fail. Please test your user defined rollups thoroughly before deploying to production.</label>
     </customLabels>
     <reportTypes>
         <name>Households_and_Donations</name>
-        <label>世帯と支援</label>
+        <label>Households and Donations</label>
         <sections>
-            <label>世帯</label>
+            <label>Households</label>
             <name>Households</name>
         </sections>
         <sections>
-            <label>世帯メンバー</label>
+            <label>Household Members</label>
             <name>Household Members</name>
         </sections>
         <sections>
-            <label>商談</label>
+            <label>Opportunities</label>
             <name>Opportunities</name>
         </sections>
     </reportTypes>
     <customTabs>
         <name>Households_Settings</name>
-        <label>世帯設定</label>
+        <label>Households Settings</label>
     </customTabs>
     <customTabs>
         <name>Opportunity_Rollups</name>
-        <label>商談積み上げ集計</label>
+        <label>Opportunity Rollups</label>
     </customTabs>
     <customTabs>
         <name>User_Rollups</name>
-        <label>ユーザ積み上げ集計</label>
+        <label>User Rollups</label>
     </customTabs>
 </Translations>

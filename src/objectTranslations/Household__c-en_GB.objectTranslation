@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fields>
+    <name>Addressee__c</name>
+    <label>Addressee</label>
+  </fields>
+  <fields>
+    <name>Always_Anonymous__c</name>
+    <help>Used to set the Household name and other fields using anonymous information.</help>
+    <label>Always Anonymous</label>
+  </fields>
+  <fields>
+    <name>AverageAmount__c</name>
+    <help>Average amount of won Opportunities related to this Household by a related Contact with primary Opportunity Contact Role.</help>
+    <label>Average Gift</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year_Total__c</name>
+    <help>The sum of won Opportunity amounts in the Best Gift Year for this Household via Contacts with primary Opportunity Contact Role.  See also Best Gift Year.</help>
+    <label>Best Gift Year Total</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year__c</name>
+    <help>The year in which the largest total amount of won Opportunities related to this Household via Contacts with primary Opportunity Contact Role occurred.  See also Best Gift Year Total.</help>
+    <label>Best Gift Year</label>
+  </fields>
+  <fields>
+    <name>FirstCloseDate__c</name>
+    <help>The earliest Close Date of a won Opportunity related to this Household via Contacts with primary Contact Role.</help>
+    <label>First Gift Date</label>
+  </fields>
+  <fields>
+    <name>Formal_Greeting__c</name>
+    <help>Uses fields of non-excluded, ordered related Contacts. Generated automatically.</help>
+    <label>Formal Greeting</label>
+  </fields>
+  <fields>
+    <name>Formula_MailingAddress__c</name>
+    <help>Formula: Concatenation of other Mailing fields for this Household. Can be updated in Household Edit page but does not update Contact unless "Copy Household Address to Contacts" button is pushed.</help>
+    <label>Postal Address</label>
+  </fields>
+  <fields>
+    <name>HouseholdEmail__c</name>
+    <help>Set by the original Contact which created this Household. Can be edited in Household, but does not update Contact.</help>
+    <label>Household Email</label>
+  </fields>
+  <fields>
+    <name>HouseholdPhone__c</name>
+    <help>Set by the original Contact which created this Household. Can be edited in Household, but does not update Contact.</help>
+    <label>Household Phone</label>
+  </fields>
+  <fields>
+    <name>Household_ID__c</name>
+    <label>Household ID</label>
+  </fields>
+  <fields>
+    <name>Informal_Greeting__c</name>
+    <help>Uses fields of non-excluded, ordered related Contacts.  Generated automatically.</help>
+    <label>Informal Greeting</label>
+  </fields>
+  <fields>
+    <name>LargestAmount__c</name>
+    <help>The largest won Opportunity amount for this Household via related Contacts with primary Opportunity Contact Role.</help>
+    <label>Largest Gift</label>
+  </fields>
+  <fields>
+    <name>LastCloseDate__c</name>
+    <help>Most recent Close Date of a won Opportunity for this Household via related Contacts with primary Contact Role.</help>
+    <label>Last Gift Date</label>
+  </fields>
+  <fields>
+    <name>LastMembershipAmount__c</name>
+    <help>The most recent won Membership Opportunity (Record Type) amount for this Household via related Contacts with primary Opportunity Contact Role.</help>
+    <label>Last Membership Amount</label>
+  </fields>
+  <fields>
+    <name>LastMembershipDate__c</name>
+    <help>The most recent Close Date of a won Membership Opportunity for this Household via related Contacts with primary Opportunity Contact Role.</help>
+    <label>Last Membership Date</label>
+  </fields>
+  <fields>
+    <name>LastMembershipLevel__c</name>
+    <help>The Membership Level of the most recent won Membership Opportunity for this Household via related Contacts with primary Opportunity Contact Role.</help>
+    <label>Last Membership Level</label>
+  </fields>
+  <fields>
+    <name>LastMembershipOrigin__c</name>
+    <help>The Origin (new, renew...) of the most recent won Membership Opportunity for this Household via related Contacts with primary Opportunity Contact Role.</help>
+    <label>Last Membership Origin</label>
+  </fields>
+  <fields>
+    <name>LastOppAmount__c</name>
+    <help>The most recent won Opportunity amount for this Household via related Contacts with primary Opportunity Contact Role.</help>
+    <label>Last Gift Amount</label>
+  </fields>
+  <fields>
+    <name>MailingCity__c</name>
+    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless "Copy Household Address to Contacts" button is pushed.</help>
+    <label>Postal City</label>
+  </fields>
+  <fields>
+    <name>MailingCountry__c</name>
+    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless "Copy Household Address to Contacts" button is pushed.</help>
+    <label>Postal Country</label>
+  </fields>
+  <fields>
+    <name>MailingPostalCode__c</name>
+    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless "Copy Household Address to Contacts" button is pushed.</help>
+    <label>Zip/Postal Code</label>
+  </fields>
+  <fields>
+    <name>MailingState__c</name>
+    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless "Copy Household Address to Contacts" button is pushed.</help>
+    <label>Postal State/Province</label>
+  </fields>
+  <fields>
+    <name>MailingStreet__c</name>
+    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless "Copy Household Address to Contacts" button is pushed.</help>
+    <label>Postal Street</label>
+  </fields>
+  <fields>
+    <name>MembershipEndDate__c</name>
+    <help>The Membership End Date of the most recent won Membership Opportunity for his Household via related Contacts with primary Opportunity Contact Role.</help>
+    <label>Membership End Date</label>
+  </fields>
+  <fields>
+    <name>MembershipJoinDate__c</name>
+    <help>The earliest Membership Join Date of the oldest Membership Opportunity (Close Date, Record Type) for his Household via related Contacts with primary Opportunity Contact Role.</help>
+    <label>Membership Join Date</label>
+  </fields>
+  <fields>
+    <name>Membership_Span__c</name>
+    <help>Formula: The number of years for which this Household has had a Member.</help>
+    <label>Membership Span</label>
+  </fields>
+  <fields>
+    <name>Membership_Status__c</name>
+    <help>Formula: Current, expired, or grace period.  Default grace period set in Household Settings.</help>
+    <label>Membership Status</label>
+  </fields>
+  <fields>
+    <name>NumberOfClosedOpps__c</name>
+    <help>The total number of gifts related to this Household by Contact and primary Opportunity Contact Role.</help>
+    <label>Total Number of Gifts</label>
+  </fields>
+  <fields>
+    <name>NumberOfMembershipOpps__c</name>
+    <help>The total amount of won Membership Opportunities (Record Type) related to this Household by Contact and primary Opportunity Contact Role.</help>
+    <label>Number of Memberships</label>
+  </fields>
+  <fields>
+    <name>OppAmount2YearsAgo__c</name>
+    <help>Total Gifts Two Years Ago on Household by Contact and primary Opportunity Contact Role.</help>
+    <label>Total Gifts Two Years Ago</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastNDays__c</name>
+    <help>The total amount of won Opportunities related to this Household, closed in the last number of days defined in Household Settings, related by Contact and primary Opportunity Contact Role.</help>
+    <label>Total Gifts Last N Days</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastYear__c</name>
+    <help>Total Gifts Last Year on Household by Contact and primary Opportunity Contact Role.</help>
+    <label>Total Gifts Last Year</label>
+  </fields>
+  <fields>
+    <name>OppAmountThisYear__c</name>
+    <help>Total Gifts This Year on Household by Contact and primary Opportunity Contact Role.</help>
+    <label>Total Gifts This Year</label>
+  </fields>
+  <fields>
+    <name>OppsClosed2YearsAgo__c</name>
+    <help>The number of won Opportunities with Close Date in the last 2 years related to this Household via related Contacts with primary Opportunity Contact Role.</help>
+    <label>Number of Gifts Two Years Ago</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastNDays__c</name>
+    <help>The number of won Opportunities with Close Date in the last N days (Household Settings) related to this Household via related Contacts with primary Opportunity Contact Role.</help>
+    <label>Number of Gifts Last N Days</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastYear__c</name>
+    <help>The number of won Opportunities with Close Date in the last year related to this Household via related Contacts with primary Contact Role.</help>
+    <label>Number of Gifts Last Year</label>
+  </fields>
+  <fields>
+    <name>OppsClosedThisYear__c</name>
+    <help>The number of won Opportunities with Close Date this year related to this Household via related Contacts with primary Opportunity Contact Role.</help>
+    <label>Number of Gifts This Year</label>
+  </fields>
+  <fields>
+    <name>SYSTEM_CUSTOM_NAMING__c</name>
+    <help>Name, Formal Greeting, or Informal Greeting</help>
+    <label>_SYSTEM: CUSTOM NAMING</label>
+    <picklistValues>
+      <masterLabel>Name</masterLabel>
+      <translation>Name</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Formal_Greeting__c</masterLabel>
+      <translation>Formal_Greeting__c</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Informal_Greeting__c</masterLabel>
+      <translation>Informal_Greeting__c</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>SmallestAmount__c</name>
+    <help>The smallest amount of a won Opportunity related to this Household by Contact and primary Opportunity Contact Role.</help>
+    <label>Smallest Gift</label>
+  </fields>
+  <fields>
+    <name>TotalMembershipOppAmount__c</name>
+    <help>The total amount of won Membership Opportunities (Record Type) related to this Household by Contact and primary Opportunity Contact Role.</help>
+    <label>Total Membership Amount</label>
+  </fields>
+  <fields>
+    <name>TotalOppAmount__c</name>
+    <help>The sum of won Opportunity Amounts related to this Household by Contact and primary Opportunity Contact Role.</help>
+    <label>Total Gifts</label>
+  </fields>
+  <webLinks>
+    <name>Copy_Household_Address_to_Contacts</name>
+    <label>Copy Household Address to Contacts</label>
+  </webLinks>
+  <layouts>
+    <layout>Household Layout</layout>
+    <sections>
+      <label>Household Information</label>
+      <section>Household Information</section>
+    </sections>
+    <sections>
+      <label>Donation Information</label>
+      <section>Donation Information</section>
+    </sections>
+    <sections>
+      <label>Donation Totals</label>
+      <section>Donation Totals</section>
+    </sections>
+    <sections>
+      <label>Custom Links</label>
+      <section>Custom Links</section>
+    </sections>
+  </layouts>
+  <nameFieldLabel>Household Name</nameFieldLabel>
+  <standardFields>
+    <name>Name</name>
+    <label>Household Name</label>
+  </standardFields>
+  <startsWith>Consonant</startsWith>
+  <caseValues>
+    <plural>false</plural>
+    <value>Household</value>
+  </caseValues>
+  <caseValues>
+    <plural>true</plural>
+    <value>Households</value>
+  </caseValues>
+</CustomObjectTranslation>
