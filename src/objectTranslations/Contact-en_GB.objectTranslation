@@ -91,7 +91,7 @@
   </fields>
   <fields>
     <name>Naming_Exclusions__c</name>
-    <help>Select to exclude this Contact's name from various generated Household names.</help>
+    <help>Select to exclude this Contact&apos;s name from various generated Household names.</help>
     <label>Naming Exclusions</label>
     <picklistValues>
       <masterLabel>Household__c.Name</masterLabel>
@@ -183,7 +183,7 @@
   </fields>
   <fields>
     <name>Soft_Credit_Total__c</name>
-    <help>Total amount in soft credits for this Contact's lifetime. Defined in the Household Settings tab.</help>
+    <help>Total amount in soft credits for this Contact&apos;s lifetime. Defined in the Household Settings tab.</help>
     <label>Soft Credit Total</label>
   </fields>
   <fields>

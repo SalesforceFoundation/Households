@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
   <fields>
     <name>Advanced_Household_Naming__c</name>
@@ -7,7 +7,7 @@
   </fields>
   <fields>
     <name>Always_Rollup_to_Primary_Contact__c</name>
-    <help>When selected, Salesforce will ALWAYS roll up donor data to the Opportunity's Primary Contact, and corresponding Household Account or record, even if the Opportunity is not from an individual. If left unselected, only the organisation will receive credit.</help>
+    <help>When selected, Salesforce will ALWAYS roll up donor data to the Opportunity&apos;s Primary Contact, and corresponding Household Account or record, even if the Opportunity is not from an individual. If left unselected, only the organisation will receive credit.</help>
     <label>Always Rollup to Primary Contact Role</label>
   </fields>
   <fields>
@@ -67,22 +67,22 @@
   </fields>
   <fields>
     <name>Excluded_Account_Opp_Types__c</name>
-    <help>Opportunities that have this value in the Type picklist won't be included in rollups to the Account.</help>
+    <help>Opportunities that have this value in the Type picklist won&apos;t be included in rollups to the Account.</help>
     <label>Opp Types Excluded for Account Rollup</label>
   </fields>
   <fields>
     <name>Excluded_Contact_Opp_Rectypes__c</name>
-    <help>Opportunities with the selected record types won't be included in rollups to the Contact. Control or Command click to select more than one record type.</help>
+    <help>Opportunities with the selected record types won&apos;t be included in rollups to the Contact. Control or Command click to select more than one record type.</help>
     <label>Opp RecTypes Excluded for Contact Rollup</label>
   </fields>
   <fields>
     <name>Excluded_Contact_Opp_Types__c</name>
-    <help>Opportunities that have this value in the Type picklist won't be included in rollups to the Contact.</help>
+    <help>Opportunities that have this value in the Type picklist won&apos;t be included in rollups to the Contact.</help>
     <label>Opp Types Excluded for Contact Rollup</label>
   </fields>
   <fields>
     <name>Force_Fiscal_Year__c</name>
-    <help>The NPSP automatically checks for the presence of custom fiscal years, and disabled FY settings if they're found to avoid errors.  This setting overrides that safety-check for users who have accidentally enabled custom fiscal years.</help>
+    <help>The NPSP automatically checks for the presence of custom fiscal years, and disabled FY settings if they&apos;re found to avoid errors.  This setting overrides that safety-check for users who have accidentally enabled custom fiscal years.</help>
     <label>Force Fiscal Year</label>
   </fields>
   <fields>
@@ -92,7 +92,7 @@
   </fields>
   <fields>
     <name>Household_Contact_Roles_On__c</name>
-    <help>Automatically creates Contact Roles for Household members of the Opportunity's Primary Contact.</help>
+    <help>Automatically creates Contact Roles for Household members of the Opportunity&apos;s Primary Contact.</help>
     <label>Household Contact Roles On</label>
   </fields>
   <fields>
@@ -102,7 +102,7 @@
   </fields>
   <fields>
     <name>Household_Mailing_List_ID__c</name>
-    <help>The report ID of the Household Mailing List Report used for Household-deduplicated Campaign mailing lists.  Report should be of Campaigns with Contacts, where Member Status does not contain 'Duplicate'</help>
+    <help>The report ID of the Household Mailing List Report used for Household-deduplicated Campaign mailing lists.  Report should be of Campaigns with Contacts, where Member Status does not contain &apos;Duplicate&apos;</help>
     <label>Household Mailing List Report</label>
   </fields>
   <fields>
@@ -132,7 +132,7 @@
   </fields>
   <fields>
     <name>Membership_Grace_Period__c</name>
-    <help>The length of the grace period (in days) after a membership expires (last end date) before the status moves from 'Grace Period' to 'Expired'.  Defaults to 30 days.</help>
+    <help>The length of the grace period (in days) after a membership expires (last end date) before the status moves from &apos;Grace Period&apos; to &apos;Expired&apos;.  Defaults to 30 days.</help>
     <label>Membership Grace Period</label>
   </fields>
   <fields>
@@ -152,7 +152,7 @@
   </fields>
   <fields>
     <name>Rollup_N_Day_Value__c</name>
-    <help>Provide a value for 'N day' rollups, where 'N' is the number of days from today into the past.  This value defaults to rollup over the past 365 days.</help>
+    <help>Provide a value for &apos;N day&apos; rollups, where &apos;N&apos; is the number of days from today into the past.  This value defaults to rollup over the past 365 days.</help>
     <label>Rollup N Day Value</label>
   </fields>
   <fields>

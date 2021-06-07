@@ -178,7 +178,7 @@
     </customLabels>
     <customLabels>
         <name>Opportunity_Rollup_Scheduling_Error_Text</name>
-        <label>You have reached your limit of Scheduled Apex jobs and the Opportunity Rollups won\'t run nightly. If you want this job to run nightly, delete one of your scheduled jobs and reload this page.</label>
+        <label>You have reached your limit of Scheduled Apex jobs and the Opportunity Rollups won\&apos;t run nightly. If you want this job to run nightly, delete one of your scheduled jobs and reload this page.</label>
     </customLabels>
     <customLabels>
         <name>Primary_Donor_Contact_Role</name>

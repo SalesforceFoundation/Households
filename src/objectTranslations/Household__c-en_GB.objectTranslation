@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
   <fields>
     <name>Addressee__c</name>
@@ -36,7 +36,7 @@
   </fields>
   <fields>
     <name>Formula_MailingAddress__c</name>
-    <help>Formula: Concatenation of other Mailing fields for this Household. Can be updated in Household Edit page but does not update Contact unless "Copy Household Address to Contacts" button is pushed.</help>
+    <help>Formula: Concatenation of other Mailing fields for this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed.</help>
     <label>Postal Address</label>
   </fields>
   <fields>
@@ -95,27 +95,27 @@
   </fields>
   <fields>
     <name>MailingCity__c</name>
-    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless "Copy Household Address to Contacts" button is pushed.</help>
+    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed.</help>
     <label>Postal City</label>
   </fields>
   <fields>
     <name>MailingCountry__c</name>
-    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless "Copy Household Address to Contacts" button is pushed.</help>
+    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed.</help>
     <label>Postal Country</label>
   </fields>
   <fields>
     <name>MailingPostalCode__c</name>
-    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless "Copy Household Address to Contacts" button is pushed.</help>
+    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed.</help>
     <label>Zip/Postal Code</label>
   </fields>
   <fields>
     <name>MailingState__c</name>
-    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless "Copy Household Address to Contacts" button is pushed.</help>
+    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed.</help>
     <label>Postal State/Province</label>
   </fields>
   <fields>
     <name>MailingStreet__c</name>
-    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless "Copy Household Address to Contacts" button is pushed.</help>
+    <help>Set by the original Contact which created this Household. Can be updated in Household Edit page but does not update Contact unless &quot;Copy Household Address to Contacts&quot; button is pushed.</help>
     <label>Postal Street</label>
   </fields>
   <fields>
@@ -192,19 +192,7 @@
     <name>SYSTEM_CUSTOM_NAMING__c</name>
     <help>Name, Formal Greeting, or Informal Greeting</help>
     <label>_SYSTEM: CUSTOM NAMING</label>
-    <picklistValues>
-      <masterLabel>Name</masterLabel>
-      <translation>Name</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Formal_Greeting__c</masterLabel>
-      <translation>Formal_Greeting__c</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Informal_Greeting__c</masterLabel>
-      <translation>Informal_Greeting__c</translation>
-    </picklistValues>
-  </fields>
+    </fields>
   <fields>
     <name>SmallestAmount__c</name>
     <help>The smallest amount of a won Opportunity related to this Household by Contact and primary Opportunity Contact Role.</help>

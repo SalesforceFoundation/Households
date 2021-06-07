@@ -1,64 +1,64 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>Field_Action__c</name>
-    <help>Die Rollup-Aktion (MIN, MAX, SUM, COUNT), die im Ausgangsfeld ausgeführt werden soll</help>
-    <label>Feldaktion</label>
-  </fields>
-  <fields>
-    <name>Object_Name__c</name>
-    <help>Das Objekt, dem dieser Benutzer-Rollup zugeordnet ist</help>
-    <label>Objektname</label>
-  </fields>
-  <fields>
-    <name>Source_Field__c</name>
-    <help>Das Ausgangsfeld und die Aktion vom Objekt für diesen Benutzer-Rollup</help>
-    <label>Quellfeld</label>
-  </fields>
-  <fields>
-    <name>Target_Field__c</name>
-    <help>Das Zielfeld für den Wert des Rollups für diesen benutzerdefinierten Rollup</help>
-    <label>Zielfeld</label>
-  </fields>
-  <gender>Feminine</gender>
-  <caseValues>
-    <plural>false</plural>
-    <caseType>Nominative</caseType>
-    <value>Benutzer-Rollup-Feldeinstellung</value>
-  </caseValues>
-  <caseValues>
-    <plural>false</plural>
-    <caseType>Accusative</caseType>
-    <value>Benutzer-Rollup-Feldeinstellung</value>
-  </caseValues>
-  <caseValues>
-    <plural>false</plural>
-    <caseType>Dative</caseType>
-    <value>Benutzer-Rollup-Feldeinstellung</value>
-  </caseValues>
-  <caseValues>
-    <plural>false</plural>
-    <caseType>Genitive</caseType>
-    <value>Benutzer-Rollup-Feldeinstellung</value>
-  </caseValues>
-  <caseValues>
-    <plural>true</plural>
-    <caseType>Nominative</caseType>
-    <value>Benutzer-Rollup-Feldeinstellungen</value>
-  </caseValues>
-  <caseValues>
-    <plural>true</plural>
-    <caseType>Accusative</caseType>
-    <value>Benutzer-Rollup-Feldeinstellungen</value>
-  </caseValues>
-  <caseValues>
-    <plural>true</plural>
-    <caseType>Dative</caseType>
-    <value>Benutzer-Rollup-Feldeinstellungen</value>
-  </caseValues>
-  <caseValues>
-    <plural>true</plural>
-    <caseType>Genitive</caseType>
-    <value>Benutzer-Rollup-Feldeinstellungen</value>
-  </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Benutzer-Rollup-Feldeinstellung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Benutzer-Rollup-Feldeinstellungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Benutzer-Rollup-Feldeinstellung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Benutzer-Rollup-Feldeinstellungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Benutzer-Rollup-Feldeinstellung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Benutzer-Rollup-Feldeinstellungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Benutzer-Rollup-Feldeinstellung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Benutzer-Rollup-Feldeinstellungen</value>
+    </caseValues>
+    <fields>
+        <help>Die Rollup-Aktion (MIN, MAX, SUM, COUNT), die im Ausgangsfeld ausgeführt werden soll</help>
+        <label>Feldaktion</label>
+        <name>Field_Action__c</name>
+    </fields>
+    <fields>
+        <help>Das Objekt, dem dieser Benutzer-Rollup zugeordnet ist</help>
+        <label>Objektname</label>
+        <name>Object_Name__c</name>
+    </fields>
+    <fields>
+        <help>Das Ausgangsfeld und die Aktion vom Objekt für diesen Benutzer-Rollup</help>
+        <label>Quellfeld</label>
+        <name>Source_Field__c</name>
+    </fields>
+    <fields>
+        <help>Das Zielfeld für den Wert des Rollups für diesen benutzerdefinierten Rollup</help>
+        <label>Zielfeld</label>
+        <name>Target_Field__c</name>
+    </fields>
+    <gender>Feminine</gender>
 </CustomObjectTranslation>

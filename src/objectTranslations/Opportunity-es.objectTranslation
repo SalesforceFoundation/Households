@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>CombinedRollupFieldset__c</name>
-    <help>Fórmula: Campos concatenados empleados durante las totalizaciones para localizar la oportunidad más reciente.</help>
-    <label>Conjunto de campos combinados</label>
-  </fields>
-  <fields>
-    <name>systemHouseholdContactRoleProcessor__c</name>
-    <help>Consola si las funciones de contacto de hogar se crean para oportunidades. DESUSADO. Sustituido por configuración personalizada.</help>
-    <label>_SYSTEM: PROCES FUNCIONES CONTACTO HOGAR</label>
-    <picklistValues>
-      <masterLabel>All Opportunities</masterLabel>
-      <translation>Todas las oportunidades</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>No Opportunities</masterLabel>
-      <translation>No hay oportunidades</translation>
-    </picklistValues>
-  </fields>
-</CustomObjectTranslation>
+    <fields>
+        <help>Fórmula: Campos concatenados empleados durante las totalizaciones para localizar la oportunidad más reciente.</help>
+        <label>Conjunto de campos combinados</label>
+        <name>CombinedRollupFieldset__c</name>
+    </fields>
+    <fields>
+        <help>Consola si las funciones de contacto de hogar se crean para oportunidades. DESUSADO. Sustituido por configuración personalizada.</help>
+        <label>_SYSTEM: PROCES FUNCIONES CONTACTO HOGAR</label>
+        <name>systemHouseholdContactRoleProcessor__c</name>
+        <picklistValues>
+            <masterLabel>All Opportunities</masterLabel>
+            <translation>Todas las oportunidades</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Opportunities</masterLabel>
+            <translation>No hay oportunidades</translation>
+        </picklistValues>
+    </fields>
+    </CustomObjectTranslation>

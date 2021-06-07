@@ -56,12 +56,12 @@
   </fields>
   <fields>
     <name>LastMembershipLevel__c</name>
-    <help>Membership level from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account."</help>
+    <help>Membership level from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.&quot;</help>
     <label>Last Membership Level</label>
   </fields>
   <fields>
     <name>LastMembershipOrigin__c</name>
-    <help>Membership "origin" (new, renew...) from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.</help>
+    <help>Membership &quot;origin&quot; (new, renew...) from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.</help>
     <label>Last Membership Origin</label>
   </fields>
   <fields>
@@ -133,19 +133,7 @@
     <name>SYSTEM_CUSTOM_NAMING__c</name>
     <help>For Household Accounts, specifies which name related fields should not be automatically populated by the Householding code.</help>
     <label>_SYSTEM: CUSTOM NAMING</label>
-    <picklistValues>
-      <masterLabel>Name</masterLabel>
-      <translation>Name</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Formal_Greeting__c</masterLabel>
-      <translation>Formal_Greeting__c</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Informal_Greeting__c</masterLabel>
-      <translation>Informal_Greeting__c</translation>
-    </picklistValues>
-  </fields>
+    </fields>
   <fields>
     <name>SmallestAmount__c</name>
     <help>The smallest non-zero amount of a won Opportunity related to this Account.</help>
