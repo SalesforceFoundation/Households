@@ -1,152 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fields>
-    <name>AverageAmount__c</name>
-    <help>Average won Opportunity amount related to this Account.  Updated automatically.</help>
-    <label>Average Gift</label>
-  </fields>
-  <fields>
-    <name>Best_Gift_Year_Total__c</name>
-    <help>The sum of won Opportunity amounts in the Best Gift Year for this Account.</help>
-    <label>Best Gift Year Total</label>
-  </fields>
-  <fields>
-    <name>Best_Gift_Year__c</name>
-    <help>The year in which the largest total amount of won Opportunities related to this Account occurred.  See also Best Gift Year Total.</help>
-    <label>Best Gift Year</label>
-  </fields>
-  <fields>
-    <name>FirstCloseDate__c</name>
-    <help>The earliest won Opportunity (by Close Date) with amount greater than zero related to this Account.</help>
-    <label>First Gift Date</label>
-  </fields>
-  <fields>
-    <name>Formal_Greeting__c</name>
-    <help>For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically.</help>
-    <label>Formal Greeting</label>
-  </fields>
-  <fields>
-    <name>HouseholdPhone__c</name>
-    <label>Household Phone</label>
-  </fields>
-  <fields>
-    <name>Informal_Greeting__c</name>
-    <help>For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically.</help>
-    <label>Informal Greeting</label>
-  </fields>
-  <fields>
-    <name>LargestAmount__c</name>
-    <help>The largest amount of a won Opportunity related to this Account.</help>
-    <label>Largest Gift</label>
-  </fields>
-  <fields>
-    <name>LastCloseDate__c</name>
-    <help>The most recent Close Date of a won Opportunity related to this Account with amount greater than zero.</help>
-    <label>Last Gift Date</label>
-  </fields>
-  <fields>
-    <name>LastMembershipAmount__c</name>
-    <help>The amount of the most recent (by Close Date) won Membership Opportunity (by Record Type) for this Account.</help>
-    <label>Last Membership Amount</label>
-  </fields>
-  <fields>
-    <name>LastMembershipDate__c</name>
-    <help>The most recent Close Date of a won Membership Opportunity (by Record Type) related to this Account.</help>
-    <label>Last Membership Date</label>
-  </fields>
-  <fields>
-    <name>LastMembershipLevel__c</name>
-    <help>Membership level from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.&quot;</help>
-    <label>Last Membership Level</label>
-  </fields>
-  <fields>
-    <name>LastMembershipOrigin__c</name>
-    <help>Membership &quot;origin&quot; (new, renew...) from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.</help>
-    <label>Last Membership Origin</label>
-  </fields>
-  <fields>
-    <name>LastOppAmount__c</name>
-    <help>The amount of the most recent won Opportunity (by Close Date) with amount greater than zero related to this Account.</help>
-    <label>Last Gift Amount</label>
-  </fields>
-  <fields>
-    <name>MembershipEndDate__c</name>
-    <help>Membership end date from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.</help>
-    <label>Membership End Date</label>
-  </fields>
-  <fields>
-    <name>MembershipJoinDate__c</name>
-    <help>Membership start date from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.</help>
-    <label>Membership Join Date</label>
-  </fields>
-  <fields>
-    <name>NumberOfClosedOpps__c</name>
-    <help>The total number of won Opportunities  related to this Account.</help>
-    <label>Total Number of Gifts</label>
-  </fields>
-  <fields>
-    <name>NumberOfMembershipOpps__c</name>
-    <help>The total number of won Membership Opportunities (Record Type) related to this Account.</help>
-    <label>Number of Memberships</label>
-  </fields>
-  <fields>
-    <name>OppAmount2YearsAgo__c</name>
-    <help>The total amount of won Opportunities related to this Account, closed within the year or fiscal year preceding last year (see Household Settings).</help>
-    <label>Total Gifts Two Years Ago</label>
-  </fields>
-  <fields>
-    <name>OppAmountLastNDays__c</name>
-    <help>The total amount of won Opportunities related to this Account, closed in the last number of days defined in Household Settings.</help>
-    <label>Total Gifts Last N Days</label>
-  </fields>
-  <fields>
-    <name>OppAmountLastYear__c</name>
-    <help>The total amount of won Opportunities related to this Account, closed in the current year or fiscal year.</help>
-    <label>Total Gifts Last Year</label>
-  </fields>
-  <fields>
-    <name>OppAmountThisYear__c</name>
-    <help>The total amount of won Opportunities related to this Account, closed in the current year or fiscal year.</help>
-    <label>Total Gifts This Year</label>
-  </fields>
-  <fields>
-    <name>OppsClosed2YearsAgo__c</name>
-    <help>The total number of won Opportunities with amount greater than zero related to this Account, closed within the year or fiscal year preceding last year.</help>
-    <label>Number of Gifts Two Years Ago</label>
-  </fields>
-  <fields>
-    <name>OppsClosedLastNDays__c</name>
-    <help>The total amount of won Opportunities related to this Account, closed in the last number of days defined in Household Settings.</help>
-    <label>Number of Gifts Last N Days</label>
-  </fields>
-  <fields>
-    <name>OppsClosedLastYear__c</name>
-    <help>The total number of won Opportunities with amount greater than zero related to this Account, closed in the previous year or fiscal year (see Household Settings).</help>
-    <label>Number of Gifts Last Year</label>
-  </fields>
-  <fields>
-    <name>OppsClosedThisYear__c</name>
-    <help>The total number of won Opportunities with amount greater than zero related to this Account, closed in the current year or fiscal year (see Household Settings).</help>
-    <label>Number of Gifts This Year</label>
-  </fields>
-  <fields>
-    <name>SYSTEM_CUSTOM_NAMING__c</name>
-    <help>For Household Accounts, specifies which name related fields should not be automatically populated by the Householding code.</help>
-    <label>_SYSTEM: CUSTOM NAMING</label>
+    <fields>
+        <help>Average won Opportunity amount related to this Account.  Updated automatically.</help>
+        <label>Average Gift</label>
+        <name>AverageAmount__c</name>
     </fields>
-  <fields>
-    <name>SmallestAmount__c</name>
-    <help>The smallest non-zero amount of a won Opportunity related to this Account.</help>
-    <label>Smallest Gift</label>
-  </fields>
-  <fields>
-    <name>TotalMembershipOppAmount__c</name>
-    <help>The total amount of won Membership Opportunities (Record Type) related to this Account.</help>
-    <label>Total Membership Amount</label>
-  </fields>
-  <fields>
-    <name>TotalOppAmount__c</name>
-    <help>The sum of amounts of all won Opportunities related to this Account.</help>
-    <label>Total Gifts</label>
-  </fields>
-</CustomObjectTranslation>
+    <fields>
+        <help>The sum of won Opportunity amounts in the Best Gift Year for this Account.</help>
+        <label>Best Gift Year Total</label>
+        <name>Best_Gift_Year_Total__c</name>
+    </fields>
+    <fields>
+        <help>The year in which the largest total amount of won Opportunities related to this Account occurred.  See also Best Gift Year Total.</help>
+        <label>Best Gift Year</label>
+        <name>Best_Gift_Year__c</name>
+    </fields>
+    <fields>
+        <help>The earliest won Opportunity (by Close Date) with amount greater than zero related to this Account.</help>
+        <label>First Gift Date</label>
+        <name>FirstCloseDate__c</name>
+    </fields>
+    <fields>
+        <help>For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically.</help>
+        <label>Formal Greeting</label>
+        <name>Formal_Greeting__c</name>
+    </fields>
+    <fields>
+        <label>Household Phone</label>
+        <name>HouseholdPhone__c</name>
+    </fields>
+    <fields>
+        <help>For Household Accounts, uses fields of non-excluded, ordered related Contacts. Generated automatically.</help>
+        <label>Informal Greeting</label>
+        <name>Informal_Greeting__c</name>
+    </fields>
+    <fields>
+        <help>The largest amount of a won Opportunity related to this Account.</help>
+        <label>Largest Gift</label>
+        <name>LargestAmount__c</name>
+    </fields>
+    <fields>
+        <help>The most recent Close Date of a won Opportunity related to this Account with amount greater than zero.</help>
+        <label>Last Gift Date</label>
+        <name>LastCloseDate__c</name>
+    </fields>
+    <fields>
+        <help>The amount of the most recent (by Close Date) won Membership Opportunity (by Record Type) for this Account.</help>
+        <label>Last Membership Amount</label>
+        <name>LastMembershipAmount__c</name>
+    </fields>
+    <fields>
+        <help>The most recent Close Date of a won Membership Opportunity (by Record Type) related to this Account.</help>
+        <label>Last Membership Date</label>
+        <name>LastMembershipDate__c</name>
+    </fields>
+    <fields>
+        <help>Membership level from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.&quot;</help>
+        <label>Last Membership Level</label>
+        <name>LastMembershipLevel__c</name>
+    </fields>
+    <fields>
+        <help>Membership &quot;origin&quot; (new, renew...) from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.</help>
+        <label>Last Membership Origin</label>
+        <name>LastMembershipOrigin__c</name>
+    </fields>
+    <fields>
+        <help>The amount of the most recent won Opportunity (by Close Date) with amount greater than zero related to this Account.</help>
+        <label>Last Gift Amount</label>
+        <name>LastOppAmount__c</name>
+    </fields>
+    <fields>
+        <help>Membership end date from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.</help>
+        <label>Membership End Date</label>
+        <name>MembershipEndDate__c</name>
+    </fields>
+    <fields>
+        <help>Membership start date from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.</help>
+        <label>Membership Join Date</label>
+        <name>MembershipJoinDate__c</name>
+    </fields>
+    <fields>
+        <help>The total number of won Opportunities  related to this Account.</help>
+        <label>Total Number of Gifts</label>
+        <name>NumberOfClosedOpps__c</name>
+    </fields>
+    <fields>
+        <help>The total number of won Membership Opportunities (Record Type) related to this Account.</help>
+        <label>Number of Memberships</label>
+        <name>NumberOfMembershipOpps__c</name>
+    </fields>
+    <fields>
+        <help>The total amount of won Opportunities related to this Account, closed within the year or fiscal year preceding last year (see Household Settings).</help>
+        <label>Total Gifts Two Years Ago</label>
+        <name>OppAmount2YearsAgo__c</name>
+    </fields>
+    <fields>
+        <help>The total amount of won Opportunities related to this Account, closed in the last number of days defined in Household Settings.</help>
+        <label>Total Gifts Last N Days</label>
+        <name>OppAmountLastNDays__c</name>
+    </fields>
+    <fields>
+        <help>The total amount of won Opportunities related to this Account, closed in the current year or fiscal year.</help>
+        <label>Total Gifts Last Year</label>
+        <name>OppAmountLastYear__c</name>
+    </fields>
+    <fields>
+        <help>The total amount of won Opportunities related to this Account, closed in the current year or fiscal year.</help>
+        <label>Total Gifts This Year</label>
+        <name>OppAmountThisYear__c</name>
+    </fields>
+    <fields>
+        <help>The total number of won Opportunities with amount greater than zero related to this Account, closed within the year or fiscal year preceding last year.</help>
+        <label>Number of Gifts Two Years Ago</label>
+        <name>OppsClosed2YearsAgo__c</name>
+    </fields>
+    <fields>
+        <help>The total amount of won Opportunities related to this Account, closed in the last number of days defined in Household Settings.</help>
+        <label>Number of Gifts Last N Days</label>
+        <name>OppsClosedLastNDays__c</name>
+    </fields>
+    <fields>
+        <help>The total number of won Opportunities with amount greater than zero related to this Account, closed in the previous year or fiscal year (see Household Settings).</help>
+        <label>Number of Gifts Last Year</label>
+        <name>OppsClosedLastYear__c</name>
+    </fields>
+    <fields>
+        <help>The total number of won Opportunities with amount greater than zero related to this Account, closed in the current year or fiscal year (see Household Settings).</help>
+        <label>Number of Gifts This Year</label>
+        <name>OppsClosedThisYear__c</name>
+    </fields>
+    <fields>
+        <help>For Household Accounts, specifies which name related fields should not be automatically populated by the Householding code.</help>
+        <label>_SYSTEM: CUSTOM NAMING</label>
+        <name>SYSTEM_CUSTOM_NAMING__c</name>
+        </fields>
+    <fields>
+        <help>The smallest non-zero amount of a won Opportunity related to this Account.</help>
+        <label>Smallest Gift</label>
+        <name>SmallestAmount__c</name>
+    </fields>
+    <fields>
+        <help>The total amount of won Membership Opportunities (Record Type) related to this Account.</help>
+        <label>Total Membership Amount</label>
+        <name>TotalMembershipOppAmount__c</name>
+    </fields>
+    <fields>
+        <help>The sum of amounts of all won Opportunities related to this Account.</help>
+        <label>Total Gifts</label>
+        <name>TotalOppAmount__c</name>
+    </fields>
+    </CustomObjectTranslation>
