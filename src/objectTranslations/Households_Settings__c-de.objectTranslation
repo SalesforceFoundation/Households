@@ -3,42 +3,42 @@
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>false</plural>
-        <value><!-- Households Settings --></value>
+        <value>Haushalt-Einstellung</value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
-        <value><!-- Households Settings --></value>
+        <value>Haushalt-Einstellungen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
-        <value><!-- Households Settings --></value>
+        <value>Haushalt-Einstellung</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- Households Settings --></value>
+        <value>Haushalt-Einstellungen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
-        <value><!-- Households Settings --></value>
+        <value>Haushalt-Einstellung</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- Households Settings --></value>
+        <value>Haushalt-Einstellungen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
-        <value><!-- Households Settings --></value>
+        <value>Haushalt-Einstellung</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- Households Settings --></value>
+        <value>Haushalt-Einstellungen</value>
     </caseValues>
     <fields>
         <help>Bei Aktivierung werden die Haushalt-Namen sowie informelle und formelle Anreden automatisch bereitgestellt.</help>
@@ -215,5 +215,5 @@
         <label>Geschäftsjahr für Rollups verwenden</label>
         <name>Use_Fiscal_Year_for_Rollups__c</name>
     </fields>
-    <gender><!-- Neuter --></gender>
+    <gender>Feminine</gender>
 </CustomObjectTranslation>

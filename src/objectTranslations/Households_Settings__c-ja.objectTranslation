@@ -2,7 +2,7 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Households Settings --></value>
+        <value>世帯設定</value>
     </caseValues>
     <fields>
         <help>オンの場合、システムによって自動的に世帯名、公式の挨拶、および非公式の挨拶の名前が指定されます。</help>

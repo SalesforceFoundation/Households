@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Households Settings --></value>
+        <value>Configuración de Hogares</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Households Settings --></value>
+        <value>Configuraciones de Hogares</value>
     </caseValues>
     <fields>
         <help>Si se selecciona, el sistema proporcionará automáticamente nombres para el Nombre del hogar, Saludo informal y Saludo formal</help>
@@ -183,5 +183,5 @@
         <label>Usar año fiscal para totalizaciones</label>
         <name>Use_Fiscal_Year_for_Rollups__c</name>
     </fields>
-    <gender><!-- Feminine --></gender>
+    <gender>Feminine</gender>
 </CustomObjectTranslation>

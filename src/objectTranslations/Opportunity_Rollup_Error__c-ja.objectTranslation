@@ -2,7 +2,7 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>廃止-商談積み上げ集計エラー</value>
     </caseValues>
     <fields>
         <help>エラーの日時</help>

@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- Households Settings --></value>
+        <value>Paramètre de foyers</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- Households Settings --></value>
+        <value>Paramètres de foyers</value>
     </caseValues>
     <fields>
         <help>Si coché, le système fournira automatiquement un nom pour les noms de foyers, ainsi que pour les salutations formelles et informelles.</help>
@@ -183,6 +183,6 @@
         <label>Utiliser l’année fiscale pour les cumuls</label>
         <name>Use_Fiscal_Year_for_Rollups__c</name>
     </fields>
-    <gender><!-- Masculine --></gender>
-    <startsWith><!-- Consonant --></startsWith>
+    <gender>Masculine</gender>
+    <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

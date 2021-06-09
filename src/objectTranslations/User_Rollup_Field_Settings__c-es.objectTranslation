@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Configuración de campo de totalización de usuario</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Configuraciones de campos de totalización de usuarios</value>
     </caseValues>
     <fields>
         <help>La acción de totalización (MIN, MAX, SUMA, CUENTA) a realizar en el campo de origen.</help>
@@ -28,5 +28,5 @@
         <label>Campo de destino</label>
         <name>Target_Field__c</name>
     </fields>
-    <gender><!-- Feminine --></gender>
+    <gender>Feminine</gender>
 </CustomObjectTranslation>

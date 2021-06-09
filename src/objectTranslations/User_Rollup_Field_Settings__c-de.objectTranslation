@@ -3,42 +3,42 @@
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellung</value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellungen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellung</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellungen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellung</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellungen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellung</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellungen</value>
     </caseValues>
     <fields>
         <help>Die Rollup-Aktion (MIN, MAX, SUM, COUNT), die im Ausgangsfeld ausgeführt werden soll</help>
@@ -60,5 +60,5 @@
         <label>Zielfeld</label>
         <name>Target_Field__c</name>
     </fields>
-    <gender><!-- Neuter --></gender>
+    <gender>Feminine</gender>
 </CustomObjectTranslation>

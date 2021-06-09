@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>VEROUDERD-Fout bij opportunitytotalisering</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>VEROUDERD-Fouten bij opportunitytotalisering</value>
     </caseValues>
     <fields>
         <help>Datumtijd van de fout</help>
@@ -33,5 +33,5 @@
         <label>Type fout</label>
         <name>Error_Type__c</name>
     </fields>
-    <gender><!-- Neuter --></gender>
+    <gender>Feminine</gender>
 </CustomObjectTranslation>

@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>DESUSADO-Error de totalización de oportunidad</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>DESUSADO-Errores de totalizaciones de oportunidades</value>
     </caseValues>
     <fields>
         <help>Fecha del error</help>
@@ -33,5 +33,5 @@
         <label>Tipo de error</label>
         <name>Error_Type__c</name>
     </fields>
-    <gender><!-- Feminine --></gender>
+    <gender>Masculine</gender>
 </CustomObjectTranslation>
