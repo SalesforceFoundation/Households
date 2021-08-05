@@ -10,6 +10,7 @@ project:
         preproduction: include_beta
     git:
         prefix_release: rel/
+        default_branch: main
 
 tasks:
     cleanup_translation_metadata:
