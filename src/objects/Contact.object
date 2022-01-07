@@ -221,24 +221,26 @@ Household__r.LastCloseDate__c)</formula>
         <externalId>false</externalId>
         <inlineHelpText>Select to exclude this Contact&apos;s name from various generated Household names.</inlineHelpText>
         <label>Naming Exclusions</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Household__c.Name</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Household__c.Formal_Greeting__c</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Household__c.Informal_Greeting__c</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Household__c.Name</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Household__c.Formal_Greeting__c</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Household__c.Informal_Greeting__c</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
@@ -469,24 +471,26 @@ Household__r.OppAmountThisYear__c)</formula>
         <description>Used to set if Households should get created for all Contacts, or just those which are connected to an individual account.  Deprecated; replaced by HouseholdsSettings npo02__Household_Rules__c</description>
         <externalId>false</externalId>
         <label>_SYSTEM: HOUSEHOLD PROCESSOR-DEPRECATED</label>
-        <picklist>
-            <picklistValues>
-                <fullName>All Individual Contacts</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>All New or Edited Contacts</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No Contacts</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>All Individual Contacts</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>All New or Edited Contacts</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No Contacts</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>TotalMembershipOppAmount__c</fullName>

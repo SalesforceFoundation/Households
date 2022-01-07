@@ -3,7 +3,7 @@ project:
     package:
         name: Households
         namespace: npo02
-        api_version: 36.0
+        api_version: 53.0
     dependencies:
         - github: https://github.com/SalesforceFoundation/Contacts_and_Organizations
     dependency_resolutions:
