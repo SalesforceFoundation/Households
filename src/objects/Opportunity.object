@@ -18,20 +18,22 @@
         <externalId>false</externalId>
         <inlineHelpText>Controls if Household contact roles are created for Opportunities.  DEPRECATED.  Replaced by custom settings.</inlineHelpText>
         <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
-        <picklist>
-            <picklistValues>
-                <fullName>All Opportunities</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>No Opportunities</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>All Opportunities</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>No Opportunities</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
 </CustomObject>
