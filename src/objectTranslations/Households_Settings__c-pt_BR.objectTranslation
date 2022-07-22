@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fields>
+    <name>Advanced_Household_Naming__c</name>
+    <help>Se marcado, o sistema fornecerá nomenclatura automática para Nomes de família, Saudações informais e formais.</help>
+    <label>Nomenclatura de família automática</label>
+  </fields>
+  <fields>
+    <name>Always_Rollup_to_Primary_Contact__c</name>
+    <help>Quando marcado, o Salesforce sempre totalizará dados de doador no Contato primário da Oportunidade e o registro ou a Conta de família correspondente, mesmo que a Oportunidade não seja de um indivíduo. Se não marcado, só a organização receberá crédito.</help>
+    <label>Sempre totalizar p/ Função Cont. prim.</label>
+  </fields>
+  <fields>
+    <name>Async_Household_Naming__c</name>
+    <help>Esta é uma configuração não exposta para alternar entre a versão assíncrona e a versão padrão do código de nomenclatura de família.</help>
+    <label>Nomenclatura de família assíncrona</label>
+  </fields>
+  <fields>
+    <name>Batch_Size__c</name>
+    <help>O número de registros a ser processado durante o cálculo das estatísticas do doador. O tamanho padrão é 200. Reduza para um número menor se as totalizações da oportunidade estiverem falhando devido aos limites do sistema.</help>
+    <label>Tamanho de lote de totalização</label>
+  </fields>
+  <fields>
+    <name>DISABLE_HouseholdAfter_trigger__c</name>
+    <help>OBSOLETO. O comportamento do acionador agora controlado na página Configuração de acionador das Configurações do NPSP.</help>
+    <label>OBSOLETO-Disable_HHAfter_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_HouseholdBefore_trigger__c</name>
+    <help>OBSOLETO. O comportamento do acionador agora controlado na página Configuração de acionador das Configurações do NPSP.</help>
+    <label>OBSOLETO-Disable_HHBefore_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_Household_Opportunity_trigger__c</name>
+    <help>OBSOLETO. O comportamento do acionador agora controlado na página Configuração de acionador das Configurações do NPSP.</help>
+    <label>OBSOLETO-Disable_Household_Opp_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_Households_trigger__c</name>
+    <help>OBSOLETO. O comportamento do acionador agora controlado na página Configuração de acionador das Configurações do NPSP.</help>
+    <label>OBSOLETO-Disable_Households_trigger</label>
+  </fields>
+  <fields>
+    <name>DISABLE_OpportunityRollup_trigger__c</name>
+    <help>OBSOLETO. O comportamento do acionador agora controlado na página Configuração de acionador das Configurações do NPSP.</help>
+    <label>OBSOLETO-Disable_OppRollup_trigger</label>
+  </fields>
+  <fields>
+    <name>Enable_Opp_Rollup_Triggers__c</name>
+    <help>OBSOLETO. O comportamento do acionador agora controlado na página Configuração de acionador das Configurações do NPSP.</help>
+    <label>OBSOLETO-Enable_Opp_Rollup_Triggers</label>
+  </fields>
+  <fields>
+    <name>Enable_Soft_Credit_Rollups__c</name>
+    <help>Totaliza as oportunidades F/G para registros Contato com base nas Funções de contato de oport. atribuídas. As totalizações de crédito ind. só ocorrem em lotes noturnos, mas dá para executá-las manualm. nas configurações do Lote de totalização de doações.</help>
+    <label>Ativar totalizações de crédito indireto</label>
+  </fields>
+  <fields>
+    <name>Enable_Update_Check__c</name>
+    <help>OBSOLETO. Novas versões do Pacote de Sucesso para organizações sem fins lucrativos serão instaladas automaticamente.</help>
+    <label>OBSOLETO-Ativar verif. de atualização</label>
+  </fields>
+  <fields>
+    <name>Excluded_Account_Opp_Rectypes__c</name>
+    <help>Nomes de tipos de registro de oport. para excluir das estatísticas na totalização das oportunidades de conta.</help>
+    <label>Tipos reg. op. fora da totaliz. de conta</label>
+  </fields>
+  <fields>
+    <name>Excluded_Account_Opp_Types__c</name>
+    <help>As oportunidades que tiverem esse valor na lista de opções Tipo não serão incluídas nas totalizações da Conta.</help>
+    <label>Tipos oport. fora da totaliz. de conta</label>
+  </fields>
+  <fields>
+    <name>Excluded_Contact_Opp_Rectypes__c</name>
+    <help>As oportunidades com os tipos de registros selecionados não serão incluídas nas totalizações para o Contato. Pressione Control ou Command+clique para selecionar mais de um tipo de registro.</help>
+    <label>Tipos reg. op. fora da totaliz. de cont.</label>
+  </fields>
+  <fields>
+    <name>Excluded_Contact_Opp_Types__c</name>
+    <help>As oportunidades que tiverem esse valor na lista de opções Tipo não serão incluídas nas totalizações do Contato.</help>
+    <label>Tipos oport. fora da totaliz. de contato</label>
+  </fields>
+  <fields>
+    <name>Force_Fiscal_Year__c</name>
+    <help>O NPSP verifica automaticamente a presença de anos fiscais personalizados e desativa as configurações de AF se isso evitar erros. Essa configuração substitui a verificação de segurança de usuários que acidentalmente ativaram anos fiscais personalizados.</help>
+    <label>Forçar Ano fiscal</label>
+  </fields>
+  <fields>
+    <name>Has_Package_Update__c</name>
+    <help>OBSOLETO. Novas versões do Pacote de Sucesso para organizações sem fins lucrativos serão instaladas automaticamente.</help>
+    <label>OBSOLETO-Tem atualização de pacote</label>
+  </fields>
+  <fields>
+    <name>Household_Contact_Roles_On__c</name>
+    <help>Cria automaticamente Funções de contato para membros da família do Contato primário da oportunidade.</help>
+    <label>Funções de contato de família Ativadas</label>
+  </fields>
+  <fields>
+    <name>Household_Creation_Excluded_Recordtypes__c</name>
+    <help>Tipos de registro de contato excluídos da criação da Família. Esta configuração é ignorada se você estiver usando o modelo de Conta de família.</help>
+    <label>Tipos de reg. fora da criação da Família</label>
+  </fields>
+  <fields>
+    <name>Household_Mailing_List_ID__c</name>
+    <help>O ID de relatório do Relatório de lista de correspondência de família usado em listas de correspondência de campanhas de famílias desduplicadas. O relatório deve ser de Campanhas com contatos, em que o Status do membro não contém 'Duplicados'</help>
+    <label>Rel. da lista de corresp. de família</label>
+  </fields>
+  <fields>
+    <name>Household_Member_Contact_Role__c</name>
+    <help>A Função de contato que você deseja usar para os Membros da família.</help>
+    <label>Funções de contato de membro da família</label>
+  </fields>
+  <fields>
+    <name>Household_OCR_Excluded_Recordtypes__c</name>
+    <help>Os Tipos de registro de contato que você deseja excluir da criação automática da Função de contato de membro da família. O Salesforce excluiria esses Contatos de receber a Função de contato de membro da família quando a oportunidade fosse criada.</help>
+    <label>Tipos de registro fora de OCR da família</label>
+  </fields>
+  <fields>
+    <name>Household_Rules__c</name>
+    <help>Especifica quais Contatos terão objetos de família criados automaticamente para eles. Observe que isso só é usado para Contatos que usam o Modelo de conta individual ou um para um. Isso é ignorado para Contatos com o Modelo de conta de família.</help>
+    <label>Regras de objetos de família</label>
+  </fields>
+  <fields>
+    <name>Last_Update_Check__c</name>
+    <help>OBSOLETO. Novas versões do Pacote de Sucesso para organizações sem fins lucrativos serão instaladas automaticamente.</help>
+    <label>OBSOLETO-Verif. de última atualização</label>
+  </fields>
+  <fields>
+    <name>Max_Package_Version__c</name>
+    <help>OBSOLETO. Novas versões do Pacote de Sucesso para organizações sem fins lucrativos serão instaladas automaticamente.</help>
+    <label>OBSOLETO-Versão de pacote máx.</label>
+  </fields>
+  <fields>
+    <name>Membership_Grace_Period__c</name>
+    <help>A duração do período de carência (em dias) após a expiração da associação (última data de término) antes que o Status passe do período de Carência para Vencido. O padrão é de 30 dias.</help>
+    <label>Período de carência de associação</label>
+  </fields>
+  <fields>
+    <name>Membership_Record_Types__c</name>
+    <help>Nomes de tipos de registro de oportunidade, por exemplo, associação, que você deseja totalizar separadamente de outros Tipos de registro de oportunidades.</help>
+    <label>Nomes de tipo de registro de associação</label>
+  </fields>
+  <fields>
+    <name>Opp_Rollup_Scheduled_Job_Id__c</name>
+    <help>ID para o Trabalho de totalização de oportunidade atualmente agendado</help>
+    <label>ID de trab. agendado de totaliz. de op.</label>
+  </fields>
+  <fields>
+    <name>Package_Update_URL__c</name>
+    <help>OBSOLETO. Novas versões do Pacote de Sucesso para organizações sem fins lucrativos serão instaladas automaticamente.</help>
+    <label>OBSOLETO-URL de atualização de pacote</label>
+  </fields>
+  <fields>
+    <name>Rollup_N_Day_Value__c</name>
+    <help>Fornece o valor de totalizações 'N dias', em que 'N' é o número de dias retroagindo a partir de hoje. Esse valor tem como padrão totalizar os últimos 365 dias.</help>
+    <label>Valor de N dias de totalização</label>
+  </fields>
+  <fields>
+    <name>Schedule_Job_Limit__c</name>
+    <help>O número de trabalhos do Apex agendados ativos a se ter em mente ao agendar novos trabalhos.</help>
+    <label>Limite do trabalho de agendamento</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_Roles__c</name>
+    <help>Funções de contato de oportunidade que você deseja incluir nas totalizações de Crédito indireto. Pressione Control ou Command+clique para selecionar várias funções.</help>
+    <label>Funções de crédito indireto</label>
+  </fields>
+  <fields>
+    <name>Update_Check_Interval__c</name>
+    <help>OBSOLETO. Novas versões do Pacote de Sucesso para organizações sem fins lucrativos serão instaladas automaticamente.</help>
+    <label>OBSOLETO-Intervalo de verif. de atualiz.</label>
+  </fields>
+  <fields>
+    <name>Use_Fiscal_Year_for_Rollups__c</name>
+    <help>Marcar esta caixa fará com que os totais de totaliz. da Oport. usem ano fiscal em vez de ano civil. Para definir as infos do Ano fiscal, acesse Configuração-&gt;Perfil da empresa-&gt;Ano fiscal. NOTA: as Config. de ano fiscal personalizadas NÃO são suportadas.</help>
+    <label>Usar Ano fiscal em totalizações</label>
+  </fields>
+  <gender>Feminine</gender>
+  <caseValues>
+    <plural>false</plural>
+    <value>Configuração de famílias</value>
+  </caseValues>
+  <caseValues>
+    <plural>true</plural>
+    <value>Configurações de famílias</value>
+  </caseValues>
+</CustomObjectTranslation>

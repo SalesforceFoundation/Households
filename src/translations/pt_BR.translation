@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <name>Add</name>
+        <label>Adicionar</label>
+    </customLabels>
+    <customLabels>
+        <name>AddAndMerge</name>
+        <label>Adicionar e mesclar famílias</label>
+    </customLabels>
+    <customLabels>
+        <name>AddAndRemove</name>
+        <label>Adicionar e remover da antiga família</label>
+    </customLabels>
+    <customLabels>
+        <name>AddHouseholdMembers</name>
+        <label>Adicionar membros</label>
+    </customLabels>
+    <customLabels>
+        <name>AddressCopyFailure</name>
+        <label>Ocorreu um erro durante a cópia do endereço.</label>
+    </customLabels>
+    <customLabels>
+        <name>AddressCopySuccess</name>
+        <label>Endereço copiado com sucesso.</label>
+    </customLabels>
+    <customLabels>
+        <name>AddressCopyUnknownObject</name>
+        <label>A cópia de endereço não é compatível com este tipo de objeto.</label>
+    </customLabels>
+    <customLabels>
+        <name>AddressToAllMembers</name>
+        <label>Coloque o endereço residencial de todos os membros da família como este endereço.</label>
+    </customLabels>
+    <customLabels>
+        <name>AlreadyInHousehold</name>
+        <label>Já está na Família</label>
+    </customLabels>
+    <customLabels>
+        <name>AutoFormalGreeting</name>
+        <label>Saudação formal automática</label>
+    </customLabels>
+    <customLabels>
+        <name>AutoInformalGreeting</name>
+        <label>Saudação informal automática</label>
+    </customLabels>
+    <customLabels>
+        <name>AutoName</name>
+        <label>Nome automático</label>
+    </customLabels>
+    <customLabels>
+        <name>Change</name>
+        <label>Mudar</label>
+    </customLabels>
+    <customLabels>
+        <name>ChangeAddress</name>
+        <label>Alterar endereço</label>
+    </customLabels>
+    <customLabels>
+        <name>ChangesNotSaved</name>
+        <label>As mudanças não foram salvas.</label>
+    </customLabels>
+    <customLabels>
+        <name>ContactAlreadyInHousehold</name>
+        <label>já está em uma família. Gostaria de adicionar esse contato com ou sem seus membros da família existentes?</label>
+    </customLabels>
+    <customLabels>
+        <name>ContactLastNameRqd</name>
+        <label>O sobrenome é obrigatório.</label>
+    </customLabels>
+    <customLabels>
+        <name>ContactNameRqd</name>
+        <label>Insira um nome e sobrenome.</label>
+    </customLabels>
+    <customLabels>
+        <name>CreatedOnSave</name>
+        <label>O contato será criado quando a Família for salva.</label>
+    </customLabels>
+    <customLabels>
+        <name>DefaultHouseholdName</name>
+        <label>Família</label>
+    </customLabels>
+    <customLabels>
+        <name>DefaultHouseholdTransactionCurrency</name>
+        <label>$</label>
+    </customLabels>
+    <customLabels>
+        <name>Delete</name>
+        <label>Excluir</label>
+    </customLabels>
+    <customLabels>
+        <name>EnterNewAddress</name>
+        <label>Inserir novo endereço</label>
+    </customLabels>
+    <customLabels>
+        <name>ExcludeText</name>
+        <label>Excluir o contato da Nomenclatura de família automática:</label>
+    </customLabels>
+    <customLabels>
+        <name>ExistingHousehold</name>
+        <label>Família existente</label>
+    </customLabels>
+    <customLabels>
+        <name>FindContactByName</name>
+        <label>Encontrar contato pelo nome...</label>
+    </customLabels>
+    <customLabels>
+        <name>HouseholdAddress</name>
+        <label>Endereço da família</label>
+    </customLabels>
+    <customLabels>
+        <name>HouseholdAnonymousGreeting</name>
+        <label>Senhor ou Senhora</label>
+    </customLabels>
+    <customLabels>
+        <name>HouseholdAnonymousName</name>
+        <label>Anônimo</label>
+    </customLabels>
+    <customLabels>
+        <name>HouseholdDetails</name>
+        <label>Detalhes da família</label>
+    </customLabels>
+    <customLabels>
+        <name>HouseholdMembers</name>
+        <label>Membros da família</label>
+    </customLabels>
+    <customLabels>
+        <name>HouseholdNameConnector</name>
+        <label>e</label>
+    </customLabels>
+    <customLabels>
+        <name>HouseholdNameOverrun</name>
+        <label>Amigos</label>
+    </customLabels>
+    <customLabels>
+        <name>Household_Contact_Role_Processor_Off</name>
+        <label>Sem oportunidades</label>
+    </customLabels>
+    <customLabels>
+        <name>Household_Contact_Role_Processor_On</name>
+        <label>Todas as oportunidades</label>
+    </customLabels>
+    <customLabels>
+        <name>Household_Contact_Roles_Help_Text</name>
+        <label>Essas configurações permitem que você crie automaticamente Funções de contato de oportunidade para Membros da família sempre que uma Oportunidade é criada.</label>
+    </customLabels>
+    <customLabels>
+        <name>Household_Member_Contact_Role</name>
+        <label>Membro da família</label>
+    </customLabels>
+    <customLabels>
+        <name>Household_Rules_Help_Text</name>
+        <label>OBSOLETO. Não usado. Selecione quais Contatos recebem Famílias: Todos, apenas aqueles relacionados a uma conta individual ou nenhum.</label>
+    </customLabels>
+    <customLabels>
+        <name>ManageHousehold</name>
+        <label>Gerenciar família</label>
+    </customLabels>
+    <customLabels>
+        <name>NameReplacementText</name>
+        <label>SUBSTITUIR</label>
+    </customLabels>
+    <customLabels>
+        <name>NewContact</name>
+        <label>Novo contato</label>
+    </customLabels>
+    <customLabels>
+        <name>NoContacts</name>
+        <label>No momento, não há contatos nesta família.</label>
+    </customLabels>
+    <customLabels>
+        <name>Opportunity_Error_Help_Text</name>
+        <label>Erros de totalização podem ocorrer durante totalizações noturnas ou manuais e podem afetar a precisão de seus dados. Abaixo estão os erros, o tipo de erro e um link para o registro em que ocorreu o erro. Esses erros são redefinidos sempre que o trabalho agendado noturno ou as totalizações manuais são executados. É altamente recomendável que esses erros sejam resolvidos imediatamente para garantir a precisão de seus dados.</label>
+    </customLabels>
+    <customLabels>
+        <name>Opportunity_Rollup_Future_Call_Limit</name>
+        <label>Não totalizou porque havia poucas chamadas futuras disponíveis.</label>
+    </customLabels>
+    <customLabels>
+        <name>Opportunity_Rollup_Scheduling_Error_Text</name>
+        <label>Você atingiu o limite de trabalhos do Apex agendados e as Totalizações de oportunidade não serão executadas à noite. Se você quiser que este trabalho seja executado à noite, exclua um de seus trabalhos agendados e recarregue esta página.</label>
+    </customLabels>
+    <customLabels>
+        <name>Primary_Donor_Contact_Role</name>
+        <label>Doador</label>
+    </customLabels>
+    <customLabels>
+        <name>RollupErrorMessage</name>
+        <label>Erros ocorreram na última vez em que suas Oportunidades foram totalizadas. Consulte o painel do Log de erros do sistema para obter mais informações.</label>
+    </customLabels>
+    <customLabels>
+        <name>SelectExistingAddress</name>
+        <label>Selecionar um endereço existente</label>
+    </customLabels>
+    <customLabels>
+        <name>SetAddress</name>
+        <label>Definir endereço</label>
+    </customLabels>
+    <customLabels>
+        <name>UDRDescription</name>
+        <label>Essas configurações permitem criar e gerenciar totalizações definidas pelo usuário de uma Oportunidade (Doação) para um Contato, Conta ou Família. Depois de criar uma Totalização definida pelo usuário, você poderá querer usar o Lote de totalização de doações nas Configurações do NPSP | Processos de dados em massa para recalcular todas as totalizações em sua instância e garantir que seu novo campo de totalização seja corretamente preenchido. 
+ 
+AVISO: tenha em mente que as totalizações mudam a forma como seu Pacote de Sucesso para organizações sem fins lucrativos se comporta. As configurações definidas incorretamente podem fazer com que as totalizações falhem. Teste minuciosamente as totalizações definidas pelo usuário antes de implantar na produção.</label>
+    </customLabels>
+    <reportTypes>
+        <name>Households_and_Donations</name>
+        <label>Famílias e doações</label>
+        <sections>
+            <label>Famílias</label>
+            <name>Households</name>
+        </sections>
+        <sections>
+            <label>Membros da família</label>
+            <name>Household Members</name>
+        </sections>
+        <sections>
+            <label>Oportunidades</label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <customTabs>
+        <name>Households_Settings</name>
+        <label>Configurações de famílias</label>
+    </customTabs>
+    <customTabs>
+        <name>Opportunity_Rollups</name>
+        <label>Totalizações de oportunidade</label>
+    </customTabs>
+    <customTabs>
+        <name>User_Rollups</name>
+        <label>Totalizações do usuário</label>
+    </customTabs>
+</Translations>
