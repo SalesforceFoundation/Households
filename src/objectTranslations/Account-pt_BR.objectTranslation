@@ -133,19 +133,7 @@
     <name>SYSTEM_CUSTOM_NAMING__c</name>
     <help>Para Contas da família, especifica quais campos relacionados a nomes não devem ser preenchidos automaticamente com o código da família.</help>
     <label>_SYSTEM: CUSTOM NAMING</label>
-    <picklistValues>
-      <masterLabel>Name</masterLabel>
-      <translation>Nome</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Formal_Greeting__c</masterLabel>
-      <translation>Formal_Greeting__c</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Informal_Greeting__c</masterLabel>
-      <translation>Informal_Greeting__c</translation>
-    </picklistValues>
-  </fields>
+    </fields>
   <fields>
     <name>SmallestAmount__c</name>
     <help>O menor valor, diferente de zero, de uma oportunidade ganha relacionado a esta Conta.</help>

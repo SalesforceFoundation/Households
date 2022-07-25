@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
   <fields>
     <name>Advanced_Household_Naming__c</name>
@@ -102,7 +102,7 @@
   </fields>
   <fields>
     <name>Household_Mailing_List_ID__c</name>
-    <help>O ID de relatório do Relatório de lista de correspondência de família usado em listas de correspondência de campanhas de famílias desduplicadas. O relatório deve ser de Campanhas com contatos, em que o Status do membro não contém 'Duplicados'</help>
+    <help>O ID de relatório do Relatório de lista de correspondência de família usado em listas de correspondência de campanhas de famílias desduplicadas. O relatório deve ser de Campanhas com contatos, em que o Status do membro não contém &apos;Duplicados&apos;</help>
     <label>Rel. da lista de corresp. de família</label>
   </fields>
   <fields>
@@ -152,7 +152,7 @@
   </fields>
   <fields>
     <name>Rollup_N_Day_Value__c</name>
-    <help>Fornece o valor de totalizações 'N dias', em que 'N' é o número de dias retroagindo a partir de hoje. Esse valor tem como padrão totalizar os últimos 365 dias.</help>
+    <help>Fornece o valor de totalizações &apos;N dias&apos;, em que &apos;N&apos; é o número de dias retroagindo a partir de hoje. Esse valor tem como padrão totalizar os últimos 365 dias.</help>
     <label>Valor de N dias de totalização</label>
   </fields>
   <fields>

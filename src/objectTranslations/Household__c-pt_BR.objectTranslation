@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
   <fieldSets>
     <label>Manage_Household_Custom</label>
@@ -40,7 +40,7 @@
   </fields>
   <fields>
     <name>Formula_MailingAddress__c</name>
-    <help>Fórmula: concatenação de outros campos de correspondência para esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão "Copiar endereço de família para contatos" seja pressionado.</help>
+    <help>Fórmula: concatenação de outros campos de correspondência para esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão &quot;Copiar endereço de família para contatos&quot; seja pressionado.</help>
     <label>Endereço para correspondência</label>
   </fields>
   <fields>
@@ -99,27 +99,27 @@
   </fields>
   <fields>
     <name>MailingCity__c</name>
-    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão "Copiar endereço de família para contatos" seja pressionado.</help>
+    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão &quot;Copiar endereço de família para contatos&quot; seja pressionado.</help>
     <label>Cidade de correspondência</label>
   </fields>
   <fields>
     <name>MailingCountry__c</name>
-    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão "Copiar endereço de família para contatos" seja pressionado.</help>
+    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão &quot;Copiar endereço de família para contatos&quot; seja pressionado.</help>
     <label>País de correspondência</label>
   </fields>
   <fields>
     <name>MailingPostalCode__c</name>
-    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão "Copiar endereço de família para contatos" seja pressionado.</help>
+    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão &quot;Copiar endereço de família para contatos&quot; seja pressionado.</help>
     <label>CEP de correspondência</label>
   </fields>
   <fields>
     <name>MailingState__c</name>
-    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão "Copiar endereço de família para contatos" seja pressionado.</help>
+    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão &quot;Copiar endereço de família para contatos&quot; seja pressionado.</help>
     <label>Estado de correspondência</label>
   </fields>
   <fields>
     <name>MailingStreet__c</name>
-    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão "Copiar endereço de família para contatos" seja pressionado.</help>
+    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão &quot;Copiar endereço de família para contatos&quot; seja pressionado.</help>
     <label>Rua de correspondência</label>
   </fields>
   <fields>
@@ -196,19 +196,7 @@
     <name>SYSTEM_CUSTOM_NAMING__c</name>
     <help>Nome, Saudação formal ou Saudação informal</help>
     <label>_SYSTEM: CUSTOM NAMING</label>
-    <picklistValues>
-      <masterLabel>Name</masterLabel>
-      <translation>Nome</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Formal_Greeting__c</masterLabel>
-      <translation>Formal_Greeting__c</translation>
-    </picklistValues>
-    <picklistValues>
-      <masterLabel>Informal_Greeting__c</masterLabel>
-      <translation>Informal_Greeting__c</translation>
-    </picklistValues>
-  </fields>
+    </fields>
   <fields>
     <name>SmallestAmount__c</name>
     <help>O menor valor de uma oportunidade ganha relacionado a esta Família por Contato e Função de contato de oportunidade primária.</help>
