@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fields>
+    <name>AverageAmount__c</name>
+    <help>O valor médio de todas as oportunidades ganhas relacionado a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Doação média</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year_Total__c</name>
+    <help>A soma dos valores de oportunidades ganhas no Melhor ano de doações.</help>
+    <label>Total do melhor ano de doações</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year__c</name>
+    <help>O ano do maior valor total de Oportunidades ganhas relacionadas a este Contato por Função de contato de oportunidade primária. Veja também o Total do melhor ano de doações.</help>
+    <label>Melhor ano de doações</label>
+  </fields>
+  <fields>
+    <name>FirstCloseDate__c</name>
+    <help>A data de fechamento mais antiga de uma oportunidade ganha com valor superior a zero relacionada a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Data da primeira doação</label>
+  </fields>
+  <fields>
+    <name>Formula_HouseholdMailingAddress__c</name>
+    <help>Fórmula: clonar o endereço de correspondência de família (também uma Fórmula)</help>
+    <label>Endereço de correspondência da família</label>
+  </fields>
+  <fields>
+    <name>Formula_HouseholdPhone__c</name>
+    <help>Fórmula: fórmula simples do campo Telefone da família.</help>
+    <label>Telefone da família</label>
+  </fields>
+  <fields>
+    <name>Household_Naming_Order__c</name>
+    <help>Determina a ordem em que os nomes de contato são usados para gerar o nome da família.</help>
+    <label>Ordem de nomenclatura de família</label>
+  </fields>
+  <fields>
+    <name>Household__c</name>
+    <relationshipLabel>Membros da família</relationshipLabel>
+    <label>Família</label>
+  </fields>
+  <fields>
+    <name>LargestAmount__c</name>
+    <help>O maior valor de uma oportunidade ganha relacionado a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Maior doação</label>
+  </fields>
+  <fields>
+    <name>LastCloseDateHH__c</name>
+    <label>Data da última doação da família</label>
+  </fields>
+  <fields>
+    <name>LastCloseDate__c</name>
+    <help>A data de fechamento da oportunidade ganha mais recente relacionada a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Data da última doação</label>
+  </fields>
+  <fields>
+    <name>LastMembershipAmount__c</name>
+    <help>O valor da oportunidade de associação (tipo de registro) mais recente (por data de fechamento) ganha relacionada a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Último valor de associação</label>
+  </fields>
+  <fields>
+    <name>LastMembershipDate__c</name>
+    <help>A data de fechamento da oportunidade de associação (tipo de registro) mais recente ganha relacionada a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Última data de associação</label>
+  </fields>
+  <fields>
+    <name>LastMembershipLevel__c</name>
+    <help>O nível da oportunidade de associação (tipo de registro) mais recente (por data de fechamento) ganha relacionada a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Último nível de associação</label>
+  </fields>
+  <fields>
+    <name>LastMembershipOrigin__c</name>
+    <help>A origem (nova, renovação, reaquisição...) da oportunidade de associação (tipo de registro) mais recente (por data de fechamento) ganha relacionada a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Origem da última associação</label>
+  </fields>
+  <fields>
+    <name>LastOppAmount__c</name>
+    <help>O valor da oportunidade ganha mais recente relacionada a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Valor da última doação</label>
+  </fields>
+  <fields>
+    <name>MembershipEndDate__c</name>
+    <help>A data de término de associação da oportunidade de associação (tipo de registro) mais recente (data de fechamento) relacionada a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Data de término da associação</label>
+  </fields>
+  <fields>
+    <name>MembershipJoinDate__c</name>
+    <help>A data de início da oportunidade de associação (tipo de registro) mais antiga (data de fechamento) relacionada a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Data de início da associação</label>
+  </fields>
+  <fields>
+    <name>Naming_Exclusions__c</name>
+    <help>Selecione para excluir o nome deste Contato de vários nomes de família gerados.</help>
+    <label>Exclusões de nomenclatura</label>
+    <picklistValues>
+      <masterLabel>Household__c.Name</masterLabel>
+      <translation>Household__c.Name</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Household__c.Formal_Greeting__c</masterLabel>
+      <translation>Household__c.Formal_Greeting__c</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>Household__c.Informal_Greeting__c</masterLabel>
+      <translation>Household__c.Informal_Greeting__c</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>NumberOfClosedOpps__c</name>
+    <help>O número total de oportunidades ganhas com valor superior a zero relacionada a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Número total de doações</label>
+  </fields>
+  <fields>
+    <name>NumberOfMembershipOpps__c</name>
+    <help>O número de Oportunidades de associação (tipo de registro) ganhas relacionado a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Número de associações</label>
+  </fields>
+  <fields>
+    <name>OppAmount2YearsAgo__c</name>
+    <help>O valor total de Oportunidades ganhas relacionadas a este Contato por Função de contato de oportunidade primária fechadas há dois anos.</help>
+    <label>Total de doações há dois anos</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastNDays__c</name>
+    <help>O valor total de Oportunidades ganhas relacionadas a este Contato por Função de contato de oportunidade primária fechadas no período retroativo de dias definido nas Configurações da família.</help>
+    <label>Total de doações nos últimos N dias</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastYearHH__c</name>
+    <help>Fórmula: total de Doações no ano passado na família relacionada.</help>
+    <label>Total de doações da família ano passado</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastYear__c</name>
+    <help>O valor total de Oportunidades ganhas relacionadas a este Contato por Função de contato de oportunidade primária fechadas ano passado.</help>
+    <label>Total de doações no ano passado</label>
+  </fields>
+  <fields>
+    <name>OppAmountThisYearHH__c</name>
+    <help>Fórmula: total de Doações este ano na família relacionada.</help>
+    <label>Total de doações da família este ano</label>
+  </fields>
+  <fields>
+    <name>OppAmountThisYear__c</name>
+    <help>O valor total de Oportunidades ganhas relacionadas a este Contato por Função de contato de oportunidade primária fechadas este ano.</help>
+    <label>Total de doações este ano</label>
+  </fields>
+  <fields>
+    <name>OppsClosed2YearsAgo__c</name>
+    <help>O número total de oportunidades ganhas com valor superior a zero relacionadas a este Contato por Função de contato de oportunidade primária fechadas há dois anos.</help>
+    <label>Número de doações há dois anos</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastNDays__c</name>
+    <help>O número total de Oportunidades ganhas com valor superior a zero relacionadas a este Contato por Função de contato de oportunidade primária fechadas no período retroativo de dias definido nas Configurações da família.</help>
+    <label>Número de doações nos últimos N dias</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastYear__c</name>
+    <help>O número total de oportunidades ganhas com valor superior a zero relacionadas a este Contato por Função de contato de oportunidade primária fechadas ano passado.</help>
+    <label>Número de doações no ano passado</label>
+  </fields>
+  <fields>
+    <name>OppsClosedThisYear__c</name>
+    <help>O número total de oportunidades ganhas com valor superior a zero relacionadas a este Contato por Função de contato de oportunidade primária fechadas este ano.</help>
+    <label>Número de doações este ano</label>
+  </fields>
+  <fields>
+    <name>SmallestAmount__c</name>
+    <help>O menor valor de uma oportunidade ganha relacionado a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Menor doação</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_Last_Year__c</name>
+    <help>A soma dos valores de Oportunidade de crédito indireto no ano passado determinada pela Função de contato de oportunidade e filtrada por Funções nas Configurações da família.</help>
+    <label>Crédito indireto no ano passado</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_This_Year__c</name>
+    <help>Valor total do crédito indireto este ano</help>
+    <label>Crédito indireto este ano</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_Total__c</name>
+    <help>Valor total de crédito indireto para a vida deste Contato. Definido na guia Configurações da família.</help>
+    <label>Total de crédito indireto</label>
+  </fields>
+  <fields>
+    <name>Soft_Credit_Two_Years_Ago__c</name>
+    <help>A soma dos valores de Oportunidade de crédito indireto há dois anos determinada pela Função de contato de oportunidade e filtrada por Funções nas Configurações da família.</help>
+    <label>Crédito indireto há dois anos</label>
+  </fields>
+  <fields>
+    <name>SystemHouseholdProcessor__c</name>
+    <label>_SYSTEM: HOUSEHOLD PROCESSOR-DEPRECATED</label>
+    <picklistValues>
+      <masterLabel>All Individual Contacts</masterLabel>
+      <translation>Todos os contatos individuais</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>All New or Edited Contacts</masterLabel>
+      <translation>Todos os contatos novos ou editados</translation>
+    </picklistValues>
+    <picklistValues>
+      <masterLabel>No Contacts</masterLabel>
+      <translation>Nenhum contato</translation>
+    </picklistValues>
+  </fields>
+  <fields>
+    <name>TotalMembershipOppAmount__c</name>
+    <help>O valor total de Oportunidades de associação (tipo de registro) relacionado a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Valor total da associação</label>
+  </fields>
+  <fields>
+    <name>TotalOppAmount__c</name>
+    <help>A soma dos Valores de oportunidade relacionados a este Contato por Função de contato de oportunidade primária.</help>
+    <label>Total de doações</label>
+  </fields>
+  <fields>
+    <name>Total_Household_Gifts__c</name>
+    <help>Fórmula: total de Doações na Família relacionada.</help>
+    <label>Total de Doações da família</label>
+  </fields>
+  <webLinks>
+    <name>Copy_Address_to_Household</name>
+    <label>Copiar Endereço para Família</label>
+  </webLinks>
+  <webLinks>
+    <name>Household</name>
+    <label>Família</label>
+  </webLinks>
+</CustomObjectTranslation>

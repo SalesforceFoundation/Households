@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fieldSets>
+    <label>Manage_Household_Custom</label>
+    <name>Manage_Household_Custom</name>
+  </fieldSets>
+  <fields>
+    <name>Addressee__c</name>
+    <label>Destinatário</label>
+  </fields>
+  <fields>
+    <name>Always_Anonymous__c</name>
+    <help>Usado para definir o nome da Família e outros campos com informações anônimas.</help>
+    <label>Sempre anônimo</label>
+  </fields>
+  <fields>
+    <name>AverageAmount__c</name>
+    <help>Quantidade média de Oportunidades ganhas relacionadas a esta Família por um Contato relacionado com Função de contato de oportunidade primária.</help>
+    <label>Doação média</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year_Total__c</name>
+    <help>A soma dos valores de oportunidade ganhos no Melhor ano de doação para esta Família pelos Contatos com Função de contato de oportunidade primária. Veja também o Melhor ano de doações.</help>
+    <label>Total do melhor ano de doações</label>
+  </fields>
+  <fields>
+    <name>Best_Gift_Year__c</name>
+    <help>O ano em que ocorreu o maior valor total de Oportunidades ganhas relacionadas a esta Família via Contatos com a Função de contato de oportunidade primária. Veja também o Total do melhor ano de doações.</help>
+    <label>Melhor ano de doações</label>
+  </fields>
+  <fields>
+    <name>FirstCloseDate__c</name>
+    <help>A data de fechamento mais antiga de uma Oportunidade ganha relacionada a esta Família por meio de Contatos com a Função de contato primária.</help>
+    <label>Data da primeira doação</label>
+  </fields>
+  <fields>
+    <name>Formal_Greeting__c</name>
+    <help>Utiliza campos de Contatos não excluídos e ordenados. Gerado automaticamente.</help>
+    <label>Saudação formal</label>
+  </fields>
+  <fields>
+    <name>Formula_MailingAddress__c</name>
+    <help>Fórmula: concatenação de outros campos de correspondência para esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão &quot;Copiar endereço de família para contatos&quot; seja pressionado.</help>
+    <label>Endereço para correspondência</label>
+  </fields>
+  <fields>
+    <name>HouseholdEmail__c</name>
+    <help>Definido pelo Contato original que criou esta Família. Pode ser editado em Família, mas não atualiza Contato.</help>
+    <label>Email da família</label>
+  </fields>
+  <fields>
+    <name>HouseholdPhone__c</name>
+    <help>Definido pelo Contato original que criou esta Família. Pode ser editado em Família, mas não atualiza Contato.</help>
+    <label>Telefone da família</label>
+  </fields>
+  <fields>
+    <name>Household_ID__c</name>
+    <label>ID da família</label>
+  </fields>
+  <fields>
+    <name>Informal_Greeting__c</name>
+    <help>Utiliza campos de Contatos não excluídos e ordenados. Gerado automaticamente.</help>
+    <label>Saudação informal</label>
+  </fields>
+  <fields>
+    <name>LargestAmount__c</name>
+    <help>O maior valor de oportunidade ganho para esta Família por meio de Contatos relacionados com a Função de contato de oportunidade primária.</help>
+    <label>Maior doação</label>
+  </fields>
+  <fields>
+    <name>LastCloseDate__c</name>
+    <help>A data de fechamento mais recente de uma Oportunidade ganha para esta Família por meio de Contatos relacionados com a Função de contato primária.</help>
+    <label>Data da última doação</label>
+  </fields>
+  <fields>
+    <name>LastMembershipAmount__c</name>
+    <help>O valor mais recente de Oportunidade de associação (Tipo de registro) ganho para esta Família por meio de Contatos relacionados com a Função de contato de oportunidade primária.</help>
+    <label>Último valor de associação</label>
+  </fields>
+  <fields>
+    <name>LastMembershipDate__c</name>
+    <help>A data de fechamento mais recente de uma Oportunidade de associação ganha para esta Família por meio de Contatos relacionados com a Função de contato de oportunidade primária.</help>
+    <label>Última data de associação</label>
+  </fields>
+  <fields>
+    <name>LastMembershipLevel__c</name>
+    <help>O nível de associação da Oportunidade de associação ganha mais recente desta Família por meio de Contatos relacionados com a Função de contato de oportunidade primária.</help>
+    <label>Último nível de associação</label>
+  </fields>
+  <fields>
+    <name>LastMembershipOrigin__c</name>
+    <help>A origem (nova, renovação) da Oportunidade de associação ganha mais recente desta Família por meio de Contatos relacionados com a Função de contato de oportunidade primária.</help>
+    <label>Origem da última associação</label>
+  </fields>
+  <fields>
+    <name>LastOppAmount__c</name>
+    <help>O valor mais recente de oportunidade ganho para esta Família por meio de Contatos relacionados com a Função de contato de oportunidade primária.</help>
+    <label>Valor da última doação</label>
+  </fields>
+  <fields>
+    <name>MailingCity__c</name>
+    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão &quot;Copiar endereço de família para contatos&quot; seja pressionado.</help>
+    <label>Cidade de correspondência</label>
+  </fields>
+  <fields>
+    <name>MailingCountry__c</name>
+    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão &quot;Copiar endereço de família para contatos&quot; seja pressionado.</help>
+    <label>País de correspondência</label>
+  </fields>
+  <fields>
+    <name>MailingPostalCode__c</name>
+    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão &quot;Copiar endereço de família para contatos&quot; seja pressionado.</help>
+    <label>CEP de correspondência</label>
+  </fields>
+  <fields>
+    <name>MailingState__c</name>
+    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão &quot;Copiar endereço de família para contatos&quot; seja pressionado.</help>
+    <label>Estado de correspondência</label>
+  </fields>
+  <fields>
+    <name>MailingStreet__c</name>
+    <help>Definido pelo Contato original que criou esta Família. Pode ser atualizado na página de edição da família, mas não atualiza o Contato, a menos que o botão &quot;Copiar endereço de família para contatos&quot; seja pressionado.</help>
+    <label>Rua de correspondência</label>
+  </fields>
+  <fields>
+    <name>MembershipEndDate__c</name>
+    <help>A data de término da Oportunidade de associação ganha mais recente desta Família por meio de Contatos relacionados com a Função de contato de oportunidade primária.</help>
+    <label>Data de término da associação</label>
+  </fields>
+  <fields>
+    <name>MembershipJoinDate__c</name>
+    <help>A data de início mais recente da Oportunidade de associação mais antiga (data de fechamento, tipo de registro) desta Família por meio de Contatos relacionados com a Função de contato de oportunidade primária.</help>
+    <label>Data de início da associação</label>
+  </fields>
+  <fields>
+    <name>Membership_Span__c</name>
+    <help>Fórmula: o número de anos durante os quais esta Família teve um membro.</help>
+    <label>Duração da associação</label>
+  </fields>
+  <fields>
+    <name>Membership_Status__c</name>
+    <help>Fórmula: período de carência, atual ou expirado. Período de carência padrão definido em Configurações da família.</help>
+    <label>Status de associação</label>
+  </fields>
+  <fields>
+    <name>NumberOfClosedOpps__c</name>
+    <help>O número total de doações relacionadas a esta Família por Contato e Função de contato de oportunidade primária.</help>
+    <label>Número total de doações</label>
+  </fields>
+  <fields>
+    <name>NumberOfMembershipOpps__c</name>
+    <help>O valor total de Oportunidades de associação (tipo de registro) relacionado a esta Família por Contato e Função de contato de oportunidade primária.</help>
+    <label>Número de associações</label>
+  </fields>
+  <fields>
+    <name>OppAmount2YearsAgo__c</name>
+    <help>Total de doações há dois anos na Família por Contato e Papel de contato de oportunidade primária.</help>
+    <label>Total de doações há dois anos</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastNDays__c</name>
+    <help>O valor total de Oportunidades ganhas relacionadas a esta família, fechadas na quantidade de dias definida em Configurações da família, relacionadas por Contato e Função de contato de oportunidade primária.</help>
+    <label>Total de doações nos últimos N dias</label>
+  </fields>
+  <fields>
+    <name>OppAmountLastYear__c</name>
+    <help>Total de doações no ano passado na Família por Contato e Papel de contato de oportunidade primária.</help>
+    <label>Total de doações no ano passado</label>
+  </fields>
+  <fields>
+    <name>OppAmountThisYear__c</name>
+    <help>Total de doações este ano na Família por Contato e Papel de contato de oportunidade primária.</help>
+    <label>Total de doações este ano</label>
+  </fields>
+  <fields>
+    <name>OppsClosed2YearsAgo__c</name>
+    <help>O número de Oportunidades ganhas com data de fechamento nos últimos dois anos relacionadas a esta Família por meio de contatos relacionados com Função de contato de oportunidade primária.</help>
+    <label>Número de doações há dois anos</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastNDays__c</name>
+    <help>O número de Oportunidades ganhas com data de fechamento nos últimos N dias (Configurações da família) relacionadas a esta Família por meio de contatos relacionados com Função de contato de oportunidade primária.</help>
+    <label>Número de doações nos últimos N dias</label>
+  </fields>
+  <fields>
+    <name>OppsClosedLastYear__c</name>
+    <help>O número de Oportunidades ganhas com data de fechamento no ano passado relacionadas a esta Família por meio de contatos relacionados com Função de contato de oportunidade primária.</help>
+    <label>Número de doações no ano passado</label>
+  </fields>
+  <fields>
+    <name>OppsClosedThisYear__c</name>
+    <help>O número de Oportunidades ganhas com data de fechamento este ano relacionadas a esta Família por meio de contatos relacionados com Função de contato de oportunidade primária.</help>
+    <label>Número de doações este ano</label>
+  </fields>
+  <fields>
+    <name>SYSTEM_CUSTOM_NAMING__c</name>
+    <help>Nome, Saudação formal ou Saudação informal</help>
+    <label>_SYSTEM: CUSTOM NAMING</label>
+    </fields>
+  <fields>
+    <name>SmallestAmount__c</name>
+    <help>O menor valor de uma oportunidade ganha relacionado a esta Família por Contato e Função de contato de oportunidade primária.</help>
+    <label>Menor doação</label>
+  </fields>
+  <fields>
+    <name>TotalMembershipOppAmount__c</name>
+    <help>O valor total de Oportunidades de associação (tipo de registro) relacionado a esta Família por Contato e Função de contato de oportunidade primária.</help>
+    <label>Valor total da associação</label>
+  </fields>
+  <fields>
+    <name>TotalOppAmount__c</name>
+    <help>A soma dos Valores de oportunidade relacionados a esta Família por Contato e Função de contato de oportunidade primária.</help>
+    <label>Total de doações</label>
+  </fields>
+  <webLinks>
+    <name>Copy_Household_Address_to_Contacts</name>
+    <label>Copiar Endereço de família para Contatos</label>
+  </webLinks>
+  <layouts>
+    <layout>Household Layout</layout>
+    <sections>
+      <label>Informações da família</label>
+      <section>Household Information</section>
+    </sections>
+    <sections>
+      <label>Informações sobre a doação</label>
+      <section>Donation Information</section>
+    </sections>
+    <sections>
+      <label>Doações totais</label>
+      <section>Donation Totals</section>
+    </sections>
+    <sections>
+      <label>Links personalizados</label>
+      <section>Custom Links</section>
+    </sections>
+  </layouts>
+  <nameFieldLabel>Nome da família</nameFieldLabel>
+  <standardFields>
+    <name>Name</name>
+    <label>Nome da família</label>
+  </standardFields>
+  <gender>Feminine</gender>
+  <caseValues>
+    <plural>false</plural>
+    <value>Família</value>
+  </caseValues>
+  <caseValues>
+    <plural>true</plural>
+    <value>Famílias</value>
+  </caseValues>
+</CustomObjectTranslation>
