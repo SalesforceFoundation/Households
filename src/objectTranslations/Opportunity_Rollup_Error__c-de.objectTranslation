@@ -3,42 +3,42 @@
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>false</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>ERSETZT-Fehler für Opportunity-Rollups</value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>ERSETZT-Fehler für Opportunity-Rollups</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>ERSETZT-Fehler für Opportunity-Rollups</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>ERSETZT-Fehler für Opportunity-Rollups</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>ERSETZT-Fehler für Opportunity-Rollups</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>ERSETZT-Fehler für Opportunity-Rollups</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>ERSETZT-Fehler für Opportunity-Rollups</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>ERSETZT-Fehler für Opportunity-Rollups</value>
     </caseValues>
     <fields>
         <help>Datum/Uhrzeit des Fehlers</help>
@@ -65,5 +65,5 @@
         <label>Fehlertyp</label>
         <name>Error_Type__c</name>
     </fields>
-    <gender><!-- Neuter --></gender>
+    <gender>Masculine</gender>
 </CustomObjectTranslation>

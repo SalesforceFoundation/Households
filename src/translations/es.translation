@@ -5,47 +5,47 @@
         <name>Add</name>
     </customLabels>
     <customLabels>
-        <label>Agregar y combinar Familias</label>
+        <label>Agregar y combinar hogares</label>
         <name>AddAndMerge</name>
     </customLabels>
     <customLabels>
-        <label>Agregar y borrar desde antigua Familia</label>
+        <label>Agregar y borrar desde hogar antiguo</label>
         <name>AddAndRemove</name>
     </customLabels>
     <customLabels>
-        <label>Agregar Miembros</label>
+        <label>Agregar miembros</label>
         <name>AddHouseholdMembers</name>
     </customLabels>
     <customLabels>
-        <label>Ocurrió un error mientras se copiaban las direcciones.</label>
+        <label>Ocurrió un error al copiar las direcciones.</label>
         <name>AddressCopyFailure</name>
     </customLabels>
     <customLabels>
-        <label>Dirección copiada exitosamente.</label>
+        <label>Dirección copiada correctamente.</label>
         <name>AddressCopySuccess</name>
     </customLabels>
     <customLabels>
-        <label>El Copiado de Direcciones no está disponible para este tipo de objeto.</label>
+        <label>La copia de direcciones no está disponible para este tipo de objeto.</label>
         <name>AddressCopyUnknownObject</name>
     </customLabels>
     <customLabels>
-        <label>Establecer esta dirección como la Dirección de la familia en todos los miembros de la familia</label>
+        <label>Establece esta dirección como la dirección del hogar en todos los miembros del hogar.</label>
         <name>AddressToAllMembers</name>
     </customLabels>
     <customLabels>
-        <label>Ya está en la Familia.</label>
+        <label>Ya está en el hogar.</label>
         <name>AlreadyInHousehold</name>
     </customLabels>
     <customLabels>
-        <label>Auto Saludo Formal</label>
+        <label>Saludo formal automático</label>
         <name>AutoFormalGreeting</name>
     </customLabels>
     <customLabels>
-        <label>Auto Saludo Informal.</label>
+        <label>Saludo informal automático</label>
         <name>AutoInformalGreeting</name>
     </customLabels>
     <customLabels>
-        <label>Auto Nombre</label>
+        <label>Nombre automático</label>
         <name>AutoName</name>
     </customLabels>
     <customLabels>
@@ -53,31 +53,31 @@
         <name>Change</name>
     </customLabels>
     <customLabels>
-        <label>Cambiar Direcciones</label>
+        <label>Cambiar direcciones</label>
         <name>ChangeAddress</name>
     </customLabels>
     <customLabels>
-        <label>Los cambios no hay sido guardados.</label>
+        <label>Los cambios no fueron guardados.</label>
         <name>ChangesNotSaved</name>
     </customLabels>
     <customLabels>
-        <label>ya está en una Familia. ¿Quiere agregar este contacto con o sin sus miembros de familia existentes?</label>
+        <label>ya está en un hogar. ¿Quiere agregar este contacto con o sin los miembros de su hogar existentes?</label>
         <name>ContactAlreadyInHousehold</name>
     </customLabels>
     <customLabels>
-        <label>Apellido obligatorio.</label>
+        <label>El apellido obligatorio.</label>
         <name>ContactLastNameRqd</name>
     </customLabels>
     <customLabels>
-        <label>Ingrese un Nombre y Apellido.</label>
+        <label>Introduzca el nombre y el apellido.</label>
         <name>ContactNameRqd</name>
     </customLabels>
     <customLabels>
-        <label>El contacto se creará cuando se guarda la Familia</label>
+        <label>El contacto se creará cuando se guarde el hogar.</label>
         <name>CreatedOnSave</name>
     </customLabels>
     <customLabels>
-        <label>Familia</label>
+        <label>Hogar</label>
         <name>DefaultHouseholdName</name>
     </customLabels>
     <customLabels>
@@ -89,15 +89,15 @@
         <name>Delete</name>
     </customLabels>
     <customLabels>
-        <label>Completar una nueva dirección</label>
+        <label>Introduzca una nueva dirección</label>
         <name>EnterNewAddress</name>
     </customLabels>
     <customLabels>
-        <label>Excluir contacto del nombramiento automático de la Familia</label>
+        <label>Excluir contacto de nomenclatura automática de hogares</label>
         <name>ExcludeText</name>
     </customLabels>
     <customLabels>
-        <label>Familia existente</label>
+        <label>Hogar existente</label>
         <name>ExistingHousehold</name>
     </customLabels>
     <customLabels>
@@ -105,7 +105,7 @@
         <name>FindContactByName</name>
     </customLabels>
     <customLabels>
-        <label>Dirección de familia</label>
+        <label>Dirección de hogar</label>
         <name>HouseholdAddress</name>
     </customLabels>
     <customLabels>
@@ -117,11 +117,11 @@
         <name>HouseholdAnonymousName</name>
     </customLabels>
     <customLabels>
-        <label>Detalles de familia</label>
+        <label>Detalles de hogar</label>
         <name>HouseholdDetails</name>
     </customLabels>
     <customLabels>
-        <label>Miembros del Hogar</label>
+        <label>Miembros del hogar</label>
         <name>HouseholdMembers</name>
     </customLabels>
     <customLabels>
@@ -133,7 +133,7 @@
         <name>HouseholdNameOverrun</name>
     </customLabels>
     <customLabels>
-        <label>No oportunidades</label>
+        <label>No hay oportunidades</label>
         <name>Household_Contact_Role_Processor_Off</name>
     </customLabels>
     <customLabels>
@@ -141,19 +141,19 @@
         <name>Household_Contact_Role_Processor_On</name>
     </customLabels>
     <customLabels>
-        <label>Automáticamente crear Función del contacto en oportunidades para los miembros de la familia del donante principal</label>
+        <label>Estos parámetros le permiten crear automáticamente funciones de contacto de oportunidad para los miembros del hogar siempre que se crea una oportunidad.</label>
         <name>Household_Contact_Roles_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>Miembro de familia</label>
+        <label>Miembro de hogar</label>
         <name>Household_Member_Contact_Role</name>
     </customLabels>
     <customLabels>
-        <label><!-- Household Rules Help Text --></label>
+        <label>DESUSADO. No se utiliza. Seleccione qué contactos obtienen hogares: todos, solo aquellos relacionados con una cuenta individual o ninguno.</label>
         <name>Household_Rules_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>Gestionar familia</label>
+        <label>Gestionar hogar</label>
         <name>ManageHousehold</name>
     </customLabels>
     <customLabels>
@@ -165,19 +165,19 @@
         <name>NewContact</name>
     </customLabels>
     <customLabels>
-        <label>Actualmente no hay contactos en esta familia.</label>
+        <label>En estos momentos no hay contactos en este hogar.</label>
         <name>NoContacts</name>
     </customLabels>
     <customLabels>
-        <label>Errores en totales pueden ocurrir durante el trabajo programado nocturno o en cálculos manuales, y pueden afectar la exactitud de los datos. A continuación se enumeran los errores, tipo de error, y un link al registro en el que se produjo el error. Estos errores se actualizan siempre que el trabajo de la noche o los cálculos manuales se ejecutan. Es muy recomendable que estos errores se traten de inmediato para garantizar la exactitud de los datos.</label>
+        <label>Los errores en las totalizaciones pueden ocurrir durante totalizaciones programadas por la noche o en totalizaciones manuales, y pueden afectar la exactitud de los datos. A continuación se enumeran los errores, el tipo de error y un vínculo al registro en el que se produjo el error. Estos errores se restablecen siempre que se ejecuta el trabajo de totalización programado por la noche o manual. Es muy recomendable que estos errores se solucionen de inmediato para garantizar la exactitud de los datos.</label>
         <name>Opportunity_Error_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>No se ejecutó porque había pocas llamadas futuras disponibles</label>
+        <label>No se ejecutó la totalización porque había pocas llamadas futuras disponibles.</label>
         <name>Opportunity_Rollup_Future_Call_Limit</name>
     </customLabels>
     <customLabels>
-        <label>Ha llegado a su límite de trabajo programadas Apex y los totales de oportunidad no se ejecutará por las noches. Si desea que esta tarea se ejecute todas las noches, elimina una de las tareas programadas y recarga esta página.</label>
+        <label>Ha llegado a su límite de trabajos programados de Apex y las totalizaciones de oportunidades no se ejecutarán por la noche. Si desea que este trabajo se ejecute por la noche, elimine uno de sus trabajos programados y vuelva a cargar esta página.</label>
         <name>Opportunity_Rollup_Scheduling_Error_Text</name>
     </customLabels>
     <customLabels>
@@ -185,7 +185,7 @@
         <name>Primary_Donor_Contact_Role</name>
     </customLabels>
     <customLabels>
-        <label>Error/es que ocurrieron la última vez que se calcularon los totales para Oportunidades. Por favor ver el panel System Error Log para más información.</label>
+        <label>Se produjeron errores desde la última vez que se totalizaron sus oportunidades. Vea el panel de registro de errores del sistema para obtener más información.</label>
         <name>RollupErrorMessage</name>
     </customLabels>
     <customLabels>
@@ -193,37 +193,96 @@
         <name>SelectExistingAddress</name>
     </customLabels>
     <customLabels>
-        <label>Definir Dirección</label>
+        <label>Establecer dirección</label>
         <name>SetAddress</name>
     </customLabels>
     <customLabels>
-        <label>Configuración que contrala los totales definidos por el usuario de la Oportunidad/Donación al Contacto, Cuenta o Familia. Cambiar estos cambiará como se comporta el Nonprofit Success Pack. 
+        <label>Estos parámetros le permiten crear y gestionar totalizaciones procedentes de una oportunidad (donación) a un contacto, cuenta u hogar. Después de crear una totalización definida por el usuario, es posible que desee utilizar el Lote totalización de donaciones en Configuración de NPSP | Procesos en lote para volver a calcular todas las totalizaciones de su instancia y garantizar que su nuevo campo de totalización está correctamente cumplimentado.
 
-ADVERTENCIA: Una mala configuración puede causar que los totales fallen. Por favor testear a fondo los totales definidos por el usuario antes de pasarlos a producción.</label>
+ADVERTENCIA: Tenga en cuenta que las totalizaciones cambian el comportamiento de Nonprofit Success Pack. Una mala configuración puede provocar que fallen sus totalizaciones. Pruebe a fondo sus totalizaciones definidas por el usuario antes de implementarlos a producción.</label>
         <name>UDRDescription</name>
     </customLabels>
+    <customPageWebLinks>
+        <label><!-- DEPRECATED: Nonprofit Edition Reports --></label>
+        <name>Nonprofit_Edition_Reports</name>
+    </customPageWebLinks>
     <customTabs>
-        <label>Configuración de Familias</label>
+        <label><!-- Contact Merge (OLD) --></label>
+        <name>Contact_Merge</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Contacts Settings --></label>
+        <name>Contacts_Settings</name>
+    </customTabs>
+    <customTabs>
+        <label>Configuración de hogares</label>
         <name>Households_Settings</name>
     </customTabs>
     <customTabs>
-        <label>Totales en oportunidades</label>
+        <label>Totalizaciones en oportunidades</label>
         <name>Opportunity_Rollups</name>
     </customTabs>
     <customTabs>
-        <label>Totales del usuario</label>
+        <label><!-- Payment Mapping --></label>
+        <name>Payment_Mapping</name>
+    </customTabs>
+    <customTabs>
+        <label>Totalizaciones de usuario</label>
         <name>User_Rollups</name>
     </customTabs>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
     <reportTypes>
-        <description>Familias y Donaciones</description>
-        <label>Familias y Donaciones</label>
+        <label>Hogares y donaciones</label>
         <name>Households_and_Donations</name>
         <sections>
-            <label>Miembros de Familias</label>
+            <label>Miembros de hogar</label>
             <name>Household Members</name>
         </sections>
         <sections>
-            <label>Familias</label>
+            <label>Hogares</label>
             <name>Households</name>
         </sections>
         <sections>
@@ -231,4 +290,4 @@ ADVERTENCIA: Una mala configuración puede causar que los totales fallen. Por fa
             <name>Opportunities</name>
         </sections>
     </reportTypes>
-</Translations>
+    </Translations>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help>Formule: Aaneengeschakelde velden worden gebruikt tijdens rollups om de meest recente Opportunity te lokaliseren.</help>
-        <label>Gecombineerde Rollup Veldset</label>
+        <help>Formule: aaneengevoegde velden die worden gebruikt tijdens totaliseringen om de recentste opportunity te vinden.</help>
+        <label>Veldset voor gecombineerde totalisering</label>
         <name>CombinedRollupFieldset__c</name>
     </fields>
     <fields>
-        <help>Bepaalt of Huishouden Contactpersoon Rollen zijn gemaakt voor Opportunities. VEROUDERD. Vervangen door aangepaste instellingen.</help>
-        <label>_SYSTEM: HUISHOUDEN CONTACT ROLPROCESSOR</label>
+        <help>Bepaalt of contactpersoonsrollen voor Huishouden worden gemaakt voor Opportunities. VEROUDERD. Vervangen door aangepaste instellingen.</help>
+        <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
         <name>systemHouseholdContactRoleProcessor__c</name>
         <picklistValues>
             <masterLabel>All Opportunities</masterLabel>
-            <translation>Alle Opportunities</translation>
+            <translation>Alle opportunities</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>No Opportunities</masterLabel>
-            <translation>Geen Opportunities</translation>
+            <translation>Geen opportunities</translation>
         </picklistValues>
     </fields>
-</CustomObjectTranslation>
+    </CustomObjectTranslation>

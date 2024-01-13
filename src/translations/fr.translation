@@ -21,7 +21,7 @@
         <name>AddressCopyFailure</name>
     </customLabels>
     <customLabels>
-        <label>L’adresse n’a pas été copiée correctement.</label>
+        <label>Adresse copiée avec succès.</label>
         <name>AddressCopySuccess</name>
     </customLabels>
     <customLabels>
@@ -77,7 +77,7 @@
         <name>CreatedOnSave</name>
     </customLabels>
     <customLabels>
-        <label>Household</label>
+        <label>Foyer</label>
         <name>DefaultHouseholdName</name>
     </customLabels>
     <customLabels>
@@ -89,7 +89,7 @@
         <name>Delete</name>
     </customLabels>
     <customLabels>
-        <label>Saisissez une nouvelle adresse</label>
+        <label>Saisir une nouvelle adresse</label>
         <name>EnterNewAddress</name>
     </customLabels>
     <customLabels>
@@ -129,15 +129,15 @@
         <name>HouseholdNameConnector</name>
     </customLabels>
     <customLabels>
-        <label>amis</label>
+        <label>Amis</label>
         <name>HouseholdNameOverrun</name>
     </customLabels>
     <customLabels>
-        <label>No Opportunities</label>
+        <label>Aucune opportunité</label>
         <name>Household_Contact_Role_Processor_Off</name>
     </customLabels>
     <customLabels>
-        <label>All Opportunities</label>
+        <label>Toutes les opportunités</label>
         <name>Household_Contact_Role_Processor_On</name>
     </customLabels>
     <customLabels>
@@ -145,11 +145,11 @@
         <name>Household_Contact_Roles_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>Household Credit</label>
+        <label>Membre du foyer</label>
         <name>Household_Member_Contact_Role</name>
     </customLabels>
     <customLabels>
-        <label><!-- Household Rules Help Text --></label>
+        <label>DÉPRÉCIÉ. Pas utilisé. Sélectionne les contacts correspondant aux foyers : tous, uniquement ceux associés à un compte individuel, ou aucun.</label>
         <name>Household_Rules_Help_Text</name>
     </customLabels>
     <customLabels>
@@ -169,11 +169,11 @@
         <name>NoContacts</name>
     </customLabels>
     <customLabels>
-        <label>Des erreurs de cumul peuvent se produire lors des cumuls nocturnes ou manuels, et peuvent affecter l’exactitude de vos données.  La liste ci-dessous contient les erreurs, les types d’erreur, et un lien vers l’enregistrement sur lequel l’erreur s’est produite. Ces erreurs sont réinitialisées à chaque fois qu’une tâche nocturne planifiée ou un cumul manuel est exécuté.  Il est hautement recommandé de remédier à ces problèmes rapidement pour garantir l’exactitude de vos données.</label>
+        <label>Des erreurs de cumul peuvent se produire lors des cumuls nocturnes ou manuels, et peuvent affecter l’exactitude de vos données. La liste ci-dessous contient les erreurs, les types d’erreur, et un lien vers l’enregistrement sur lequel l’erreur s’est produite. Ces erreurs sont réinitialisées à chaque fois qu’une tâche nocturne planifiée ou un cumul manuel est exécuté. Il est hautement recommandé de remédier à ces problèmes rapidement pour garantir l’exactitude de vos données.</label>
         <name>Opportunity_Error_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>Cumul non effectué car trop d’appels futurs étaient disponibles.</label>
+        <label>Cumul non effectué car trop peu d’appels futurs sont disponibles.</label>
         <name>Opportunity_Rollup_Future_Call_Limit</name>
     </customLabels>
     <customLabels>
@@ -181,15 +181,15 @@
         <name>Opportunity_Rollup_Scheduling_Error_Text</name>
     </customLabels>
     <customLabels>
-        <label>Household Credit</label>
+        <label>Donateur</label>
         <name>Primary_Donor_Contact_Role</name>
     </customLabels>
     <customLabels>
-        <label>Erreur(s) survenue(s) la dernière fois que vos opportunités ont été cumulées. Veuillez consulter le panneau du journal des erreurs systèmes pour plus d’informations.</label>
+        <label>Erreur(s) survenue(s) la dernière fois que vos opportunités ont été cumulées. Veuillez consulter le panneau du journal des erreurs système pour plus d’informations.</label>
         <name>RollupErrorMessage</name>
     </customLabels>
     <customLabels>
-        <label>Sélectionnez une adresse existante</label>
+        <label>Sélectionner une adresse existante</label>
         <name>SelectExistingAddress</name>
     </customLabels>
     <customLabels>
@@ -197,11 +197,23 @@
         <name>SetAddress</name>
     </customLabels>
     <customLabels>
-        <label>Ces paramètres vous permettent de créer et gérer les cumuls définis par utilisateur d’une opportunité (don) à un contact, compte ou foyer.  Après avoir créé un cumul défini par utilisateur, vous pouvez souhaiter utiliser le cumul de dons par lot dans Paramètres NPSP | Processus de données en masse pour recalculer tous les cumuls de votre instance et assurer que votre nouveau champ de cumul est rempli correctement. 
+        <label>Ces paramètres vous permettent de créer et gérer les cumuls définis par utilisateur d’une opportunité (don) à un contact, compte ou foyer. Après avoir créé un cumul défini par utilisateur, vous pouvez souhaiter utiliser le cumul de dons par lot dans Paramètres NPSP | Processus de données en masse pour recalculer tous les cumuls de votre instance et assurer que votre nouveau champ de cumul est rempli correctement. 
  
-AVERTISSEMENT : N’oubliez pas que les cumuls modifient la façon dont votre pack NPSP se comporte. Des paramètres configurés de manière incorrecte peuvent faire échouer vos cumuls. Testez rigoureusement vos cumuls définis par utilisateur avant de les déployer en production.</label>
+AVERTISSEMENT : N’oubliez pas que les cumuls modifient le comportement de votre NPSP. Des paramètres configurés de manière incorrecte peuvent faire échouer vos cumuls. Testez rigoureusement vos cumuls définis par utilisateur avant de les déployer en production.</label>
         <name>UDRDescription</name>
     </customLabels>
+    <customPageWebLinks>
+        <label><!-- DEPRECATED: Nonprofit Edition Reports --></label>
+        <name>Nonprofit_Edition_Reports</name>
+    </customPageWebLinks>
+    <customTabs>
+        <label><!-- Contact Merge (OLD) --></label>
+        <name>Contact_Merge</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Contacts Settings --></label>
+        <name>Contacts_Settings</name>
+    </customTabs>
     <customTabs>
         <label>Paramètres de foyers</label>
         <name>Households_Settings</name>
@@ -211,12 +223,59 @@ AVERTISSEMENT : N’oubliez pas que les cumuls modifient la façon dont votre p
         <name>Opportunity_Rollups</name>
     </customTabs>
     <customTabs>
+        <label><!-- Payment Mapping --></label>
+        <name>Payment_Mapping</name>
+    </customTabs>
+    <customTabs>
         <label>Cumuls d’utilisateur</label>
         <name>User_Rollups</name>
     </customTabs>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
     <reportTypes>
-        <description>Foyers et dons</description>
-        <label>Foyers et Dons</label>
+        <label>Foyers et dons</label>
         <name>Households_and_Donations</name>
         <sections>
             <label>Membres du Foyer</label>
@@ -231,4 +290,4 @@ AVERTISSEMENT : N’oubliez pas que les cumuls modifient la façon dont votre p
             <name>Opportunities</name>
         </sections>
     </reportTypes>
-</Translations>
+    </Translations>

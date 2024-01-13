@@ -1,164 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <help><!-- Average won Opportunity amount related to this Account.  Updated automatically. --></help>
+        <help>Montant moyen de l’opportunité gagnée associée à ce compte. Mis à jour automatiquement.</help>
         <label>Don moyen</label>
         <name>AverageAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The sum of won Opportunity amounts in the Best Gift Year for this Account. --></help>
+        <help>La somme des montants des opportunités gagnées au cours de la meilleure année de don pour ce compte.</help>
         <label>Total de la meilleure année de don</label>
         <name>Best_Gift_Year_Total__c</name>
     </fields>
     <fields>
-        <help><!-- The year in which the largest total amount of won Opportunities related to this Account occurred.  See also Best Gift Year Total. --></help>
+        <help>L’année d’occurrence du montant total le plus élevé des opportunités gagnées associées à ce compte. Voir aussi Total de la meilleure année de don.</help>
         <label>Meilleure année de don</label>
         <name>Best_Gift_Year__c</name>
     </fields>
     <fields>
-        <help><!-- The earliest won Opportunity (by Close Date) with amount greater than zero related to this Account. --></help>
+        <help>L’opportunité gagnée la plus ancienne (par date de fermeture) avec un montant supérieur à zéro associée à ce compte.</help>
         <label>Date du premier don</label>
         <name>FirstCloseDate__c</name>
     </fields>
     <fields>
-        <help>Pour les comptes de foyer, utilise les champs de contacts associés non exclus, ordonnés. Généré automatiquement.</help>
+        <help>Pour les comptes de foyer, utilise les champs de contacts associés non exclus, ordonnés. La salutation est générée automatiquement.</help>
         <label>Salutation formelle</label>
         <name>Formal_Greeting__c</name>
     </fields>
     <fields>
-        <label>Téléphone de foyer</label>
+        <label>Téléphone du foyer</label>
         <name>HouseholdPhone__c</name>
     </fields>
     <fields>
-        <help>Pour les comptes de foyer, utilise les champs de contacts associés non exclus, ordonnés. Généré automatiquement.</help>
+        <help>Pour les comptes de foyer, utilise les champs de contacts associés non exclus, ordonnés. La salutation est générée automatiquement.</help>
         <label>Salutation informelle</label>
         <name>Informal_Greeting__c</name>
     </fields>
     <fields>
-        <help><!-- The largest amount of a won Opportunity related to this Account. --></help>
+        <help>Le montant le plus élevé d&apos;une opportunité gagnée associée à ce compte.</help>
         <label>Don le plus élevé</label>
         <name>LargestAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The most recent Close Date of a won Opportunity related to this Account with amount greater than zero. --></help>
+        <help>La date de fermeture la plus récente d’une opportunité gagnée associée à ce compte avec un montant supérieur à zéro.</help>
         <label>Date du dernier don</label>
         <name>LastCloseDate__c</name>
     </fields>
     <fields>
-        <help><!-- The amount of the most recent (by Close Date) won Membership Opportunity (by Record Type) for this Account. --></help>
+        <help>Le montant de l’opportunité d’adhésion gagnée (par type d&apos;enregistrement) la plus récente (par date de fermeture) pour ce compte.</help>
         <label>Dernier montant d’adhésion</label>
         <name>LastMembershipAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The most recent Close Date of a won Membership Opportunity (by Record Type) related to this Account. --></help>
+        <help>La date de fermeture la plus récente d&apos;une opportunité d’adhésion gagnée (par type d&apos;enregistrement) associée à ce compte.</help>
         <label>Dernière date d’adhésion</label>
         <name>LastMembershipDate__c</name>
     </fields>
     <fields>
-        <help><!-- Membership level from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account.&quot; --></help>
+        <help>Le niveau d’adhésion de l’opportunité d’adhésion gagnée (par type d&apos;enregistrement) la plus récente (par date de fermeture) associée à ce compte.</help>
         <label>Dernier niveau d’adhésion</label>
         <name>LastMembershipLevel__c</name>
     </fields>
     <fields>
-        <help><!-- Membership &quot;origin&quot; (new, renew...) from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account. --></help>
+        <help>L’origine de l’adhésion (nouvelle, renouvellement...) de l’opportunité d’adhésion gagnée (par type d&apos;enregistrement) la plus récente (par date de fermeture) associée à ce compte.</help>
         <label>Dernière origine d’adhésion</label>
         <name>LastMembershipOrigin__c</name>
     </fields>
     <fields>
-        <help><!-- The amount of the most recent won Opportunity (by Close Date) with amount greater than zero related to this Account. --></help>
+        <help>Le montant de l’opportunité gagnée la plus récente (par date de fermeture) avec un montant supérieur à zéro associée à ce compte.</help>
         <label>Montant du dernier don</label>
         <name>LastOppAmount__c</name>
     </fields>
     <fields>
-        <help><!-- Membership end date from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account. --></help>
+        <help>La date de fin d’adhésion de l’opportunité d’adhésion gagnée (par type d&apos;enregistrement) la plus récente (par date de fermeture) associée à ce compte.</help>
         <label>Date de fin d’adhésion</label>
         <name>MembershipEndDate__c</name>
     </fields>
     <fields>
-        <help><!-- Membership start date from most recent (by Close Date) won Membership Opportunity (by Record Type) related to this Account. --></help>
+        <help>La date de début d’adhésion de l’opportunité d’adhésion gagnée (par type d&apos;enregistrement) la plus récente (par date de fermeture) associée à ce compte.</help>
         <label>Date d’adhésion</label>
         <name>MembershipJoinDate__c</name>
     </fields>
     <fields>
-        <help><!-- The total number of won Opportunities  related to this Account. --></help>
+        <help>Le nombre total d’opportunités gagnées associées à ce compte.</help>
         <label>Nombre total de dons</label>
         <name>NumberOfClosedOpps__c</name>
     </fields>
     <fields>
-        <help><!-- The total number of won Membership Opportunities (Record Type) related to this Account. --></help>
+        <help>Le nombre total d’opportunités d’adhésion gagnées (par type d&apos;enregistrement) associées à ce compte.</help>
         <label>Nombre d’adhésions</label>
         <name>NumberOfMembershipOpps__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Opportunities related to this Account, closed within the year or fiscal year preceding last year (see Household Settings). --></help>
-        <label>Total des dons totaux il y a deux ans</label>
+        <help>Le montant total des opportunités gagnées associées à ce compte, fermées au cours de l’année ou de l’exercice fiscal précédent l’année dernière (voir Paramètres de foyer).</help>
+        <label>Total des dons il y a deux ans</label>
         <name>OppAmount2YearsAgo__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Opportunities related to this Account, closed in the last number of days defined in Household Settings. --></help>
+        <help>Le montant total d’opportunités gagnées associées à ce compte, fermées au cours des derniers jours tels que définis dans les Paramètres de foyer.</help>
         <label>Total des dons sur les N derniers jours</label>
         <name>OppAmountLastNDays__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Opportunities related to this Account, closed in the current year or fiscal year. --></help>
-        <label>Total des dons sur l’année dernière</label>
+        <help>Le montant total d’opportunités gagnées associées à ce compte, fermées au cours de l’année ou de l’exercice fiscal actuel.</help>
+        <label>Total des dons l’année dernière</label>
         <name>OppAmountLastYear__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Opportunities related to this Account, closed in the current year or fiscal year. --></help>
+        <help>Le montant total d’opportunités gagnées associées à ce compte, fermées au cours de l’année ou de l’exercice fiscal actuel.</help>
         <label>Total des dons cette année</label>
         <name>OppAmountThisYear__c</name>
     </fields>
     <fields>
-        <help><!-- The total number of won Opportunities with amount greater than zero related to this Account, closed within the year or fiscal year preceding last year. --></help>
+        <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce compte, fermées au cours de l’année ou de l’exercice fiscal précédent l’année dernière.</help>
         <label>Nombre de dons il y a deux ans</label>
         <name>OppsClosed2YearsAgo__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Opportunities related to this Account, closed in the last number of days defined in Household Settings. --></help>
-        <label>Nombre de dons des N derniers jours</label>
+        <help>Le montant total d’opportunités gagnées associées à ce compte, fermées au cours des derniers jours tels que définis dans les Paramètres de foyer.</help>
+        <label>Nombre de dons sur les N derniers jours</label>
         <name>OppsClosedLastNDays__c</name>
     </fields>
     <fields>
-        <help><!-- The total number of won Opportunities with amount greater than zero related to this Account, closed in the previous year or fiscal year (see Household Settings). --></help>
-        <label>Nombre de dons de l’année dernière</label>
+        <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce compte, fermées au cours de l’année ou de l’exercice fiscal précédent (voir Paramètres de foyer).</help>
+        <label>Nombre de dons l’année dernière</label>
         <name>OppsClosedLastYear__c</name>
     </fields>
     <fields>
-        <help><!-- The total number of won Opportunities with amount greater than zero related to this Account, closed in the current year or fiscal year (see Household Settings). --></help>
+        <help>Le nombre total d’opportunités gagnées avec un montant supérieur à zéro associées à ce compte, fermées au cours de l’année ou de l’exercice fiscal actuel (voir Paramètres de foyer).</help>
         <label>Nombre de dons cette année</label>
         <name>OppsClosedThisYear__c</name>
     </fields>
     <fields>
-        <help>Pour les comptes de foyer, indique quels champs associés au nom ne doivent pas être remplis automatiquement par le code de foyer.</help>
-        <label><!-- _SYSTEM: CUSTOM NAMING --></label>
+        <help>Pour les comptes de foyer, indique les champs associés au nom qui ne doivent pas être remplis automatiquement par le code de foyer.</help>
+        <label>_SYSTEM: CUSTOM NAMING</label>
         <name>SYSTEM_CUSTOM_NAMING__c</name>
-        <picklistValues>
-            <masterLabel>Formal_Greeting__c</masterLabel>
-            <translation><!-- Formal_Greeting__c --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Informal_Greeting__c</masterLabel>
-            <translation><!-- Informal_Greeting__c --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Name</masterLabel>
-            <translation><!-- Name --></translation>
-        </picklistValues>
-    </fields>
+        </fields>
     <fields>
-        <help><!-- The smallest non-zero amount of a won Opportunity related to this Account. --></help>
+        <help>Le plus petit montant non nul d&apos;une opportunité gagnée associée à ce compte.</help>
         <label>Don le moins élevé</label>
         <name>SmallestAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The total amount of won Membership Opportunities (Record Type) related to this Account. --></help>
+        <help>Le montant total d’opportunités d’adhésion gagnées (par type d&apos;enregistrement) associées à ce compte.</help>
         <label>Montant total d’adhésion</label>
         <name>TotalMembershipOppAmount__c</name>
     </fields>
     <fields>
-        <help><!-- The sum of amounts of all won Opportunities related to this Account. --></help>
+        <help>La somme des montants de toutes les opportunités gagnées associées à ce compte.</help>
         <label>Total des dons</label>
         <name>TotalOppAmount__c</name>
     </fields>
-</CustomObjectTranslation>
+    </CustomObjectTranslation>

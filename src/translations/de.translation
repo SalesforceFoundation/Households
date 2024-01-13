@@ -9,7 +9,7 @@
         <name>AddAndMerge</name>
     </customLabels>
     <customLabels>
-        <label>Hinzufügen und von altem Haushalt entfernen</label>
+        <label>Hinzufügen und aus altem Haushalt entfernen</label>
         <name>AddAndRemove</name>
     </customLabels>
     <customLabels>
@@ -21,7 +21,7 @@
         <name>AddressCopyFailure</name>
     </customLabels>
     <customLabels>
-        <label>Adresse erfolgreich kopiert</label>
+        <label>Adresse erfolgreich kopiert.</label>
         <name>AddressCopySuccess</name>
     </customLabels>
     <customLabels>
@@ -37,15 +37,15 @@
         <name>AlreadyInHousehold</name>
     </customLabels>
     <customLabels>
-        <label>Automatische formelle Anrede</label>
+        <label>Autom. formelle Anrede</label>
         <name>AutoFormalGreeting</name>
     </customLabels>
     <customLabels>
-        <label>Automatische informelle Anrede</label>
+        <label>Autom. informelle Anrede</label>
         <name>AutoInformalGreeting</name>
     </customLabels>
     <customLabels>
-        <label>Automatische Bezeichnung</label>
+        <label>Autom. Name</label>
         <name>AutoName</name>
     </customLabels>
     <customLabels>
@@ -57,11 +57,11 @@
         <name>ChangeAddress</name>
     </customLabels>
     <customLabels>
-        <label>Änderungen nicht gespeichert</label>
+        <label>Änderungen nicht gespeichert.</label>
         <name>ChangesNotSaved</name>
     </customLabels>
     <customLabels>
-        <label>bereits im Haushalt vorhanden Möchten Sie diesen Kontakt mit oder ohne den vorhandenen Haushalt-Mitgliedern hinzufügen?</label>
+        <label>ist bereits im Haushalt vorhanden. Möchten Sie diesen Kontakt mit oder ohne seine vorhandenen Haushalt-Mitglieder hinzufügen?</label>
         <name>ContactAlreadyInHousehold</name>
     </customLabels>
     <customLabels>
@@ -81,7 +81,7 @@
         <name>DefaultHouseholdName</name>
     </customLabels>
     <customLabels>
-        <label><!-- DefaultHouseholdTransactionCurrency --></label>
+        <label>$</label>
         <name>DefaultHouseholdTransactionCurrency</name>
     </customLabels>
     <customLabels>
@@ -105,7 +105,7 @@
         <name>FindContactByName</name>
     </customLabels>
     <customLabels>
-        <label>Adresse des Haushalts</label>
+        <label>Haushalt-Adresse</label>
         <name>HouseholdAddress</name>
     </customLabels>
     <customLabels>
@@ -141,7 +141,7 @@
         <name>Household_Contact_Role_Processor_On</name>
     </customLabels>
     <customLabels>
-        <label>Automatisch Opportunity-Kontaktrollen für Haushalt-Mitglieder des primären Spenders erstellen</label>
+        <label>Mit diesen Einstellungen können Sie automatisch Opportunity-Kontaktrollen für Haushalt-Mitglieder erstellen, wenn eine Opportunity erstellt wird.</label>
         <name>Household_Contact_Roles_Help_Text</name>
     </customLabels>
     <customLabels>
@@ -149,7 +149,7 @@
         <name>Household_Member_Contact_Role</name>
     </customLabels>
     <customLabels>
-        <label><!-- Household Rules Help Text --></label>
+        <label>ERSETZT. Nicht verwendet. Auswählen, welche Kontakte Haushalte erhalten: Alle, nur diejenigen, die mit einem einzelnen Account verbunden sind, oder keine.</label>
         <name>Household_Rules_Help_Text</name>
     </customLabels>
     <customLabels>
@@ -169,11 +169,11 @@
         <name>NoContacts</name>
     </customLabels>
     <customLabels>
-        <label>Rollup-Fehler können bei nächtlichen oder manuellen Rollups auftreten und die Genauigkeit Ihrer Daten beeinträchtigen.  Nachfolgend sind die Fehler, der Fehlertyp und ein Link zum Datensatz mit dem Fehler aufgeführt. Diese Fehler werden bei jeder Ausführung des nächtlichen Auftrags oder manuellen Rollups zurückgesetzt.  Es wird dringend empfohlen, diese Fehler umgehend zu beheben, um die Genauigkeit der Daten sicherzustellen.</label>
+        <label>Rollup-Fehler können bei nächtlichen oder manuellen Rollups auftreten und die Genauigkeit Ihrer Daten beeinträchtigen. Nachfolgend sind die Fehler, der Fehlertyp und ein Link zum Datensatz mit dem Fehler aufgeführt. Diese Fehler werden bei jeder Ausführung des nächtlichen Auftrags oder manuellen Rollups zurückgesetzt. Es wird dringend empfohlen, diese Fehler umgehend zu beheben, um die Genauigkeit der Daten sicherzustellen.</label>
         <name>Opportunity_Error_Help_Text</name>
     </customLabels>
     <customLabels>
-        <label>Haben Sie einen Rollup durchgeführt, weil zu wenig zukünftige Anrufe verfügbar sind?</label>
+        <label>Es wurde kein Rollup durchgeführt, weil zu wenig zukünftige Anrufe verfügbar sind.</label>
         <name>Opportunity_Rollup_Future_Call_Limit</name>
     </customLabels>
     <customLabels>
@@ -189,7 +189,7 @@
         <name>RollupErrorMessage</name>
     </customLabels>
     <customLabels>
-        <label>Eine vorhandene Adresse auswählen</label>
+        <label>Vorhandene Adresse auswählen</label>
         <name>SelectExistingAddress</name>
     </customLabels>
     <customLabels>
@@ -197,13 +197,25 @@
         <name>SetAddress</name>
     </customLabels>
     <customLabels>
-        <label>Einstellungen, die benutzerdefinierte Rollups steuern, von Opportunity/Spende zu einem Kontakt, Account oder Haushalt Änderungen daran ändern das Verhalten Ihres Nonprofit Success Packs.
+        <label>Mit diesen Einstellungen können Sie benutzerdefinierte Rollups aus einer Opportunity (Spende) zu einem Kontakt, Account oder Haushalt erstellen und verwalten. Nachdem Sie einen benutzerdefinierten Rollup erstellt haben, können Sie den Rollup-Spenden-Batch unter NPSP-Einstellungen | Massendatenvorgänge verwenden, um alle Rollups in Ihrer Instanz neu zu berechnen und sicherzustellen, dass Ihr neues Rollup-Feld die richtigen Daten enthält.
 
-WARNUNG: Falsch konfigurierte Einstellungen können verursachen, dass das Rollup fehlschlägt. Testen Sie Ihre benutzerdefinierten Rollups gründlich, bevor Sie sie für die Produktion bereitstellen.</label>
+WARNUNG: Denken Sie daran, dass das Verhalten Ihres Nonprofit Success Packs durch Rollups geändert wird. Falsch konfigurierte Einstellungen können verursachen, dass das Rollup fehlschlägt. Testen Sie Ihre benutzerdefinierten Rollups gründlich, bevor Sie sie für die Produktion bereitstellen.</label>
         <name>UDRDescription</name>
     </customLabels>
+    <customPageWebLinks>
+        <label><!-- DEPRECATED: Nonprofit Edition Reports --></label>
+        <name>Nonprofit_Edition_Reports</name>
+    </customPageWebLinks>
     <customTabs>
-        <label>Einstellungen der Haushalte</label>
+        <label><!-- Contact Merge (OLD) --></label>
+        <name>Contact_Merge</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Contacts Settings --></label>
+        <name>Contacts_Settings</name>
+    </customTabs>
+    <customTabs>
+        <label>Haushalt-Einstellungen</label>
         <name>Households_Settings</name>
     </customTabs>
     <customTabs>
@@ -211,11 +223,58 @@ WARNUNG: Falsch konfigurierte Einstellungen können verursachen, dass das Rollup
         <name>Opportunity_Rollups</name>
     </customTabs>
     <customTabs>
+        <label><!-- Payment Mapping --></label>
+        <name>Payment_Mapping</name>
+    </customTabs>
+    <customTabs>
         <label>Benutzer-Rollups</label>
         <name>User_Rollups</name>
     </customTabs>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
     <reportTypes>
-        <description>Haushalte und Spenden</description>
         <label>Haushalte und Spenden</label>
         <name>Households_and_Donations</name>
         <sections>
@@ -227,8 +286,8 @@ WARNUNG: Falsch konfigurierte Einstellungen können verursachen, dass das Rollup
             <name>Households</name>
         </sections>
         <sections>
-            <label><!-- Opportunities --></label>
+            <label>Opportunities</label>
             <name>Opportunities</name>
         </sections>
     </reportTypes>
-</Translations>
+    </Translations>

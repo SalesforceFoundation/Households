@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>Erreur de cumul d’opportunité - DÉPRÉCIÉ</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>Erreurs de cumul d’opportunité - DÉPRÉCIÉ</value>
     </caseValues>
     <fields>
         <help>Date et heure de l’erreur</help>
@@ -24,7 +24,7 @@
         <name>Error_Object_Type__c</name>
     </fields>
     <fields>
-        <help>Lien vers l’enregistrement sur lequel l’erreur s’est produite.</help>
+        <help>Lien vers l’enregistrement sur lequel l’erreur s’est produite</help>
         <label>Lien d’enregistrement d’erreur</label>
         <name>Error_Record_Link__c</name>
     </fields>
@@ -33,6 +33,6 @@
         <label>Type d’erreur</label>
         <name>Error_Type__c</name>
     </fields>
-    <gender><!-- Masculine --></gender>
-    <startsWith><!-- Consonant --></startsWith>
+    <gender>Feminine</gender>
+    <startsWith>Vowel</startsWith>
 </CustomObjectTranslation>

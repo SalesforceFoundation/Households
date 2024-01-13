@@ -3,42 +3,42 @@
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellung</value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellungen</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellung</value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellungen</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellung</value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellungen</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellung</value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
-        <value><!-- User Rollup Field Settings --></value>
+        <value>Benutzer-Rollup-Feldeinstellungen</value>
     </caseValues>
     <fields>
         <help>Die Rollup-Aktion (MIN, MAX, SUM, COUNT), die im Ausgangsfeld ausgeführt werden soll</help>
@@ -46,13 +46,13 @@
         <name>Field_Action__c</name>
     </fields>
     <fields>
-        <help>Das Objekt, dem dieser Benutzer-Rollup zugeordnet wird</help>
+        <help>Das Objekt, dem dieser Benutzer-Rollup zugeordnet ist</help>
         <label>Objektname</label>
         <name>Object_Name__c</name>
     </fields>
     <fields>
         <help>Das Ausgangsfeld und die Aktion vom Objekt für diesen Benutzer-Rollup</help>
-        <label>Quellenfeld</label>
+        <label>Quellfeld</label>
         <name>Source_Field__c</name>
     </fields>
     <fields>
@@ -60,5 +60,5 @@
         <label>Zielfeld</label>
         <name>Target_Field__c</name>
     </fields>
-    <gender><!-- Neuter --></gender>
+    <gender>Feminine</gender>
 </CustomObjectTranslation>

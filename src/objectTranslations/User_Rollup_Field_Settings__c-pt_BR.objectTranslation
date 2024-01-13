@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fields>
+    <name>Field_Action__c</name>
+    <help>A ação de totalização (MIN, MAX, SUM, COUNT) a ser realizada no campo de origem</help>
+    <label>Ação de campo</label>
+  </fields>
+  <fields>
+    <name>Object_Name__c</name>
+    <help>O objeto para o qual esta totalização do usuário é mapeada</help>
+    <label>Nome do objeto</label>
+  </fields>
+  <fields>
+    <name>Source_Field__c</name>
+    <help>O campo de origem e a ação do objeto para esta totalização do usuário</help>
+    <label>Campo de origem</label>
+  </fields>
+  <fields>
+    <name>Target_Field__c</name>
+    <help>O campo de destino onde colocar o valor totalizado para esta totalização definida pelo usuário</help>
+    <label>Campo de destino</label>
+  </fields>
+  <gender>Feminine</gender>
+  <caseValues>
+    <plural>false</plural>
+    <value>Configuração do campo de acumulação de usuário</value>
+  </caseValues>
+  <caseValues>
+    <plural>true</plural>
+    <value>Configurações do campo de acumulação de usuário</value>
+  </caseValues>
+</CustomObjectTranslation>

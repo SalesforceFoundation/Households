@@ -2,36 +2,36 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>VEROUDERD-Fout bij opportunitytotalisering</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value><!-- DEPRECATED-Opportunity Rollup Errors --></value>
+        <value>VEROUDERD-Fouten bij opportunitytotalisering</value>
     </caseValues>
     <fields>
-        <help>Datum en tijd van de fout</help>
-        <label>Fout Datum/Tijd</label>
+        <help>Datumtijd van de fout</help>
+        <label>Fout in Datumtijd</label>
         <name>Error_Datetime__c</name>
     </fields>
     <fields>
-        <help>De volledige tekst van de foutmelding</help>
-        <label>Foutmelding</label>
+        <help>De volledige tekst van het foutbericht</help>
+        <label>Foutbericht</label>
         <name>Error_Message__c</name>
     </fields>
     <fields>
         <help>Het type object waarnaar deze fout verwijst</help>
-        <label>Fout Type Object</label>
+        <label>Type object van fout</label>
         <name>Error_Object_Type__c</name>
     </fields>
     <fields>
-        <help>Link naar het record waar de fout is opgetreden</help>
-        <label>Fout Record Link</label>
+        <help>Koppeling naar de record waarin de fout is opgetreden</help>
+        <label>Recordkoppeling voor fout</label>
         <name>Error_Record_Link__c</name>
     </fields>
     <fields>
-        <help>Het Type fout die is opgetreden</help>
-        <label>Fout Type</label>
+        <help>Type fout, dat is opgetreden</help>
+        <label>Type fout</label>
         <name>Error_Type__c</name>
     </fields>
-    <gender><!-- Neuter --></gender>
+    <gender>Feminine</gender>
 </CustomObjectTranslation>

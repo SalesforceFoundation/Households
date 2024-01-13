@@ -4,4 +4,8 @@
         <label>Liste de publipostage de foyer</label>
         <name>Household_Mailing_List</name>
     </webLinks>
+    <webLinks>
+        <label><!-- ViewCampaignInfluenceReport --></label>
+        <name>ViewCampaignInfluenceReport</name>
+    </webLinks>
 </CustomObjectTranslation>

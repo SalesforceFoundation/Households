@@ -810,25 +810,27 @@ IF(NOT(ISNULL($Setup.Households_Settings__c.Membership_Grace_Period__c)), $Setup
         <externalId>false</externalId>
         <inlineHelpText>Name, Formal Greeting, or Informal Greeting</inlineHelpText>
         <label>_SYSTEM: CUSTOM NAMING</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Name</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Formal_Greeting__c</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Informal_Greeting__c</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Name</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Formal_Greeting__c</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Informal_Greeting__c</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
